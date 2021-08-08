@@ -4,6 +4,7 @@ clone the repo and make sure you can run locally
 ```console
 yarn install
 yarn start
+```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
