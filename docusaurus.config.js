@@ -54,7 +54,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/mdiminico/cado-documentation/tree/master/',
+            'https://github.com/cado-security/product-help/tree/master/',
         },
         /*blog: {
           showReadingTime: true,
