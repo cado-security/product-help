@@ -1,0 +1,4 @@
+/.docusaurus/
+.vs
+/build/ 
+/node_modules/
