@@ -75,11 +75,11 @@ Deploying the CloudFormation stack will take approximately fifteen minutes, foll
 
 When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finished creating the infrastructure for Cado Response.
 
-![Create Complete](/img/create-complete.png)
+![Creation Complete](/img/create-complete.png)
 
 ### Logging In
 
-Navigate to your AWS **[EC2 Console]( https://console.aws.amazon.com/ec2)** and find the Public IPv4 address of the Cado Response EC2 instance named `CadoResponse`.  Open a browser and navigate to https://*<Cado_Response_IP>* where *<Cado_Response_IP>* is the IPv4 of the CadoResponse EC2 instance.  You will see a browser notification stating that "Your connection is not private", we do not automatically generate a certificate. If you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to create your own ELB
+Navigate to your AWS **[EC2 Console]( https://console.aws.amazon.com/ec2)** and find the Public IPv4 address of the Cado Response EC2 instance named `CadoResponse`.  Open a browser and navigate to https://*<Cado_Response_IP>* where *<Cado_Response_IP>* is the IPv4 of the CadoResponse EC2 instance.  You will see a browser notification stating that "Your connection is not private". We do not automatically generate a certificate. If you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to create your own ELB
 
 :::tip
 As a reminder, when the platform is deployed, it creates its own isolated VPC in which you can control who has access.  You can customize which IP addresses have access to your instance by clicking the Security tab of the Cado Response EC2 instance from within your AWS EC2 console. Cado Response is accessed via port 443.

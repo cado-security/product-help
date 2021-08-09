@@ -6,7 +6,7 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
+/*:root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
@@ -15,7 +15,19 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+}*/
+
+:root {
+--ifm-color-primary: #21769e;
+--ifm-color-primary-dark: #1e6a8e;
+--ifm-color-primary-darker: #1c6486;
+--ifm-color-primary-darkest: #17536f;
+--ifm-color-primary-light: #2482ae;
+--ifm-color-primary-lighter: #2688b6;
+--ifm-color-primary-lightest: #2b99cd;
+--ifm-code-font-size: 90%;
 }
+
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
@@ -27,3 +39,13 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* add shadow to img tags. */
+img.img-shadow { filter: drop-shadow(0 0 0.25rem gray); }
+/* example:
+<img
+  src={require('/img/create-complete.png').default}
+  class="img-shadow"
+  alt="Creation Complete"
+/>
+*/

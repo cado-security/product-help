@@ -7,8 +7,8 @@ module.exports = {
   tagline: 'Cado Security',
   url: 'https://cado-security.github.io',
   baseUrl: '/product-help/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore', 
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/favicon.ico',
   organizationName: 'cado-security', // Usually your GitHub org/user name.
   projectName: 'product-help', // Usually your repo name.
@@ -19,6 +19,24 @@ module.exports = {
       logo: {
         alt: 'Cado Logo',
         src: 'img/cado.png',
+        srcDark: 'img/cado-dark.png', // Default to `logo.src`.
+      },
+    },
+    colorMode: {
+      // "light" | "dark"
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+      switchConfig: {
+        darkIcon: '\u{1F319}',
+        // see https://reactjs.org/docs/dom-elements.html#style
+        darkIconStyle: {
+          marginLeft: '2px',
+        },
+        lightIcon: '☀',
+        lightIconStyle: {
+          marginLeft: '1px',
+        },
       },
     },
     footer: {
@@ -52,16 +70,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          // Please chttp://localhost:3000/product-help/docs/cado-response/importing-data/importing-datahange this to your repo.
           editUrl:
             'https://github.com/cado-security/product-help/tree/master/',
         },
-        /*blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },*/
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
