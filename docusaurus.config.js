@@ -6,9 +6,10 @@ module.exports = {
   title: 'Cado Security',
   tagline: 'Cado Security',
   url: 'https://cado-security.github.io',
-  baseUrl: '/product-help/',
-  onBrokenLinks: 'ignore', 
-  onBrokenMarkdownLinks: 'ignore',
+  baseUrl: '/',
+  // baseUrl: '/product-help/',
+  onBrokenLinks: 'warn', 
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'cado-security', // Usually your GitHub org/user name.
   projectName: 'product-help', // Usually your repo name.
@@ -48,10 +49,12 @@ module.exports = {
             {
               label: 'Twitter',
               href: 'https://twitter.com/cadosecurity',
+              external: true,
             },
             {
               label: 'Github',
               href: 'https://github.com/cado-security',
+              external: true,
             },
           ],
         },
@@ -70,7 +73,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please chttp://localhost:3000/product-help/docs/cado-response/importing-data/importing-datahange this to your repo.
+          // Please change this to your repo.
           editUrl:
             'https://github.com/cado-security/product-help/tree/master/',
         },

@@ -16,7 +16,7 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Deployment
+## Deployment to Github Pages
 
 ```console
 cmd /C "set "GIT_USER=<git username>" && set "USE_SSH=true" && yarn deploy"
@@ -53,4 +53,12 @@ General guidance on how the Cado Documentation should be organized:
 -- -- /api
 -- -- /release-notes
 
+```
+
+## Generating PDF
+
+After the build and deploy process, you can run the following command to generate a PDF copy of the site. Note that the site needs to be live to acquire and save the site as a PDF.  The PDF will be stored in the `/build/` folder as `guide.pdf`  Also ensure you update URL in the command below.
+
+```console
+npx mr-pdf --initialDocURLs="http://**baseurl**/docs/intro" --contentSelector="article" --paginationSelector=".pagination-nav__item--next > a" --excludeSelectors=".margin-vert--xl a" --coverTitle="Cado Response User Guide" --outputPDFFilename="build/guide.pdf"
 ```
