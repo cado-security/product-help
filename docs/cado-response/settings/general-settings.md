@@ -12,11 +12,11 @@ The **Maximum Filesize** is used to determine how file-based plugins analyse ind
 - The full 1 GB of events in the log will be processed;
 - But the file-based plugins (for example Yara, String extraction) will only look at the first 5 Mb of the 1 GB file, and the original file will not be available for download.
 
-This number can be increased, however large values can slow down processing and retrieval significantly.
+This number can be increased, however large values can slow down processing and retrieval significantly. Cado recommends leaving this value at 5Mb as it represents the best balance. Where you have a project that will need to specifically target very large files you may increase this at the time as needed, and decrease after your project is completed.
 
 The **Elastic Search Hostname** sets where the data is stored. By default Cado Response connects to a database that is only accessible locally to the server, and for security purposes it is highly recommended you do not change this value.
 
-The **Worker Instance Size** limits the size of data that can be imported. The default setting in AWS (i3.4xlarge) has 1.9 TB of disk space, allowing the processing of disks up to approximately 1.5 TB in size. The default Azure setting allows the processing of disks up to approximately 800 GB in size. Please set a large instance size (see for AWS or Azure) to increase the working space, at additional cost.
+The **Worker Instance Size** limits the size of data that can be imported. The default setting in AWS (i3.4xlarge) has 1.9 TB of disk space, allowing the processing of disks up to approximately 1.5 TB in size. The default Azure setting allows the processing of disks up to approximately 800 GB in size. Please set a large instance size (see for AWS or Azure) to increase the working space.
 
 ### Cloud Connectivity
 These settings are used to authenticate against cloud providers.

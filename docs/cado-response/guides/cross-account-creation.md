@@ -44,7 +44,7 @@ If you choose to change **Maximum session duration**, the minimum currently supp
 :::
 
 :::info
-The above steps walked through how to create a new role, however, if you already have a role with appropriate EC2 access, you can edit its trust relationship to include the below AWS **principal** (replacing the account number with your own primary account). 
+The above steps walked through how to create a new role, however, if you already have a role with appropriate EC2 access, you can instead edit its trust relationship to include the below AWS **principal** (replacing the account number with your own primary account). 
 
 The below JSON is only required if you choose to use an existing role and you didn't create a new role as recommended earlier.
 
@@ -64,7 +64,7 @@ The below JSON is only required if you choose to use an existing role and you di
 }
 ```
 
-You may choose to limit this further and trust only your specific Cado role here rather than the entire primary account - see AWS JSON policy elements: **[Principal - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)** for more information.
+You may choose to limit this further and trust only your specific Cado role rather than the entire primary account.  See AWS JSON policy elements: **[Principal - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)** for more information.
 :::
 
 ### Prepare Primary Account

@@ -37,7 +37,7 @@ In addition to native capture support for machines and data running/stored in th
 - Other forensic triage artifacts collected by EDR Tools or Cado Host
 
 :::info 
-Our AWS deployment supports Split E01 format disks, but this is not yet supported in Azure.
+Currently, split E01 format disks are supported in AWS only.
 :::
 
 To import a compressed dd image, compress with Gzip and add .gz to the extension. (example: `disk.dd.gz`)
@@ -105,4 +105,4 @@ If you import a zip, it will be treated as a container of files. For example, if
 - Xchat and Xchat scroll back files
 - Zsh history files
 
-Cado Response can also import a number of other disk image and file formats that are not listed here - however they are not *officially* supported.  If you have a filetype which you would like to see supported, please reach out to support@cadosecurity.com and let us know.
+Cado Response can also import a number of other disk image and file formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a filetype that you would like to see supported, please reach out to support@cadosecurity.com and let us know.

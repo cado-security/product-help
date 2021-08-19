@@ -17,7 +17,7 @@ Based on the evidence you would like to import, follow the on-screen instruction
 ![Import Data](/img/import.png)
 
 ### Importing Local Evidence
-The preferred method of importing local evidence is from cloud storage such as S3, however you can import evidence that is stored locally on the Cado Response server (under the local `/process/uploads` folder).  This is useful if you have transferred files to the server, for example over sFTP.
+The preferred method to import evidence is from Cloud Storage such as S3; however, you can also import evidence that is stored locally on the Cado Response server (under the local `/process/uploads` folder). This is useful if you have transferred files to the server, for example over SFTP.
 
 To import evidence stored locally on the Cado Response server, log in and perform the following:
 - Choose an existing **Project** or create a new project.

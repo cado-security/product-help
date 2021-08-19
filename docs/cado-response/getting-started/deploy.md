@@ -18,7 +18,7 @@ export const Highlight = ({children, color}) => (
 
 # Deployment
 
-Deployment of Cado Response is performed within *your* cloud environment either via a CloudFormation Template or a Terraform Script. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
+Deployment of Cado Response is performed within your cloud environment either via a CloudFormation Template or a Terraform Script. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
 
 :::info
 Deployment differs slightly based on your preferred cloud provider. Links below will take you to the respective AWS and Azure deployment guides.
@@ -30,7 +30,7 @@ Deployment differs slightly based on your preferred cloud provider. Links below 
 
 To set up Cado Response in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
 
-1. Click **[here](https://console.aws.amazon.com/cloudformation/home?#/stacks/create/template?templateURL=https://cado-public.s3.amazonaws.com/DeployCloudFormation.json)** to open the AWS CloudFormation Management Console, with the Cado Response CloudFormation template pre-loaded.
+1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado Response CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.  Once you receive the link to the Cado Response CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
 
 2. On Step 1 (Specify template), do not change the default **Template is ready** and **Amazon S3 URL** settings.   Click **<Highlight color="#F78631">Next</Highlight>**
 
@@ -38,11 +38,11 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
 
     | Parameter Name | Value | Description |
     | -------------- | ----- | ----------- |
-    | Instance type for Cado Response EC2 Server | `t3a.xlarge` | You can leave this as the default `t3a.xlarge` or adjust depending on your needs. |
-    | Key pair for Cado Response EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. |
-    | CadoAMI | *(contact Cado Support support@cadosecurity.com for the AMI ID)* | Contact Cado Support for the appropriate API ID.  When contacting support, please provide the AWS region where you will be deploying Cado Response. |
-    | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is recommneded that these settings are restricted to your corporate network range. |
-    | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is recommneded that these settings are restricted to your corporate network range. |
+    | Instance type for Cado Response EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
+    | Key pair for Cado Response EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not neeeded for normal operation, but helpful should support need to acquire additional logs. |
+    | CadoAMI | *(Please contact your Cado Sales team)* | Please contact your Cado Sales team for the appropriate API ID.  When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
+    | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommneded that these settings are restricted to your corporate network range. |
+    | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommneded that these settings are restricted to your corporate network range. |
     | VPC CIDR | *(enter ip range)* | The Subnet the Cado VPC will use. Specify the IPv4 address range as a Classless Inter-Domain Routing (CIDR) block. |
     | EFSArchive | `AFTER_30_DAYS` | EFS - move data to infrequent storage after X days. |
     | InstanceVolumeSize | `1000`| EC2 instance volume required in GBit. |
@@ -50,12 +50,12 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | S3GlacierDelete | `365` | Delete S3 glacier storage data after X days. |
     
     :::tip
-     We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can be deleted to recover space.
+     We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
     :::
 
 4. Click **<Highlight color="#F78631">Next</Highlight>**
 
-5. On Step 3 (Configure stack options), click **<Highlight color="#F78631">Next</Highlight>** again, unless you require custom settings, which you can discuss with Cado Security.
+5. On Step 3 (Configure stack options), click **<Highlight color="#F78631">Next</Highlight>** again (unless you require custom settings). If you require custom settings, please contact Cado Security
 
     :::info
     For more information on available stack options, see [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html).
@@ -66,7 +66,7 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
 7. Review the details that have been applied and click **<Highlight color="#F78631">Create Stack</Highlight>**
 
     :::info
-    If no IAM role has been applied in *Step 3 (Configure stack options)*, tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`
+    If an IAM role has not been applied in *Step 3 (Configure stack options)*, tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`
     :::
 
 ### Deployment Time
@@ -77,22 +77,64 @@ When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finishe
 
 ![Creation Complete](/img/create-complete.png)
 
-### Logging In
-
-Navigate to your AWS **[EC2 Console]( https://console.aws.amazon.com/ec2)** and find the Public IPv4 address of the Cado Response EC2 instance named `CadoResponse`.  Open a browser and navigate to https://*<Cado_Response_IP>* where *<Cado_Response_IP>* is the IPv4 of the CadoResponse EC2 instance.  You will see a browser notification stating that "Your connection is not private". We do not automatically generate a certificate. If you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to create your own ELB
+You can then **[Log into Cado Response](logging-in)** 
 
 :::tip
-As a reminder, when the platform is deployed, it creates its own isolated VPC in which you can control who has access.  You can customize which IP addresses have access to your instance by clicking the Security tab of the Cado Response EC2 instance from within your AWS EC2 console. Cado Response is accessed via port 443.
+After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
-When the installation is complete, you will see the login page.
-
-![Login Page](/img/login.png)
-
-You can now login with the username "admin" and the password "i-xxx", where "i-xxx" is the Instance ID of your Cado Response EC2 instance
-
-On first boot, the platform will take about 10 minutes to install, during which time, you will see a messeage indicating that the system is "Installing Cado Response ..."
 
 ## Azure Terraform Script
 
-Coming soon ...
+To set up Cado Response in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
+
+If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
+- a link to the Cado Response VHD image
+- a file named `cado_deploy.zip` with the latest Cado Repsonse Terraform module.
+If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
+
+1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
+
+2. **[Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)**, if you have not already.
+
+3. Run 'az login'. The account you log in with will be used to deploy
+
+4. Create a storage account and container to hold the Cado Response VHD.  You must copy the image to the same region in which you want to deploy Cado Response.  
+
+:::tip
+If you need to capture very large disks (>=1tb) you will need to deploy in a region where storage optimized (L) instances are available, e.g. US East.
+:::
+
+5. Copy the VHD to your Azure subscription using the command below.  Substitue `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
+```console
+az storage blob copy start --auth-mode login --account-name your_storage_account  --destination-blob cado_response.vhd --destination-container your_storage_container_name --source-uri "$RELEASE_URI"
+```
+
+:::caution
+Wait for the copy operation to complete before moving to the next step
+:::
+
+6. Extract `cado_deploy.zip`
+
+7. Create public + private ssh key (e.g. `ssh-keygen -b 4096 -f keys/azure_demo_key`)
+
+8. Customize the file `cado_deploy/main.tf` with:
+- The name of the resource group you want to create
+- The region, which must match where you copied the VHD disk image
+- The URL of the VHD disk image
+- The IP addresses you want to allow access
+
+9. Deploy by running `terraform init` followed by `terraform apply`
+
+10. Make a note of the IP Address and the full Instance Id (/subscription/.../cado-main-vm) in the logs e.g.:
+
+```console
+module.cado_scalable.azurerm_linux_virtual_machine.vm (remote-exec): public_ip = 1.2.3.4
+module.cado_scalable.azurerm_linux_virtual_machine.vm: Creation complete after 1m53s [id=/subscriptions/2f34c608-91b5-4d14-ac36-b8e0377fbcca/resourceGroups/new_res_three/providers/Microsoft.Compute/virtualMachines/cado-main-vm]
+```
+
+It will take about 20 minutes to deploy, then you can **[Log into Cado Response](logging-in)** 
+
+:::tip
+After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
+:::
