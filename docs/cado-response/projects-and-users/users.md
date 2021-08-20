@@ -19,14 +19,14 @@ To add a new user:
 - Click the **Add Users** button
 
 ### Granting Administrator Access
-To elevate priviledges and grant Administrator acccess to a normal user, do the following:
+To elevate priviledges and grant Administrator access to a normal user, do the following:
 - Click **Users**
 - Next to the appropriate user, click the Edit icon ![Edit](/img/edit.png)
 - Select the **This user has administrator access** checkbox
 - Click **Update**
 
 ### Granting Access to a Project
-To grant existing users to a Project, you can add them when you create the Project, or you can follow the bleow instructions to add users to an existing Project:
+To grant existing users to a Project, you can add them when you create the Project, or you can follow the below instructions to add users to an existing Project:
 - Click **Projects** and select the project to which you would like to add users
 - Click the **Access** button 
 - Click the **Add Users** button

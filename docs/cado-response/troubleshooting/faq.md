@@ -20,7 +20,7 @@ On first boot, the platform will take about 10 minutes to install.  During that 
 Navigate to the instance IP https:\\\<instance_ip> You can initially login with the username "admin" and the password "i-xxx" where i-xxx is the ID of your instance.  After first login, you will be asked to change your password.
 
 ### Can I allow or restrict IP ranges from accessing our Cado Response instance?
-Yes, and it is strongly recommended to restrict access to only those IPs which require access.  Navigate to your **[AWS EC2 Console](https://console.aws.amazon.com/ec2)**, click on your Cado Instance ID, navigate to the Security tab, then click on the "Security Group" link, then "Edit Inbound Rules". Here you can add and remove access rules for the Cado Reponse instance.  Note that you can also restrict access to HTTPS and SSH during the deployment process via the CloudFormation Template. 
+Yes, and it is strongly recommended to restrict access to only those IPs which require access.  Navigate to your **[AWS EC2 Console](https://console.aws.amazon.com/ec2)**, click on your Cado Instance ID, navigate to the Security tab, then click on the "Security Group" link, then "Edit Inbound Rules". Here you can add and remove access rules for the Cado Response instance.  Note that you can also restrict access to HTTPS and SSH during the deployment process via the CloudFormation Template. 
 
-### How can I control the lifecyle of data stored by Cado Response in my S3 bucket?
+### How can I control the lifecycle of data stored by Cado Response in my S3 bucket?
 AWS supports this through **[Object Locks](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)** and **[Lifecycle Rules](https://docs.aws.amazon.com/console/s3/lifecyclerules)** associated with your S3 bucket.  Please see the AWS documentation for more details.

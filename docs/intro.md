@@ -59,6 +59,6 @@ Data which is imported is automatically processed, analyzed and added to the pla
 **[Learn how >](cado-response/investigating/investigate)**
 
 ### Restrict Access by IP
-You can customize which IP addresses have access to your Cado Response instance by adjusting the VPC secuirty rules for the Cado Response instance from within your AWS EC2 console or Azure Portal. 
+You can customize which IP addresses have access to your Cado Response instance by adjusting the VPC security rules for the Cado Response instance from within your AWS EC2 console or Azure Portal. 
 
 **[Learn how >](cado-response/getting-started/deploy)**

@@ -111,4 +111,4 @@ In your **primary** account (111111111111 in this example)
 
     ![Attach Role](/img/attach-permissions.png)
 
-The roles listed in `CadoResponseCrossAccountPolicy` will be now be available in the Cado Response UI and you can import instances from them as normal.
+The roles listed in `CadoResponseCrossAccountPolicy` will now be available in the Cado Response UI and you can import instances from them as normal.

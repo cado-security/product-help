@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Investigating a Project
 
-Evidence is processed into Projects and investigating starts by analyzing the project evidence.  The project view provides an overview of the key information for all evidence items in a given project.
+Evidence is processed into Projects and investigation starts by analyzing the project evidence.  The project view provides an overview of the key information for all evidence items in a given project.
 
 ![Project Overview](/img/project-view.png)
 

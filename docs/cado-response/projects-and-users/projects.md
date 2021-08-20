@@ -28,7 +28,7 @@ You can view free disk space by clicking on the **Platform** menu button.
 :::
 
 ### Updating a Project
-You can update a Project name and the descirption.  To update a Project:
+You can update a Project name and the description.  To update a Project:
 - Click **Projects** and select the project you would like to update
 - Click **Manage** 
 - Click **Details**
@@ -36,7 +36,7 @@ You can update a Project name and the descirption.  To update a Project:
 
 ### Project Processing
 The **Processing** page gives you a high level summary of the processing status of evidence items. Evidence items go through a number of different stages of analysis before they are complete. Some data, such as file listings, will be available before the processing is complete.
-To view the Porject Processing:
+To view the Project Processing:
 - Click **Projects** and select the project you would like to view
 - Click **Manage** 
 - Click **Processing**

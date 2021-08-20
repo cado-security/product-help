@@ -7,7 +7,7 @@ sidebar_position: 1
 # Azure AD OAuth Integration
 
 :::warning
-Azure AD OAuth integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and provide as much detail about your configuration as possible.
+Azure AD OAuth integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
 You can now enable the beta of Azure AD OAuth Integration in Cado Response by going to "Settings > OAuth".
@@ -48,7 +48,7 @@ You can now enable the beta of Azure AD OAuth Integration in Cado Response by go
 	- Select the **Authentication** blade
 	![Azure Authentication](/img/azure-authentication.png)
 	- Click **Add a Platform**
-	- Select **Web** and input your redirect url. This should be the url you use to access Cado Repsonse in the web browser, including the `/login` path. Example: `https://my.cado.instance/login`
+	- Select **Web** and input your redirect url. This should be the url you use to access Cado Response in the web browser, including the `/login` path. Example: `https://my.cado.instance/login`
 9. Configure SSO in Cado Response
 	- Open your Cado Response instance and log in as an admin user
 	- Go to **Settings > OAuth**

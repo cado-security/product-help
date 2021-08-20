@@ -40,9 +40,9 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | -------------- | ----- | ----------- |
     | Instance type for Cado Response EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
     | Key pair for Cado Response EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
-    | CadoAMI | *(Please contact your Cado Sales team)* | Please contact your Cado Sales team for the appropriate API ID.  When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
-    | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommneded that these settings are restricted to your corporate network range. |
-    | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommneded that these settings are restricted to your corporate network range. |
+    | CadoAMI | *(Please contact your Cado Sales team)* | Please contact your Cado Sales team for the appropriate AMI ID.  When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
+    | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommended that these settings are restricted to your corporate network range. |
+    | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. Default is `0.0.0.0/0` but it is strongly recommended that these settings are restricted to your corporate network range. |
     | VPC CIDR | *(enter ip range)* | The Subnet the Cado VPC will use. Specify the IPv4 address range as a Classless Inter-Domain Routing (CIDR) block. |
     | EFSArchive | `AFTER_30_DAYS` | EFS - move data to infrequent storage after X days. |
     | InstanceVolumeSize | `1000`| EC2 instance volume required in GBit. |
@@ -105,7 +105,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 If you need to capture very large disks (>=1tb) you will need to deploy in a region where storage optimized (L) instances are available, e.g. US East.
 :::
 
-5. Copy the VHD to your Azure subscription using the command below.  Substitue `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
+5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
 ```console
 az storage blob copy start --auth-mode login --account-name your_storage_account  --destination-blob cado_response.vhd --destination-container your_storage_container_name --source-uri "$RELEASE_URI"
 ```

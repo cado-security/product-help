@@ -35,11 +35,11 @@ You can import evidence from cloud storage such as Amazon S3. This is useful if 
 To import evidence stored within cloud storage, log in and perform the following:
 - Choose an existing **Project** or create a new project.
 - Click **Import**
-- Depending on where you deployed Cado Repsonse, click **AWS** or **Azure**
+- Depending on where you deployed Cado Response, click **AWS** or **Azure**
 - Click **S3 Buckets** or Azure storage
 
 ### Import Cloud Instance
-Cado Reponse provides a way to forensically collect copies of cloud computing instances such as AWS EC2 or AMIs. A log of the acquisition is stored in cloud storage, along with a copy of the disk. The acquisition will also include screenshots and console logs if the instance is running.  This allows you to capture a forensic copy of a running (or stopped) cloud instance without agents and without impacting production systems.
+Cado Response provides a way to forensically collect copies of cloud computing instances such as AWS EC2 or AMIs. A log of the acquisition is stored in cloud storage, along with a copy of the disk. The acquisition will also include screenshots and console logs if the instance is running.  This allows you to capture a forensic copy of a running (or stopped) cloud instance without agents and without impacting production systems.
 
 To import from a cloud instance, log in and perform the following:
 - Choose an existing **Project** or create a new project.
