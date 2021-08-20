@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'Cado Security',
   url: 'https://cado-security.github.io',
   baseUrl: '/',
-  // baseUrl: '/product-help/',
+  //baseUrl: '/product-help/',
   onBrokenLinks: 'warn', 
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
