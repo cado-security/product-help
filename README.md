@@ -19,7 +19,7 @@ This command generates static content into the `build` directory and can be serv
 ## Deployment to Github Pages
 
 ```console
-cmd /C "set "GIT_USER=<git username>" && set "USE_SSH=true" && yarn deploy"
+cmd /C "set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy"
 ```
 
 ## Folder Structure
@@ -52,6 +52,9 @@ General guidance on how the Cado Documentation should be organized:
 -- -- -- frequently-asked-questions
 -- -- /api
 -- -- /release-notes
+-- /cado-host
+-- -- about
+-- -- run
 
 ```
 

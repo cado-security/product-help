@@ -1,0 +1,38 @@
+---
+title: Azure Credentials
+hide_title: true
+sidebar_position: 4
+---
+
+# Creating Secure Azure Credentials
+In order to securely write to Azure, you'll need to create a limited access key called a Shared Access Signature.
+
+<iframe width="100%" height="628" src="https://www.youtube.com/embed/FQoAnYVPRLo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+## Creating Blog Storage
+
+- If you haven't already, **[Create a Blob storage container](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal)** for your data in Azure.
+
+## Generating a Shared Access Signature
+- Browse to your Storage Account, and click Shared Access Signature to generate credentials to write to the Storage Containers in the Storage Account.
+- Remove the ability to Read, List or Delete files, and click Generate SAS.
+
+## Generating a Shared Access Signature with Azure Storage Explorer
+- Alternatively you can create a Shared Access Signature with the **[Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)**.
+- Right click the blob container you wish to use, and select Get Shared Access Signature.
+- Select the time period you will be using these credentials for, and untick all permissions except for Write.
+- Click Next, then Copy the Query string. This will be used for authentication
+
+When you are ready for the imaging process you will have:
+
+1. The account name (the account name that owns the new or existing container and that the access signature was generated, under "storage accounts")
+2. The container name (set up to store the data)
+3. And the generated long access signature (the query string, similar to the above diagram)
+
+:::warning
+We recommend that you keep this information safe. Treat this information just as you would for a sensitive password or similar.  Once access is no longer required, we recommend removing access.
+:::
+
+:::tip
+Where possible with containers, we recommend setting up IP whitelisting as an extra layer of security.  Please ensure that read and list access are never granted. This prevents unauthorised access to the data uploaded in the case your access signature has been lost or exposed.
+:::

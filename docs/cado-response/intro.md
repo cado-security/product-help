@@ -4,12 +4,8 @@ id: intro
 title: Summary
 ---
 
-# Summary 
-Our mission at Cado is to enable security teams to effectively investigate and respond to cyber incidents across modern cloud environments in the fastest and most effective way possible. 
-We strive to take the complexity out of cloud for our customers.
-
-## What is Cado Response?
-Cado Response is a cloud-native digital forensics platform that enables you to investigate security incidents at cloud speed and scale.
+# Cado Response
+Cado Response is a cloud-native digital forensics platform that enables you to investigate security incidents at cloud speed and scale. The Cado Response platform automates data capture and processing so security teams can easily understand threats without wasting time, money or effort. Click. Dig. Done. Know your cloud with Cado.
 
 ### Core Features
 - **Cloud Native**
@@ -46,19 +42,15 @@ Interested in getting started?  Here are some of the most frequently accessed he
 ### Deploy in your cloud environment
 How to deploy Cado Response in your cloud environment
 
-**[Learn how >](cado-response/getting-started/deploy)**
+**[Learn how >](getting-started/deploy)**
 
 ### Processing Data
 After deploying Cado Response, data can be automatically acquired from the cloud or imported from a number of supported sources. 
 
-**[Learn how >](cado-response/importing-data/importing-data)**
+**[Learn how >](importing-data/importing-data)**
 
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
 
-**[Learn how >](cado-response/investigating/investigate)**
+**[Learn how >](investigating/investigate)**
 
-### Restrict Access by IP
-You can customize which IP addresses have access to your Cado Response instance by adjusting the VPC security rules for the Cado Response instance from within your AWS EC2 console or Azure Portal. 
-
-**[Learn how >](cado-response/getting-started/deploy)**
