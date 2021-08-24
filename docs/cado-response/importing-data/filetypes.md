@@ -55,6 +55,7 @@ If you import a zip, it will be treated as a container of files. For example, if
 - FAT
 - NTFS version 3
 - XFS version 4, 5
+- Apple File System (APFS) 
 
 #### Log File Formats
 - AppleSystemLog (ASL)

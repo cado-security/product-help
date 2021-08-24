@@ -29,6 +29,7 @@ General guidance on how the Cado Documentation should be organized:
 ```
 /docs 
 -- /cado-response
+-- -- intro
 -- -- /getting-started
 -- -- -- key-concepts
 -- -- -- deploy
@@ -53,9 +54,11 @@ General guidance on how the Cado Documentation should be organized:
 -- -- /api
 -- -- /release-notes
 -- /cado-host
--- -- about
+-- -- intro
 -- -- run
-
+-- -- aws-credentials
+-- -- azure-credentials
+-- -- google-credentials
 ```
 
 ## Generating PDF
