@@ -76,6 +76,8 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/cado-security/product-help/tree/master/',
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
