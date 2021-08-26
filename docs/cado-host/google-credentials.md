@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# Google Cloud Credentials
+# Creating Google Cloud Credentials
 To create secure credentials for Google Cloud Storage, perform the following.  You can also watch the embedded video, which walks through the process.​
 - Create a Bucket
 - Create credentials for write-only access to the bucket

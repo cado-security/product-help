@@ -7,13 +7,13 @@ module.exports = {
   tagline: 'Cado Security',
   url: 'https://cado-security.github.io',
   baseUrl: '/',
-  //baseUrl: '/product-help/',
   onBrokenLinks: 'warn', 
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'cado-security', // Usually your GitHub org/user name.
   projectName: 'product-help', // Usually your repo name.
   trailingSlash: false,
+  plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
     navbar: {
       title: ' ',
@@ -22,6 +22,10 @@ module.exports = {
         src: 'img/cado.png',
         srcDark: 'img/cado-dark.png', // Default to `logo.src`.
       },
+    },
+    googleAnalytics: {
+      trackingID: 'UA-163801898-1',
+      anonymizeIP: false, // Should IPs be anonymized?
     },
     colorMode: {
       // "light" | "dark"
