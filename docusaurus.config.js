@@ -13,7 +13,6 @@ module.exports = {
   organizationName: 'cado-security', // Usually your GitHub org/user name.
   projectName: 'product-help', // Usually your repo name.
   trailingSlash: false,
-  plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
     navbar: {
       title: ' ',
