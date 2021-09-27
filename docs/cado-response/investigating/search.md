@@ -67,4 +67,4 @@ Fields of type `int` or `keyword` require the search term to match exactly in or
  - `user: ch*` matches
  - `user: ch` does not match
 
-Fields of type `text` do not require a full match. E.g. an event with `content` `This is some example content` 
+Fields of type `text` do not require a full match. E.g. searching for `strings: content` will return the event with the following strings data: `This is some example content`.
