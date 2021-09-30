@@ -1,10 +1,10 @@
 ---
-title: Integrating with Tines
+title: Tines
 hide_title: true
 sidebar_position: 2
 ---
 
-# Integrating with Tines
+# Tines
 
 Tines is a no-code automation platform for security analysts. Tines allows analysts to spend less time on routine repetitive tasks and allow them to focus on those areas where they can have the most impact. The tools feature pre-configured integrations with a variety of business and security tools, but for more sophisticated users, it also features the ability to hook into any publicly available API, including the Cado API.
 
@@ -32,13 +32,13 @@ It's important to name all credentials and resources mentioned in the tutorial a
 
 ### Adding your Platform Base URL
 
-To tell Tines the Platform Base URL of a Cado Response instance, you'll need to add it as a Resource. In order to do this, you'll need to open your Tines Dashboard, and go to the **/** page. Click the **New Resource** button and name it `CadoRepsonse_URL` and paste the Platform Base URL into the builder.
+To tell Tines the Platform Base URL of a Cado Response instance, you'll need to add it as a Resource. In order to do this, you'll need to open your Tines Dashboard, and go to the **Resources** page. Click the **New Resource** button and name it `CadoRepsonse_URL` and paste the Platform Base URL into the builder.
 
 ### Testing your Settings
 
 To make sure you've done all the following steps correctly, please follow along with the following test procedure:
 
-1. Create a new story in Tines through the Tines Dashboard
+1. Create a new story in Tines through the Tines Dashboard.
 2. Drag the **List Cado Response Projects** HTTP Request template from the **Public Templates** repository in the left-hand sidebar.
 3. Click the new action and click **Run**.
 4. Check the **Action Events** for a `200 OK` HTTP code.
