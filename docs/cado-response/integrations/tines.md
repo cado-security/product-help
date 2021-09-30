@@ -107,7 +107,7 @@ You'll need to change the `project_id` parameter in the **Payload** to a valid C
 
 #### Changing the Payload Parameters-
 
-In the **Payload** section you need to change the `caseName` parameter to the name of the project you desire. You can also change the `description` parameter to add a description to your project, or remove it if you don't need one.
+In the **Payload** section you need to change the `caseName` parameter to the name of the project you desire. You can also change the `description` parameter to add a description to your project, or remove it if you don't need one. If you don't add the `caseName` parameter, the action will default to a project name in the following format: `{Timestamp}_TinesProject`.
 
 #### Extracting the Return Value
 
@@ -281,7 +281,7 @@ Modify the **Payload** section to match the following: _(It may be easier to swi
 
 ```json
 {
-    "caseName": "{{.ec2_webhook.body.project_name}}",
+    "caseName": "{{.ec2_webhook.body.project_name | default: "now" | date: "%s" | append: "_TinesProject" }}",
 }
 ```
 
