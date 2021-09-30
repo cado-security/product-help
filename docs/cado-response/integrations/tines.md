@@ -409,7 +409,7 @@ Once the Pipeline has finished, we'll want to email the user saying the pipeline
 
 ```json
 {
-    "recipients": "{{.ec2_webhook.email_address}}",
+    "recipients": "{{.ec2_webhook.body.email_address}}",
     "subject": "Tines: EC2 Acquisition is finished",
     "body": "Pipeline has finished!"
 }
