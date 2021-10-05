@@ -59,13 +59,13 @@ Actions are the basic actions that can be chained together in _Stories_, which a
 
 - Template Name: `List EC2 Instances in Cado Response`
 - Description: This action will allow you to list all the EC2 instances in an AWS region.
-- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/ec2`
+- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/ec2`
 
 #### Changing the Default URL
 
-As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `{{PROJECT_ID}}` placeholder with a valid Project ID from Cado Response.
+As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `.projectID` placeholder with a valid Project ID from Cado Response.
 
-For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/ec2` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/ec2` for Project ID 2.
+For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/ec2` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/ec2` for Project ID 2.
 
 #### Changing the Payload Parameters
 
@@ -75,13 +75,13 @@ You'll also need to adjust the `region` parameter in the **Payload** to the vali
 
 - Template Name: `List S3 Buckets in Cado Response`
 - Description: This action will allow you to list all the S3 buckets in an AWS account.
-- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/s3`
+- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/s3`
 
 #### Changing the Default URL
 
-As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `{{PROJECT_ID}}` placeholder with a valid Project ID from Cado Response.
+As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `.projectID` placeholder with a valid Project ID from Cado Response.
 
-For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/s3` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/s3` for Project ID 2.
+For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/s3` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/s3` for Project ID 2.
 
 ### List Projects
 
@@ -107,7 +107,7 @@ You'll need to change the `project_id` parameter in the **Payload** to a valid C
 
 #### Changing the Payload Parameters-
 
-In the **Payload** section you need to change the `caseName` parameter to the name of the project you desire. You can also change the `description` parameter to add a description to your project, or remove it if you don't need one. If you don't add the `caseName` parameter, the action will default to a project name in the following format: `{Timestamp}_TinesProject`.
+In the **Payload** section you need to change the `caseName` parameter to the name of the project you desire. You can also change the `description` parameter to add a description to your project, or remove it if you don't need one. If you don't add the `caseName` parameter, the action will default to the current UNIX timestamp as the project name. All projects created through Tines will include the `_TinesProject` suffix.
 
 #### Extracting the Return Value
 
@@ -150,13 +150,13 @@ You'll need to change the `pipeline_id` parameter in the **Payload** to a valid 
 
 - Template Name: `Trigger an EC2 Disk Acquisition in Cado Response`
 - Description: This action will trigger a disk image acquisition task in Cado Response for a specified EC2 instance.
-- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/ec2`
+- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/ec2`
 
 #### Changing the Default URL
 
-As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `{{PROJECT_ID}}` placeholder with a valid Project ID from Cado Response.
+As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `.projectID` placeholder with a valid Project ID from Cado Response.
 
-For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/ec2` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/ec2` for Project ID 2.
+For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/ec2` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/ec2` for Project ID 2.
 
 #### Changing the Payload Parameters-
 
@@ -203,13 +203,13 @@ where `get_new_pipeline_id` is the name of the appropriate Event Transform actio
 
 - Template Name: `Trigger an S3 Disk Acquisition in Cado Response
 - Description: This action will trigger a disk image acquisition task in Cado Response from a file in a S3 Bucket.
-- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/s3`
+- Default URL: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/s3`
 
 #### Changing the Default URL
 
-As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `{{PROJECT_ID}}` placeholder with a valid Project ID from Cado Response.
+As this API endpoint requires a **Project ID** you'll need to change the URL field to reflect this by changing the `.projectID` placeholder with a valid Project ID from Cado Response.
 
-For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{PROJECT_ID}}/imports/s3` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/s3` for Project ID 2.
+For example `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/{{ .projectID | default: .RESOURCE.cadoresponse_default_project_id }}/imports/s3` would become: `https://{{.RESOURCE.cadoresponse_url}}/api/v2/projects/2/imports/s3` for Project ID 2.
 
 #### Changing the Payload Parameters-
 
