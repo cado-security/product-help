@@ -32,7 +32,17 @@ It's important to name all credentials and resources mentioned in the tutorial a
 
 ### Adding your Platform Base URL
 
-To tell Tines the Platform Base URL of a Cado Response instance, you'll need to add it as a Resource. In order to do this, you'll need to open your Tines Dashboard, and go to the **Resources** page. Click the **New Resource** button and name it `CadoRepsonse_URL` and paste the Platform Base URL into the builder.
+To tell Tines the Platform Base URL of a Cado Response instance, you'll need to add it as a Resource. In order to do this, you'll need to open your Tines Dashboard, and go to the **Resources** page. Click the **New Resource** button and name it `Cadoresponse_URL` and paste the Platform Base URL into the builder.
+
+### Adding Default Values
+
+The actions we provide allow you to set default fallback values, in case a form doesn't get filled in properly, or if an analyst misconfigures an action. To add these values, simply create three Resources with the following names:
+
+| Resource Name                     | Type    | Example     | Description                                                |
+|---------------------------------  |---------|-------------|------------------------------------------------------------|
+| `CadoResponse_Default_Project_ID` | Integer | 1           | A numerical value that denotes a project in Cado Response. |
+| `CadoResponse_Default_Region`     | String  | us-east-1   | A valid name of an AWS region.                             |
+| `CadoResponse_Default_S3_Bucket`  | String  | bucket_name | A name of a valid and accessible S3 bucket.                |
 
 ### Testing your Settings
 
@@ -118,7 +128,7 @@ This action will return the newly created Project ID in the response body. You c
     "mode": "extract",
     "matchers": [
         {
-            "path": "{{ .create_a_new_project_in_cado_repsonse.body.id}}",
+            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
             "regexp": "\\d*",
             "to": "created_project_id"
         }
@@ -281,7 +291,7 @@ Modify the **Payload** section to match the following: _(It may be easier to swi
 
 ```json
 {
-    "caseName": "{{.ec2_webhook.body.project_name | default: "now" | date: "%s" | append: "_TinesProject" }}",
+    "caseName": "{{.ec2_webhook.body.project_name | default: \"now\" | date: \"%s\" | append: \"_TinesProject\" }}",
 }
 ```
 
@@ -294,7 +304,7 @@ This action will return the newly created Project ID in the response body. In or
     "mode": "extract",
     "matchers": [
         {
-            "path": "{{ .create_a_new_project_in_cado_repsonse.body.id}}",
+            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
             "regexp": "\\d*",
             "to": "created_project_id"
         }
@@ -320,9 +330,14 @@ Modify the **Payload** section to match the following: _(It may be easier to swi
     "include_logs": "true",
     "include_screenshot": "true",
     "instance_id": "{{.ec2_webhook.body.ec2_instance_id}}",
+    "bucket": "{{ .bucket | default: .RESOURCE.cadoresponse_default_s3_bucket }}",
     "region": "{{.ec2_webhook.body.ec2_instance_region}}"
 }
 ```
+
+:::tip
+Change BUCKET_NAME into the code into an appropriate S3 bucket!
+:::
 
 This JSON code will tell Cado Response to acquire the disk from the EC2 instance described in the form, using the default acquisition settings.
 
