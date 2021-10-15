@@ -34,7 +34,7 @@ When on the Phantom platform navigate to **Apps**. Here you can install and conf
 
 To install Cado Response on Phantom you need to click the **INSTALL APP** button in the top right of the page. You need to upload the Cado Response tarball or rpm and click **INSTALL**.
 
-If you have successfully installed the Cado Response App you will see it under your **Configured Apps**. Click **CONFIGURE NEW ASSET** on the Cado Response App. Fill in the Asset Info fields with a name and description. Navigate to Asset Settings and input your URL for the response platform and your **Access token** you generated earlier. **SAVE** and **TEST CONNECTIVITY**. If all is successful you should have a Test Connectivity Passed message.
+If you have successfully installed the Cado Response App you will see it under your **Unconfigured Apps**. Click **CONFIGURE NEW ASSET** on the Cado Response App. Fill in the Asset Info fields with a name and description. Navigate to Asset Settings and input your URL for the response platform and your **Access token** you generated earlier. **SAVE** and **TEST CONNECTIVITY**. If all is successful you should have a Test Connectivity Passed message.
 
 #### Configuration Variables
 
