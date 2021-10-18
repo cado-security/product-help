@@ -37,7 +37,7 @@ In your **second** account (222222222222 in this example), if one does not exist
 
 ![Full Access](/img/full-access.png)
 
-- Click through to review and give the role a name (will be referred to as `CadoResponseSecondRole` in following examples but this can be anything you’d like)
+- Click through to review and give the role a name (will be referred to as `CadoResponseSecondRole` in following examples but this can be anything you'd like)
 
 :::info
 If you choose to change **Maximum session duration**, the minimum currently supported by Cado Response is 1 hour.
