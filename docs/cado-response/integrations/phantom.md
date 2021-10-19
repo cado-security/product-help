@@ -28,11 +28,11 @@ In order to add the Access Key to Phantom, you'll need to **[Configure your Cado
 
 When on the Phantom platform navigate to **Apps**. Here you can install and configure Cado Response on Phantom. You will need the following to complete these steps:
 
-- Cado Response tarball or rpm
+- Cado Response tarball which can be downloaded **[here](https://cado-public-access.s3.amazonaws.com/phantom-integration/phantom_cadoresponse_0-9-0.tgz)**
 - URL to Cado Response followed by `/api/v2`
 - API Access Key
 
-To install Cado Response on Phantom you need to click the **INSTALL APP** button in the top right of the page. You need to upload the Cado Response tarball or rpm and click **INSTALL**.
+To install Cado Response on Phantom you need to click the **INSTALL APP** button in the top right of the page. You need to upload the Cado Response tarball and click **INSTALL**.
 
 If you have successfully installed the Cado Response App you will see it under your **Unconfigured Apps**. Click **CONFIGURE NEW ASSET** on the Cado Response App. Fill in the Asset Info fields with a name and description. Navigate to Asset Settings and input your URL for the response platform and your **Access token** you generated earlier. **SAVE** and **TEST CONNECTIVITY**. If all is successful you should have a Test Connectivity Passed message.
 
