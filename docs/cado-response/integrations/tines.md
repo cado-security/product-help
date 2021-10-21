@@ -16,13 +16,6 @@ Before properly getting started please see the following for general instruction
 
 **[Integrations Overview >](api-overview)**
 
-### Contents
-
-1. **[Creating and Storing an API Access Key](#creating-and-storing-an-api-access-key)**
-2. **[Adding your Platform Base URL](#adding-your-platform-base-url)**
-3. **[Adding Default Values](#adding-default-values)**
-4. **[Testing your Settings](#testing-your-settings)**
-
 ### Creating and Storing an API Access Key
 
 Cado Response allows you to create an API Access Key that allows third-party services to authenticate and interact with a Cado Response instance; you'll need to create one in order to use Tines with Cado Response.
@@ -69,17 +62,6 @@ If you're confused by the terminology mentioned in the following, please conside
 :::
 
 Actions are the basic actions that can be chained together in _Stories_, which are playbooks that can be run to perform a specific task or workflow.
-
-### Contents
-
-1. **[List EC2 Instances](#list-ec2-instances)**
-2. **[List S3 Buckets](#list-s3-buckets)**
-3. **[List Projects](#list-projects)**
-4. **[List Project Pipelines](#list-project-pipelines)**
-5. **[Create a Project](#create-a-project)**
-6. **[Retrieve a Pipeline](#retrieve-a-pipeline)**
-7. **[Acquire a Disk Image From EC2](#acquire-a-disk-image-from-ec2)**
-8. **[Acquire a Disk Image From S3](#acquire-a-disk-image-from-s3)**
 
 ![Tines Actions for the Cado Response API](/img/tines-actions.png)
 
@@ -283,14 +265,6 @@ This section covers a quick tutorial in creating a basic workflow (or story in T
 - Triggers an EC2 Disk Acquisition
 - Loops over a pipeline until it has been terminated
 - Emails the user a success message
-
-### Contents
-
-1. **[List EC2 Instances](#list-ec2-instances)**
-2. **[List S3 Buckets](#list-s3-buckets)**
-3. **[List Projects](#list-projects)**
-4. **[List Project Pipelines](#list-project-pipelines)**
-5. **[Create a Project](#create-a-project)**
 
 ### Creating the Form
 
