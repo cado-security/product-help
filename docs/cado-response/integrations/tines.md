@@ -16,6 +16,13 @@ Before properly getting started please see the following for general instruction
 
 **[Integrations Overview >](api-overview)**
 
+### Contents
+
+1. **[Creating and Storing an API Access Key](#creating-and-storing-an-api-access-key)**
+2. **[Adding your Platform Base URL](#adding-your-platform-base-url)**
+3. **[Adding Default Values](#adding-default-values)**
+4. **[Testing your Settings](#testing-your-settings)**
+
 ### Creating and Storing an API Access Key
 
 Cado Response allows you to create an API Access Key that allows third-party services to authenticate and interact with a Cado Response instance; you'll need to create one in order to use Tines with Cado Response.
@@ -62,6 +69,17 @@ If you're confused by the terminology mentioned in the following, please conside
 :::
 
 Actions are the basic actions that can be chained together in _Stories_, which are playbooks that can be run to perform a specific task or workflow.
+
+### Contents
+
+1. **[List EC2 Instances](#list-ec2-instances)**
+2. **[List S3 Buckets](#list-s3-buckets)**
+3. **[List Projects](#list-projects)**
+4. **[List Project Pipelines](#list-project-pipelines)**
+5. **[Create a Project](#create-a-project)**
+6. **[Retrieve a Pipeline](#retrieve-a-pipeline)**
+7. **[Acquire a Disk Image From EC2](#acquire-a-disk-image-from-ec2)**
+8. **[Acquire a Disk Image From S3](#acquire-a-disk-image-from-s3)**
 
 ![Tines Actions for the Cado Response API](/img/tines-actions.png)
 
@@ -126,9 +144,9 @@ This action will return the newly created Project ID in the response body. You c
 ```json
 {
     "mode": "extract",
-    "matchers": [
+    "matchers": [
         {
-            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
+            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
             "regexp": "\\d*",
             "to": "created_project_id"
         }
@@ -191,9 +209,9 @@ This action will return the newly created Pipeline ID in the response body. You 
 ```json
 {
     "mode": "extract",
-    "matchers": [
+    "matchers": [
         {
-            "path": "{{ .trigger_an_ec2_disk_acquisition_in_cado_response.body.pipeline_id}} }}",
+            "path": "{{ .trigger_an_ec2_disk_acquisition_in_cado_response.body.pipeline_id}} }}",
             "regexp": "\\d*",
             "to": "created_pipeline_id"
         }
@@ -232,9 +250,9 @@ This action will return the newly created Pipeline ID in the response body. You 
 ```json
 {
     "mode": "extract",
-    "matchers": [
+    "matchers": [
         {
-            "path": "{{ .trigger_an_s3_disk_acquisition_in_cado_response.body.pipelines[0].pipeline_id}} }}",
+            "path": "{{ .trigger_an_s3_disk_acquisition_in_cado_response.body.pipelines[0].pipeline_id}} }}",
             "regexp": "\\d*",
             "to": "created_pipeline_id"
         }
@@ -265,6 +283,14 @@ This section covers a quick tutorial in creating a basic workflow (or story in T
 - Triggers an EC2 Disk Acquisition
 - Loops over a pipeline until it has been terminated
 - Emails the user a success message
+
+### Contents
+
+1. **[List EC2 Instances](#list-ec2-instances)**
+2. **[List S3 Buckets](#list-s3-buckets)**
+3. **[List Projects](#list-projects)**
+4. **[List Project Pipelines](#list-project-pipelines)**
+5. **[Create a Project](#create-a-project)**
 
 ### Creating the Form
 
@@ -302,9 +328,9 @@ This action will return the newly created Project ID in the response body. In or
 ```json
 {
     "mode": "extract",
-    "matchers": [
+    "matchers": [
         {
-            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
+            "path": "{{ .create_a_new_project_in_cado_response.body.id}}",
             "regexp": "\\d*",
             "to": "created_project_id"
         }
@@ -346,9 +372,9 @@ This action will return the newly created Pipeline ID in the response body. In o
 ```json
 {
     "mode": "extract",
-    "matchers": [
+    "matchers": [
         {
-           "path": "{{ .trigger_an_ec2_disk_acquisition_in_cado_response.body.pipeline_id}} }}",
+           "path": "{{ .trigger_an_ec2_disk_acquisition_in_cado_response.body.pipeline_id}} }}",
            "regexp": "\\d*",
            "to": "created_pipeline_id"
         }
@@ -366,8 +392,8 @@ Modify the **Payload** section to match the following: _(It may be easier to swi
 
 ```json
 {
-    "project_id": "{{.get_project_id.created_project_id | first }}",
-    "pipeline_id": "{{ .get_new_pipeline_id.created_pipeline_id | first }}"
+    "project_id": "{{.get_project_id.created_project_id | first }}",
+    "pipeline_id": "{{ .get_new_pipeline_id.created_pipeline_id | first }}"
 }
 ```
 
@@ -379,11 +405,11 @@ In the **Check if Pipeline is Terminated** action, modify the **Editor** section
 
 ```json
 {
-    "rules": [
+    "rules": [
         {
             "type": "regex",
             "value": "true",
-            "path": "{{ .get_details_for_a_pipeline_in_cado_response.body[0].terminated }}"
+            "path": "{{ .get_details_for_a_pipeline_in_cado_response.body[0].terminated }}"
         }
     ]
 }
@@ -395,11 +421,11 @@ In the **Check if Pipeline isn't Terminated** action, modify the **Editor** sect
 
 ```json
 {
-    "rules": [
+    "rules": [
         {
             "type": "regex",
             "value": "false",
-            "path": "{{ .get_details_for_a_pipeline_in_cado_response.body[0].terminated }}"
+            "path": "{{ .get_details_for_a_pipeline_in_cado_response.body[0].terminated }}"
         }
     ]
 }
@@ -425,7 +451,7 @@ Once the Pipeline has finished, we'll want to email the user saying the pipeline
 ```json
 {
     "recipients": "{{.ec2_webhook.body.email_address}}",
-    "subject": "Tines: EC2 Acquisition is finished",
+    "subject": "Tines: EC2 Acquisition is finished",
     "body": "Pipeline has finished!"
 }
 ```
