@@ -8,7 +8,11 @@ sidebar_position: 2
 
 Tines is a no-code automation platform for security analysts. Tines allows analysts to spend less time on routine repetitive tasks and allow them to focus on those areas where they can have the most impact. The tools feature pre-configured integrations with a variety of business and security tools, but for more sophisticated users, it also features the ability to hook into any publicly available API, including the Cado API.
 
-By using the Cado Response integration with Tines, we're allowing security analysts to quickly automate Incident Response and allow them to quickly respond to attacks for further investigation in the Cado Response platform.
+By using the Cado Response integration with Tines, we're allowing security analysts to quickly automate Incident Response and allow them to quickly respond to attacks for further investigation in the Cado Response platform. The Tines and Cado Response integration is easy to use, just search for **Cado Security** in the Public Templates repository, choose, and then drag and drop.
+
+:::tip
+If you're confused by the terminology mentioned here, or have never used Tines before, please consider checking out the [Tines documentation](https://hub.tines.com/docs/quickstart).
+:::
 
 ## Getting Started with Tines
 
@@ -63,12 +67,11 @@ To make sure you've done all the following steps correctly, please follow along 
 If the following was successful, then you've correctly setup Tines to interact with the Cado Response API.
 
 ## List of Actions
-
-:::tip
-If you're confused by the terminology mentioned in the following, please consider checking out the [Tines documentation](https://hub.tines.com/docs/quickstart).
-:::
-
 Actions are the basic actions that can be chained together in _Stories_, which are playbooks that can be run to perform a specific task or workflow.
+
+:::info
+All the list actions are available in the Tines Public Templates repository. Just search for **Cado Security**. It's easy to do, just search, choose and drag and drop.
+:::
 
 ### Contents
 
