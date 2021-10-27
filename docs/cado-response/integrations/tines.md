@@ -70,7 +70,7 @@ If the following was successful, then you've correctly setup Tines to interact w
 Actions are the basic actions that can be chained together in _Stories_, which are playbooks that can be run to perform a specific task or workflow.
 
 :::info
-All the list actions are available in the Tines Public Templates repository. Just search for **Cado Security**. It's easy to do, just search, choose and drag and drop.
+All the list actions are available in the Tines Public Templates repository. Just search for **Cado Security**, choose the action and drag and drop.
 :::
 
 ### Contents
