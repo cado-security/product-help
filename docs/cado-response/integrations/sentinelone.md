@@ -34,6 +34,7 @@ To leverage the integration between SentinelOne and Cado Response, you must have
 6. Select **Auto-Download** as the Cado Host binary deployment download setting.
 	
 7. Choose whether you would like the captured data to be imported into the Cado Response platform for processing and analysis. **Yes** is the recommended setting. 
+
 	- If you select **Yes**, captured data will automatically be processed and analyzed by the Cado Response platform post collection. Please note that this requires a connection from the systems you plan to run the Cado script across to the Cado Response server. For example, this will not function properly if you have a firewall blocking access to Cado Response.
 
 	- If you select **No**, the captured data will only be uploaded to your cloud storage without being processed or analyzed. Please note, if you wish to take advantage of Cado's processing and analysis capabilities, you will need to manually import this data into the Cado Response platform. This can be achieved by logging into the Cado Response platform, creating a new project or clicking into an existing one, then selecting Import > AWS, and lastly importing the evidence from your AWS S3 Storage. 
