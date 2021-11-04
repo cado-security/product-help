@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# Phantom Integration Documentation
+# Phantom Integration
 
 Splunk Phantom is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk Phantom platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado Response.
 
