@@ -287,6 +287,10 @@ This section covers a quick tutorial in creating a basic workflow (or story in T
 - Loops over a pipeline until it has been terminated
 - Emails the user a success message
 
+:::tip
+You can download the finished story example here: ** [Cado Response Basic Story: Create a Project and Acquire EC2 Disk >](https://cado-public.s3.amazonaws.com/integrations/cado-response-tines-story.json) **
+:::
+
 ### Contents
 
 1. **[List EC2 Instances](#list-ec2-instances)**
