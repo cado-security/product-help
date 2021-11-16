@@ -64,7 +64,7 @@ chmod +x ./cado-host
 If you are not using Cado Response, yet still want to automatically store the Cado Host collected data to the cloud, you'll need to create credentials with limited write access to your cloud storage.  
 
 :::caution
-It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. The hosts also need outbound connectivity to the cloud storage URLs outlined below.
+It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. Ensure that the devices on which the scripts will be run have HTTPS access to the cloud storage URLs as defined below.
 :::
 
 To create secure credentials to upload the Cado Host collected data to the cloud, follow the instructions below based on your cloud provider of choice:
