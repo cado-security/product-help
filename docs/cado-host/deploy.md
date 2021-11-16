@@ -14,7 +14,7 @@ In order to deploy Cado Host, you can choose from one of the following deploymen
 2. Use the **Direct Download** method.  This allows customers to download and run Cado Host independent of running Cado Response.
 
 ### Using Script Builder
-In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below:
+In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated. 
 
 :::caution
 Ensure that the devices on which the scripts will be run have HTTPS access to the Cado Response platform and that the Cado Response network Security Group is configured to allow access from those IP addresses or ranges.  This is extremely important because the Cado Response platform is used to generate the necessary pre-signed URLs in order for Cado Host to upload the triage data to your cloud storage account.  
@@ -61,10 +61,10 @@ chmod +x ./cado-host
 :::
 
 ## Creating Secure Cloud Storage Credentials
-If you are not using Cado Response, yet still want to automatically store the Cado Host collected data to the cloud, you'll need to create credentials with limited write access to your cloud storage.
+If you are not using Cado Response, yet still want to automatically store the Cado Host collected data to the cloud, you'll need to create credentials with limited write access to your cloud storage.  
 
 :::caution
-It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. 
+It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. The hosts also need outbound connectivity to the cloud storage URLs outlined below.
 :::
 
 To create secure credentials to upload the Cado Host collected data to the cloud, follow the instructions below based on your cloud provider of choice:
