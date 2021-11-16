@@ -16,6 +16,6 @@ You will see a browser notification stating that "Your connection is not private
 ![Login Page](/img/login.png)
 
 ### Default Login
-On first boot, the platform will take about 10 minutes to install, during which time, on the login URL page, you will see a message indicating that the system is "Installing Cado Response ...".  After initial install, you can login with the username `admin` and the password `i-xxx`, where `i-xxx` is the Instance ID of your Cado Response instance.  After initial login, you will be asked to change your password.
+On first boot, the platform will take about 10 minutes to install, during which time, on the login URL page, you will see a message indicating that the system is "Installing Cado Response ...".  After initial install, you can login with the username `admin`.  For AWS, the password is `i-xxx`, where `i-xxx` is the Instance ID of your Cado Response instance.  For Azure, the password is the very long instance id `/subscription/.../cado-main-vm` where `/subscription/.../cado-main-vm` is the full instance id.  After initial login, you will be asked to accept the EULA and change your password.
 
 

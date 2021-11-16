@@ -5,9 +5,9 @@ sidebar_position: 1
 ---
 
 # Cado Host
-Cado Host is a solution to acquire forensic artefacts from systems and place them into cloud storage, enabling you to perform a quick triage investigation of a target system.
+Cado Host is a solution to acquire forensic artifacts from systems and place them into cloud storage, enabling you to perform a quick triage investigation of a target system.
 Data is collected and stored in a zip file that can be automatically uploaded to Amazon AWS, Microsoft Azure or Google Cloud Storage. It also supports storing captured files locally.
-Once collected, these artefacts can be imported, processed and analysed in the Cado Response platform.
+Once collected, these artifacts can be imported, processed and analysed in the Cado Response platform.
 
 Cado Host binaries are available for:
 - Microsoft Windows: 7, 8.1, 10 (1607+) and Microsoft Windows Server Server 2012 R2+
