@@ -174,8 +174,10 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     :::
 
 10. Deploy by running the following commands in the directory `cado-azure-tf/cado/`
+
     `terraform init` followed by `terraform apply`
-You can review settings before deploying by running `terraform plan`
+
+    You can review settings before deploying by running `terraform plan`
 
 11. Make a note of the IP Address and the full Instance Id (/subscription/.../cado-main-vm) in the logs e.g.:
 
