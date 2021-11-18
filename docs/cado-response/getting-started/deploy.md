@@ -120,7 +120,13 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     ```
 
     :::tip
-    You can find your storage account's account key in the **[Azure portal](https://portal.azure.com/)**. Navigate to **Settings > Access keys** in your storage account's menu blade to see both primary and secondary access keys.  You can then click the **Show keys** button and copy the **Key** value.  Key values should be enclosed in double quotes if working from within bash. You can also use a connection string or SAS token to authenticate the command. More details on this here: **[Creating a container in a storage account](https://docs.microsoft.com/en-US/cli/azure/storage/container?view=azure-cli-latest#az_storage_container_create)**
+    You can find your storage account's account key by either running the command below or by locating it within the Azure Portal:
+    1. Running the following command:
+    ```console
+    az storage account keys list --account-name <StorageAccountName>
+    ```
+    
+    2. In the **[Azure portal](https://portal.azure.com/)**, navigate to the resource group that you created, then the storage account, then click **Settings > Access keys** in your storage account's menu blade to see both primary and secondary access keys.  You can then click the **Show keys** button and copy the **Key** value.  Key values should be enclosed in double quotes if working from within bash. You can also use a connection string or SAS token to authenticate the command. More details on this here: **[Creating a container in a storage account](https://docs.microsoft.com/en-US/cli/azure/storage/container?view=azure-cli-latest#az_storage_container_create)**
 
     ![Access Keys](/img/azure-access-keys.png)
     :::
@@ -128,13 +134,13 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
 5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
     ```console
-    az storage blob copy start --auth-mode login --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI" --subscription "<SubscriptionName>"
+    az storage blob copy start --auth-mode login --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI"
     ```
 
     :::caution
     Wait for the copy operation to complete before moving to the next step.  You can check the status of the blob copy by running the `az storage blob show` command as outlined below.  This example is for Windows.  You can pipe the same command to *grep* in Linux.  You will know the process is complete when the output `status` field changes from **pending** to **success**
     ```console
-    az storage blob show --auth-mode login --account-name "<StorageAccountName>"  --name "cado_response.vhd" --container-name "<ContainerName>" --subscription "<SubscriptionName>"  | findstr status
+    az storage blob show --auth-mode login --account-name "<StorageAccountName>"  --name "cado_response.vhd" --container-name "<ContainerName>" --subscription "<SubscriptionName>"  -o yamlc | findstr status
     ```
     :::
 
