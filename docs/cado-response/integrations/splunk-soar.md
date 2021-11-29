@@ -1,7 +1,7 @@
 ---
 title: Splunk SOAR
 hide_title: true
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Splunk SOAR Integration

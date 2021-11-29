@@ -55,7 +55,7 @@ The extension part of the message is a placeholder for additional fields that ar
 | tag | Execution | str | Tag representing type of event. |
 | alarm_description | Executable in suspicious location | str | Description of the alarm in the event. |
 | alarm | True | bool | If this event has an alarm associated with it. |
-| executed_process | C:/Users/Tdungan/AppData/Local/Temp/install_reader10_en_air_gtbd_aih.exe | str | Where we detect a process execution, the path of the executed file. |
+| executed_process | C:/Users/Tdungan/AppData/Local/Temp/ install_reader10_en_air_gtbd_aih.exe | str | Where we detect a process execution, the path of the executed file. |
 | file_access | Windows Explorer.lnk | str | How the file was accessed. |
 | super_short | A Process Was Executed | str | Super short text providing summary of event. |
 | process_cwd | PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin | str | For memory evidence items, current working directory of event. |
