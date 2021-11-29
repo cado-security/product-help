@@ -304,7 +304,7 @@ To create a new playbook, navigate to Playbooks from the Splunk SOAR dashboard. 
 
 Using the graphic playbook editor, you can drag and drop the required elements into place from the blue nodes, and configure them one by one as you place them, until you have a playbook ready.
 
-![Splunk SOAR Playbook](/img/Splunk SOAR-playbook.png)
+![Splunk SOAR Playbook](/img/phantom-playbook.png)
 
 Playbooks are made up of multiple blocks that carry out a workflow. There are 3 main types of blocks:
 
