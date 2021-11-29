@@ -1,42 +1,42 @@
 ---
-title: Phantom
+title: Splunk SOAR
 hide_title: true
 sidebar_position: 2
 ---
 
-# Phantom Integration
+# Splunk SOAR Integration
 
-Splunk Phantom is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk Phantom platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado Response.
+Splunk SOAR is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk SOAR platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado Response.
 
 ## Getting Started
  
 Before getting started, please see the **[Integrations Overview >](api-overview)** page for general instructions on setting up the Cado Response platform for integration with third-party tools.
 
-Below are the instructions for setting up the Cado Response and Phantom integration:
+Below are the instructions for setting up the Cado Response and Splunk SOAR integration:
 
 1. **[Create an API Access Key](#create-an-api-access-key)**
-2. **[Install and configure the Cado Response app in Phantom](#install-and-configure-the-cado-response-app)**
+2. **[Install and configure the Cado Response app in Splunk SOAR](#install-and-configure-the-cado-response-app)**
 3. **[Set your configuration variables](#configuration-variables)**
 4. **[Test your connection](#test-your-connection)**
 5. **[Setup your Playbooks](#playbooks)**
 
 ### Create an API Access Key
 
-In order to allow third-party services to authenticate and interact with a Cado Response instance, you will need to **[Create an API Access Key](api-overview#creating-and-storing-an-api-access-key)** for use within Phantom.
+In order to allow third-party services to authenticate and interact with a Cado Response instance, you will need to **[Create an API Access Key](api-overview#creating-and-storing-an-api-access-key)** for use within Splunk SOAR.
 
 :::tip
-In addition to the API Access Key, please ensure that the Phantom platform has access (network, firewall, etc) to make API calls to the Cado Response platform.
+In addition to the API Access Key, please ensure that the Splunk SOAR platform has access (network, firewall, etc) to make API calls to the Cado Response platform.
 :::
 
 ### Install and Configure the Cado Response App
 
-In order to install and configure the Cado Response Phantom App, you will need the below information:
+In order to install and configure the Cado Response Splunk SOAR App, you will need the below information:
 
-- The Cado Response Phantom App tarball available for download **[here](https://cado-public-access.s3.amazonaws.com/phantom-integration/phantom_cadoresponse_0-9-0.tgz)**
+- The latest version of the Cado Response Splunk SOAR App Add-on from the [**Splunkbase Marketplace**](https://splunkbase.splunk.com/app/6181/)
 - The URL to Cado Response, followed by `/api/v2`
 - The API Access Key
 
-To install the Cado Response App, from within Phantom, navigate to **Apps** and click the **INSTALL APP** button in the top right of the page, then upload the Cado Response tarball and click **INSTALL**.
+To install the Cado Response App, from within Splunk SOAR, navigate to **Apps** and click the **INSTALL APP** button in the top right of the page, then upload the Cado Response tarball and click **INSTALL**.
 
 If you have successfully installed the Cado Response App you will see it appear under your **Unconfigured Apps**. Next, do the following:
 1. Click **CONFIGURE NEW ASSET** on the Cado Response App. 
@@ -50,7 +50,7 @@ If all is successful, you should see a `Test Connectivity Passed` message.
 
 #### Configuration Variables
 
-The below configuration variables are required to operate Cado Response via the Phantom App. These are specified when configuring an asset in Phantom.
+The below configuration variables are required to operate Cado Response via the Splunk SOAR App. These are specified when configuring an asset in Splunk SOAR.
 
 | VARIABLE | REQUIRED | TYPE | DESCRIPTION |
 | -------- | -------- | ---- | ----------- |
@@ -68,7 +68,7 @@ When Cado Response is configured, you can validate your connection to make sure 
 
 Navigate to **Home -> Apps -> Cado Response Asset -> Asset Settings**. If you haven't already, Edit and enter the Cado Response URL and Secret Key. Save and Test Connectivity to ensure everything is connected as expected.
 
-If the following was successful, then you have correctly setup Phantom to interact with the Cado Response API.
+If the following was successful, then you have correctly setup Splunk SOAR to interact with the Cado Response API.
 
 ## Atomic Actions
 
@@ -298,13 +298,13 @@ No Parameters required for this action.
 
 ## Playbooks
 
-_If you have a good grasp of the basics of Phantom, feel free to skip this section._
+_If you have a good grasp of the basics of Splunk SOAR, feel free to skip this section._
 
-To create a new playbook, navigate to Playbooks from the Phantom dashboard. Click the **+ PLAYBOOK** button in the top right.
+To create a new playbook, navigate to Playbooks from the Splunk SOAR dashboard. Click the **+ PLAYBOOK** button in the top right.
 
 Using the graphic playbook editor, you can drag and drop the required elements into place from the blue nodes, and configure them one by one as you place them, until you have a playbook ready.
 
-![Phantom Playbook](/img/phantom-playbook.png)
+![Splunk SOAR Playbook](/img/phantom-playbook.png)
 
 Playbooks are made up of multiple blocks that carry out a workflow. There are 3 main types of blocks:
 
@@ -316,7 +316,7 @@ The example below makes use of both execute actions and human input. Prompts pop
 
 ### Capture EC2 Instance
 
-This section covers a quick tutorial in creating a basic workflow (or playbook in Phantom terms) that:
+This section covers a quick tutorial in creating a basic workflow (or playbook in Splunk SOAR terms) that:
 
 - Creates a new Project
 - Triggers an EC2 Disk Acquisition
