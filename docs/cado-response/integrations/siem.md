@@ -11,7 +11,9 @@ The processed timeline from Cado Response will be converted to a standard format
 
 ## Getting Started
 
-Before you can export the timeline you need to enable SIEM integration found under **Settings -> Platform Settings -> Integrations -> SIEM**. After it is enabled you can select what type of events you wish to be exported such as **key events** (malicious and suspicious events), **executed processes**, **network logons** and **files accessed**. You also need to set the S3 bucket and S3 folder you wish for the timeline to be exported to.
+Before you can export the timeline you need to enable SIEM integration found under **Settings -> Platform Settings -> Integrations -> SIEM**. After it is enabled you can select what type of events you wish to be exported such as **key events** (malicious and suspicious events), **executed processes**, **network logons** and **files accessed**. Ensure that at least on type of event is included to continue. You also need to set the S3 bucket and S3 folder you wish for the timeline to be exported to.
+
+![SIEM Settings in Cado Response](/img/siem-settings.png)
 
 When enabled whenever you import an evidence item, the timeline will be automatically converted and uploaded to S3. You then need to configure your SIEM system to watch the folder for any new files uploaded so they can be automatically added to your SIEM.
 
