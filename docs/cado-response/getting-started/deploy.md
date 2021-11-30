@@ -197,3 +197,7 @@ It will take about 20 minutes to deploy, then you can **[Log into Cado Response]
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
+
+:::caution
+When deploying, the main Cado Response instance will have the name `CadoResponse`.  If you rename your Cado Response instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
+:::
