@@ -185,12 +185,14 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
     You can review settings before deploying by running `terraform plan`
 
-11. Make a note of the IP Address and the full Instance Id (/subscription/.../cado-main-vm) in the logs e.g.:
+11. Make a note of the IP Address and the full Resource Id (/subscription/.../cado-main-vm) in the logs e.g.:
 
 ```console
 module.cado_scalable.azurerm_linux_virtual_machine.vm (remote-exec): public_ip = 1.2.3.4
 module.cado_scalable.azurerm_linux_virtual_machine.vm: Creation complete after 1m53s [id=/subscriptions/2f34c608-91b5-4d14-ac36-b8e0377fbcca/resourceGroups/new_res_three/providers/Microsoft.Compute/virtualMachines/cado-main-vm]
 ```
+
+The Resource ID can also be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
 
 It will take about 20 minutes to deploy, then you can **[Log into Cado Response](logging-in)** 
 
