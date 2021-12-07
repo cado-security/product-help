@@ -8,8 +8,6 @@ sidebar_position: 3
 
 Evidence is processed into Projects and investigation starts by analyzing the project evidence.  The project view provides an overview of the key information for all evidence items in a given project.
 
-![Project Overview](/img/project-view.png)
-
 The tabs available on the Project Overview page are:
 
 | Tab Name | Description |
@@ -34,8 +32,8 @@ The search interface allows you to search both file and event contents.
 
 Click **Investigate** then **Search** to open the search interface. Cado Response uses [n-gram indexing](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-ngram-tokenizer.html) to provide fast searches across files and events. Due to the way indexing works, you may get less results than if you performed a traditional slow byte by byte search of each file.
 
-### Indicators
-The Indicators page provides a summary of indicators of compromise detected within a project, and which systems they matched.
+### Indicators / Detections
+The Indicators or Detections page provides a summary of indicators of compromise detected within a project, and which systems they matched.
 
 Click **Investigate** then **Indicators**.
 
