@@ -48,5 +48,5 @@ You can download a set of logs from the Cado Response platform by navigating to 
 ### How do I contact Support?
 You can contact Cado Support via email at support@cadosecurity.com or reach out to your account manager for more details.
 
-### Do you publish your Service Level Agreements?
+### What are the Cado Response Service Level Agreements?
 The Cado Response Service Level Agreements (SLAs) are part of customers' end-user license agreement.  Please refer to your EULA for more details.

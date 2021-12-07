@@ -6,12 +6,12 @@ sidebar_position: 2
 
 ## Azure Deployment Overview
 
-Deployment of Cado Response is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
-
 :::note
 **Intended Audience and Operating Environment Requirements:**
 *This information is written for proficient Azure cloud administrators who are familiar with Azure technology and cloud operations. This manual assumes familiarity with MS Azure, including: Subscriptions,  Resource Groups, Virtual Machines, Storage Accounts, and Storage Containers.*
 :::
+
+Deployment of Cado Response is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
 
 ## Azure Terraform Script
 
