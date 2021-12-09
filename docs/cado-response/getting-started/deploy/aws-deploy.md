@@ -24,10 +24,11 @@ export const Highlight = ({children, color}) => (
 *This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilites and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.  For a list of supported AWS regions, please see our Markteplace listing: https://aws.amazon.com/marketplace/pp/prodview-2ol4yojhc5vpa?ref_=srh_res_product_title *
 :::
 
-Deployment of Cado Response is performed within your AWS cloud environment either via a CloudFormation Template or a Terraform Script. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
+Deployment of Cado Response is performed within your AWS cloud environment either via a CloudFormation Template, a Terraform Script or via the AWS Marketplace. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.  
 
 Cado Response consists of a few key components that interact with each other in order to provide the capabilities within the platform.   
 ![AWS architecture](/img/aws-architecture.png)
+
 
 ## AWS CloudFormation Template
 
@@ -89,6 +90,16 @@ You can then **[Log into Cado Response](../logging-in)**
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
+
+### Supported Regions
+Both via the AWS Marketplace and via custom deployments, Cado makes AWS AMI's available for the regions below.  As a customer, if you require deployment to a region that isn't listed, we can deploy our release AMIs to additional regions. 
+- us-east-1
+- us-east-2
+- us-west-1
+- us-west-2
+- eu-west-1
+- eu-west-2
+- eu-west-3
 
 ### Data Encryption and Security
 During deployment, by default, an S3 bucket, a VPC and a Subnet are created for use by the Cado Response solution.  From an access and security perspective, the S3 Bucket is encrypted with server-side encryption using AES256 and attached volumes are also encrypted using KMS.  We recommend you enable key rotation as well (https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html). The default VPC and Subnet create an isolated environment to which customers can control access rights.  When processing data, the Cado Response worker instances are launched within the same VPC as the main Cado Response instance.  Worker instances are started using the same AMI as the main Cado Response instance as well.
