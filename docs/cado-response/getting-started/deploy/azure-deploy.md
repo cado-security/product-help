@@ -29,6 +29,11 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
 3. Run 'az login'. The account you log in with will be used to deploy.  You should store the Cado Response VHD in your local Azure container for this account as well.
 
+    :::tip
+    If you have multiple Subscriptions, please ensure you set the Subscription properly prior to beginning the deployment, as outlined here:  
+    https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli#logging-into-the-azure-cli
+    :::
+
 4. Create a storage account and container to stage the Cado Response VHD locally within your Azure tenancy.  This will be from where the platform will be deployed.  You must copy the image to the same region in which you want to deploy Cado Response.  You can complete these steps using the Azure portal or the Azure CLI
 
     a. **Create a resource group**, if you do not have one already, for the local download of the VHD using the Azure portal or the Azure CLI as shown below.  Note this needs to be less than 6 characters in length:

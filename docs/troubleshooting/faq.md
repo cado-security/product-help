@@ -50,3 +50,6 @@ You can contact Cado Support via email at support@cadosecurity.com or reach out 
 
 ### What are the Cado Response Service Level Agreements?
 The Cado Response Service Level Agreements (SLAs) are part of customers' end-user license agreement.  Please refer to your EULA for more details.
+
+### Does Cado Response support processing of EC2s or AMIs with EBS Encryption?
+Yes. As of build 0.9.2.4, the `kms:CreateGrant` and `kms:Decrypt` permissions are enabled within the Cado Response role by default. If you upgraded from a build earlier than 0.9.2.4, you may need to add these permissions manually.
