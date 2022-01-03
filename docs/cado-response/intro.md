@@ -42,7 +42,9 @@ Interested in getting started?  Here are some of the most frequently accessed he
 ### Deploy in your cloud environment
 How to deploy Cado Response in your cloud environment
 
-**[Learn how >](getting-started/deploy)**
+**[Learn how in AWS >](getting-started/deploy/aws-deploy)**
+
+**[Learn how in Azure >](getting-started/deploy/azure-deploy)**
 
 ### Processing Data
 After deploying Cado Response, data can be automatically acquired from the cloud or imported from a number of supported sources. 
