@@ -29,17 +29,7 @@ To leverage the integration between SentinelOne and Cado Response, you must have
 
 4. Select the Operating System (Linux, Windows, or OSX) of the system(s) you wish to run the script across. Please note that Windows 32 bit is not supported for this integration.
 
-5. Select the cloud provider platform where you have deployed Cado Response (at the moment, AWS is the only supported cloud platform for this integration).
-
-6. Select **Auto-Download** as the Cado Host binary deployment download setting.
-	
-7. Choose whether you would like the captured data to be imported into the Cado Response platform for processing and analysis. **Yes** is the recommended setting. 
-
-	- If you select **Yes**, captured data will automatically be processed and analyzed by the Cado Response platform post collection. Please note that this requires a connection from the systems you plan to run the Cado script across to the Cado Response server. For example, this will not function properly if you have a firewall blocking access to Cado Response.
-
-	- If you select **No**, the captured data will only be uploaded to your cloud storage without being processed or analyzed. Please note, if you wish to take advantage of Cado's processing and analysis capabilities, you will need to manually import this data into the Cado Response platform. This can be achieved by logging into the Cado Response platform, creating a new project or clicking into an existing one, then selecting Import > AWS, and lastly importing the evidence from your AWS S3 Storage. 
-
-8. Click **Download Script**. Notice that the downloaded script will have a unique file name. A unique file name is required for successful upload (see step 2 for more details.
+5. Click **Download Script**. Notice that the downloaded script will have a unique file name. A unique file name is required for successful upload (see step 2 for more details.
 
 
 ### Step 2: Load the Cado Script into SentinelOne 
@@ -75,18 +65,17 @@ To leverage the integration between SentinelOne and Cado Response, you must have
 
 	![Actions](/img/s1-actions.png)
 
+:::note
+The chosen hosts must have access to the AWS servers to be able to upload the forensics data.
+:::
+
 3. Select the Cado script within your script library, then choose **Output**. 
 
 4. Next, the task description and timeout are preconfigued, but can be adjusted as you wish (otherwise click **Next**). 
 
 5. Click **Submit**. 
-
-	:::tip
-	If you selected **Yes - Import data into Response Platform** when you built the script (see below), the captured data will automatically be processed, analyzed, and available for forensic investigation within Cado Response.
-
-	If you selected **No**, the captured data will not be automatically processed or analyzed. If you wish to take advantage of Cado's processing and analysis capabilities, you will need to manually import this data into the Cado Response platform. This can be achieved by logging into the Cado Response platform, creating a new project or clicking into an existing one, then selecting Import > AWS, and lastly importing the evidence from your AWS S3 Storage.
-	:::
-
+The Cado script will run on the target machine and will collect the forensic data from it. The captured data will automatically be processed and analyzed by the Cado Response platform.
+	
 6. You can now perform your forensic investigation in Cado Response
 
 	![Investigation](/img/s1-cado-response-investigate.png)
