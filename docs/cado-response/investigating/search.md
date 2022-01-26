@@ -1,17 +1,11 @@
 ---
-title: Advanced Search (beta)
+title: Advanced Search
 hide_title: true
 sidebar_position: 4
 ---
 
-# Advanced Timeline Search (beta)
-As of Release 0.9.2.4, the Cado Response platform includes a beta version of the new advanced search interface which supports complex queries. You can enable it by toggling "New Search (Beta)" on the Timeline Search interface:
-
-![Search Help - beta](/img/search-help.png)
-
-:::info
-Search will default to the old interface as we receive feedback on the beta interface. We are aware of issues with scroll, pivoting and the number of results when using the beta search interface.
-:::
+# Advanced Timeline Search
+As of Release 1.2.0, the Cado Response platform includes a new advanced search interface which supports complex queries.
 
 ### Basic Searches
 

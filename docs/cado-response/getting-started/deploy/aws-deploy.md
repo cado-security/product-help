@@ -92,7 +92,7 @@ After deployment, you can import Test Data from the `Help` menu to confirm that 
 :::
 
 ### Supported Regions
-Both via the AWS Marketplace and via custom deployments, Cado makes AWS AMI's available for the regions below.  As a customer, if you require deployment to a region that isn't listed, we can deploy our release AMIs to additional regions. 
+Cado makes AWS AMI's available for the regions below.  As a customer, if you require deployment to a region that isn't listed, we can deploy our release AMIs to additional regions.  You can deploy to all 20+ default AWS regions via our AWS marketplace listing. 
 - us-east-1
 - us-east-2
 - us-west-1

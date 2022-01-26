@@ -53,3 +53,6 @@ The Cado Response Service Level Agreements (SLAs) are part of customers' end-use
 
 ### Does Cado Response support processing of EC2s or AMIs with EBS Encryption?
 Yes. As of build 0.9.2.4, the `kms:CreateGrant` and `kms:Decrypt` permissions are enabled within the Cado Response role by default. If you upgraded from a build earlier than 0.9.2.4, you may need to add these permissions manually.
+
+### If vulnerabilities are discovered within your software, are customers notified?
+Yes. Updates and notifications are provided to customers if vulnerablities or vulnerable packages are identified within our software.
