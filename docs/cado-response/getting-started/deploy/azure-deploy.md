@@ -34,16 +34,24 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli#logging-into-the-azure-cli
     :::
 
+    :::tip
+    Depending on your Azure permissions, you may need to be assigned one or more of the following roles in order to complete the deployment:
+    - Storage Blob Data Contributor
+    - Storage Blob Data Reader
+    - Storage Queue Data Contributor
+    - Storage Queue Data Reader
+    :::
+
 4. Create a storage account and container to stage the Cado Response VHD locally within your Azure tenancy.  This will be from where the platform will be deployed.  You must copy the image to the same region in which you want to deploy Cado Response.  You can complete these steps using the Azure portal or the Azure CLI
 
     a. **Create a resource group**, if you do not have one already, for the local download of the VHD using the Azure portal or the Azure CLI as shown below.  Note this needs to be less than 6 characters in length:
     ```console
-    az group create --resource-group "<AzureResourceGroup>" --location "<AzureReigon>"  --subscription "<SubscriptionName>"
+    az group create --resource-group "<AzureResourceGroup>" --location "<AzureRegion>"  --subscription "<SubscriptionName>"
     ```
 
     b. **Create a storage account**, if you do not have one already, using the Azure portal or the Azure CLI as shown below:
     ```console
-    az storage account create --name "<StorageAccountName>" --resource-group "<ResourceGroup>" --location "<AzureReigon>" --sku "Standard_LRS"  --subscription "<SubscriptionName>"
+    az storage account create --name "<StorageAccountName>" --resource-group "<ResourceGroup>" --location "<AzureRegion>" --sku "Standard_LRS"  --subscription "<SubscriptionName>"
     ```
 
     c. **Create a container**, if you do not have one already, using the Azure portal or the Azure CLI as shown below:
