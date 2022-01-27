@@ -6,7 +6,8 @@ module.exports = {
   title: 'Cado Security',
   tagline: 'Cado Security',
   staticDirectories: ['public','static'],
-  url: 'https://cado-security.github.io',
+  //url: 'https://cado-security.github.io',
+  url: 'https://docs.cadosecurity.com',
   baseUrl: '/',
   onBrokenLinks: 'warn', 
   onBrokenMarkdownLinks: 'throw',
@@ -15,6 +16,7 @@ module.exports = {
   projectName: 'product-help', // Usually your repo name.
   trailingSlash: false,
   themeConfig: {
+    metadata: [{name: 'google-site-verification', content: 'j1fUKfw-LfBrYqXusMAoBbmCW8nSNobe8nOyfDl6xAY'}],
     navbar: {
       title: ' ',
       logo: {
