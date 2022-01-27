@@ -5,6 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Cado Security',
   tagline: 'Cado Security',
+  staticDirectories: ['public','static'],
   url: 'https://cado-security.github.io',
   baseUrl: '/',
   onBrokenLinks: 'warn', 
@@ -21,10 +22,6 @@ module.exports = {
         src: 'img/cado.png',
         srcDark: 'img/cado-dark.png', // Default to `logo.src`.
       },
-    },
-    googleAnalytics: {
-      trackingID: 'UA-163801898-1',
-      anonymizeIP: false, // Should IPs be anonymized?
     },
     colorMode: {
       // "light" | "dark"
@@ -68,7 +65,7 @@ module.exports = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-    },
+    }
   },
   presets: [
     [
