@@ -155,17 +155,17 @@ No Parameters required for this action.
 
 | DATA PATH | TYPE | EXAMPLE VALUE |
 | --------- | ---- | -------------- |
-| action_result.data.\*.\*.pipeline_id | numeric | 6 |
-| action_result.data.\*.\*.name | string | Acquiring i-1234567890abcdef0 |
-| action_result.data.\*.\*.pipeline_type | string | Acquisition |
-| action_result.data.\*.\*.evidence_id | numeric | 4 |
-| action_result.data.\*.\*.summary.total | numeric | 18 |
-| action_result.data.\*.\*.summary.failure | numeric  | 0 |
-| action_result.data.\*.\*.summary.pending | numeric | 0 |
-| action_result.data.\*.\*.summary.running | numeric | 0 |
-| action_result.data.\*.\*.summary.success | numeric | 18 |
-| action_result.data.\*.\*.summary.cancelled | numeric | 0 |
-| action_result.data.\*.\*.terminated | string | true |
+| action_result.data.\*.pipelines.\*.pipeline_id | numeric | 6 |
+| action_result.data.\*.pipelines.\*.name | string | Acquiring i-1234567890abcdef0 |
+| action_result.data.\*.pipelines.\*.pipeline_type | string | Acquisition |
+| action_result.data.\*.pipelines.\*.evidence_id | numeric | 4 |
+| action_result.data.\*.pipelines.\*.summary.total | numeric | 18 |
+| action_result.data.\*.pipelines.\*.summary.failure | numeric  | 0 |
+| action_result.data.\*.pipelines.\*.summary.pending | numeric | 0 |
+| action_result.data.\*.pipelines.\*.summary.running | numeric | 0 |
+| action_result.data.\*.pipelines.\*.summary.success | numeric | 18 |
+| action_result.data.\*.pipelines.\*.summary.cancelled | numeric | 0 |
+| action_result.data.\*.pipelines.\*.terminated | string | true |
 | action_result.parameter.project_id | numeric | 1 |
 | action_result.status | string | success |
 
@@ -186,12 +186,12 @@ No Parameters required for this action.
 
 | DATA PATH | TYPE | EXAMPLE VALUE |
 | --------- | ---- | ------------- |
-| action_result.data.\*.\*.pipeline_id | numeric | 6 |
-| action_result.data.\*.\*.subtasks.\*.name | string | Acquisition: Create a processing pipeline for each copied EC2 volume |
-| action_result.data.\*.\*.subtasks.\*.start_time | numeric | 1633025565.147805 |
-| action_result.data.\*.\*.subtasks.\*.finish_time | numeric | 1633031638.334756 |
-| action_result.data.\*.\*.subtasks.\*.execution_duration | numeric | 6073 |
-| action_result.data.\*.\*.subtasks.\*.state | string | SUCCESS |
+| action_result.data.\*.pipeline_id | numeric | 6 |
+| action_result.data.\*.subtasks.\*.name | string | Acquisition: Create a processing pipeline for each copied EC2 volume |
+| action_result.data.\*.subtasks.\*.start_time | numeric | 1633025565.147805 |
+| action_result.data.\*.subtasks.\*.finish_time | numeric | 1633031638.334756 |
+| action_result.data.\*.subtasks.\*.execution_duration | numeric | 6073 |
+| action_result.data.\*.subtasks.\*.state | string | SUCCESS |
 | action_result.parameter.pipeline_id | numeric | 6 |
 | action_result.status | string | success |
 
@@ -212,12 +212,12 @@ No Parameters required for this action.
 
 | DATA PATH | TYPE | EXAMPLE VALUE |
 | --------- | ---- | -------------- |
-| action_result.data.\*.\*.pipeline_id | numeric | 6 |
-| action_result.data.\*.\*.subtasks.\*.name | string | Acquisition: Create a processing pipeline for each copied EC2 volume |
-| action_result.data.\*.\*.subtasks.\*.start_time | numeric | 1633025565.147805 |
-| action_result.data.\*.\*.subtasks.\*.finish_time | numeric | 1633031638.334756 |
-| action_result.data.\*.\*.subtasks.\*.execution_duration | numeric | 6073 |
-| action_result.data.\*.\*.subtasks.\*.state | string | SUCCESS |
+| action_result.data.\*.pipeline_id | numeric | 6 |
+| action_result.data.\*.subtasks.\*.name | string | Acquisition: Create a processing pipeline for each copied EC2 volume |
+| action_result.data.\*.subtasks.\*.start_time | numeric | 1633025565.147805 |
+| action_result.data.\*.subtasks.\*.finish_time | numeric | 1633031638.334756 |
+| action_result.data.\*.subtasks.\*.execution_duration | numeric | 6073 |
+| action_result.data.\*.subtasks.\*.state | string | SUCCESS |
 | action_result.parameter.pipeline_id | numeric | 6 |
 | action_result.status | string | success |
 
@@ -263,6 +263,7 @@ No Parameters required for this action.
 
 | DATA PATH | TYPE | EXAMPLE VALUE |
 | --------- | ---- | ------------- |
+| action_result.data.\*.pipelines.pipeline_id | numeric | 1 |
 | action_result.data.\*.name | string | Acquiring i-1234567890abcdef0 |
 | action_result.parameter.project_id | numeric | 1 |
 | action_result.parameter.region | string | us-east-1 |
