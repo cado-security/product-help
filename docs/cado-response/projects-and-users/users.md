@@ -25,6 +25,10 @@ To elevate priviledges and grant Administrator access to a normal user, do the f
 - Select the **This user has administrator access** checkbox
 - Click **Update**
 
+:::caution
+It is strongly recommended to follow the principles of least privilege when creating new users and granting Administrator access.
+:::
+
 ### Granting Access to a Project
 To grant existing users to a Project, you can add them when you create the Project, or you can follow the below instructions to add users to an existing Project:
 - Click **Projects** and select the project to which you would like to add users

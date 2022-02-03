@@ -1,10 +1,10 @@
 ---
 title: Tines
 hide_title: true
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-# Tines
+# Tines Integration
 
 Tines is a no-code automation platform for security analysts. Tines allows analysts to spend less time on routine repetitive tasks and allow them to focus on those areas where they can have the most impact. The tools feature pre-configured integrations with a variety of business and security tools, but for more sophisticated users, it also features the ability to hook into any publicly available API, including the Cado API.
 
@@ -70,7 +70,7 @@ If the following was successful, then you've correctly setup Tines to interact w
 Actions are the basic actions that can be chained together in _Stories_, which are playbooks that can be run to perform a specific task or workflow.
 
 :::info
-All the list actions are available in the Tines Public Templates repository. Just search for **Cado Security**. It's easy to do, just search, choose and drag and drop.
+All the list actions are available in the Tines Public Templates repository. Just search for **Cado Security**, choose the action and drag and drop.
 :::
 
 ### Contents
@@ -286,6 +286,10 @@ This section covers a quick tutorial in creating a basic workflow (or story in T
 - Triggers an EC2 Disk Acquisition
 - Loops over a pipeline until it has been terminated
 - Emails the user a success message
+
+:::tip
+You can download the finished story example here: ** [Cado Response Basic Story: Create a Project and Acquire EC2 Disk >](https://cado-public.s3.amazonaws.com/integrations/cado-response-tines-story.json) **
+:::
 
 ### Contents
 

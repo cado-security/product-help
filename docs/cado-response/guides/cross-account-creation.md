@@ -33,7 +33,7 @@ In your **second** account (222222222222 in this example), if one does not exist
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach `AmazonEC2FullAccess` then click **Next**, then **Next** again.
+- Click **Next**, and in the permissions wizard attach `AmazonEC2FullAccess` (or the more restricted permissions at https://cado-public.s3.amazonaws.com/DeployCloudFormation.json) then click **Next**, then **Next** again.
 
 ![Full Access](/img/full-access.png)
 

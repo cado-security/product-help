@@ -1,17 +1,11 @@
 ---
-title: Advanced Search (beta)
+title: Advanced Search
 hide_title: true
 sidebar_position: 4
 ---
 
-# Advanced Timeline Search (beta)
-As of Release 0.9.2.4, the Cado Response platform includes a beta version of the new advanced search interface which supports complex queries. You can enable it by toggling "New Search (Beta)" on the Timeline Search interface:
-
-![Search Help - beta](/img/search-help.png)
-
-:::info
-Search will default to the old interface as we receive feedback on the beta interface. We are aware of issues with scroll, pivoting and the number of results when using the beta search interface.
-:::
+# Advanced Timeline Search
+As of Release 1.2.0, the Cado Response platform includes a new advanced search interface which supports complex queries.
 
 ### Basic Searches
 
@@ -55,9 +49,9 @@ Searchable fields
 | `evidence_id` | int | ID of evidence item |
 | `timestamp` | int | Unix timestamp of event |
 | `file_size` | int | size of file associated with this event |
-| `md5` | keyword | md5 hash of file associated with this event |
-| `sha1` | keyword | sha1 hash of the file associated with this event |
-| `sha256` | keyword | sha256 of the file associated with this event |
+| `md5` | text | md5 hash of file associated with this event |
+| `sha1` | text | sha1 hash of the file associated with this event |
+| `sha256` | text | sha256 of the file associated with this event |
 | `strings` | text | Strings extracted from file associated with this event |
 | `is_starred` | bool | Whether an event is starred |
 | `for_report` | bool | Whether an event is included in the report |
@@ -66,5 +60,7 @@ Fields of type `int` or `keyword` require the search term to match exactly in or
  - `user: chris` matches
  - `user: ch*` matches
  - `user: ch` does not match
+
+Fields of type `keyword` support wildcard characters. Use `?` as a single-character wildcard and `*` for any number of characters.
 
 Fields of type `text` do not require a full match. E.g. searching for `strings: content` will return the event with the following strings data: `This is some example content`.
