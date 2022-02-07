@@ -70,9 +70,9 @@ Before continuing, create a snapshot of the `CadoResponseDataVolume` volume whic
 	- Click **Actions**
 	- Select **Modify Volume**
 	- Enter the new volume size
-	- Click 'Modify'
+	- Click **Modify**
 2. SSH into the Cado Response instance. example: `ssh -i "us-east-2.pem" admin@ec2-55-234-10-9.compute-1.amazonaws.com`
 3. Run `df -hT`. Note the Avail space for the `/dev/nvme1n1` filesystem mounted on `/home/admin/data`. This should display the old volume size.
-4. Run `1lsblk` and note the `nvme1n1` volume SIZE mounted on `/home/admin/data`. This should display the new volume size.
+4. Run `lsblk` and note the `nvme1n1` volume SIZE mounted on `/home/admin/data`. This should display the new volume size.
 5. To extend the volume and make it available to the OS, run `sudo xfs_growfs -d /home/admin/data`
 6. Run `df -hT` again and note the Avail space for the `/dev/nvme1n1` filesystem mounted on `/home/admin/data` This should now display the new volume size.
