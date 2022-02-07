@@ -4,6 +4,18 @@ hide_title: true
 sidebar_position: 1
 ---
 
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
 # Cross Account Access Creation
 EC2 instances in other accounts can be made accessible to Cado Response via AWS roles.  For example, if you have 100 accounts, you can grant Cado Response access to all 100 accounts which will allow the platform to acquire, process and analyze evidence across multiple accounts.
 
@@ -75,9 +87,10 @@ In your **primary** account (111111111111 in this example)
  - Select the JSON tab
 - The JSON  should look like the below, substituting in the details of your second account and the role you just created in the other account. The `Resource` list may be appended with as many cross account roles as you require.
 
-    :::info
-    Wildcards here will not be valid to Cado Response, roles must be listed in full.
-    :::
+:::info
+Wildcards here will not be valid to Cado Response, roles must be listed in full.
+:::
+
 ```json	
 {
    "Version": "2012-10-17",
@@ -112,3 +125,33 @@ In your **primary** account (111111111111 in this example)
     ![Attach Role](/img/attach-permissions.png)
 
 The roles listed in `CadoResponseCrossAccountPolicy` will now be available in the Cado Response UI and you can import instances from them as normal.
+
+
+## Cross Account Deployment Using CloudFormation StackSets and AWS Organisations
+
+If you want to process data sources such as EC2 from one account into another, Cado Response requires cross account access via IAM. 
+- You only need to install Cado Response into a single region in a single account. 
+- You can then use CloudFormation StackSets to easily deploy the required IAM Role into all of your accounts across your AWS organisation.
+- More details about CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
+
+![Stacks1](/img/stacks1.png)
+
+Go to "StackSets" from your master StackSet account that is enabled to deploy into other accounts.
+
+![StackSets Role](/img/stacks2.png)
+
+Click Click **<Highlight color="#F78631">Create StackSet</Highlight>**
+
+Enter the S3 URL as https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json then click Next:
+
+![Stacks3](/img/stacks3.png)
+
+Click Next through the next two dialogues, and under "Create Stack Set" select any region (this works as IAM is global):
+
+![Stacks4](/img/stacks4.png)
+
+Once deployed, this will then create a role in each target account, that you can view in IAM:
+
+![Stacks5](/img/stacks5.png)
+
+You will then need to add the list of roles that were created in each account to the "AssumeRole" section of the primary Cado Response role that is created at installation time. Cado Response uses the list of trusted roles in other accounts to populate the cross-account options shown to a user.  See the section **[Prepare Primary Account](#prepare-primary-account)** for more details.
