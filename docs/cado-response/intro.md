@@ -5,34 +5,25 @@ title: Summary
 ---
 
 # Cado Response
-Cado Response is a cloud-native digital forensics platform that enables you to investigate security incidents at cloud speed and scale. The Cado Response platform automates data capture and processing so security teams can easily understand threats without wasting time, money or effort. Click. Dig. Done. Know your cloud with Cado.
+Cado Response is *the* cloud investigation platform that empowers security teams to respond to threats at cloud speed. By automating data capture and processing across cloud and container environments, Cado Response effortlessly delivers forensic-level detail and unprecedented context to take the complexity out of cloud investigations.
 
 ### Core Features
-- **Cloud Native**
-  - Cado Response is the first cloud-native forensics solution.
-  - Cado Response also supports traditional on-premise systems.
-- **Fast and Scalable**
-  - Cado Response enables fast and simple remote data collection  
-  - Cado's patent-pending architecture scales up and down to provide rapid processing when needed, and save costs when not. 
-  - Cado's data processing engine supports parallel processing to provide unmatched scalability. 
-- **Powerful Analytics**
-  - Cado Response generates automated alerts for malicious indicators and potential risks.
-  - Cado's analytics engine is powered by machine learning, threat intelligence and built-in YARA rules so analysts can seamlessly dive into important data.
-  - Cado Response provides a complete timeline of events so analysts can analyze multiple data sources in aggregate and identify root cause quickly.
-- **Container Support**
-  - Cado Response enables forensic capture processing and investigation of container environments and autoscaling groups
-- **Customizable**
-  - Cado Response supports user customizable rulesets and reporting
+- **Automated data capture** - Cado Response enables automated data capture across multi-cloud and ephemeral container environments, while also supporting investigations across on-premises systems.
+
+- **Parallel processing** - Cado Response is powered by a patent-pending cloud-native architecture that automatically scales up and down to provide rapid parallel data processing. 
+
+- **Powerful analytics** - The Cado Response analytics engine is powered by threat intelligence, machine learning, and built-in YARA rules to automatically flag malicious activity and potential risks.
+
+- **Single pane of glass** - Cado Response presents hundreds of data sources across cloud-provider logs, disk, memory, and more in a single timeline so security teams can quickly determine scope and impact.
+
 
 ### Benefits 
-- **Save Time & Money**
-  - Cado Response drastically reduces the time and resources required to analyze a security incident by automating forensic data capture and processing across cloud and container environments.
-- **Reduce Risk & Exposure**
-  - Cado Response helps security teams minimize the impact of compromises and empowers fully-informed decisions by enabling security teams to identify the true root cause of a security incident quickly and precisely.
-- **Meet Legal & Regulatory Compliance**
-  - Cado Response helps organizations meet compliance requirements for digital forensics investigations by capturing every bit and byte of information surrounding a security breach.
-- **Enable a Remote Workforce**
-  - Cado's central interface allows global and remote security teams to work together from anywhere, anytime.
+- **Cloud Scale** - Automate data capture across complex and multi-cloud environments. No agents required.  
+
+- **Cloud Speed** - Take advantage of rapid, parallel processing to normalize massive amounts of disparate data in minutes, not days.
+
+- **Cloud Visibility** - Investigate hundreds of data sources across cloud-provider logs, disk, memory, and more, in a single pane of glass.
+
 
 ---------
 
