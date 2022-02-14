@@ -31,7 +31,7 @@ Azure supports this through **[Life Cycle Management Policies](https://docs.micr
 Whether sensitive customer data is stored within Cado Response is completely dependent on what data sources and evidence is imported into the software.  In all cases, data is either stored within the database on the main Cado instance, within EFS, within a customers' S3 bucket or  Azure storage.  Since Cado Response is deployed within the customers' cloud environment, the customer has control over the life cycle management of the data (example: using Life Cycle management policies) as well as who has access to potential sensitive data via VPC and Subnet rules.
 
 ### Can I monitor the health and proper funtion of Cado Response?
-Yes. Within Cado Response, you can see the platform health and statistics by navigating to the "Platform" tab.  This list Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeline processing details.  
+Yes. Within Cado Response, you can see the platform health and statistics by navigating to the "Platform" tab.  This list Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeline processing details.  In addition, roundtrip response latency for the API `/api/v2/status` endpoint should be less than or equal to 200ms.
 
 ### Can I estimate the costs for running Cado Response in AWS?
 Yes. You can view the AWS Cost Calculator for a typical Cado Response installation at https://calculator.s3.amazonaws.com/index.html#r=IAD&key=files/calc-bca484373bcb2d07322fd6716a197d1cdc629534&v=ver20210903uJ
