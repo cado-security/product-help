@@ -137,7 +137,9 @@ Wildcards here will not be valid to Cado Response, roles must be listed in full.
 The roles listed in `CadoResponseCrossAccountPolicy` will now be available in the Cado Response UI and you can import instances from them as normal.
 
 
-## Cross Account Deployment Using CloudFormation StackSets and AWS Organisations
+## Automated Cross Account Deployment Using CloudFormation StackSets and AWS Organisations or Terraform
+
+If you use Terraform, you can see an example of how to automatically add the cross-account policy to new accounts at https://github.com/cado-security/cado-terraform-role-example
 
 If you want to process data sources such as EC2 from one account into another, Cado Response requires cross account access via IAM. 
 - You only need to install Cado Response into a single region in a single account. 
