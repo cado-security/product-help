@@ -45,9 +45,19 @@ In your **second** account (222222222222 in this example), if one does not exist
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach `AmazonEC2FullAccess` (or the more restricted permissions at https://cado-public.s3.amazonaws.com/DeployCloudFormation.json) then click **Next**, then **Next** again.
+- Click **Next**, and in the permissions wizard attach the Cado Response Cross-Account Policy at https://cado-public.s3.amazonaws.com/policy-in-cross-account.json then click **Next**, then **Next** again.
 
-![Full Access](/img/full-access.png)
+:::info
+This document defines the Cross-Account role used by Cado Response. You need to add this into accounts that you want Cado Response to import from. You can remove permissions that are not needed for your use case as follows:
+* The EC2 permissions are required are acquire EC2 systems.
+* The KMS permissions are required to acquire KMS encrypted volumes.
+* The SSM permissions are required for Memory Forensics.
+* The S3 Permissions are required to import from S3 buckets in other accounts.
+* The CloudTrail permissioms are required to import CloudTrail logs in other accounts.
+* The ECS permissions are required to import ECS containers in other accounts.
+* The EC2 de-register permission is required to import AMI images cross-account.
+:::
+
 
 - Click through to review and give the role a name (will be referred to as `CadoResponseSecondRole` in following examples but this can be anything you'd like)
 
