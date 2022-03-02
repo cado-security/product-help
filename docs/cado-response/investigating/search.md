@@ -38,6 +38,7 @@ Searchable fields
 | `user` | keyword | User associated with the event |
 | `host` | keyword | Host name associated with the event |
 | `filename` | special | The path of the file associated with this event |
+| `full_filename` | keyword | The full path of the file associated with this event, supports regex and must match entire path |
 | `inode` | keyword | The inode number of the file associated with this event |
 | `source_hostname` | keyword | For network connections, the hostname that it originated from |
 | `destination_hostname` | keyword | For network connections, the destination hostname |
