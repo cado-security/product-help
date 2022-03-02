@@ -10,8 +10,8 @@ Memory forensics support is currently in beta. You can enable it under the **Adv
 Once enabled, there are several options for acquiring memory:
 1. To acquire memory from a running AWS EC2 instance, browse to `Import > AWS EC2 Instance` find the EC2 you wish to acquire memory from and click the  **Import Memory** button.  If you do not see the **Import Memory** button, please enable Memory Capture under 'Settings > Advanced > Memory Capture'.
 
-:::note 
-Note that importing memory via 'Import > AWS EC2 Instance' requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager.
+:::info 
+Note that importing memory via `Import > AWS EC2 Instance` requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager.
 :::
 
 2. Alternatively, you can perform a memory acquisition of a Windows or Linux system by clicking `Import > Memory Collection` and running the pre-generated script on the host device.
