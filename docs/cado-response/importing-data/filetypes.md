@@ -31,13 +31,14 @@ In addition to native capture support for machines and data running/stored in th
 #### Storage Media
 - E01, and split E01
 - VHD and VHDX
-- VMDK
 - DD (Optionally .GZ Compressed)
 - GZ / Tar / Zip
+- VMDK (Partial Support*)
 - Other forensic triage artifacts collected by EDR Tools or Cado Host
 
 :::info 
 Currently, split E01 format disks are supported in AWS only.
+*VMDK's are partially supported as the file format contains many different sub-formats.  If possible, we recommend converting to dd format before importing.
 :::
 
 To import a compressed dd image, compress with Gzip and add .gz to the extension. (example: `disk.dd.gz`)
