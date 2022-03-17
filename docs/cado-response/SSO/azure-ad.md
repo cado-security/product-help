@@ -1,5 +1,5 @@
 ---
-title: Azure AD Integration (beta)
+title: Azure AD Integration
 hide_title: true
 sidebar_position: 1
 ---
