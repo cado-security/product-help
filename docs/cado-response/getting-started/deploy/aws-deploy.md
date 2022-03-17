@@ -91,17 +91,17 @@ You can then **[Log into Cado Response](../logging-in)**
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
-### Terraform Deployment
+### AWS Terraform Deployment
 
-Please contact support@cadosecurity.com for a copy of the Terraform code.
+If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code.
 
-1. Download and unzip cado_deploy_aws.zip.
-2. Navigate to the aws_combined folder.
-3. Run terraform init
-4. Run terraform apply. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"
+1. Download and unzip **cado_deploy_aws.zip**.
+2. Navigate to the **aws_combined** folder.
+3. Run `terraform init`
+4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"`
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
-6. You can then [log into the platform](/getting-started/logging-in). Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
-7. Lastly, you'll need to import a license JSON file.
+6. You can then **[Log into Cado Response](/getting-started/logging-in)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
+7. Lastly, you will need to import a license JSON file.
 
 ### Supported Regions
 Cado makes AWS AMI's available for the regions below.  As a customer, if you require deployment to a region that isn't listed, we can deploy our release AMIs to additional regions.  You can deploy to all 20+ default AWS regions via our AWS marketplace listing. 
@@ -114,13 +114,13 @@ Cado makes AWS AMI's available for the regions below.  As a customer, if you req
 - eu-west-3
 
 ### How to Access Data in Other AWS Accounts
-Please see the [guide on how to add cross-account access](guides/cross-account-creation)
+Please see the [guide on how to add cross-account access](../../guides/cross-account-creation)
 
 ### How to Tighten IAM, Other Permissions and Logging Best Practices
-Please see the [guide on AWS Security Considerations](guides/aws-security)
+Please see the [guide on AWS Security Considerations](../../guides/aws-security)
 
 ### How to Perform Backup and Recovery
-Please see the [guide on AWS Backup and Recovery](guides/aws-backups)
+Please see the [guide on AWS Backup and Recovery](../../guides/aws-backups)
 
 ### How to Add a Load Balancer and A Valid SSL Certificate
-Please see the [guide on adding an AWS Load Balancer](guides/aws-load-balancer)
+Please see the [guide on adding an AWS Load Balancer](../../guides/aws-load-balancer)
