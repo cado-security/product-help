@@ -100,7 +100,7 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
 3. Run `terraform init`
 4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"`
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
-6. You can then **[Log into Cado Response](/getting-started/logging-in)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
+6. You can then **[Log into Cado Response](../logging-in)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
 7. Lastly, you will need to import a license JSON file.
 
 ### Supported Regions
