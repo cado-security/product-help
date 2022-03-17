@@ -29,18 +29,7 @@ module.exports = {
       // "light" | "dark"
       defaultMode: 'light',
       disableSwitch: false,
-      respectPrefersColorScheme: false,
-      switchConfig: {
-        darkIcon: '\u{1F319}',
-        // see https://reactjs.org/docs/dom-elements.html#style
-        darkIconStyle: {
-          marginLeft: '2px',
-        },
-        lightIcon: '☀',
-        lightIconStyle: {
-          marginLeft: '1px',
-        },
-      },
+      respectPrefersColorScheme: false
     },
     footer: {
       style: 'dark',
