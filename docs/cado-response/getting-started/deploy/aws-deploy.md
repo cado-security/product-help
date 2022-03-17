@@ -91,6 +91,18 @@ You can then **[Log into Cado Response](../logging-in)**
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
+### Terraform Deployment
+
+Please contact support@cadosecurity.com for a copy of the Terraform code.
+
+1. Download and unzip cado_deploy_aws.zip.
+2. Navigate to the aws_combined folder.
+3. Run terraform init
+4. Run terraform apply. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"
+5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
+6. You can then [log into the platform](/getting-started/logging-in). Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
+7. Lastly, you'll need to import a license JSON file.
+
 ### Supported Regions
 Cado makes AWS AMI's available for the regions below.  As a customer, if you require deployment to a region that isn't listed, we can deploy our release AMIs to additional regions.  You can deploy to all 20+ default AWS regions via our AWS marketplace listing. 
 - us-east-1
@@ -101,52 +113,14 @@ Cado makes AWS AMI's available for the regions below.  As a customer, if you req
 - eu-west-2
 - eu-west-3
 
-### Data Encryption and Security
-During deployment, by default, an S3 bucket, a VPC and a Subnet are created for use by the Cado Response solution.  From an access and security perspective, the S3 Bucket is encrypted with server-side encryption using AES256 and attached volumes are also encrypted using KMS.  We recommend you enable key rotation as well (https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html). The default VPC and Subnet create an isolated environment to which customers can control access rights.  When processing data, the Cado Response worker instances are launched within the same VPC as the main Cado Response instance.  Worker instances are started using the same AMI as the main Cado Response instance as well.
+### How to Access Data in Other AWS Accounts
+Please see the [guide on how to add cross-account access](guides/cross-account-creation)
 
-### AWS Logging Best Practices
-We recommend customers follow AWS best practices regarding logging (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-cis-controls.html) which includes the following:
-- Ensure CloudTrail is enabled in all regions
-- Ensure CloudTrail log file validation is enabled
-- Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
-- Ensure CloudTrail trails are integrated with CloudWatch Logs
-- Ensure AWS Config is enabled in all regions
-- Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
-- Ensure CloudTrail logs are encrypted at rest using KMS CMKs
-- Ensure rotation for customer created CMKs is enabled
-- Ensure VPC flow logging is enabled in all VPCs
+### How to Tighten IAM, Other Permissions and Logging Best Practices
+Please see the [guide on AWS Security Considerations](guides/aws-security)
 
-### Backup and Recovery
-This section explains how to recover or migrate Cado Response to a new instance.
+### How to Perform Backup and Recovery
+Please see the [guide on AWS Backup and Recovery](guides/aws-backups)
 
-Cado Response also backs up any imports to S3 which can then be re-imported later to a fresh instance, but you will need to restore the data volume if you want to recover user settings such as user logins.
-
-If a Cado Response instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
-
-You can also use this approach to migrate Cado Response to a new availability zone or region.
-
-#### Scheduling Automated Backups of the Data Volume
-Amazon EBS Snapshots are stored by AWS in Amazon S3, where it is stored redundantly in multiple Availability Zones.
-
-You can create an **[EventBridge](https://us-west-2.console.aws.amazon.com/events/home)** rule that regularly (e.g. daily) backs up the CadoResponse EC2 instance:
-
-![AWS Backup 1](/img/aws-backup-1.png)
-
-![AWS Backup 2](/img/aws-backup-2.png)
-
-For more, see **[this tutorial](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-snapshot.html)** from AWS.
-
-#### Restoring the Data Volume 
-To perform a migration or restoration to a new instance, deploy a Cado Response installation and Stop the Cado Response EC2 Installation.
-
-The operating system volume will be smaller (typically 10 GB). Detach the larger Data Volume (`/dev/sdh` seen below):
-
-![AWS Backup 3](/img/aws-backup-3.png)
-
-![AWS Backup 4](/img/aws-backup-4.png)
-
-Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)** the Snapshot backup of your old Cado Response installation to a Volume in the same availability zone as your new Cado EC2 Instance.
-
-![AWS Backup 5](/img/aws-backup-5.png)
-
-Then, simply **[attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)** the restored Data Volume to your new Cado EC2 Instance and start it.
+### How to Add a Load Balancer and A Valid SSL Certificate
+Please see the [guide on adding an AWS Load Balancer](guides/aws-load-balancer)
