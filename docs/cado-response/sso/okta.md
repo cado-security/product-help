@@ -1,5 +1,5 @@
 ---
-title: Okta Integration (beta)
+title: Okta Integration
 hide_title: true
 sidebar_position: 2
 ---
