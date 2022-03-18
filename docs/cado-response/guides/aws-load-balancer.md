@@ -1,5 +1,5 @@
 ---
-title: How to Add a Load Balancer in AWS
+title: AWS Adding a Load Balancer
 hide_title: true
 sidebar_position: 1
 ---

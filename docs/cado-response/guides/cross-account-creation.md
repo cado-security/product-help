@@ -1,5 +1,5 @@
 ---
-title: Cross Account Creation
+title: AWS Cross Account Creation
 hide_title: true
 sidebar_position: 1
 ---
