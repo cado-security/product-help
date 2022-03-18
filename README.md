@@ -1,17 +1,19 @@
-## Setup
+## Initial Setup
+The below is based on the instructions outlined here https://docusaurus.io/docs/installation which outlines how to install Docusaurus.  
 
-clone the repo and make sure you can run locally
-```console
-yarn install
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+1. Make sure you install Node.js version >= 14 prior to installing Docusaurus.
+2. Open a command window and run `npx create-docusaurus@latest default-site classic` which will scaffold a skeleton Docusaurus website. This command also creates a sub-folder called `default-site` in whatever directory you run the npx command in.
+3. Change directories into the default-site folder (example: `cd default-site`) and run `npm start` to test whether the scaffold Docusaurus development server runs locally without issues.
+4. Clone this repo (https://github.com/cado-security/product-help) into your local source folder (wherever you'll be maintaining the product-help code).
+5. Copy the following folders from the Docusaurus "default-site" folder, created during step #2, to your local source "product-help" folder:
+	- `.docusaurus`
+	- `node_modules`
+6. Change directories into your "product-help" source folder and run `npm start`.  This should now open the Cado product-help site locally.
 
 ## Build
 
 ```console
-yarn build
+npm build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
