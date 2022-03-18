@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkproduct_help=self.webpackChunkproduct_help||[]).push([[195],{2841:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});var r=n(7294),u=n(4996),c=n(6775);function o(){return r.createElement(c.l_,{to:(0,u.Z)("cado-response/intro")})}}}]);
