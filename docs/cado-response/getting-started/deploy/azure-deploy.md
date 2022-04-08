@@ -88,16 +88,16 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     Also note that if you need to capture very large disks (>=1tb) you will need to deploy in a region where storage optimized (L) instances are available, e.g. US East.
     :::
 
-6. Extract `cado-azure-tf.zip`  This is the ZIP that was provided by Cado Sales
+6. Extract `cado_deploy_azure.zip`  This is the ZIP that was provided by Cado Sales
 
-7. Change directories into `cado-azure-tf/cado` which was extracted in the previous step.
+7. Change directories into `cado_deploy_azure/cado` which was extracted in the previous step.
 
 8. Create a public and private ssh key. Make sure the directory exists before running the command and do not use a passphrase:
     ```console
     ssh-keygen -b 4096 -f ../keys/azure_demo_key -q -N ""
     ```
 
-9. Customize the file `cado-azure-tf/cado/main.tf` by filling in the default values for the following variables:
+9. Customize the file `cado_deploy_azure/cado/main.tf` by filling in the default values for the following variables:
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
@@ -119,7 +119,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
      We recommend a minimum setting of 500GB for `main_data_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
     :::
 
-10. Deploy by running the following commands in the directory `cado-azure-tf/cado/`
+10. Deploy by running the following commands in the directory `cado_deploy_azure/cado/`
 
     `terraform init` followed by `terraform apply`
 
