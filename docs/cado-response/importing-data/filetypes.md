@@ -11,6 +11,7 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - EC2
 - S3 Storage (normal and glacier)
 - AWS Kubernetes
+- AWS Lambda
 - Kubernetes logs
 - Cloud Trail logs
 - Guard Duty logs
