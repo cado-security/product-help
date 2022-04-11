@@ -46,7 +46,6 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | -------------- | ----- | ----------- |
     | Instance type for Cado Response EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
     | Key pair for Cado Response EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
-    | CadoAMI | *(Please contact your Cado Sales team)* | Please contact your Cado Sales team for the appropriate AMI ID.  When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
     | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
     | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
     | VPC CIDR | *(enter ip range)* | The Subnet the Cado VPC will use. Specify the IPv4 address range as a Classless Inter-Domain Routing (CIDR) block. |
@@ -93,12 +92,24 @@ After deployment, you can import Test Data from the `Help` menu to confirm that 
 
 ### AWS Terraform Deployment
 
-If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code.
+If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code and the AMI for the region which you will deploy into.
 
 1. Download and unzip **cado_deploy_aws.zip**.
 2. Navigate to the **aws_combined** folder.
 3. Run `terraform init`
 4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"`
+    1. PowerShell on Windows cannot correctly pass literal quotes to external programs, so we do not recommend using Terraform with PowerShell when you are on Windows. Use Windows Command Prompt instead.
+
+### Parameters
+
+  | Parameter Name | Value | Description |
+  | -------------- | ----- | ----------- |
+  | region | *(choose AWS region)* | AWS Region to deploy Cado Response platform in, e.g. `us-east-1` |
+  | key_name | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
+  | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
+  | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
+  | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |  
+
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
 6. You can then **[Log into Cado Response](../logging-in)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
 7. Lastly, you will need to import a license JSON file.
