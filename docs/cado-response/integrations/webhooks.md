@@ -45,3 +45,39 @@ An example of a valid payload:
     "message": "$Event"
 }
 ```
+
+## Slack Integration
+You can use webhooks to send notifications to a Slack channel from Cado Response.
+
+1. See the [Slack documentation](https://api.slack.com/messaging/webhooks#create_a_webhook) on creating incoming webhooks for Slack. Once you have created an app with incoming webhooks copy the Webhook URL to your clipbard.
+2. In Cado Response under **Settings > Integrations > Webhooks** select **New webhook**.
+6. Name your webhook and paste the URL from Slack. Then check "High Severity Alarms" under events to send. 
+7. Cado Response requires the `$Title` and `$Event` values to be specified in the payload and Slack requires a JSON key of `text`. You can read more about Slack message payloads [here](https://api.slack.com/reference/messaging/payload) and Slack message formatting with Markdown [here](https://api.slack.com/messaging/composing). 
+
+We include an example payload and the Slack message it creates.
+
+```json
+{
+    "text": "*$Title*\nDetails: $Event"
+}
+```
+
+![Slack message](/img/slack-message.png)
+
+## Teams Integration
+You can use webhooks to send notifications to a Microsoft Teams channel from Cado Response.
+
+1. See the [Microsoft Teams documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) on creating incoming webhooks for Teams. Once you have created a connector with incoming webhooks copy the Webhook URL to your clipboard.
+2. In Cado Response under **Settings > Integrations > Webhooks** select **New webhook**.
+6. Name your webhook and paste the URL from Teams. Then check "High Severity Alarms" under events to send. 
+7. Cado Response requires the `$Title` and `$Event` values to be specified in the payload and Teams requires a JSON key of `text`. You can read more about Teams message payloads [here](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/connectors-using?tabs=cURL) and Teams message formatting with Markdown [here](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cconnector-html). 
+
+We include an example payload and the Teams message it creates (note that the newline character most be preceded by three spaces).
+
+```json
+{
+    "text": "**$Title**  \nDetails: $Event"
+}
+```
+
+![Teams message](/img/teams-message.png)
