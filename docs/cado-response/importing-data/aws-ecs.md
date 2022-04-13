@@ -11,6 +11,20 @@ Cado Response will collect key logs and forensic artifacts from AWS ECS systems.
 * You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task.
 * Currently ECS acquisitions are only available on Linux based containers.
 
+You will receive and error such as this:
+
+![ECS Error](/img/ecs_error.png)
+
+If either:
+* Your IAM role doesn't have the required ECS permissions for IAM ("ecs:ListClusters",
+								"ecs:DescribeClusters",
+								"ecs:ListServices",
+								"ecs:DescribeServices",
+								"ecs:ListTasks",
+								"ecs:DescribeTasks",
+								"ecs:ExecuteCommand")
+* Or the Cluster and Task don't have [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) enabled.
+
 # How to Import
 
 First, select Import ECS:
