@@ -28,6 +28,8 @@ An AWS Role is created at installation to authenticate against AWS. This is the 
 
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched.
 
+If you have deployed via Terraform - You can apply multiple tags to workers in both AWS and Azure by updating the "tags" variable in Terraform.
+
 ### Licensing
 In order to use Cado Response, you must upload a valid license.  
 

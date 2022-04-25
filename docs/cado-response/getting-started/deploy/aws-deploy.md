@@ -137,3 +137,6 @@ Please see the [guide on AWS Backup and Recovery](../../guides/aws-backups)
 
 ### How to Add a Load Balancer and A Valid SSL Certificate
 Please see the [guide on adding an AWS Load Balancer](../../guides/aws-load-balancer)
+
+### How to Add Tags to Resources
+Please see the [guide on Settings](../../settings/general-settings)

@@ -1,10 +1,10 @@
 ---
-title: Overview
+title: Overview & API
 hide_title: true
 sidebar_position: 1
 ---
 
-# Overview
+# Overview & API
 
 The Cado API enables third party tools and automation scripts to integrate with the Cado Response platform.
 
@@ -33,3 +33,7 @@ Often you'll see in the following tutorials that we are referring to "Platform B
 ```
 https://ec2example.compute.amazonaws.com
 ```
+
+### API Documentation
+Please contact Support for API documentation and Sample code.
+
