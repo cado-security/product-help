@@ -49,6 +49,6 @@ To import from a cloud instance, log in and perform the following:
 - Follow the on-screen prompts to select the instance to import.
 
 :::info
-During the EC2 Import process, a worker EC2 instance of the same size as the target EC2 is deployed to allow for proper disk acquisition.  This worker is spun down once the target disk is acquired.
+During the EC2 Import process, an i3.4xlarge worker instance is deployed to allow for proper disk acquisition. During the Azure Instance Import process, a Standard_D8ds_v4 worker instance is deployed to allow for proper disk acquisition. You can configure the size of the worker instance in the Cado Response platform under **Settings/Processing**. This worker is spun down once the target disk is acquired.
 :::
 
