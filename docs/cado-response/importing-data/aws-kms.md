@@ -95,7 +95,7 @@ There are a number of options available - but recommended approaches are below:
 3. Alternatively you may use grants to give out the equivalent KMS access for the above options
 
 ### Cross Region
-It is important to ensure that if you are acquiring cross region that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy `Conditions` don`t preclude the platform`s access).
+It is important to ensure that if you are acquiring cross region that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy `Conditions` don't preclude the platform's access).
 
 ### Cross Account
 The simplest approach is to give `kms:CreateGrant` permissions to the role being assumed **in the target account being acquired from**. See the **Cross Account Acquisition](/docs/cado-response/guides/cross-account-creation)** instructions for more details on cross account permissions.
