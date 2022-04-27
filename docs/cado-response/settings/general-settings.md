@@ -26,7 +26,21 @@ These settings are used to authenticate against cloud providers.
 
 An AWS Role is created at installation to authenticate against AWS. This is the recommended method of authentication. Optionally, you can set an **AWS Access Key** and **AWS Secret Key** to authenticate against AWS.
 
+#### Tagging Cado Response Resources
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched.
+
+If you have deployed via Terraform - You can apply multiple tags to workers in both AWS and Azure by updating the "tags" variable in Terraform.
+
+If you deployed via Terraform into Azure add the below snippet into the cado_deploy_azure/azure_transient/main.tf script.
+Or, if you deployed via Terraform into AWS add the below snippet into the cado_deploy_aws/aws/main.tf script.
+Please also note that you will have to run terraform apply again after saving these changes.
+
+```
+variable "tags" {
+    type = map(string)
+    default = {}
+}
+```
 
 ### Licensing
 In order to use Cado Response, you must upload a valid license.  
