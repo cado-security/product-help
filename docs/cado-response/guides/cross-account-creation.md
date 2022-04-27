@@ -28,8 +28,9 @@ To start, create:
     - A **trust relationship** to the primary account. 
 - An IAM policy named `CadoResponseCrossAccountPolicy` in your primary account where Cado Response is installed.
 
-:::info
-This will list the cross-account roles available to Cado Response.  It must be attached to your Cado instance role
+:::warning
+The naming convention of the IAM policy `CadoResponseCrossAccountPolicy` is important.  This name should not be changed.
+This policy allows Cado Response to list the cross-account roles available.  It must be attached to your Cado instance role
 :::
 
 ![Secondary Account Access](/img/secondary.png)
