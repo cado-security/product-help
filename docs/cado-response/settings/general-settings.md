@@ -8,15 +8,16 @@ sidebar_position: 5
 You can access the settings by clicking **Settings** on the left menu
 
 ### Processing
-The **Maximum Filesize** is used to determine how file-based plugins analyse individual files. For example, if a Log file is 1 GB and the Maximum File size is 5 Mb:
-- The full 1 GB of events in the log will be processed;
-- But the file-based plugins (for example Yara, String extraction) will only look at the first 5 Mb of the 1 GB file, and the original file will not be available for download.
-
-This number can be increased, however large values can slow down processing and retrieval significantly. Cado recommends leaving this value at 5Mb as it represents the best balance. Where you have a project that will need to specifically target very large files you may increase this at the time as needed, and decrease after your project is completed.
 
 The **Maximum Workers** sets the maximum number of workers (AWS EC2 Instances) the system will start for processing. The platform will wait to launch new workers if this limit is exceeded. The default value is 20.  The platform will also back off and wait if the AWS limits for the maximum number of VCPUs in a region have been exceeded.
 
-The **Worker Instance Size** limits the size of data that can be imported. The default setting in AWS (i3.4xlarge) has 1.9 TB of disk space, allowing the processing of disks up to approximately 1.5 TB in size. The default Azure setting allows the processing of disks up to approximately 800 GB in size. Please set a large instance size (see for AWS or Azure) to increase the working space.
+The **Worker Instance Size** limits the size of data that can be imported. The default setting in AWS (i3.4xlarge) has 1.9 TB of disk space, allowing the processing of disks up to approximately 1.5 TB in size. The default Azure setting allows the processing of disks up to approximately 800 GB in size. Please set a large instance size (see for AWS or Azure) to increase the working space.  
+
+:::tip
+In AWS, for most use cases, you should keep the Worker Instance Size set to a Storage Optimized instance, like an `i3.4xlarge`
+:::
+
+The **Worker Shutdown Wait** is the number of seconds after a worker finishes processing a pipeline before it should shutdown. If nothing is set, the default is 5 minutes (300 seconds).
 
 The **Elastic Search Hostname** sets where the data is stored. By default Cado Response connects to a database that is only accessible locally to the server, and for security purposes it is highly recommended you do not change this value.
 
