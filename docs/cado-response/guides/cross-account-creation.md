@@ -46,7 +46,7 @@ In your **second** account (222222222222 in this example), if one does not exist
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach the Cado Response Cross-Account Policy at https://cado-public.s3.amazonaws.com/policy-in-cross-account.json then click **Next**, then **Next** again.
+- Click **Next**, and in the permissions wizard attach the Cado Response Cross-Account Policy located [here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again. (If Cado Response is deployed in AWS GovCloud use the policy located [here](https://gov-updates.s3-us-gov-east-1.amazonaws.com/policy-in-cross-account-govcloud.json) instead.)
 
 :::info
 This document defines the Cross-Account role used by Cado Response. You need to add this into accounts that you want Cado Response to import from. You can remove permissions that are not needed for your use case as follows:
