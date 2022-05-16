@@ -29,6 +29,10 @@ You can now enable the beta of Okta OAuth Integration in Cado Response by going 
 
 	![Okta Assignments](/img/okta-assignments.png)
 
+:::tip
+If you are looking to assign non-admin users within Cado Response, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within Cado Response.
+:::
+
 8. If you wish to edit access control at a later time then you can do so in the **Assignments** tab of the OAuth application where you can add individual people or groups. Only users in a group named `CadoAdmin` will be granted admin user status inside Cado Response.
 9. Add a groups claim for the application:
 	- Go to the **Sign On** tab of the OAuth application
