@@ -20,7 +20,7 @@ on how to add your role to the EKS RBAC, or if you have eksctl configured, you c
 `eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn <iam_role> --group system:masters`
 
 ### IAM Permissions
-You'll also make sure the following IAM permissions are attached to your IAM role:
+You must also make sure the following IAM permissions are attached to your IAM role:
 ```
 	"eks:ListClusters",
 	"eks:DescribeCluster",
@@ -30,7 +30,7 @@ You'll also make sure the following IAM permissions are attached to your IAM rol
 ## Import Steps
 
 :::info
-Please note that communication with EKS can upwards to 30 seconds or more.
+Please note that communication with EKS can take upwards to 30 seconds or more.
 :::
 
 1) Go to **Import > AWS EKS**
