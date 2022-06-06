@@ -12,17 +12,17 @@ Cado Response will collect key logs and forensic artifacts from AWS EKS containe
 You'll need to add the appropriate configued Cado Response IAM role to your EKS RBAC configuration. Without 
 this you will see an error message saying that `This role is not configured to authorize with this EKS cluster`.
 
-The IAM role should contain the following permissions to interface with your cluster:
+See [the following AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/)
+on how to add your role to the EKS RBAC, or if you have eksctl configured, you can use the following command:
+
+`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn <iam_role> --group system:masters`
+
+You must also make sure the following IAM permissions are attached to your IAM role:
 ```
 	"eks:ListClusters",
 	"eks:DescribeCluster",
 	"eks:UpdateClusterConfig"
 ````
-
-See [the following AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/)
-on how to add the role to the EKS RBAC, or if you have eksctl configured, you can use the following command:
-
-`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn <iam_role> --group system:masters`
 
 ### Which IAM role should I use?
 Depending on where your EKS cluster is deployed, you'll need to choose a different IAM role to configure with the RBAC configuration.
@@ -36,7 +36,7 @@ For a cross account import you should choose the role created in [AWS Cross Acco
 ## Import Steps
 
 :::info
-Please note that communication with EKS can upwards to 30 seconds or more.
+Please note that communication with EKS can take upwards to 30 seconds or more.
 :::
 
 1) Go to **Import > AWS EKS**
