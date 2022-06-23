@@ -18,13 +18,16 @@ You can quote terms containing spaces: `"foo bar"`
 You can search a specific field by prepending it to the search term: `user: Chris` OR  `extra: "foo bar"`
 
 #### Ranges
-You can restrict a field to a range of values: `severity: [0 TO 5]`
+You can restrict a field to a range of values: `file_size: [1024 TO 8196]`
 
 ### Building complex queries
 You can build complex queries using `AND`, `OR` and `NOT` to combine terms, and brackets to group `()`:
 
 For example: `alarm_severity: [0 TO 5] AND (user: "Chris" OR user: "James") AND NOT filename: "/foo/bar.txt"`
 
+:::info
+Note that without brackets, ANDs will bind before ORs. This means that `user: "Chris" AND user: "James" OR filename: "/foo/bar.txt"` is searched as `(user: "Chris" AND user: "James") OR filename: "/foo/bar.txt"`.
+:::
 
 ## Fields
 Searchable fields
@@ -50,13 +53,16 @@ Searchable fields
 | `isFolder` | boolean | Whether an event is a folder. |
 | `evidence_id` | int | ID of evidence item |
 | `timestamp` | int | Unix timestamp of event |
+| `evidence_id` | int | the id of a specific evidence to search within |
 | `file_size` | int | size of file associated with this event |
-| `md5` | text | md5 hash of file associated with this event |
-| `sha1` | text | sha1 hash of the file associated with this event |
 | `sha256` | text | sha256 of the file associated with this event |
 | `strings` | text | Strings extracted from file associated with this event |
 | `is_starred` | bool | Whether an event is starred |
 | `for_report` | bool | Whether an event is included in the report |
+| `alarm_description` | keyword | Short description explaining the reason for an alarm |
+| `alarm_attack` | keyword | Mitre attack code |
+| `attribute_name` | keyword | $STANDARD_INFORMATION / $FILENAME / null
+
 
 Fields of type `int` or `keyword` require the search term to match exactly in order to return a result. For example, for an event with `user` equal to `chris`, the search term:
  - `user: chris` matches

@@ -19,7 +19,7 @@ To add a new user:
 - Click the **Add Users** button
 
 ### Granting Administrator Access
-To elevate priviledges and grant Administrator access to a normal user, do the following:
+To elevate privileges and grant Administrator access to a normal user, do the following:
 - Click **Users**
 - Next to the appropriate user, click the Edit icon ![Edit](/img/edit.png)
 - Select the **This user has administrator access** checkbox
