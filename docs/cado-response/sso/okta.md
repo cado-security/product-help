@@ -37,6 +37,7 @@ If you are looking to assign non-admin users within Cado Response, you can use a
 9. Add a groups claim for the application:
 	- Go to the **Sign On** tab of the OAuth application
 	- Click **Edit** in the OpenID Connect ID Token section
+	- For the Issuer field specify “Okta URL”
 	- In the `Groups claim type` field select **Filter**
 	- In the `Groups claim filter` leave its name **groups** and enter **Matches regex** `.*`
 	- Then click **Save**

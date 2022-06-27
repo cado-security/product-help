@@ -20,7 +20,7 @@ To be able to access the different resources of the API, any request must be pro
 To generate that key you can do the following inside Cado Repsonse:
 1. Go to **Settings** in the bottom left and click the **API** tab.
 2. Under **Access Tokens** click the **Create New Key** button.
-3. Take note of the **Public Key**, this is the identifer that we can use for revoking the key later on if needed.
+3. Take note of the **Public Key**, this is the identifier that we can use for revoking the key later on if needed.
 4. Take note of the **Secret Key**, you'll need to save this somewhere private (like a password manager), as you won't be able to see it again after you close the dialog. This is the key we need to provide to the third-party integration providers.
 
 
