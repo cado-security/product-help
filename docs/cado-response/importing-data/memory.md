@@ -27,5 +27,5 @@ Under the hood, Cado Response is using Volatility 2 (https://github.com/volatili
 - For Linux systems, we attempt to dynamically generate a profile.
 - Up to OSX 10.15.x Catalina (these .mem files would need to be collected seperately, using other tools. Cado Response does not collect memory dumps from OSX systems at the moment)
 
-## Unstrucutted Memory Analysis
+## Unstructured Memory Analysis
 Unstructured memory analysis allows Cado Response to extract key log data and perform Yara/Anti-Virus scans of memory regardless of the operating system. For this, we use an optimised version of our public Rip Raw tool (https://github.com/cado-security/rip_raw)
