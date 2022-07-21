@@ -21,7 +21,7 @@ Select the region the desired function is located in, and you should see a table
 
 You will then be taken to the confirmation page where you can click the **View Processing** button to see the progress of the acquisition.
 
-## Output?
+## Output
 
 Once processing has finished the events will be added to the timeline and the Lambda function code will be available to view in the **Browse Disk** tab.
 
