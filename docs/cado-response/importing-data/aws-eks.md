@@ -41,7 +41,7 @@ Please note that communication with EKS can take upwards to 30 seconds or more.
 
 1) Go to **Import > AWS EKS**
 
-![Cado Response Import Screen showing the AWS EKS options](/img/eks1.png)
+![Cado Response Import Screen showing the AWS EKS options](/img/import.png)
 
 2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
 

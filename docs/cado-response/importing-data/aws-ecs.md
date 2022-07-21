@@ -30,7 +30,7 @@ If either:
 # How to Import
 
 First, select Import ECS:
-![Import ECS 1](/img/ecs_1.png)
+![Import ECS 1](/img/import.png)
 
 Then select the target Cluster and Task:
 ![Import ECS 2](/img/ecs_2.png)
