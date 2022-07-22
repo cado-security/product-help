@@ -1,5 +1,5 @@
 ---
-title: Okta Integration
+title: Okta OAuth Integration
 hide_title: true
 sidebar_position: 2
 ---
@@ -10,7 +10,7 @@ sidebar_position: 2
 Okta OAuth integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
-You can now enable the beta of Okta OAuth Integration in Cado Response by going to `Settings > OAuth`.
+You can now enable the beta of Okta OAuth Integration in Cado Response by going to `Settings > SSO > Okta OAuth`.
 
 ### Setting up Okta SSO
 1. Open the Okta admin dashboard and navigate to `Applications > Applications`
@@ -47,6 +47,6 @@ If you are looking to assign non-admin users within Cado Response, you can use a
 10. Go to the **General settings** tab of the OAuth application and note down the `Client ID`, `Client Secret` and `Okta Domain` settings.
 11. Configure SSO in cado:
 	- Open your cado instance and log in as an admin user
-	- Go to `Settings > OAuth`
+	- Go to `Settings > SSO > Okta OAuth`
 	- Enter the details from step before and click update. For the domain field please add `https://` to the beginning and `/oauth2` to the end of the Okta domain setting. The complete Domain should be of this format: `https://<Your Okta Domain>/oauth2`
 12. Log out with your existing user, and login with Okta OAuth
