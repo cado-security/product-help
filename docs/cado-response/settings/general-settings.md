@@ -25,7 +25,31 @@ The **Elastic Search Hostname** sets where the data is stored. By default Cado R
 ## Cloud
 These settings are used to authenticate against cloud providers.
 
+### AWS
 An AWS Role is created at installation to authenticate against AWS. This is the recommended method of authentication. Optionally, you can set an **AWS Access Key** and **AWS Secret Key** to authenticate against AWS.
+
+![Cado Response Settings Screen showing AWS credentials](/img/aws-credentials.png)
+
+### GCP
+To acquire data from a Google Cloud project enter credentials in JSON form either as a GCP Service Account or Workload Identity Pool. 
+
+**Note: The GCP Cloud ID must match the GCP Project Name to function correctly**
+
+![Cado Response Settings Screen showing GCP credentials](/img/gcp-credentials.png)
+
+
+For more information about service accounts and Workload Identity Pools see the GCP documentation.
+
+https://cloud.google.com/iam/docs/service-accounts
+
+https://cloud.google.com/iam/docs/workload-identity-federation
+
+
+
+### Azure
+
+TBC
+
 
 ### Tagging Cado Response Resources
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched. If you wish to apply more than one tag to workers, please see the below options.
