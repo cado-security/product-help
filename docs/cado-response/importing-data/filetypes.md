@@ -18,6 +18,8 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - VPC Flow logs
 - SSM logs
 - AWS Memory Capture
+- GCP Instances
+- GCP Storage
 
 ### Azure Capture Formats
 - Virtual Machines 
@@ -25,6 +27,8 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - Storage Containers
 - Container Blobs
 - Kubernetes Disks
+- GCP Instances
+- GCP Storage
 
 ### Storage Formats
 In addition to native capture support for machines and data running/stored in the cloud, Cado Response also supports processing of the following local evidence formats.  
