@@ -55,6 +55,9 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | InstanceVolumeSize | `1000`| EC2 instance volume required in GBit. |
     | S3ArchiveTime | `30` | Move S3 data to s3 glacier storage if not used after X days |
     | S3GlacierDelete | `365` | Delete S3 glacier storage data after X days. |
+    | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the primary subnet. |
+    | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
+    | FeatureFlagPlatformUpgrade | `True` | Enables the platform to perform native upgrades. |
     
     :::tip
      We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
