@@ -37,7 +37,18 @@ const config = {
   ],
 
   // adding search
-  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+      indexDocs: true,
+      indexDocSidebarParentCategories: 0,
+      indexBlog: false,
+      indexPages: true,
+      language: "en",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
