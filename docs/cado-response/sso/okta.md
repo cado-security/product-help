@@ -21,11 +21,11 @@ You can now enable the beta of Okta OAuth Integration in Cado Response by going 
 4. Click **Next**
 5. Give the Cado OAuth app a name
 6. Add a Sign-in redirect URI. This should be the url you use to access cado in the web browser, with the `/login` path. E.g. https://my.cado.instance/login
-7. Optional: Choose who is granted access to the application
+7. Choose who is granted access to the application
 	- In Assignments select **Limit access to selected groups**
 	- Add a user group
 	- This can also be done at a later stage
-	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado Response when logging in
+	- In this exampled the admin group will be called `CadoAdmin`, but you can name this as you like. Just make note of what you call this; you'll need it later
 
 	![Okta Assignments](/img/okta-assignments.png)
 
@@ -49,4 +49,5 @@ If you are looking to assign non-admin users within Cado Response, you can use a
 	- Open your cado instance and log in as an admin user
 	- Go to `Settings > SSO > Okta OAuth`
 	- Enter the details from step before and click update. For the domain field please add `https://` to the beginning and `/oauth2` to the end of the Okta domain setting. The complete Domain should be of this format: `https://<Your Okta Domain>/oauth2`
+	- In the `Admin Group Name` enter in the value you configured in step 7
 12. Log out with your existing user, and login with Okta OAuth

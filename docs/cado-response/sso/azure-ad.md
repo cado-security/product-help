@@ -25,7 +25,7 @@ You can now enable the beta of Azure AD OAuth Integration in Cado Response by go
 1. From the home page, open **Azure Active Directory** and select the **App Registrations** blade
 2. Select your application (you may need to switch to the **All Applications** tab if you are not an owner)
 3. Select **App roles** then **Create app role**.
-4. Create a role named `admin`. ***IMPORTANT: the value must be `admin`**
+4. Set the role value, in this example it will be called, `admin`, but you can name this as you like. Just make note of what you call this; you'll need it later
 ![Azure AD Role](/img/azure-create-role.png)
 :::
 
@@ -52,4 +52,6 @@ You can now enable the beta of Azure AD OAuth Integration in Cado Response by go
 9. Configure SSO in Cado Response
 	- Open your Cado Response instance and log in as an admin user
 	- Go to **Settings > SSO > Microsoft OAuth**
-	- Enter the Microsoft OAuth details you noted earlier and click **Update**
+	- Enter the Microsoft OAuth details you noted earlier
+	- In the `Admin Group Name` enter in the value you configured in step 4
+	- Click **Update**
