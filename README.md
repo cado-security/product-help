@@ -8,16 +8,7 @@ The below is based on the instructions outlined here https://docusaurus.io/docs/
 5. Copy the following folders from the Docusaurus "default-site" folder, created during step #2, to your local source "product-help" folder:
 	- `.docusaurus`
 	- `node_modules`
-6. Update `\src\pages\index.js` to have the following content:
-```
-import React from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import  { Redirect } from 'react-router-dom';
-
-export default function Home() {
-  return <Redirect to={useBaseUrl('cado-response/intro')} />;
-}
-```
+6. Run `npm install @cmfcmf/docusaurus-search-local` to install local search (https://github.com/cmfcmf/docusaurus-search-local)
 7. Change directories into your "product-help" source folder and run `npm start`.  This should now open the Cado product-help site locally.
 
 ## Build
