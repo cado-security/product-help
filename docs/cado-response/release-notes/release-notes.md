@@ -4,27 +4,34 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# Release Notes
+# Cado Release Notes
+## Latest release notes
 
-## 1.6.5
+## v1.6.5
+`Released: 2022-07-28`
 - Bug fixes to Cado Host
 
-## 1.6.4
+## v1.6.4
+`Released: 2022-07-26`
 - Bug fix in Cado Host which could error out on some files.
 - Additional notifications on Okta misconfigurations.
 
-## 1.6.3
+## v1.6.3
+`Released: 2022-07-06`
 - Faster processing engine, backported from an upcoming 2.0 release.
 - When uploading memory, Cado Response will now attempt to grant the kms:Decrypt for certain S3 configurations.
 - Fix to large log exports.
 
-## 1.6.2
+## v1.6.2
+`Released: 2022-06-30`
 - When acquiring memory, Cado Response will now attempt to grant the kms:GenerateDataKey permission to enable saving memory to more KMS encrypted S3 configurations.
 
-## 1.6.1
+## v1.6.1
+`Released: 2022-06-28`
 - Speed and stability improvements to importing large AWS Disks
 
-## 1.6.0
+## v1.6.0
+`Released: 2022-06-28`
 - Pre-Release of GCP Imports
 
 ## Older Release Notes
