@@ -56,7 +56,7 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | S3ArchiveTime | `30` | Move S3 data to s3 glacier storage if not used after X days |
     | S3GlacierDelete | `365` | Delete S3 glacier storage data after X days. |
     | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the primary subnet. |
-    | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
+    | AvailabilityZoneB | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
     | FeatureFlagPlatformUpgrade | `True` | Enables the platform to perform native upgrades. |
     
     :::tip
