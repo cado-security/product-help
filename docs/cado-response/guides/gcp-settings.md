@@ -1,7 +1,7 @@
 ---
 title: GCP Import
 hide_title: true
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 ## GCP Import Settings
