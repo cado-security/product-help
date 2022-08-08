@@ -1,7 +1,7 @@
 ---
-title: Setting up Cross Tenancy/Subscription Azure acquisitions
+title: Azure Cross Account Creation
 hide_title: true
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 # Azure Cross Account Creation

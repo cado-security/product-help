@@ -1,7 +1,7 @@
 ---
 title: AWS Cross Account Creation
 hide_title: true
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 export const Highlight = ({children, color}) => (
