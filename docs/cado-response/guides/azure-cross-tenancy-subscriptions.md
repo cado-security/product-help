@@ -1,10 +1,10 @@
 ---
-title: Azure Cross Account Creation
+title: Azure Cross Subscription Creation
 hide_title: true
 sidebar_position: 5
 ---
 
-# Azure Cross Account Creation
+# Azure Cross Subscription Creation
 
 ### Setting up an app registration for cross tenancy/subcription acquisitions
 To leverage cross Azure acquisitions, you need to create an **[Azure app registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)** in the Azure tenancy you want to acquire resources from.  Follow the contents of this guide, and select the option for `Accounts in any organizational directory (Any Azure AD directory - Multitenant)`. ![Azure App Registration](/img/azure-registering-app.png)  
