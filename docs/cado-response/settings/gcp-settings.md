@@ -1,24 +1,26 @@
 ---
 title: GCP Import Settings
 hide_title: true
-sidebar_position: 5
+sidebar_position: 2
 ---
 
-# Entering Settings
-You can add GCP Credentials at Settings > Cloud > GCP.
+## GCP Import Setings
+
+You can acquire compute and storage resources from GCP with Cado Response by configuring Cado Response with GCP credentials. The below guide walks through this process.
+
+## Entering Settings
+You can add GCP Credentials to Cado Response in the **Settings > Cloud > GCP** page.
 You will be asked for a "GCP Project Name" and the "GCP Credentials".
 
-## Getting the "GCP Credentials"
+## Getting GCP Credentials
 
-When adding credentials in settings you are creating a mapping from a set of credentials (in GCP json format) to a project name.
+When you add credentials under Cado Response settings you are creating a mapping from a set of credentials (in GCP json format) to a project name.
 
-Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used - this is to keep non admin users from handling/managing credentials themselves, as well as to allow as many different GCP projects as you want.
+Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used. This keeps non-admin users from having to managing credentials themselves, while also alllowing access to as many different GCP projects as you want.
 
-Google credentials come in a json format that wraps around a ‘regular’ credential, for the benefit of the many different ways that a credential may be used on their end.
+GCP credentials come in a json format that wraps around a ‘regular’ credential, for the benefit of the many different ways that a credential may be used on their end. It can be treated as functionally no different to how you would handle any type of password or key.
 
-It can be treated as functionally no different to how you would handle any type of password or key.
-
-For example, a service account key might come in a structure such as the below (truncated), but really the ‘credential’ is a literal rsa key as a string in the private_key field, all other fields are metadata for the benefit of the application that uses it:
+For example, a service account key might come in a structure such as the below. The ‘credential’ is a literal RSA key as a string in the `private_key` field, all other fields are metadata for the benefit of the application that uses it:
 
       {
       "type": "service_account",
@@ -33,11 +35,11 @@ For example, a service account key might come in a structure such as the below (
       "client_x509_cert_url": "..."
     }
 
-#### Types of Credential
+### Types of Credentials
 
-##### Service Accounts
+#### Service Accounts
 
-The simplest method for setting up is to use a service account, which will give you a permanent key. Naturally these are very sensitive but they are easy to manage and simple to set up. They will work on AWS and Azure in the Cado platform.
+The simplest method to add GCP credentials to Cado Response is to use a service account, which will give you a permanent key. Naturally these are very sensitive but they are easy to manage and simple to set up. Adding GCP credntials for service accounts is supported by Cado Response when deployed in both AWS and Azure.
 
 For more see:
 * https://console.cloud.google.com/iam-admin/serviceaccounts
@@ -45,19 +47,13 @@ For more see:
 
 #### Workload Identity Federation
 
-The recommended (by Google) approach is to use Workload Identity Federation, which means ‘allow my credentials from some other app to impersonate a GCP account’.
+The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado Response when deployed in AWS.
 
-As with all the GCP credentials, the json is just metadata and can be treated as an RSA key.
+Rather than give out the key to a service account, you instead register the permission with GCP to allow AWS credentials for account `123` to act as if they were the given GCP service account.
 
-It’s a lot more secure since the credentials are nothing but metadata telling the app where to go - the actual validation is all done server side.
+You can download existing credentials by clicking the display name of the **Identity Pool > Connected Service Accounts > Download**, which will then ask you which identity’s credentials you would like to download.
 
-Rather than give out the key to a service account, you instead register the permission with GCP to allow (say) AWS credentials for account 123 to assume/adopt/impersonate/act as if they were the given gcp service account.
-
-The platform currently (July 2022) supports this on AWS but not on Azure.
-
-You can download those already existing by clicking the display name of the identity pool → connected service accounts → Download, which will ask you which identity’s creds you’d like to download
-
-For example: (note that you would never edit this, as it is a key)
+For example:
 
     {
       "type": "external_account",
