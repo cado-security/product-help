@@ -7,6 +7,15 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v2.0.0
+`Released: 2022-08-08`
+- Cross cloud-data import and analysis
+- Collecting data from Google Cloud environments
+- Interconnected event analysis
+- Data performance and footprint improvements
+- Cloud asset landscape
+- New storage architecture
+
 ## v1.6.5
 `Released: 2022-07-28`
 - Bug fixes to Cado Host
