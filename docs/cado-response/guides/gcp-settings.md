@@ -1,10 +1,10 @@
 ---
-title: GCP Import Settings
+title: GCP Import
 hide_title: true
-sidebar_position: 2
+sidebar_position: 6
 ---
 
-## GCP Import Setings
+## GCP Import Settings
 
 You can acquire compute and storage resources from GCP with Cado Response by configuring Cado Response with GCP credentials. The below guide walks through this process.
 
