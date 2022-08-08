@@ -1,7 +1,7 @@
 ---
 title: AWS Security Considerations
 hide_title: true
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 

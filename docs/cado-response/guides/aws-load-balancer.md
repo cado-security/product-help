@@ -1,7 +1,7 @@
 ---
 title: AWS Adding a Load Balancer
 hide_title: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 
