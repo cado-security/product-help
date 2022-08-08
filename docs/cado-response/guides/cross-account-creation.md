@@ -37,15 +37,15 @@ The instructions below will allow cross-account access from account `11111111111
 
 - Click **Next**, and in the permissions wizard attach the Cado Response Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again. (If Cado Response is deployed in AWS GovCloud use the policy [located here](https://gov-updates.s3-us-gov-east-1.amazonaws.com/policy-in-cross-account-govcloud.json) instead.)
 
-- Click through to review and give the role a name. The role name **_must_** include `CadoResponse` (we use `CadoResponseSecondRole` in this example).
+- Click through to review and give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example).
 
 :::warning
-If the secondary account role does not contain `CadoResponse` (case sensitive) cross account acquisition will not work.
+If the secondary account role name does not contain the text `CadoResponse` (case sensitive) cross account acquisition will not work.
 :::
 
 
 :::info
-The Cado Response Cross-Account Policy includes permissions to aqquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
+The Cado Response Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
 * The EC2 permissions are required are acquire EC2 systems.
 * The KMS permissions are required to acquire KMS encrypted volumes.
 * The SSM permissions are required for Memory Forensics.
