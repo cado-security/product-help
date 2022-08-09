@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v2.0.1
+`Released: 2022-08-09`
+- Speed and worker management improvements
+
 ## v2.0.0
 `Released: 2022-08-09`
 - Cross cloud-data import and analysis
