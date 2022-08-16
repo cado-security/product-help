@@ -1,7 +1,7 @@
 ---
 title: AWS Memory Analysis
 hide_title: true
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # AWS Memory Analysis

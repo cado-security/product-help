@@ -1,7 +1,7 @@
 ---
 title: AWS ECS Support
 hide_title: true
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 Cado Response will collect key logs and forensic artifacts from AWS ECS systems.
