@@ -28,7 +28,7 @@ Cado Response Community Edition gives you:
 Interested in getting started?  Here are some of the most frequently accessed help topics. 
 
 ### Signing up for Cado Response Community Edition
-The Cado Response Community Edition website page is **COMING SOON!**. Once signed up, a Cado representative will send you a license and link to our CloudFormation template.
+Visit the [Cado Response Community Edition website](https://www.cadosecurity.com/cado-community-edition/#get-access) page to sign up. Once signed up, a Cado representative will send you a license and link to our CloudFormation template.
 
 
 ### Deploying in your cloud environment
