@@ -4,9 +4,11 @@ hide_title: true
 sidebar_position: 3
 ---
 
+# AWS ECS Support
+
 Cado Response will collect key logs and forensic artifacts from AWS ECS systems.
 
-# ECS Import Requirements
+## ECS Import Requirements
 
 * You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task.
 * Currently ECS acquisitions are only available on Linux based containers.
