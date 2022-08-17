@@ -1,14 +1,11 @@
 ---
-title: Troubleshooting
+title: Troubleshooting Deployment
 hide_title: true
 sidebar_position: 12
 ---
 
-# Frequently Asked Questions
-Solutions to some common questions can be found here.  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
-
-### Does Cado Response support memory capture?
-Yes.  Amazon Linux, Amazon Ubuntu and Windows Systems are currently supported.  See **[Memory](../../discovery-import/import/data-types/memory.md)** for more details.
+# Frequently Asked Deployment Questions
+Solutions to some common deploymnet questions can be found here.  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
 On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete.

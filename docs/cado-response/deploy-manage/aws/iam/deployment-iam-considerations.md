@@ -3,6 +3,8 @@ title: Deployment IAM Considerations
 hide_title: true
 sidebar_position: 1
 ---
+# Deployment IAM Considerations
+There are several AWS Identity & Access Management best practices to consider when deploying Cado Response 
 
 ## Dedicated Forensics Account
 You may choose to deploy into an AWS account dedicated to storing forensics data securely. You can then use cross-account roles to bring data into the forensics account. Cado Response copies data back into the forensics account, and performs processing there.
