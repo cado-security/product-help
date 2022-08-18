@@ -20,7 +20,7 @@ Please note that by deploying and running Cado Community Edition you will incur 
 ### Processing Data
 After deploying Cado Response Community Edition,  you can import data from the S3 bucket created by the CloudFormation template (you can find the identifier under CloudFormation - Stacks - *stack name* - Outputs - S3Bucket). Please note that all other options will be unavailable. Also, please note that Cado Response Community Edition will only analyze .dd, dd.gz, and .zip files
 
-**[Learn how >](../discovery-import/import/importing.md)**
+**[Learn how >](../discovery-import/import/import.md)**
 
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.

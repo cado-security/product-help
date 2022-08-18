@@ -12,7 +12,7 @@ Browse Disk shows a hierarchical view of the file system. Cado Response marks di
 
 ![Browse Disk](/img/browse-disk.png)
 
-Clicking on a file takes you to the details for that file, inlcuding links to search Open Threat Exchange (OTX) and VirusTotal if you have those [set up](../settings-reference/general-settings.md#detections).
+Clicking on a file takes you to the details for that file, inlcuding links to search Open Threat Exchange (OTX) and VirusTotal if you have those [set up](detections.md).
 
 ![File Details 1](/img/file-details-1.png)
 

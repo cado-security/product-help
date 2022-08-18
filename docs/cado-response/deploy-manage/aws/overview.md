@@ -142,4 +142,4 @@ Please see the [guide on AWS Backup and Recovery](performance-resiliency/aws-bac
 Please see the [guide on adding an AWS Load Balancer](networking/aws-load-balancer.md)
 
 ### How to Add Tags to Resources
-Please see the [guide on Settings](../../settings-reference/general-settings.md)
+Please see the [guide on Deployment Options](../intro.md#tagging-cado-response-resources)

@@ -146,4 +146,4 @@ When deploying, the main Cado Response instance will have the name `CadoResponse
 
 
 ### How to Add Tags to Resources
-Please see the [guide on Settings](../../settings-reference/general-settings.md)
+Please see the [guide on Deployment Options](../intro.md#tagging-cado-response-resources)

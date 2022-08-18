@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 # Importing Data
-There are a number of options for importing data into Cado Response. Once you select the data you would like to import, the Cado Response platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](../../settings-reference/general-settings.md)** for more details.
+There are a number of options for importing data into Cado Response. Once you select the data you would like to import, the Cado Response platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](../../deploy-manage/manage/workers.md#processing)** for more details.
 
 ### Evidence Types
 Cado Response supports a wide range of **[File Types](data-types/filetypes.md)** which can be imported.  To begin importing data, you simply select a Project and click the **Import** button 
