@@ -11,8 +11,8 @@ Cado Response supports acquisition of EC2 instances. While the project is open, 
 
 You can filter the list of instances and buckets by instance ID, name, state or public IP address.
 
-Click on "Acquire Volume" (or "Acquire Memory" if enabled)...
+Click on "Acquire Volume" or "Acquire Memory" 
 
-**TODO: Specify Options**
+For volume capture, set the options for what data you want to capture, plus any optional labels for chain of custody and hit "Acquire Instance"
 
-... and hit "Acquire Instance"
+![AWS EC2 details](/img/aws-ec2-options.png)
