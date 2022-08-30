@@ -46,7 +46,7 @@ Currently, split E01 format disks are supported in AWS only.
 :::
 
 :::info
-If you import a zip, it will be treated as a container of files **unless** it is a zip of a single file. Importing zipped split E01s are not supported.
+If you import a zip, it will be treated as a container of files **unless** it is a zip of a single file. Importing zipped split E01s is not supported.
 :::
 
 #### Volume Systems
