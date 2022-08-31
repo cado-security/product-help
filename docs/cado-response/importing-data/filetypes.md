@@ -31,7 +31,7 @@ In addition to native capture support for machines and data running/stored in th
 
 #### Storage Media
 - .E01, and split E01
-- .VHD and VHDX
+- .VHD and .VHDX
 - .DD (Optionally .GZ Compressed)
 - .GZ / .Tar / .Zip
 - .VMDK (Partial Support*)
