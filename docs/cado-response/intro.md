@@ -27,23 +27,32 @@ Cado Response is *the* cloud investigation platform that empowers security teams
 
 ---------
 
-## Getting Started
-Interested in getting started?  Here are some of the most frequently accessed help topics. 
+## Getting Started with Cado Response Community Edition
+Interested in getting started?  Cado Response Community Edition is a free, limited version of Cado Response that lets you analyze:
 
-### Deploy in your cloud environment
-How to deploy Cado Response in your cloud environment
+- Disk images captured in DD format
+- Exports of triaged items from open source forensics tools like KAPE and Velociraptor
+- Sample data - e.g data published by Cado that illustrates different types of issues incident responders might encounter across server-based, container-based and serverless systems in the cloud.
+With Cado Response Community Edition, users can:
+Navigate files and folders 
+View a  timeline of activities performed on the system
+Analyze captured artifacts for threats and indicators of compromise
+Easily pivot and search across artifacts
 
-**[Learn how in AWS >](getting-started/deploy/aws-deploy)**
+## Deploy and Manage Cado Response in your cloud environment
+You can deploy and manage Cado Response in either your AWS or Azure environment
 
-**[Learn how in Azure >](getting-started/deploy/azure-deploy)**
+**[Learn how in AWS >](deploy-manage/aws/overview.md)**
+
+**[Learn how in Azure >](deploy-manage/azure/azure-deploy.md)**
 
 ### Processing Data
 After deploying Cado Response, data can be automatically acquired from the cloud or imported from a number of supported sources. 
 
-**[Learn how >](importing-data/importing)**
+**[Learn how >](discovery-import/import/import.md)**
 
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
 
-**[Learn how >](investigating/investigate)**
+**[Learn how >](investigate/investigate.md)**
 
