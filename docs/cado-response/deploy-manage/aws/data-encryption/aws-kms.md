@@ -98,7 +98,7 @@ There are a number of options available - but recommended approaches are below:
 It is important to ensure that if you are acquiring cross region that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy `Conditions` don't preclude the platform's access).
 
 ### Cross Account
-The simplest approach is to give `kms:CreateGrant` permissions to the role being assumed **in the target account being acquired from**. See the **Cross Account Acquisition](/docs/cado-response/guides/cross-account-creation)** instructions for more details on cross account permissions.
+The simplest approach is to give `kms:CreateGrant` permissions to the role being assumed **in the target account being acquired from**. See the **[Cross Account Acquisition](/cado-response/guides/cross-account-creation)** instructions for more details on cross account permissions.
 
 Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to `"kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"`
 

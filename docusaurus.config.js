@@ -48,6 +48,25 @@ const config = {
       language: "en",
       },
     ],
+    [
+      // redirect from old urls to new url formats
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // /docs/oldDoc -> /docs/newDoc
+          {
+            to: '/cado-response/community-edition/community-intro',
+            from: '/community-edition',
+          },
+          // () - > /cado-response/intro
+          // () - > /cado-response/integrations/webhooks
+          // () - > /cado-response/integrations/siem
+          // () - > /cado-response/investigating/search
+          // () - > /cado-response/guides/cross-account-creation
+          // () - > /cado-host/intro
+        ],
+      },
+    ],
   ],
 
   themeConfig:
