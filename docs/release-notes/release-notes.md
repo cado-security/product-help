@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v2.0.2
+`Released: 2022-08-16`
+- Hotfix for processing and deletion speed improvements and bugfix.
+
 ## v2.0.1
 `Released: 2022-08-09`
 - Speed and worker management improvements
