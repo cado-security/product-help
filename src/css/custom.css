@@ -37,3 +37,23 @@
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+/* custom css for Cado */
+.theme-doc-sidebar-menu
+{
+  font-size: 15px;
+}
+
+a.menu__link
+{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 3px;
+  padding-right: 8px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+}
+
+.menu__list-item-collapsible {
+  font-weight: bold;
+}
