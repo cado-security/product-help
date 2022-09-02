@@ -89,7 +89,7 @@ When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finishe
 
 ![Creation Complete](/img/create-complete.png)
 
-You can then **[Log into Cado Response](../manage/logging-in.md)** 
+You can then **[Log into Cado Response](../../manage/logging-in.md)** 
 
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
@@ -116,7 +116,7 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
   | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |  
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
-6. You can then **[Log into Cado Response](../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
+6. You can then **[Log into Cado Response](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
 7. Lastly, you will need to import a license JSON file.
 
 ### Supported Regions

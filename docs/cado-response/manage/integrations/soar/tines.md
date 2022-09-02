@@ -18,7 +18,7 @@ If you're confused by the terminology mentioned here, or have never used Tines b
 
 Before properly getting started please see the following for general instructions on setting up the Cado Response platform for integrating with third-party tools:
 
-**[Integrations Overview >](../../api-overview.md)**
+**[Integrations Overview >](../api-overview.md)**
 
 ### Contents
 
@@ -32,7 +32,7 @@ Before properly getting started please see the following for general instruction
 Cado Response allows you to create an API Access Key that allows third-party services to authenticate and interact with a Cado Response instance; you'll need to create one in order to use Tines with Cado Response.
 
 :::tip
-Please see **[Creating and Storing an API Access Key](../../api-overview.md#creating-and-storing-an-api-access-key)** to learn how to create the API Access Key.
+Please see **[Creating and Storing an API Access Key](../api-overview.md#creating-and-storing-an-api-access-key)** to learn how to create the API Access Key.
 :::
 
 In order to add the Secret Key to Tines, you'll need to open your Tines Dashboard, and go to the **Credentials** page. Add a new **Text Credential** and name it `CadoResponse_APIKey`.

@@ -31,7 +31,7 @@ Depending on where your EKS cluster is deployed, you'll need to choose a differe
 For a single account import you should  choose the configured role inside `Settings > Cloud > AWS`.
 
 #### The cluster is deployed in a seperate account from Cado Response:
-For a cross account import you should choose the role created in [AWS Cross Account Creation](../../../deploy-manage/aws/iam/cross-account-creation.md).
+For a cross account import you should choose the role created in [AWS Cross Account Creation](../../../deploy/aws/iam/cross-account-creation.md).
 
 ## Import Steps
 

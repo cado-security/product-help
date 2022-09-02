@@ -10,7 +10,7 @@ sidebar_position: 1
 Depending on the cloud provider in which you deployed Cado Response, navigate to either your **[AWS Console]( https://console.aws.amazon.com)** or your **[Azure Portal](https://portal.azure.com)** and find the Public IPv4 address of your running Cado Response instance.  Open a browser and navigate to `https://<Cado_Response_IP>` where `<Cado_Response_IP>` is the IPv4 of the Cado Response instance.  You will now be able to log into the platform. 
 
 :::tip 
-You will see a browser notification stating that "Your connection is not private". Cado is unable to automatically generate SSL certificates. In AWS, if you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to **[create your own ELB](../aws/networking/aws-load-balancer.md)**
+You will see a browser notification stating that "Your connection is not private". Cado is unable to automatically generate SSL certificates. In AWS, if you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to **[create your own ELB](../deploy/aws/networking/aws-load-balancer.md)**
 :::
 
 ![Login Page](/img/login.png)

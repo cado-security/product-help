@@ -16,7 +16,7 @@ If you're confused by the terminology mentioned here, or have never used XSOAR b
 
 Before properly getting started please see the following for general instructions on setting up the Cado Response platform for integrating with third-party tools:
 
-**[Integrations Overview >](../../api-overview.md)**
+**[Integrations Overview >](../api-overview.md)**
 
 ### Contents
 
@@ -44,11 +44,11 @@ In this screen, you'll need to setup the following:
 
 - **The URL of your Cado Response instance**:
 
-  This will the URL of your deployed Cado Response instance, if you're unsure, please see **[Integrations Overview >](../../api-overview.md)**
+  This will the URL of your deployed Cado Response instance, if you're unsure, please see **[Integrations Overview >](../api-overview.md)**
 
 - **The API key you retrieved from your platform**:
 
-  This will the generated private API key you retrieved earlier, if you're unsure, please see **[Integrations Overview >](../../api-overview.md)**
+  This will the generated private API key you retrieved earlier, if you're unsure, please see **[Integrations Overview >](../api-overview.md)**
 
 - **The default Project ID**
 

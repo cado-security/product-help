@@ -38,18 +38,18 @@ How to deploy Cado Response Community Edition in your cloud environment in AWS. 
 Please note that by deploying and running Cado Community Edition you will incur AWS charges. In order to keep charges to a minimum, you can shut down the main instance that serves the web interface when all processing is finished and you are no longer using it. You can also adjust the worker size under `Processing > Settings`. The `i3` series of worker instances (used by default) provide more disk space to enable processing of larger disks, however, the `t3` series operate at a lower cost. If you are concerned about cost, you may want to select e.g. a `t3.large` worker size in settings.
 :::
 
-**[Learn how >](/cado-response/getting-started/deploy/aws-deploy)**
+**[Learn how >](/cado-response/deploy/aws/overview.md)**
 
 
 ### Processing Data
 After deploying Cado Response Community Edition,  you can import data from the S3 bucket created by the CloudFormation template (you can find the identifier under CloudFormation - Stacks - *stack name* - Outputs - S3Bucket). Please note that all other options will be unavailable. Also, please note that Cado Response Community Edition will only analyze .dd, dd.gz, and .zip files
 
-**[Learn how >](/cado-response/importing-data/importing)**
+**[Learn how >](/cado-response/discovery-import/intro.md)**
 
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
 
-**[Learn how >](/cado-response/investigating/investigate)**
+**[Learn how >](/cado-response/investigate/overview.md)**
 
 ---------
 

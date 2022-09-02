@@ -10,7 +10,7 @@ Splunk SOAR is a Security Orchestration, Automation, and Response (SOAR) system.
 
 ## Getting Started
  
-Before getting started, please see the **[Integrations Overview >](../../api-overview.md)** page for general instructions on setting up the Cado Response platform for integration with third-party tools.
+Before getting started, please see the **[Integrations Overview >](../api-overview.md)** page for general instructions on setting up the Cado Response platform for integration with third-party tools.
 
 Below are the instructions for setting up the Cado Response and Splunk SOAR integration:
 
@@ -22,7 +22,7 @@ Below are the instructions for setting up the Cado Response and Splunk SOAR inte
 
 ### Create an API Access Key
 
-In order to allow third-party services to authenticate and interact with a Cado Response instance, you will need to **[Create an API Access Key](../../api-overview.md#creating-and-storing-an-api-access-key)** for use within Splunk SOAR.
+In order to allow third-party services to authenticate and interact with a Cado Response instance, you will need to **[Create an API Access Key](../api-overview.md#creating-and-storing-an-api-access-key)** for use within Splunk SOAR.
 
 :::tip
 In addition to the API Access Key, please ensure that the Splunk SOAR platform has access (network, firewall, etc) to make API calls to the Cado Response platform.

@@ -42,14 +42,14 @@ Easily pivot and search across artifacts
 ## Deploy and Manage Cado Response in your cloud environment
 You can deploy and manage Cado Response in either your AWS or Azure environment
 
-**[Learn how in AWS >](deploy-manage/aws/overview.md)**
+**[Learn how in AWS >](deploy/aws/overview.md)**
 
-**[Learn how in Azure >](deploy-manage/azure/azure-deploy.md)**
+**[Learn how in Azure >](deploy/azure/azure-deploy.md)**
 
 ### Processing Data
 After deploying Cado Response, data can be automatically acquired from the cloud or imported from a number of supported sources. 
 
-**[Learn how >](discovery-import/import/import.md)**
+**[Learn how >](discovery-import/import/intro.md)**
 
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
