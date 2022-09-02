@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Project Overview
 hide_title: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Project Overview

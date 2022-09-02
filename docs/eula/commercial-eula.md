@@ -1,18 +1,19 @@
 ---
 title: Commercial EULA
 hide_title: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-:::info
-FOR ALL COMMERCIAL CUSTOMERS AND USERS OF CADO SOFTWARE, **DOCUMENT A** [“END USER LICENSE AGREEMENT”](/eula/commercial-eula#end-user-license-agreement) SHALL APPLY.
+# DOCUMENT A
 
-FOR ALL COMMUNITY EDITION USERS OF CADO SOFTWARE, **DOCUMENT B** [“COMMUNITY EDITION LICENSE AGREEMENT”](/eula/community-eula#community-edition-license-agreement) SHALL APPLY.
+:::info
+FOR ALL COMMERCIAL CUSTOMERS AND USERS OF CADO SOFTWARE, [**DOCUMENT A - END USER LICENSE AGREEMENT**](/eula/commercial-eula#end-user-license-agreement) SHALL APPLY.
+
+FOR ALL COMMUNITY EDITION USERS OF CADO SOFTWARE, [**DOCUMENT B - COMMUNITY EDITION LICENSE AGREEMENT**](/eula/community-eula#community-edition-license-agreement) SHALL APPLY.
 :::
 
 ***
 
-# DOCUMENT A
 ## End User License Agreement
 
 IMPORTANT – READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) BEFORE AGREEING TO USE THE

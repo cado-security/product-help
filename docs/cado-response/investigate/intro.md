@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Investigate
 hide_title: true
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Investigating a Project
@@ -12,7 +12,7 @@ The tabs available on the Project Overview page are:
 
 | Tab Name | Description |
 | -------- | ----------- |
-| [Overview](overview.md) | Shows all the evidence items, and an interactive timeline of key events. |
+| [Overview](project-overview.md) | Shows all the evidence items, and an interactive timeline of key events. |
 | [Timeline](timeline-search.md) | A timeline of key events. |
 | [Alarms](key-events.md) | Malicious events. |
 | [Suspicious](key-events.md) | Possibly malicious events. |
