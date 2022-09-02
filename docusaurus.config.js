@@ -53,35 +53,53 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          // community edition
+          // handle redirects to the new URL format (for a short period of time only)
           {
             to: '/cado-response/community-edition/community-intro',
             from: '/community-edition',
           },
-          // () - > /cado-response/intro (STAYS THE SAME)
-          // (/cado-response/manage/integrations/webhooks) <-  /cado-response/integrations/webhooks
           {
             to: '/cado-response/manage/integrations/webhooks',
             from: '/cado-response/integrations/webhooks',
           },
-          // (/cado-response/manage/integrations/siem) <- /cado-response/integrations/siem
           {
             to: '/cado-response/manage/integrations/siem',
             from: '/cado-response/integrations/siem',
           },
-          // (/cado-response/investigate/timeline-search) <- /cado-response/investigating/search
           {
             to: '/cado-response/investigate/timeline-search',
             from: '/cado-response/investigating/search',
           },
-
-          // (/cado-response/deploy/aws/iam/cross-account-creation) <- /cado-response/guides/cross-account-creation
           {
             to: '/cado-response/deploy/aws/iam/cross-account-creation',
             from: '/cado-response/guides/cross-account-creation',
           },
-          // () - > /cado-host/intro (SATYS THE SAME)
-
+          
+          // https://docs.cadosecurity.com/cado-response/getting-started/deploy/aws-deploy
+          {
+            to: '/cado-response/deploy/aws/overview',
+            from: '/cado-response/getting-started/deploy/aws-deploy',
+          },
+          // https://docs.cadosecurity.com/cado-response/getting-started/deploy/azure-deploy
+          {
+            to: '/cado-response/deploy/azure/azure-deploy',
+            from: '/cado-response/getting-started/deploy/azure-deploy',
+          },
+          // https://docs.cadosecurity.com/cado-response/importing-data/filetypes
+          {
+            to: '/cado-response/discovery-import/import/data-types/filetypes',
+            from: '/cado-response/importing-data/filetypes',
+          },
+          // https://docs.cadosecurity.com/cado-response/integrations/tines
+          {
+            to: '/cado-response/manage/integrations/soar/tines',
+            from: '/cado-response/integrations/tines',
+          },
+          // https://docs.cadosecurity.com/cado-response/integrations/cortex-xsoar
+          {
+            to: '/cado-response/manage/integrations/soar/cortex-xsoar',
+            from: '/cado-response/integrations/cortex-xsoar',
+          },
         ],
       },
     ],
