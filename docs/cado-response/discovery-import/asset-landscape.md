@@ -1,7 +1,7 @@
 ---
-title: Discovering the Asset Landscape (Beta)
+title: Asset Landscape (Beta)
 hide_title: true
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Discovering the Asset Landscape

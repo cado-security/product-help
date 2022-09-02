@@ -8,4 +8,4 @@ sidebar_position: 2
 
 You can import supported [file types](../data-types/filetypes.md) from a URL where you are storing forensic artifacts collected from on-premises systems.
 
-![On-Premises URL](/img/on-premises-url.png)
+> ![On-Premises URL](/img/on-premises-url.png)

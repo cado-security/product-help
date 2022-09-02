@@ -4,8 +4,12 @@ hide_title: true
 sidebar_position: 3
 ---
 
+:::warning
+Memory analysis support is currently in beta. If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
+:::
+
 # Memory Analysis
-Memory analysis support is currently in beta. You can enable it under the **Advanced** tab of the **Settings** page:
+You can enable it under the **Advanced** tab of the **Settings** page:
 
 For cloud systems where this functionality is available, you will see the option available is the import page when selecting the instance.
 

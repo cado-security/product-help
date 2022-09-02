@@ -1,5 +1,5 @@
 ---
-title: AWS EKS Support
+title: EKS
 hide_title: true
 sidebar_position: 5
 ---

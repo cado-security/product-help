@@ -1,5 +1,5 @@
 ---
-title: AWS S3 Support
+title: S3
 hide_title: true
 sidebar_position: 2
 ---

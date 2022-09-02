@@ -1,5 +1,5 @@
 ---
-title: AWS Lambda Support
+title: Lambda
 hide_title: true
 sidebar_position: 6
 ---

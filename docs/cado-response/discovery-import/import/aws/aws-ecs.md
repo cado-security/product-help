@@ -1,5 +1,5 @@
 ---
-title: AWS ECS Support
+title: ECS
 hide_title: true
 sidebar_position: 4
 ---

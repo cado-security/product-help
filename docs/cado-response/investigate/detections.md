@@ -1,5 +1,5 @@
 ---
-title: Setting Up Detections
+title: Detections
 hide_title: true
 sidebar_position: 9
 ---

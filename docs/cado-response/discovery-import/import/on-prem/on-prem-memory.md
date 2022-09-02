@@ -1,5 +1,5 @@
 ---
-title: Memory from On-Premises Systems
+title: Memory
 hide_title: true
 sidebar_position: 3
 ---
@@ -9,4 +9,4 @@ Cado Response uses [Cado Host](/cado-host/intro) to acquire memory from on-premi
 
 From the Import page click on *On-Premises - Memory* and copy the appropriate command into the Linux terminal or Windows Powershell command line.
 
-![On-Premises Memory](/img/on-premises-memory.png)
+> ![On-Premises Memory](/img/on-premises-memory.png)

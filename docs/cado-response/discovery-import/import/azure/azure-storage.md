@@ -1,5 +1,5 @@
 ---
-title: Azure Storage Support
+title: Azure Storage
 hide_title: true
 sidebar_position: 2
 ---

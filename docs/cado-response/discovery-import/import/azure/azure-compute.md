@@ -1,5 +1,5 @@
 ---
-title: Azure Compute Support
+title: Azure Compute
 hide_title: true
 sidebar_position: 1
 ---

@@ -1,5 +1,5 @@
 ---
-title: Google Cloud Engine Support
+title: Google Cloud Engine
 hide_title: true
 sidebar_position: 1
 ---

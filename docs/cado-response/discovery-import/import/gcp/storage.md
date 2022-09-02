@@ -1,5 +1,5 @@
 ---
-title: Google Cloud Storage Support
+title: Google Cloud Storage
 hide_title: true
 sidebar_position: 2
 ---

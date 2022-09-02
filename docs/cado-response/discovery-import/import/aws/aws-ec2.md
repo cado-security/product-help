@@ -1,5 +1,5 @@
 ---
-title: AWS EC2 and EBS Support
+title: EC2 and EBS
 hide_title: true
 sidebar_position: 1
 ---
