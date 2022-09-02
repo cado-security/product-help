@@ -49,7 +49,7 @@ After deploying Cado Response Community Edition,  you can import data from the S
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
 
-**[Learn how >](/cado-response/investigate/overview.md)**
+**[Learn how >](/cado-response/investigate/intro.md)**
 
 ---------
 

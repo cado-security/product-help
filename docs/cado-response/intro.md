@@ -54,5 +54,5 @@ After deploying Cado Response, data can be automatically acquired from the cloud
 ### Analyzing Evidence
 Data which is imported is automatically processed, analyzed and added to the platform.  Automatic detections, timeline of events and more are available for investigation.
 
-**[Learn how >](investigate/investigate.md)**
+**[Learn how >](investigate/intro.md)**
 
