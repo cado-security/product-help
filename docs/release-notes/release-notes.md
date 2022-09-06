@@ -8,7 +8,7 @@ sidebar_position: 1
 ## Latest release notes
 
 ## v2.1
-`Released 2022-09-06
+`Released 2022-09-06`
 - Multiple performance improvements and bugfixes
 
 ## v2.0.2
