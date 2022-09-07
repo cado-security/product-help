@@ -100,6 +100,12 @@ const config = {
             to: '/cado-response/manage/integrations/soar/cortex-xsoar',
             from: '/cado-response/integrations/cortex-xsoar',
           },
+          // /cado-response/guides/azure-cross-tenancy-subscriptions
+          {
+            to: '/cado-response/deploy/azure/azure-cross-tenancy-subscriptions',
+            from: '/cado-response/guides/azure-cross-tenancy-subscriptions',
+          },
+
         ],
       },
     ],

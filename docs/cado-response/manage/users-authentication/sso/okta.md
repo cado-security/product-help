@@ -25,7 +25,7 @@ You can now enable the beta of Okta OAuth Integration in Cado Response by going 
 	- In Assignments select **Limit access to selected groups**
 	- Add a user group
 	- This can also be done at a later stage
-	- In this exampled the admin group will be called `CadoAdmin`, but you can name this as you like. Just make note of what you call this; you'll need it later
+	- In this example the admin group will be called `CadoAdmin`, but you can name this as you like. Just make note of what you call this; you'll need it later
 
 	![Okta Assignments](/img/okta-assignments.png)
 
