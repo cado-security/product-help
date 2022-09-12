@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.1.1
+`Released  2022-09-12`
+- Hotfix for single sign on
+
 ## v2.1
 `Released 2022-09-06`
 - Multiple performance improvements and bugfixes
