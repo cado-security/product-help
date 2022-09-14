@@ -10,6 +10,7 @@ sidebar_position: 1
 ## v.2.1.1
 `Released  2022-09-12`
 - Hotfix for single sign on
+- Improved navigation and filtering for key events. Automated Investigation tab now shows 50 most relevant events. To recreate deprecated Key Events tab use search term `alarm_severity: [1 TO 3]`  
 
 ## v2.1
 `Released 2022-09-06`
