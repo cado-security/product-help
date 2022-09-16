@@ -74,38 +74,34 @@ const config = {
             to: '/cado-response/deploy/aws/iam/cross-account-creation',
             from: '/cado-response/guides/cross-account-creation',
           },
-          
-          // https://docs.cadosecurity.com/cado-response/getting-started/deploy/aws-deploy
           {
             to: '/cado-response/deploy/aws/overview',
             from: '/cado-response/getting-started/deploy/aws-deploy',
           },
-          // https://docs.cadosecurity.com/cado-response/getting-started/deploy/azure-deploy
           {
             to: '/cado-response/deploy/azure/azure-deploy',
             from: '/cado-response/getting-started/deploy/azure-deploy',
           },
-          // https://docs.cadosecurity.com/cado-response/importing-data/filetypes
           {
             to: '/cado-response/discovery-import/import/data-types/filetypes',
             from: '/cado-response/importing-data/filetypes',
           },
-          // https://docs.cadosecurity.com/cado-response/integrations/tines
           {
             to: '/cado-response/manage/integrations/soar/tines',
             from: '/cado-response/integrations/tines',
           },
-          // https://docs.cadosecurity.com/cado-response/integrations/cortex-xsoar
           {
             to: '/cado-response/manage/integrations/soar/cortex-xsoar',
             from: '/cado-response/integrations/cortex-xsoar',
           },
-          // /cado-response/guides/azure-cross-tenancy-subscriptions
           {
             to: '/cado-response/deploy/azure/azure-cross-tenancy-subscriptions',
             from: '/cado-response/guides/azure-cross-tenancy-subscriptions',
           },
-
+          {
+            to: '/cado-response/manage/updating',
+            from: '/cado-response/guides/updating',
+          },
         ],
       },
     ],
