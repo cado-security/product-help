@@ -7,10 +7,14 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.2.0
+`Released  2022-09-16`
+- Improvements to identify date and timestamp on events, reducing the number of events with unknown timestamp
+
 ## v.2.1.1
 `Released  2022-09-12`
 - Hotfix for single sign on
-- Improved navigation and filtering for key events. Automated Investigation tab now shows 50 most relevant events. To recreate deprecated Key Events tab use search term `alarm_severity: [1 TO 3]`  
+- Improved navigation and filtering for key events. Automated Investigation tab now shows 50 most relevant events. To recreate deprecated Key Events tab use search term `alarm_severity: [1 TO 3]`
 
 ## v2.1
 `Released 2022-09-06`
