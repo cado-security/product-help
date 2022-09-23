@@ -102,6 +102,10 @@ const config = {
             to: '/cado-response/manage/updating',
             from: '/cado-response/guides/updating',
           },
+          {
+            to: '/cado-response/manage/logging-in',
+            from: '/cado-response/getting-started/logging-in',
+          },
         ],
       },
     ],
