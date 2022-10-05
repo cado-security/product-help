@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.5.0
+`Released  2022-09-16`
+- Cado Host now includes volatile data, presenting the collected process.json file as a graph of running processes
+- New icons and clearer presentation of the project and evidence graph
+- Improved auto-investigate algorithm, which better filters to only the most relevant events
+
 ## v.2.2.0
 `Released  2022-09-16`
 - Improvements to identify date and timestamp on events, reducing the number of events with unknown timestamp

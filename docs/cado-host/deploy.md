@@ -114,6 +114,7 @@ Usage:
       --response_project_id <id>        Project id in the Cado Response to import the evidence to, default is 1
       --presigned_data <data>           Presigned data used to upload data to the cloud provider
       -a, --additional_files <paths>    ADDITIONAL_FILES [ADDITIONAL_FILES ...]
+      --get_windows_memory              Enable windows memory collection - this will cause processing delays
 ```
 
 ### Example Command Line

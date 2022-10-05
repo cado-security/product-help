@@ -19,3 +19,11 @@ Clicking on a file takes you to the details for that file, inlcuding links to se
 This tab also shows any key events (alarms, suspicions) associated with this file.
 
 ![File Details 2](/img/file-details-2.png)
+
+For [running processes collected by Cado Host](/cado-host/artifacts.md#volatile-data) This tab also shows a diagram of information about running processes.
+
+![Process Data](/img/process-diagram.png)
+
+This data is also available in tabular form
+
+![Process Table](/img/processes-table.png)
