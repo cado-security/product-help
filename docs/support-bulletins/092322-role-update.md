@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # AWS Role Update
 
-On Sep 21st, 2022 AWS announced a change with immediate effect to AWS roles that affects the operation of the Cado platform. These new changes mean that **any Cado installation deployed after June 30th will no longer operate correctly**, including not being able to initialize new workers for data acquisition or processing.
+On Sep 21st, 2022 [AWS announced a change with immediate effect to AWS roles](https://aws.amazon.com/blogs/security/announcing-an-update-to-iam-role-trust-policy-behavior/) that affects the operation of the Cado platform. These new changes mean that **any Cado installation deployed after June 30th will no longer operate correctly**, including not being able to initialize new workers for data acquisition or processing.
  
 Installations deployed prior to June 30th will continue to function, and Cado plans to issue an update during the week commencing Sep 26th, 2022 that will fix the issue. In the meantime - if needed - there are manual steps you can take in order to ensure that your Cado platform continues to function properly. These are detailed below.
  
