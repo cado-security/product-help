@@ -58,6 +58,9 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
     | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the primary subnet. |
     | AvailabilityZoneB | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
     | FeatureFlagPlatformUpgrade | `True` | Enables the platform to perform native upgrades. |
+    | FeatureFlagDeployWithALB | `False` | Deploys the platform with an Application Load Balancer. If set to True CertificateARN MUST be populated |
+    | CertificateARN | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
+
     
     :::tip
      We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
@@ -113,7 +116,9 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
   | key_name | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
   | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
   | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
-  | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |  
+  | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
+  | feature_flag_deploy_with_alb | `False` | Deploys the platform with an Application Load Balancer. If set to True CertificateARN MUST be populated |
+  | certificate_arn | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
 6. You can then **[Log into Cado Response](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
