@@ -60,6 +60,12 @@ chmod +x ./cado-host
 ```
 :::
 
+:::warning
+Version 1.4.0 and later of Cado Host (deployed by 2.5.0 and later of Cado Response) default to a ARM (M1/M2) build of Cado Host when deployed to a MacOS system.
+To execute on an older x86 system, append -x86 to the end of the Cado Host URL in the deployment.
+I.e. https://cado-public.s3.amazonaws.com/cado-host/v1.4.1/osx/cado-host becomes https://cado-public.s3.amazonaws.com/cado-host/v1.4.1/osx/cado-host-x86
+We will be automating the selection of x86 vs ARM in a future release so this will no longer be required.
+:::
 
 ## Creating Secure Cloud Storage Credentials
 
