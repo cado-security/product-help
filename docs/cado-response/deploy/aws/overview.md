@@ -105,7 +105,7 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
 1. Download and unzip **cado_deploy_aws.zip**.
 2. Navigate to the **aws_combined** folder.
 3. Run `terraform init`
-4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=your_keyname_here" -var="ami_id=ami-xxx" -var="ssh_location=["""1.2.3.4/32"""]" -var="http_location=["""1.2.3.4/32"""]"`
+4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=second_oregon.pem" -var="ami_id=ami-08f75cb3e680edc28" -var="ssh_location=[\"8.8.8.8/32\"]" -var="http_location=[\"8.8.8.8/32\"]" -var="certificate_arn=" -var="feature_flag_deploy_with_alb=false"`
     1. PowerShell on Windows cannot correctly pass literal quotes to external programs, so we do not recommend using Terraform with PowerShell when you are on Windows. Use Windows Command Prompt instead.
 
 ### Parameters
