@@ -19,7 +19,7 @@ To set up Cado Response in Azure you can deploy via our Terraform script.  The T
 
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
 - a link to the Cado Response VHD image
-- the latest Cado Response Terraform module (**cado_deploy_azure.zip**) for deploying into Azure
+- the latest Cado Response Terraform module (**azure.zip**) for deploying into Azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 
