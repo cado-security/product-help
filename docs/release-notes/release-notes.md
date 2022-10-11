@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.6.0
+`Released 2022-10-11`
+- Ability to re-run IoCs and Yara rules on existing evidence item
+- Better display of zipped e0X files
+- Fix bug where old/bad task defs could stop workers from starting
+
 ## v.2.5.0
 `Released 2022-10-07`
 - Ability to perform triage collection EC2 instances using Cado Host 
