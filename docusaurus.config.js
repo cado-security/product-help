@@ -106,6 +106,10 @@ const config = {
             to: '/cado-response/manage/logging-in',
             from: '/cado-response/getting-started/logging-in',
           },
+          {
+            to: '/cado-response/intro',
+            from: '/docs/cado-host/intro',
+          },
         ],
       },
     ],
