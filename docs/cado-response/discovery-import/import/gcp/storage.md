@@ -18,7 +18,7 @@ While the project is open, select *GCP Storage*. Select the project you require,
 
 You can use the [GCP Console](https://console.cloud.google.com/) to upload data from your web browser if you have access to it.
 
-Alternatively, you can use oAuth [https://docs.cyberduck.io/protocols/google_cloud_storage/] with a Desktop GUI tool such as [https://cyberduck.io/](Cyberduck) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
+Alternatively, you can use [oAuth 2.0 Access](https://docs.cyberduck.io/protocols/google_cloud_storage/) with a Desktop GUI tool such as [Cyberduck](https://cyberduck.io/) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
 
 We reccomend scoping access by giving the associated role [write-only](https://stackoverflow.com/questions/57147765/gcp-write-only-access-to-bucket-gcs) access.
 

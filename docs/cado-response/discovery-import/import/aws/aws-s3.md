@@ -19,7 +19,7 @@ While the project is open, select *Import - Artifacts from S3*. Select or search
 
 You can use the [AWS Console](https://aws.amazon.com/) to upload data from your web browser if you have access to it.
 
-Alternatively, you can create an [https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/](AWS Access and Secret Key) then use a Desktop GUI tool such as [https://cyberduck.io/](Cyberduck) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
+Alternatively, you can create an [AWS Access and Secret Key](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/) then use a Desktop GUI tool such as [Cyberduck](https://cyberduck.io/) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
 
 If you create an Access/Secret for uploading data to S3, we reccomend you scope the access by:
 - Giving the associated role [write-only](https://stackoverflow.com/questions/15076645/amazon-s3-write-only-access) access to a single s3 bucket
