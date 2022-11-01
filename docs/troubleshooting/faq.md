@@ -8,7 +8,7 @@ sidebar_position: 1
 Solutions to some common questions can be found here.  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
 
 ### Which cloud providers does Cado Response support?
-AWS and Azure.
+Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado Response supports AWS as well as cross-cloud acquisitions from GCP and Azure.
 
 ### Does Cado Response support memory capture?
 Yes.  Amazon Linux, Amazon Ubuntu and Windows Systems are currently supported.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
