@@ -35,5 +35,5 @@ https://ec2example.compute.amazonaws.com
 ```
 
 ### API Documentation
-Please contact Support for API documentation and Sample code.
-
+From version 2.8.0 onwards you can view the Swagger docs for the API at /apidocs
+Please contact support@cadosecurity.com for any help using the API.

@@ -11,7 +11,7 @@ sidebar_position: 1
 `Released 2022-11-04`
 - Native integration with XDR solutions
 - Ability to view metadata about acquired AWS EC2 instances collected via *Alternate Triage Acquisition*
-- Ability to take action against compromised AWS EC2 instances (requires role update)
+- Ability to take action against compromised AWS EC2 instances collected via *Alternate Triage Acquistion*
 - Support for acquiring Azure activity logs
 - Cado host SSM improvements 
 - Allow Cado Host to collect only specified files
