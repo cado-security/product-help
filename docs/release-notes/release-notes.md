@@ -17,7 +17,7 @@ sidebar_position: 1
 - Allow Cado Host to collect only specified files
 - Fix bug where successful authentication raises an error
 - Various other bug fixes and improvements
-- *Note: In order to use `Use Alternate Triage Acquisition` in EC2 acquisition or 
+- *Note: In order to use `Use Alternate Triage Acquisition` in EC2 acquisition or take actions against a compromised asset role update will be required*
 
 ## v.2.6.0
 `Released 2022-10-11`
