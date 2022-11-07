@@ -10,8 +10,8 @@ sidebar_position: 1
 ## v2.7.0
 `Released 2022-11-04`
 - Native integration with XDR solutions
-- Ability to view metadata about acquired AWS EC2 instances
-- Ability to take action against compromised AWS EC2 instances (requires role update)
+- Ability to view metadata about acquired AWS (SSM Acquired) EC2 instances
+- Ability to take action against compromised AWS (SSM Acquired) EC2 instances (requires role update)
 - Support for acquiring Azure activity logs
 - Cado host SSM improvements 
 - Allow Cado Host to collect only specified files
