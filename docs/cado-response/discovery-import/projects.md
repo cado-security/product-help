@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 # Managing Projects
-Cado Response groups evidence items into projects.
+Cado groups evidence items into projects.
 
 ### Creating a Project
 To create a new Project:

@@ -30,7 +30,7 @@ You can browse the filesystem of certain evidence items. When browsing a **Disk*
 ### Searching
 The search interface allows you to search both file and event contents.
 
-Click **Investigate** then **Search** to open the search interface. Cado Response uses specialized indexing to provide fast searches across files and events. Due to the way this indexing works, you may get fewer results than if you performed a traditional slow byte by byte search of each file.
+Click **Investigate** then **Search** to open the search interface. Cado uses specialized indexing to provide fast searches across files and events. Due to the way this indexing works, you may get fewer results than if you performed a traditional slow byte by byte search of each file.
 
 ### Indicators / Detections
 The Indicators or Detections page provides a summary of indicators of compromise detected within a project, and which systems they matched.

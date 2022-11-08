@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 # Timeline Search
-Cado Response platform includes an advanced search interface which supports complex queries.
+The Cado platform includes an advanced search interface which supports complex queries.
 
 ### Basic Searches
 

@@ -6,15 +6,15 @@ sidebar_position: 1
 
 ## GCP Import Settings
 
-You can acquire compute and storage resources from GCP with Cado Response by configuring Cado Response with GCP credentials. The below guide walks through this process.
+You can acquire compute and storage resources from GCP with the Cado platform by configuring Cado with GCP credentials. The below guide walks through this process.
 
 ## Entering Settings
-You can add GCP Credentials to Cado Response in the **Settings > Cloud > GCP** page.
+You can add GCP Credentials to Cado in the **Settings > Cloud > GCP** page.
 You will be asked for a "GCP Project Name" and the "GCP Credentials".
 
 ## Getting GCP Credentials
 
-When you add credentials under Cado Response settings you are creating a mapping from a set of credentials (in GCP json format) to a project name.
+When you add credentials under Cado settings you are creating a mapping from a set of credentials (in GCP json format) to a project name.
 
 Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used. This keeps non-admin users from having to managing credentials themselves, while also alllowing access to as many different GCP projects as you want.
 
@@ -39,7 +39,7 @@ For example, a service account key might come in a structure such as the below. 
 
 #### Service Accounts
 
-The simplest method to add GCP credentials to Cado Response is to use a service account, which will give you a permanent key. Naturally these are very sensitive but they are easy to manage and simple to set up. Adding GCP credntials for service accounts is supported by Cado Response when deployed in both AWS and Azure.
+The simplest method to add GCP credentials to Cado is to use a service account, which will give you a permanent key. Naturally these are very sensitive but they are easy to manage and simple to set up. Adding GCP credntials for service accounts is supported by Cado when deployed in both AWS and Azure.
 
 For more see:
 * https://console.cloud.google.com/iam-admin/serviceaccounts
@@ -47,7 +47,7 @@ For more see:
 
 #### Workload Identity Federation
 
-The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado Response when deployed in AWS.
+The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
 
 Rather than give out the key to a service account, you instead register the permission with GCP to allow AWS credentials for account `123` to act as if they were the given GCP service account.
 

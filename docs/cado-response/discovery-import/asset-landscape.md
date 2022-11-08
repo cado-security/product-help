@@ -8,7 +8,7 @@ sidebar_position: 2
 
 **This feature is currently in beta - to enable this feature please reach out to Customer Support**
 
-Cado Response allows you to import metadata from your cloud estate in order to better prepare for incidents.
+The Cado platform allows you to import metadata from your cloud estate in order to better prepare for incidents.
 
 A Cloud Snapshot gives you basic information about systems that are running in your environment. To perform a Cloud Snapshot, enter the AWS Account IDs of the accounts that you want to discover. You can supply a comma delimited list, or for a long lost you can upload a CSV of account IDs.
 

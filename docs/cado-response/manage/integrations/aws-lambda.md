@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Overview
 
-Cado Response can integrate with other AWS Services through AWS Lambda. 
+The Cado platform can integrate with other AWS Services through AWS Lambda. 
 
 ![AwsLambda](/img/GuardDuty_AWS_Lambda.png)
 

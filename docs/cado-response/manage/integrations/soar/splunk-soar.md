@@ -6,13 +6,13 @@ sidebar_position: 5
 
 # Splunk SOAR Integration
 
-Splunk SOAR is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk SOAR platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado Response.
+Splunk SOAR is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk SOAR platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado.
 
 ## Getting Started
  
-Before getting started, please see the **[Integrations Overview >](../api-overview.md)** page for general instructions on setting up the Cado Response platform for integration with third-party tools.
+Before getting started, please see the **[Integrations Overview >](../api-overview.md)** page for general instructions on setting up the Cado platform for integration with third-party tools.
 
-Below are the instructions for setting up the Cado Response and Splunk SOAR integration:
+Below are the instructions for setting up the Cado and Splunk SOAR integration:
 
 1. **[Create an API Access Key](#create-an-api-access-key)**
 2. **[Install and configure the Cado Response app in Splunk SOAR](#install-and-configure-the-cado-response-app)**
@@ -22,10 +22,10 @@ Below are the instructions for setting up the Cado Response and Splunk SOAR inte
 
 ### Create an API Access Key
 
-In order to allow third-party services to authenticate and interact with a Cado Response instance, you will need to **[Create an API Access Key](../api-overview.md#creating-and-storing-an-api-access-key)** for use within Splunk SOAR.
+In order to allow third-party services to authenticate and interact with a Cado instance, you will need to **[Create an API Access Key](../api-overview.md#creating-and-storing-an-api-access-key)** for use within Splunk SOAR.
 
 :::tip
-In addition to the API Access Key, please ensure that the Splunk SOAR platform has access (network, firewall, etc) to make API calls to the Cado Response platform.
+In addition to the API Access Key, please ensure that the Splunk SOAR platform has access (network, firewall, etc) to make API calls to the Cado platform.
 :::
 
 ### Install and Configure the Cado Response App
@@ -33,7 +33,7 @@ In addition to the API Access Key, please ensure that the Splunk SOAR platform h
 In order to install and configure the Cado Response Splunk SOAR App, you will need the below information:
 
 - The latest version of the Cado Response Splunk SOAR App Add-on from the [**Splunkbase Marketplace**](https://splunkbase.splunk.com/app/6181/)
-- The URL to Cado Response, followed by `/api/v2`
+- The URL to Cado, followed by `/api/v2`
 - The API Access Key
 
 To install the Cado Response App, from within Splunk SOAR, navigate to **Apps** and click the **INSTALL APP** button in the top right of the page, then upload the Cado Response tarball and click **INSTALL**.
@@ -42,7 +42,7 @@ If you have successfully installed the Cado Response App you will see it appear 
 1. Click **CONFIGURE NEW ASSET** on the Cado Response App. 
 2. Fill in the Asset Info fields with a name and description. 
 3. Navigate to Asset Settings 
-4. input your URL for the Cado Response platform
+4. input your URL for the Cado platform
 5. input your **Access token** you generated earlier. 
 6. Click **SAVE** and **TEST CONNECTIVITY**. 
 
@@ -50,23 +50,23 @@ If all is successful, you should see a `Test Connectivity Passed` message.
 
 #### Configuration Variables
 
-The below configuration variables are required to operate Cado Response via the Splunk SOAR App. These are specified when configuring an asset in Splunk SOAR.
+The below configuration variables are required to operate Cado via the Splunk SOAR App. These are specified when configuring an asset in Splunk SOAR.
 
 | VARIABLE | REQUIRED | TYPE | DESCRIPTION |
 | -------- | -------- | ---- | ----------- |
-| base_url | required | string | URL for the Cado Response Platform e.g. `https://cadoresponseurl/api/v2` |
+| base_url | required | string | URL for the Cado Platform e.g. `https://cadoresponseurl/api/v2` |
 | access_token | required | password | Access token |
-| default_project | optional | numeric | A project ID in Cado Response that can be used if a project ID is not specified in an action. |
-| default_bucket | optional | string | A default bucket in Cado Response |
+| default_project | optional | numeric | A project ID in Cado that can be used if a project ID is not specified in an action. |
+| default_bucket | optional | string | A default bucket in Cado |
 | default_region | optional | string | AWS region, e.g. us-east-1, that can be used if a region is not specified in an action. |
 
 When running Actions, if the above inputs are required, they would be entered automatically into the response fields, but you are still able to replace them if you wish to use different values.
 
 ### Test your connection
 
-When Cado Response is configured, you can validate your connection to make sure everything is set up correctly.
+When Cado is configured, you can validate your connection to make sure everything is set up correctly.
 
-Navigate to **Home -> Apps -> Cado Response Asset -> Asset Settings**. If you haven't already, Edit and enter the Cado Response URL and Secret Key. Save and Test Connectivity to ensure everything is connected as expected.
+Navigate to **Home -> Apps -> Cado Response Asset -> Asset Settings**. If you haven't already, Edit and enter the Cado URL and Secret Key. Save and Test Connectivity to ensure everything is connected as expected.
 
 If the following was successful, then you have correctly setup Splunk SOAR to interact with the Cado Response API.
 

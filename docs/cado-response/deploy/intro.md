@@ -3,9 +3,9 @@ title: Deployment Options
 hide_title: true
 sidebar_position: 1
 ---
-# Cado Response Deployment Options
+# Cado Platform Deployment Options
 
-Cado Response can be deployed in either AWS or Azure.
+The Cado platform can be deployed in either AWS or Azure.
 
 **[Learn how in AWS >](aws/overview.md)**
 
@@ -13,7 +13,7 @@ Cado Response can be deployed in either AWS or Azure.
 
 ## Cross Cloud Collection
 
-When you deploy Cado in AWS you can import data "cross-cloud" from Azure or GCP. **Cross cloud** means that Cado Response is deployed in one cloud environment, but imports data from another.
+When you deploy Cado in AWS you can import data "cross-cloud" from Azure or GCP. **Cross cloud** means that Cado is deployed in one cloud environment, but imports data from another.
 
 ![Cross Cloud Collection](/img/cross-cloud.png)
 
@@ -21,7 +21,7 @@ When you deploy Cado in AWS you can import data "cross-cloud" from Azure or GCP.
 
 **[Learn how to set up cross cloud collection from GCP>](gcp/gcp-settings.md)**
 
-## Tagging Cado Response Resources
+## Tagging Cado Resources
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched. If you wish to apply more than one tag to workers, please see the below options.
 
 #### Terraform
