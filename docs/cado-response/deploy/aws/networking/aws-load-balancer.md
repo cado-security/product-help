@@ -6,7 +6,7 @@ sidebar_position: 1
 
 
 # How to Add a Load Balancer in AWS
-An Application Load Balancer can be placed in front of the Cado Response web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the provided Terraform or Cloudformation deployment scripts. Cado Response currently doesn’t scale across multiple Availability Zones so this doesn’t provide redundancy- but this will be added in the future.
+An Application Load Balancer can be placed in front of the Cado web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the provided Terraform or Cloudformation deployment scripts. Cado currently doesn’t scale across multiple Availability Zones so this doesn’t provide redundancy- but this will be added in the future.
 
 ![AWS Load Balancer 1](/img/aws-lb-1.png)
 
@@ -21,7 +21,7 @@ If you are using your own domain name, you will then need to point your custom d
 * Name: `cado-alb`
 * Target: `cado-alb-test.us-east-1.elb.amazonaws.com`
 
-You should then be able to visit the domain in your browser and login to Cado Response.
+You should then be able to visit the domain in your browser and login to Cado.
 
 ## (Optional) Adding a Web Application Firewall to your Load Balancer
 You can also add a WAF by:
@@ -33,5 +33,5 @@ You can also add a WAF by:
 ## Troubleshooting the Load Balancer
 If your ALB shows a status as unhealthy, check that you have selected 443 (not 80) as the port and HTTPS (not HTTP) as the protocol in all instances.
 
-If the Connection Times Out or you get the error “504 Gateway Timeout”, check that Security Group on both the load balancer and the Cado Response server allow traffic from Cado Response to the ALB to the User. Also select the Target Group, and check that under **Registered targets** the Instance is listed.
+If the Connection Times Out or you get the error “504 Gateway Timeout”, check that Security Group on both the load balancer and the Cado server allow traffic from Cado to the ALB to the User. Also select the Target Group, and check that under **Registered targets** the Instance is listed.
 

@@ -24,19 +24,19 @@ export const Highlight = ({children, color}) => (
 *This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilites and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.  For a list of supported AWS regions, please see our Markteplace listing: https://aws.amazon.com/marketplace/pp/prodview-2ol4yojhc5vpa?ref_=srh_res_product_title *
 :::
 
-Deployment of Cado Response is performed within your AWS cloud environment either via a CloudFormation Template, a Terraform Script or via the AWS Marketplace. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
+Deployment of the Cado platform is performed within your AWS cloud environment either via a CloudFormation Template, a Terraform Script or via the AWS Marketplace. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
 
 By default AWS will limit the number of CPUs that can run in a region to 32. We recommend raising this limit to 128 CPU's to enable fast processing. You can do so by filling out [this form](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html#vcpu-limits-request-increase) and requesting 128 vCPU for "Running On-Demand All Standard" instances.
 
-Cado Response consists of a few key components that interact with each other in order to provide the capabilities within the platform.   
+Cado consists of a few key components that interact with each other in order to provide the capabilities within the platform.   
 ![AWS architecture](/img/aws-architecture.png)
 
 
 ## AWS CloudFormation Template
 
-To set up Cado Response in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
+To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
 
-1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado Response CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.  Once you receive the link to the Cado Response CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
+1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.  Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
 
 2. On Step 1 (Specify template), do not change the default **Template is ready** and **Amazon S3 URL** settings.   Click **<Highlight color="#F78631">Next</Highlight>**
 
@@ -46,8 +46,8 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
 
     | Parameter Name | Value | Description |
     | -------------- | ----- | ----------- |
-    | Instance type for Cado Response EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
-    | Key pair for Cado Response EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
+    | Instance type for Cado EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
+    | Key pair for Cado EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
     | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
     | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
     | VPC CIDR | *(enter ip range)* | The Subnet the Cado VPC will use. Specify the IPv4 address range as a Classless Inter-Domain Routing (CIDR) block. |
@@ -81,18 +81,18 @@ To set up Cado Response in AWS you simply deploy our CloudFormation Template (CF
 7. Review the details that have been applied and click **<Highlight color="#F78631">Create Stack</Highlight>**
 
     :::info
-    The Cado Response IAM policy defines which resources are accessible and which actions are allowed by the Cado Response software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado Response platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado Response, can be found within the Cloudformation Template json file.
+    The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template json file.
     :::
 
 ### Deployment Time
 
 Deploying the CloudFormation stack will take approximately fifteen minutes, followed by another ten minutes for the completed stack to run an installation and update process.
 
-When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finished creating the infrastructure for Cado Response.
+When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finished creating the infrastructure for Cado.
 
 ![Creation Complete](/img/create-complete.png)
 
-You can then **[Log into Cado Response](../../manage/logging-in.md)** 
+You can then **[Log into Cado](../../manage/logging-in.md)** 
 
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
@@ -112,16 +112,16 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
 
   | Parameter Name | Value | Description |
   | -------------- | ----- | ----------- |
-  | region | *(choose AWS region)* | AWS Region to deploy Cado Response platform in, e.g. `us-east-1` |
-  | key_name | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado Response instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
-  | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado Response. |
+  | region | *(choose AWS region)* | AWS Region to deploy the Cado platform in, e.g. `us-east-1` |
+  | key_name | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
+  | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado. |
   | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
   | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
   | feature_flag_deploy_with_alb | `False` | Deploys the platform with an Application Load Balancer. If set to True CertificateARN MUST be populated |
   | certificate_arn | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
-6. You can then **[Log into Cado Response](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado Response platform.  You'll be asked to change your password after first login.
+6. You can then **[Log into Cado](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado platform.  You'll be asked to change your password after first login.
 7. Lastly, you will need to import a license JSON file.
 
 ### Supported Regions

@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # AWS ECS Support
 
-Cado Response will collect key logs and forensic artifacts from AWS ECS systems.
+The Cado platform will collect key logs and forensic artifacts from AWS ECS systems.
 
 ## ECS Import Requirements
 
@@ -39,7 +39,7 @@ Then select the target Cluster and Task:
 
 Then click Acquire Container.
 
-Cado Response will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
+Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
 
 ![Import ECS 3](/img/ecs_3.png)
 

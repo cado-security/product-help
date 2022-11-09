@@ -17,17 +17,17 @@ export const Highlight = ({children, color}) => (
 );
 
 # Cross Account Access Creation
-AWS resources in other accounts can be made accessible to Cado Response via AWS roles.  For example, if you have 100 accounts, you can grant Cado Response access to all 100 accounts which will allow the platform to acquire, process and analyze evidence across multiple accounts.
+AWS resources in other accounts can be made accessible to the Cado platform via AWS roles.  For example, if you have 100 accounts, you can grant Cado access to all 100 accounts which will allow the platform to acquire, process and analyze evidence across multiple accounts.
 
 ### High-Level Summary
-The below examples will outline how to grant permission for Cado Response to access a single secondary account, however this same process can be used for as many additional accounts as needed.
+The below examples will outline how to grant permission for Cado to access a single secondary account, however this same process can be used for as many additional accounts as needed.
 
 In this guide we will create:
 1. An **IAM role** in your secondary account, where you will acquire evidence from, with a trust relationship to your primary account. 
-2. An **IAM policy** in your primary account where Cado Response is deployed.
+2. An **IAM policy** in your primary account where Cado is deployed.
 
 
-The instructions below will allow cross-account access from account `111111111111` (the primary account where Cado Response is deployed) to a secondary account `22222222222` (where you will be acquiring evidence from).
+The instructions below will allow cross-account access from account `111111111111` (the primary account where Cado is deployed) to a secondary account `22222222222` (where you will be acquiring evidence from).
 
 ### Prepare Secondary Account
 
@@ -35,7 +35,7 @@ The instructions below will allow cross-account access from account `11111111111
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach the Cado Response Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again. (If Cado Response is deployed in AWS GovCloud use the policy [located here](https://gov-updates.s3-us-gov-east-1.amazonaws.com/policy-in-cross-account-govcloud.json) instead.)
+- Click **Next**, and in the permissions wizard attach the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again. (If Cado is deployed in AWS GovCloud use the policy [located here](https://gov-updates.s3-us-gov-east-1.amazonaws.com/policy-in-cross-account-govcloud.json) instead.)
 
 - Click through to review and give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example).
 
@@ -45,7 +45,7 @@ If the secondary account role name does not contain the text `CadoResponse` (cas
 
 
 :::info
-The Cado Response Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
+The Cado Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
 * The EC2 permissions are required are acquire EC2 systems.
 * The KMS permissions are required to acquire KMS encrypted volumes.
 * The SSM permissions are required for Memory Forensics.
@@ -56,7 +56,7 @@ The Cado Response Cross-Account Policy includes permissions to acquire a variety
 :::
 
 :::info
-If you choose to change **Maximum session duration**, the minimum currently supported by Cado Response is 1 hour.
+If you choose to change **Maximum session duration**, the minimum currently supported by Cado is 1 hour.
 :::
 
 :::info
@@ -115,11 +115,11 @@ IAM Policies are limited to 6,144 characters, so if the number of secondary acco
 :::
 
 :::info
-Wildcards here will not be valid to Cado Response, roles must be listed in full.
+Wildcards here will not be valid to Cado, roles must be listed in full.
 :::
 
 :::info
-If you created multiple cross account policies in your primary account (to circumvent IAM policy character limits) and your platform was deployed before **version 1.5.1** you will need to adjust the IAM Role for the Cado Response platform. 
+If you created multiple cross account policies in your primary account (to circumvent IAM policy character limits) and your platform was deployed before **version 1.5.1** you will need to adjust the IAM Role for the Cado platform. 
 
 Ensure that the `myCadoResponseRole` inline policy attached to the platform's IAM Role contains:
 
@@ -141,8 +141,8 @@ Ensure that the `myCadoResponseRole` inline policy attached to the platform's IA
 
 If you use Terraform, you can see an example of how to automatically add the cross-account policy to new accounts at https://github.com/cado-security/cado-terraform-role-example
 
-If you want to process data sources such as EC2 from one account into another, Cado Response requires cross account access via IAM. 
-- You only need to install Cado Response into a single region in a single account. 
+If you want to process data sources such as EC2 from one account into another, Cado requires cross account access via IAM. 
+- You only need to install Cado into a single region in a single account. 
 - You can then use CloudFormation StackSets to easily deploy the required IAM Role into all of your accounts across your AWS organisation.
 - More details about CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
 
@@ -166,4 +166,4 @@ Once deployed, this will then create a role in each target account, that you can
 
 ![Stacks5](/img/stacks5.png)
 
-You will then need to add the list of roles that were created in each account to the "AssumeRole" section of the primary Cado Response role that is created at installation time. Cado Response uses the list of trusted roles in other accounts to populate the cross-account options shown to a user.  See the section **[Prepare Primary Account](#prepare-primary-account)** for more details.
+You will then need to add the list of roles that were created in each account to the "AssumeRole" section of the primary Cado role that is created at installation time. Cado uses the list of trusted roles in other accounts to populate the cross-account options shown to a user.  See the section **[Prepare Primary Account](#prepare-primary-account)** for more details.

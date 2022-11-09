@@ -5,10 +5,10 @@ sidebar_position: 2
 ---
 
 # Licensing
-In order to use Cado Response, you must upload a valid license.  
+In order to use the Cado platform, you must upload a valid license.  
 
 If you have received a license file from your Sales representative, you can upload it by:
-- Logging into your Cado Response instance
+- Logging into your Cado instance
 - Navigate to **Settings**
 - Click the **License** tab
 - Click **Select file**, choose the new license file 

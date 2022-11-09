@@ -63,7 +63,7 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - Xchat and Xchat scroll back files
 - Zsh history files
 
-Cado Response can also import a number of other log formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a log format that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
+Cado can also import a number of other log formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a log format that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
 
 # Adding Your Own Events
 
@@ -81,6 +81,6 @@ For example you can save the following text into a file named "custom_events.log
 
 Which will result in events such as the following:
 
-![Custom logs imported into Cado Response](/img/custom_log.png)
+![Custom logs imported into Cado](/img/custom_log.png)
 
 

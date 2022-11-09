@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # AWS Lambda
 
-Cado Response can acquire AWS Lambda functions which are serverless computing services.
+The Cado platform can acquire AWS Lambda functions which are serverless computing services.
 
 ## Importing
 
@@ -27,6 +27,6 @@ Once processing has finished the events will be added to the timeline and the La
 
 ![Lambda Function Code](/img/aws-lambda-code.png)
 
-Lambda automatically integrates with CloudWatch Logs and pushes all logs from your code to a CloudWatch Logs group associated with a Lambda function. Cado Response captures these logs and adds them to your timeline, so you can view any logging statements made by the function.
+Lambda automatically integrates with CloudWatch Logs and pushes all logs from your code to a CloudWatch Logs group associated with a Lambda function. Cado  captures these logs and adds them to your timeline, so you can view any logging statements made by the function.
 
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)

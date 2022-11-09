@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 # Managing Users
-There are two roles in Cado Response. 
+There are two roles in the Cado platform. 
 
 | Name | Description |
 | ---- | ----------- |
@@ -19,7 +19,7 @@ To add a new user:
 - Click the **Add Users** button
 
 ### Configuring Single Sign On (SSO)
-Cado Response also supports authentication via [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)) and [PingID](sso/ping_saml.md). When you configure SSO access, the Cado Response Platform will automatically create the user at first login.
+Cado also supports authentication via [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)) and [PingID](sso/ping_saml.md). When you configure SSO access, the Cado platform will automatically create the user at first login.
 
 ### Granting Administrator Access
 To elevate privileges and grant Administrator access to a normal user, do the following:

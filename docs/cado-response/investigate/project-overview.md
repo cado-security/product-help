@@ -6,8 +6,8 @@ sidebar_position: 2
 
 # Project Overview
 The Project Overview lets you understand:
-* what data has been processed within Cado Response
-* what are the high level results of the analysis within Cado Response
+* what data has been processed within Cado
+* what are the high level results of the analysis within Cado
 
 ## Project Visualization
 The Project Visualization depicts - in a graph format - an overview of the most critical alarms and suspicions, the files and users associated with them, and the links between them. This allows an investigator to quickly hone in on the likely root cause of the issue.

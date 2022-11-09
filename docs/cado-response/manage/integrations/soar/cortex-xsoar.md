@@ -6,7 +6,7 @@ sidebar_position: 6
 
 # XSOAR
 
-Cortex XSOAR is a powerful Security Orchestration, Automation, and Response (SOAR) system. XSOAR allows SoC teams to organize cases, incidents and automate investigation rapidly using a central War Room for collaboration. By integrating Cado Response with XSOAR, you're going to increase efficiency and productive by automating Cado Response's powerful data acquisition and processing.
+Cortex XSOAR is a powerful Security Orchestration, Automation, and Response (SOAR) system. XSOAR allows SoC teams to organize cases, incidents and automate investigation rapidly using a central War Room for collaboration. By integrating Cado with XSOAR, you're going to increase efficiency and productive by automating Cado's powerful data acquisition and processing.
 
 :::tip
 If you're confused by the terminology mentioned here, or have never used XSOAR before, please consider checking out the [XSOAR documentation](https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-tutorials.html).
@@ -14,7 +14,7 @@ If you're confused by the terminology mentioned here, or have never used XSOAR b
 
 ## Getting Started with XSOAR
 
-Before properly getting started please see the following for general instructions on setting up the Cado Response platform for integrating with third-party tools:
+Before properly getting started please see the following for general instructions on setting up the Cado platform for integrating with third-party tools:
 
 **[Integrations Overview >](../api-overview.md)**
 
@@ -28,13 +28,13 @@ Before properly getting started please see the following for general instruction
 
 In your Cortex XSOAR instance, click on the **Marketplace** section in the left-hand sidebar and search for `Cado Response` in the search bar.
 
-![Cado Response in the XSOAR marketplace](/img/xsoar-market.png)
+![Cado in the XSOAR marketplace](/img/xsoar-market.png)
 
 ### Setup
 
-When configuring the Cado Response integration (which should open up when you install the application), you'll see the following screen to configure the XSOAR application:
+When configuring the Cado integration (which should open up when you install the application), you'll see the following screen to configure the XSOAR application:
 
-![Cado Response XSOAR Setup Wizard](/img/xsoar-wizard.png)
+![Cado XSOAR Setup Wizard](/img/xsoar-wizard.png)
 
 In this screen, you'll need to setup the following:
 
@@ -42,9 +42,9 @@ In this screen, you'll need to setup the following:
   
   This will be the name of the Application as it shows in XSOAR. If you're unsure, it's best to leave as default.
 
-- **The URL of your Cado Response instance**:
+- **The URL of your Cado instance**:
 
-  This will the URL of your deployed Cado Response instance, if you're unsure, please see **[Integrations Overview >](../api-overview.md)**
+  This will the URL of your deployed Cado instance, if you're unsure, please see **[Integrations Overview >](../api-overview.md)**
 
 - **The API key you retrieved from your platform**:
 
@@ -52,7 +52,7 @@ In this screen, you'll need to setup the following:
 
 - **The default Project ID**
 
-  Provides a fallback Project ID from Cado Response if you forget to add an ID to a command. If you're not sure, don't change! _Defaults to 1_.
+  Provides a fallback Project ID from Cado if you forget to add an ID to a command. If you're not sure, don't change! _Defaults to 1_.
 
 - **The default AWS Region**
 
@@ -238,7 +238,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ### List Project Pipelines
 
 - Command: `cado-get-pipeline`
-- Description: This command will allow you to list all the pipelines, or a single pipeline, for a given project in Cado Response.
+- Description: This command will allow you to list all the pipelines, or a single pipeline, for a given project in Cado.
 
 #### Arguments
 
@@ -313,7 +313,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ### Create a Project
 
 - Command: `cado-create-project`
-- Description: This command will allow you to create a new project in Cado Response.
+- Description: This command will allow you to create a new project in Cado.
 
 #### Arguments
 
@@ -352,7 +352,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ### Acquire a Disk Image From EC2
 
 - Command: `cado-trigger-ec2`
-- Description: This command will trigger a disk image acquisition task in Cado Response for a specified EC2 instance.
+- Description: This command will trigger a disk image acquisition task in Cado for a specified EC2 instance.
 
 #### Arguments
 
@@ -420,7 +420,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ### Acquire a Disk Image From S3
 
 - Command: `cado-trigger-s3`
-- Description: This command will trigger a disk image acquisition task in Cado Response from a file in a S3 Bucket.
+- Description: This command will trigger a disk image acquisition task in Cado from a file in a S3 Bucket.
 
 #### Arguments
 

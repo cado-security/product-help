@@ -11,15 +11,15 @@ sidebar_position: 1
 *This information is written for proficient Azure cloud administrators who are familiar with Azure technology and cloud operations. This manual assumes familiarity with MS Azure, including: Subscriptions,  Resource Groups, Virtual Machines, Storage Accounts, and Storage Containers.*
 :::
 
-Deployment of Cado Response is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
+Deployment of the Cado platform is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
 
 ## Azure Terraform Script
 
-To set up Cado Response in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
+To set up Cado in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
-- a link to the Cado Response VHD image
-- the latest Cado Response Terraform module (**azure.zip**) for deploying into Azure
+- a link to the Cado VHD image
+- the latest Cado Terraform module (**azure.zip**) for deploying into Azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 
@@ -27,7 +27,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
 2. **[Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)**, if you have not already.
 
-3. Run 'az login'. The account you log in with will be used to deploy.  You should store the Cado Response VHD in your local Azure container for this account as well.
+3. Run 'az login'. The account you log in with will be used to deploy.  You should store the Cado VHD in your local Azure container for this account as well.
 
     :::tip
     If you have multiple Subscriptions, please ensure you set the Subscription properly prior to beginning the deployment, as outlined here:  
@@ -42,7 +42,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     - Storage Queue Data Reader
     :::
 
-4. Create a storage account and container to stage the Cado Response VHD locally within your Azure tenancy.  This will be from where the platform will be deployed.  You must copy the image to the same region in which you want to deploy Cado Response.  You can complete these steps using the Azure portal or the Azure CLI
+4. Create a storage account and container to stage the Cado VHD locally within your Azure tenancy.  This will be from where the platform will be deployed.  You must copy the image to the same region in which you want to deploy Cado.  You can complete these steps using the Azure portal or the Azure CLI
 
     a. **Create a resource group**, if you do not have one already, for the local download of the VHD using the Azure portal or the Azure CLI as shown below.  Note this needs to be less than 6 characters in length:
     ```console
@@ -101,15 +101,15 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
-    | `image_id` | Cado Response VHD blobstore URL.  This is the URL to the *cado_response.vhd* blob within your container storage (created in Step 4c above) . It is in the format: `https:// <StorageAccountName>.blob.core.windows.net/ <ContainerName>/ cado_response.vhd` and can be found within your Azure Portal by navigating to "Home > Storage accounts", selecting the *StorageAccountName*, clicking "Storage browser (preview)", clicking the *ContainerName*, clicking the "cado_response.vhd" blob and viewing the "URL" value. | `https:// mycadostorage.blob.core.windows.net/ cadocontainer/cado_response.vhd` |
+    | `image_id` | Cado VHD blobstore URL.  This is the URL to the *cado_response.vhd* blob within your container storage (created in Step 4c above) . It is in the format: `https:// <StorageAccountName>.blob.core.windows.net/ <ContainerName>/ cado_response.vhd` and can be found within your Azure Portal by navigating to "Home > Storage accounts", selecting the *StorageAccountName*, clicking "Storage browser (preview)", clicking the *ContainerName*, clicking the "cado_response.vhd" blob and viewing the "URL" value. | `https:// mycadostorage.blob.core.windows.net/ cadocontainer/cado_response.vhd` |
     | `ip_pattern_https` | List of incoming IPs permitted to access HTTPS. CIDR or source IP range or * to match any IP.  At least one value is required. | `["1.2.3.4/32","1.2.3.5/32"]`|
     | `ip_pattern_all` | List of incoming IPs permitted to access HTTPS and SSH. CIDR or source IP range or * to match any IP. At least one value is required. This should be the CIDR of the machine that is running the Terraform deployment script. | `["1.2.3.6/32"]`  |
     | `instance_type` | Instance type to use for main | Recommended to use `Standard_D16ds_v4`  If you have questions on instance sizing, please contact support for guidance. |
     | `resource_group` | Resource group name which will be created.  This resource group name must not exist already | `resgroup123` |
     | `region` | Region to deploy in.  You can use the Display Name or Name of the region as shown when running `az account list-locations -o table` | `North Europe`, `northeurope`, `East US`, `eastus` |
-    | `share_size` | Size of network file share | `500` This value is depenedent on the amount of data you will be processing into the Cado Response platform.  Please speak with the sales or support team for proper sizing. |
+    | `share_size` | Size of network file share | `500` This value is depenedent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
     | `main_size` | Size of main instance local disk in GB | `30` *Do not change* |
-    | `main_data_size` | Size of main instance local disk in GB | `500` This value is depenedent on the amount of data you will be processing into the Cado Response platform.  Please speak with the sales or support team for proper sizing. |
+    | `main_data_size` | Size of main instance local disk in GB | `500` This value is depenedent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
     | `processing_mode` | Processing mode to start in | `scalable-vm` *Do not change* |
     | `ssh_key_public` | Path to SSH public key | `../keys/azure_demo_key.pub` |
     | `ssh_key_private` | Path to SSH private key | `../keys/azure_demo_key` |
@@ -134,14 +134,14 @@ module.cado_scalable.azurerm_linux_virtual_machine.vm: Creation complete after 1
 
 The Resource ID can also be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
 
-It will take about 20 minutes to deploy, then you can **[Log into Cado Response](../../manage/logging-in)** 
+It will take about 20 minutes to deploy, then you can **[Log into Cado](../../manage/logging-in)** 
 
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
 :::caution
-When deploying, the main Cado Response instance will have the name `CadoResponse`.  If you rename your Cado Response instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
+When deploying, the main Cado instance will have the name `CadoResponse`.  If you rename your Cado instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
 :::
 
 

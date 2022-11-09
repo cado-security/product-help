@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 # File Types
-Cado Response supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
+The Cado platform supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
 ### AWS Capture Formats
 - EC2
@@ -21,7 +21,7 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - Kubernetes Disks
 
 ### Storage Formats
-In addition to native capture support for machines and data running/stored in the cloud, Cado Response also supports processing of the following local evidence formats.  
+In addition to native capture support for machines and data running/stored in the cloud, Cado also supports processing of the following local evidence formats.  
 
 #### Storage Media
 - .E01, and split E01
@@ -56,4 +56,4 @@ If you import a zip, it will be treated as a container of files **unless** it is
 - XFS version 4, 5
 - Apple File System (APFS) 
 
-Cado Response can also import a number of other disk image and file formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a filetype that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
+Cado can also import a number of other disk image and file formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a filetype that you would like to see supported, please reach out to support@cadosecurity.com and let us know.

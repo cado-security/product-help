@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Overview
 
-Cado Response automates the acquisition of cloud systems with zero impact. When combined with a malware analysis platform, like SophosLabs Intelix, security analysts can submit files for analysis and use malware findings as an investigation pivot point. 
+The Cado platform automates the acquisition of cloud systems with zero impact. When combined with a malware analysis platform, like SophosLabs Intelix, security analysts can submit files for analysis and use malware findings as an investigation pivot point. 
 
 
 ![Intelix](/img/intelix_screenshot.png)
@@ -14,7 +14,7 @@ Cado Response automates the acquisition of cloud systems with zero impact. When 
 
 ### Setup
 
-Add the credentials to the Cado Response Platform in the SophosLabs Intelix Integration settings page:
+Add the credentials to the Cado Platform in the SophosLabs Intelix Integration settings page:
 
 ![Setup](/img/intelix_setup.png)
 

@@ -8,13 +8,13 @@ sidebar_position: 1
 # AWS Backups and Recovery
 
 ### Backup and Recovery
-This section explains how to recover or migrate Cado Response to a new instance.
+This section explains how to recover or migrate the Cado platform to a new instance.
 
-Cado Response also backs up any imports to S3 which can then be re-imported later to a fresh instance, but you will need to restore the data volume if you want to recover user settings such as user logins.
+Cado also backs up any imports to S3 which can then be re-imported later to a fresh instance, but you will need to restore the data volume if you want to recover user settings such as user logins.
 
-If a Cado Response instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
+If a Cado instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
 
-You can also use this approach to migrate Cado Response to a new availability zone or region.
+You can also use this approach to migrate Cado to a new availability zone or region.
 
 #### Scheduling Automated Backups of the Data Volume
 Amazon EBS Snapshots are stored by AWS in Amazon S3, where it is stored redundantly in multiple Availability Zones.
@@ -28,7 +28,7 @@ You can create an **[EventBridge](https://us-west-2.console.aws.amazon.com/event
 For more, see **[this tutorial](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-snapshot.html)** from AWS.
 
 #### Restoring the Data Volume 
-To perform a migration or restoration to a new instance, deploy a Cado Response installation and Stop the Cado Response EC2 Installation.
+To perform a migration or restoration to a new instance, deploy a Cado installation and Stop the Cado EC2 Installation.
 
 The operating system volume will be smaller (typically 10 GB). Detach the larger Data Volume (`/dev/sdh` seen below):
 
@@ -36,7 +36,7 @@ The operating system volume will be smaller (typically 10 GB). Detach the larger
 
 ![AWS Backup 4](/img/aws-backup-4.png)
 
-Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)** the Snapshot backup of your old Cado Response installation to a Volume in the same availability zone as your new Cado EC2 Instance.
+Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)** the Snapshot backup of your old Cado installation to a Volume in the same availability zone as your new Cado EC2 Instance.
 
 ![AWS Backup 5](/img/aws-backup-5.png)
 

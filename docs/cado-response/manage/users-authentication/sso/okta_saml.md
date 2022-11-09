@@ -10,7 +10,7 @@ sidebar_position: 3
 Okta SAML integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
-You can now enable the beta of Okta SAML Integration in Cado Response by going to `Settings > SSO > Okta SAML`.
+You can now enable the beta of Okta SAML Integration in the Cado platform by going to `Settings > SSO > Okta SAML`.
 
 ### Setting up Okta SSO
 1. Open the Okta admin dashboard and navigate to `Applications > Applications`
@@ -41,12 +41,12 @@ You can now enable the beta of Okta SAML Integration in Cado Response by going t
 	- Go to the  **Assignments** tab of the SAML application and select **Limit access to selected groups**
 	- Add a user group
 	- This can also be done at a later stage
-	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado Response when logging in
+	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado when logging in
 
 	![Okta Assignments](/img/okta-assignments.png)
 
 :::tip
-If you are looking to assign non-admin users within Cado Response, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within Cado Response.
+If you are looking to assign non-admin users within Cado, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within the Cado platform.
 :::
 
 13. Go to the **Sign On** tab of the SAML application, navigate down to **SAML Setup** and click **View SAML setup instructions**. Keep this page to hand; you'll need it shortly

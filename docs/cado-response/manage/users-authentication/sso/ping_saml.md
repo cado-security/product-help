@@ -10,7 +10,7 @@ sidebar_position: 4
 Ping SAML integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
-You can now enable the beta of Ping SAML Integration in Cado Response by going to `Settings > SSO > Ping SAML`.
+You can now enable the beta of Ping SAML Integration in the Cado platform by going to `Settings > SSO > Ping SAML`.
 
 ### Setting up Ping SSO
 1. Open the Ping admin dashboard and navigate to `Connections > Applications`
@@ -24,10 +24,10 @@ You can now enable the beta of Ping SAML Integration in Cado Response by going t
 	- Navigate over to `Identities > Groups`
 	- Add a new group called `CadoAdmin`
 	- This can also be done at a later stage
-	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado Response when logging in
+	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado when logging in
 
 :::tip
-If you are looking to assign non-admin users within Cado Response, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within Cado Response.
+If you are looking to assign non-admin users within Cado, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within Cado.
 :::
 
 9. Navigate back over to the application you created earlier and click **Attribute Mappings**
