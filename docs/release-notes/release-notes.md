@@ -7,6 +7,14 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v2.8.0
+`Released 2022-11-11`
+- Display MITRE ATT&CK categories on Auto-investigate tab.
+- Add a button to cycle through the next and previous alarm events.
+- Bug fix to processing systems that were upgraded from v1.x series. Generating Alarms attached to a system could cause processing to exit.
+- Better stability when downloading large sets of logs.
+
+
 ## v2.7.0
 `Released 2022-11-04`
 - Native integration with XDR solutions
