@@ -7,7 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
-## v2.7.0
+
+## v.2.9.0
+`Released 2022-11-14`
+- Increases the timeout when importing from Azure
+
+## v.2.7.0
 `Released 2022-11-04`
 - Native integration with XDR solutions
 - Ability to view metadata about acquired AWS EC2 instances collected via *Alternate Triage Acquisition*
