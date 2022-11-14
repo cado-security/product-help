@@ -33,9 +33,9 @@ Using the panel on the right - select the "Actions" tab, then the desired action
 ![Actions](/img/actions-tab.png)
 
 ### Permissions Required
-Each action requires different permissions and is controlled using IAM roles. The table below details a description of each action and the permissions required. Add this permission to your Cado role, and ensure it has scope to cover the resource you wish to invoke an action on.
+Each action requires different permissions and is controlled using IAM roles. The table below details a description of each action and the permissions required. Add these permissions to your Cado role, and ensure it has scope to cover the resource you wish to invoke an action on.
 
-| Action | Description | Permissions
+| Action | Description | Required Permissions
 | -------- | ----------- | ----------|
 | Stop Instance | Stops an EC2 instance using the AWS API | ec2:StopInstances |
 | Isolate Role | Isolates the IAM role attached to an EC2 instance. Isolated by adding a deny all inline policy to the given IAM role. | iam:GetInstanceProfile iam:PutRolePolicy |
