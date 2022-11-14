@@ -7,7 +7,11 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
-## v2.8.0
+## v.2.9.0
+`Released 2022-11-14`
+- Increases the timeout when importing from Azure
+
+## v.2.8.0
 `Released 2022-11-11`
 - Display MITRE ATT&CK categories on Auto-investigate tab.
 - Add a button to cycle through the next and previous alarm events.
