@@ -38,6 +38,7 @@ Each action requires different permissions and is controlled using IAM roles. Th
 | Action | Description | Permissions
 | -------- | ----------- | ----------|
 | Stop Instance | Stops an EC2 instance using the AWS API | ec2:StopInstances |
+| Isolate Role | Isolates the IAM role attached to an EC2 instance. Isolated by adding a deny all inline policy to the given IAM role. | iam:GetInstanceProfile iam:PutRolePolicy |
 
 *NOTE: In order to perform an action on an asset in a different AWS account, you must have [Cross Account roles](/cado-response/deploy/aws/iam/cross-account-creation.md) configured and have added the relevant permission to the role in the different account*
 
