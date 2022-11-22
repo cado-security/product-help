@@ -22,4 +22,4 @@ These formats can be downloaded from the relevant cloud consoel and imported int
 
 #### Exporting Processed Data to SIEM Platforms
 
-Please see **[SIEM Integrations >](/manage/integrations/siem.md)**
+Please see **[SIEM Integrations >](../manage/integrations/siem.md)**
