@@ -45,6 +45,10 @@ For more see:
 * https://console.cloud.google.com/iam-admin/serviceaccounts
 * https://cloud.google.com/iam/docs/service-accounts
 
+#### Expected Access
+We expect the service account the Cado platform will authorize with has the 'Basic -> Editor' role:
+![Editor Role](/img/gcp-access.png)
+
 #### Workload Identity Federation
 
 The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
