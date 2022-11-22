@@ -17,7 +17,7 @@ In to storage (S3 in AWS, Storage in Azure).
 
 These formats can be downloaded from the relevant cloud consoel and imported into desktop forensic tools such as:
 * https://www.magnetforensics.com/products/magnet-axiom/
-* http://www.x-ways.net/forensics/
+* https://www.x-ways.net/forensics/
 * https://www.opentext.com/products/encase-forensic
 
 #### Exporting Processed Data to SIEM Platforms
