@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.11.0
+`Released 2022-11-21`
+- Support for acquiring and processing Azure activity logs
+- Bug fixes and performance improvements
+
+
 ## v.2.9.0
 `Released 2022-11-14`
 - Increases the timeout when importing from Azure
@@ -24,7 +30,6 @@ sidebar_position: 1
 - Native integration with XDR solutions
 - Ability to view metadata about acquired AWS EC2 instances collected via *Alternate Triage Acquisition*
 - Ability to take action against compromised AWS EC2 instances collected via *Alternate Triage Acquistion*
-- Support for acquiring Azure activity logs
 - Cado host SSM improvements 
 - Allow Cado Host to collect only specified files
 - Fix bug where successful authentication raises an error
