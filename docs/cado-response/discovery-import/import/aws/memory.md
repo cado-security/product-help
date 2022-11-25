@@ -4,20 +4,14 @@ hide_title: true
 sidebar_position: 7
 ---
 
-:::warning
-Memory analysis support is currently in beta. If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
-:::
 
 # AWS Memory Analysis
-You can enable it under the **Advanced** tab of the **Settings** page:
+You can acquire memory of Linux systems in EC2 by using the "Alternate Acquisition" option under Import > EC2:
 
-To acquire memory from a running AWS EC2 instance, browse to `Import > AWS EC2 Instance` find the EC2 you wish to acquire memory from and click the  **Import Memory** button.  If you do not see the **Import Memory** button, please enable Memory Capture under 'Settings > Advanced > Memory Capture'.
+![AWS Memory](/img/alternate-ec2.png)
 
-Ensure that the SSM agent is installed on the machine. Cado will run commands using SSM in order to acquire the memory.
+This requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager. If it is not, you can acquire memory by connecting to the machine over SSH or RDP and executing Cado Host from Import > Forensic Artifacts. You can also use this method to acquire from Windows systems.
 
-![AWS Memory](/img/aws-memory.png)
+Any acquisition from ECS and EKS will attempt to collect memory by default.
 
-:::info 
-Note that importing memory via `Import > AWS EC2 Instance` requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager.
-:::
 

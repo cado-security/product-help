@@ -48,7 +48,7 @@ If the secondary account role name does not contain the text `CadoResponse` (cas
 The Cado Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
 * The EC2 permissions are required are acquire EC2 systems.
 * The KMS permissions are required to acquire KMS encrypted volumes.
-* The SSM permissions are required for Memory Forensics.
+* The SSM permissions are required for Triage captures.
 * The S3 Permissions are required to import from S3 buckets in other accounts.
 * The CloudTrail permissioms are required to import CloudTrail logs in other accounts.
 * The ECS permissions are required to import ECS containers in other accounts.
