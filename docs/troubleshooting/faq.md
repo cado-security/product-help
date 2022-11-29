@@ -11,7 +11,7 @@ Solutions to some common questions can be found here.  If you can't find your an
 Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado supports AWS as well as cross-cloud acquisitions from GCP and Azure.
 
 ### Does Cado support memory capture?
-Yes.  Amazon Linux, Amazon Ubuntu and Windows Systems are currently supported.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
+Yes.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
 On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete.
