@@ -8,7 +8,7 @@ sidebar_position: 1
 ## Latest release notes
 
 ## v.2.15.0
-`Released 2022-11-30`
+`Released 2022-12-12`
 - Significant front end performance improvement
 - Other bug fixes and performance improvements
 
