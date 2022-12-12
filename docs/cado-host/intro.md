@@ -11,6 +11,8 @@ Once collected, these artifacts can be imported, processed and analysed in the C
 
 You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to AWS as Cado Response will generate the credentials for at Import > Forensic Artifacts.
 
+![Cado Host Single File](/img/cado-host-single-file.png)
+
 Cado Host binaries are available for:
 - Microsoft Windows: 7, 8.1, 10 (1607+) and Microsoft Windows Server Server 2012 R2+
 - Linux: Debian: 9+, Ubuntu: 16.04+, Fedora: 29+, CentOS: 7+, RHEL: 6+, openSUSE: 15+, SUSE Enterprise (SLES): 12 SP2+, Alpine: 3.10+
