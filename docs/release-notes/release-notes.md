@@ -7,6 +7,11 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.15.0
+`Released 2022-11-30`
+- Significant front end performance improvement
+- Other bug fixes and performance improvements
+
 ## v.2.14.0
 `Released 2022-11-30`
 - Bug fixes and performance improvements
