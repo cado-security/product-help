@@ -17,7 +17,12 @@ Based on the evidence you would like to import, follow the on-screen instruction
 ![Import Data](/img/import.png)
 
 ### Importing from Cloud Storage
-You can import evidence from cloud storage such as Amazon S3. This is useful if you have captured evidence to cloud storage, or have transferred on-premises evidence into cloud storage using a tool such as CyberDuck or the S3 Console.
+You can import evidence from cloud storage such as Amazon S3 and Azure Storage.
+This is useful if you have captured evidence to cloud storage, or have transferred on-premises evidence into cloud storage.
+You can upload evidence to cloud storage via:
+- The AWS/Azure Console
+- A Desktop tool such as CyberDuck
+- Cado Host with the --single_file_unzipped parameter
 
 To import evidence stored within cloud storage, log in and perform the following:
 - Choose an existing **Project** or create a new project.
