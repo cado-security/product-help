@@ -7,6 +7,16 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.17.0
+`Released 2022-12-20`
+- Bug fixes and performance improvements
+
+
+## v.2.16.0
+`Released 2022-12-15`
+- Support for automatically monitoring for AWS GuardDuty alerts - *Settings - Advanced*
+- Bug fixes and performance improvements
+
 ## v.2.15.0
 `Released 2022-12-12`
 - Significant front end performance improvement
