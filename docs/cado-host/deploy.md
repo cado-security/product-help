@@ -99,7 +99,7 @@ cado-host:
 
 Usage:
     usage: cado-host.exe [-h] [--presigned_url PRESIGNED_URL] [--storage {google,azure,aws,local}] [--bucket BUCKET]
-                     [--access_key ACCESS_KEY] [--secret_key SECRET_KEY] [--region REGION] [-l] [--full_disk]
+                     [--access_key ACCESS_KEY] [--secret_key SECRET_KEY] [--region REGION] [-l]
                      [-o OUTPUT_PATH] [--response_url RESPONSE_URL] [--response_apikey RESPONSE_APIKEY]
                      [--response_project_id RESPONSE_PROJECT_ID] [--presigned_data PRESIGNED_DATA]
                      [-a ADDITIONAL_FILES [ADDITIONAL_FILES ...]]
@@ -113,7 +113,6 @@ Usage:
       --secret_key <key>                Secret Key of your AWS credentials
       --region <region>                 AWS region
       -l, --light_mode                  Enable light_mode where we only retrieve 100mb worth of files
-      --full_disk                       Enable full disk acquisition
       -o, --output_path <path>          Output path if running for local storage
       --response_url <url>              URL for Cado Response platform to trigger processing action after host collection. response_apikey must also be provided
       --response_apikey <key>           API Key for Cado Response platform to trigger processing action after host collection. response_url must also be provided
