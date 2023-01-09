@@ -30,3 +30,5 @@ Once processing has finished the events will be added to the timeline and the La
 Lambda automatically integrates with CloudWatch Logs and pushes all logs from your code to a CloudWatch Logs group associated with a Lambda function. Cado  captures these logs and adds them to your timeline, so you can view any logging statements made by the function.
 
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)
+
+*Note:* Cado does not currently support importing Linux container-based Lambda functions. In this case, these containers will not be listed in the available LAmbda functions for import
