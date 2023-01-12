@@ -14,7 +14,7 @@ In order to deploy Cado Host, you can choose from one of the following deploymen
 2. Use the **Direct Download** method.  This allows customers to download and run Cado Host independent of running Cado Response.
 
 ### Using Script Builder
-In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated. 
+In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
 
 :::caution
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
