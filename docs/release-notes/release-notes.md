@@ -7,6 +7,15 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+
+## v.2.22.0
+`Released 2023-01-14`
+- Improved support for large uploads and memory collections from Cado Host
+- Added support for ECR Based Lambda functions. Requires adding "ecr:GetAuthorizationToken", "ecr:GetDownloadURLForLayer", "ecr:BatchGetImage" to the "RequiredForLambdaImport" section of the Cado role.
+- Faster processing of the MFT file on Windows systems
+- More detailed error reporting in the UI
+- Acquisition logs are now included in the log bundle
+
 ## v.2.21.0
 `Released 2023-01-04`
 - Bug fixes and performance improvements
