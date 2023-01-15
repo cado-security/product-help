@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Memory Analysis
 
-You can perform a memory acquisition of a Windows or Linux system using Cado Host by clicking `Import > Forensic Artifcats` and running the pre-generated script on the host device.
+You can perform a memory acquisition of a Windows or Linux system using Cado Host by clicking `Import > Forensic Artifacts` and running the pre-generated script on the host device.
 
 For importing externally acquired memory, ensure the memory dump is named with a `.mem` file extension so it is recognized as a memory file and upload the memory file to an S3 bucket to which Cado has access.  Then click `Import > AWS S3 Bucket` within Cado, navigate to the S3 bucket where the .mem file resides, and import it.    
 
