@@ -11,7 +11,9 @@ SentinelOne Singularity provides comprehensive visibility across your environmen
 To leverage the integration between SentinelOne and Cado, you must have the SentinelOne Remote Script Orchestration feature (RSO) enabled in addition to access to the Cado platform. To get access to the Cado platform contact the Cado Security team **[here](http://offers.cadosecurity.com/cado-s1-integration-get-in-touch)**. 
 :::
 
-## Leveraging Cado & SentinelOne Integration 
+## Leveraging Cado & SentinelOne Integration
+
+<iframe width="100%" height="628" src="https://www.youtube.com/embed/iIJjp28G6sk" title="Integrating SentinelOne with Cado Response" frameborder="0" allowfullscreen></iframe>
 
 1. In the SentinelOne console, navigate to **Settings - Users - Service Users - Actions - Create New Service User**
 2. Specify a name, expiration period, and specify the scope for which you want to enable integration
