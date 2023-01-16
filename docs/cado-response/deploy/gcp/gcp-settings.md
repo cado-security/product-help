@@ -36,9 +36,9 @@ For example, a service account key might come in a structure such as the below. 
     }
 
 Note that:
-* The Cloud Build API needs to be enabled for the Project.
+* The Cloud Build API (https://console.cloud.google.com/cloud-build/) needs to be enabled for the Project.
 * Each Service Account that is created by the service being acquired (e.g. Compute) requires the Editor role.
-* You need to have a GCP bucket defined for each Project you are importing in. We will remove this requirement in a future version.
+* When you import an instance you first need to define a bucket for each GCP Project where the instance image will go - this bucket should be created during Cado install and will be used for future imports.
 
 ### Types of Credentials
 
