@@ -35,6 +35,11 @@ For example, a service account key might come in a structure such as the below. 
       "client_x509_cert_url": "..."
     }
 
+Note that:
+* The Cloud Build API needs to be enabled for the Project.
+* Each Service Account that is created by the service being acquired (e.g. Compute) requires the Editor role.
+* You need to have a GCP bucket defined for each Project you are importing in. We will remove this requirement in a future version.
+
 ### Types of Credentials
 
 #### Service Accounts
