@@ -14,7 +14,7 @@ In order to deploy Cado Host, you can choose from one of the following deploymen
 2. Use the **Direct Download** method.  This allows customers to download and run Cado Host independent of running Cado Response.
 
 ### Using Script Builder
-In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated. 
+In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
 
 :::caution
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
@@ -99,7 +99,7 @@ cado-host:
 
 Usage:
     usage: cado-host.exe [-h] [--presigned_url PRESIGNED_URL] [--storage {google,azure,aws,local}] [--bucket BUCKET]
-                     [--access_key ACCESS_KEY] [--secret_key SECRET_KEY] [--region REGION] [-l] [--full_disk]
+                     [--access_key ACCESS_KEY] [--secret_key SECRET_KEY] [--region REGION] [-l]
                      [-o OUTPUT_PATH] [--response_url RESPONSE_URL] [--response_apikey RESPONSE_APIKEY]
                      [--response_project_id RESPONSE_PROJECT_ID] [--presigned_data PRESIGNED_DATA]
                      [-a ADDITIONAL_FILES [ADDITIONAL_FILES ...]]
@@ -113,7 +113,6 @@ Usage:
       --secret_key <key>                Secret Key of your AWS credentials
       --region <region>                 AWS region
       -l, --light_mode                  Enable light_mode where we only retrieve 100mb worth of files
-      --full_disk                       Enable full disk acquisition
       -o, --output_path <path>          Output path if running for local storage
       --response_url <url>              URL for Cado Response platform to trigger processing action after host collection. response_apikey must also be provided
       --response_apikey <key>           API Key for Cado Response platform to trigger processing action after host collection. response_url must also be provided

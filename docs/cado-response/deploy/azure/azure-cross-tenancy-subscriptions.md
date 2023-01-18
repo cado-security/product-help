@@ -43,6 +43,12 @@ Once you have created the app registration, you will be able to register the cre
 :::
 Some of the information you will need is on the Azure app registration page, shown below: ![Azure App Registration Page](/img/azure-app-registration-info.png)
 
+Set the Cloud ID as a name you will recognize, e.g. "AzureCrossAccount".
+You can find the Tenant ID under Azure Active Directory.
+The Subscription ID is on the Overview Tab of your Subscription.
+The Client ID is the Client ID of the application, found on the Properties tab of the Enterprise Application you created earlier.
+The Client Secret is from the the first step above.
+
 The credentials are now ready to use within Cado.  Go to an Azure import and select the credential you wish to use from the dropdown in the top left of the import page. ![Using Custom Azure Credentials](/img/azure-using-custom-credentials.png)  You are now able to import resources managed by other tenants and or subscriptions as normal.
 
 :::tip

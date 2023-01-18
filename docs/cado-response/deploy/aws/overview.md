@@ -34,6 +34,8 @@ Cado consists of a few key components that interact with each other in order to 
 
 ## AWS CloudFormation Template
 
+<iframe width="100%" height="628" src="https://www.youtube.com/embed/aMQOitmPLeE" title="Deploying with Cloudformation" frameborder="0" allowfullscreen></iframe>
+
 To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
 
 1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.  Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.

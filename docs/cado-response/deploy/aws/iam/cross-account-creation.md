@@ -35,7 +35,7 @@ The instructions below will allow cross-account access from account `11111111111
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again. (If Cado is deployed in AWS GovCloud use the policy [located here](https://gov-updates.s3-us-gov-east-1.amazonaws.com/policy-in-cross-account-govcloud.json) instead.)
+- Click **Next**, and in the permissions wizard attach the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again.
 
 - Click through to review and give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example).
 
@@ -48,7 +48,7 @@ If the secondary account role name does not contain the text `CadoResponse` (cas
 The Cado Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
 * The EC2 permissions are required are acquire EC2 systems.
 * The KMS permissions are required to acquire KMS encrypted volumes.
-* The SSM permissions are required for Memory Forensics.
+* The SSM permissions are required for Triage captures.
 * The S3 Permissions are required to import from S3 buckets in other accounts.
 * The CloudTrail permissioms are required to import CloudTrail logs in other accounts.
 * The ECS permissions are required to import ECS containers in other accounts.

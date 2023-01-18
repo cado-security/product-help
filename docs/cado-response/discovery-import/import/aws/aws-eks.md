@@ -15,7 +15,9 @@ this you will see an error message saying that `This role is not configured to a
 See [the following AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/)
 on how to add your role to the EKS RBAC, or if you have eksctl configured, you can use the following command:
 
-`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn <iam_role> --group system:masters`
+`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn <iam_role> --group <group>`
+
+You can configure groups by configuring your Kubernetes `rolebinding` or `clusterrolebinding` ConfigMaps. See [the following AWS guide](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) for instructions of manipulating the role maps.
 
 You must also make sure the following IAM permissions are attached to your IAM role:
 ```
@@ -31,7 +33,8 @@ Depending on where your EKS cluster is deployed, you'll need to choose a differe
 For a single account import you should  choose the configured role inside `Settings > Cloud > AWS`.
 
 #### The cluster is deployed in a seperate account from Cado:
-For a cross account import you should choose the role created in [AWS Cross Account Creation](../../../deploy/aws/iam/cross-account-creation.md).
+All roles in a chain must be configured with the EKS RBAC. If you're using a different role, then the Cado roles need to also be
+included in the RBAC, not just the cross account created in [AWS Cross Account Creation](../../../deploy/aws/iam/cross-account-creation.md).
 
 ## Import Steps
 
