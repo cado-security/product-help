@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.24.0
+`Released 2023-01-18`
+- Ability to identify potentially compromised roles that can be isolated as part of Auto-Investigation
+- Bug fixes and performance improvements
 
 ## v.2.22.0
 `Released 2023-01-14`
