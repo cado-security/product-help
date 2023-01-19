@@ -25,7 +25,7 @@ Clicking "view" on a suspected compromised asset opens up a sidebar containing m
 
 ## Response Actions
 
-Response Actions make it possible to perform remediation actions in response to malicious activity being identified on a virtual machine.
+Response Actions make it possible to perform remediation actions in response to malicious activity being identified on a virtual machine. You can also trigger response actions using [Automation Rules](../discovery-import/automation.md).
 
 Currently, Response Actions only supports [AWS EC2 instances acquired as a triage collection](../discovery-import/import/aws/aws-ec2.md#triage-capture). To invoke an action, select the instance id from the "Suspected Compromised Assets" table
 

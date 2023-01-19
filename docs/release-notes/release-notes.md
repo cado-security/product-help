@@ -7,6 +7,11 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.25.0
+`Released 2023-01-19`
+- Support for importing containers from GKE environment
+- Bug fixes and performance improvements
+
 ## v.2.24.0
 `Released 2023-01-18`
 - Ability to identify potentially compromised roles that can be isolated as part of Auto-Investigation
