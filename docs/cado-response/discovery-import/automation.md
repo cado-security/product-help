@@ -47,9 +47,9 @@ Enter the name of the rule and a description. Specify
 * ***Alert Type***  - the type of alert that will trigger the rule (e.g. GuardDuty)
 * ***Asset Type*** - the type of cloud resource to which the rule will apply (e.g. EC2)
 * ***Investigation Type*** - the type of invesigation to perform. This currently has three options
-    * *Default* - Performs full disk collection from any workload specified in the alert
+    * *Default* - Performs triage collection from any workload specified in the alert
     * *Triage* - Performs triage collection from any workload specified in the alert
-    * *Full* - Performs full disk collection from all machines with identical tags to those specified in the alert
+    * *Full* - Performs full disk collection from any workload specified in the alert
 * ***Response Actions (optional)*** - the actions to take against machines upon which malicious activities have been detected, and machines upon which suspicous activities have been detected. Cado currently supports shutting down EC2 instances, and isolating the IAM roles that the EC2  instance assumes.
 
 Hit 'Save' to create the rule
