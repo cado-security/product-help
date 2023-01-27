@@ -31,7 +31,7 @@ You can now enable the beta of Okta SAML Integration in the Cado platform by goi
 9. Add a Group Attribute Statement to the application:
 	- In the `Name` field enter `groupAttrStatement`
 	- In the `Name format` field select **Unspecified**
-    - In the `Filter` set the drop down to **Equals** and set the field to `CadoAdmin`
+    - In the `Filter` set the drop down to **Equals** and set the field to the name of your admin group. In this example the admin group will be called `CadoAdmin`.
 
 	![Okta Group Attribute Statement](/img/okta-group-attribute-statement.png)
 
@@ -64,6 +64,7 @@ If you are looking to assign non-admin users within Cado, you can use a group na
         - Enter the `X.509 Certificate` value (text inbetween `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) from the SAML setup instructions into the `Okta SAML App x509 Cert` field
         - Enter the exact URL you provided in step 7 into the `Okta SAML App SP entity ID` field
         - Enter the exact URL you provided in step 6 into the `Okta SAML App SP ACS URL` field
+        - Enter the exact name of your admin group you configured in step 9 into the `Admin Group Name` field
 16. Optional: You can confirm if this was configured correctly by clicking **Test new settings**
 17. Click **Update**
 18. Log out with your existing user, and login with Okta SAML
