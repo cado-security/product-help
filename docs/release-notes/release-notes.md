@@ -7,6 +7,15 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.26.0
+`Released 2023-01-27`
+- New Audit Logs, visible under "Help"
+- New Date and Time selection for Search
+- Improved display of Cado Host and Container analysis
+- Matching content for file detections is now displayed
+- You can now set a custom Okta SAML Admin Group
+- Fixed issue where an expired login session can lead to "oops" error. If you can encounter this - Login in Incognito mode or Clear local storage, then Upgrade.
+
 ## v.2.25.0
 `Released 2023-01-19`
 - Support for importing containers from GKE environment
