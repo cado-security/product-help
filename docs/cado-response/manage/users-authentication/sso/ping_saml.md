@@ -22,7 +22,7 @@ You can now enable the beta of Ping SAML Integration in the Cado platform by goi
 7. Click **Save**
 8. Optional: Choose who is granted access to the application
 	- Navigate over to `Identities > Groups`
-	- Add a new group called `CadoAdmin`
+	- Add a new group. In this example the group will be called `CadoAdmin`
 	- This can also be done at a later stage
 	- If you name a group `CadoAdmin`, then any users in that group will become admin users of Cado when logging in
 
@@ -52,6 +52,7 @@ If you are looking to assign non-admin users within Cado, you can use a group na
         - Download the signing certificate and enter the value (text inbetween `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) into the `Ping SAML App x509 Cert` field
         - Enter the exact URL you provided in step 6 into the `Ping SAML App SP entity ID` field
         - Enter the exact URL you provided in step 5 into the `Ping SAML App SP ACS URL` field
+        - Enter the exact name of your admin group you configured in step 8 into the `Admin Group Name` field
 14. Optional: You can confirm if this was configured correctly by clicking **Test new settings**
 15. Click **Update**
 16. Log out with your existing user, and login with Ping SAML
