@@ -7,6 +7,20 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.29.0
+`Released 2023-02-06`
+- Support for collection from Private AKS clusters
+- Additional file attributes in file browser view
+- Display more AWS tags/metadata for cloud native acquisitions
+- Bug fixes and performance improvements
+
+## v.2.28.0
+`Released 2023-02-03`
+- Improved import navigation for newly created projects
+- Improved search for MITRE ATT&ACK IDs
+- Improved reporting on MACB timestamps
+- Bug fixes and performance improvements
+
 ## v.2.26.0
 `Released 2023-01-27`
 - New Audit Logs, visible under "Help"
