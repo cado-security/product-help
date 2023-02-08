@@ -7,9 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.31.0
+`Released 2023-02-08`
+- Bug fixes and performance improvements
+
 ## v.2.29.0
 `Released 2023-02-06`
-- Support for collection from Private AKS clusters
 - Additional file attributes in file browser view
 - Display more AWS tags/metadata for cloud native acquisitions
 - Bug fixes and performance improvements
