@@ -38,10 +38,6 @@ included in the RBAC, not just the cross account created in [AWS Cross Account C
 
 ## Import Steps
 
-:::info
-Please note that communication with EKS can take upwards to 30 seconds or more.
-:::
-
 1) Go to **Import > AWS EKS**
 
 ![Cado Import Screen showing the AWS EKS options](/img/import.png)
