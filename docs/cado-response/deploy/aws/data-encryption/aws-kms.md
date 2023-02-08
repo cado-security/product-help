@@ -102,6 +102,19 @@ The simplest approach is to give `kms:CreateGrant` permissions to the role being
 
 Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to `"kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"`
 
-:::info
-Cross account acquisition of volumes encrypted with the AWS default key are currently not supported.
-:::
+### Cross Account using AWS default keys
+To import EC2s across accounts that are encrypted with AWS default keys, you will require the following permissions in the Cado Response role **where you have deployed**.  You will not need to alter your cross-account role.  These permissions are also located in the supplied terraform and cloudformation configurations.
+
+```json
+{
+	"Sid": "RequiredForCrossAccountDefaultKmsEncryptedEc2Import",
+	"Effect": "Allow",
+	"Action": [
+		"kms:CreateKey",
+		"kms:ScheduleKeyDeletion",
+		"kms:DescribeKey",
+		"kms:ListAliases"
+	],
+	"Resource": "*"
+},
+```
