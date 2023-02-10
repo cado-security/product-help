@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.32.0
+`Released 2023-02-09`
+- Support for acquiring AWS volumes encrypted using default key (NOTE: requires additional  "ReplicateKey" role permission)
+- Bug fixed and perfomance improvements
+
+
 ## v.2.31.0
 `Released 2023-02-08`
 - Bug fixes and performance improvements
