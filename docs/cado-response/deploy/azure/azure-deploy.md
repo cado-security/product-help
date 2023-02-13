@@ -74,13 +74,13 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
 5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
     ```console
-    az storage blob copy start --auth-mode login --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI"
+    az storage blob copy start --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI"
     ```
 
     :::caution
     Wait for the copy operation to complete before moving to the next step.  You can check the status of the blob copy by running the `az storage blob show` command as outlined below.  This example is for Windows.  You can pipe the same command to *grep* in Linux.  You will know the process is complete when the output `status` field changes from **pending** to **success**
     ```console
-    az storage blob show --auth-mode login --account-name "<StorageAccountName>"  --name "cado_response.vhd" --container-name "<ContainerName>" --subscription "<SubscriptionName>"  -o yamlc | findstr status
+    az storage blob show --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>" --name "cado_response.vhd" --container-name "<ContainerName>" --subscription "<SubscriptionName>"  -o yamlc | findstr status
     ```
     :::
 
