@@ -7,6 +7,14 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.33.0
+`Released 2023-02-17`
+- Legacy memory acquisition capability deprecated
+- Added project ID and evidence ID to audit log table
+- Asset metadata available for all acquired EC2 instances (NOTE: requires additional "iam:GetInstanceProfile" role permission)
+- Big fixes and performance improvements
+
+
 ## v.2.32.0
 `Released 2023-02-09`
 - Support for acquiring AWS volumes encrypted using default key (NOTE: requires additional  "ReplicateKey" role permission)
