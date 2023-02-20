@@ -93,6 +93,11 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 7. Change directories into `azure/cado` which was extracted in the previous step.
 
 8. Create a public and private ssh key. Make sure the directory exists before running the command and do not use a passphrase:
+    
+    :::tip
+    You will likely need to create the `keys` directory by running `mkdir ../keys` prior to running the next step
+    :::
+
     ```console
     ssh-keygen -b 4096 -f ../keys/azure_demo_key -q -N ""
     ```
@@ -121,9 +126,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 
 10. Deploy by running the following commands in the directory `azure/cado/`
 
-    `terraform init` followed by `terraform apply`
-
-    You can review settings before deploying by running `terraform plan`
+    `terraform init` followed by `terraform plan`.  Once you confirm the plan looks correct, you can then run `terraform apply`
 
 11. Make a note of the IP Address and the full Resource Id (/subscription/.../cado-main-vm) in the logs e.g.:
 
