@@ -17,16 +17,16 @@ The below guide walks through this process.
 ## Setting up the Google project for Cado collection
 In order to set up the project for Cado collection you need to
 
-* Enable the Cloud Build API for the project (https://console.cloud.google.com/cloud-build/).
+* Enable the Cloud Build API for the project 
 * Define a bucket for each GCP Project where images will be stored.
 
 ### Enabling the Cloud Build API for the project
 
-Lorem Ipsum
+To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/
 
 ### Defining a bucket for the GCP project
 
-Lorem Ipsum
+Create a bucket in the project that will store the captured raw data from GCP. For more information https://cloud.google.com/storage/docs/creating-buckets
 
 
 ## Setting up a Service Account in GCP
@@ -35,7 +35,7 @@ Next, you need to set up a Service Account in GCP. For information on how to do 
 * https://cloud.google.com/iam/docs/service-accounts
 
 ### Required Access
-The Cado service account needs the 'Basic -> Editor' role:
+Both the Cado service account and the service account for the Cloud API need the 'Basic -> Editor' role:
 
 ![Editor Role](/img/gcp-access.png)
 
@@ -51,7 +51,7 @@ Any time a user then attempts to access that particular GCP project name, the cr
 There are two ways to achieve this:
 
 1. **Service Account Credentials** - this is a simpler but less secure approach. *Note - Cado running in Azure only supports the use of Service Account Credentials*
-2. **Workload Identity Federation** - This requires more expertise but is the recommended, more secure approach. *Note - GKE import Cado only supports GCP service accounts configured using Workload Identity Federation*
+2. **Workload Identity Federation** - This requires more expertise but is the recommended, more secure approach.
 
 #### Service Account Credentials
 
