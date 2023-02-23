@@ -4,23 +4,62 @@ hide_title: true
 sidebar_position: 1
 ---
 
-## GCP Import Settings
+# Setting up Import from GCP
 
-You can acquire compute and storage resources from GCP with the Cado platform by configuring Cado with GCP credentials. The below guide walks through this process.
+You can acquire compute and storage resources from GCP with the Cado platform by 
 
-## Entering Settings
-You can add GCP Credentials to Cado in the **Settings > Cloud > GCP** page.
-You will be asked for a "GCP Project Name" and the "GCP Credentials".
+1. Setting up the Google project for Cado collection
+2. Setting up a Service Account in GCP
+3. Entering credentials into Cado
 
-## Getting GCP Credentials
+The below guide walks through this process.
 
-When you add credentials under Cado settings you are creating a mapping from a set of credentials (in GCP json format) to a project name.
+## Setting up the Google project for Cado collection
+In order to set up the project for Cado collection you need to
+
+* Enable the Cloud Build API for the project (https://console.cloud.google.com/cloud-build/).
+* Define a bucket for each GCP Project where images will be stored.
+
+### Enabling the Cloud Build API for the project
+
+Lorem Ipsum
+
+### Defining a bucket for the GCP project
+
+Lorem Ipsum
+
+
+## Setting up a Service Account in GCP
+Next, you need to set up a Service Account in GCP. For information on how to do this more see:
+* https://console.cloud.google.com/iam-admin/serviceaccounts
+* https://cloud.google.com/iam/docs/service-accounts
+
+### Required Access
+The Cado service account needs the 'Basic -> Editor' role:
+
+![Editor Role](/img/gcp-access.png)
+
+To import GKE containers, the Cado service account also needs the `iam.serviceAccounts.implicitDelegation` IAM permission.
+
+
+### Getting GCP Credentials
+
+When you add credentials to Cado you are creating a mapping from a set of credentials (in GCP json format) to a project name.
 
 Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used. This keeps non-admin users from having to managing credentials themselves, while also alllowing access to as many different GCP projects as you want.
 
-GCP credentials come in a json format that wraps around a ‘regular’ credential, for the benefit of the many different ways that a credential may be used on their end. It can be treated as functionally no different to how you would handle any type of password or key.
+There are two ways to achieve this:
 
-For example, a service account key might come in a structure such as the below. The ‘credential’ is a literal RSA key as a string in the `private_key` field, all other fields are metadata for the benefit of the application that uses it:
+1. **Service Account Credentials** - this is a simpler but less secure approach. *Note - Cado running in Azure only supports the use of Service Account Credentials*
+2. **Workload Identity Federation** - This requires more expertise but is the recommended, more secure approach. *Note - GKE import Cado only supports GCP service accounts configured using Workload Identity Federation*
+
+#### Service Account Credentials
+
+The simplest method to add GCP credentials to Cado is to use a service account, which will give you a permanent key. These are very sensitive credentials but they are easy to manage and simple to set up. Adding GCP credentials for service accounts is supported by Cado when deployed in both AWS and Azure.
+
+GCP credentials come in a json format that wraps around a ‘regular’ credential. It can be treated as functionally no different to how you would handle any type of password or key.
+
+For example, a service account key would come in a structure such as the below. The ‘credential’ is a literal RSA key as a string in the `private_key` field, all other fields are metadata for the benefit of the application that uses it:
 
       {
       "type": "service_account",
@@ -35,29 +74,9 @@ For example, a service account key might come in a structure such as the below. 
       "client_x509_cert_url": "..."
     }
 
-Note that:
-* The Cloud Build API (https://console.cloud.google.com/cloud-build/) needs to be enabled for the Project.
-* Each Service Account that is created by the service being acquired (e.g. Compute) requires the Editor role.
-* When you import an instance you first need to define a bucket for each GCP Project where the instance image will go - this bucket should be created during Cado install and will be used for future imports.
-
-### Types of Credentials
-
-#### Service Accounts
-
-The simplest method to add GCP credentials to Cado is to use a service account, which will give you a permanent key. Naturally these are very sensitive but they are easy to manage and simple to set up. Adding GCP credntials for service accounts is supported by Cado when deployed in both AWS and Azure.
-
-For more see:
-* https://console.cloud.google.com/iam-admin/serviceaccounts
-* https://cloud.google.com/iam/docs/service-accounts
-
-#### Expected Access
-We expect the service account the Cado platform will authorize with has the 'Basic -> Editor' role:
-![Editor Role](/img/gcp-access.png)
-To import GKE containers with Cado Response, the `iam.serviceAccounts.implicitDelegation` IAM permission also needs to added to the Service Account.
-
 #### Workload Identity Federation
 
-The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note - GKE import Cado only suports GCP accounts configured using Workload Identity Federation*. 
+The GCP recommended best practice, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note: Cado running in Azure does not support Workload Identity Federation credentials to import from GCP*
 
 Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
 
@@ -81,6 +100,12 @@ For example:
       }
     }
 
-For more see:
+For more information about GCP Workload Identity Federation see:
 * https://console.cloud.google.com/iam-admin/workload-identity-pools
 * https://cloud.google.com/iam/docs/workload-identity-federation
+
+## Entering Settings
+You can add GCP Credentials to Cado in the **Settings > Cloud > GCP** page.
+You will be asked for a "GCP Project Name" and the "GCP Credentials". These credentials will be a JSON either directly containing the service account credentials, or the Workload Identity Federation credentials 
+
+![GCP Credentials](/img/gcp-credentials.png)
