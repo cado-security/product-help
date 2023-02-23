@@ -10,6 +10,9 @@ sidebar_position: 1
 ## v.2.34.0
 `Released 2023-02-23`
 - Ability to set customer AWS EBS snapshot tag and prefix to monitor and automatically import
+- Improved import page
+- Improved tabluar view of timeline events
+- More detail around context of imported evidence
 - Bug fixes and performance improvements
 
 ## v.2.33.0
