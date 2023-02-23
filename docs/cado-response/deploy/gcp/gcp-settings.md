@@ -53,10 +53,13 @@ For more see:
 #### Expected Access
 We expect the service account the Cado platform will authorize with has the 'Basic -> Editor' role:
 ![Editor Role](/img/gcp-access.png)
+To import GKE containers with Cado Response, the `iam.serviceAccounts.implicitDelegation` IAM permission also needs to added to the Service Account.
 
 #### Workload Identity Federation
 
-The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
+The GCP recommended best practice, however, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note - GKE import Cado only suports GCP accounts configured using Workload Identity Federation*. 
+
+Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
 
 Rather than give out the key to a service account, you instead register the permission with GCP to allow AWS credentials for account `123` to act as if they were the given GCP service account.
 
