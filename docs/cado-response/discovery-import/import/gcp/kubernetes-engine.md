@@ -12,7 +12,7 @@ The Cado platform will collect key logs and forensic artifacts from Google Cloud
 
 To import GKE containers with Cado Response, the `iam.serviceAccounts.implicitDelegation` IAM permission added to the Service Account.
 
-Currently, only GCP accounts configured using Workload Identity Federation. See more in the [GCP Import Settings](/cado-response/deploy/gcp/gcp-settings#workload-identity-federation) page.
+Currently, for GKE import Cado only suports GCP accounts configured using Workload Identity Federation. See more in the [GCP Import Settings](/cado-response/deploy/gcp/gcp-settings#workload-identity-federation) page.
 
 ## Import Steps
 
