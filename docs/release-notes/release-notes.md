@@ -7,7 +7,7 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
-## v.2.33.0
+## v.2.34.0
 `Released 2023-02-23`
 - Ability to set customer AWS EBS snapshot tag and prefix to monitor and automatically import
 - Bug fixes and performance improvements
