@@ -23,6 +23,9 @@ To generate that key you can do the following inside Cado Repsonse:
 3. Take note of the **Public Key**, this is the identifier that we can use for revoking the key later on if needed.
 4. Take note of the **Secret Key**, you'll need to save this somewhere private (like a password manager), as you won't be able to see it again after you close the dialog. This is the key we need to provide to the third-party integration providers.
 
+![Get API Key](/img/api.png)
+
+The Secret Key is used as the Access Token.
 
 :::tip
 The API Secret Key will only be shown once, so it is recommended to save it to a secure place, like password manager.
@@ -34,6 +37,6 @@ Often you'll see in the following tutorials that we are referring to "Platform B
 https://ec2example.compute.amazonaws.com
 ```
 
-### API Documentation
+### Full API Documentation
 From version 2.8.0 onwards you can view the Swagger docs for the API at /apidocs
-Please contact support@cadosecurity.com for any help using the API.
+You can view examples at https://github.com/cado-security/cado-api-examples
