@@ -18,8 +18,8 @@ By default, when you create an app registration, Azure will also create an enter
 #### Required role-asignments
 Once you have created your app registration, you will need to give it the required Azure role-assignments to allow it to access your Azure resources.
 
-1. Go to the Azure subscription you want to acquire from, this could be within the same, or a different Azure tenancy.
-2. Select your subscription and go to the `Access control (IAM)` permissions for it. ![Adding IAM permissions](/img/azure-adding-subscription-permissions.png)
+1. Go to the Azure management group you want to acquire from, this could be within the same, or a different Azure tenancy.
+2. Select your management group and go to the Access control (IAM) permissions for it. ![Adding IAM permissions](/img/azure-adding-subscription-permissions.png)
 3. Select `Add role assignment` and add the following role-assignments for your app registration: ![Adding IAM permissions to app registration](/img/azure-adding-permissions-to-app-registration.png)
     - `Storage Account Contributor`.
     - `Disk Snapshot Contributor`.
