@@ -7,11 +7,16 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.35.0
+`Released 2023-03-10`
+- Improved support of KMS encrpyted volumes (NOTE: requires add "iam:CreateServiceLinkedRole" role permission)
+- Bug fixes and performance improvements
+
 ## v.2.34.0
 `Released 2023-02-23`
 - Ability to set customer AWS EBS snapshot tag and prefix to monitor and automatically import
 - Improved import page
-- Improved tabluar view of timeline events
+- Improved tabluar view of timeline events (beta)
 - More detail around context of imported evidence
 - Bug fixes and performance improvements
 
