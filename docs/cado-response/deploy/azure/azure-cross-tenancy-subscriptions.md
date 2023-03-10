@@ -12,14 +12,14 @@ To leverage cross Azure acquisitions, you need to create an **[Azure app registr
 If you are only importing from a seperate subscription within the same tenancy as your Cado deployment, you can use `Accounts in this organizational directory only` as your app registration account type.
 :::
 You can then generate a client secret associated with this app registration using **[this guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-credentials)**, be sure to keep a note of it as you will need it to register the app with the Cado platform. ![Creating a client secret](/img/azure-creating-client-secret.png)
-By default, when you create an app registration, Azure will also create an enterprise application alongside it with the same name.  You have to navigate to this, and under the **properties** sidebar, allow the option for `Enabled for users to sign-in`.  Without enabling this option, cross tenency/subscrition acquisitions will not work.
+By default, when you create an app registration, Azure will also create an enterprise application alongside it with the same name.  You have to navigate to this, and under the **properties** sidebar, allow the option for `Enabled for users to sign-in`.  Without enabling this option, cross tenancy/subscrition acquisitions will not work.
 ![Azure Enterprise App Registration Permission](/img/azure-enterprise-app-permission.png)
 
 #### Required role-asignments
 Once you have created your app registration, you will need to give it the required Azure role-assignments to allow it to access your Azure resources.
 
-1. Go to the Azure subscription you want to acquire from, this could be within the same, or a different Azure tenancy.
-2. Select your subscription and go to the `Access control (IAM)` permissions for it. ![Adding IAM permissions](/img/azure-adding-subscription-permissions.png)
+1. Go to the Azure management group you want to acquire from, this could be within the same, or a different Azure tenancy.
+2. Select your management group and go to the Access control (IAM) permissions for it. ![Adding IAM permissions](/img/azure-adding-subscription-permissions.png)
 3. Select `Add role assignment` and add the following role-assignments for your app registration: ![Adding IAM permissions to app registration](/img/azure-adding-permissions-to-app-registration.png)
     - `Storage Account Contributor`.
     - `Disk Snapshot Contributor`.
