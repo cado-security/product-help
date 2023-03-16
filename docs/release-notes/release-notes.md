@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.34.0
+`Released 2023-03-16`
+- Manage Azure resources from tenant root or management group levels
+- Improved Audit logs UI
+- Bug fixes and performance improvements
+
 ## v.2.35.0
 `Released 2023-03-10`
 - Improved support of KMS encrpyted volumes (NOTE: requires add "iam:CreateServiceLinkedRole" role permission)
