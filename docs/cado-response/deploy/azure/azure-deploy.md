@@ -67,8 +67,6 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     ```
     
     2. In the **[Azure portal](https://portal.azure.com/)**, navigate to the resource group that you created, then the storage account, then click **Settings > Access keys** in your storage account's menu blade to see both primary and secondary access keys.  You can then click the **Show keys** button and copy the **Key** value.  Key values should be enclosed in double quotes if working from within bash. You can also use a connection string or SAS token to authenticate the command. More details on this here: **[Creating a container in a storage account](https://docs.microsoft.com/en-US/cli/azure/storage/container?view=azure-cli-latest#az_storage_container_create)**
-
-    ![Access Keys](/img/azure-access-keys.png)
     :::
 
 
