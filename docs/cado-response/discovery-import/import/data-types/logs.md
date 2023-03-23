@@ -14,6 +14,9 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 - VPC Flow logs
 - SSM logs
 
+### Azure Log Formats
+- Activity logs
+
 ### System Log Formats
 - AppleSystemLog (ASL)
 - Androidusage-history (appusage)
