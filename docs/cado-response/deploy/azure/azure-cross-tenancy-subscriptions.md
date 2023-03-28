@@ -24,6 +24,7 @@ Once you have created your app registration, you will need to give it the requir
     - `Storage Account Contributor`.
     - `Disk Snapshot Contributor`.
     - `Virtual Machine Contributor`.
+    - `Monitoring Contributor`.
     - `Azure Kubernetes Service Cluster Admin Role`.
 
 :::tip

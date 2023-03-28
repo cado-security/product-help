@@ -113,8 +113,26 @@ To import EC2s across accounts that are encrypted with AWS default keys, you wil
 		"kms:CreateKey",
 		"kms:ScheduleKeyDeletion",
 		"kms:DescribeKey",
-		"kms:ListAliases"
+		"kms:ListAliases",
+        "kms:ReEncrypt*",
+        "kms:GenerateDataKey*"
 	],
 	"Resource": "*"
 },
 ```
+
+### Resolving Issues with KMS Support
+Getting the right KMS policies can prove difficult, particularly for cross-account Default KMS acquisitions and custom configurations.
+
+#### Using Cado Host to bypass KMS
+If you are unable to obtain a full disk capture, you can bypass KMS by acquiring a system using Cado Host:
+- If the system has SSM enabled, select "Use Alternate Triage Acquisition" when acquiring the system
+- Conect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Forensic Artifacts
+
+### Bypassing KMS by creating an Unencrypted Volume
+You can remove KMS from a volume by following the steps at https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/
+
+#### Debugging IAM Permissions for KMS
+You can debug any IAM permissions using the AWS Policy Simulator at https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html
+
+
