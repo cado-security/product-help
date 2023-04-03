@@ -17,21 +17,18 @@ export const Highlight = ({children, color}) => (
 );
 
 # Cross Account Access Creation
-AWS resources in other accounts can be made accessible to the Cado platform via AWS roles.  For example, if you have 100 accounts, you can grant Cado access to all 100 accounts which will allow the platform to acquire, process and analyze evidence across multiple accounts.
+The Cado platform can access AWS resources across multiple accounts using AWS roles. For instance, if you manage 100 accounts, you can grant Cado access to each one, enabling the platform to acquire, process, and analyze evidence from all accounts seamlessly.
 
 ### High-Level Summary
-The below examples will outline how to grant permission for Cado to access a single secondary account, however this same process can be used for as many additional accounts as needed.
+The examples below outline how to grant permission for Cado to access a single secondary account. However, you can use the same process for granting access to multiple additional accounts as needed.
 
-In this guide we will create:
-1. An **IAM role** in your secondary account, where you will acquire evidence from, with a trust relationship to your primary account. 
-2. An **IAM policy** in your primary account where Cado is deployed.
+In this guide, we will create an **IAM role** in your secondary account, from which you will acquire evidence, and establish a trust relationship with your primary account.
 
-
-The instructions below will allow cross-account access from account `111111111111` (the primary account where Cado is deployed) to a secondary account `22222222222` (where you will be acquiring evidence from).
+The following instructions enable cross-account access from the primary account (where Cado is deployed) with account ID `111111111111`, to a secondary account (from which you will acquire evidence) with account ID `222222222222`.
 
 ### Prepare Secondary Account
 
-- In your secondary account avigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", select "Another AWS Account" and enter the account ID of your primary account (`111111111111` in this example).
+- In your secondary account navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", select "Another AWS Account" and enter the account ID of your primary account (`111111111111` in this example).
 
 ![Create Role](/img/create-role.png)
 
@@ -40,7 +37,7 @@ The instructions below will allow cross-account access from account `11111111111
 - Click through to review and give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example).
 
 :::warning
-If the secondary account role name does not contain the text `CadoResponse` (case sensitive) cross account acquisition will not work.
+If the secondary account role name does not contain the text `CadoResponse` (case sensitive), cross account acquisition will not work.
 :::
 
 
@@ -83,58 +80,12 @@ The below JSON is only required if you choose to use an existing role and you di
 You may choose to limit this further and trust only your specific Cado role rather than the entire primary account.  See AWS JSON policy elements: **[Principal - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)** for more information.
 :::
 
-### Prepare Primary Account
+### Adding the Role to Cado
+Now that we have the role set up in the Secondary account, it's time to add it to Cado. To do this, navigate to the cloud section in the settings and click on the **Add AWS Credentials** button. When prompted, enter the IAM role we just created in the Secondary account and provide an alias for the role.
 
-- In your primary account navigate to **IAM** > **Policies** and click **Create Policy**.
-- Select the "JSON" tab and insert the below JSON, substituting the details of your secondary account role created in the above step.
-    - If you will be acquiring from multiple 'secondary' accounts, add their respective sedondary roles to the `Resource` list.
-- Click **Next** and name the policy `CadoResponseCrossAccountPolicy`, then click **Create Policy**.
+![Add Role](/img/add-role.png)
 
-```json 
-{
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": "sts:AssumeRole",
-           "Resource": [
-               "arn:aws:iam::222222222222:role/CadoResponseSecondRole"
-           ]
-       }
-   ]
-}
-```
-
-:::warning
-The naming convention of the IAM policy `CadoResponseCrossAccountPolicy` is important.  This name should not be changed.
-This policy allows Cado Response to list the cross-account roles available.
-:::
-
-:::info
-IAM Policies are limited to 6,144 characters, so if the number of secondary accounts will exceed this character limit you can create additional policies in your primary account as we did above. The first policy in the primary account should still be named `CadoResponseCrossAccountPolicy`, and subsequent policies should be named `CadoResponseCrossAccountPolicy_1`, `CadoResponseCrossAccountPolicy_2`, etc.
-:::
-
-:::info
-Wildcards here will not be valid to Cado, roles must be listed in full.
-:::
-
-:::info
-If you created multiple cross account policies in your primary account (to circumvent IAM policy character limits) and your platform was deployed before **version 1.5.1** you will need to adjust the IAM Role for the Cado platform. 
-
-Ensure that the `myCadoResponseRole` inline policy attached to the platform's IAM Role contains:
-
-```json
-{
-    "Action": [
-            "iam:GetPolicy",
-            "iam:GetPolicyVersion"
-    ],
-    "Resource": "arn:aws:iam::*:policy/CadoResponseCrossAccountPolicy*",
-    "Effect": "Allow"
-}
-```
-*(the only difference is the trailing "\*"")*
-:::
+Upon submission, Cado will attempt to validate the role, ensuring it's assumable. Once validated, you will see the alias in the list of available accounts, and the role is now ready for use.
 
 
 ## Automated Cross Account Deployment Using CloudFormation StackSets and AWS Organisations or Terraform
