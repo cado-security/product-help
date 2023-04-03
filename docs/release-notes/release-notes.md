@@ -7,6 +7,14 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.40.0
+`Released 2023-04-03`
+- Bug fixes and performance improvements
+
+## v.2.39.0
+`Released 2023-03-30`
+- Bug fixes and performance improvements
+
 ## v.2.38.0
 `Released 2023-03-28`
 - Support for High Availability deployment in AWS
