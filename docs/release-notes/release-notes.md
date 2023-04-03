@@ -8,6 +8,14 @@ sidebar_position: 1
 ## Latest release notes
 
 ## v.2.38.0
+`Released 2023-04-03`
+- Bug fixes and performance improvements
+
+## v.2.39.0
+`Released 2023-03-30`
+- Bug fixes and performance improvements
+
+## v.2.38.0
 `Released 2023-03-28`
 - Support for High Availability deployment in AWS
 - Bug fixes and performance improvements
