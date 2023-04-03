@@ -7,7 +7,7 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
-## v.2.38.0
+## v.2.40.0
 `Released 2023-04-03`
 - Bug fixes and performance improvements
 
