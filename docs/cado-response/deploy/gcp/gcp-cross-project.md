@@ -1,12 +1,12 @@
 ---
-title: Cross-Project Setup
+title: GCP Cross-Project Setup
 hide_title: true
 sidebar_position: 2
 ---
 
 # GCP Cross-Project Importing
 
-After we've created our service account, enabled Cloud Build and other relavent APIs as discussed in the [Overview](/docs/cado-response/deploy/gcp/gcp-settings.md), we can use these principals to import from other GCP projects under the same service acount.
+After creating the service account, enabling Cloud Build and other relevant APIs, and setting up the Primary GCP Project as discussed in the [Overview](/docs/cado-response/deploy/gcp/gcp-settings.md), we can use these principals to import from other GCP projects under the same service acount.
 :::info
 This also allows cross-project importing, meaning images from an instance in `Project-A` can be saved to a bucket in `Project-B`
 :::
