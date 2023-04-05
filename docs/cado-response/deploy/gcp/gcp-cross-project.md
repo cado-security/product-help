@@ -13,6 +13,10 @@ This also allows cross-project importing, meaning images from an instance in `Pr
 
 In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the defualt Cloud Build principal for our primary project.
 
+:::tip
+Cloud Build API needs to be enabled in every GCP project from which you want to collect
+:::
+
 ## Secondary Project Permissions
 
 In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and cloud buid `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Basic -> Editor** role.
