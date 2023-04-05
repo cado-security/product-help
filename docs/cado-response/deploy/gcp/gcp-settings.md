@@ -22,7 +22,9 @@ In order to set up the project for Cado collection you need to
 
 ### Enabling the Cloud Build API for the project
 
-To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/
+To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/.
+
+Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the **'Basic -> Editor'** role permissions. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
 
 ### Defining a bucket for the GCP project
 
