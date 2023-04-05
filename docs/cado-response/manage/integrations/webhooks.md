@@ -80,5 +80,3 @@ We include an example payload and the Teams message it creates (note that the ne
     "text": "**$Title**  \nDetails: $Event"
 }
 ```
-
-![Teams message](/img/teams-message.png)
