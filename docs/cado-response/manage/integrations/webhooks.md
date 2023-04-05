@@ -65,8 +65,6 @@ We include an example payload and the Slack message it creates.
 }
 ```
 
-![Slack message](/img/slack-message.png)
-
 ## Teams Integration
 You can use webhooks to send notifications to a Microsoft Teams channel from the Cado platform.
 
