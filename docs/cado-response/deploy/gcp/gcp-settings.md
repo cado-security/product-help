@@ -8,17 +8,19 @@ sidebar_position: 1
 
 You can acquire compute and storage resources from GCP with the Cado platform by 
 
-1. Setting up the Google project for Cado collection
+1. Setting up the primary GCP project for Cado collection
 2. Setting up a Service Account in GCP
 3. Entering credentials into Cado
 
 The below guide walks through this process.
 
-## Setting up the Google project for Cado collection
+## Setting up the Primary Google Project for Cado collection
 In order to set up the project for Cado collection you need to
 
 * Enable the Cloud Build API for the project 
-* Define a bucket for each GCP Project where images will be stored.
+* Define a bucket for the Primary GCP Project where images will be stored and imported into Cado.
+
+***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google project***
 
 ### Enabling the Cloud Build API for the project
 
@@ -26,12 +28,12 @@ To enable Cloud Build API for a Google project, see the documentation at https:/
 
 Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the **'Basic -> Editor'** role permissions. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
 
-### Defining a bucket for the GCP project
+### Defining a bucket for the Primary GCP Project
 
-Create a bucket in the project that will store the captured raw data from GCP. For more information https://cloud.google.com/storage/docs/creating-buckets
+Create a bucket in the project that will store the captured raw data from across all GCP projects. For more information https://cloud.google.com/storage/docs/creating-buckets
 
 
-## Setting up a Service Account in GCP
+## Setting up a Service Account in Primary GCP Project
 Next, you need to set up a Service Account in GCP. For information on how to do this more see:
 * https://console.cloud.google.com/iam-admin/serviceaccounts
 * https://cloud.google.com/iam/docs/service-accounts
@@ -111,3 +113,6 @@ You can add GCP Credentials to Cado in the **Settings > Cloud > GCP** page.
 You will be asked for a "GCP Project Name" and the "GCP Credentials". These credentials will be a JSON either directly containing the service account credentials, or the Workload Identity Federation credentials 
 
 ![GCP Credentials](/img/gcp-credentials.png)
+
+## Collecting from multiple GCP Projects
+After setting up your primary GCP Projects, to collect from multiple GCP projects follow the instructions in [GCP Cross-Project Setup](./gcp-cross-project.md)
