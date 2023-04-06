@@ -6601,8 +6601,8 @@ webpack-sources@^3.2.2, webpack-sources@^3.2.3:
   resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
 
 webpack@^5.73.0:
-  version "5.74.0"
-  resolved "https://registry.npmjs.org/webpack/-/webpack-5.74.0.tgz"
+  version "5.78.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.78.0.tgz#836452a12416af2a7beae906b31644cb2562f9e6"
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^0.0.51"
