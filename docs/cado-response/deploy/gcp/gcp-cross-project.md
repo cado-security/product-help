@@ -13,7 +13,7 @@ This also allows cross-project importing, meaning images from an instance in `Pr
 
 In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the defualt Cloud Build principal for our primary project.
 
-:::tip
+:::info
 Cloud Build API needs to be enabled in every GCP project from which you want to collect
 :::
 

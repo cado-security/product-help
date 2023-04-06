@@ -20,7 +20,7 @@ In order to set up the project for Cado collection you need to
 * Enable the Cloud Build API for the project 
 * Define a bucket for the Primary GCP Project where images will be stored and imported into Cado.
 
-***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google project***
+***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
 ### Enabling the Cloud Build API for the project
 
@@ -115,4 +115,4 @@ You will be asked for a "GCP Project Name" and the "GCP Credentials". These cred
 ![GCP Credentials](/img/gcp-credentials.png)
 
 ## Collecting from multiple GCP Projects
-After setting up your primary GCP Projects, to collect from multiple GCP projects follow the instructions in [GCP Cross-Project Setup](./gcp-cross-project.md)
+After setting up your Primary GCP Project, to collect from multiple GCP projects follow the instructions in [GCP Cross-Project Setup](./gcp-cross-project.md)
