@@ -7,6 +7,12 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.41.0
+`Released 2023-04-03`
+- New UI and API for managing roles across multiple AWS Accounts
+- Bug fixes and performance improvements
+- (NOTE: This is a required update release - upgrades to any subsquent releases must first upgrade to this release)
+
 ## v.2.40.0
 `Released 2023-04-03`
 - Bug fixes and performance improvements
