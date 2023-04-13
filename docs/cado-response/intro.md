@@ -27,17 +27,9 @@ Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when s
 
 ---------
 
-## Getting Started with Cado Community Edition
-Interested in getting started?  Cado Community Edition is a free, limited version of the Cado platform that lets you analyze:
-
-- Disk images captured in DD format
-- Exports of triaged items from open source forensics tools like KAPE and Velociraptor
-- Sample data - e.g data published by Cado that illustrates different types of issues incident responders might encounter across server-based, container-based and serverless systems in the cloud.
-With Cado Community Edition, users can:
-Navigate files and folders 
-View a  timeline of activities performed on the system
-Analyze captured artifacts for threats and indicators of compromise
-Easily pivot and search across artifacts
+## Getting a license
+- If you do not have a license, please contact sales@cadosecurity.com
+- We also have a free edition of the Cado platform, [Cado Community Edition](community-edition/community-intro)
 
 ## Deploy and Manage Cado in your cloud environment
 You can deploy and manage Cado in either your AWS or Azure environment
