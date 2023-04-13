@@ -7,7 +7,7 @@ sidebar_position: 2
 # Okta OAuth Integration
 
 :::warning
-Okta OAuth integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
+If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
 You can now enable the beta of Okta OAuth Integration in the Cado platform by going to `Settings > SSO > Okta OAuth`.

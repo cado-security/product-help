@@ -7,7 +7,7 @@ sidebar_position: 3
 # Okta SAML Integration
 
 :::warning
-Okta SAML integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
+If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
 You can now enable the beta of Okta SAML Integration in the Cado platform by going to `Settings > SSO > Okta SAML`.

@@ -7,7 +7,7 @@ sidebar_position: 1
 # Azure AD OAuth Integration
 
 :::warning
-Azure AD OAuth integration is currently in beta.  If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
+If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
 :::
 
 You can now enable the beta of Azure AD OAuth Integration in the Cado platform by going to "Settings > SSO > Microsoft OAuth".

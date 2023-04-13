@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Configuring Automation Rules
 
-**This feature is currently in beta - to enable this feature please reach out to Customer Support**
+**This feature is currently in beta - to enable this feature go to Settings > Experiments**
 
 The Cado platform allows you to define automation rules to better prepare for incidents in cloud environments. These automation rules allow you to define in advance
 * What data you want to collect
