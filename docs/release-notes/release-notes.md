@@ -7,6 +7,22 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.43.0
+`Released 2023-04-25`
+- Improvements in handling multiple GCP projects
+- Temporarily suspending support for PCAP processing due to unpatched vulnerability in Debian package
+- Bug fixes and performance improvements
+
+## v.2.42.0
+`Released 2023-04-20`
+- Bug fixes and performance improvements
+
+## v.2.41.0
+`Released 2023-04-11`
+- New UI and API for managing roles across multiple AWS Accounts
+- Bug fixes and performance improvements
+- *(NOTE: This is a required update release - upgrades to any subsquent releases must first upgrade to this release)*
+
 ## v.2.40.0
 `Released 2023-04-03`
 - Bug fixes and performance improvements
