@@ -6,7 +6,7 @@ sidebar_position: 1
 
 
 # How to Add a Load Balancer in AWS
-An Application Load Balancer can be placed in front of the Cado web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the provided Terraform or Cloudformation deployment scripts. Cado currently doesn’t scale across multiple Availability Zones so this doesn’t provide redundancy- but this will be added in the future.
+An Application Load Balancer can be placed in front of the Cado web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the provided Terraform or Cloudformation deployment scripts.
 
 ![AWS Load Balancer 1](/img/aws-lb-1.png)
 
