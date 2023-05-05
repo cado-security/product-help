@@ -7,6 +7,11 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.44.0
+`Released 2023-05-05`
+- Ability to automatically upload logs to Cado as part of support process
+- Bug fixes and performance improvements
+
 ## v.2.43.0
 `Released 2023-04-25`
 - Improvements in handling multiple GCP projects
