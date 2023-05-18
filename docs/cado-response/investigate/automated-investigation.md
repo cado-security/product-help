@@ -44,3 +44,6 @@ Each action requires different permissions and is controlled using IAM roles. Th
 *NOTE: In order to perform an action on an asset in a different AWS account, you must have [Cross Account roles](/cado-response/deploy/aws/iam/cross-account-creation.md) configured and have added the relevant permission to the role in the different account*
 
 
+
+## OpenAI Integration
+To enable the [interactive incident response, GPT, feature](https://www.cadosecurity.com/cado-gpt-3-interactive-incident-response/) under Settings > Advanced. Make sure to provide a valid API Key, and enabling GPT-Indexing.
