@@ -12,7 +12,7 @@ Browse Disk shows a hierarchical view of the file system. Cado marks directory s
 
 ![Browse Disk](/img/browse-disk.png)
 
-Clicking on a file takes you to the details for that file, inlcuding links to search Open Threat Exchange (OTX) and VirusTotal if you have those [set up](detections.md).
+Clicking on a file takes you to the details for that file, including links to search Open Threat Exchange (OTX) and VirusTotal if you have those [set up](detections.md). Cado will index and show a preview of the text in a file, up to the first 1000 lines. You can download the full contents of the file.
 
 ![File Details 1](/img/file-details-1.png)
 
