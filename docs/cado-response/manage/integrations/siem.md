@@ -15,7 +15,7 @@ You can configure your SIEM system to automatically check for new files in the S
 
 ## Getting Started
 
-Before you can export the timeline you need to enable SIEM integration found under **Settings -> Platform Settings -> Integrations -> SIEM**. After it is enabled you can select what type of events you wish to be exported such as **key events** (malicious and suspicious events), **executed processes**, **network logons** and **files accessed**. Ensure that at least on type of event is included to continue. You also need to set the S3 bucket and S3 folder you wish for the timeline to be exported to.
+Before you can export the timeline you need to enable SIEM integration found under **Settings -> Platform Settings -> Integrations -> SIEM**. After it is enabled you will be asked to set the S3 bucket and S3 folder you wish for the timeline to be exported to.
 
 ![SIEM Settings in Cado](/img/siem-settings.png)
 
