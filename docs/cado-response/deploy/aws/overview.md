@@ -86,6 +86,10 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
     The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template json file.
     :::
 
+## AWS CloudFormation High Availability
+
+The Cado platform can be deployed in a High Availability (HA) configuration allowing a multi-AZ deployment using managed services and an auto-scaling group with a load balancer. To deploy with HA, please contact Cado Sales team at sales@cadosecurity.com.
+
 ### Deployment Time
 
 Deploying the CloudFormation stack will take approximately fifteen minutes, followed by another ten minutes for the completed stack to run an installation and update process.
