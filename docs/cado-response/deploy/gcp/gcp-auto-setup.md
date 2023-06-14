@@ -15,6 +15,9 @@ The actions in these scripts can take a few minutes to take effect, as such, it'
 
 To make use of these scripts, it's best to upload them using the gcloud terminal. To do this, navigate to the GCP console and click the 'Activate Cloud Shell' button in the top-right corner.
 
+The scripts can be found in our Cado GCP Scripts github:
+https://github.com/cado-security/gcp-setup 
+
 <img src="/img/gcp-shell.png" alt="Cloud Shell" width="350"/>
 
 Once they've been uploaded to your user area in the gcloud terminal, you can run them with bash.
