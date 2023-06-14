@@ -14,6 +14,10 @@ You can acquire compute and storage resources from GCP with the Cado platform by
 
 The below guide walks through this process.
 
+:::tip
+This setup can be automated using our [GCP Automated Setup](./gcp-auto-setup.md)
+:::
+
 ## Setting up the Primary Google Project for Cado collection
 In order to set up the project for Cado collection you need to
 
