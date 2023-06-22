@@ -44,6 +44,7 @@ To create an rule, navigate to the Rules tab and hit "Create Rule" button.
 Enter the name of the rule and a description. Specify
 
 * ***Environments (optional)*** - the environments specifying the assets against which the rule will run. If this is left blank, this rule will trigger against any alert identifying an affected workloads
+    * *Monitoring Enabled* - if monitoring is checked then GuardDuty Monitoring will be enabled on all regions in the cloud accounts specified within a particular Environment(s), this will run every 5 minutes for new alerts that contain a minimum severity of 5
 * ***Alert Type***  - the type of alert that will trigger the rule (e.g. GuardDuty)
 * ***Asset Type*** - the type of cloud resource to which the rule will apply (e.g. EC2)
 * ***Investigation Type*** - the type of invesigation to perform. This currently has three options
