@@ -10,7 +10,7 @@ sidebar_position: 2
 
 The Cado platform allows you to define automation rules to better prepare for incidents in cloud environments. These automation rules allow you to define in advance
 * What data you want to collect
-* The alert triggers taht will trigger a response
+* The alert triggers that will trigger a response
 * Against which cloud resources, and
 * What response actions you want to take
 
@@ -44,14 +44,14 @@ To create an rule, navigate to the Rules tab and hit "Create Rule" button.
 Enter the name of the rule and a description. Specify
 
 * ***Environments (optional)*** - the environments specifying the assets against which the rule will run. If this is left blank, this rule will trigger against any alert identifying an affected workloads
-    * *Monitoring Enabled* - if monitoring is checked then GuardDuty Monitoring will be enabled on all regions in the cloud accounts specified within a particular Environment(s), this will run every 5 minutes for new alerts that contain a minimum severity of 5
+    * *Monitoring Enabled* - if monitoring is checked then GuardDuty Monitoring will be enabled on all regions in the cloud accounts specified within a particular Environment(s), this will run every 5 minutes to check for new alerts that contain a minimum severity of 5
 * ***Alert Type***  - the type of alert that will trigger the rule (e.g. GuardDuty)
 * ***Asset Type*** - the type of cloud resource to which the rule will apply (e.g. EC2)
 * ***Investigation Type*** - the type of invesigation to perform. This currently has three options
     * *Default* - Performs triage collection from any workload specified in the alert
     * *Triage* - Performs triage collection from any workload specified in the alert
     * *Full* - Performs full disk collection from any workload specified in the alert
-* ***Response Actions (optional)*** - the actions to take against machines upon which malicious activities have been detected, and machines upon which suspicous activities have been detected. Cado currently supports shutting down EC2 instances, and isolating the IAM roles that the EC2  instance assumes.
+* ***Response Actions (optional)*** - the actions to take against machines upon which malicious activities have been detected, and machines upon which suspicous activities have been detected. Cado currently supports shutting down EC2 instances, isolating the IAM roles of that the EC2 instance assumes and isolate security group attached to the EC2.
 
 Hit 'Save' to create the rule
 
