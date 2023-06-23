@@ -19,6 +19,8 @@ Automation in Cado is based upon three main concepts
 * **Environments** - Environments are sets of one or more scopes that you want to treat similarly - for example an application that spans multiple services across multiple cloud environments
 * **Rules** - Rules are sets of actions that will automatically take place in the event that an alert gets triggered
 
+to give an example of how the rules work lets take the following. A GuardDuty Alert has been raised with a severirty level of 5, the alert is for an EC2 that has been compromised, we then check the automation rules to determine if ther is a rule set up for GuardDuty alerts for EC2  in region & accouint the EC2 reside in. If a rule matches we then prform the investigation based on the Investigation type defined in the rule i.e full investigation. After the import is complete we can check the click the automated investigation tab to see if all malicous and suspispious activity in relation to the compromised EC2. You can then select the piece of evidence and view the cloud resource there a panel will open with the metadata and actions tab. the metadata tab is just metadata about the resource and the actions tab is the remediationactions that can be preformed on the compromised resource. To autmate the remediation actions you can enable this in the settings -> advanced which will do the above until the full investiagation is complete and will automatically invoke the actions defined in the automation rules for malicious or suspicious activity 
+
 ## Creating a Scope
 
 To create a scope, navigate to the Scopes tab and hit "Create Scope" button. Enter the name of the scope, the regions, the accounts, the services covered and any tags that identify your services. If you specify multiple tags, resources tagged with any one of those tags will be included.
@@ -70,3 +72,11 @@ Each action requires different permissions and is controlled using IAM roles. Th
 You can configure multiple response rules. In the event that a resource is covered by multiple rules, the first rule in the list applies
 
 ![Manage Rules](/img/rules-list.png)
+
+## Example Scenario ##
+
+A GuardDuty Alert has been raised with a severity level of 5. The alert is for an EC2 that has been compromised. An investigation will be triggered, but before this, we check the Automation Rules defined - if there is a rule set up for GuardDuty alerts for EC2  in the Region & Account the compromised EC2 resides in.
+If a rule matches, we then perform the investigation based on the Investigation type defined in the rule (i.e full investigation). After the import is complete we can check the automated investigation tab to view all malicious and suspicious activity in relation to the compromised EC2.
+You can then select the cloud resource and view the cloud resource. A panel will open with the metadata and actions tab. The metadata tab contains metadata about the resource and the Actions tab contains actions which can be performed on the compromised resource.
+
+To automate the remediation actions on the compromised resource, you can enable this under the Settings -> Advanced tab, this would avoid you having to manually invoke the actions via the cloud resource panel. This will automatically invoke the actions defined in the Automation Rule for malicious or suspicious activity after the investigation is complete.
