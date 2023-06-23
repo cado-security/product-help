@@ -76,7 +76,9 @@ You can configure multiple response rules. In the event that a resource is cover
 ## Example Scenario ##
 
 A GuardDuty Alert has been raised with a severity level of 5. The alert is for an EC2 that has been compromised. An investigation will be triggered, but before this, we check the Automation Rules defined - if there is a rule set up for GuardDuty alerts for EC2  in the Region & Account the compromised EC2 resides in.
-If a rule matches, we then perform the investigation based on the Investigation type defined in the rule (i.e full investigation). After the import is complete we can check the automated investigation tab to view all malicious and suspicious activity in relation to the compromised EC2.
+If a rule matches, we then perform the investigation based on the Investigation type defined in the rule (i.e full investigation).
+
+After the import is complete we can check the automated investigation tab to view all malicious and suspicious activity in relation to the compromised EC2.
 You can then select the cloud resource and view the cloud resource. A panel will open with the metadata and actions tab. The metadata tab contains metadata about the resource and the Actions tab contains actions which can be performed on the compromised resource.
 
 To automate the remediation actions on the compromised resource, you can enable this under the Settings -> Advanced tab, this would avoid you having to manually invoke the actions via the cloud resource panel. This will automatically invoke the actions defined in the Automation Rule for malicious or suspicious activity after the investigation is complete.
