@@ -7,6 +7,22 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.52.0
+`Released 2023-06-27`
+- Ability to add groups of users to projects
+- Bug fixes and performance improvements
+
+## v.2.51.0
+`Released 2023-06-21`
+- New tabular timeline view
+- Bug fixes and performance improvements
+
+## v.2.49.0
+`Released 2023-06-06`
+- Changes to the way Azure subscriptions and display names appear
+- Bug fixes and performance improvements
+
+
 ## v.2.47.0
 `Released 2023-05-30`
 - Bug fixes and performance improvements
