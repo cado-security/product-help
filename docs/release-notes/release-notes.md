@@ -7,6 +7,15 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.56.0
+`Released 2023-07-20`
+- Bug fixes and performance improvements
+
+## v.2.55.0
+`Released 2023-07-18`
+- Support acquiring GCP systems from Azure-based system
+- Bug fixes and performance improvements
+
 ## v.2.52.0
 `Released 2023-06-27`
 - Ability to add groups of users to projects
