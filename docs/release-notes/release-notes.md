@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## v.2.55.0
 `Released 2023-07-18`
-- Support acquiring GCP systems from Azure-based system
+- Support acquiring GCP systems from Azure-based Cado platform
 - Bug fixes and performance improvements
 
 ## v.2.52.0
