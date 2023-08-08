@@ -8,6 +8,10 @@ sidebar_position: 3
 
 The Cado platform will collect key logs and forensic artifacts from Azure Kubernetes Service containers.
 
+:::info
+Due to the way the Cado platform interacts with Kubernetes, it is not possible to import containers built from a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image.
+:::
+
 ## Private Cluster Support
 As of release v2.31.0, the Cado platform now supports capture of AKS Private Clusters. It should be noted that the Cado platform
 uses the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke) to achieve this functionality.
