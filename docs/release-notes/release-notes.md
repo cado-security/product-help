@@ -7,6 +7,27 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.61.0
+`Released 2023-08-07`
+- Bug fixes and performance improvements
+
+## v.2.60.0
+`Released 2023-08-03`
+- Bug fixes and performance improvements
+
+## v.2.59.0
+`Released 2023-08-02`
+- Improved ability to display deleted files during investigations
+- Bug fixes and performance improvements
+
+## v.2.58.0
+`Released 2023-08-01`
+- Bug fixes and performance improvements
+
+## v.2.57.0
+`Released 2023-07-25`
+- Bug fixes and performance improvements
+
 ## v.2.56.0
 `Released 2023-07-20`
 - Bug fixes and performance improvements
