@@ -7,6 +7,29 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.65.0
+`Released 2023-09-06`
+- Deprecatted graph view and Overview tab
+- Bug fixes and performance improvements
+
+## v.2.65.0
+`Released 2023-08-31`
+- Deprecatted graph view and Overview tab
+- Bug fixes and performance improvements
+
+## v.2.64.0
+`Released 2023-08-25`
+- 
+- Bug fixes and performance improvements
+
+## v.2.63.0
+`Released 2023-08-21`
+- Bug fixes and performance improvements
+
+## v.2.62.0
+`Released 2023-08-18`
+- Bug fixes and performance improvements
+
 ## v.2.61.0
 `Released 2023-08-07`
 - Bug fixes and performance improvements

@@ -31,4 +31,4 @@ Lambda automatically integrates with CloudWatch Logs and pushes all logs from yo
 
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)
 
-*Note:* Cado does not currently support importing Linux container-based Lambda functions. In this case, these containers will not be listed in the available LAmbda functions for import
+*Note:* Cado imports the image of container-based Lambda functions from the Amazon Elastic Container Registry
