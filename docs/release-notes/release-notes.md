@@ -7,19 +7,29 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
-## v.2.65.0
-`Released 2023-09-06`
-- Deprecatted graph view and Overview tab
+## v.2.70.0
+`Released 2023-09-20`
+- Additional Health Checks leveraging Role Policy Simulation (NOTE: Role change required)
+- New, consistent import experience across evidence types
 - Bug fixes and performance improvements
+
+## v.2.68.0
+`Released 2023-09-11`
+- Bug fixes and performance improvements
+
+## v.2.66.0
+`Released 2023-09-06`
+- Deprecated graph view and Overview tab
+- Bug fixes and performance improvements
+
 
 ## v.2.65.0
 `Released 2023-08-31`
-- Deprecatted graph view and Overview tab
 - Bug fixes and performance improvements
 
 ## v.2.64.0
 `Released 2023-08-25`
-- 
+- Additional health checks
 - Bug fixes and performance improvements
 
 ## v.2.63.0
