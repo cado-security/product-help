@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 # Importing Data
-There are a number of options for importing data into the Cado platform. Once you select the data you would like to import, the Cado platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](../../manage/workers.md#processing)** for more details.
+There are a number of options for importing data into the Cado platform. Once you select the data you would like to import, the Cado platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](/cado-response/manage/workers.md#processing)** for more details.
 
 Cado supports a wide range of **[file types](data-types/filetypes.md)** across a number of  **[cloud services](data-types/import-types.md)** which can be imported.  To begin importing data, you simply select a Project and click the **Import** button 
 
@@ -19,7 +19,7 @@ Based on the evidence you would like to import, follow the on-screen instruction
 You can import evidence from cloud services across AWS, Azure and GCP, provided you have the correct credentials entered into the system, and your role has been assigned access to those credentials. **[Learn more](import-from-cloud.md)**
 
 ### Importing from XDR
-You can import data into the Cado platform via an eXtended Detection and Response (XDR) system. Currently Cado supports importing from SentinelOne. For more infomation about setting up this integration see the [SentinelOne Integration Setup page](../../../manage/integrations/xdr/sentinelone.md)
+You can import data into the Cado platform via an eXtended Detection and Response (XDR) system. Currently Cado supports importing from SentinelOne. For more infomation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md)
 
 Once the integration is set up, from within a project click **Import from XDR**
 
@@ -40,7 +40,7 @@ It can also generate credentials for Cado Host to upload evidence, such as a pre
 For more information see the [Cado Host Documentation](/cado-host/intro)
 
 ### Importing from URL
-You can import supported [file types](../data-types/filetypes.md) from a URL where you are storing forensic artifacts collected from on-premises systems.
+You can import supported [file types](data-types/filetypes.md) from a URL where you are storing forensic artifacts collected from on-premises systems.
 
 > ![On-Premises URL](/img/on-premises-url.png)
 
