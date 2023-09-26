@@ -1,7 +1,7 @@
 ---
 title: Automation Rules (Beta)
 hide_title: true
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Configuring Automation Rules

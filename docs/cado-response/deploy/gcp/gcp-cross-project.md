@@ -1,7 +1,7 @@
 ---
 title: GCP Cross-Project Setup
 hide_title: true
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # GCP Cross-Project Importing

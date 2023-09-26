@@ -1,7 +1,7 @@
 ---
 title: Managing Projects
 hide_title: true
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Managing Projects
