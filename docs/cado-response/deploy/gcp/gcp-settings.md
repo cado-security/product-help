@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: GCP Settings
 hide_title: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Setting up Import from GCP
