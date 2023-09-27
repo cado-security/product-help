@@ -83,4 +83,19 @@ Customer hereby grants to Company the right to use its logo, service mark, and n
 
 14. **Miscellaneous**
 
-This Agreement does not create any agency or partnership relationship between the parties hereto.  This Agreement, and any dispute arising out of or in connection with it or its subject matter, whether of a contractual or non-contractual nature, shall be governed by and construed in accordance with the laws of Delaware (if Customer is located in the United States, or England (if Customer is located outside of the United States).  The sole and exclusive jurisdiction and venue for any litigation arising out of this Agreement shall be the courts of Delaware (if Customer is located in the United States, or England (if Customer is located outside of the United States). This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior agreements and understandings whether written or oral, express or implied.  If any provision of this Agreement is held invalid, illegal or unenforceable by a court of competent jurisdiction, such shall not affect any other provision of this Agreement, which shall remain in full force and effect.  No amendment or alteration of the terms of this Agreement shall be effective unless made in writing and executed by both parties hereto.  A failure or delay in exercising any right in respect to this Agreement will not be presumed to operate as a waiver, and a single or partial exercise of any right will not be presumed to preclude any subsequent or further exercise of that right or the exercise of any other right.  Any modification or waiver of any provision of this Agreement shall not be effective unless made in writing.  Any such waiver shall be effective only in the specific  instance and for the purpose given.
+This Agreement does not create any agency or partnership relationship between the parties hereto. This
+Agreement, and any dispute arising out of or in connection with it or its subject matter, whether of a contractual
+or non-contractual nature, shall be governed by and construed in accordance with the laws of Delaware (if
+Customer is located in the United States), or England (if Customer is located outside of the United States). The
+sole and exclusive jurisdiction and venue for any litigation arising out of this Agreement shall be the courts of
+Delaware (if Customer is located in the United States), or England (if Customer is located outside of the United
+States). This Agreement constitutes the entire agreement between the parties with respect to the subject matter
+hereof and supersedes all prior agreements and understandings whether written or oral, express or implied. If
+any provision of this Agreement is held invalid, illegal or unenforceable by a court of competent jurisdiction,
+such shall not affect any other provision of this Agreement, which shall remain in full force and effect. No
+amendment or alteration of the terms of this Agreement shall be effective unless made in writing and executed
+by both parties hereto. A failure or delay in exercising any right in respect to this Agreement will not be
+presumed to operate as a waiver, and a single or partial exercise of any right will not be presumed to preclude
+any subsequent or further exercise of that right or the exercise of any other right. Any modification or waiver of
+any provision of this Agreement shall not be effective unless made in writing. Any such waiver shall be
+effective only in the specific instance and for the purpose given.
