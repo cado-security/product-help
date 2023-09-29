@@ -9,7 +9,7 @@ You can deploy the Cado platform within your GCP cloud environment via a Terrafo
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
     - a link to the Cado GCP image
-    - the latest Cado Terraform module (**gcp.zip**) for deploying into GCP
+    - the latest Cado Terraform module (gcp.zip) for deploying into GCP
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
