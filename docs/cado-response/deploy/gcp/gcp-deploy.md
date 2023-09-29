@@ -9,7 +9,7 @@ You can deploy the Cado platform within your GCP cloud environment via a Terrafo
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
     - a link to the Cado GCP image
-    - the latest Cado Terraform module (**gcp.zip**) for deploying into GCP
+    - the latest Cado Terraform module (gcp.zip) for deploying into GCP
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
@@ -22,18 +22,18 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     - roles/iam.roleAdmin
     - roles/iam.securityAdmin
 4. Ensure the following **[APIs](https://console.cloud.google.com/apis/library)** are enabled in the project:
-    - Compute Engine
-    - Cloud Build
-    - Cloud Filestore
-    - Secret Manager
-    - Cloud Resource Manager
-    - IAM Service Account Credentials
-    - Cloud Storage
+    - **[Compute Engine](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
+    - **[Cloud Build](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
+    - **[Cloud Filestore](https://console.cloud.google.com/marketplace/product/google/firestore.googleapis.com)**
+    - **[Secret Manager](https://console.cloud.google.com/marketplace/product/google/secretmanager.googleapis.com)**
+    - **[Cloud Resource Manager](https://console.cloud.google.com/marketplace/product/google/cloudresourcemanager.googleapis.com)**
+    - **[IAM Service Account Credentials](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
+    - **[Cloud Storage](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
 5. Run 'gcloud auth activate-service-account --key-file <key_file>’ where key_file is the path to your GCP service account credentials.json. 
 6. Run ‘gcloud config set project <project_id>’
 7. Extract gcp.zip This is the ZIP that was provided by Cado Sales
 8. Change directories into gcp/ which was extracted in the previous step.
-9. Customize the file gcpVars.tfvars by filling in values:
+9. Customize the file `gcpVars.tfvars` by filling in values:
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
@@ -41,7 +41,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     | `credentials_file` | Path to your GCP service account credentials json | `../credentials.json` |
     | `project_id` | ID of the project Cado will be deployed into | `cado-12839`  |
     | `region` | The region which Cado will be deployed to | `us-east1` |
-    | `image` | The name of the image provided by Cado ||
+    | `image` | The name of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-8-0` |
     | `tags` | Tags to be applied to your Cado instance ||
     | `vm_size` | Size of main instance | `n2d-standard-8` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
