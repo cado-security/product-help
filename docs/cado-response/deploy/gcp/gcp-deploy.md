@@ -29,9 +29,11 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     - **[Cloud Resource Manager](https://console.cloud.google.com/marketplace/product/google/cloudresourcemanager.googleapis.com)**
     - **[IAM Service Account Credentials](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
     - **[Cloud Storage](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
+
 5. Run 'gcloud auth activate-service-account --key-file <key_file>’ where key_file is the path to your GCP service account credentials.json. 
 6. Run ‘gcloud config set project <project_id>’
 7. Extract gcp.zip This is the ZIP that was provided by Cado Sales.
+
 8. Change directories into gcp/ which was extracted in the previous step.
 9. Customize the file `gcpVars.tfvars` by filling in values:
 
@@ -41,8 +43,8 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     | `credentials_file` | Path to your GCP service account credentials json | `../credentials.json` |
     | `project_id` | ID of the project Cado will be deployed into | `cado-12839`  |
     | `region` | The region which Cado will be deployed to | `us-east1` |
-    | `image` | The name of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-8-0` |
-    | `tags` | Tags to be applied to your Cado instance ||
+    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-8-0` |
+    | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
     | `vm_size` | Size of main instance | `n2d-standard-8` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
     | `allowed_ips` | List of incoming IPs  | `[“1.2.3.6/32”]` |
