@@ -30,8 +30,8 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     - **[IAM Service Account Credentials](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
     - **[Cloud Storage](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
 
-5. Run 'gcloud auth activate-service-account --key-file <key_file>’ where key_file is the path to your GCP service account credentials.json. 
-6. Run ‘gcloud config set project <project_id>’
+5. Run `gcloud auth activate-service-account --key-file <key_file>` where key_file is the path to your GCP service account credentials.json. 
+6. Run `gcloud config set project <project_id>`
 7. Extract gcp.zip This is the ZIP that was provided by Cado Sales.
 
 8. Change directories into gcp/ which was extracted in the previous step.
