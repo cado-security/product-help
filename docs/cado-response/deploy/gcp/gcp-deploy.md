@@ -24,7 +24,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
 4. Ensure the following **[APIs](https://console.cloud.google.com/apis/library)** are enabled in the project:
     - **[Compute Engine](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
     - **[Cloud Build](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
-    - **[Cloud Filestore](https://console.cloud.google.com/marketplace/product/google/firestore.googleapis.com)**
+    - **[Cloud Filestore](https://console.cloud.google.com/marketplace/product/google/file.googleapis.com)**
     - **[Secret Manager](https://console.cloud.google.com/marketplace/product/google/secretmanager.googleapis.com)**
     - **[Cloud Resource Manager](https://console.cloud.google.com/marketplace/product/google/cloudresourcemanager.googleapis.com)**
     - **[IAM Service Account Credentials](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
