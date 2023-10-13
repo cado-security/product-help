@@ -7,6 +7,39 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.78.0
+`Released 2023-10-13`
+- Readiness testing in beta
+- Bug fixes and performance improvements
+
+## v.2.77.0
+`Released 2023-10-12`
+- CrowdStrike integration in beta
+- Bug fixes and performance improvements
+
+## v.2.76.0
+`Released 2023-10-09`
+- Bug fixes and performance improvements
+
+## v.2.75.0
+`Released 2023-10-06`
+- Bug fixes and performance improvements
+
+## v.2.74.0
+`Released 2023-10-05`
+- Improvements to search within facet filters
+- Bug fixes and performance improvements
+
+## v.2.72.0
+`Released 2023-09-29`
+- Ability to sort items within facet filters
+- Bug fixes and performance improvements
+
+## v.2.71.0
+`Released 2023-09-27`
+- Bug fixes and performance improvements
+
+
 ## v.2.70.0
 `Released 2023-09-20`
 - Additional Health Checks leveraging Role Policy Simulation (NOTE: Role change required)
