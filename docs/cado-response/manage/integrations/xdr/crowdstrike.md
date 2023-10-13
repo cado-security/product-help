@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # CrowdStrike Integration (Beta)
 
-Integrating with CrowdStrike Falcom allows you to select and kick off triage acquisition on hosts with the Falcon Sensor installed using CrowdStrike Real Time Response.
+Integrating with CrowdStrike Falcon allows you to select and kick off triage acquisition on hosts with the Falcon Sensor installed using CrowdStrike Real Time Response.
 
 Once you have kicked off the triage acquisition CrowdStrike Falcon Real Time Response will locate the endpoint running CrowdStrike Falcon Sensor
 Run a Cado Host command on the endpoint that performs collection of the triage package and uploads it to Cado for processing
