@@ -55,7 +55,7 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     `terraform init` followed by `terraform plan`.  Once you confirm the plan looks correct, you can then run `terraform apply -var-file=gcpVars.tfvars`
 11. Enable GCP Services **Compute Engine**, **Service Accounts** and **Cloud Build** in the [Cloud Build settings page](https://console.cloud.google.com/cloud-build/settings/service-account?)
 <img src="/img/cloudbuild-settings.png" alt="Cloud Build Settings" width="500"/>
-12. Find your Cado instance in the Compute Engine portal, navigate to its public IP address in the browser
+12. Find your Cado instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
 13. Login with:
     - Username: admin
     - Password: <instance_id> (found in the Compute Engine console for your instance e.g. 8784481508256766876)
