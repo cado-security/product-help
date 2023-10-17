@@ -28,18 +28,17 @@ The following instructions enable cross-account access from the primary account 
 
 ### Prepare Secondary Account
 
-- In your secondary account navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", select "Another AWS Account" and enter the account ID of your primary account (`111111111111` in this example).
+- In your secondary account navigate to **IAM > Policies**- and click **Create Policy**. In the Permissions Wizard, attach or paste the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json), then click **Next**. Give the Policy a name, then click **Create Policy**.
+
+- After your Policy is created, navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", click **Another AWS Account** and enter the account ID of your primary account (`111111111111` in this example).
 
 ![Create Role](/img/create-role.png)
 
-- Click **Next**, and in the permissions wizard attach the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json) then click **Next**, then **Next** again.
-
-- Click through to review and give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example).
+- Add the policy you recently created in the steps above, then click **Next** give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example). 
 
 :::warning
 If the secondary account role name does not contain the text `CadoResponse` (case sensitive), cross account acquisition will not work.
 :::
-
 
 :::info
 The Cado Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
