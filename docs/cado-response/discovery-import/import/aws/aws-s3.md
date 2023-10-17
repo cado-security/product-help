@@ -10,7 +10,7 @@ The Cado platform supports acquistion of data from AWS S3 buckets. The two main 
 * Analyzing disk images or zip files that have been uploaded to an S3 bucket as part of an investigation (e.g. as part of using Cado Community Edition)
 * Analyzing the contents of an S3 bucket for any uploaded content that could be part of an incident
 
-While the project is open, select *Import - Artifacts from S3*. Select or search for the bucket you require. Navigate and select the objects you need, or hit "Import Entire Bucket".
+Select or search for the bucket you require. Navigate and select the objects you need, and click the 'Import n objects' button. Confirm the details and click 'Start Import'.
 
 ![Import S3 Bucket](/img/aws-s3.png)
 

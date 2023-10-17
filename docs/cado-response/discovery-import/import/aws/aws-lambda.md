@@ -9,17 +9,9 @@ sidebar_position: 6
 
 The Cado platform can acquire AWS Lambda functions which are serverless computing services.
 
-## Importing
-
-To import an AWS Lambda function, select or create a project and navigate to the import page by clicking the **Import** button. The click the **AWS Lambda Function** button.
-
-![Import Data](/img/import.png)
-
-Select the region the desired function is located in, and you should see a table of functions. To acquire the function, click the **Acquire function** button.
+Select the region the desired function is located in, and you should see a table of functions. Select the function you wisk to acquire, confirm the details and hit "Start Import"
 
 ![Import Lambda Function](/img/import-lambda.png)
-
-You will then be taken to the confirmation page where you can click the **View Processing** button to see the progress of the acquisition.
 
 ## Output
 
