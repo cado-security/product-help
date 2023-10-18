@@ -1,5 +1,5 @@
 ---
-title: GCP Cross-Project Setup
+title: Cross-Project Setup
 hide_title: true
 sidebar_position: 5
 ---

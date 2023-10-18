@@ -8,6 +8,10 @@ sidebar_position: 5
 
 The Cado platform will collect key logs and forensic artifacts from AWS EKS containers.
 
+:::info
+Due to the way the Cado platform interacts with Kubernetes, it is not possible to import containers built from a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image.
+:::
+
 ## EKS RBAC Configuration
 You'll need to add the appropriate configued Cado IAM role to your EKS RBAC configuration. Without 
 this you will see an error message saying that `This role is not configured to authorize with this EKS cluster`.

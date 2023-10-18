@@ -8,6 +8,10 @@ sidebar_position: 5
 
 The Cado platform will collect key logs and forensic artifacts from Google Cloud Kubernetes Engine containers.
 
+:::info
+Due to the way the Cado platform interacts with Kubernetes, it is not possible to import containers built from a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image.
+:::
+
 ## Requirements
 
 To import GKE containers with Cado Response, the `iam.serviceAccounts.implicitDelegation` IAM permission added to the Service Account.

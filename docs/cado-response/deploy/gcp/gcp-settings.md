@@ -14,6 +14,10 @@ You can acquire compute and storage resources from GCP with the Cado platform by
 
 The below guide walks through this process.
 
+:::tip
+This setup can be automated using our [GCP Automated Setup](./gcp-auto-setup.md)
+:::
+
 ## Setting up the Primary Google Project for Cado collection
 In order to set up the project for Cado collection you need to
 
@@ -22,11 +26,37 @@ In order to set up the project for Cado collection you need to
 
 ***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
+### Creating a Cado Role
+To appriopriatly scope a service account for Cado to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section un the **IAM and Admin** tab. Create a custom role and add the following permissions:
+```
+  cloudbuild.builds.create
+  cloudbuild.builds.get
+  compute.disks.get
+  compute.disks.useReadOnly
+  compute.globalOperations.get
+  compute.images.create
+  compute.instances.get
+  compute.instances.list
+  container.clusters.get
+  container.clusters.list
+  container.pods.exec
+  container.pods.get
+  container.pods.list
+  iam.serviceAccounts.getAccessToken
+  iam.serviceAccounts.implicitDelegation
+  resourcemanager.projects.get
+  storage.buckets.get
+  storage.buckets.list
+  storage.objects.get
+  storage.objects.list
+```
+If you'll be wanting to use this Role across multiple projects, you can create it at the Organization level- this is required if you'll be wanting to acquire assets from multiple projects under one service account.
+
 ### Enabling the Cloud Build API for the project
 
 To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/.
 
-Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the **'Basic -> Editor'** role permissions. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
+Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the custom role we created in the previous step **'Customer -> <role_name>'**. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
 
 ### Defining a bucket for the Primary GCP Project
 
@@ -39,9 +69,9 @@ Next, you need to set up a Service Account in GCP. For information on how to do 
 * https://cloud.google.com/iam/docs/service-accounts
 
 ### Required Access
-Both the Cado service account and the service account for the Cloud API need the 'Basic -> Editor' role:
+Both the Cado service account and the service account for the Cloud API need the custom role's permissions 'Custom -> <role_name>' role:
 
-![Editor Role](/img/gcp-access.png)
+![Custom Role](/img/gcp-custom-role.png)
 
 To import GKE containers, the Cado service account also needs the `iam.serviceAccounts.implicitDelegation` IAM permission.
 
