@@ -32,11 +32,13 @@ Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when s
 - We also have a free edition of the Cado platform, [Cado Community Edition](community-edition/community-intro)
 
 ## Deploy and Manage Cado in your cloud environment
-You can deploy and manage Cado in either your AWS or Azure environment
+You can deploy and manage Cado in either your AWS, Azure or GCP environment
 
 **[Learn how in AWS >](deploy/aws/overview.md)**
 
 **[Learn how in Azure >](deploy/azure/azure-deploy.md)**
+
+**[Learn how in GCP (Beta) >](deploy/gcp/gcp-deploy.md)**
 
 ### Processing Data
 After deploying Cado, data can be automatically acquired from the cloud or imported from a number of supported sources. 

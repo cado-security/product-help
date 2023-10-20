@@ -52,10 +52,8 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
      We recommend a minimum setting of 500GB for `vol_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
     :::
 10. Deploy by running the following commands in the directory `gcp/`
-    `terraform init` followed by `terraform plan`.  Once you confirm the plan looks correct, you can then run `terraform apply -var-file=gcpVars.tfvars`
-11. Enable GCP Services **Compute Engine**, **Service Accounts** and **Cloud Build** in the [Cloud Build settings page](https://console.cloud.google.com/cloud-build/settings/service-account?)
-<img src="/img/cloudbuild-settings.png" alt="Cloud Build Settings" width="500"/>
-12. Find your Cado instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
-13. Login with:
+    `terraform init` followed by `terraform plan -var-file=gcpVars.tfvars`.  Once you confirm the plan looks correct, you can then run `terraform apply -var-file=gcpVars.tfvars`
+11. Find your Cado instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
+12. Login with:
     - Username: admin
     - Password: <instance_id> (found in the Compute Engine console for your instance e.g. 8784481508256766876)
