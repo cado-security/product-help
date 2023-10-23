@@ -8,6 +8,27 @@ sidebar_position: 4
 
 The Cado platform will collect key logs and forensic artifacts from AWS ECS systems.
 
+
+# How to Import
+
+1) Go to **Import > Cloud**
+![Import ECS 1](/img/import.png)
+
+2) Then select the target Cluster and Task:
+![Import ECS 2](/img/ecs_2.png)
+
+3) Then click Acquire Container.
+
+4) Confirm details and click **Start Import**
+
+Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
+
+![Import ECS 3](/img/ecs_3.png)
+
+For a typical acquisition, import and processing will take a few minutes to complete.
+
+
+:::info
 ## ECS Import Requirements
 
 * You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task.
@@ -28,22 +49,4 @@ If either:
 	"ecs:ExecuteCommand"
 ```
 * Or the Cluster and Task do not have [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) enabled.
-
-# How to Import
-
-First, select Import ECS:
-![Import ECS 1](/img/import.png)
-
-Then select the target Cluster and Task:
-![Import ECS 2](/img/ecs_2.png)
-
-Then click Acquire Container.
-
-Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-
-![Import ECS 3](/img/ecs_3.png)
-
-For a typical acquisition, import and processing will take a few minutes to complete:
-![Import ECS 4](/img/ecs_4.png)
-
-
+:::
