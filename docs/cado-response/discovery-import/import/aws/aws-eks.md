@@ -12,6 +12,25 @@ The Cado platform will collect key logs and forensic artifacts from AWS EKS cont
 Due to the way the Cado platform interacts with Kubernetes, it is not possible to import containers built from a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image.
 :::
 
+## Import Steps
+
+1) Go to **Import > Cloud**
+
+![Cado Import Screen showing the AWS EKS options](/img/import.png)
+
+2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
+
+:::tip
+When selecting the role in the UI, select the role configured for the account where your EKS cluster resides
+:::
+
+![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
+
+3) Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
+For a typical acquisition, import and processing will take a few minutes to complete.
+
+![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
+
 ## EKS RBAC Configuration
 You'll need to add the appropriate configued Cado IAM role to your EKS RBAC configuration. Without 
 this you will see an error message saying that `This role is not configured to authorize with this EKS cluster`.
@@ -29,7 +48,7 @@ You must also make sure the following IAM permissions are attached to your IAM r
 	"eks:DescribeCluster",
 	"eks:UpdateClusterConfig"
 ````
-
+:::info
 ### Which IAM role should I use?
 Depending on where your EKS cluster is deployed, you'll need to choose a different IAM role to configure with the RBAC configuration.
 
@@ -39,26 +58,6 @@ For a single account import you should  choose the configured role inside `Setti
 #### The cluster is deployed in a seperate account from Cado:
 All roles in a chain must be configured with the EKS RBAC. If you're using a different role, then the Cado roles need to also be
 included in the RBAC, not just the cross account created in [AWS Cross Account Creation](../../../deploy/aws/iam/cross-account-creation.md).
-
-## Import Steps
-
-1) Go to **Import > AWS EKS**
-
-![Cado Import Screen showing the AWS EKS options](/img/import.png)
-
-2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
-
-:::tip
-When selecting the role in the UI, select the role configured for the account where your EKS cluster resides
 :::
-
-![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
-
-3) Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-For a typical acquisition, import and processing will take a few minutes to complete.
-
-![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
-
-
 
 
