@@ -27,7 +27,7 @@ In order to set up the project for Cado collection you need to
 ***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
 ### Creating a Cado Role
-To appriopriatly scope a service account for Cado to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section un the **IAM and Admin** tab. Create a custom role and add the following permissions:
+To appropriately scope a service account for Cado to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section un the **IAM and Admin** tab. Create a custom role and add the following permissions:
 ```
   cloudbuild.builds.create
   cloudbuild.builds.get
