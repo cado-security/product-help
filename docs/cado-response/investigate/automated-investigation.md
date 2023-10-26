@@ -19,11 +19,11 @@ The timeline displays up to 50 events. Events are more likely to be included if 
 
 ## View Asset
 
-Clicking "view" on a suspected compromised asset opens up a sidebar containing metadata about the asset.
+Clicking the three dots and "View Cloud Resource" on a suspected compromised asset opens up a sidebar containing metadata about the asset.
 
 ![Metadata Sidebar](/img/metadata-sidebar.png)
 
-## Response Actions
+## Response Actions (Beta)
 
 Response Actions make it possible to perform remediation actions in response to malicious activity being identified on a virtual machine. You can also trigger response actions using [Automation Rules](../discovery-import/automation.md).
 

@@ -7,10 +7,21 @@ sidebar_position: 3
 # Timeline Search
 The Cado platform includes an advanced search interface which supports complex queries.
 
+### Faceted Search
+Cado allows you to filter your search based upon 'facets', like event severity, or associated user name, file, source/destination IP address
+
+![Faceted Search](/img/faceted-search.png)
+
+For long lists of facets, you can search and sort the list of facets
+
+![Faceted List](/img/facet-list.png)
+
 ### Basic Searches
 
+You can also use the search bar to craft specific searches using search strings
+
 #### Plain search terms
-Providing plain search term will search across all fields, for example: `foo`
+Providing plain search terms will search across all fields, for example: `foo`
 
 You can quote terms containing spaces: `"foo bar"`
 

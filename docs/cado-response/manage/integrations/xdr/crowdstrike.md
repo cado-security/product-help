@@ -11,29 +11,21 @@ Integrating with CrowdStrike Falcon allows you to select and kick off triage acq
 Once you have kicked off the triage acquisition CrowdStrike Falcon Real Time Response will locate the endpoint running CrowdStrike Falcon Sensor
 Run a Cado Host command on the endpoint that performs collection of the triage package and uploads it to Cado for processing
 
-:::info
-**Beta Tester Note:** Currently CrowdStrike blocks Cado Host acquisitions for Windows. Reach out to your Cado Customer Support Request for help in creating the appropriate exclusions within CrowdStrike to allow this acquisition to work
-:::
 
 ## Prerequisites
 1. Create an API Client with the permissions listed below. For more information on how to do this see this helpful [blog article](https://www.crowdstrike.com/blog/tech-center/get-access-falcon-apis/). This API Client will need 
 - **Real Time Response Admin**: Write
 - **Hosts**: Read
+- **Real Time Response**: Read
 - **Real Time Response**: Write
-
-:::info
-**Beta Tester Note**: To help in the future if the permissions are incorrect, scopes that we had during development was:
- 
-![beta crowdstrike permissions](/img/beta-crowdstrike-permissions.png)
-
-:::
 2. Copy and note down the Client ID,  Client Secret and Endpoint URL to enter into the Cado Platform
-3. Enable RTR Admin for all devices from which you may want to acquire.
-4. Create a Host Group with a Response Policy which enables RTR Admin.
-5. Add hosts to this host group to enable RTR Admin commands to be run.
+3. Enable Real Time Response in either the Default policies for each operating system, or your own that you can attach to a host group.
+4. Create Detections and Preventions Machine Learning exclusions with the following pattern to allow the Windows integration to function:
+- "C:\Windows\Temp\\_MEI*\\**\CadoHostRawGrabber.exe"
+- "C:\Windows\Temp\cado-host-*\cado-host.exe"
 
 :::note
- CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need to add a Windows Response Policy and a Linux Response Policy which allows RTR Admin.
+ CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need a Windows Response Policy and a Linux Response Policy which allows RTR Admin.
 :::
 
 ## Enabling integration in the Cado Platform
