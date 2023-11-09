@@ -15,6 +15,6 @@ You can also use Cado Host with the --single_file_unzipped parameter - this may 
 
 Cado Host binaries are available for:
 - Microsoft Windows: 7, 8.1, 10 (1607+) and Microsoft Windows Server Server 2012 R2+
-- Linux: Debian: 9+, Ubuntu: 16.04+, Fedora: 29+, CentOS: 7+, RHEL: 6+, openSUSE: 15+, SUSE Enterprise (SLES): 12 SP2+, Alpine: 3.10+
+- Linux: Debian: 9+, Ubuntu: 16.04+, Fedora: 29+, RHEL: 6+, openSUSE: 15+, SUSE Enterprise (SLES): 12 SP2+, Alpine: 3.10+
 - MacOS (Intel based only): 10.13+
 
