@@ -7,6 +7,36 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.87.0
+`Released 2023-11-14`
+- Bug fixes and performance improvements
+
+## v.2.86.0
+`Released 2023-11-13`
+- New project overview page (beta)
+- CloudFormation Template for deployment with Private IP addresses
+- Bug fixes and performance improvements
+
+## v.2.85.0
+`Released 2023-11-09`
+- Bug fixes and performance improvements
+
+## v.2.84.0
+`Released 2023-11-07`
+- Bug fixes and performance improvements
+
+## v.2.83.0
+`Released 2023-10-07`
+- Bug fixes and performance improvements
+
+## v.2.82.0
+`Released 2023-10-30`
+- Bug fixes and performance improvements
+
+## v.2.81.0
+`Released 2023-10-25`
+- Bug fixes and performance improvements
+
 ## v.2.80.0
 `Released 2023-10-18`
 - Bug fixes and performance improvements
