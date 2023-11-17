@@ -9,6 +9,7 @@ sidebar_position: 1
 
 ## v.2.88.0
 `Released 2023-11-17`
+- Increase default instance size to m5.4xlarge for new installs in AWS
 - Bug fixes and performance improvements
 
 ## v.2.87.0
