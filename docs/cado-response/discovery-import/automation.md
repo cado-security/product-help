@@ -66,6 +66,7 @@ Each action requires different permissions and is controlled using IAM roles. Th
 | -------- | ----------- | ----------|
 | Stop Instance | Stops an EC2 instance using the AWS API | ec2:StopInstances |
 | Isolate Role | Isolates the IAM role attached to an EC2 instance. Isolated by adding a deny all inline policy to the given IAM role. | iam:GetInstanceProfile iam:PutRolePolicy |
+| Isolate Security Group |  Isolates the security group attached to and EC2 instance. Isolated by creating a security group, blanking it and replacing it on the EC2. | ec2:CreateSecurityGroup ec2:RevokeSecurityGroupEgress ec2:ModifyInstanceAttribute |
 
 ## Managing Rules ##
 
