@@ -7,6 +7,15 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.91.0
+`Released 2023-11-29`
+- Scoping down of required KMS permissions for proper operation (required role change)
+- Bug fixes and performance improvements
+
+## v.2.90.0
+`Released 2023-11-23`
+- Bug fixes and performance improvements
+
 ## v.2.89.0
 `Released 2023-11-20`
 - Bug fixes and performance improvements
