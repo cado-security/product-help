@@ -16,32 +16,38 @@ export const Highlight = ({children, color}) => (
   </span>
 );
 
-# Cross Account Access Creation
-The Cado platform can access AWS resources across multiple accounts using AWS roles. For instance, if you manage 100 accounts, you can grant Cado access to each one, enabling the platform to acquire, process, and analyze evidence from all accounts seamlessly.
+# Cross-account Access Creation
+The Cado platform can access resources across multiple AWS accounts. For instance, if you manage 100 AWS accounts, you can deploy Cado in a single AWS account and then grant the Cado platform access to all other AWS accounts, enabling the platform to acquire, process, and analyze evidence from all AWS accounts seamlessly.
 
-### High-Level Summary
-The examples below outline how to grant permission for Cado to access a single secondary account. However, you can use the same process for granting access to multiple additional accounts as needed.
+## Summary
+The instructions below outline how to grant permissions for the Cado platform to access a target AWS account (outside of the AWS account in which Cado was deployed). This same process can be repeated for all AWS accounts needing cross-account access.
 
-In this guide, we will create an **IAM role** in your secondary account, from which you will acquire evidence, and establish a trust relationship with your primary account.
+Setup for cross-account acquisitions within the Cado platform is a 2 step process:
+1. Create a cross-account IAM Policy and IAM Role in the target AWS account from which you would like the Cado platform to be able to acquire data. This allows the Cado platform to "assume" that cross-account role and perform acquisitions.
+2. Add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform.
 
-The following instructions enable cross-account access from the primary account (where Cado is deployed) with account ID `111111111111`, to a secondary account (from which you will acquire evidence) with account ID `222222222222`.
+:::tip
+Creation of the cross-account IAM Policy and IAM Role within each AWS account can be automated via Terraform, AWS Stacksets, and other programatic methods. See the [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment) section below for more details.
 
-### Prepare Secondary Account
-
-- In your secondary account navigate to **IAM > Policies**- and click **Create Policy**. In the Permissions Wizard, attach or paste the Cado Cross-Account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json), then click **Next**. Give the Policy a name, then click **Create Policy**.
-
-- After your Policy is created, navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", click **Another AWS Account** and enter the account ID of your primary account (`111111111111` in this example).
-
-![Create Role](/img/create-role.png)
-
-- Add the policy you recently created in the steps above, then click **Next** give the role a name. The role name **_must_** include the text `CadoResponse` (we use `CadoResponseSecondRole` in this example). 
-
-:::warning
-If the secondary account role name does not contain the text `CadoResponse` (case sensitive), cross account acquisition will not work.
+Adding the cross-account ARN to the Cado platform can be automated via the Cado APIs. See our [Example Cado API for addind AWS credentials](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py) for more details.
 :::
 
 :::info
-The Cado Cross-Account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
+The examples below reference a primary AWS account which represents the AWS account in which the Cado platform is deployed and running (referred to as AWS account number `111111111111`) and a target AWS account which represents the AWS account from which you wish to enable cross-account acquisitions from (referred to as AWS account number `222222222222`) .
+:::
+
+### STEP 1: Create IAM Policy and IAM Role in Target AWS Account
+
+- In the target AWS account (the account from which you would like to acquire data from), navigate to **IAM > Policies** and click **Create Policy**. In the Permissions Wizard, attach or paste the Cado Cross-account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json), then click **Next**. Give the Policy a name (like `CadoResponseCrossAccountPolicy`), then click **Create Policy**.
+
+- After the Cado Cross-account Policy is created, navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", click **Another AWS Account** and enter the account ID of your primary account (the account in which the Cado platform is deployed and running. `111111111111` in this example).
+
+![Create Role](/img/create-role.png)
+
+- Add the policy you recently created in the steps above, then click **Next** give the Role a name. The role name **_must_** include the text `CadoResponse` (case sensitive, like `CadoResponseCrossAccountRole`). If the secondary account role name does not contain the text `CadoResponse`, cross-account acquisition will not work properly.
+
+:::info
+The Cado Cross-account Policy includes permissions to acquire a variety of AWS resources. You can remove permissions that are not needed for your use case.
 * The EC2 permissions are required are acquire EC2 systems.
 * The KMS permissions are required to acquire KMS encrypted volumes.
 * The SSM permissions are required for Triage captures.
@@ -49,14 +55,10 @@ The Cado Cross-Account Policy includes permissions to acquire a variety of AWS r
 * The CloudTrail permissioms are required to import CloudTrail logs in other accounts.
 * The ECS permissions are required to import ECS containers in other accounts.
 * The EC2 de-register permission is required to import AMI images cross-account.
-:::
 
-:::info
-If you choose to change **Maximum session duration**, the minimum currently supported by Cado is 1 hour.
-:::
+Also note that if you choose to change **Maximum session duration**, the minimum currently supported by Cado is 1 hour.
 
-:::info
-The above steps walked through how to create a new role, however, if you already have a role with appropriate EC2 access, you can instead edit its trust relationship to include the below AWS **principal** (replacing the account number with your own primary account). 
+Lastly, the above steps walk through how to create a new role; however, if you already have an IAM Role with appropriate EC2 access, you can instead edit the trust relationship to include the below AWS **Principal** (replacing the `111111111111` account number with your own primary AWS account, in which the Cado platform is deployed). 
 
 The below JSON is only required if you choose to use an existing role and you didn't create a new role as recommended earlier.
 
@@ -67,7 +69,7 @@ The below JSON is only required if you choose to use an existing role and you di
        {
            "Effect": "Allow",
            "Principal": {
-               "AWS": "11111111111"
+               "AWS": "111111111111"
            },
            "Action": "sts:AssumeRole",
            "Condition": {}
@@ -79,41 +81,46 @@ The below JSON is only required if you choose to use an existing role and you di
 You may choose to limit this further and trust only your specific Cado role rather than the entire primary account.  See AWS JSON policy elements: **[Principal - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)** for more information.
 :::
 
-### Adding the Role to Cado
-Now that we have the role set up in the Secondary account, it's time to add it to Cado. To do this, navigate to the cloud section in the settings and click on the **Add AWS Credentials** button. When prompted, enter the IAM role we just created in the Secondary account and provide an alias for the role.
+### STEP 2: Add Target AWS Role ARN to the Cado Platform
+After the target AWS Role is set up in the target AWS account (`222222222222`), you will need to add the Role ARN to the Cado platform. To do this, log into your Cado platform, navigate to `Settings > Cloud` and click on the **Add AWS Credentials** button. When prompted, enter the IAM Role ARN created in Step 1 and provide an `Alias` for the role. The `Alias` is what will appear in the Cado platfrom UI, so we typcially recommended that it includes the AWS account number in the text.
 
 ![Add Role](/img/add-role.png)
 
-Upon submission, Cado will attempt to validate the role, ensuring it's assumable. Once validated, you will see the alias in the list of available accounts, and the role is now ready for use.
+Upon submission, the Cado platform will attempt to validate the role, ensuring it is assumable. Once validated, you will see the Alias in the list of available AWS accounts.
 
+## Automating AWS IAM Role and Policy Deployment
 
-## Automated Cross Account Deployment Using CloudFormation StackSets and AWS Organisations or Terraform
+### Using Terraform
+To automate the creation of the IAM Policy and Role in each target AWS Account via Terraform, you can see an example at https://github.com/cado-security/cado-terraform-role-example
 
-If you use Terraform, you can see an example of how to automatically add the cross-account policy to new accounts at https://github.com/cado-security/cado-terraform-role-example
+### Using CloudFormation StackSets
 
-If you want to process data sources such as EC2 from one account into another, Cado requires cross account access via IAM. 
-- You only need to install Cado into a single region in a single account. 
-- You can then use CloudFormation StackSets to easily deploy the required IAM Role into all of your accounts across your AWS organisation.
-- More details about CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
+To automate the creation of the IAM Policy and Role in each target AWS Account via CloudFormation StackSets across your AWS Organisation, you can follow the steps below. More details about CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
 
 ![Stacks1](/img/stacks1.png)
 
-Go to "StackSets" from your master StackSet account that is enabled to deploy into other accounts.
+1. Go to "StackSets" from your master StackSet account that is enabled to deploy into other accounts.
 
-![StackSets Role](/img/stacks2.png)
+  ![StackSets Role](/img/stacks2.png)
 
-Click Click **<Highlight color="#F78631">Create StackSet</Highlight>**
+2.  Click **<Highlight color="#F78631">Create StackSet</Highlight>**
 
-Enter the S3 URL as https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json then click Next:
+3. Enter the S3 URL as https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json then click **<Highlight color="#F78631">Next</Highlight>**:
 
-![Stacks3](/img/stacks3.png)
+  ![Stacks3](/img/stacks3.png)
 
-Click Next through the next two dialogues, and under "Create Stack Set" select any region (this works as IAM is global):
+4. Click **<Highlight color="#F78631">Next</Highlight>** through the next two dialogues, and under "Create StackSet" select any region (this works as IAM is global):
 
-![Stacks4](/img/stacks4.png)
+  ![Stacks4](/img/stacks4.png)
 
-Once deployed, this will then create a role in each target account, that you can view in IAM:
+5. Once deployed, this will then create a IAM Policy and IAM Role in each target AWS account, that you can view in IAM:
 
-![Stacks5](/img/stacks5.png)
+  ![Stacks5](/img/stacks5.png)
 
-You will then need to add the list of roles that were created in each account to the "AssumeRole" section of the primary Cado role that is created at installation time. Cado uses the list of trusted roles in other accounts to populate the cross-account options shown to a user.  See the section **[Prepare Primary Account](#prepare-primary-account)** for more details.
+:::tip
+You will then need to add the newly created cross-account IAM Role ARN to the Cado platform, using the steps outlined [here](#step-2-add-the-target-aws-role-arn-to-the-cado-platform) or if you choose to automate the process, the steps outlined [here](#automating-cado-cross-account-creation)
+:::
+
+## Automating Cado Cross-account Creation
+
+As mentioned previously, the second step to adding cross-account acces is to add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform. To automate this process via the Cado APIs, please see the example Cado API for adding AWS credentials [here](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
