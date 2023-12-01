@@ -27,9 +27,9 @@ Setup for cross-account acquisitions within the Cado platform is a 2 step proces
 2. Add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform.
 
 :::tip
-Creation of the cross-account IAM Policy and IAM Role within each AWS account can be automated via Terraform, AWS Stacksets, and other programatic methods. See the [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment) section below for more details.
+Creation of the cross-account IAM Policy and IAM Role within each AWS account can be automated via Terraform, AWS Stacksets, and other programmatic methods. See the [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment) section below for more details.
 
-Adding the cross-account ARN to the Cado platform can be automated via the Cado APIs. See our [Example Cado API for addind AWS credentials](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py) for more details.
+Adding the cross-account ARN to the Cado platform can be automated via the Cado APIs. See the [Automating Cado Cross-account Creation](#automating-cado-cross-account-creation) section below for more details.
 :::
 
 :::info
@@ -52,7 +52,7 @@ The Cado Cross-account Policy includes permissions to acquire a variety of AWS r
 * The KMS permissions are required to acquire KMS encrypted volumes.
 * The SSM permissions are required for Triage captures.
 * The S3 Permissions are required to import from S3 buckets in other accounts.
-* The CloudTrail permissioms are required to import CloudTrail logs in other accounts.
+* The CloudTrail permissions are required to import CloudTrail logs in other accounts.
 * The ECS permissions are required to import ECS containers in other accounts.
 * The EC2 de-register permission is required to import AMI images cross-account.
 
@@ -82,7 +82,7 @@ You may choose to limit this further and trust only your specific Cado role rath
 :::
 
 ### STEP 2: Add Target AWS Role ARN to the Cado Platform
-After the target AWS Role is set up in the target AWS account (`222222222222`), you will need to add the Role ARN to the Cado platform. To do this, log into your Cado platform, navigate to `Settings > Cloud` and click on the **Add AWS Credentials** button. When prompted, enter the IAM Role ARN created in Step 1 and provide an `Alias` for the role. The `Alias` is what will appear in the Cado platfrom UI, so we typcially recommended that it includes the AWS account number in the text.
+After the target AWS Role is set up in the target AWS account (`222222222222`), you will need to add the Role ARN to the Cado platform. To do this, log into your Cado platform, navigate to `Settings > Cloud` and click on the **Add AWS Credentials** button. When prompted, enter the IAM Role ARN created in Step 1 and provide an `Alias` for the role. The `Alias` is what will appear in the Cado platform UI, so we typically recommended that it includes the AWS account number in the text.
 
 ![Add Role](/img/add-role.png)
 
@@ -123,4 +123,4 @@ You will then need to add the newly created cross-account IAM Role ARN to the Ca
 
 ## Automating Cado Cross-account Creation
 
-As mentioned previously, the second step to adding cross-account acces is to add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform. To automate this process via the Cado APIs, please see the example Cado API for adding AWS credentials [here](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
+As mentioned previously, the second step to adding cross-account access is to add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform. To automate this process via the Cado APIs, please see the example Cado API for adding AWS credentials [here](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
