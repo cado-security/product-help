@@ -27,7 +27,7 @@ Setup for cross-account acquisitions within the Cado platform is a 2 step proces
 2. Add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform.
 
 :::tip
-Creation of the cross-account IAM Policy and IAM Role within each AWS account can be automated via Terraform, AWS Stacksets, and other programmatic methods. See the [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment) section below for more details.
+Creation of the cross-account IAM Policy and IAM Role within each AWS account can be automated via AWS Stacksets and other programmatic methods. See the [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment) section below for more details.
 
 Adding the cross-account ARN to the Cado platform can be automated via the Cado APIs. See the [Automating Cado Cross-account Creation](#automating-cado-cross-account-creation) section below for more details.
 :::
@@ -89,9 +89,6 @@ After the target AWS Role is set up in the target AWS account (`222222222222`), 
 Upon submission, the Cado platform will attempt to validate the role, ensuring it is assumable. Once validated, you will see the Alias in the list of available AWS accounts.
 
 ## Automating AWS IAM Role and Policy Deployment
-
-### Using Terraform
-To automate the creation of the IAM Policy and Role in each target AWS Account via Terraform, you can see an example at https://github.com/cado-security/cado-terraform-role-example
 
 ### Using CloudFormation StackSets
 
