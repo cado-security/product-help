@@ -46,7 +46,6 @@ You must also make sure the following IAM permissions are attached to your IAM r
 ```
 	"eks:ListClusters",
 	"eks:DescribeCluster",
-	"eks:UpdateClusterConfig"
 ````
 :::info
 ### Which IAM role should I use?
