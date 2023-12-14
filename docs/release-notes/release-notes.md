@@ -9,6 +9,7 @@ sidebar_position: 1
 
 ## v.2.97.0
 `Released 2023-12-14`
+- Moved 'Saved Searches' capability from Experiments to Generally Available
 - Bug fixes and performance improvements
 
 ## v.2.96.0
