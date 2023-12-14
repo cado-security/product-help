@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.97.0
+`Released 2023-12-14`
+- Bug fixes and performance improvements
+
 ## v.2.96.0
 `Released 2023-12-11`
 - Bug fixes and performance improvements
@@ -17,6 +21,7 @@ sidebar_position: 1
 
 ## v.2.94.0
 `Released 2023-12-07`
+- Option to convert EC2 imports from DD to E01 format (requires `Settings - Preservation` to be set)
 - Bug fixes and performance improvements
 
 ## v.2.93.0
