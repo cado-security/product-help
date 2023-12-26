@@ -140,4 +140,7 @@ Cado makes AWS AMI's available for the regions below.  As a customer, if you req
 - eu-west-2
 - eu-west-3
 - ap-southeast-2
+- eu-central-1
+- ca-central-1
+- ap-south-1
 
