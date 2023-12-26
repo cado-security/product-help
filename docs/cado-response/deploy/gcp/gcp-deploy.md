@@ -54,4 +54,4 @@ Once you have downloaded the Terraform code from the Marketplace listing above, 
 11. Find your Cado instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
 12. Login with:
     - Username: admin
-    - Password: <instance_id> (found in the Compute Engine console for your instance e.g. 8784481508256766876)
+    - Password: \<instance_id\> (found in the Compute Engine console for your instance e.g. 8784481508256766876)

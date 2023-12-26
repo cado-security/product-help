@@ -56,7 +56,7 @@ If you'll be wanting to use this Role across multiple projects, you can create i
 
 To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/.
 
-Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the custom role we created in the previous step **'Customer -> <role_name>'**. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
+Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the custom role we created in the previous step **'Customer -> \<role_name\>'**. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
 
 ### Defining a bucket for the Primary GCP Project
 
@@ -69,7 +69,7 @@ Next, you need to set up a Service Account in GCP. For information on how to do 
 * https://cloud.google.com/iam/docs/service-accounts
 
 ### Required Access
-Both the Cado service account and the service account for the Cloud API need the custom role's permissions 'Custom -> <role_name>' role:
+Both the Cado service account and the service account for the Cloud API need the custom role's permissions 'Custom -> \<role_name\>' role:
 
 ![Custom Role](/img/gcp-custom-role.png)
 
@@ -95,7 +95,7 @@ GCP credentials come in a json format that wraps around a ‘regular’ credenti
 
 For example, a service account key would come in a structure such as the below. The ‘credential’ is a literal RSA key as a string in the `private_key` field, all other fields are metadata for the benefit of the application that uses it:
 
-      {
+      \{
       "type": "service_account",
       "project_id": "cool-project",
       "private_key_id": "22c14ac5b63...",
@@ -106,7 +106,7 @@ For example, a service account key would come in a structure such as the below. 
       "token_uri": "https://oauth2.googleapis.com/token",
       "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
       "client_x509_cert_url": "..."
-    }
+    \}
 
 #### Workload Identity Federation
 
@@ -120,19 +120,19 @@ You can download existing credentials by clicking the display name of the **Iden
 
 For example:
 
-    {
+    \{
       "type": "external_account",
       "audience": "//iam.googleapis.com/projects/...",
       "subject_token_type": "urn:ietf:params:aws:token-type:aws4_request",
       "service_account_impersonation_url": "https://...ount.comgenerateAccessToken",
       "token_url": "https://sts.googleapis.com/v1/token",
-      "credential_source": {
+      "credential_source": \{
         "environment_id": "...",
         "region_url": "http://169.254.169.254/latest/meta-data/placement/availability-zone",
         "url": "http://169.254.169.254/latest/meta-data/iam/security-credentials",
         "regional_cred_verification_url": "https://sts.{region}.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15"
-      }
-    }
+      \}
+    \}
 
 For more information about GCP Workload Identity Federation see:
 * https://console.cloud.google.com/iam-admin/workload-identity-pools
