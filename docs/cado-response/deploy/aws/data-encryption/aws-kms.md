@@ -91,9 +91,12 @@ An sample policy is shown below (be sure to adjust `Principal` and add `Conditio
 It is important to ensure that if you are acquiring cross region that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy `Conditions` don't preclude the platform's access).
 
 ### Cross Account using Customer Managed Keys
+:::info
+During both of the following, be sure to reference the specific KMS key your EC2 is encrypted with to ensure minimal scoping.
+:::
 The simplest approach is to give `kms:CreateGrant` permissions to the role being assumed **in the target account EC2s are being acquired from**. See the **[Cross Account Acquisition](../iam/cross-account-creation.md)** instructions for more details on cross account permissions.
 
-Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to `"kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"`
+Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to `"kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"`.
 
 ### Cross Account using AWS default keys
 :::warning
