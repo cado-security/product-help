@@ -50,8 +50,8 @@ There are a number of options available - but the recommended approach is adding
 - You may not wish to give kms:CreateGrant permission to CadoResponseRole itself
 - Your policy must feature a statement which provides access to CadoResponseRole with the above permissions (except CreateGrant)
 - You may then tighten the policy to only allow CreateGrant permission to AWS resources
-- Example (be sure to adjust `Principal` and add `Condition` according to your needs)
 
+An sample policy is shown below (be sure to adjust `Principal` and add `Condition` according to your needs):
 ```json
 [
   {
