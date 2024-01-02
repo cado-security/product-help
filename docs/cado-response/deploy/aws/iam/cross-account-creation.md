@@ -82,7 +82,7 @@ You may choose to limit this further and trust only your specific Cado role rath
 :::
 
 ### STEP 2: Add Target AWS Role ARN to the Cado Platform
-After the target AWS Role is set up in the target AWS account (`222222222222`), you will need to add the Role ARN to the Cado platform. To do this, log into your Cado platform, navigate to `Settings > Cloud` and click on the **Add AWS Credentials** button. When prompted, enter the IAM Role ARN created in Step 1 and provide an `Alias` for the role. The `Alias` is what will appear in the Cado platform UI, so we typically recommended that it includes the AWS account number in the text.
+After the target AWS Role is set up in the target AWS account (`222222222222`), you will need to add the Role ARN to the Cado platform. To do this, log into your Cado platform, navigate to `Settings > Cloud` and click on the **Create Role** button. When prompted, enter the IAM Role ARN created in Step 1 and provide an `Account Alias (Cloud ID)` for the role. The `Alias` is what will appear in the Cado platform UI, so we typically recommended that it includes the AWS account number in the text.
 
 ![Add Role](/img/add-role.png)
 
