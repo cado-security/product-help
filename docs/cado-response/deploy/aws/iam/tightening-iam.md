@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Removing and Tightening IAM Permissions
 hide_title: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Removing and Tightening IAM Permissions
