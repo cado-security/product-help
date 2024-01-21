@@ -16,9 +16,9 @@ FOR ALL COMMUNITY EDITION USERS OF CADO SOFTWARE, [**DOCUMENT B - COMMUNITY EDIT
 
 ## End User License Agreement
 
-IMPORTANT – READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) BEFORE INSTALLING AND/OR USING THE SOFTWARE. BY PROCEEDING, YOU ACKNOWLEDGE THAT YOU HAVE READ AND AGREE TO ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT WITH CADO SECURITY LIMITED, AND REPRESENT THAT YOU ARE AUTHORIZED TO BIND YOURSELF AND/OR CUSTOMER TO THIS AGREEMENT. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS OF THIS AGREEMENT DO NOT PROCEED WITH ANY INSTALLATION AND/OR USE OF THE SOFTWARE. THE DATE THAT YOU AGREE TO BE BOUND BY THIS AGREEMENT BY ANY INSTALLATION AND/OR USE IS THE "EFFECTIVE DATE." 
+BEFORE USING THE CADO SECURITY SOFTWARE, YOU SHOULD CAREFULLY READ THE FOLLOWING USER AGREEMENT THAT APPLIES TO THE SOFTWARE UNLESS USER AND COMPANY HAVE NEGOTIATED AND ENTERED INTO A SEPARATE, VALID WRITTEN AND MUTUALLY EXECUTED AGREEMENT PERTAINING TO USER’S USE OF THE SOFTWARE. BY PROCEEDING WITH ANY INSTALLATION AND/OR USE OF THE SOFTWARE, YOU FULLY ACCEPT AND AGREE TO ALL OF THE PROVISIONS OF THIS USER AGREEMENT, ESTABLISHING A BINDING AGREEMENT BETWEEN YOU AS THE PERSON USING THE SOFTWARE (THE "USER") AND CADO SECURITY LIMITED, A COMPANY INCORPORATED IN ENGLAND AND WALES (NUMBER 12552987) HAVING ITS REGISTERED OFFICE AT 3RD FLOOR, 1 ASHLEY ROAD, ALTRINCHAM, CHESHIRE, WA14 2DT ("COMPANY").
 
-This End User License Agreement governs use of the Software (as defined below) provided by Cado Security Limited, or its subsidiaries or affiliates (collectively, the “Company”).  This Agreement sets out the terms on which Company makes the Software available to you ("You” or “Customer”) and your authorized Users (as defined below).
+This End User License Agreement governs use of the Software (as defined below) provided by Cado Security Limited, , a company incorporated in England and Wales (Number 12552987) having its registered office at 3rd Floor, 1 Ashley Road, Altrincham, Cheshire, or its subsidiaries or affiliates (collectively, the “Company”).  This Agreement sets out the terms on which Company makes the Software available to you ("You” or “Customer”) and your authorized Users (as defined below).
 
 1. **Proprietary Rights**
 
@@ -26,7 +26,8 @@ The Cado Security software including any (a) software that the Company uses to m
 	
 2. **Grant of Rights; Reservation of Rights**
 
-Subject to payment in full by the Customer of the applicable subscription fee as detailed in the applicable invoice (“Invoice”), Company grants the Customer and its authorized Users a limited, non-sublicensable, non-exclusive, non-transferable right during the applicable subscription term stated in the Invoice (“Subscription Plan”) and pursuant to the terms of this Agreement to access, install, download and use the Software in object code form only, exclusively within the Customer’s cloud based environment, for internal business and non-commercial purposes only unless otherwise agreed in writing. The Customer must install the Software as prescribed in the Company’s manual available at https://docs.cadosecurity.com, unless otherwise agreed by the Company in writing.  The Customer is permitted to make one additional copy of the Software solely for back-up or archival purposes only.  The Software shall be used or accessed strictly in accordance with, and subject to any restrictions under the User’s Subscription Plan and the applicable Invoice.  
+Subject to payment in full by the Customer of the applicable subscription fee as detailed in the applicable invoice (“Invoice”), Company grants the Customer and its authorized Users a limited, non-sublicensable, non-exclusive, non-transferable right during the applicable subscription term stated in the Invoice (“Subscription Plan”) and pursuant to the terms of this Agreement to access, install, download and use the Software in object code form only, exclusively within the Customer’s cloud based environment, for internal business and non-commercial purposes only unless otherwise agreed in writing. The Customer must install the Software as prescribed in the Company’s manual available at https://docs.cadosecurity.com, unless otherwise agreed by the Company in writing.  The Customer is permitted to make one additional copy of the Software solely for back-up or archival purposes only.  The Software shall be used or accessed strictly in accordance with, and subject to any restrictions under the User’s Subscription Plan and the applicable Invoice. This Agreement can be updated from time to time in Company's sole discretion and such changes will be made available at www.cadosecurity.com.
+
 
 3. **Restrictions**
 
@@ -43,7 +44,8 @@ modify, translate, adapt, or create derivative works from the Software.
 	
 4. **Evaluation License** 
 
-If Customer registers for an evaluation version of the Software (“Evaluation Version”), at no additional charge, Company will make the Evaluation Version available to Customer and its authorized  Users on a trial basis, free of charge, until the earlier of (a) the end of the 14 day free trial period unless agreed otherwise in writing, or (b) the start date of any license subscription purchased by the Customer corresponding to such Evaluation Version. Notwithstanding anything to the contrary, the Evaluation Version is provided “as-is” without any representation, warranty or indemnity, or any support service.
+If Customer registers for an evaluation version of the Software (“Evaluation Version”), at no additional charge, Company will make the Evaluation Version available to Customer and its authorized  Users on a trial basis, free of charge, until the earlier of (a) the end of the 14 day free trial period unless agreed otherwise in writing, or (b) the start date of any license subscription purchased by the Customer corresponding to such Evaluation Version. Notwithstanding anything to the contrary, (i) the Evaluation Version is provided “as-is” without any representation, warranty or indemnity, or any support service, and (ii) the Evaluation Version not intended to house or contain any sensitive or production data.  Company shall not be liable or responsible under any circumstances for any sensitive or production data input into such environment by Customer or any resulting loss or damage thereto.
+
 
 5. **Support** 
 
@@ -59,7 +61,7 @@ Company may collect, process, aggregate, and use certain information, analysis, 
 
 8. **Term**
 
-Unless specified in your Subscription Plan and/or Invoice, this Agreement is effective for one (1) year, unless earlier terminated in accordance with the terms of this Agreement and may be renewed for successive periods of one (1) year upon timely payment of the applicable subscription fee. Any increase or change to the applicable subscription fees for the renewal period shall be communicated to the Customer no less than thirty (30) days prior to the applicable expiration or renewal date.   This Agreement and the User’s right to use the Software will automatically terminate without notice in the event of (a) any failure by the User to pay fees due under this Agreement; (b) any failure by the User to comply with any of the above restrictions or any term of this Agreement.  Upon expiration or earlier termination of this Agreement, the User will cease using the Software and expunge and destroy all copies of the Software in the User’s possession. All provisions of clauses 3, 6, 8, 9, 10, 12 and 14 of this Agreement will survive termination.
+Unless specified in your Subscription Plan and/or Invoice, this Agreement is effective for one (1) year, unless earlier terminated in accordance with the terms of this Agreement and may be renewed for successive periods of one (1) year upon timely payment of the applicable subscription fee. This Agreement and the User’s right to use the Software will automatically terminate without notice in the event of (a) any failure by the User to pay fees due under this Agreement; (b) any failure by the User to comply with any of the above restrictions or any term of this Agreement.  Upon expiration or earlier termination of this Agreement, the User will cease using the Software and expunge and destroy all copies of the Software in the User’s possession. All provisions of clauses 3, 6, 8, 9, 10, 12 and 14 of this Agreement will survive termination.
  
 9. **Warranty and Disclaimer**
 
@@ -71,7 +73,7 @@ Subject to the remainder of this clause, the aggregate liability of Company unde
 
 11. **Insurance**
 
-During the term of this Agreement, Company shall, at all times and at its own expense, and in amounts in accordance with industry standard for the software and services provided under this Agreement, maintain in full force and effect the following insurance coverages: (a) Public and Products Liability Insurance; (b) Professional Indemnity Insurance ("Errors & Omissions"), including Cyber Liability, Network Security and Privacy Liability coverage; (c) Workers Compensation Insurance covering Company’s employees as required by any applicable law; and (d) Employer’s Liability Insurance. Upon Customer’s reasonable written request, no more than once annually, Company shall provide a certificate of insurance documenting such coverages.
+During the term of this Agreement, Company shall, at all times and at its own expense, and in amounts in accordance with industry standard for the software and services provided under this Agreement, maintain in full force and effect adequate insurance coverages
 
 12. **Intellectual Property Rights**
 
@@ -89,7 +91,7 @@ or non-contractual nature, shall be governed by and construed in accordance with
 Customer is located in the United States), or England (if Customer is located outside of the United States). The
 sole and exclusive jurisdiction and venue for any litigation arising out of this Agreement shall be the courts of
 Delaware (if Customer is located in the United States), or England (if Customer is located outside of the United
-States). This Agreement constitutes the entire agreement between the parties with respect to the subject matter
+States). Except with respect to any current valid written and mutually executed agreement between Customer and Company pertaining to Customer’s use of the Software, this Agreement constitutes the entire agreement between the parties with respect to the subject matter
 hereof and supersedes all prior agreements and understandings whether written or oral, express or implied. If
 any provision of this Agreement is held invalid, illegal or unenforceable by a court of competent jurisdiction,
 such shall not affect any other provision of this Agreement, which shall remain in full force and effect. No

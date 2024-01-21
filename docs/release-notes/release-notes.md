@@ -7,6 +7,35 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.109.0
+`Released 2023-01-19`
+- Bug fixes and performance improvements
+
+## v.2.108.0
+`Released 2023-01-17`
+- Bug fixes and performance improvements
+
+## v.2.107.0
+`Released 2023-01-16`
+- Bug fixes and performance improvements
+
+## v.2.106.0
+`Released 2023-10-16`
+- Bug fixes and performance improvements
+
+## v.2.105.0
+`Released 2023-01-07`
+- Deprecate support for Intelix integration
+- Bug fixes and performance improvements
+
+## v.2.104.0
+`Released 2023-01-06`
+- Bug fixes and performance improvements
+
+## v.2.103.0
+`Released 2023-12-23`
+- Bug fixes and performance improvements
+
 ## v.2.103.0
 `Released 2023-12-23`
 - Bug fixes and performance improvements
