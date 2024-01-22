@@ -7,6 +7,10 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.110.0
+`Released 2023-01-22`
+- Bug fixes and performance improvements
+
 ## v.2.109.0
 `Released 2023-01-19`
 - Bug fixes and performance improvements
@@ -17,6 +21,7 @@ sidebar_position: 1
 
 ## v.2.107.0
 `Released 2023-01-16`
+- AI Investigator in beta
 - Bug fixes and performance improvements
 
 ## v.2.106.0
