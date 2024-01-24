@@ -10,7 +10,7 @@ You can monitor for Snapshots and Volumes created within an account.
 
 By enabling the Tag Key and Tag Value setting at Settings > Advanced, any snapshots or volumes created with the specified tag in any region in the AWS account that the Cado platform is deployed into will be automatically imported:
 
-![Monitoring](/img/tag-monitor.png)
+![Monitoring](/img/tag_monitor.png)
 
 Cado will check for new resources every 5 minutes.
 
