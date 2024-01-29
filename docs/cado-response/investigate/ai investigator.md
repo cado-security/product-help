@@ -15,7 +15,7 @@ Investigation Summarization: It provides a concise and informative overview of y
 
 Malicious File Analysis: It analyses malicious files, such as scripts, executables, or documents, and tells you what they do.
 For example, it can tell you if a script downloads and executes a payload, modifies registry keys, or creates persistence mechanisms:
-![File Details 1](/img/ai_image2.png)xp
+![File Details 1](/img/ai_image2.png)
 
 
 Cado AI Investigator is available now for customers running version v2.107.0 or later.
