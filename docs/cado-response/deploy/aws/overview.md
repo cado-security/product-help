@@ -88,12 +88,12 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
 
 ## AWS CloudFormation High Availability
 
-The Cado platform can be deployed in a High Availability (HA) configuration allowing a multi-AZ deployment using managed services and an auto-scaling group with a load balancer. To deploy with HA, please contact Cado Sales team at sales@cadosecurity.com.
+The Cado platform can be deployed in a High Availability (HA) configuration allowing a multi-AZ deployment using managed services and an auto-scaling group with a load balancer. To deploy with HA, please contact the Cado Sales team at sales@cadosecurity.com.
 
 ## AWS GovCloud
 The Cado platform can be deployed in to AWS GovCloud using CloudFormation.
 We support both us-gov-west-1 and us-gov-east-1 regions.
-To deploy into GovCloud, please contact Cado Sales team at sales@cadosecurity.com.
+To deploy into GovCloud, please contact the Cado Sales team at sales@cadosecurity.com.
 
 
 ### Deployment Time
