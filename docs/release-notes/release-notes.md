@@ -7,6 +7,14 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.112.0
+`Released 2023-01-24`
+- Bug fixes and performance improvements
+
+## v.2.111.0
+`Released 2023-01-23`
+- Bug fixes and performance improvements
+
 ## v.2.110.0
 `Released 2023-01-22`
 - Bug fixes and performance improvements
@@ -59,7 +67,6 @@ sidebar_position: 1
 
 ## v.2.99.0
 `Released 2023-12-18`
-- Limit on number of alarms and suspicions for a given project
 - Bug fixes and performance improvements
 
 ## v.2.98.0
