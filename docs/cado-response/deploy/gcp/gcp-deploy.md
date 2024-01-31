@@ -14,7 +14,7 @@ Once you have downloaded the Terraform code from the Marketplace listing above, 
 2. **[Install GCloud CLI](https://cloud.google.com/sdk/docs/install)**, if you have not already.
 3. Create a project and generate some service account credentials for the project, exporting the credentials.json. The service account will need to have the following permissions:
     - Compute Admin
-    - Service Account Admin
+    - Service Account User
     - Storage Admin
     - Cloud Filestore Editor
     - Role Administrator
