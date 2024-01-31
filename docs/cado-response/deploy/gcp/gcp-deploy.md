@@ -13,12 +13,12 @@ Once you have downloaded the Terraform code from the Marketplace listing above, 
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
 2. **[Install GCloud CLI](https://cloud.google.com/sdk/docs/install)**, if you have not already.
 3. Create a project and generate some service account credentials for the project, exporting the credentials.json. The service account will need to have the following permissions:
-    - roles/compute.admin
-    - roles/iam.serviceAccountAdmin
-    - roles/storage.admin
-    - roles/file.editor
-    - roles/iam.roleAdmin
-    - roles/iam.securityAdmin
+    - Compute Admin
+    - Service Account User
+    - Storage Admin
+    - Cloud Filestore Editor
+    - Role Administrator
+    - Security Admin
 4. Ensure the following **[APIs](https://console.cloud.google.com/apis/library)** are enabled in the project:
     - **[Compute Engine](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
     - **[Cloud Build](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
@@ -41,7 +41,7 @@ Once you have downloaded the Terraform code from the Marketplace listing above, 
     | `credentials_file` | Path to your GCP service account credentials json | `../credentials.json` |
     | `project_id` | ID of the project Cado will be deployed into | `cado-12839`  |
     | `region` | The region which Cado will be deployed to | `us-east1` |
-    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-8-0` |
+    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-112-0` |
     | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
     | `vm_size` | Size of main instance | `n2d-standard-8` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
