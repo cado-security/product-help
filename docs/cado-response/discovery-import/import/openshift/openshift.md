@@ -12,10 +12,10 @@ Then, you will need to execute the script on the target container, as such:
     
 ```
 oc login --token=sha256~... --server=https://api.system.openshiftapps.com:443
-oc exec container-name -c container -- mkdir -p /tmp/cado-host
-oc exec container-name -c container -- curl -s https://cado-public.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host --output /tmp/cado-host/cado-host
-oc exec container-name -c container -- chmod +x /tmp/cado-host/cado-host
-oc exec container-name -c container -- /tmp/cado-host/cado-host --presigned_data ...
+oc exec pod-name -c container-name -- mkdir -p /tmp/cado-host
+oc exec pod-name -c container-name -- curl -s https://cado-public.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host --output /tmp/cado-host/cado-host
+oc exec pod-name -c container-name -- chmod +x /tmp/cado-host/cado-host
+oc exec pod-name -c container-name -- /tmp/cado-host/cado-host --presigned_data ...
 ```
 
 ![Openshift](/img/openshift.png)
