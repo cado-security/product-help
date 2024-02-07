@@ -8,31 +8,31 @@ sidebar_position: 1
 ## Latest release notes
 
 ## v.2.113.0
-`Released 2023-02-05`
+`Released 2024-02-05`
 - Bug fixes and performance improvements
 
 ## v.2.112.0
-`Released 2023-01-24`
+`Released 2024-01-24`
 - Bug fixes and performance improvements
 
 ## v.2.111.0
-`Released 2023-01-23`
+`Released 2024-01-23`
 - Bug fixes and performance improvements
 
 ## v.2.110.0
-`Released 2023-01-22`
+`Released 2024-01-22`
 - Bug fixes and performance improvements
 
 ## v.2.109.0
-`Released 2023-01-19`
+`Released 2024-01-19`
 - Bug fixes and performance improvements
 
 ## v.2.108.0
-`Released 2023-01-17`
+`Released 2024-01-17`
 - Bug fixes and performance improvements
 
 ## v.2.107.0
-`Released 2023-01-16`
+`Released 2024-01-16`
 - AI Investigator in beta
 - Bug fixes and performance improvements
 
