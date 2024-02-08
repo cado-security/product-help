@@ -38,7 +38,7 @@ You can deploy and manage Cado in either your AWS, Azure or GCP environment
 
 **[Learn how in Azure >](deploy/azure/azure-deploy.md)**
 
-**[Learn how in GCP (Beta) >](deploy/gcp/gcp-deploy.md)**
+**[Learn how in GCP >](deploy/gcp/gcp-deploy.md)**
 
 ### Processing Data
 After deploying Cado, data can be automatically acquired from the cloud or imported from a number of supported sources. 

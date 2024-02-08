@@ -1,5 +1,5 @@
 ---
-title: GCP Deployment (Beta)
+title: GCP Deployment
 hide_title: true
 sidebar_position: 1
 ---
