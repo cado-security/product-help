@@ -7,6 +7,9 @@ sidebar_position: 1
 # Log Types
 Cado Response supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
+## What cloud logs can Cado import from cloud Storage?
+Cado can import most cloud log types from cloud storage, including:
+
 ### AWS Log Formats
 - Cloud Trail logs
 - Guard Duty logs
@@ -17,7 +20,21 @@ Cado Response supports the processing of a wide range of evidence types.  These 
 ### Azure Log Formats
 - Activity logs
 
-### System Log Formats
+We can process additional log types through our generic extractors, so this list is not exhaustive.
+
+## What logs does Cado capture via APIs?
+
+Cado can capture logs from the following cloud services via their APIs:
+
+When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve VPC flow logs and CloudTrail logs associated with the instance id, if enabled (https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log).
+
+When acquiring a Lambda function, Cado acceses the CloudWatch API to retrieve logs associated with the function (https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
+
+When acquiring Azure compute, Cado retrieves activity logs associated with the VM (https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
+
+If logs are stored in a central account, at this point Cado does not have the capability to traverse accounts and pull logs from a different account. Instead, you would need to collect them in cloud storage and import from there.
+
+## Operating System Log and Artifact Formats
 - AppleSystemLog (ASL)
 - Androidusage-history (appusage)
 - BasicSecurityModule (BSM)
