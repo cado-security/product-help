@@ -28,7 +28,7 @@ Cado can capture logs from the following cloud services via their APIs:
 
 When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve VPC flow logs and CloudTrail logs associated with the instance id, if enabled (https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log).
 
-When acquiring a Lambda function, Cado acceses the CloudWatch API to retrieve logs associated with the function (https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
+When acquiring a Lambda function, Cado accesses the CloudWatch API to retrieve logs associated with the function (https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
 
 When acquiring Azure compute, Cado retrieves activity logs associated with the VM (https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
 
