@@ -109,10 +109,10 @@ When importing a Default KMS encrypted EC2 for the first time, it is recommended
 	"Action": [
 		"iam:CreateServiceLinkedRole"
 	],
-	"Resource": "arn:aws:iam::*:role/aws-service-role/kms.amazonaws.com/*CadoResponse*",
+	"Resource": "arn:aws:iam::*:role/aws-service-role/mrk.kms.amazonaws.com/AWSServiceRoleForKeyManagementServiceMultiRegionKeys",
 	"Condition": {
 		"StringLike": {
-			"iam:AWSServiceName": "kms.amazonaws.com"
+			"iam:AWSServiceName": "mrk.kms.amazonaws.com"
 		}
 	}
 }
