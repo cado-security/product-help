@@ -100,7 +100,7 @@ Alternatively the permissions in Custom Keys section are still valid, however bo
 
 ### Cross Account using AWS default keys
 :::warning
-When importing a Default KMS encrypted EC2 for the first time, it is recommended that you include the following permission for `"iam:CreateServiceLinkedRole"` in the myCadoResponseRole in the **account where the Cado platform has been deployed**.  Failure to do so may result in IAM errors until the permission has been added.  Once added, and a default encrypted EC2 import has suceeded, the permission can be removed.  While this permission is present in the supplied Terraform and CloudFormation templates, it is reproduced here for your convenience.
+When importing a Default KMS encrypted EC2 for the first time, it is recommended that you include the following permission for `"iam:CreateServiceLinkedRole"` in the myCadoResponseRole in the **account where the Cado platform has been deployed**.  Failure to do so may result in IAM errors until the permission has been added.  Once added, and a default encrypted EC2 import has suceeded, the permission can be removed.  While this permission is present in the supplied Terraform and CloudFormation templates, it is reproduced here for your convenience.  **[More information can be found in the AWS KMS documentation.](https://docs.aws.amazon.com/kms/latest/developerguide/using-service-linked-roles.html#slr-permissions-multi-region)**
 
 ```json
 {
