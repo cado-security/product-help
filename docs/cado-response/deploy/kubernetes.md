@@ -28,10 +28,10 @@ In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resourc
 Cado Host can run as a normal user, not sudo, although less data may be acquired.
 
 ## Distroless / No Shell Containers
-The Cado platform cannot acquire artifacts from a container built with a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image. This is due to the way the platform interacts with a container, which requires a shell environment, you can learn more about the command we run [here](cado-host/deploy#using-script-builder). Additionally, the platform will hide containers with the gcr.io/distroless image tag. You may be able to still collect data for the container via the “Alternative Collection Methods via the Node Volume” method below.
+The Cado platform cannot acquire artifacts from a container built with a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image. This is due to the way the platform interacts with a container, which requires a shell environment. Additionally, the platform will hide containers with the gcr.io/distroless image tag. You may be able to still collect data for the container via the “Alternative Collection Methods via the Node Volume” method below.
 
 ## On-Premise Clusters
-If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for [OpenShift](cado-response/discovery-import/import/openshift). You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
+If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for OpenShift. You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
 
 ## Alternative Collection Methods via other Agents or Sidecars
 If you are using an agent in your containers that has the ability to execute code,you may be able to collect data by manually deploying Cado Host inside the container for collection.
