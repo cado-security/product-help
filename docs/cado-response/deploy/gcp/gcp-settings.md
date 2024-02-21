@@ -26,31 +26,95 @@ In order to set up the project for Cado collection you need to
 
 ***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
-### Creating a Cado Role
-To appropriately scope a service account for Cado to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section un the **IAM and Admin** tab. Create a custom role and add the following permissions:
+### The Cado Role
+To appropriately scope a service account for Cado to operate, the Terraform script will have created a custom GCP role, prefixed with **myCadoResponseRole**. To achieve this, the role will have the following permissions, which can be checked by navigating to the **Role** section un the **IAM and Admin** tab.
 ```
-  cloudbuild.builds.create
-  cloudbuild.builds.get
-  compute.disks.get
-  compute.disks.useReadOnly
-  compute.globalOperations.get
-  compute.images.create
-  compute.instances.get
-  compute.instances.list
-  container.clusters.get
-  container.clusters.list
-  container.pods.exec
-  container.pods.get
-  container.pods.list
-  iam.serviceAccounts.getAccessToken
-  iam.serviceAccounts.implicitDelegation
-  resourcemanager.projects.get
-  storage.buckets.get
-  storage.buckets.list
-  storage.objects.get
-  storage.objects.list
+    // Instance Acquisition
+    "cloudbuild.builds.get",
+    "cloudbuild.builds.create",
+    "compute.disks.get",
+    "compute.disks.use",
+    "compute.disks.list",
+    "compute.disks.useReadOnly",
+    "compute.globalOperations.get",
+    "compute.images.create",
+    "compute.instances.get",
+    "compute.instances.list",
+    "compute.images.delete",
+    "compute.images.get",
+    "compute.instances.getSerialPortOutput",
+
+    // Compute Management
+    "compute.disks.create",
+    "compute.disks.setLabels",
+    "compute.images.useReadOnly",
+    "compute.instances.attachDisk",
+    "compute.instances.create",
+    "compute.instances.delete",
+    "compute.instances.setLabels",
+    "compute.instances.setMetadata",
+    "compute.instances.setServiceAccount",
+    "compute.machineTypes.list",
+    "compute.machineTypes.get",
+    "compute.regions.get",
+    "compute.subnetworks.use",
+    "compute.subnetworks.useExternalIp",
+    "compute.networks.get",
+    "compute.networks.list",
+    "compute.zones.list",
+    "compute.zoneOperations.get",
+
+
+    // Platform Update
+    "compute.addresses.use",
+    "compute.instances.addAccessConfig",
+    "compute.instances.detachDisk",
+    "compute.instances.deleteAccessConfig",
+
+    // GKE Acquisition
+    "container.clusters.get",
+    "container.clusters.list",
+    "container.pods.exec",
+    "container.pods.get",
+    "container.pods.list",
+
+    // IAM & Authentication
+    "iam.serviceAccounts.actAs",
+    "iam.serviceAccounts.create",
+    "iam.serviceAccounts.enable",
+    "iam.serviceAccounts.get",
+    "iam.serviceAccounts.getAccessToken",
+    "iam.serviceAccounts.getIamPolicy",
+    "iam.serviceAccounts.implicitDelegation",
+    "iam.serviceAccounts.list",
+    "iam.serviceAccounts.signBlob",
+
+    // Project Management
+    "resourcemanager.projects.get",
+    "compute.projects.get",
+
+    // Secret Management
+    "secretmanager.versions.access",
+    "secretmanager.versions.add",
+    "secretmanager.secrets.create",
+
+    // Bucket Acquisition
+    "storage.buckets.get",
+    "storage.buckets.list",
+    "storage.objects.create",
+    "storage.objects.delete",
+    "storage.objects.get",
+    "storage.objects.list",
 ```
-If you'll be wanting to use this Role across multiple projects, you can create it at the Organization level- this is required if you'll be wanting to acquire assets from multiple projects under one service account.
+If you'll be wanting to use this Role across multiple projects, you can create it at the Organization level- this is required if you'll be wanting to acquire assets from multiple projects under one service account. 
+This can be done easily if the Terraform-created role already exists by using the command:
+```bash
+gcloud iam roles describe CUSTOM_ROLE_ID --project=YOUR_PROJECT_ID --format=yaml > cado-organization-role.yaml
+```
+This will output the role to a yaml file, which can be edited to serve as a template for the new organization role. To edit the template for org use delete the 'name' and 'etag' sections, as these will be project specific, then use the command:
+```bash
+gcloud iam roles create CUSTOM_ORG_ROLE_ID --organization=YOUR_ORG_ID --file=cado-organization-role.yaml
+```
 
 ### Enabling the Cloud Build API for the project
 
