@@ -27,7 +27,7 @@ In order to set up the project for Cado collection you need to
 ***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
 ### The Cado Role
-To appropriately scope a service account for Cado to operate, the Terraform script will have created a custom GCP role, prefixed with **myCadoResponseRole**. To achieve this, the role will have the following permissions, which can be checked by navigating to the **Role** section un the **IAM and Admin** tab.
+To appropriately scope a service account for Cado to operate, the Terraform script will have created a custom GCP role, prefixed with **myCadoResponseRole**. To achieve this, the role will have the following permissions, which can be checked by navigating to the **Role** section under the **IAM and Admin** tab.
 ```
     // Instance Acquisition
     "cloudbuild.builds.get",
