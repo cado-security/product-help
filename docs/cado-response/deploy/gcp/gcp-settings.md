@@ -110,7 +110,8 @@ If you're deploying into GCP, the Terraform script provided by Cado should have 
     "storage.objects.list",
 ```
 If you'll be wanting to use this Role across multiple projects, you can create it at the Organization level- this is required if you'll be wanting to acquire assets from multiple projects under one service account. 
-This can be done easily if the Terraform-created role already exists by using the command:
+:::tip
+If deploying into GCP, this can be done easily if the Terraform-created role already exists by using the command:
 ```bash
 gcloud iam roles describe CUSTOM_ROLE_ID --project=YOUR_PROJECT_ID --format=yaml > cado-organization-role.yaml
 ```
@@ -118,6 +119,7 @@ This will output the role to a yaml file, which can be edited to serve as a temp
 ```bash
 gcloud iam roles create CUSTOM_ORG_ROLE_ID --organization=YOUR_ORG_ID --file=cado-organization-role.yaml
 ```
+:::
 
 ### Enabling the Cloud Build API for the project
 
