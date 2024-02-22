@@ -6,12 +6,12 @@ sidebar_position: 5
 
 # GCP Cross-Project Importing
 
-After creating the service account, enabling Cloud Build and other relevant APIs, and setting up the Primary GCP Project as discussed in the [Overview](/docs/cado-response/deploy/gcp/gcp-settings.md), we can use these principals to import from other GCP projects under the same service acount.
+After creating the service account, enabling Cloud Build and other relevant APIs, and setting up the Primary GCP Project as discussed in the [Overview](/docs/cado-response/deploy/gcp/gcp-settings.md), we can use these principals to import from other GCP projects under the same service account.
 :::info
 This also allows cross-project importing, meaning images from an instance in `Project-A` can be saved to a bucket in `Project-B`
 :::
 
-In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the defualt Cloud Build principal for our primary project.
+In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the default Cloud Build principal for our primary project.
 
 :::info
 Cloud Build API needs to be enabled in every GCP project from which you want to collect
@@ -19,9 +19,10 @@ Cloud Build API needs to be enabled in every GCP project from which you want to 
 
 ## Secondary Project Permissions
 
-In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and cloud buid `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Basic -> Editor** role.
+In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and cloud build `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Custom -> Cado Role** role. More info on the **Cado Role** can be found [here](./gcp-settings.md###The-Cado-Role)
 
-![GCP-Cross-Project-IAM](/img/gcp-cross-project-iam.png)
+
+<img src="/img/gcp-crossproject-granting.png" height="800" width="600"/>
 
 Once added they should both appear as principals in the **IAM** section of that project.
 
@@ -36,7 +37,7 @@ Now in Cado, if the credentials of the service account are already in the platfo
 ![GCP-Cado-Cross-Project](/img/gcp-cado-project-selection.png)
 
 :::info
-This configuration only allows us to import from our Secondary Project to our Primary Project. If we want to be able to import the other way as well, the Seconday Account's Cloud Build `gserviceaccount.com` will need to be granted access to the Primary Account's IAM section and given the **Editor** role.
+This configuration only allows us to import from our Secondary Project to our Primary Project. If we want to be able to import the other way as well, the Secondary Account's Cloud Build `gserviceaccount.com` will need to be granted access to the Primary Account's IAM section and given the **Cado Role** role.
 
 Simply follow the same steps in the **Secondary Project Permissions** section, but using the Secondary Project's principal and adding it to the Primary Project.
 :::
