@@ -20,7 +20,7 @@ Depending upon the service, authenticating to the Kubernetes API may require bot
 As the Cado platform requires access to the Kubernetes control plane API, these requires a valid route at the network level from the Cado instance to the Kubernetes API.
 * This is possible in AKS environments as Azure has created the “command invoke” command to execute commands against private AKS clusters.
 * We are investigating support for private GKE clusters through public endpoints on private clusters.
-* It is not currently possible to acquire from private EKS clusters, as AWS have not yet created an equivalent method of access to Azure’s “command invoke”.
+* It is not currently possible to acquire from private EKS clusters, as AWS have not yet created an equivalent method of access to Azure’s “command invoke”. Work-arounds may be possible depending upon your implementation using alternate access methods (https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html#private-access).
 
 ## Kubernetes RBAC Requirements
 Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
