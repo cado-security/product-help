@@ -7,6 +7,18 @@ sidebar_position: 1
 # Cado Release Notes
 ## Latest release notes
 
+## v.2.117.0
+`Released 2024-02-28`
+- Bug fixes and performance improvements
+
+## v.2.116.0
+`Released 2024-02-24`
+- Bug fixes and performance improvements
+
+## v.2.114.0
+`Released 2024-02-20`
+- Bug fixes and performance improvements
+
 ## v.2.113.0
 `Released 2024-02-05`
 - Bug fixes and performance improvements
