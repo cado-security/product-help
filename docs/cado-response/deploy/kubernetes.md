@@ -64,7 +64,7 @@ Note this requires a shell inside the container, see "Distroless / No Shell Cont
 
 #### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
 Alternate options include Bastion Hosts, SSM, AWS Private link, AWS Cloud9, AWS VPN, AWS Direct Connect.
-See the links below for options for accessin the Kubernetes API within the Private Cluster VPC.
+See the links below for options for accessing the Kubernetes API within the Private Cluster VPC.
 
 How to connect using a Bastion Host:
 - https://cloudtipss.com/Create-Private-EKS-With-Bastion/
@@ -76,7 +76,7 @@ How to connect using SSM, optionally via a Bastion host or direct to the Node:
 - https://stackoverflow.com/questions/70827578/how-do-we-access-the-kubernetes-api-server-with-kubectl-from-a-private-eks-clust
 - https://help.gopaddle.io/manage-pre-existing-clusters/register-pre-existing-cluster/register-aws-eks-cluster/eks-cluster-with-private-access-endpoint-and-a-bastion-host
 
-How to connect to the VPC using via VPN or similar:
+How to connect to the VPC using a VPN or similar:
 - https://docs.aws.amazon.com/vpc/latest/userguide/vpn-connections.html
 - https://hodovi.cc/blog/private-eks-api-endpoint-behind-openvpn/ (OpenVPN)
 - https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect.html (DirectConnect)
