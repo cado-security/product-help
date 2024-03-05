@@ -44,3 +44,8 @@ There are two main caveats to this method:
 
 The newly created pod will shutdown and remove itself after 1 hour.
 :::
+
+### Scoping Down The Role for Access to AKS
+The Cado platform requires permissions to access and execute code against containers. The following role definition can be used to scope down the permissions required for the Cado platform to access and acquire data from AKS:
+
+![Scoped down AKS role](/img/aks_role.png)
