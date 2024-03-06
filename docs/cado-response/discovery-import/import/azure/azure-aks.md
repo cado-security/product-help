@@ -49,3 +49,33 @@ The newly created pod will shutdown and remove itself after 1 hour.
 The Cado platform requires permissions to access and execute code against containers. The following role definition can be used to scope down the permissions required for the Cado platform to access and acquire data from AKS:
 
 ![Scoped down AKS role](/img/aks_role.png)
+
+```
+{
+    "id": "",
+    "properties": {
+        "roleName": "ScopedDownAKSTest",
+        "description": "",
+        "assignableScopes": [
+            ""
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Resources/subscriptions/operationresults/read",
+                    "Microsoft.Resources/subscriptions/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.ContainerService/managedClusters/read",
+                    "Microsoft.ContainerService/managedClusters/runCommand/action",
+                    "Microsoft.ContainerService/managedClusters/commandResults/read",
+                    "Microsoft.ContainerService/managedClusters/privateEndpointConnections/read",
+                    "Microsoft.ContainerService/managedClusters/listClusterAdminCredential/action"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
+```
