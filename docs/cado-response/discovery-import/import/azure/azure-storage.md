@@ -24,6 +24,6 @@ Alternatively, you can use a [Sas Token or Access Key](https://cyberduck.io/azur
 
 We reccomend scoping access by giving [write-only](https://stackoverflow.com/questions/50864068/write-only-access-no-read-no-list-no-delete-to-azure-storage) access to Azure storage.
 
-You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado Response will generate the credentials at Import > Forensic Artifacts.
+You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado Response will generate the credentials at Import > Cado Host.
 
 
