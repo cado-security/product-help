@@ -6,17 +6,21 @@ sidebar_position: 3
 
 # Memory Analysis
 
-You can perform a memory acquisition of a Windows or Linux system using Cado Host by clicking `Import > Forensic Artifacts` and running the pre-generated script on the host device. Process memory collection is not currently supported on OSX.
+You can perform a memory acquisition of a Windows or Linux system using Cado Host by clicking `Import > Cado Host` and running the pre-generated script on the host device. Process memory collection is not currently supported on OSX.
 
-We collect memory from individual processes as .mem files, viewable under the "process_dumps" folder. We find this allows for more reliable analysis than our previous version which collected a single capture of memory, and utilises our open source tool [varc](https://github.com/cado-security/varc)
+We collect memory from individual processes as .mem files, viewable under the "process_dumps" folder.
+We find this allows for more reliable analysis than our previous version which collected a single capture of memory, and utilises our open source tool [varc](https://github.com/cado-security/varc)
 
-For importing externally acquired memory, ensure the memory dump is named with a `.mem` file extension so it is recognized as a memory file and upload the memory file to an S3 bucket (or Azure Storage) to which Cado has access.  Then click `Import > AWS S3 Bucket` within Cado, navigate to the S3 bucket where the .mem file resides, and import it.    
+For importing externally acquired memory, ensure the memory dump is named with a `.mem` file extension so it is recognized as a memory file and upload the memory file to an S3 bucket (or Azure Storage) to which Cado has access.
+Then click `Import > AWS S3 Bucket` within Cado, navigate to the S3 bucket where the .mem file resides, and import it.    
 
 You can acquire memory of Linux systems in EC2 by using the "Alternate Acquisition" option under Import > EC2:
 
 ![AWS Memory](/img/alternate-ec2.png)
 
-This requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager. If it is not, you can acquire memory by connecting to the machine over SSH or RDP and executing Cado Host from Import > Forensic Artifacts. You can also use this method to acquire from Windows systems.
+This requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager.
+If it is not, you can acquire memory by connecting to the machine over SSH or RDP and executing Cado Host from Import > Cado Host.
+You can also use this method to acquire from Windows systems.
 
 Any acquisition from a container (e.g. ECS/EKS/AKS) will attempt to collect memory by default.
 

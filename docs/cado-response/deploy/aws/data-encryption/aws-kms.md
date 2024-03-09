@@ -174,7 +174,7 @@ Getting the right KMS policies can prove difficult, particularly for cross-accou
 #### Using Cado Host to bypass KMS
 If you are unable to obtain a full disk capture, you can bypass KMS by acquiring a system using Cado Host:
 - If the system has SSM enabled, select "Use Alternate Triage Acquisition" when acquiring the system
-- Conect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Forensic Artifacts
+- Conect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Cado Host
 
 #### Bypassing KMS by creating an Unencrypted Volume
 You can remove KMS from a volume by following the steps at https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/

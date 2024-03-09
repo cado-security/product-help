@@ -20,7 +20,7 @@ In order to deploy Cado Host via the Script Builder in the Cado Response platfor
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
 :::
 
-1. Find the Cado Host deployment options on the platform under `Project > Import > Forensic Artifacts > Cado Host`.
+1. Find the Cado Host deployment options on the platform under `Project > Import > Cado Host`.
 
   ![Import Evidence](/img/import.png)
 
