@@ -38,11 +38,22 @@ Cado consists of a few key components that interact with each other in order to 
 
 To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
 
-1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.  Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
+1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.
 
-2. On Step 1 (Specify template), do not change the default **Template is ready** and **Amazon S3 URL** settings.   Click **<Highlight color="#F78631">Next</Highlight>**
+A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
+- DeployCloudFormationPublic.yaml - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
+- DeployCloudFormationPrivate.yaml - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
+- DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
 
-3. On Step 2 (Specify stack details), give your stack an appropriate Stack Name, for example: `CadoResponse` and enter the parameters as outlined below:
+Additionally:
+- A High Availability (HA) CloudFormation template is available for deployment into AWS (below).
+- Cloudformation templates are also available for deploying into existing VPC's, and custom VPC networking.
+
+2. Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
+
+3. On Step 1 (Specify template), do not change the default **Template is ready** and **Amazon S3 URL** settings.   Click **<Highlight color="#F78631">Next</Highlight>**
+
+4. On Step 2 (Specify stack details), give your stack an appropriate Stack Name, for example: `CadoResponse` and enter the parameters as outlined below:
 
     ### Parameters
 
@@ -68,9 +79,9 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
      We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
     :::
 
-4. Click **<Highlight color="#F78631">Next</Highlight>**
+6. Click **<Highlight color="#F78631">Next</Highlight>**
 
-5. On Step 3 (Configure stack options), click **<Highlight color="#F78631">Next</Highlight>** again (unless you require custom settings). If you require custom settings, please contact Cado Security
+7. On Step 3 (Configure stack options), click **<Highlight color="#F78631">Next</Highlight>** again (unless you require custom settings). If you require custom settings, please contact Cado Security
 
     ![Step 3](/img/cft-step3.png)
 
@@ -78,9 +89,9 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
     For more information on available stack options, see [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html).
     :::
 
-6. Click **<Highlight color="#F78631">Next</Highlight>**
+8. Click **<Highlight color="#F78631">Next</Highlight>**
 
-7. Review the details that have been applied and click **<Highlight color="#F78631">Create Stack</Highlight>**
+9. Review the details that have been applied and click **<Highlight color="#F78631">Create Stack</Highlight>**
 
     :::info
     The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template json file.
