@@ -41,23 +41,13 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
 1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.
 
 A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
-- DeployCloudFormationPublic.yaml - This template creates
-  an Amazon EC2 Instance with associated IAM Role with required access to EC2 and
-  S3. This deployment includes a public IP address and can be accessed directly.
-- DeployCloudFormationPrivate.yaml - This template creates
-  an Amazon Load Balancer, EC2 Instance with associated IAM Role with required access
-  to EC2 and S3. The instance won't have a public IP and will be accessed via the
-  ALB.
-- DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template creates
-  an Amazon Load Balancer, EC2 Instance with associated IAM Role with required access
-  to EC2 and S3. The instance won't have a public IP and will be accessed via the
-  ALB.
-- DeployCloudFormationCustomVPCNetworking.yaml - 
-- DeployCloudFormationCustomVPC.yaml - 
+- DeployCloudFormationPublic.yaml - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
+- DeployCloudFormationPrivate.yaml - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
+- DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
 
 Additionally:
 - A High Availability (HA) CloudFormation template is available for deployment into AWS (below).
-- Cloudformation templates are available for deploying into existing VPC's, and custom VPC networking.
+- Cloudformation templates are also available for deploying into existing VPC's, and custom VPC networking.
 
 2. Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
 
