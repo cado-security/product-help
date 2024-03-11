@@ -104,3 +104,8 @@ When selecting the role in the UI, select the role configured for the account wh
 For a typical acquisition, import and processing will take a few minutes to complete.
 
 ![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
+
+
+### Data Flow Diagram
+For a diagram of how our ECS acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258925265809-How-do-EKS-acquisitions-work).
+

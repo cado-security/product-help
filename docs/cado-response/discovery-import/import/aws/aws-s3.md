@@ -27,3 +27,5 @@ If you create an Access/Secret for uploading data to S3, we reccomend you scope 
 
 You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado Response will generate the credentials at Import > Cado Host.
 
+### Data Flow Diagram
+For a diagram of how our S3 acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258776328081-How-do-S3-Imports-operate).
