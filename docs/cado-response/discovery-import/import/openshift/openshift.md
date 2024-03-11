@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # RedHat Openshift
 
-First, generate a collection script using Cado Host under Import > Cado Host.
+First, generate a collection script using Cado Host under **Import** > **Cado Host**.
 
 Then, you will need to execute the script on the target container, as such:
     
