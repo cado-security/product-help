@@ -1,5 +1,5 @@
 ---
-title: Platform Encryption
+title: Encryption
 hide_title: true
 sidebar_position: 3
 ---
