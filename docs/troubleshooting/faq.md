@@ -14,7 +14,9 @@ Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado sup
 Yes.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
-On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete.
+On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete. 
+
+
 
 ### I deployed the Cado platform. How do I log in?
 Navigate to the Cado instance IP `https://<Cado_IP>`. You can initially login with the username `admin` and the password `i-xxx` where `i-xxx` is the ID of your instance.  After first login, you will be asked to change your password.  Note that for Azure, the password is the very long Resource ID.  The Resource ID can be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
@@ -36,13 +38,7 @@ Yes. Within Cado, you can see the platform health and statistics by navigating t
 This lists Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeline processing details.  In addition, roundtrip response latency for the API `/api/v2/system/status` endpoint should be less than or equal to 200ms.
 
 ### Can I estimate the costs for running the Cado platform in AWS?
-Yes. You can view the AWS Cost Calculator for a typical Cado installation at https://calculator.s3.amazonaws.com/index.html#r=IAD&key=files/calc-bca484373bcb2d07322fd6716a197d1cdc629534&v=ver20210903uJ
-
-This includes: 
-- A central platform server running permanently with 500 GB of space for hot data access
-- 36.5 hours (5% of the time) worker usage to process data
-- 500 GB of permanent S3 Storage used for forensic images
-- 50 GB of Elastic File System Storage used for file transfer downloads
+Yes, please see [Cost Management](/cado-response/manage/cost-management) for details.
 
 ### How can I capture Logs or a Support Bundle from the Cado platform?
 The following methods for getting Logs to Cado are available, in order of ease:
