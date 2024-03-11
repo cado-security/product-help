@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 8
 ---
 
-# Security Consideration for Cado Host
+# Security Considerations for Cado Host
 - Cado Host releases are scanned with the same static analysis tools that we use for the primary Cado platform in our release pipeline.
 - Cado Host Windows binaries are signed with an EV (Extended Validation) code signing certificate.
 - An upcoming release will add support for customer hosted S3 buckets to deploy Cado Host from, enabling customers to scan any binaries deployed in their environments.
