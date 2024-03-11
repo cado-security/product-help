@@ -28,6 +28,10 @@ The search interface allows you to search both file and event contents.
 
 Click **Investigate** then **Search** to open the search interface. Cado uses specialized indexing to provide fast searches across files and events. Due to the way this indexing works, you may get fewer results than if you performed a traditional slow byte by byte search of each file.
 
+For more information on searching, see [Timeline Search](/cado-response/investigate/timeline-search.md).
+
+
+
 ### Indicators / Detections
 The Indicators or Detections page provides a summary of indicators of compromise detected within a project, and which systems they matched.
 
