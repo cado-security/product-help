@@ -19,7 +19,7 @@ To set up Cado in Azure you can deploy via our Terraform script.  The Terraform 
 
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
 - a link to the Cado VHD image
-- the latest Cado Terraform module (**azure.zip**) for deploying into Azure
+- the latest Cado Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 

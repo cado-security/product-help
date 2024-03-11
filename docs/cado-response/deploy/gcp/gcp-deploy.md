@@ -31,7 +31,7 @@ The service account itself will need to have the following roles:
 
 5. Run `gcloud auth activate-service-account --key-file <key_file>` where key_file is the path to your GCP service account credentials.json. 
 6. Run `gcloud config set project <project_id>`
-7. Extract gcp.zip This is the ZIP that was provided by Cado Sales.
+7. Extract gcp.zip This is the ZIP that was provided by Cado Sales, or downloaded from the GCP Marketplace, or cloned from https://github.com/cado-security/Deployment-Templates/tree/main/gcp
 
 8. Change directories into gcp/ which was extracted in the previous step.
 9. Customize the file `gcpVars.tfvars` by filling in values:
