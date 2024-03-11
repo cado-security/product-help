@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 # AWS Logging Best Practices
-We recommend customers follow AWS best practices regarding logging (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-cis-controls.html) which includes the following:
+We recommend customers follow [AWS best practices regarding logging](https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/) which includes the following:
 - Ensure CloudTrail is enabled in all regions
 - Ensure CloudTrail log file validation is enabled
 - Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
