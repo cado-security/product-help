@@ -15,9 +15,9 @@ Communication between workers and the main Cado instance is performed over TLS.
 ## AWS
 During deployment, by default, an S3 bucket, a VPC and a Subnet are created for use by the Cado solution.
 
-During deployment, a default S3 bucket for collections is created. This can be customised, including to use an existing bucket, but by default the created S3 Bucket is encrypted with server-side encryption using AES256 (SSE-AES256 - See https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html).
-Attached EBS volumes are encrypted using KMS (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html).
-Access to EFS/NFS is over TLS (https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html).
-Secrets are stored using AWS Secrets Manager (https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+During deployment, a default S3 bucket for collections is created. This can be customised, including to use an existing bucket, but by default the created S3 Bucket is encrypted with server-side encryption using AES256 (SSE-AES256 - See [Protecting data with server-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html).
+Attached EBS volumes are encrypted using [KMS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html).
+Access to EFS/NFS [is over TLS ](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html).
+Secrets are stored using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
 
-Some settings can be customized, and you may wish to enable key rotation as well (https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html).
+Some settings can be customized, and you may wish to [enable key rotation](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) as well .
