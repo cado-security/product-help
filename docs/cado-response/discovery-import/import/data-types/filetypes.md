@@ -8,9 +8,9 @@ sidebar_position: 1
 The Cado platform supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
 ### AWS Capture Formats
-- EC2
+- EC2 (Including AMI, EBS Snapshots and Volumes)
 - S3 Storage (normal and glacier)
-- AWS Kubernetes
+- AWS Kubernetes (ECS and EKS)
 - AWS Lambda
 
 ### Azure Capture Formats
@@ -18,7 +18,13 @@ The Cado platform supports the processing of a wide range of evidence types.  Th
 - Disks
 - Storage Containers
 - Container Blobs
-- Kubernetes Disks
+- Kubernetes (AKS)
+
+### GCP Capture Formats
+- Compute Engine
+- Disks
+- Storage Buckets
+- Kubernetes (GKE)
 
 ### Storage Formats
 In addition to native capture support for machines and data running/stored in the cloud, Cado also supports processing of the following local evidence formats.  
@@ -34,14 +40,10 @@ In addition to native capture support for machines and data running/stored in th
 To import a compressed dd image, compress with Gzip and add .gz to the extension. (example: `disk.dd.gz`)
 
 
-:::info 
-Currently, split E01 format disks are supported in AWS only.
-*VMDK's are partially supported as the file format contains many different sub-formats.  If possible, we recommend converting to dd format before importing.
-:::
-
-:::info
-If you import a zip, it will be treated as a container of files **unless** it is a zip of a single file. Importing zipped split E01s is not supported.
-:::
+### Limitations and Notes
+- Currently, split E01 format disks are supported in AWS only. Importing zipped split E01s is not supported.
+- VMDK's are partially supported as the file format contains many different sub-formats. If possible, we recommend converting to dd format before importing.
+- If you import a zip, it will be treated as a container of files **unless** it is a zip of a single file.
 
 #### Volume Systems
 - GPT
