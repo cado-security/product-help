@@ -121,3 +121,7 @@ You will then need to add the newly created cross-account IAM Role ARN to the Ca
 ## Automating Cado Cross-account Creation
 
 As mentioned previously, the second step to adding cross-account access is to add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform. To automate this process via the Cado APIs, please see the example Cado API for adding AWS credentials [here](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
+
+## Key Based Credentials
+You can add Key Based credentials, for temporary just-in-time cross-cloud access to the Cado platform.
+This can be done at Settings > Cloud Accounts > Add Accounts > AWS Keys.
