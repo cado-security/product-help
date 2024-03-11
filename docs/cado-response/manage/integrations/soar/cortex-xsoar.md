@@ -8,6 +8,8 @@ sidebar_position: 6
 
 Cortex XSOAR is a powerful Security Orchestration, Automation, and Response (SOAR) system. XSOAR allows SoC teams to organize cases, incidents and automate investigation rapidly using a central War Room for collaboration. By integrating Cado with XSOAR, you're going to increase efficiency and productive by automating Cado's powerful data acquisition and processing.
 
+For more information, see the [Cortex XSOAR documentation for the Cado Response Pack.](https://xsoar.pan.dev/docs/reference/integrations/cado-response).
+
 :::tip
 If you're confused by the terminology mentioned here, or have never used XSOAR before, please consider checking out the [XSOAR documentation](https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-tutorials.html).
 :::
