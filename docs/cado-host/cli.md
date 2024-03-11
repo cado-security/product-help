@@ -7,7 +7,7 @@ sidebar_position: 7
 
 ### Command Line Parameters
 
-Below are the commandline parameters suppoted by Cado Host.
+Below are the command line parameters supported by Cado Host.
 
 ```
 usage: cado-host.exe [-h] [--presigned_data PRESIGNED_DATA] [--presigned_url PRESIGNED_URL]

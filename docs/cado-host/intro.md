@@ -10,6 +10,14 @@ Data is collected and stored in a zip file that can be automatically uploaded to
 It also supports storing captured files locally, for usage in environments where cloud storage is not available such as air-gapped networks.
 Once collected, these artifacts can be imported, processed and analysed in the Cado Response platform.
 
+# Data Collected
+On a target system Cado Host will collect:
+- Files from a list of key locations of forensic artefacts
+- Open files
+- Meta-data on running processes and network connections
+- Memory (Optional)
+For more, see [Collected Artifacts](/artifacts.md)
+
 # Use Case and Integrations
 Cado Host is also used by the Cado Platform to collect data from:
 - AWS EC2's over SSM

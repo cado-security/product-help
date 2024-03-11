@@ -23,6 +23,8 @@ When you deploy Cado in AWS you can import data "cross-cloud" from Azure or GCP.
 
 **[Learn how to set up cross cloud collection from GCP>](gcp/gcp-settings.md)**
 
+Diagrams of how cross-cloud imports from [Azure](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259971240465-How-do-cross-cloud-imports-from-Azure-into-AWS-work) and [Google Cloud](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259790277649-How-do-Cross-Cloud-imports-from-GCP-into-AWS-work) operate are available from our Knowledge Base.
+
 ## Tagging Cado Resources
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched. If you wish to apply more than one tag to workers, please see the below options.
 
