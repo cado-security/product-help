@@ -24,3 +24,7 @@ Lambda automatically integrates with CloudWatch Logs and pushes all logs from yo
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)
 
 *Note:* Cado imports the image of container-based Lambda functions from the Amazon Elastic Container Registry
+
+
+### Data Flow Diagram
+For a diagram of how our Lambda acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259139785745-How-do-Lambda-function-collections-work).
