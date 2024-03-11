@@ -18,3 +18,5 @@ Please refer to the following documentation for specific advice:
 * [Deployment IAM Considerations](/cado-response/deploy/aws/iam/deployment-iam-considerations)
 * [Removing and Tightening IAM Permissions](/cado-response/deploy/aws/iam/tightening-iam)
 * [Logging](/cado-response/deploy/aws/security/logging)
+* [Data Management](/cado-response/manage/data)
+

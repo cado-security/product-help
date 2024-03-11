@@ -19,7 +19,11 @@ Based on the evidence you would like to import, follow the on-screen instruction
 You can import evidence from cloud services across AWS, Azure and GCP, provided you have the correct credentials entered into the system, and your role has been assigned access to those credentials. **[Learn more](import-from-cloud.md)**
 
 ### Importing from XDR
-You can import data into the Cado platform via an eXtended Detection and Response (XDR) system. Currently Cado supports importing from SentinelOne. For more infomation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md)
+You can import data into the Cado platform via an eXtended Detection and Response (XDR) system.
+
+Currently Cado supports importing from SentinelOne and Crowdstrike.
+
+For more infomation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md) and the [CrowdStrike Integration Setup page](/cado-response/manage/integrations/xdr/crowdstrike.md)
 
 Once the integration is set up, from within a project click **Import from XDR**
 

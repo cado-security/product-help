@@ -11,6 +11,7 @@ Integrating with CrowdStrike Falcon allows you to select and kick off triage acq
 Once you have kicked off the triage acquisition CrowdStrike Falcon Real Time Response will locate the endpoint running CrowdStrike Falcon Sensor
 Run a Cado Host command on the endpoint that performs collection of the triage package and uploads it to Cado for processing
 
+For more information, see the [Crowdstrike and Cado Security Joint Solution Brief](https://offers.cadosecurity.com/cado-security-and-crowdstrike-integration) and the [CrowdStrike Marketplace listing](https://marketplace.crowdstrike.com/listings/the-cado-platform).
 
 ## Prerequisites
 1. Create an API Client with the permissions listed below. For more information on how to do this see this helpful [blog article](https://www.crowdstrike.com/blog/tech-center/get-access-falcon-apis/). This API Client will need 
