@@ -42,7 +42,7 @@ The service account itself will need to have the following roles:
     | `credentials_file` | Path to your GCP service account credentials json | `../credentials.json` |
     | `project_id` | ID of the project Cado will be deployed into | `cado-12839`  |
     | `region` | The region which Cado will be deployed to | `us-east1` |
-    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-2-112-0` |
+    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-xxx` |
     | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
     | `vm_size` | Size of main instance | `n2d-standard-8` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
