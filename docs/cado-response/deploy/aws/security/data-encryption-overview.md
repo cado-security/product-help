@@ -1,10 +1,10 @@
 ---
 title: Platform Encryption
 hide_title: true
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Data Encryption and Security
+# Platform Encryption
 
 ## General
 The default VPC and Subnet create an isolated environment to which customers can control access rights. 

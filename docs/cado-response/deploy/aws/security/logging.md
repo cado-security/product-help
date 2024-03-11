@@ -1,7 +1,7 @@
 ---
 title: Logging
 hide_title: true
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # AWS Logging Best Practices
@@ -15,3 +15,5 @@ We recommend customers follow AWS best practices regarding logging (https://docs
 - Ensure CloudTrail logs are encrypted at rest using KMS CMKs
 - Ensure rotation for customer created CMKs is enabled
 - Ensure VPC flow logging is enabled in all VPCs
+
+For more see our blog on [How to be IR Prepared in AWS](https://www.cadosecurity.com/how-to-be-ir-prepared-in-aws/)
