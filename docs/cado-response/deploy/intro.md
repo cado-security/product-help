@@ -5,11 +5,13 @@ sidebar_position: 1
 ---
 # Cado Platform Deployment Options
 
-The Cado platform can be deployed in either AWS or Azure.
+The Cado platform can be deployed in either AWS, Azure or Google Cloud.
 
 **[Learn how in AWS >](aws/overview.md)**
 
 **[Learn how in Azure >](azure/azure-deploy.md)**
+
+**[Learn how in GCP >](gcp/gcp-deploy)**
 
 ## Cross Cloud Collection
 
@@ -55,3 +57,4 @@ The last line of the "UserData" field must contain
 "sudo /home/admin/processor/release/finalize.sh --main"
 ```
 :::
+ 
