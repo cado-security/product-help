@@ -14,6 +14,6 @@ To do so:
 2. Copy from --presigned_data to end of script to clipboard.
 On the investigator system, execute:
 ```
-cado-host.exe --single_file_unzipped <file> <paste clipboard presigned_data>
+cado-host.exe --single_file_unzipped $file <paste clipboard presigned_data>
 ```
-3. Cado Host will upload <file> and Cado Response will automatically start the import and processing of <file>
+3. Cado Host will upload $file and Cado Response will automatically start the import and processing of $file
