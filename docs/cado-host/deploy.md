@@ -12,7 +12,7 @@ In order to deploy Cado Host, you can choose from one of the following deploymen
 2. Use the **Direct Download** method.  This allows customers to download and run Cado Host independent of running Cado Response.
 
 ### Using Script Builder
-In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
+In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder in AWS, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
 
 :::caution
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
@@ -38,7 +38,7 @@ Ensure that the devices on which the scripts will be run have HTTPS access to th
 
 
 ### Using Direct Download 
-If you choose the **Direct Download** tab, select your OS, click **Download** and then follow the instructions to run Cado Host locally.
+If wish to download the Cado Host binary for manual deployment, select your OS, click **Download** and then follow the instructions to run Cado Host locally.
 
 ![Direct Download](/img/cado-direct-download.png)
 
@@ -67,10 +67,6 @@ We now recommend using the automatically created temporary credentials generated
 :::
 
 If you are not using Cado Response, yet still want to automatically store the Cado Host collected data to the cloud, you'll need to create credentials with limited write access to your cloud storage.  
-
-:::caution
-It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. Ensure that the devices on which the scripts will be run have HTTPS access to the cloud storage URLs as defined below.
-:::
 
 To create secure credentials to upload the Cado Host collected data to the cloud, follow the instructions below based on your cloud provider of choice:
 - **[Creating Secure Credentials for Azure](azure-credentials)**
