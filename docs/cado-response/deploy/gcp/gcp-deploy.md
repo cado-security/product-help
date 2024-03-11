@@ -5,6 +5,11 @@ sidebar_position: 1
 ---
 ## GCP Deployment Overview
 You can deploy the Cado platform within your GCP cloud environment via a Terraform Script. When you deploy the platform, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
+
+![GCP Architecture](/img/gcp-architecture.png)
+This diagram is a simplified architecture, with options for more segregated network access.
+
+
 ## GCP Terraform Script
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** to download the latest Terraform code.
