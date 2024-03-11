@@ -15,6 +15,8 @@ Deployment of the Cado platform is performed within your Azure cloud environment
 
 ![Azure Architecture](/img/azure-architecture.png)
 This diagram is a simplified architecture, with options for alternate network access.
+For a diagram of how cross-cloud imports from Azure into AWS work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259971240465-How-do-cross-cloud-imports-from-Azure-into-AWS-work).
+
 
 ## Azure Terraform Script
 
