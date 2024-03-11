@@ -5,13 +5,11 @@ sidebar_position: 1
 ---
 # Cado Platform Deployment Options
 
-The Cado platform can be deployed in either AWS, Azure or Google Cloud.
+The Cado platform can be deployed in either AWS or Azure.
 
 **[Learn how in AWS >](aws/overview.md)**
 
 **[Learn how in Azure >](azure/azure-deploy.md)**
-
-**[Learn how in GCP >](gcp/gcp-deploy)**
 
 ## Cross Cloud Collection
 

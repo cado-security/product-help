@@ -21,7 +21,7 @@ export const Highlight = ({children, color}) => (
 
 :::note
 **Intended Audience and Operating Environment Requirements:**
-This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilites and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.
+*This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilites and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.  For a list of supported AWS regions, please see our Markteplace listing: https://aws.amazon.com/marketplace/pp/prodview-2ol4yojhc5vpa?ref_=srh_res_product_title *
 :::
 
 Deployment of the Cado platform is performed within your AWS cloud environment either via a CloudFormation Template, a Terraform Script or via the AWS Marketplace. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
@@ -43,10 +43,11 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
 A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
 - DeployCloudFormationPublic.yaml - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
 - DeployCloudFormationPrivate.yaml - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
-- DeployCloudFormationCustomVPC.yaml - This template deploys into an existing VPC. The associated template DeployCloudFormationCustomVPCNetworking.yaml can be useed to create the required networking within this VPC.
 - DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
 
-Additionally, a High Availability (HA) CloudFormation template is available for deployment (below).
+Additionally:
+- A High Availability (HA) CloudFormation template is available for deployment into AWS (below).
+- Cloudformation templates are also available for deploying into existing VPC's, and custom VPC networking.
 
 2. Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
 
@@ -70,13 +71,8 @@ Additionally, a High Availability (HA) CloudFormation template is available for 
     | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the primary subnet. |
     | AvailabilityZoneB | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
     | FeatureFlagPlatformUpgrade | `True` | Enables the platform to perform native upgrades. |
+    | FeatureFlagDeployWithALB | `False` | Deploys the platform with an Application Load Balancer. If set to True CertificateARN MUST be populated |
     | CertificateARN | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
-    | Proxy | *(https://user:pass@1.2.3.4:1234)* | Optional Proxy URL to use for outbound connections in format |
-    | ProxyCertUrl | *(url)* | URL to download optional Proxy Certificate from. |
-
-
-
-
 
     
     :::tip
@@ -98,7 +94,7 @@ Additionally, a High Availability (HA) CloudFormation template is available for 
 9. Review the details that have been applied and click **<Highlight color="#F78631">Create Stack</Highlight>**
 
     :::info
-    The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template.
+    The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template json file.
     :::
 
 ## AWS CloudFormation High Availability
