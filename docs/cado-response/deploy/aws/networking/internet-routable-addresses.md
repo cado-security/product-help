@@ -11,4 +11,4 @@ You can remove the requirement for publicly routable IP addresses if you have se
 You can remove the Public IP addresses associated with Workers under Settings > Advanced.
 You can choose a deployment that does not include the Public Elastic IP address on the main Cado web server and set up an Application Load Balancer instead to handle traffic from the user to the platform.
 
-Please see the [AWS deployment overview](/docs/cado-response/deploy/aws/overview) for more information on how to deploy Cado in a private subnet.
+Please see the [AWS deployment overview](/cado-response/deploy/aws/overview) for more information on how to deploy Cado in a private subnet.
