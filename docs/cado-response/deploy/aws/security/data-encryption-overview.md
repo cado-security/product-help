@@ -1,10 +1,10 @@
 ---
 title: Platform Encryption
 hide_title: true
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Data Encryption and Security
+# Platform Encryption
 
 ## General
 The default VPC and Subnet create an isolated environment to which customers can control access rights. 
@@ -21,10 +21,3 @@ Access to EFS/NFS is over TLS (https://docs.aws.amazon.com/efs/latest/ug/encrypt
 Secrets are stored using AWS Secrets Manager (https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
 
 Some settings can be customized, and you may wish to enable key rotation as well (https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html).
-
-## Azure
-Azure disks and blob storage are server side encrypted by default (see https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption and https://learn.microsoft.com/en-us/azure/virtual-machines/disk-encryption).
-
-## Google Cloud Platform
-The Cloud Storage Bucket is configured to encrypt data at rest using GCP KMS and if using Cado Host to upload triage captures then data is encrypted using TLS by the GCP API client.
-Secrets are stored using Google Cloud Secrets Manager.
