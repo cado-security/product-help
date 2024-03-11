@@ -31,6 +31,8 @@ By default AWS will limit the number of CPUs that can run in a region to 32. We 
 Cado consists of a few key components that interact with each other in order to provide the capabilities within the platform.   
 ![AWS architecture](/img/aws-architecture.png)
 
+This diagram is a simplified architecture.
+We support private deployments with no internet and proxy inspection to support environments with strict security requirements such as those under PCI and HIPAA (below).
 
 ## AWS CloudFormation Template
 
@@ -103,7 +105,9 @@ Additionally, a High Availability (HA) CloudFormation template is available for 
 
 ## AWS CloudFormation High Availability
 
-The Cado platform can be deployed in a High Availability (HA) configuration allowing a multi-AZ deployment using managed services and an auto-scaling group with a load balancer. To deploy with HA, please contact the Cado Sales team at sales@cadosecurity.com.
+The Cado platform can be deployed in a High Availability (HA) configuration allowing a multi-AZ deployment using managed services and an auto-scaling group with a load balancer.
+This deployment adds complexity, but may be required in some environments that require high availability due to regulatory or operational requirements.
+To deploy with HA, please contact the Cado Sales team at sales@cadosecurity.com.
 
 ### Deployment Time
 
