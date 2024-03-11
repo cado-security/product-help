@@ -8,7 +8,7 @@ title: Summary
 The [Cado platform](/cado-response/intro) platform leverages the scale, speed and automation of the cloud to expedite investigation and response. Cado Community Edition is a free version of the Cado platform that lets you analyze:
 
 - Disk images captured in DD format
-- Exports of triaged items from open source forensics tools like KAPE and Velociraptor
+- Exports of triaged items from open source forensics tools like [KAPE](https://www.kroll.com/en/insights/publications/cyber/kroll-artifact-parser-extractor-kape) and [Velociraptor](https://www.rapid7.com/products/velociraptor/).
 - Sample data - e.g data published by Cado that illustrates different types of issues incident responders might encounter across server-based, container-based and serverless systems in the cloud.
 With Cado Community Edition, users can:
 Navigate files and folders 
