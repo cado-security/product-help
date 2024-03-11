@@ -14,4 +14,6 @@ This requires the AWS SSM agent to be running on the EC2 and registered within t
 
 Any acquisition from ECS and EKS will attempt to collect memory by default.
 
+For more information, see the [Memory Analysis](/cado-response/discovery-import/import/data-types/memory) page.
+
 
