@@ -26,11 +26,11 @@ We can process additional log types through our generic extractors, so this list
 
 Cado can capture logs from the following cloud services via their APIs:
 
-When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve VPC flow logs and CloudTrail logs associated with the instance id, if enabled (https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log).
+When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve [VPC flow logs](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log) and [CloudTrail logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html) associated with the instance id, if enabled.
 
-When acquiring a Lambda function, Cado accesses the CloudWatch API to retrieve logs associated with the function (https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
+When acquiring a Lambda function, Cado accesses the CloudWatch API to retrieve [logs associated with the function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
 
-When acquiring Azure compute, Cado retrieves activity logs associated with the VM (https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
+When acquiring Azure compute, Cado retrieves [activity logs associated with the VM](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
 
 If logs are stored in a central account, at this point Cado does not have the capability to traverse accounts and pull logs from a different account. Instead, you would need to collect them in cloud storage and import from there.
 
@@ -83,7 +83,8 @@ If logs are stored in a central account, at this point Cado does not have the ca
 - Xchat and Xchat scroll back files
 - Zsh history files
 
-Cado can also import a number of other log formats that are not listed here; however, these evidence types and file formats are not officially supported.  If you have a log format that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
+Cado can also import a number of other log formats that are not listed here; however, these evidence types and file formats are not officially supported.
+If you have a log format that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
 
 # Adding Your Own Events
 
