@@ -45,7 +45,7 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
 A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
 - DeployCloudFormationPublic.yaml - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
 - DeployCloudFormationPrivate.yaml - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
-- DeployCloudFormationCustomVPC.yaml - This template deploys into an existing VPC. The associated template DeployCloudFormationCustomVPCNetworking.yaml can be useed to create the required networking within this VPC.
+- DeployCloudFormationCustomVPC.yaml - This template deploys into an existing VPC. The associated template DeployCloudFormationCustomVPCNetworking.yaml can be used to create the required networking within this VPC.
 - DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
 
 Additionally, a High Availability (HA) CloudFormation template is available for deployment (below).
