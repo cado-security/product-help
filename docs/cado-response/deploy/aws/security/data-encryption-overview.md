@@ -10,7 +10,7 @@ sidebar_position: 3
 The default VPC and Subnet create an isolated environment to which customers can control access rights. 
 When processing data, the Cado worker instances are launched within the same VPC as the main Cado instance.
 Worker instances are started using the same AMI as the main Cado instance as well.
-Communication between workers and the main Cado instance is performed over TLS.
+Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23260530384529-What-Ports-and-Encryption-protocols-does-the-Cado-platform-use) for details on which ports and encryption protocols are used.
 
 ## AWS
 During deployment, by default, an S3 bucket, a VPC and a Subnet are created for use by the Cado solution.
