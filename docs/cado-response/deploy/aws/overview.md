@@ -21,7 +21,7 @@ export const Highlight = ({children, color}) => (
 
 :::note
 **Intended Audience and Operating Environment Requirements:**
-This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilites and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.
+This information is written for proficient AWS cloud administrators who are familiar with AWS technology and cloud operations. This manual assumes you already have an AWS account and are familiar with Amazon Web Services capabilities and terminology, including Cloudformation Templates, EC2s, Security Groups, VPCs, IAM roles and S3.
 :::
 
 Deployment of the Cado platform is performed within your AWS cloud environment either via a CloudFormation Template, a Terraform Script or via the AWS Marketplace. When the platform is deployed, it creates its own isolated VPC in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
@@ -45,7 +45,7 @@ To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The 
 A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
 - DeployCloudFormationPublic.yaml - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
 - DeployCloudFormationPrivate.yaml - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
-- DeployCloudFormationCustomVPC.yaml - This template deploys into an existing VPC. The associated template DeployCloudFormationCustomVPCNetworking.yaml can be useed to create the required networking within this VPC.
+- DeployCloudFormationCustomVPC.yaml - This template deploys into an existing VPC. The associated template DeployCloudFormationCustomVPCNetworking.yaml can be used to create the required networking within this VPC.
 - DeployCloudFormationGovCloud.yaml - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
 
 Additionally, a High Availability (HA) CloudFormation template is available for deployment (below).
