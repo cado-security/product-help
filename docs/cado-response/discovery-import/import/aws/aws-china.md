@@ -12,6 +12,6 @@ Cado Host acquisitions can be used to collect data from inside any system with a
 
 To manually acquire data from AWS China regions, you can use the AWS CLI to copy the data to a region that is supported by Cado. AWS Support can provide guidance on how to copy data between partitions. 
 
-AWS and community tools are avilable to help sync data, but are not supported or endorsed by Cado Security. For example:
+AWS and community tools are available to help sync data, but are not supported or endorsed by Cado Security. For example:
 - https://github.com/issacg/s3sync
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html
