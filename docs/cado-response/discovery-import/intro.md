@@ -9,7 +9,7 @@ Cado provides a short Capture the Flag data set to help you get familiar with th
 
 #### How to get started
 1. Create a new project
-2. Navigate to the help page and click “Import CTF data”. Import will take a few minutes.
+2. Navigate to the Help page and click “Import CTF data”. Import will take a few minutes.
 3. Open the project and start investigating
 
 ![Import CTF](/img/ctf.png)

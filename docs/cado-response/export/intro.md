@@ -23,3 +23,9 @@ These formats can be downloaded from the relevant cloud console and imported int
 #### Exporting Processed Data to SIEM Platforms
 
 Please see **[SIEM Integrations >](../manage/integrations/siem.md)**
+
+#### Centrally Preserving Data
+If you are deployed into AWS, you can enable all processed evidence to be copied and preserved in a central S3 bucket.
+This setting can be enabled at **Settings** > **Preservation**.
+
+![Preservation](/img/preserve.png)

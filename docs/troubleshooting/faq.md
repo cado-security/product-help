@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 # Frequently Asked Questions
-Solutions to some common questions can be found here.  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
+Solutions to some common questions can be found here and in our (Knowledge Base)[https://cadosecurity.zendesk.com/].  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
 
 ### Which cloud providers does Cado support?
 Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado supports AWS as well as cross-cloud acquisitions from GCP and Azure.
@@ -14,7 +14,9 @@ Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado sup
 Yes.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
-On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete.
+On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete. 
+
+
 
 ### I deployed the Cado platform. How do I log in?
 Navigate to the Cado instance IP `https://<Cado_IP>`. You can initially login with the username `admin` and the password `i-xxx` where `i-xxx` is the ID of your instance.  After first login, you will be asked to change your password.  Note that for Azure, the password is the very long Resource ID.  The Resource ID can be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
@@ -31,16 +33,12 @@ Azure supports this through **[Life Cycle Management Policies](https://docs.micr
 Whether sensitive customer data is stored within the Cado platform is completely dependent on what data sources and evidence is imported into the software.  In all cases, data is either stored within the database on the main Cado instance, within EFS, within a customers' S3 bucket or  Azure storage.  Since the Cado platform is deployed within the customers' cloud environment, the customer has control over the life cycle management of the data (example: using Life Cycle management policies) as well as who has access to potential sensitive data via VPC and Subnet rules.
 
 ### Can I monitor the health and proper function of the Cado platform?
-Yes. Within Cado, you can see the platform health and statistics by navigating to the "Platform" tab.  This list Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeline processing details.  In addition, roundtrip response latency for the API `/api/v2/status` endpoint should be less than or equal to 200ms.
+Yes. Within Cado, you can see the platform health and statistics by navigating to the "Platform" tab.
+
+This lists Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeline processing details.  In addition, roundtrip response latency for the API `/api/v2/system/status` endpoint should be less than or equal to 200ms.
 
 ### Can I estimate the costs for running the Cado platform in AWS?
-Yes. You can view the AWS Cost Calculator for a typical Cado installation at https://calculator.s3.amazonaws.com/index.html#r=IAD&key=files/calc-bca484373bcb2d07322fd6716a197d1cdc629534&v=ver20210903uJ
-
-This includes: 
-- A central platform server running permanently with 500 GB of space for hot data access
-- 36.5 hours (5% of the time) worker usage to process data
-- 500 GB of permanent S3 Storage used for forensic images
-- 50 GB of Elastic File System Storage used for file transfer downloads
+Yes, please see [Cost Management](/cado-response/manage/cost-management) for details.
 
 ### How can I capture Logs or a Support Bundle from the Cado platform?
 The following methods for getting Logs to Cado are available, in order of ease:

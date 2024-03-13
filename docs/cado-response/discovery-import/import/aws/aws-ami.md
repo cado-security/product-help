@@ -9,3 +9,6 @@ The Cado platform supports acquiring AMIs, EBS Snapshots or volumes of machines,
 
 Select the region, and specify the identifer of the AMI, snapshot or volume. Click 'Continue', confirm the details and click 'Start Import'.
 ![AWS AMI](/img/aws-ami.png)
+
+### Data Flow Diagram
+For a diagram of how our snapshot acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258838264977-How-do-EC2-Snapshot-Imports-work).
