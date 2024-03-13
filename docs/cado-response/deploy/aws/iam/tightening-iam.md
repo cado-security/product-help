@@ -106,17 +106,3 @@ Ensure that your relevant policy statements still apply to the region of your Ca
 For Cross Account, the simplest approach is to give kms:CreateGrant permissions to the role being assumed in the target account.
 Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to "kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"
 
-## Scoping down * permissions
-Default KMS permissions are scoped down to specific resources, with the exception of:
-- RequiredForKmsEncryptedEc2Import
-- RequiredForCrossAccountDefaultKmsEncryptedEc2Import
-
-Please see KMS Consideration - Custom Keys above.
-Additional scoping may be possible depending upon your environment, see for example the IAM section:
-```
-Condition:
-    ForAllValues:StringLike:
-    kms:ResourceAliases: alias/CadoResponse-KMS-Alias*
-```
-
-
