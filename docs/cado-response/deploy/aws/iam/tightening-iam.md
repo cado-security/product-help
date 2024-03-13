@@ -78,7 +78,7 @@ An error occurred (AccessDeniedException) when calling the SendCommand operation
 The Cado platform will import EC2 instances with encrypted volumes, provided that the appropriate permissions are given to the CadoResponseRole.  
 This is granted by the default Cado IAM roles.
 AWS provides default keys in each AWS account. The default Cado IAM permissions support decryption of these KMS keys out of the box.
-Cado supports Custom KMS Keys as well
+Cado supports Custom KMS Keys as well.
 
 ### KMS Consideration - Custom Keys
 
