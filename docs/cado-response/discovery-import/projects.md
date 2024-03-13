@@ -17,29 +17,27 @@ To create a new Project:
 
 ### Deleting a Project
 You may want to delete old projects to free up disk space.  To delete a Project:
-- Click **Projects** and select the project you would like to delete
-- Click **Manage** 
+- Click **Projects** and select ⋮ on the project you would like to delete
+- Click **Project Settings** 
+- Browse to the bottom of the page to **Delete** and enter **permanently delete** in the text box
 - Click **Delete Project**
-- You will be asked to confirm that you would like the Project deleted
-- Click **Delete**
 
 :::info
 You can view free disk space by clicking on the **Platform** menu button.
 :::
 
 ### Updating a Project
-You can update a Project name and the description.  To update a Project:
+You can update a Project name and the description. To update a Project:
 - Click **Projects** and select the project you would like to update
-- Click **Manage** 
-- Click **Details**
-- Make your updates and click **Update**
+- Select ⋮ on the project, then click **Project Settings**
+- Make your updates and click **Save Changes**
 
 ### Project Processing
 The **Processing** page gives you a high level summary of the processing status of evidence items. Evidence items go through a number of different stages of analysis before they are complete. Some data, such as file listings, will be available before the processing is complete.
 To view the Project Processing:
 - Click **Projects** and select the project you would like to view
-- Click **Manage** 
-- Click **Processing**
+- Navigate to the **Automated Investigation** or **Evidence** tab and select ⋮ on the project
+- Click **View Processing Pipeline**
 
 ![Processing](/img/processing.png)
 

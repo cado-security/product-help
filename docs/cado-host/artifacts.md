@@ -5,12 +5,12 @@ sidebar_position: 3
 ---
 
 # Collected Artifacts
-Cado Host collects a number of artifacts by default, based on the operating system.  Note that you can configure additonal files and folders to be collected by defining the --additional_files parameter when running Cado Host.  See the `--additional_files` **[Command Line Parameters](deploy#command-line-parameters)** for more details.
+Cado Host collects a number of artifacts by default, based on the operating system.  Note that you can configure additonal files and folders to be collected by defining the --additional_files parameter when running Cado Host.  See the `--additional_files` **[Command Line Parameters](cli)** for more details.
 
 ### Volatile Data
 Cado Host collects the following volatile data available at the time Cado Host is executed
 - Data about running processes
-- Memory of running proccesses on a per-process basis *(note - memory collection on Windows is disabled by default; [see Command Line Parameters](deploy#command-line-parameters) )*
+- Memory of running proccesses on a per-process basis *(note - memory collection on Windows is disabled by default; [see Command Line Parameters](cli) )*
 - Netstat data of active connections
 - The contents of open files - for example running binaries
 

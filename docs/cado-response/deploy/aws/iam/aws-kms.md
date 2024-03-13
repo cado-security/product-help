@@ -100,7 +100,7 @@ Alternatively the permissions in Custom Keys section are still valid, however bo
 
 ### Cross Account using AWS default keys
 :::warning
-When importing a Default KMS encrypted EC2 for the first time, it is recommended that you include the following permission for `"iam:CreateServiceLinkedRole"` in the myCadoResponseRole in the **account where the Cado platform has been deployed**.  Failure to do so may result in IAM errors until the permission has been added.  Once added, and a default encrypted EC2 import has suceeded, the permission can be removed.  While this permission is present in the supplied Terraform and CloudFormation templates, it is reproduced here for your convenience.
+When importing a Default KMS encrypted EC2 for the first time, it is recommended that you include the following permission for `"iam:CreateServiceLinkedRole"` in the myCadoResponseRole in the **account where the Cado platform has been deployed**.  Failure to do so may result in IAM errors until the permission has been added.  Once added, and a default encrypted EC2 import has suceeded, the permission can be removed.  While this permission is present in the supplied Terraform and CloudFormation templates, it is reproduced here for your convenience.  **[More information can be found in the AWS KMS documentation.](https://docs.aws.amazon.com/kms/latest/developerguide/using-service-linked-roles.html#slr-permissions-multi-region)**
 
 ```json
 {
@@ -109,10 +109,10 @@ When importing a Default KMS encrypted EC2 for the first time, it is recommended
 	"Action": [
 		"iam:CreateServiceLinkedRole"
 	],
-	"Resource": "arn:aws:iam::*:role/aws-service-role/kms.amazonaws.com/*CadoResponse*",
+	"Resource": "arn:aws:iam::*:role/aws-service-role/mrk.kms.amazonaws.com/AWSServiceRoleForKeyManagementServiceMultiRegionKeys",
 	"Condition": {
 		"StringLike": {
-			"iam:AWSServiceName": "kms.amazonaws.com"
+			"iam:AWSServiceName": "mrk.kms.amazonaws.com"
 		}
 	}
 }
@@ -174,7 +174,7 @@ Getting the right KMS policies can prove difficult, particularly for cross-accou
 #### Using Cado Host to bypass KMS
 If you are unable to obtain a full disk capture, you can bypass KMS by acquiring a system using Cado Host:
 - If the system has SSM enabled, select "Use Alternate Triage Acquisition" when acquiring the system
-- Conect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Forensic Artifacts
+- Conect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Cado Host
 
 #### Bypassing KMS by creating an Unencrypted Volume
 You can remove KMS from a volume by following the steps at https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/

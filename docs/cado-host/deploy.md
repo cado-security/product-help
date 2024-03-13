@@ -6,21 +6,19 @@ sidebar_position: 2
 
 # Deploying Cado Host
 
-You can execute Cado Host individually on a device or you can deploy it to a number of machines that may be compromised, for example through **[Group Policy](https://support.microsoft.com/en-gb/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server)** or other systems management software.
-
 ## Deploy through Cado Response Platform
 In order to deploy Cado Host, you can choose from one of the following deployment methods:
 1. Use the **Script Builder** from within the Cado Response Platform.  This allows you to build a script which can be run on any supported device, upload the triage artifacts to cloud storage and automatically process the data into Cado Response.
 2. Use the **Direct Download** method.  This allows customers to download and run Cado Host independent of running Cado Response.
 
 ### Using Script Builder
-In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
+In order to deploy Cado Host via the Script Builder in the Cado Response platform, follow the instructions below.  Note that when using the Script Builder in AWS, the pre-signed URLs and API keys expire 2 hours after being generated and AWS enforces a limit of 5GB total upload size.
 
 :::caution
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
 :::
 
-1. Find the Cado Host deployment options on the platform under `Project > Import > Forensic Artifacts > Cado Host`.
+1. Find the Cado Host deployment options on the platform under `Project > Import > Cado Host`.
 
   ![Import Evidence](/img/import.png)
 
@@ -40,32 +38,27 @@ Ensure that the devices on which the scripts will be run have HTTPS access to th
 
 
 ### Using Direct Download 
-If you choose the **Direct Download** tab, select your OS, click **Download** and then follow the instructions to run Cado Host locally.
+If wish to download the Cado Host binary for manual deployment, select your OS, click **Download** and then follow the instructions to run Cado Host locally.
 
 ![Direct Download](/img/cado-direct-download.png)
 
-## Considerations
-​Cado Host is designed to be executed through the commandline. If you do not execute the application with administrative privileges there are some files you will not be able to acquire.
+## Running as non-administrator
+​Cado Host is designed to be executed through the commandline.
+If you do not execute the application with administrative privileges there are some artifacts you will not be able to acquire, such as memory and other files that are locked by the operating system.
 
- Cado Host can take parameters from a file (named `config.cfg`) or on the command line.  On Microsoft Windows, if you execute it without the use of the command line, you may be prompted by the Windows SmartScreen. If you wish to run cado-host.exe by manually clicking it, you will have to select Properties and Untick this box:
+## Windows SmartScreen
+On Microsoft Windows, if you execute it without the use of the command line, you may be prompted by the Windows SmartScreen. If you wish to run cado-host.exe by manually clicking it, you will have to select Properties and Untick this box:
 
 ![Properties](/img/import-security.png)
 
-:::tip
+## Setting the Binary as Executable on Linux and OSX
 When running on Linux or OSX, you may need to set the binary as executable:
 
 ```console
 chmod +x ./cado-host
 ./cado-host
 ```
-:::
 
-:::warning
-Version 1.4.0 and later of Cado Host (deployed by 2.5.0 and later of Cado Response) default to a ARM (M1/M2) build of Cado Host when deployed to a MacOS system.
-To execute on an older x86 system, append -x86 to the end of the Cado Host URL in the deployment.
-I.e. https://cado-public.s3.amazonaws.com/cado-host/v1.4.1/osx/cado-host becomes https://cado-public.s3.amazonaws.com/cado-host/v1.4.1/osx/cado-host-x86
-We will be automating the selection of x86 vs ARM in a future release so this will no longer be required.
-:::
 
 ## Creating Secure Cloud Storage Credentials
 
@@ -75,10 +68,6 @@ We now recommend using the automatically created temporary credentials generated
 
 If you are not using Cado Response, yet still want to automatically store the Cado Host collected data to the cloud, you'll need to create credentials with limited write access to your cloud storage.  
 
-:::caution
-It is very important to generate write-only cloud credentials if you will be entering credentials (access and secret keys) on the command line. Ensure that the devices on which the scripts will be run have HTTPS access to the cloud storage URLs as defined below.
-:::
-
 To create secure credentials to upload the Cado Host collected data to the cloud, follow the instructions below based on your cloud provider of choice:
 - **[Creating Secure Credentials for Azure](azure-credentials)**
 - **[Creating Secure Credentials for AWS](aws-credentials)**
@@ -87,70 +76,9 @@ To create secure credentials to upload the Cado Host collected data to the cloud
 ## Using Local Storage
 ​If you do not set a cloud storage option, files will be saved to the same folder that Cado Host is run from. You can not set a different storage location at this time.
 
-### Command Line Parameters
+## Deploying Cado Host to Multiple Devices
+You can execute Cado Host individually on a device or you can deploy it to a number of machines that may be compromised, for example through **[Group Policy](https://support.microsoft.com/en-gb/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server)** or other systems management software.
 
-Below are the commandline parameters suppoted by Cado Host.
-
-```
-usage: cado-host.exe [-h] [--presigned_data PRESIGNED_DATA] [--presigned_url PRESIGNED_URL]
-               [--storage {aws,local,gcp,azure}] [--bucket BUCKET] [--access_key ACCESS_KEY]
-               [--secret_key SECRET_KEY] [--region REGION] [--sas SAS] [-l]
-               [-a ADDITIONAL_FILES [ADDITIONAL_FILES ...]] [-ap ADDITIONAL_FILES_PATH]
-               [--only_additional_files] [--single_file_unzipped SINGLE_FILE_UNZIPPED]
-               [--include_large_varc] [--skip_linux_memory] [--get_windows_memory] [-v]
-               [--verbose] [--verbose_network] [-dd DEFAULT_DRIVE] [-o OUTPUT_PATH]
-               [--no_cleanup] [--dev]
-
-options:
-  -h, --help            show this help message and exit
-  --presigned_data PRESIGNED_DATA
-                        Encoded upload credentials generated by Cado Response.
-  --presigned_url PRESIGNED_URL
-                        Specify the presigned url you wish to upload files to.
-  --storage {aws,local,gcp,azure}
-  --bucket BUCKET       Bucket to upload files to.
-  --access_key ACCESS_KEY
-                        Access key of your AWS credentials.
-  --secret_key SECRET_KEY
-                        Secret Key of your AWS credentials.
-  --region REGION       AWS Region.
-  --sas SAS             Shared Access Signature that can be used to upload triage/full disk to
-                        an Azure container.
-  -l, --light_mode      Enable light_mode where we only retrieve files 10 MB in size or less.
-  -a ADDITIONAL_FILES [ADDITIONAL_FILES ...], --additional_files ADDITIONAL_FILES [ADDITIONAL_FILES ...]
-                        List multiple files/folders to collect with the space character between
-                        them.
-  -ap ADDITIONAL_FILES_PATH, --additional_files_path ADDITIONAL_FILES_PATH
-                        Path to a local file containing a list of files/folders to collect. One
-                        on each line.
-  --only_additional_files
-                        Only collect files and folders specified in --additional-files.
-  --single_file_unzipped SINGLE_FILE_UNZIPPED
-                        Directly upload a single file to storage and import. Useful as a
-                        command line option for uploading files to Cado Response.
-  --include_large_varc  Include open files and memory even if it exceeds 1MB in size (this can
-                        be slow).
-  --skip_linux_memory   Dont collect memory on Linux. Faster.
-  --get_windows_memory  Acquire Process Memory on Windows systems. Unlike Linux, this is
-                        disabled by default as its slower on Windows. Implicitly applies
-                        --include_large_varc.
-  -v, --version
-  --verbose
-  --verbose_network
-  -dd DEFAULT_DRIVE, --default_drive DEFAULT_DRIVE
-                        Specify the default drive for your system.
-  -o OUTPUT_PATH, --output_path OUTPUT_PATH
-                        Output path if running for local storage.
-  --no_cleanup          Disable cleanup after triage.
-  --dev                 Runs cado host in development mode.
-      
-```
-
-### Example Command Line
-```console
-cado-host.exe --additional_files "C:\tools\secretfile.txt" "C:\SuperSecretFolder"
-```
-
-:::tip
-Note that folders should NOT have trailing slashes.  Files and folder paths should be delimted by a space and be enclosed in double quotes.
-:::
+## Deployment from XDR Integrations
+You can deploy Cado Host to machines that may be compromised, for example through XDR systems such as Crowdstrike and SentinelOne.
+For more, see [SentinelOne](/cado-response/manage/integrations/xdr/sentinelone) and [Crowdstrike](/cado-response/manage/integrations/xdr/crowdstrike).

@@ -10,6 +10,8 @@ Tines is a no-code automation platform for security analysts. Tines allows analy
 
 By using the Cado Response integration with Tines, we're allowing security analysts to quickly automate Incident Response and allow them to quickly respond to attacks for further investigation in the Cado Response platform. The Tines and Cado Response integration is easy to use, just search for **Cado Security** in the Public Templates repository, choose, and then drag and drop.
 
+Fore more information, see our blog on [Automating Incident Response with Tines and Cado Response](https://www.cadosecurity.com/automate-incident-response-with-the-new-tines-and-cado-response-integration/).
+
 :::tip
 If you're confused by the terminology mentioned here, or have never used Tines before, please consider checking out the [Tines documentation](https://hub.tines.com/docs/quickstart).
 :::

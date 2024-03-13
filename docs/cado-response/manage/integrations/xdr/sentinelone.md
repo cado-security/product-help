@@ -5,7 +5,9 @@ sidebar_position: 3
 ---
 
 # SentinelOne Integration
-SentinelOne Singularity provides comprehensive visibility across your environment - giving you the breadth you need to detect malicious activity as soon as it occurs. Cado streamlines forensic analysis to quickly deliver essential historical context and depth to your investigation allowing you to quickly identify the root cause. Combined, the SentinelOne and Cado integration empowers organizations to detect, investigate, and remediate breaches with unmatched speed. 
+SentinelOne Singularity provides comprehensive visibility across your environment - giving you the breadth you need to detect malicious activity as soon as it occurs. Cado streamlines forensic analysis to quickly deliver essential historical context and depth to your investigation allowing you to quickly identify the root cause. Combined, the SentinelOne and Cado integration empowers organizations to detect, investigate, and remediate breaches with unmatched speed.
+
+For more information, see the SentinelOne and Cado Security [Joint Solution Brief](https://assets.sentinelone.com/cado-jointsb).
 
 :::tip
 To leverage the integration between SentinelOne and Cado, you must have the SentinelOne Remote Script Orchestration feature (RSO) enabled in addition to access to the Cado platform. To get access to the Cado platform contact the Cado Security team **[here](http://offers.cadosecurity.com/cado-s1-integration-get-in-touch)**. 

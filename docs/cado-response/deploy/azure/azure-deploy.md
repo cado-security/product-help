@@ -13,13 +13,18 @@ sidebar_position: 1
 
 Deployment of the Cado platform is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
 
+![Azure Architecture](/img/azure-architecture.png)
+This diagram is a simplified architecture, with options for alternate network access.
+For a diagram of how cross-cloud imports from Azure into AWS work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259971240465-How-do-cross-cloud-imports-from-Azure-into-AWS-work).
+
+
 ## Azure Terraform Script
 
 To set up Cado in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
 - a link to the Cado VHD image
-- the latest Cado Terraform module (**azure.zip**) for deploying into Azure
+- the latest Cado Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
 

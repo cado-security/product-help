@@ -8,6 +8,8 @@ sidebar_position: 5
 
 Splunk SOAR is a Security Orchestration, Automation, and Response (SOAR) system. The Splunk SOAR platform combines security infrastructure orchestration, playbook automation, and case management capabilities to integrate your team, processes, and tools together including integrating with Cado.
 
+For more information, see our blog on integrating with [Splunk SOAR](https://www.cadosecurity.com/cado-response-now-integrates-with-splunk-soar-to-automate-your-cloud-incident-response-workflow/), and the Splunkbase page for the [Cado App](https://splunkbase.splunk.com/app/6181).
+
 ## Getting Started
  
 Before getting started, please see the **[Integrations Overview >](../api-overview.md)** page for general instructions on setting up the Cado platform for integration with third-party tools.

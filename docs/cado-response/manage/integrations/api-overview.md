@@ -38,5 +38,7 @@ https://ec2example.compute.amazonaws.com
 ```
 
 ### Full API Documentation
-From version 2.8.0 onwards you can view the Swagger docs for the API at /apidocs
-You can view examples at https://github.com/cado-security/cado-api-examples
+You can view the Swagger docs for the API at /apidocs
+![API Docs](/img/apidocs.png)
+
+You can view examples for the API at https://github.com/cado-security/cado-api-examples
