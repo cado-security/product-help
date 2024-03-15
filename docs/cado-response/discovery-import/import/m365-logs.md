@@ -8,7 +8,7 @@ sidebar_position: 10
 
 Cado has the capability to import, process and analyze M365 Unified Audit Logs (UAL). This can aid in the investigation of Business Email Compromise and insider threats
 
-## View-only Audit logs role
+## Setting up the View-only Audit logs role
 To acquire the M365 Unified Audit Log (UAL), the ‘View-only Audit Logs’ role you need to grant the ‘View-only Audit Logs’ to the Microsoft account of the user who is performing the acquisition. 
 
 You will need to grant this role in both the Exchange Admin Centre and Microsoft Purview.
@@ -31,7 +31,7 @@ You will need to grant this role in both the Exchange Admin Centre and Microsoft
 7. On the ‘Members’ page, add the users who require this role. You can do this by selecting individual users or a group, click select then next. 
 8. On the ‘Review and finish’ page, review your role group, then click ‘Create’ to finish the setup. 
 
-### UAL acquisition
+## UAL acquisition
 
 :::tip
 The feature is currently in Beta. To enable, navigate to *Settings - Experiments* and enable the ‘SaaS Imports’ button.
