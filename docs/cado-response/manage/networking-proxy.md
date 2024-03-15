@@ -5,6 +5,11 @@ sidebar_position: 9
 ---
 
 # Networking and Proxies
+
+:::tip
+This feature is in beta. To enable go to *Settings - Experiments* and enable 'Proxy Settings'
+:::
+
 Cado supports the use of proxies for communication between the Cado platform and services external to the environment in which you have deployed the Cado platform. This can include:
 
 * Cross-cloud acquisitions
@@ -25,3 +30,7 @@ If the proxy uses TLS, specify URL from which you can download the server certif
 To test these settings, click the *Test proxy settings* button.
 
 ![Proxy Setting](/img/proxy-setting.png)
+
+:::warning
+Settings will only be applied after the next system upgrade
+:::
