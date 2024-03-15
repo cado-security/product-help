@@ -31,7 +31,7 @@ You will need to grant this role in both the Exchange Admin Centre and Microsoft
 7. On the ‘Members’ page, add the users who require this role. You can do this by selecting individual users or a group, click select then next. 
 8. On the ‘Review and finish’ page, review your role group, then click ‘Create’ to finish the setup. 
 
-### UAL acquisition
+## UAL acquisition
 
 :::tip
 The feature is currently in Beta. To enable, navigate to *Settings - Experiments* and enable the ‘SaaS Imports’ button.
