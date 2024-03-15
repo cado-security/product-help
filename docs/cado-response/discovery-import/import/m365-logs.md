@@ -6,7 +6,7 @@ sidebar_position: 10
 
 # M365 Unified Audit Logs
 
-Cado has the capability to import, process and analyze M365 Unified Audit Logs (UAL). This can aid in the investigation of Business Email Compromise and insider threats
+Cado has the capability to acquire, process and analyze M365 Unified Audit Logs (UAL). This can aid in the investigation of Business Email Compromise and insider threats.
 
 ## Setting up the View-only Audit logs role
 To acquire the M365 Unified Audit Log (UAL), the ‘View-only Audit Logs’ role you need to grant the ‘View-only Audit Logs’ to the Microsoft account of the user who is performing the acquisition. 
@@ -69,4 +69,3 @@ For example, the user is able to filter the dataset by the ‘AzureActiveDirecto
 
 ## Video Tutorial
 For a video tutorial on how to import Microsoft 365 Unified Audit Logs, please see [this video](https://www.youtube.com/watch?v=rbmk0jE_smg)
-
