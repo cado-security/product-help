@@ -92,7 +92,9 @@ When using custom keys the required actions to the CadoResponseRole are:
 ```
 You may choose to forgo giving all the permissions and only provide kms:CreateGrant to the CadoResponseRole.
 This is recommended if the goal is simplicity, especially when there are cross account or cross region considerations.
-Grants will be created and retired as required by the platform.
+
+When Cado performs a default KMS encrypted import across account, it will re-encrypt to a temporary key that is used to move snapshots cross-account.
+An alias with a Cado prefix is used for scoping purposes, and the alias and key are scheduled for deletion after the import has finished.
 
 
 You can give required permissions to the CadoResponseRole directly and withhold CreateGrant for resources only
@@ -105,4 +107,3 @@ You can give required permissions to the CadoResponseRole directly and withhold 
 Ensure that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy Conditions don't preclude the platform's access).
 For Cross Account, the simplest approach is to give kms:CreateGrant permissions to the role being assumed in the target account.
 Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to "kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"
-
