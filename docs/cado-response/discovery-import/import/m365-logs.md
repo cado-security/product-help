@@ -67,5 +67,6 @@ Finally, when the acquisition and processing is completed, the logs will be avai
 
 For example, the user is able to filter the dataset by the ‘AzureActiveDirectory’ workload by selecting this value in the ‘Datatype’ facet.
 
-
+## Video Tutorial
+For a video tutorial on how to import Microsoft 365 Unified Audit Logs, please see [this video](https://www.youtube.com/watch?v=rbmk0jE_smg)
 
