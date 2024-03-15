@@ -1,7 +1,7 @@
 ---
 title: Health Monitoring
 hide_title: true
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Monitoring the Health and Proper Function of the Cado platform

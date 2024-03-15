@@ -1,7 +1,7 @@
 ---
 title: Platform Security
 hide_title: true
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 # Platform Security
