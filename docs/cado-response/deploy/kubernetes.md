@@ -53,14 +53,7 @@ Note that if you are running EKS on EC2 nodes, it may be easier to use the "Alte
 #### Alternate Private EKS Cluster Access
 If the Cado platform cannot access the Cluster endpoint, you can instead acquire via deploying the Cado Host acquisition script.
 
-First, create the Cado Host Collection Script by going to Import > Cado Host and creating the collection script.
-For more information on this step, see the [Cado Host Documentation](/cado-host/intro)
-
-Then, via a method to execute code inside the cluster VPC (see "Methods for Executing Kubernetes API Commands Inside Cluster VPC" below) execute the script against the container over the Kubernetes API:
-`kubectl exec {pod} -n {namespace} -c {container} -i -- [Cado Host Collection Script]`
-
-We are working to automate more of this step, by generating the kubectl command from the Cado Host User Interface.
-Note this requires a shell inside the container, see "Distroless / No Shell Containers" for containers without a shell.
+Please see our [Knowledge Base](https://cadosecurity.zendesk.com/) for more details.
 
 #### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
 Alternate options include Bastion Hosts, SSM, AWS Private link, AWS Cloud9, AWS VPN, AWS Direct Connect.
