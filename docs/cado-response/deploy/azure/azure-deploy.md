@@ -153,3 +153,15 @@ When deploying, the main Cado instance will have the name `CadoResponse`.  If yo
 
 ### How to Add Tags to Resources
 Please see the [guide on Deployment Options](../intro.md#tagging-cado-response-resources)
+
+### If you receive the error "The Cado platform in Azure will not start with the error: The client with object id does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read'"
+
+If you find the Cado platform in Azure will not start with the error:
+```The client $client with object id $object does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read' over scope $subscription or the scope is invalid. If access was recently granted, please refresh your credentials. ```
+
+Please resolve by:
+- Find the cado-main-vm in the azure portal
+- Go to the Identity section
+- You should see 'system assigned' is off, and 'user assigned' has a single entry 'cado-identity'
+- Remove any extra managed and switch system assigned to off
+- Then, reboot cado-main-vm and it will use the correct policy
