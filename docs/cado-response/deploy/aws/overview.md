@@ -128,7 +128,7 @@ After deployment, you can import Test Data from the `Help` menu to confirm that 
 
 If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code and the AMI for the region which you will deploy into.
 
-1. Download and unzip **aws.zip** or clone from https://github.com/cado-security/Deployment-Templates/tree/main/aws.
+1. Clone the repo from https://github.com/cado-security/Deployment-Templates/tree/main/aws.
 2. Navigate to the **aws_combined** folder.
 3. Run `terraform init`
 4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=second_oregon.pem" -var="ami_id=ami-08f75cb3e680edc28" -var="ssh_location=[\"8.8.8.8/32\"]" -var="http_location=[\"8.8.8.8/32\"]" -var="certificate_arn=" -var="feature_flag_deploy_with_alb=false"`
