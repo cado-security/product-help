@@ -11,13 +11,9 @@ The Cado platform will collect key logs and forensic artifacts containers runnin
 
 ## Known Limitations
 
-* The Cado platform cannot acquire artifacts from a container built with a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image. This is due to the way the platform interacts with a container, which requires a shell environment, you can learn more about the command we run [here](../../../../cado-host/deploy#using-script-builder).
-A future update may allow for the collection of data from distroless containers.
-Additionally, the platform will hide containers with the `gcr.io/distroless` image tag.
+* The platform will hide containers with the `gcr.io/distroless` image tag as the direct acquisition method will not work, instead see the "Private Clusters with No Network Access" section.
 
-* The Cado platform will hide pods running under the following namespaces: `kube-system`, `kube-public`, `kube-node-lease`, `gke-gmp-system`, `aks-command`, `gmp-system`, `calico-system`, and `tigera-operator`. These are system level namespaces, which are often running a distroless environment, which the platform does not support.
-
-* As Cado requires access to the Control Plane, it is not possible to acquire artifacts from a container running in a private EKS cluster. A future update may allow for the collection of data from private clusters. If you are running EKS on EC2 nodes, you can acquire the volumes of the underlying EC2 instances and some data will be visible when using Docker runtimes. Containerd based runtimes will not allow access to the container data via this method. If you have a method to deploy code to running containers (for example, via a Container Security Application, you can execute a Cado Host acquisition script to acquire the data from the container.)
+* The Cado platform will hide pods running under the following namespaces: `kube-system`, `kube-public`, `kube-node-lease`, `gke-gmp-system`, `aks-command`, `gmp-system`, `calico-system`, and `tigera-operator`. These are system level namespaces, which are often running a distroless environment, which the platform does not support via direct acquisition. See the "Private Clusters with No Network Access" section for alternate acquisition methods.
 
 ## Configuring the Cluster RBAC for use with Cado
 
