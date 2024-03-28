@@ -33,6 +33,13 @@ We are currently working on a method to support containerd Volume acquisitions o
 As the Cado platform requires access to the Kubernetes control plane API for normal acquisition methods, acquiring containers via the user interface requires a valid route at the network level from the Cado instance to the Kubernetes API.
 See below for alternate options for acquiring data where the Cado platform cannot access the Kubernetes API.
 
+The Cado platform now supports collections from private cluster and distroless containers. We are keen for customer feedback on how to improve this support. To acquire:
+- Navigate to ‘Import’ then ‘Cado Host’.
+- Select ‘Kubernetes’ and follow the prompts to acquire.
+Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
+
+![Private clusters](/img/private.png)
+
 ### Private AKS Clusters
 Cado can acquire private AKS environments using the normal user interface, as Azure has created the “command invoke” command to execute commands against private AKS clusters.
 
