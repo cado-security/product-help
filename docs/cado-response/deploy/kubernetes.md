@@ -38,8 +38,6 @@ The Cado platform now supports collections from private cluster and distroless c
 - Select ‘Kubernetes’ and follow the prompts to acquire.
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
 
-![Private clusters](/img/private.png) 
-
 ### Private AKS Clusters
 Cado can acquire private AKS environments using the normal user interface, as Azure has created the “command invoke” command to execute commands against private AKS clusters.
 
