@@ -21,3 +21,7 @@ For example, it can tell you if a script downloads and executes a payload, modif
 Cado AI Investigator is available now for customers running version v2.107.0 or later.
 This is a beta feature, and can be enabled under Settings > Experiments.
 It will run on all new imports.
+
+## Privacy
+Cado AI Investigator uses a Local LLM that runs on the platform in your environment.
+No data is sent to external APIs, or back to Cado Security for training.
