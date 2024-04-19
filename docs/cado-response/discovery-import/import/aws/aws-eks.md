@@ -11,9 +11,7 @@ The Cado platform will collect key logs and forensic artifacts containers runnin
 
 ## Known Limitations
 
-* The Cado platform cannot acquire artifacts from a container built with a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image. This is due to the way the platform interacts with a container, which requires a shell environment, you can learn more about the command we run [here](../../../../cado-host/deploy#using-script-builder).
-A future update may allow for the collection of data from distroless containers.
-Additionally, the platform will hide containers with the `gcr.io/distroless` image tag.
+* The Cado platform can acquire artifacts from a container built with distroless containers via Cado Host only. The platform will hide containers with the `gcr.io/distroless` image tag.
 
 * The Cado platform will hide pods running under the following namespaces: `kube-system`, `kube-public`, `kube-node-lease`, `gke-gmp-system`, `aks-command`, `gmp-system`, `calico-system`, and `tigera-operator`. These are system level namespaces, which are often running a distroless environment, which the platform does not support.
 

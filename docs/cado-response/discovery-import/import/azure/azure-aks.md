@@ -9,7 +9,7 @@ sidebar_position: 3
 The Cado platform will collect key logs and forensic artifacts from Azure Kubernetes Service containers.
 
 :::info
-Due to the way the Cado platform interacts with Kubernetes, it is not possible to import containers built from a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image. A future update may allow for the collection of data from distroless containers.
+Please use Cado Host to acquire distroless Containers.
 :::
 
 ## Import Steps
