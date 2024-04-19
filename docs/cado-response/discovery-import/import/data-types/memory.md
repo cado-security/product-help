@@ -51,3 +51,6 @@ And running process information is recorded in processes.json:
 ![Process Info](/img/proccess-info.png)
 
 Information on network connections is recorded in network.json, open files in open_files.json, and open files are collected in the collected_files folder.
+
+## File and Log Carving
+Any file that is imported with the extension ".mem" will be processed using our open-source tool [RipRaw](https://github.com/cado-security/rip_raw) for file and log carving.
