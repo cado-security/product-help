@@ -2,6 +2,7 @@
 title: Tanium
 hide_title: true
 sidebar_position: 4
+---
 
 The Cado platform can process Tanium Live Response collections, including the trace database.
 
