@@ -94,11 +94,7 @@ In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resourc
 Cado Host can run as a normal user, not sudo, although less data may be acquired.
 
 ## Distroless / No Shell Containers
-The Cado platform cannot acquire artifacts from a container built with a [distroless](https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images) image.
-This is due to the way the platform interacts with a container, which requires a shell environment. A future update may allow for the collection of data from distroless containers.
-Additionally, the platform will hide containers with the gcr.io/distroless image tag.
-You may be able to still collect data for the container via the “Alternative Collection Methods via the Node Volume” method below.
-We are currently working on additional support for distroless containers, by acquiring the files from the Node instead over SSM or other execution functionality.
+Please use Cado Host to acquire distroless Containers.
 
 ## On-Premise Clusters
 If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for OpenShift. You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
