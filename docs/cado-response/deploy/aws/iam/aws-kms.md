@@ -47,9 +47,9 @@ When using custom keys the required actions to CadoResponseRole are:
 ```
 
 There are a number of options available - but the recommended approach is adding required permisisons to `myCadoResponseRole` directly and witholding `"CreateGrant"` for resources only:
-- You may not wish to give kms:CreateGrant permission to CadoResponseRole itself
-- Your policy must feature a statement which provides access to CadoResponseRole with the above permissions (except CreateGrant)
-- You may then tighten the policy to only allow CreateGrant permission to AWS resources
+- You may not wish to give kms:CreateGrant permission to CadoResponseRole itself.
+- Your policy must feature a statement which provides access to CadoResponseRole with the above permissions (except CreateGrant).
+- You may then tighten the policy to only allow CreateGrant permission to AWS resources.
 
 An sample policy is shown below (be sure to adjust `Principal` and add `Condition` according to your needs):
 ```json
