@@ -16,6 +16,28 @@ An alternative way to enable [cross-account access](./cross-account-creation.md)
 
 The [ListAccounts](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListAccounts.html) operation lists all the accounts in the organisation. This operation can only be called from the organization's management account, therefore select the role that already has the ListAccounts permission on the management account from the 'List Accounts Role' dropdown. This can be accessed from *Settings> Cloud Accounts*.
 
+An example IAM Policy is as follows:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListAccounts",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::xxx:root"
+      },
+      "Action": [
+        "organizations:ListAccounts",
+        "organizations:ListTagsForResource"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
 ![Select List Accounts Role](/img/aws-orgs-list-accounts-role.png)
 
 ## Cross Account IAM Role
