@@ -12,7 +12,7 @@ This feature is currently in beta. To enable, go to *Settings - Experiments* and
 
 An alternative way to enable [cross-account access](./cross-account-creation.md) for the Cado Platform is to leverage AWS Organizations. This allows you to add and remove access to AWS accounts more easily in environments where accounts are managed by AWS Organizations
 
-## Enabling Trusted Access
+## ListAccounts Permission
 First, enable the AWS Account Management service in your root account and delegate the service to the account Cado is running in. AWS account Trusted Access must be enabled for AWS Account Management, so the Cado Platform can use the ListAccounts permission.
 
 This setting is found under *AWS Organizations > Services > AWS Account Management > Enable Trusted Access:*
