@@ -20,7 +20,7 @@ If you have deployed with Terraform, update the AMI ID (AWS) or VHD URL (Azure) 
 
 # Update Details for Terraform and Custom Updates
 
-Please view our [knowledge base article](https://cadosecurity.zendesk.com/hc/en-gb/articles/23253323591569-How-can-I-see-the-latest-Update-AMIs-and-URLs-for-updating-AWS-Azure-and-GCP) for where to retrieve the latest AMI IDs and URLs for updating your Cado platform.
+Please view our [knowledge base article](https://cadosecurity.zendesk.com/hc/en-gb/articles/23253323591569-How-can-I-see-the-latest-Update-AMIs-and-URLs-for-updating-AWS-Azure-and-GCP) for where to retrieve the latest AMI IDs and URLs for updating your Cado platform, and more details on how the Update Mechanism operates.
 
 This URL contains the information, with the latest release at the bottom of the JSON file:
 ```
