@@ -41,3 +41,6 @@ Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backu
 ![AWS Backup 5](/img/aws-backup-5.png)
 
 Then, simply **[attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)** the restored Data Volume to your new Cado EC2 Instance and start it.
+
+#### Backups with High Availability
+If you have opted for the High Availability deployment in AWS, back-ups need to be enabled for the native AWS services used in the deployment.
