@@ -31,7 +31,7 @@ For a typical acquisition, import and processing will take a few minutes to comp
 :::info
 ## ECS Import Requirements
 
-* You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task.
+* You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task. This is a hard requirement from AWS that cannot be changed from Cado's perspective or the Cado product itself. 
 * Currently ECS acquisitions are only available on Linux based containers.
 
 You will receive an error such as this:
