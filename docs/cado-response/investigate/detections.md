@@ -8,7 +8,13 @@ sidebar_position: 9
 
 The Cado platform can integrate with a number of systems as well as incorporate custom Indicators of Compromise. These can be defined in *Settings - General Settings - Detection* 
 
-The **VirusTotal API Key** is used to enhance the analysis of already detected files by checking their file-hash against the VirusTotal database. It is not used to detect files. 
+The **VirusTotal API Key** is used to enhance the analysis of already detected files by checking their file-hash against the VirusTotal database. It is not used to detect files. Cado will use the VirusTotal API key to do a lookup for the hash of each file that has a detection (or alarm). If the VirusTotal (VT) lookup fails for some reason, a retry of that same lookup will not occur. It's probably that Cado will only do ~10 or less VT lookups for any system we're processing evidence for, however it is possible that a system could be 'overflowing' with malicious files, which means the VT API Key could hit its subscription lookup limits (as a potential or possible result).
+
+Workarounds for the above include:
+
+-Possibly creating specific VT API keys with limited API key lookups
+-Creating a separate free VT API Key (outside of an Enterprise license)
+-Not leveraging VT at all for alarms or detections. Cado optionally provides native YARA + atomic IOC's for detection through our Threat Research team, or you can use your own YARA/IOC's.
 
 The **Yara Rules** text-box allows you to run your own set of Yara rules against files. These are run in addition to a set built-in to Cado. Rules that match will trigger a `Malicious` detection, unless the yara rule name starts with the keyword suspicious - in which case it will create a `Suspicious` detection.
 
