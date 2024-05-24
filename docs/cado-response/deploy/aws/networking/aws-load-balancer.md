@@ -1,9 +1,13 @@
 ---
-title: Load Balancer
+title: Load Balancer and SSL
 hide_title: true
 sidebar_position: 1
 ---
 
+# Adding a valid SSL Certificate
+The simplest option for adding a valid SSL certificate to Cado is to use a service such as [Cloudflare](https://www.cloudflare.com/). This will provide a valid SSL certificate for your domain and allow you to access Cado over valid HTTPS.
+
+Alternatively, you can use a load balancer in AWS to provide a valid SSL certificate. This is a more complex option but provides more control over the SSL certificate and can be used to add a Web Application Firewall.
 
 # How to Add a Load Balancer in AWS
 An Application Load Balancer can be placed in front of the Cado web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the pre-built Terraform or Cloudformation deployment scripts that include a Load Balancer.
