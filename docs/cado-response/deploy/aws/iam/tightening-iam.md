@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 ## Removing and Tightening IAM Permissions
-You can further tune the IAM permissions that Cado deploys if you do not require all functionality. We describe the functionality used by the permissions in the “Sid” section of the [cross-account role](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json). Please contact support@cadosecurity.com for advice on what permissions are required for.
+You can further tune the IAM permissions that Cado deploys if you do not require all functionality. We describe the functionality used by the permissions in the “Sid” section of the [cross-account role](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml). Please contact support@cadosecurity.com for advice on what permissions are required for.
 
 
 ## How to tighten IAM Permissions for SSM

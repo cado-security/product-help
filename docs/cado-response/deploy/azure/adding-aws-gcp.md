@@ -19,7 +19,7 @@ Cross-subscription Azure access is performed using an application registered int
 * Cross-cloud access of AWS from Azure is performed by setting up an IAM role in the target AWS account. The following steps should be performed in each AWS account you would like Cado to collect data from. Note: you will need permission to create IAM roles.
 * Log into target AWS account
 * Follow these AWS instructions to create an [IAM group](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html)
-* Create a new IAM role with a new policy containing the [permissions listed here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json)
+* Create a new IAM role with a new policy containing the [permissions listed here](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml)
 * Guides for creating new roles and policies can be found [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html) and [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)
 * Add your new IAM user to the [group](https://docs.aws.amazon.com/singlesignon/latest/userguide/adduserstogroups.html)
 * Generate access keys for the [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html). These keys provide access to the account and should be kept secret.
