@@ -19,6 +19,8 @@ export const Highlight = ({children, color}) => (
 # Cross-account Access Creation
 The Cado platform can access resources across multiple AWS accounts. For instance, if you manage 100 AWS accounts, you can deploy Cado in a single AWS account and then grant the Cado platform access to all other AWS accounts, enabling the platform to acquire, process, and analyze evidence from all AWS accounts seamlessly. Alternatively, if you use AWS Control Tower, you can deploy using [AWS Organizations](./aws-organizations.md)
 
+You can view the cross-acount role [here](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml).
+
 ## Summary
 The instructions below outline how to grant permissions for the Cado platform to access a target AWS account (outside of the AWS account in which Cado was deployed). This same process can be repeated for all AWS accounts needing cross-account access.
 
@@ -38,7 +40,7 @@ The examples below reference a primary AWS account which represents the AWS acco
 
 ### STEP 1: Create IAM Policy and IAM Role in Target AWS Account
 
-- In the target AWS account (the account from which you would like to acquire data from), navigate to **IAM > Policies** and click **Create Policy**. In the Permissions Wizard, attach or paste the Cado Cross-account Policy [located here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json), then click **Next**. Give the Policy a name (like `CadoResponseCrossAccountPolicy`), then click **Create Policy**.
+- In the target AWS account (the account from which you would like to acquire data from), navigate to **IAM > Policies** and click **Create Policy**. In the Permissions Wizard, attach or paste the Cado Cross-account Policy [located here](https://raw.githubusercontent.com/cado-security/Deployment-Templates/main/cross-account/CrossAccountPolicy.yaml), then click **Next**. Give the Policy a name (like `CadoResponseCrossAccountPolicy`), then click **Create Policy**.
 
 - After the Cado Cross-account Policy is created, navigate to **IAM > Roles** and click **Create Role**. Under "Select type of trusted entity", click **Another AWS Account** and enter the account ID of your primary account (the account in which the Cado platform is deployed and running. `111111111111` in this example).
 
