@@ -16,7 +16,7 @@ Please use Cado Host to acquire distroless Containers.
 
 1) Go to **Import > Cloud**
 
-![Cado Import Screen showing the AKS options](/img/import.png)
+![Cado Import Screen showing the AKS options](/img/import-cloud-focus.png)
 
 2) Choose the Azure Credenitals configured in [Azure > Cross Subscription and Tenancy](/cado-response/deploy/azure/azure-cross-tenancy-subscriptions)
 
