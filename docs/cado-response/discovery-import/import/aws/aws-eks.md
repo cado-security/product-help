@@ -88,7 +88,7 @@ You must also make sure the following IAM permissions are attached to your IAM r
 ## Import Steps
 1) Go to **Import > Cloud**
 
-![Cado Import Screen showing the AWS EKS options](/img/import.png)
+![Cado Import Screen showing the AWS EKS options](/img/import-cloud-focus.png)
 
 2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
 
