@@ -17,7 +17,7 @@ Please use Cado Host to acquire from distroless containers.
 
 1) Go to **Import > Cloud**
 
-![Cado Import Screen showing the Kubernetes Engine options](/img/import.png)
+![Cado Import Screen showing the Kubernetes Engine options](/img/import-cloud-focus.png)
 
 2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
 
