@@ -132,14 +132,16 @@ You can then **[Log into Cado](../../manage/logging-in.md)**
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
-### AWS Terraform Deployment
+## AWS Terraform Deployment
 
 If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code and the AMI for the region which you will deploy into.
 
-1. Clone the repo from https://github.com/cado-security/Deployment-Templates/tree/main/aws.
-2. Navigate to the **aws_combined** folder.
-3. Run `terraform init`
-4. Run `terraform apply`. Note that the Terraform script will ask you for a number of variables which you can also pass in via the command line if you choose.  Example: `terraform apply -var="region=us-west-2" -var="key_name=second_oregon.pem" -var="ami_id=ami-08f75cb3e680edc28" -var="ssh_location=[\"8.8.8.8/32\"]" -var="http_location=[\"8.8.8.8/32\"]" -var="certificate_arn=" -var="feature_flag_deploy_with_alb=false"`
+1. Clone the repo from https://github.com/cado-security/Deployment-Templates/tree/main/aws_v2.
+2. Navigate to the root **aws_v2** folder.
+3. Adjust the provided `awsVars.tfvars` file, with your deployment configuration.
+4. Run `terraform init`
+5. Confirm configuration and view deployment plan run `terraform plan -var-file="awsVars.tfvars"`
+4. To deploy run `terraform apply -var-file="awsVars.tfvars"`
     1. PowerShell on Windows cannot correctly pass literal quotes to external programs, so we do not recommend using Terraform with PowerShell when you are on Windows. Use Windows Command Prompt instead.
 
 ### Parameters
@@ -149,10 +151,14 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
   | region | *(choose AWS region)* | AWS Region to deploy the Cado platform in, e.g. `us-east-1` |
   | key_name | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
   | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado. |
+  | public_deployment | *(IP vs ALB url)* | False by default. Set True if you want the instance to have a public IP address. False hides the Instance behind an ALB with a DNS record to connect to. |
+  | certificate_arn | *(HTTPS certificate ARN)* | *Only* needed if `public_deployment` is False. The ARN of the certificate to use on the ALB. |
+  | tags | *(Tag resources)* | Map of strings. Tag all deployed resources with information to make them easily identifiable. |
+  | vm_size | *(choose vm size)* | m5.4xlarge by default. |
+  | vol_size | *(choose disk size)* | 100 GB by default. |
   | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
-  | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
-  | feature_flag_deploy_with_alb | `False` | Deploys the platform with an Application Load Balancer. If set to True CertificateARN MUST be populated |
-  | certificate_arn | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
+  | http_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
+  | custom_networking | *(optional custom networking)* | If you want to deploy into already provisioned networking configuration. Cado will not deploy. For *Public* deployments `vpc_id` and `public_subnet_id` must be supplied. For *Private* deployments `vpc_id`, `public_subnet_id`, `public_subnet_b_id` and `private_subnet_id` must be provided. |
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
 6. You can then **[Log into Cado](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado platform.  You'll be asked to change your password after first login.
