@@ -138,10 +138,10 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
 
 1. Clone the repo from https://github.com/cado-security/Deployment-Templates/tree/main/aws_v2.
 2. Navigate to the root **aws_v2** folder.
-3. Adjust the provided `awsVars.tfvars` file, with your deployment information.
+3. Adjust the provided `awsVars.tfvars` file, with your deployment configuration.
 4. Run `terraform init`
 5. Confirm configuration and view deployment plan run `terraform plan -var-file="awsVars.tfvars"`
-4. Run `terraform apply -var-file="awsVars.tfvars"`
+4. To deploy run `terraform apply -var-file="awsVars.tfvars"`
     1. PowerShell on Windows cannot correctly pass literal quotes to external programs, so we do not recommend using Terraform with PowerShell when you are on Windows. Use Windows Command Prompt instead.
 
 ### Parameters
@@ -153,11 +153,11 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
   | ami_id | *(contact Cado Sales)* | Please contact your Cado Sales team for the appropriate AMI ID. When contacting Sales, please provide your AWS Account Number and your AWS region where you will be deploying Cado. |
   | public_deployment | *(IP vs ALB url)* | False by default. Set True if you want the instance to have a public IP address. False hides the Instance behind an ALB with a DNS record to connect to. |
   | certificate_arn | *(HTTPS certificate ARN)* | *Only* needed if `public_deployment` is False. The ARN of the certificate to use on the ALB. |
-  | tags | *(Tag resources)* | Tag all deployed resources with information to make them easily identifiable. |
+  | tags | *(Tag resources)* | Map of strings. Tag all deployed resources with information to make them easily identifiable. |
   | vm_size | *(choose vm size)* | m5.4xlarge by default. |
   | vol_size | *(choose disk size)* | 100 GB by default. |
   | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
-  | http_location | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
+  | http_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
   | custom_networking | *(optional custom networking)* | If you want to deploy into already provisioned networking configuration. Cado will not deploy. For *Public* deployments `vpc_id` and `public_subnet_id` must be supplied. For *Private* deployments `vpc_id`, `public_subnet_id`, `public_subnet_b_id` and `private_subnet_id` must be provided. |
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
