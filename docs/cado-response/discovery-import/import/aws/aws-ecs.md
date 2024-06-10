@@ -12,7 +12,7 @@ The Cado platform will collect key logs and forensic artifacts from AWS ECS syst
 # How to Import
 
 1) Go to **Import > Cloud**
-![Import ECS 1](/img/import.png)
+![Import ECS 1](/img/import-cloud-focus.png)
 
 2) Then select the target Cluster and Task:
 ![Import ECS 2](/img/ecs_2.png)
