@@ -28,7 +28,7 @@ The Cado AI feature is a locally hosted LLM (large language model).
 It solely runs on the Cado platform in customer environments.
 The Cado AI feature does not send any data to any external APIs, nor back to Cado for training purposes.
 It is an optional feature that is not enabled by default.
-An overview of it's operation is below:
+An overview of the operations are below:
 ![File Details 1](/img/llm.png)
 
 The data sources for the Cado AI feature are data imported within the platform, and it consists of malicious events and the text contents of malicious files which have already been imported by a Cado administrator within the customer's organisation.
