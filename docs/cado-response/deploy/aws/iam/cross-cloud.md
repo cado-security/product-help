@@ -1,5 +1,5 @@
 ---
-title: Cross Cloud
+title: Adding Azure and GCP to AWS
 hide_title: true
 sidebar_position: 5
 ---
@@ -26,7 +26,9 @@ Cross-subscription Azure access is performed using an application registered int
 For a diagram on how cross-cloud imports from AWS into Azure work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23261488255121-What-network-access-is-required-to-operate-cross-cloud-from-Azure).
 
 ## Adding GCP Access to AWS Deployments
-
+:::warning
+Make sure the GCP service account credentials are enabled from the Google Cloud console.
+:::
 Cross-cloud access of GCP from Azure is performed by designating a primary GCP project where evidence will be stored before being captured by Cado using a service account. This primary project also coordinates IAM access so that Cado can import evidence from your other GCP projects. Access is given to the service account in the primary project to each GCP project you would like Cado to collect evidence from. Note: you will need permission to create IAM roles and service accounts.
 
 * Sign in to the GCP project which you are designating your primary project
@@ -35,9 +37,18 @@ Cross-cloud access of GCP from Azure is performed by designating a primary GCP p
 * Create a new Cado IAM role with the [permissions listed here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#creating-a-cado-role.).
 This role can be [created](https://cloud.google.com/iam/docs/creating-custom-roles#creating) at the organisation level to give access to multiple projects under one service account.
 * Assign the new Cado IAM role to the Cloud Build principal. Go to IAM and Admin -> IAM and locate the principle which looks like xxxxxxxxxxxx@cloudbuild.gserviceaccount.com. Edit this principle to give it permission to the new Cado role. Take note of the principal name as it will be used to set up access to other GCP projects.
-* Follow these Google instructions to create a [new service account](https://cloud.google.com/iam/docs/service-accounts-create)
-* Follow these Google instructions to assign the [new Cado IAM role](https://cloud.google.com/iam/docs/create-service-agents#grant-roles) to the service account
-* If you will be importing from GKE clusters, the service account also needs the permission iam.serviceAccounts.implicitDelegation
+* Follow these Google instructions to create a [new service account](https://cloud.google.com/iam/docs/service-accounts-create).
+* Follow these Google instructions to assign the [new Cado IAM role](https://cloud.google.com/iam/docs/create-service-agents#grant-roles) to the service account.
+* If you will be importing from GKE clusters, the service account also needs the `iam.serviceAccounts.implicitDelegation` permission.
 * Follow the Cado documentation to create service account credentials and enter them into the platform:
-[here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#getting-gcp-credentials) & [here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#entering-settings)
-* To allow access to your other GCP projects, follow the [Cado documentation](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-cross-project) for each other GCP project
+[here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#getting-gcp-credentials) & [here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#entering-settings).
+* To allow access to your other GCP projects, follow the [Cado documentation](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-cross-project) for each other GCP project.
+
+* Ensure the following **[APIs](https://console.cloud.google.com/apis/library)** are enabled in the project:
+    - **[Compute Engine](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
+    - **[Cloud Build](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
+    - **[Cloud Filestore](https://console.cloud.google.com/marketplace/product/google/file.googleapis.com)**
+    - **[Secret Manager](https://console.cloud.google.com/marketplace/product/google/secretmanager.googleapis.com)**
+    - **[Cloud Resource Manager](https://console.cloud.google.com/marketplace/product/google/cloudresourcemanager.googleapis.com)**
+    - **[IAM Service Account Credentials](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
+    - **[Cloud Storage](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
