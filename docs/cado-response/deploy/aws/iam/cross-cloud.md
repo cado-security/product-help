@@ -29,7 +29,7 @@ For a diagram on how cross-cloud imports from AWS into Azure work, please see ou
 :::warning
 Make sure the GCP service account credentials are enabled from the Google Cloud console.
 :::
-Cross-cloud access of GCP from Azure is performed by designating a primary GCP project where evidence will be stored before being captured by Cado using a service account. This primary project also coordinates IAM access so that Cado can import evidence from your other GCP projects. Access is given to the service account in the primary project to each GCP project you would like Cado to collect evidence from. Note: you will need permission to create IAM roles and service accounts.
+Cross-cloud access of GCP from AWS is performed by designating a primary GCP project where evidence will be stored before being captured by Cado using a service account. This primary project also coordinates IAM access so that Cado can import evidence from your other GCP projects. Access is given to the service account in the primary project to each GCP project you would like Cado to collect evidence from. Note: you will need permission to create IAM roles and service accounts.
 
 * Sign in to the GCP project which you are designating your primary project
 * Enable the [Cloud Build API](https://console.cloud.google.com/cloud-build/) if it is not already activated
