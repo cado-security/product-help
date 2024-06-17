@@ -112,3 +112,7 @@ You can use webhooks to send notifications to create a ticket in Jira from the C
 5. Name your webhook and paste the URL from Jira. Then check "High Severity Alarms" under events to send, as a first example.
 
 ![Jira Webhook](/img/jira_webhook.png)
+
+## Service Now Integration
+1. See the [ServiceNow documentation](https://www.servicenow.com/community/in-other-news/how-to-integrate-webhooks-into-servicenow/ba-p/2271745) on creating incoming webhooks for ServiceNow.
+2. Create a new webhook by selecting the Jira project you want to create tickets in, then select **Project settings** > **Automations** > **Create a Rule** > **Incoming Webhook**.
