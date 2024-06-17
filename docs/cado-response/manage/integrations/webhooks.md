@@ -96,3 +96,23 @@ We include an example payload and the Teams message it creates (note that the ne
     "text": "**$Title**  \nDetails: $Event"
 }
 ```
+
+
+## Jira Integration
+You can use webhooks to send notifications to create a ticket in Jira from the Cado platform.
+
+1. See the [Jira documentation](https://confluence.atlassian.com/jirakb/working-with-incoming-webhook-data-in-automation-for-jira-1125878776.html) on creating incoming webhooks for Jira. 
+2. Create a new webhook by selecting the Jira project you want to create tickets in, then select **Project settings** > **Automations** > **Create a Rule** > **Incoming Webhook**.
+3. Select "Then, Create a new Ticket" and enter the following as the Description:
+```json
+{{webhookData.title}}
+{{webhookData.message}}
+```
+4. In the Cado platform under **Settings > Integrations > Webhooks** select **New webhook**.
+5. Name your webhook and paste the URL from Jira. Then check "High Severity Alarms" under events to send, as a first example.
+
+![Jira Webhook](/img/jira_webhook.png)
+
+## Service Now Integration
+1. See the [ServiceNow documentation](https://www.servicenow.com/community/in-other-news/how-to-integrate-webhooks-into-servicenow/ba-p/2271745) on creating incoming webhooks for ServiceNow.
+2. Create a new webhook by selecting the Jira project you want to create tickets in, then select **Project settings** > **Automations** > **Create a Rule** > **Incoming Webhook**.
