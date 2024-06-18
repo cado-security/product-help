@@ -115,13 +115,15 @@ If you have not received the above items, reach out to sales@cadosecurity.com fo
     | `instance_type` | Instance type to use for main | Recommended to use `Standard_D16ds_v4`  If you have questions on instance sizing, please contact support for guidance. |
     | `resource_group` | Resource group name which will be created.  This resource group name must not exist already | `resgroup123` |
     | `region` | Region to deploy in.  You can use the Display Name or Name of the region as shown when running `az account list-locations -o table` | `North Europe`, `northeurope`, `East US`, `eastus` |
-    | `share_size` | Size of network file share | `500` This value is depenedent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
+    | `share_size` | Size of network file share | `500` This value is dependent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
     | `main_size` | Size of main instance local disk in GB | `30` *Do not change* |
-    | `main_data_size` | Size of main instance local disk in GB | `500` This value is depenedent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
+    | `main_data_size` | Size of main instance local disk in GB | `500` This value is dependent on the amount of data you will be processing into the Cado platform.  Please speak with the sales or support team for proper sizing. |
     | `processing_mode` | Processing mode to start in | `scalable-vm` *Do not change* |
     | `ssh_key_public` | Path to SSH public key | `../keys/azure_demo_key.pub` |
     | `ssh_key_private` | Path to SSH private key | `../keys/azure_demo_key` |
-    | `finalize_cmd` | Finalize command | `echo 'not required'` *Do not change*  |
+    | `proxy` | (https://user:pass@1.2.3.4:1234) | Optional Proxy URL to use for outbound connections in format / User Pass - https://user:pass@1.2.3.4:1234 |
+    | `proxy_cert_url` | (url) | Optional location of where to download and trust the proxy certificate, leave blank to use proxy without a cert.
+    | `finalize_cmd` | Finalize command | `sudo /home/admin/processor/release/finalize.sh --main` *Do not change*  |
 
     :::tip
      We recommend a minimum setting of 500GB for `main_data_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
