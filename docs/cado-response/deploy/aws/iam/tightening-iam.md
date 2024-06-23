@@ -114,7 +114,7 @@ Alternatively the permissions in Custom Keys section are still valid, however bo
 - RequiredToCheckPolicy: Required for health checks to confirm the safe operation of the core platform
 - RequiredForCrossAccountAccess: Required when performing cross-account operations
 - RequiredToAccessCadoS3Bucket: Required to access the Cado S3 bucket, to store and access forensic data
-- RequiredForAcquireToS3: Required for forensic preservation to S3 buckets and chain of custody
+- RequiredForAcquireToS3: Required for forensic preservation to S3 buckets and chain of custody. Can be scoped to the Cado bucket "CadoS3BucketAlt" if required.
 - RequiredForS3Readiness: Required to check safe operation of the platform
 - RequiredForMemoryForensics: Required to perform triage acquisitions via SSM that include memory acquisition
 - RequiredForKmsEncryptedEc2Import: Required when acquiring KMS encrypted EBS volumes for EC2 systems
