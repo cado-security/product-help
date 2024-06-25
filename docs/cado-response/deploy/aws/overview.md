@@ -159,6 +159,9 @@ If you have not already, please contact the Cado Sales team at sales@cadosecurit
   | ssh_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
   | http_location | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
   | custom_networking | *(optional custom networking)* | If you want to deploy into already provisioned networking configuration. Cado will not deploy. For *Public* deployments `vpc_id` and `public_subnet_id` must be supplied. For *Private* deployments `vpc_id`, `public_subnet_id`, `public_subnet_b_id` and `private_subnet_id` must be provided. |
+  | proxy | *(URL)* | Proxy URL to use for outbound connections in format / User Pass - https://user:pass@1.2.3.4:1234 | IP Auth - https://1.2.3.4:1234 |
+  | proxy_cert_url | *(URL)* | URL to download proxy certificate from, leave blank to use proxy without a cert. |
+
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
 6. You can then **[Log into Cado](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado platform.  You'll be asked to change your password after first login.
