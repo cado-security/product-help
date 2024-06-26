@@ -93,7 +93,7 @@ This can be set under Settings > Advanced:
 
 This may be useful if you wish to deploy Cado Host from your own environment, or perform your own static analysis of any binaries before they are deployed.
 
-It is important that the Cado Host binary is the latest version for compatibility.
+It is important that the Cado Host binary is the latest version for compatibility. Also, the Cado Host binaries are typically updated 1-2 times per quarter. 
 
 For example, if the latest official URL for the Cado Host Linux binary is https://official-cado-bucket.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host
 and you are hosting the binaries under http://example.com/my-folder/ 
@@ -105,4 +105,3 @@ Please ensure that binaries are present for all operating systems to ensure coll
 * /windows/cado-host.exe
 * /osx/cado-host
 * /osx/cado-host-x86
-
