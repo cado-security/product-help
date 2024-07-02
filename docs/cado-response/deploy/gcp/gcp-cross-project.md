@@ -11,7 +11,7 @@ After creating the service account, enabling Cloud Build and other relevant APIs
 This also allows cross-project importing, meaning images from an instance in `Project-A` can be saved to a bucket in `Project-B`
 :::
 
-In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the default Compute Engine principal for our primary project.
+In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@developer.gserviceaccount.com` as the default Compute Engine principal for our primary project.
 
 :::info
 Cloud Build API needs to be enabled in every GCP project from which you want to collect
