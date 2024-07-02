@@ -125,7 +125,7 @@ gcloud iam roles create CUSTOM_ORG_ROLE_ID --organization=YOUR_ORG_ID --file=cad
 
 To enable Cloud Build API for a Google project, see the documentation at https://console.cloud.google.com/cloud-build/.
 
-Once Cloud Build is enabled, a principal will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the custom role we created in the previous step **'Customer -> \<role_name\>'**. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
+Once Cloud Build is enabled, a principal for Compute Engine will have been created in **'IAM and Admin > IAM'** called `xxxxxxxxxxxx@cloudbuild.gserviceaccount.com`, we also need this principal to have the custom role we created in the previous step **'Customer -> \<role_name\>'**. Do this by editing the principal with the pen icon on the right and selecting the appropriate role.
 
 ### Defining a bucket for the Primary GCP Project
 
