@@ -104,4 +104,5 @@ Which will result in events such as the following:
 
 ![Custom logs imported into Cado](/img/custom_log.png)
 
-
+## Log Analysis Considerations 
+It is important to note that Cado's objective with log analysis & SIEM integration are refined in scope. Typically, Cado sends information over into a SIEM (and not the other way around). When logs are analysed by Cado, typically there are already-identified activities on the host(s) in question that warrant an analysis and acquisition of cloud-related artifacts. For exposing or uncovering malicious behavior within large sets of logs (typically anything over ~1 million events), we encourage leveraging SIEM solutions and/or open-source tools, like Cado's cloudgrep: https://github.com/cado-security/cloudgrep. 
