@@ -101,3 +101,5 @@ An example is provided below:
 	"filePath": "/NTUSER.DAT"
 }
 ```
+# Log Analysis Considerations between SIEM & Cado
+See [here](/cado-response/discovery-import/import/data-types/logs#log-analysis-considerations) for content contrasting SIEM tools relative to Cado's capabilities.
