@@ -1,14 +1,12 @@
 ---
-title: Automation Rules (Beta)
+title: Detection Ingegrations (Beta)
 hide_title: true
 sidebar_position: 3
 ---
 
-# Configuring Automation Rules
+# Configuring Detection Integrations
 
-**This feature is currently in beta - to enable this feature go to Settings > Experiments**
-
-The Cado platform allows you to define automation rules to better prepare for incidents in cloud environments. These automation rules allow you to define in advance
+The Cado platform allows you to define automation rules to automatically collect data after third part detections. These automation rules allow you to define in advance
 * What data you want to collect
 * The alert triggers that will trigger a response
 * Against which cloud resources, and
@@ -37,7 +35,7 @@ Hit 'Save' to create the environment
 
 ![Create Environments](/img/environments.png)
 
-## Creating a Rule
+## Creating a Rule for GuardDuty
 
 *NOTE: You can create rules without necessarily creating scopes or environments*
 
@@ -83,3 +81,12 @@ After the import is complete we can check the automated investigation tab to vie
 You can then select the cloud resource and view the cloud resource. A panel will open with the metadata and actions tab. The metadata tab contains metadata about the resource and the Actions tab contains actions which can be performed on the compromised resource.
 
 To automate the remediation actions on the compromised resource, you can enable this under the Settings -> Advanced tab, this would avoid you having to manually invoke the actions via the cloud resource panel. This will automatically invoke the actions defined in the Automation Rule for malicious or suspicious activity after the investigation is complete.
+
+
+## Wiz
+For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
+](/cado-response/manage/integrations/cnapp/wiz.md).
+
+## Integration with other Detection platforms
+You can trigger an import from the Cado platform by creating a webhook from the Detection platform (Crowdstrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview.md) to trigger the import.
+Easier to deploy Detection Integrations for these platforms is currently under development.
