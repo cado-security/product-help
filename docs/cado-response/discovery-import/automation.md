@@ -85,8 +85,8 @@ To automate the remediation actions on the compromised resource, you can enable 
 
 ## Wiz
 For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
-](/cado-response/manage/integrations/cnapp/wiz.md).
+](/cado-response/manage/integrations/cnapp/wiz).
 
 ## Integration with other Detection platforms
-You can trigger an import from the Cado platform by creating a webhook from the Detection platform (Crowdstrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview.md) to trigger the import.
+You can trigger an import from the Cado platform by creating a webhook from the Detection platform (Crowdstrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import.
 Easier to deploy Detection Integrations for these platforms is currently under development.
