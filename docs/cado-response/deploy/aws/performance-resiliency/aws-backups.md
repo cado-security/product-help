@@ -7,10 +7,11 @@ sidebar_position: 1
 
 # AWS Backups and Recovery
 
-### Backup and Recovery
-This section explains how to recover or migrate the Cado platform to a new instance.
+Cado backs up any imports to S3 which can then be re-imported later to a fresh instance. This is the simplest method for backups.
+You will need to restore the data volume if you want to recover user settings such as user logins, and processed data.
 
-Cado also backs up any imports to S3 which can then be re-imported later to a fresh instance, but you will need to restore the data volume if you want to recover user settings such as user logins.
+### Backup and Recovery for default non-HA deployments
+This section explains how to recover or migrate the Cado platform to a new instance.
 
 If a Cado instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
 
@@ -43,4 +44,8 @@ Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backu
 Then, simply **[attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)** the restored Data Volume to your new Cado EC2 Instance and start it.
 
 #### Backups with High Availability
-If you have opted for the High Availability deployment in AWS, back-ups need to be enabled for the native AWS services used in the deployment.
+If you have opted for the High Availability deployment in AWS, back-ups need to be enabled for the native AWS services used in the deployment:
+* https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-snapshots.html
+* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html
+* https://docs.aws.amazon.com/efs/latest/ug/awsbackup.html
+* https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups.html
