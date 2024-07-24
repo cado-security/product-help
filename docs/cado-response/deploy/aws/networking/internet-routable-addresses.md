@@ -9,10 +9,15 @@ By default, the Cado platform deploys into its own VPC with an allow-list of kno
 
 Public IPv4 addresses are assigned to the main Cado platform to enable a user to connect with their web browser, and are also assigned to workers to allow them to connect to required AWS services e.g. s3.amazonaws.com.
 
-You can remove the requirement for publicly routable IP addresses if you have set up [VPC Endpoints](https://tomgregory.com/when-to-use-an-aws-s3-vpc-endpoint/) to connect Cado to required AWS Services.
+We highly reccomend using our default CloudFormation template without changes: DeployCloudFormationPrivate.yaml which creates a VPC with the required access.
 
 You can remove the Public IP addresses associated with Workers under Settings > Advanced.
 
 You can choose a deployment that does not include the Public Elastic IP address on the main Cado web server and set up an Application Load Balancer instead to handle traffic from the user to the platform.
 
 Please see the [AWS deployment overview](/cado-response/deploy/aws/overview) for more information on how to deploy Cado in a private subnet.
+
+# Self Managing Network Access with Custom VPCs
+You can remove the requirement for publicly routable IP addresses if you have set up [VPC Endpoints](https://tomgregory.com/when-to-use-an-aws-s3-vpc-endpoint/) or another method such as a Proxy to connect Cado to required AWS Services.
+
+We highly recommend using the Cado default Cloudformation templates without changes, as we cannot support the creation and management of networks inside customer environments.
