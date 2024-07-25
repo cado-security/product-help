@@ -91,6 +91,6 @@ For details on how to automatically process systems detected by Wiz, see [Wiz Fo
 You can trigger an import from the Cado platform by creating a webhook from the Detection platform (Crowdstrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
 Easier to deploy Detection Integrations for these platforms is currently under development.
 
-* SentinelOne: Go the SentinelOne [Singularity Martketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
+* SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
 * Crowdstrike: Go to the CrowdStrike Store (All Apps) and select the [Webhook](https://marketplace.crowdstrike.com/listings/webhook) card
 * Defender: Go to [Power Automate](https://learn.microsoft.com/en-us/defender-cloud-apps/flow-integration) and create a HTTP Webhook
