@@ -16,8 +16,16 @@ and will run a [Cado Host](/cado-host/intro) command on the endpoint that perfor
 1. Make sure you have a "Microsoft Defender for Endpoint Plan 2" license
 2. Enable the following settings in the Defender Portal, by going to `Settings > Endpoints > Advanced Features`
 ![Defender Live Response Settings](/img/defender_settings.png)
-3. Create an App Registration with the appropriate API access for Defender XDR, see the [Microsoft documentation](https://learn.microsoft.com/en-us/defender-endpoint/api/exposed-apis-create-app-webapp) on how to create this in your Azure portal.
+3. Create an App Registration with the appropriate API access (below) for Defender XDR, see the [Microsoft documentation](https://learn.microsoft.com/en-us/defender-endpoint/api/exposed-apis-create-app-webapp) on how to create this in your Azure portal.
 
+We require the following API permissions for the Cado integration to work:
+
+| Permission | Reason | Type | Admin Consent Required |
+|--|--|--|--|
+| Library.Manage | Allows Cado to upload Cado Host scripts to Live Response library, on demand to allow pre-signed credentials to be refreshed | Application | Yes |
+| Machine.LiveResponse | Allows Cado to run Cado Host against a machine. | Application | Yes |
+| Machine.Read.All | Allows Cado to inspect a single machine on Defender, allowing us to grab the machine’s UUID to run LiveResponse against it. | Application | Yes |
+| Machine.ReadWrite.All | Allows Cado to retrieve a list of all machines on Defender, allowing us to show a list in the UI | Application | Yes |
 
 ## Enabling the integration in the Cado Platform
 
