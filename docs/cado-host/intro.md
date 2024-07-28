@@ -30,9 +30,9 @@ The following diagram shows the high level dataflow of Cado Host for AWS. The sa
 
 # Supported Operating Systems
 Cado Host binaries are available for:
-- Microsoft Windows: 7, 8.1, 10 (1607+) and Microsoft Windows Server Server 2012 R2+. Windows releases are signed with an EV certificate.
+- Microsoft Windows: 7, 8.1, 10, 11 and Microsoft Windows Server Server 2012 R2+. Windows releases are signed with an EV certificate.
 - Linux: Debian: 9+, Ubuntu: 16.04+, Fedora: 29+, RHEL: 6+, openSUSE: 15+, SUSE Enterprise (SLES): 12 SP2+, Alpine: 3.10+
-- MacOS (Intel based only): 10.13+
+- MacOS (Intel and ARM): 10.13+
 
 For older Operating systems we recommend instead acquiring with:
 - [UAC](https://github.com/tclahr/uac) for Linux
