@@ -22,8 +22,8 @@ For more information, see the [Crowdstrike and Cado Security Joint Solution Brie
 2. Copy and note down the Client ID,  Client Secret and Endpoint URL to enter into the Cado Platform
 3. Enable Real Time Response in either the Default policies for each operating system, or your own that you can attach to a host group.
 4. Create Detections and Preventions Machine Learning exclusions with the following pattern to allow the Windows integration to function:
-- `C:\Windows\Temp\\_MEI*\\**\CadoHostRawGrabber.exe`
-- `C:\Windows\Temp\cado-host-*\cado-host.exe`
+- `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
+- `Windows\Temp\cado-host-*\cado-host.exe`
 
 :::note
  CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need a Windows Response Policy and a Linux Response Policy which allows RTR Admin.
