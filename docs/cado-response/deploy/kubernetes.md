@@ -30,7 +30,9 @@ If using the Containerd runtime (which the latest versions of EKS now uses), the
 We are currently working on a method to support containerd Volume acquisitions of containerd based Nodes.
 
 ## Alternate Collection by using Cado Host
-The Cado platform now supports collections from private cluster and distroless containers. We are keen for customer feedback on how to improve this support. To acquire:
+The Cado platform now supports collections from private cluster and distroless containers, by using a [debug container](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
+
+To acquire:
 - Navigate to ‘Import’ then ‘Cado Host’.
 - Select ‘Kubernetes’ and follow the prompts to acquire.
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
@@ -102,6 +104,4 @@ Please use Cado Host to acquire distroless Containers.
 ## On-Premise Clusters
 If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for OpenShift. You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
 
-## Alternative Collection Methods via other Agents or Sidecars
-If you are using an agent in your containers that has the ability to execute code, you may be able to collect data by manually deploying Cado Host inside the container for collection.
-A similar approach may be possible using a [sidecar](https://spacelift.io/blog/kubernetes-sidecar-container) container with access to the target container's data, manually deployed.
+
