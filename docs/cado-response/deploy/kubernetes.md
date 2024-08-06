@@ -29,15 +29,19 @@ If using the Docker container runtime, the file system of containers will normal
 If using the Containerd runtime (which the latest versions of EKS now uses), the file system will not be immediately visible on the Volume.
 We are currently working on a method to support containerd Volume acquisitions of containerd based Nodes.
 
-## Private Clusters with No Network Access
-As the Cado platform requires access to the Kubernetes control plane API for normal acquisition methods, acquiring containers via the user interface requires a valid route at the network level from the Cado instance to the Kubernetes API.
-See below for alternate options for acquiring data where the Cado platform cannot access the Kubernetes API.
-
+## Alternate Collection by using Cado Host
 The Cado platform now supports collections from private cluster and distroless containers. We are keen for customer feedback on how to improve this support. To acquire:
 - Navigate to ‘Import’ then ‘Cado Host’.
 - Select ‘Kubernetes’ and follow the prompts to acquire.
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
 
+:::warning
+Cado Host requires root access in order to access the underlying container filesystem, usually under `/proc/{PID}/root`. The use of `runuser` with the root user is also required as to give the Cado Host process the appropriate UID and GID to access the container filesystem. Without root access, Cado Host can not access the filesystem, and the acquisition method will not collect any data.
+:::
+
+## Private Clusters with No Network Access
+As the Cado platform requires access to the Kubernetes control plane API for normal acquisition methods, acquiring containers via the user interface requires a valid route at the network level from the Cado instance to the Kubernetes API.
+See below for alternate options for acquiring data where the Cado platform cannot access the Kubernetes API.
 
 
 ### Private AKS Clusters
@@ -91,7 +95,6 @@ How to connect using Cloud9:
 ## Kubernetes RBAC Requirements
 Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
 In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resource, and ‘get’ and ‘create’ for the ‘pods/exec’ resource.
-Cado Host can run as a normal user, not sudo, although less data may be acquired.
 
 ## Distroless / No Shell Containers
 Please use Cado Host to acquire distroless Containers.
