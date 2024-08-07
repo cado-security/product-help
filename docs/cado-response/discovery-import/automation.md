@@ -1,5 +1,5 @@
 ---
-title: Detection Ingegrations (Beta)
+title: Detection Integrations (Beta)
 hide_title: true
 sidebar_position: 3
 ---
@@ -17,7 +17,7 @@ Automation in Cado is based upon three main concepts
 * **Environments** - Environments are sets of one or more scopes that you want to treat similarly - for example an application that spans multiple services across multiple cloud environments
 * **Rules** - Rules are sets of actions that will automatically take place in the event that an alert gets triggered
 
-to give an example of how the rules work lets take the following. A GuardDuty Alert has been raised with a severirty level of 5, the alert is for an EC2 that has been compromised, we then check the automation rules to determine if ther is a rule set up for GuardDuty alerts for EC2  in region & accouint the EC2 reside in. If a rule matches we then prform the investigation based on the Investigation type defined in the rule i.e full investigation. After the import is complete we can check the click the automated investigation tab to see if all malicous and suspispious activity in relation to the compromised EC2. You can then select the piece of evidence and view the cloud resource there a panel will open with the metadata and actions tab. the metadata tab is just metadata about the resource and the actions tab is the remediationactions that can be preformed on the compromised resource. To autmate the remediation actions you can enable this in the settings -> advanced which will do the above until the full investiagation is complete and will automatically invoke the actions defined in the automation rules for malicious or suspicious activity 
+to give an example of how the rules work lets take the following. A GuardDuty Alert has been raised with a severity level of 5, the alert is for an EC2 that has been compromised, we then check the automation rules to determine if there is a rule set up for GuardDuty alerts for EC2  in region & account the EC2 reside in. If a rule matches we then perform the investigation based on the Investigation type defined in the rule i.e full investigation. After the import is complete we can check the click the automated investigation tab to see if all malicious and suspicious activity in relation to the compromised EC2. You can then select the piece of evidence and view the cloud resource there a panel will open with the metadata and actions tab. the metadata tab is just metadata about the resource and the actions tab is the remediation actions that can be preformed on the compromised resource. To automate the remediation actions you can enable this in the settings -> advanced which will do the above until the full investigation is complete and will automatically invoke the actions defined in the automation rules for malicious or suspicious activity 
 
 ## Creating a Scope
 
@@ -47,11 +47,11 @@ Enter the name of the rule and a description. Specify
     * *Monitoring Enabled* - if monitoring is checked then GuardDuty Monitoring will be enabled on all regions in the cloud accounts specified within a particular Environment(s), this will run every 5 minutes to check for new alerts that contain a minimum severity of 5
 * ***Alert Type***  - the type of alert that will trigger the rule (e.g. GuardDuty)
 * ***Asset Type*** - the type of cloud resource to which the rule will apply (e.g. EC2)
-* ***Investigation Type*** - the type of invesigation to perform. This currently has three options
+* ***Investigation Type*** - the type of investigation to perform. This currently has three options
     * *Default* - Performs triage collection from any workload specified in the alert
     * *Triage* - Performs triage collection from any workload specified in the alert
     * *Full* - Performs full disk collection from any workload specified in the alert
-* ***Response Actions (optional)*** - the actions to take against machines upon which malicious activities have been detected, and machines upon which suspicous activities have been detected. Cado currently supports shutting down EC2 instances, isolating the IAM roles of that the EC2 instance assumes and isolate security group attached to the EC2.
+* ***Response Actions (optional)*** - the actions to take against machines upon which malicious activities have been detected, and machines upon which suspicious activities have been detected. Cado currently supports shutting down EC2 instances, isolating the IAM roles of that the EC2 instance assumes and isolate security group attached to the EC2.
 
 Hit 'Save' to create the rule
 
@@ -88,9 +88,9 @@ For details on how to automatically process systems detected by Wiz, see [Wiz Fo
 ](/cado-response/manage/integrations/cnapp/wiz).
 
 ## Integration with other Detection platforms
-You can trigger an import from the Cado platform by creating a webhook from the Detection platform (Crowdstrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
+You can trigger an import from the Cado platform by creating a webhook from the Detection platform (CrowdStrike, SentinelOne or Defender) then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
 Easier to deploy Detection Integrations for these platforms is currently under development.
 
 * SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
-* Crowdstrike: Go to the CrowdStrike Store (All Apps) and select the [Webhook](https://marketplace.crowdstrike.com/listings/webhook) card
+* CrowdStrike: Go to the CrowdStrike Store (All Apps) and select the [Webhook](https://marketplace.crowdstrike.com/listings/webhook) card
 * Defender: Go to [Power Automate](https://learn.microsoft.com/en-us/defender-cloud-apps/flow-integration) and create a HTTP Webhook
