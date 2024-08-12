@@ -63,3 +63,7 @@ To grant existing users or groups to a Project, you can add them when you create
 - Click the **Access** button 
 - Click the **Add Users** button
 - Select the user and/or group to add and Click **Add**
+
+### Password Policy
+Passwords allow special characters, must be a minimum of 8 characters, including 1 number and 1 uppercase.
+Commonly used passwords are blocked.
