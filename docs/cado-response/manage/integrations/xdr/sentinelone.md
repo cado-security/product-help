@@ -39,3 +39,7 @@ To leverage the integration between SentinelOne and Cado, you must have the Sent
 ![SentinelOne Integration](/img/s1-integration.png)
 
 You can now import data into Cado using the [Import from XDR capability](/cado-response/discovery-import/import/intro.md#importing-from-xdr)
+
+:::note
+ Windows and Linux Operating Systems are currently supported with the SentinelOne integration. 
+:::
