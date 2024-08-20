@@ -29,7 +29,7 @@ For more information, see the [Crowdstrike and Cado Security Joint Solution Brie
 - Command Line: `.*\\Windows\\TEMP\\_MEI.*\\\..*binaries.*CadoHostRawGrabber\.exe\s+--inputPath\s+.*\s+--outputPath\s+.*\\Windows\\TEMP\\.*`
 
 :::note
- CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need a Windows Response Policy and a Linux Response Policy which allows RTR Admin.
+ CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need a Windows Response Policy and a Linux Response Policy which allows RTR Admin. macOS is not currently supported. 
 :::
 
 ## Enabling integration in the Cado Platform
