@@ -51,6 +51,9 @@ If either:
 * Or the Cluster and Task do not have [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) enabled.
 :::
 
+### Debugging ECS Exec Permissions
+AWS provide a useful tool to help debug ECS Exec issues at [on GitHub](https://github.com/aws-containers/amazon-ecs-exec-checker).
+
 ### Data Flow Diagram
 For a diagram of how our ECS acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258918944529-How-do-ECS-acquisitions-work).
 
