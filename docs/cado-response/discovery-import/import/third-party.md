@@ -15,7 +15,7 @@ FTK Imager is a free tool that can be used to create disk images of a system. Th
 
 A [tutorial](https://cloudnine.com/ediscoverydaily/electronic-discovery/how-to-create-an-image-using-ftk-imager-ediscovery-best-practices/) is available on the CloudNine website that explains how to create a disk image using FTK Imager.
 
-Cado can import full disk images in a number of formats, includign .dd and .e01.
+Cado can import full disk images in a number of formats, including .dd and .e01.
 
 
 ### KAPE and Velociraptor
