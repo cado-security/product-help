@@ -66,6 +66,12 @@ Note that if you are running EKS on EC2 nodes, it may be easier to use the "Alte
 #### Alternate Private EKS Cluster Access
 If the Cado platform cannot access the Cluster endpoint, you can instead acquire via deploying the Cado Host acquisition script.
 
+First connect to your EKS cluster with a command such as:
+- aws eks update-kubeconfig --region $Region --name $ClusterName
+To execute this command, please follow the instructions from AWS [here](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html).
+
+Then, execute the kubectl script generated at Import > Cado Host > Kubernetes.
+
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/) for more details.
 
 #### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
