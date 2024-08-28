@@ -34,8 +34,18 @@ The Cado platform now supports collections from private cluster and distroless c
 
 To acquire:
 - Navigate to ‘Import’ then ‘Cado Host’.
-- Select ‘Kubernetes’ and follow the prompts to acquire.
+- Select ‘Kubernetes’ and follow the prompts to acquire:
+
+Image 
+![Cado Host K8s UI](/img/cado-host-k8s.png)
+
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
+
+### Using A Custom Image
+In environments that don’t support using the default debian:latest container image, you can choose to use a custom image instead. This expects the latest Cado Host Linux binary to exist at /tmp/cado-host-static/cado-host.
+We strongly recommend using the default debian:latest image as Cado can provide support if you encounter issues when acquiring using the default debian:latest image - we are unable to provide support for custom images.
+
+
 
 :::warning
 Cado Host requires root access in order to access the underlying container filesystem, usually under `/proc/{PID}/root`. The use of `runuser` with the root user is also required as to give the Cado Host process the appropriate UID and GID to access the container filesystem. Without root access, Cado Host can not access the filesystem, and the acquisition method will not collect any data.
