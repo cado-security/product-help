@@ -36,7 +36,6 @@ To acquire:
 - Navigate to ‘Import’ then ‘Cado Host’.
 - Select ‘Kubernetes’ and follow the prompts to acquire:
 
-Image 
 ![Cado Host K8s UI](/img/cado-host-k8s.png)
 
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
