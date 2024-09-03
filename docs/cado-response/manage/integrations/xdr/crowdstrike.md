@@ -26,7 +26,7 @@ For more information, see the [Crowdstrike and Cado Security Joint Solution Brie
 - `Windows\Temp\cado-host-*\cado-host.exe`
 5. Optional: `CadoHostRawGrabber.exe` will potentially raise an endpoint detection for the IOAs `RawReadOnSAMHive` and `RawReadOnSecurityHive`. To prevent these detections from being raised, you can create an IOA exclusion for both IOAs using these patterns.
 - Image Filename: `.*\\Windows\\Temp\\_MEI.*\\.*\\CadoHostRawGrabber\.exe`
-- Command Line: `.*\\Windows\\TEMP\\_MEI.*\\\..*binaries.*CadoHostRawGrabber\.exe\s+--inputPath\s+.*\s+--outputPath\s+.*\\Windows\\TEMP\\.*`
+- Command Line:  `.*\\Windows\\TEMP\\_MEI.*\\binaries\\CadoHostRawGrabber\.exe\s+--inputPath\s+.*\s+--outputPath\s+.*\\Windows\\TEMP\\.*`
 
 :::note
  CrowdStrike Falcon defines policies on a “per platform basis”, so you  will need a Windows Response Policy and a Linux Response Policy which allows RTR Admin. macOS is not currently supported. 
