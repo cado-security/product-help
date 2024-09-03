@@ -24,7 +24,7 @@ For more information, see the [Crowdstrike and Cado Security Joint Solution Brie
 4. Create Detections and Preventions Machine Learning exclusions with the following pattern to allow the Windows integration to function:
 - `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
 - `Windows\Temp\cado-host-*\cado-host.exe`
-5. Optional: `CadoHostRawGrabber.exe` will potentially raise an endpoint detection for the IOAs `RawReadOnSAMHive` and `RawReadOnSecurityHive`. To prevent these detections from being raised, you can create an IOA exclusion for both IOAs using these patterns.
+5. Optional: `CadoHostRawGrabber.exe` will potentially raise an endpoint detection for the IOAs `HiveCredTheft`, `RawReadOnSAMHive` and `RawReadOnSecurityHive`. To prevent these detections from being raised, you can create an IOA exclusion for both IOAs using these patterns.
 - Image Filename: `.*\\Windows\\Temp\\_MEI.*\\.*\\CadoHostRawGrabber\.exe`
 - Command Line:  `.*\\Windows\\TEMP\\_MEI.*\\binaries\\CadoHostRawGrabber\.exe\s+--inputPath\s+.*\s+--outputPath\s+.*\\Windows\\TEMP\\.*`
 
