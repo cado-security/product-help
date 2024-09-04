@@ -29,15 +29,29 @@ If using the Docker container runtime, the file system of containers will normal
 If using the Containerd runtime (which the latest versions of EKS now uses), the file system will not be immediately visible on the Volume.
 We are currently working on a method to support containerd Volume acquisitions of containerd based Nodes.
 
+## Alternate Collection by using Cado Host
+The Cado platform now supports collections from private cluster and distroless containers, by using a [debug container](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
+
+To acquire:
+- Navigate to ‘Import’ then ‘Cado Host’.
+- Select ‘Kubernetes’ and follow the prompts to acquire:
+
+![Cado Host K8s UI](/img/cado-host-k8s.png)
+
+Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
+
+### Using A Custom Image
+In environments that don’t support using the default debian:latest container image, you can choose to use a custom image instead. This expects the latest Cado Host Linux binary to exist at /tmp/cado-host-static/cado-host.
+We strongly recommend using the default debian:latest image as Cado can provide support if you encounter issues when acquiring using the default debian:latest image - we are unable to provide support for custom images.
+
+### Root Access
+By default, Cado Host requires root access in order to access the underlying container filesystem, usually under `/proc/{PID}/root`. The use of `runuser` with the root user is also required as to give the Cado Host process the appropriate UID and GID to access the container filesystem.
+
+If you are running Kubernetes v1.30 or later, you can optionally use the "Run as non-root user" option to instead use the [sysadmin](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/) profile, which has the necessary permissions to access the container filesystem.
+
 ## Private Clusters with No Network Access
 As the Cado platform requires access to the Kubernetes control plane API for normal acquisition methods, acquiring containers via the user interface requires a valid route at the network level from the Cado instance to the Kubernetes API.
 See below for alternate options for acquiring data where the Cado platform cannot access the Kubernetes API.
-
-The Cado platform now supports collections from private cluster and distroless containers. We are keen for customer feedback on how to improve this support. To acquire:
-- Navigate to ‘Import’ then ‘Cado Host’.
-- Select ‘Kubernetes’ and follow the prompts to acquire.
-Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
-
 
 
 ### Private AKS Clusters
@@ -59,6 +73,12 @@ Note that if you are running EKS on EC2 nodes, it may be easier to use the "Alte
 
 #### Alternate Private EKS Cluster Access
 If the Cado platform cannot access the Cluster endpoint, you can instead acquire via deploying the Cado Host acquisition script.
+
+First connect to your EKS cluster with a command such as:
+- aws eks update-kubeconfig --region $Region --name $ClusterName
+To execute this command, please follow the instructions from AWS [here](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html).
+
+Then, execute the kubectl script generated at Import > Cado Host > Kubernetes.
 
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/) for more details.
 
@@ -91,7 +111,6 @@ How to connect using Cloud9:
 ## Kubernetes RBAC Requirements
 Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
 In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resource, and ‘get’ and ‘create’ for the ‘pods/exec’ resource.
-Cado Host can run as a normal user, not sudo, although less data may be acquired.
 
 ## Distroless / No Shell Containers
 Please use Cado Host to acquire distroless Containers.
@@ -99,6 +118,4 @@ Please use Cado Host to acquire distroless Containers.
 ## On-Premise Clusters
 If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for OpenShift. You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
 
-## Alternative Collection Methods via other Agents or Sidecars
-If you are using an agent in your containers that has the ability to execute code, you may be able to collect data by manually deploying Cado Host inside the container for collection.
-A similar approach may be possible using a [sidecar](https://spacelift.io/blog/kubernetes-sidecar-container) container with access to the target container's data, manually deployed.
+

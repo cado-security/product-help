@@ -23,5 +23,16 @@ This is a beta feature, and can be enabled under Settings > Experiments.
 It will run on all new imports.
 
 ## Privacy
-Cado AI Investigator uses a Local LLM that runs on the platform in your environment.
-No data is sent to external APIs, or back to Cado Security for training.
+
+The Cado AI feature is a locally hosted LLM (large language model).
+It solely runs on the Cado platform in customer environments.
+The Cado AI feature does not send any data to any external APIs, nor back to Cado for training purposes.
+It is an optional feature that is not enabled by default.
+An overview of the operations are below:
+![File Details 1](/img/llm.png)
+
+The data sources for the Cado AI feature are data imported within the platform, and it consists of malicious events and the text contents of malicious files which have already been imported by a Cado administrator within the customer's organisation.
+
+The feature process and security process is the same as any other feature in the product: We have a defined roadmap, test, release and bug process. We validate all outputs against a schema, with technical controls against vulnerabilities such as cross-site scripting for any output rendered.
+
+

@@ -10,7 +10,7 @@ sidebar_position: 4
 This feature is currently in beta. To enable, go to *Settings - Experiments* and enable "AWS Organizations Account Discovery"
 :::
 
-An alternative way to enable [cross-account access](./cross-account-creation.md) for the Cado Platform is to leverage AWS Organizations. This allows you to add and remove access to AWS accounts more easily in environments where accounts are managed by AWS Organizations
+An alternative way to enable [cross-account access](./cross-account-creation.md) for the Cado Platform is to leverage AWS Organizations. This allows you to add and remove access to AWS accounts more easily in environments where accounts are managed by AWS Organizations.
 
 ## ListAccounts Permission
 

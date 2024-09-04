@@ -1,10 +1,10 @@
 ---
-title: Log Types
+title: Log & Artifact Types
 hide_title: true
 sidebar_position: 1
 ---
 
-# Log Types
+# Log & Artifact Types
 Cado Response supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
 ## What cloud logs can Cado import from cloud Storage?
@@ -16,6 +16,7 @@ Cado can import most cloud log types from cloud storage, including:
 - Kubernetes logs
 - VPC Flow logs
 - SSM logs
+- S3 Access Logs
 
 ### Azure Log Formats
 - Activity logs
@@ -35,6 +36,8 @@ When acquiring Azure compute, Cado retrieves [activity logs associated with the 
 If logs are stored in a central account, at this point Cado does not have the capability to traverse accounts and pull logs from a different account. Instead, you would need to collect them in cloud storage and import from there.
 
 ## Operating System Log and Artifact Formats
+A non-exhaustive list of the forenic artifacts that Cado can process is provided below:
+- Common AWS, Azure and GCP Logs
 - AppleSystemLog (ASL)
 - Androidusage-history (appusage)
 - BasicSecurityModule (BSM)
@@ -58,7 +61,6 @@ If logs are stored in a central account, at this point Cado does not have the ca
 - OLE Compound File
 - Opera Browser history
 - OpenXML
-- Pcap files
 - Portable Executable (PE) 
 - PLSQL cache file (PL-SQL developer recall files)
 - Popularity Contest log
@@ -104,4 +106,6 @@ Which will result in events such as the following:
 
 ![Custom logs imported into Cado](/img/custom_log.png)
 
-
+## Log Analysis Considerations 
+For exposing or uncovering suspicious behavior within large sets of logs (typically anything over ~1 million events), we encourage leveraging traditional SIEM solutions and/or open-source tools, like Cado's cloudgrep: https://github.com/cado-security/cloudgrep.
+Cado's emphasis is to capture more than just logs from Cloud Service Providers or other log sources. See [here](cado-response/intro) for more details on Cado's capabilities.

@@ -19,7 +19,7 @@ Cross-subscription Azure access is performed using an application registered int
 * Cross-cloud access of AWS from Azure is performed by setting up an IAM role in the target AWS account. The following steps should be performed in each AWS account you would like Cado to collect data from. Note: you will need permission to create IAM roles.
 * Log into target AWS account
 * Follow these AWS instructions to create an [IAM group](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html)
-* Create a new IAM role with a new policy containing the [permissions listed here](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json)
+* Create a new IAM role with a new policy containing the [permissions listed here](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml)
 * Guides for creating new roles and policies can be found [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html) and [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)
 * Add your new IAM user to the [group](https://docs.aws.amazon.com/singlesignon/latest/userguide/adduserstogroups.html)
 * Generate access keys for the [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html). These keys provide access to the account and should be kept secret.
@@ -34,7 +34,7 @@ Cross-cloud access of GCP from Azure is performed by designating a primary GCP p
 * Create a new [GCS bucket](https://cloud.google.com/storage/docs/creating-buckets) for storing evidence collected by Cado. This bucket will be selected during the import process in the Cado Response interface. 
 * Create a new Cado IAM role with the [permissions listed here](https://docs.cadosecurity.com/cado-response/deploy/gcp/gcp-settings#creating-a-cado-role.).
 This role can be [created](https://cloud.google.com/iam/docs/creating-custom-roles#creating) at the organisation level to give access to multiple projects under one service account.
-* Assign the new Cado IAM role to the Cloud Build principal. Go to IAM and Admin -> IAM and locate the principle which looks like xxxxxxxxxxxx@cloudbuild.gserviceaccount.com. Edit this principle to give it permission to the new Cado role. Take note of the principal name as it will be used to set up access to other GCP projects.
+* Assign the new Cado IAM role to the Compute Engine principal - note that as of June 2024 the Compute Engine principal needs to be updated instead of the Cloud Build prinicpal due [to changes in GCP](https://cloud.google.com/build/docs/cloud-build-service-account-updates) Go to IAM and Admin -> IAM and locate the principle which looks like xxxxxxxxxxxx-compute@developer.gserviceaccount.com. Edit this principle to give it permission to the new Cado role. Take note of the principal name as it will be used to set up access to other GCP projects.
 * Follow these Google instructions to create a [new service account](https://cloud.google.com/iam/docs/service-accounts-create)
 * Follow these Google instructions to assign the [new Cado IAM role](https://cloud.google.com/iam/docs/create-service-agents#grant-roles) to the service account
 * If you will be importing from GKE clusters, the service account also needs the permission iam.serviceAccounts.implicitDelegation

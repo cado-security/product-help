@@ -12,7 +12,7 @@ The Cado platform will collect key logs and forensic artifacts from AWS ECS syst
 # How to Import
 
 1) Go to **Import > Cloud**
-![Import ECS 1](/img/import.png)
+![Import ECS 1](/img/import-cloud-focus.png)
 
 2) Then select the target Cluster and Task:
 ![Import ECS 2](/img/ecs_2.png)
@@ -31,7 +31,7 @@ For a typical acquisition, import and processing will take a few minutes to comp
 :::info
 ## ECS Import Requirements
 
-* You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task.
+* You’ll need to enable [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) on your ECS task, there is no way to add this to an already existing task. This is a hard requirement from AWS that cannot be changed from Cado's perspective or the Cado product itself. 
 * Currently ECS acquisitions are only available on Linux based containers.
 
 You will receive an error such as this:
@@ -50,6 +50,9 @@ If either:
 ```
 * Or the Cluster and Task do not have [enableExecuteCommand](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) enabled.
 :::
+
+### Debugging ECS Exec Permissions
+AWS provide a useful tool to help debug ECS Exec issues at [on GitHub](https://github.com/aws-containers/amazon-ecs-exec-checker).
 
 ### Data Flow Diagram
 For a diagram of how our ECS acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258918944529-How-do-ECS-acquisitions-work).

@@ -11,7 +11,7 @@ After creating the service account, enabling Cloud Build and other relevant APIs
 This also allows cross-project importing, meaning images from an instance in `Project-A` can be saved to a bucket in `Project-B`
 :::
 
-In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `01234567890@cloudbuild.gserviceaccount.com` as the default Cloud Build principal for our primary project.
+In this example we'll be using `cadoserviceaccount@my-project.iam.gserviceaccount.com` as the service account we've already set up, and `0123456789-compute0@developer.gserviceaccount.com` as the default Compute Engine principal for our primary project.
 
 :::info
 Cloud Build API needs to be enabled in every GCP project from which you want to collect
@@ -19,7 +19,7 @@ Cloud Build API needs to be enabled in every GCP project from which you want to 
 
 ## Secondary Project Permissions
 
-In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and cloud build `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Custom -> Cado Role** role. More info on the **Cado Role** can be found [here](./gcp-settings.md###The-Cado-Role)
+In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and Compute Engine `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Custom -> Cado Role** role. More info on the **Cado Role** can be found [here](./gcp-settings.md###The-Cado-Role)
 
 
 <img src="/img/gcp-crossproject-granting.png" height="800" width="600"/>

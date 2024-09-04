@@ -171,6 +171,12 @@ To import EC2s across accounts that are encrypted with AWS default keys, you wil
 ### Resolving Issues with KMS Support
 Getting the right KMS policies can prove difficult, particularly for cross-account Default KMS acquisitions and custom configurations.
 
+#### How KMS Encrypted EBS Volumes are Processed
+If a volume is encrypted with a KMS key, the platform will attempt to access a snapshot of the volume if it's role has IAM permissions to do so.
+If not, it will attempt to generate a temporary key to re-encrypt a snapshot of the volume, and then create a new volume from that snapshot for processing.
+The exact details will depend upon your KMS key policy and IAM role permissions, with error handling to advise during processing if the role does not have the necessary permissions.
+For more details, please refer to the [AWS documentation](https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html).
+
 #### Using Cado Host to bypass KMS
 If you are unable to obtain a full disk capture, you can bypass KMS by acquiring a system using Cado Host:
 - If the system has SSM enabled, select "Use Alternate Triage Acquisition" when acquiring the system

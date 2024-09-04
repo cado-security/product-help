@@ -6,18 +6,18 @@ sidebar_position: 3
 
 # Memory Analysis
 
-You can perform a memory acquisition of a Windows or Linux system using Cado Host by clicking `Import > Cado Host` and running the pre-generated script on the host device. Process memory collection is not currently supported on OSX.
+You can perform a memory acquisition of a Windows or Linux system using Cado Host simply by clicking `Import > Cado Host` within the platform and running the pre-generated script on the host device. For more details on these steps, click [here](https://docs.cadosecurity.com/cado-host/deploy). Process memory collection is not currently supported on OSX. 
 
-Enable the options to collect memory, and optionally collect larger process memory files:
+In your console and within Cado Host, ensure to enable the options to collect memory, and optionally collect larger process memory files:
 ![Enable Memory](/img/enable-memory.png)
 Windows systems can have particularly large process memory files which can result in a slow collection process, so we recommend only enabling the **Enable Extended Memory Collection** option on Windows systems where required.
 
-We collect memory from individual processes as .mem files, viewable under the "process_dumps" folder.
-We find this allows for more reliable analysis than our previous version which collected a single capture of memory, and utilises our open source tool [varc](https://github.com/cado-security/varc)
+Cado collects memory from individual processes as .mem files, viewable under the "process_dumps" folder.
+This allows for more reliable analysis than previous versions of Cado which collected a single capture of memory, and (also) utilises the Cado-branded open source tool [varc](https://github.com/cado-security/varc)
 
 ## Processing Previously Acquired Memory Images
 The Cado Platform can also perform limited processing of full memory images (or dumps), acquiring using third party tools.
-The memory image is carved to extract logs and other artifacts, using our open source tool [ripraw](https://github.com/cado-security/rip_raw). This approach does not perform a structured analysis of the memory image, but can be useful for extracting logs and other artifacts from a memory image.
+The memory image is carved to extract logs and other artifacts, using the Cado-branded open source tool [ripraw](https://github.com/cado-security/rip_raw). This approach does not perform a structured analysis of the memory image, but can be useful for extracting logs and other artifacts from a memory image.
 
 To import externally acquired memory, ensure the memory image is named with a `.mem` file extension so it is recognized as a memory file.
 Upload file to a cloud storage location (AWS S3, Azure Storage, or Google Cloud Storage) that Cado has access to.
@@ -41,7 +41,7 @@ In our [testing](https://github.com/cado-security/varc):
 - ECS on Fargate required us to enable CAP_SYS_PTRACE in our task definition.
 
 ## Processed Memory
-Once processed, you will be able to browse the file system including the contents of files (if they were in memory at the time) and view information from running processes and network connections.  
+Once the memory is processed, you will be able to browse the file system in the Cado UI, including the contents of files (if they were in memory at the time) and view information from running processes and network connections.  
 
 Collected memory files are under the "process_dumps" folder:
 ![Import Evidence](/img/collected-memory.png)

@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 ## Removing and Tightening IAM Permissions
-You can further tune the IAM permissions that Cado deploys if you do not require all functionality. We describe the functionality used by the permissions in the “Sid” section of the [cross-account role](https://cado-public.s3.amazonaws.com/policy-in-cross-account.json). Please contact support@cadosecurity.com for advice on what permissions are required for.
+You can further tune the IAM permissions that Cado deploys if you do not require all functionality. We describe the functionality used by the permissions in the “Sid” section of the [cross-account role](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml). Please contact support@cadosecurity.com for advice on what permissions are required for.
 
 
 ## How to tighten IAM Permissions for SSM
@@ -114,7 +114,7 @@ Alternatively the permissions in Custom Keys section are still valid, however bo
 - RequiredToCheckPolicy: Required for health checks to confirm the safe operation of the core platform
 - RequiredForCrossAccountAccess: Required when performing cross-account operations
 - RequiredToAccessCadoS3Bucket: Required to access the Cado S3 bucket, to store and access forensic data
-- RequiredForAcquireToS3: Required for forensic preservation to S3 buckets and chain of custody
+- RequiredForAcquireToS3: Required for forensic preservation to S3 buckets and chain of custody. Can be scoped to the Cado bucket "CadoS3BucketAlt" if required.
 - RequiredForS3Readiness: Required to check safe operation of the platform
 - RequiredForMemoryForensics: Required to perform triage acquisitions via SSM that include memory acquisition
 - RequiredForKmsEncryptedEc2Import: Required when acquiring KMS encrypted EBS volumes for EC2 systems
