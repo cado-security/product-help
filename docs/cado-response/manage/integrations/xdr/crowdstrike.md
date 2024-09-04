@@ -19,6 +19,7 @@ For more information, see the [Crowdstrike and Cado Security Joint Solution Brie
 - **Hosts**: Read
 - **Real Time Response**: Read
 - **Real Time Response**: Write
+- **Alerts**: Read
 2. Copy and note down the Client ID,  Client Secret and Endpoint URL to enter into the Cado Platform
 3. Enable Real Time Response in either the Default policies for each operating system, or your own that you can attach to a host group.
 4. Create Detections and Preventions Machine Learning exclusions with the following pattern to allow the Windows integration to function:
