@@ -26,6 +26,8 @@ We require the following API permissions for the Cado integration to work:
 | Machine.LiveResponse | Allows Cado to run Cado Host against a machine. | Application | Yes |
 | Machine.Read.All | Allows Cado to inspect a single machine on Defender, allowing us to grab the machine’s UUID to run LiveResponse against it. | Application | Yes |
 | Machine.ReadWrite.All | Allows Cado to retrieve a list of all machines on Defender, allowing us to show a list in the UI | Application | Yes |
+| Alert.Read.All | Allows Cado to monitor a list of Alerts from Defender as part of the Detection integration | Application | Yes |
+| Alert.ReadWrite.All | Allows Cado to monitor a list of Alerts from Defender as part of the Detection integration | Application | Yes |
 
 ## Enabling the integration in the Cado Platform
 
