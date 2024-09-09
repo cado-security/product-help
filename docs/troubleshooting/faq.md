@@ -47,6 +47,12 @@ The following methods for getting Logs to Cado are available, in order of ease:
 2. If that fails, click on `Download Logs` and upload the zip file to the Customer Portal
 3. If 1 and 2 fail, or you cannot log into the platform then open an SSH session to the Cado Platform (you'll need the key you used during deployment) and execute the command `sudo tar -cvzf /var/log/cado_logs.tar.gz /var/log` then upload the zip file to the Customer Portal.
 
+### Are Cado application and operating systems available in CloudWatch?
+Provided the platform has IAM and network permissions to send logs to Cloudwatch, application and operating system logs are sent to:
+```
+                        "log_group_name": "/var/logs/cado",
+                        "log_stream_name": "cado-logs-all"
+```
 ### How do I contact Support?
 You can contact Cado Support via email at support@cadosecurity.com or reach out to your account manager for more details.
 
