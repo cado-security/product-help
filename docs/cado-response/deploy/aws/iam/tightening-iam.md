@@ -10,7 +10,7 @@ You can further tune the IAM permissions that Cado deploys if you do not require
 
 ## How to tighten IAM Permissions for SSM
 
-The Cado platform uses AWS SSM to perform live captures of AWS EC2 systems - this provides for a faster mechanism than a full disk acquisition and can also collect process memory.
+The Cado platform uses AWS SSM to perform live captures of AWS EC2 systems - this provides for a faster mechanism than a full disk acquisition and can also collect process memory. The Cado platform also uses AWS SSM for [running commands](../../../discovery-import/import/aws/aws-ec2.md#run-command).
 
 However, the default IAM permissions will be too wide for many environments, as this provides the Cado platform with permission to execute any command on SSM enabled systems:
 
@@ -20,7 +20,9 @@ However, the default IAM permissions will be too wide for many environments, as 
     "Effect": "Allow",
     "Action": [
         "ssm:SendCommand",
-        "ssm:DescribeInstanceInformation"
+        "ssm:DescribeInstanceInformation",
+        "ssm:StartSession",
+        "ssm:TerminateSession"
     ],
     "Resource": [
         "arn:aws:ec2:*:*:instance/*",
@@ -39,7 +41,9 @@ You may wish to scope these permissions down, so SSM commands can only be run ag
         "Effect": "Allow",
         "Action": [
             "ssm:SendCommand",
-            "ssm:DescribeInstanceInformation"
+            "ssm:DescribeInstanceInformation",
+            "ssm:StartSession",
+            "ssm:TerminateSession"
         ],
         "Resource": [
             "arn:aws:ec2:*:*:instance/*"
@@ -57,7 +61,9 @@ You may wish to scope these permissions down, so SSM commands can only be run ag
         "Effect": "Allow",
         "Action": [
             "ssm:SendCommand",
-            "ssm:DescribeInstanceInformation"
+            "ssm:DescribeInstanceInformation",
+            "ssm:StartSession",
+            "ssm:TerminateSession"
         ],
         "Resource": [
             "arn:aws:ssm:*::document/AWS-RunShellScript",
