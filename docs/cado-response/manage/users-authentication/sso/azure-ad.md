@@ -49,7 +49,16 @@ You can now enable the beta of Azure AD OAuth Integration in the Cado platform b
 	![Azure Authentication](/img/azure-authentication.png)
 	- Click **Add a Platform**
 	- Select **Web** and input your redirect url. This should be the url you use to access Cado in the web browser, including the `/login` path. Example: `https://my.cado.instance/login`
-9. Configure SSO in the Cado platform
+9. Add the API Permissions
+    - Select the **API Permissions Blade**
+	![Azure API Permissions page](/img/azure-api-permissions-1.png)
+	- Click **Add a permission**
+	- Select **Microsoft Graph**
+	- Select **Delegated Permissions**
+	- Tick **email** and **openid** under **OpenId permissions**
+	![Azure API Permissions](/img/azure-api-permissions-2.png)
+	- Click **Add permissions**
+10. Configure SSO in the Cado platform
 	- Open your Cado instance and log in as an admin user
 	- Go to **Settings > SSO > Microsoft OAuth**
 	- Enter the Microsoft OAuth details you noted earlier
