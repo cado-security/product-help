@@ -8,7 +8,7 @@ sidebar_position: 1
 
 The Cado API enables third party tools and automation scripts to integrate with the Cado platform.
 
-You can use the API and the pre-made out-of-the-box integrations to trigger operations in the platform (e.g. acquire instances from your cloud environments), retrieve data that our system captured (e.g. suspicious events), manage and control investigation projects, and more.
+You can use the API and the pre-made out-of-the-box integrations to trigger operations in the platform (e.g. acquire instances from your cloud environments), retrieve data that our system captured (e.g. suspicious events), manage and control investigations, and more.
 
 This section provides a quick onboarding flow that is required for every integration followed in this section.
 

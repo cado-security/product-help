@@ -11,10 +11,10 @@ There are two roles in the Cado platform.
 
 | Name | Description |
 | ---- | ----------- |
-| Administrator | Can edit users and access all projects and configured cloud resources. |
-| Normal User | Users with restricted access to a subset of projects and cloud resources. |
+| Administrator | Can edit users and access all investigations and configured cloud resources. |
+| Normal User | Users with restricted access to a subset of investigations and cloud resources. |
 
-In order to get access to projects and data a Normal User needs to be added to a project, or a group that has access to that project. In order to acquire cloud data for a project, the user needs to be given access to a CSP Role that has access to that cloud data or resource, or added to a group that has access to that CSP Role
+In order to get access to investigations and data a Normal User needs to be added to an investigation, or a group that has access to that investigation. In order to acquire cloud data for an investigation, the user needs to be given access to a CSP Role that has access to that cloud data or resource, or added to a group that has access to that CSP Role
 
 
 ![Users-Groups-Roles](/img/users-groups-roles.png)
@@ -26,7 +26,7 @@ Cado also supports authentication via [Azure AD](sso/azure-ad.md), Okta ([OAuth]
 Roles in Cado correspond to CSP roles in AWS, Azure or GCP that have appropriate levels of access to cloud resources. Only Administrators can manage roles. This list is autopopulated when administrators add CSP credentials to the platform following the instructions for [AWS](/cado-response/deploy/aws/iam/cross-account-creation#adding-the-role-to-cado), [Azure](/cado-response/deploy/azure/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado-response/deploy/gcp/gcp-settings#entering-settings) respectively.
 
 ### Managing Groups
-Groups in Cado allow you to define groups of users that you can use to assign or revoke access to projects and/or cloud resources. Only Administrators can manage groups. 
+Groups in Cado allow you to define groups of users that you can use to assign or revoke access to investigations and/or cloud resources. Only Administrators can manage groups. 
 
 To create a new group:
 - Click **Groups**
@@ -57,9 +57,9 @@ To elevate privileges and grant Administrator access to a normal user, do the fo
 It is strongly recommended to follow the principles of least privilege when creating new users and granting Administrator access.
 :::
 
-### Granting Access to a Project
-To grant existing users or groups to a Project, you can add them when you create the Project, or you can follow the below instructions to add users to an existing Project:
-- Click **Projects** and select the project to which you would like to add users
+### Granting Access to an Investigation
+To grant existing users or groups to an Investigation, you can add them when you create the Investigation, or you can follow the below instructions to add users to an existing Investigation:
+- Click **Investigations** and select the investigation to which you would like to add users
 - Click the **Access** button 
 - Click the **Add Users** button
 - Select the user and/or group to add and Click **Add**
