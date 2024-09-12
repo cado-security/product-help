@@ -13,7 +13,7 @@ Cross-subscription Azure access is performed using an application registered int
 * Follow the Microsoft instructions to start registering a [new application](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
 * Follow the Cado documentation to [configure the application](https://docs.cadosecurity.com/cado-response/deploy/azure/azure-cross-tenancy-subscriptions#setting-up-an-app-registration-for-cross-tenancysubcription-acquisitions)
 * Once the application is set up, add the details to the Cado Response platform by following the [documentation](https://docs.cadosecurity.com/cado-response/deploy/azure/azure-cross-tenancy-subscriptions#registering-credentials-within-cado)
-* In Cado Response, confirm that you can see resources for import by going into a project and selecting Import -> Cloud -> Choose your new Azure role -> confirm you can see resources available for import
+* In Cado Response, confirm that you can see resources for import by going into an investigation and selecting Import -> Cloud -> Choose your new Azure role -> confirm you can see resources available for import
 
 ## Setting up AWS accounts
 * Cross-cloud access of AWS from Azure is performed by setting up an IAM role in the target AWS account. The following steps should be performed in each AWS account you would like Cado to collect data from. Note: you will need permission to create IAM roles.
@@ -24,4 +24,4 @@ Cross-subscription Azure access is performed using an application registered int
 * Add your new IAM user to the [group](https://docs.aws.amazon.com/singlesignon/latest/userguide/adduserstogroups.html)
 * Generate access keys for the [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html). These keys provide access to the account and should be kept secret.
 * In Cado Response, add the keys to the platform by going to Settings -> Cloud -> Create Role -> Choose AWS tab -> Add a name for the role and enter the access token and secret
-* In Cado Response, confirm that you can see resources for import by going into a project and selecting Import -> Cloud -> Choose your new AWS role -> confirm you can see resources.
+* In Cado Response, confirm that you can see resources for import by going into an investigation and selecting Import -> Cloud -> Choose your new AWS role -> confirm you can see resources.

@@ -8,7 +8,7 @@ sidebar_position: 10
 
 Cado AI Investigator currently performs two key tasks:
 
-Investigation Summarization: It provides a concise and informative overview of your investigation, presented directly on the project overview tab. This summary highlights key findings:
+Investigation Summarization: It provides a concise and informative overview of your investigation, presented directly on the investigation overview tab. This summary highlights key findings:
 ![File Details 1](/img/ai_image1.png)
 
 

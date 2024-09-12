@@ -35,7 +35,7 @@ We require the following API permissions for the Cado integration to work:
 2. Navigate to *Settings > Integrations > XDR* and click “Add Connection”.
 3. Click “Add Connection” and select Defender from the dropdown menu.
 4. Enter the Tenant, Client ID and Client Secret from the App Registration you created. The integration should then appear on the settings page.
-4. In any project, click *“Import” -> XDR -> Defender*
+4. In any investigation, click *“Import” -> XDR -> Defender*
 5. If you have configured it correctly, then it should show a paginated list of all of the hosts with the Defender agent installed.
 
 ## Limitations

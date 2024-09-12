@@ -7,7 +7,7 @@ sidebar_position: 1
 # Importing Data
 There are a number of options for importing data into the Cado platform. Once you select the data you would like to import, the Cado platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](/cado-response/manage/workers.md#processing)** for more details.
 
-Cado supports a wide range of **[file types](data-types/filetypes.md)** across a number of  **[cloud services](data-types/import-types.md)** which can be imported.  To begin importing data, you simply select a Project and click the **Import** button 
+Cado supports a wide range of **[file types](data-types/filetypes.md)** across a number of  **[cloud services](data-types/import-types.md)** which can be imported.  To begin importing data, you simply select an Investigation and click the **Import** button 
 
 ![Import Button](/img/import-button.png)
 
@@ -25,7 +25,7 @@ Currently Cado supports importing from SentinelOne and Crowdstrike.
 
 For more infomation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md) and the [CrowdStrike Integration Setup page](/cado-response/manage/integrations/xdr/crowdstrike.md)
 
-Once the integration is set up, from within a project click **Import from XDR**
+Once the integration is set up, from within an investigation click **Import from XDR**
 
 Then choose the XDR Platform you have set up, and click *Continue*
 

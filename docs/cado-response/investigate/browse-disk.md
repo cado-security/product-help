@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Browse Disk
 
-When you select a piece of disk evidence in the Project Overview tab, a Browse Disk Tab will appear.
+When you select a piece of disk evidence in the Investigation Overview tab, a Browse Disk Tab will appear.
 
 Browse Disk shows a hierarchical view of the file system. Cado marks directory structures where Cado has found Alarms or Suspicions with red or yellow dots respectively. Clicking on a folder allows you to drill down into that structure. 
 
