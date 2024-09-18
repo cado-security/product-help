@@ -13,6 +13,7 @@ Follow the [Tanium documentation](https://help.tanium.com/bundle/ug_threat_respo
 
 ## Processing using Cado
 To process the Tanium Live Response package, import to collected Live Response package into the Cado platform from S3 or Azure Storage.
+Please see our [blog](https://www.cadosecurity.com/blog/investigating-tanium-live-response-collections-in-the-cado-platform) for more information on how the data is presented in the Cado platform.
 
 ## Overview
 A high-level overview of the process is as follows:
