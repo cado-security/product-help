@@ -9,7 +9,7 @@ sidebar_position: 4
 The Cado platform can process Tanium Live Response collections, including the trace database.
 
 ## Collecting a Live Response Package using Tanium
-Follow the Tanium documentation](https://help.tanium.com/bundle/ug_threat_response_cloud/page/threat_response/collect_data.html) to collect a Live Response package from a system to either Azure Storage or AWS S3 Storage.
+Follow the [Tanium documentation](https://help.tanium.com/bundle/ug_threat_response_cloud/page/threat_response/collect_data.html) to collect a Live Response package from a system to either Azure Storage or AWS S3 Storage.
 
 ## Processing using Cado
 To process the Tanium Live Response package, import to collected Live Response package into the Cado platform from S3 or Azure Storage.
