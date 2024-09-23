@@ -9,4 +9,6 @@ The Cado platform supports acquisition of GCP Compute instances. Select the GCP 
 
 Select the GCP project and Compute Instance you need. Review the details and click on 'Start Import'.
 
+:::info In order for this feature to work we require the 'default' VPC in the GCP project you are acquiring from. GCP Cloud Build uses workers to help export the acquired disk which uses the 'default' VPC. :::
+
 ![GCP Compute Import](/img/gcp-compute.png)

@@ -18,7 +18,7 @@ In order to deploy Cado Host via the Script Builder in the Cado Response platfor
 Ensure that the devices on which the scripts will be run have HTTPS access to the AWS S3 endpoint.  For example: `https://<BUCKET_NAME>.s3.amazonaws.com/`
 :::
 
-1. Find the Cado Host deployment options on the platform under `Project > Import > Cado Host`.
+1. Find the Cado Host deployment options on the platform under `Investigation > Import > Cado Host`.
 
   ![Import Evidence](/img/import.png)
 
@@ -78,6 +78,15 @@ To create secure credentials to upload the Cado Host collected data to the cloud
 
 ## Deploying Cado Host to Multiple Devices
 You can execute Cado Host individually on a device or you can deploy it to a number of machines that may be compromised, for example through **[Group Policy](https://support.microsoft.com/en-gb/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server)** or other systems management software.
+
+## Using the API to generate Cado Host collection scripts
+If you want to deploy Cado Host via an integration you build yourself, you can use the Cado Response API to generate the Cado Host collection script. This may be required as by default the pre-signed URLs to upload data expire 12 hours after being generated.
+This script can then be run on the target device to collect the triage artifacts and upload them to cloud storage.
+
+An [example script](https://github.com/cado-security/cado-api-examples/blob/main/examples/cado_host.py) to generate a Cado Host collection script is available in the example API GitHub repository.
+
+An overview of the workflow is below:
+![API Workflow](/img/cado-host-api.png)
 
 ## Deployment from XDR Integrations
 You can deploy Cado Host to machines that may be compromised, for example through XDR systems such as Crowdstrike and SentinelOne.

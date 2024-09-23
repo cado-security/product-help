@@ -92,7 +92,7 @@ If you have a log format that you would like to see supported, please reach out 
 
 During an investigation, you may want to add our own non-computer generated events to the timeline.
 For example, it is common to keep a Spreadsheet of key events in a large incident.
-The simplest way to add these events into a Project timeline is to import an ISO Format Log event of the format:
+The simplest way to add these events into an Investigation timeline is to import an ISO Format Log event of the format:
 * YYYY-MM-DD HH:MM:SS Log Event Message
 
 For example you can save the following text into a file named "custom_events.log" then import into the platform:

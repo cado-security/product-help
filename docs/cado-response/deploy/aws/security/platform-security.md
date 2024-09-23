@@ -19,5 +19,5 @@ Please refer to the following documentation for specific advice:
 * [Removing and Tightening IAM Permissions](/cado-response/deploy/aws/iam/tightening-iam)
 * [Logging](/cado-response/deploy/aws/security/logging)
 * [Data Management](/cado-response/manage/data)
-* [Restricting Users to Specific AWS Roles and Projects](/cado-response/manage/users-authentication/users#managing-groups)
+* [Restricting Users to Specific AWS Roles and Investigations](/cado-response/manage/users-authentication/users#managing-groups)
 * [Cado Platform Security](/cado-response/manage/platform-security)

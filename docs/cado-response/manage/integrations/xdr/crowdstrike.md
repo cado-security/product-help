@@ -42,5 +42,5 @@ Enter the URL, Client ID and Client Secret from the previous section. The integr
 
 ![crowdstrike dropdown](/img/crowdstrike-xdr-dropdown.png)
 
-3. In any project, click *“Import” -> XDR -> CrowdStrike*
+3. In any investigation, click *“Import” -> XDR -> CrowdStrike*
 4. If you have configured it correctly, then it should show a paginated list of all the hosts with the CrowdStrike Falcon sensor installed and are part of the correct Host Group.

@@ -8,9 +8,9 @@ sidebar_position: 2
 Cado provides a short Capture the Flag data set to help you get familiar with the Cado platform. A walkthrough of the data is available [here](https://www.youtube.com/watch?v=fM1G10W-PQs)
 
 #### How to get started
-1. Create a new project
+1. Create a new investigation (formerly project)
 2. Navigate to the Help page and click “Import CTF data”. Import will take a few minutes.
-3. Open the project and start investigating
+3. Open the investigation and start investigating
 
 ![Import CTF](/img/ctf.png)
 

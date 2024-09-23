@@ -79,10 +79,10 @@ To make the process easier, you can use gzip to compress it:
 ![Oracle](/img/oracle/image19.png)
 
 
-As the dd.gz file is less than 5GB in size, you can use our cado-host binary to upload the file directly to an S3 bucket and it will be automatically imported into a project for processing and analysis.
+As the dd.gz file is less than 5GB in size, you can use our cado-host binary to upload the file directly to an S3 bucket and it will be automatically imported into an investigation for processing and analysis.
 
 
-The first step is to create a project in the Cado platform, from there we will use the Cado Host import capability:
+The first step is to create an investigation in the Cado platform, from there we will use the Cado Host import capability:
 
 ![Oracle](/img/oracle/image10.png)
 

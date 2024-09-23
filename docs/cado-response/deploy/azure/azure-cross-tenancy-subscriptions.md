@@ -22,11 +22,16 @@ Once you have created your app registration, you will need to give it the requir
 1. Go to the Azure management group you want to acquire from, this could be within the same, or a different Azure tenancy.
 2. Select your management group and go to the Access control (IAM) permissions for it. ![Adding IAM permissions](/img/azure-adding-subscription-permissions.png)
 3. Select `Add role assignment` and add the following role-assignments for your app registration: ![Adding IAM permissions to app registration](/img/azure-adding-permissions-to-app-registration.png)
-    - `Storage Account Contributor`.
-    - `Disk Snapshot Contributor`.
-    - `Virtual Machine Contributor`.
-    - `Monitoring Contributor`.
-    - `Azure Kubernetes Service Cluster Admin Role`.
+    - `Storage Account Contributor`
+    - Required for forensic preservation, chain of custody, storing and accessing forensic data and acquisition methods using Cado Host.
+    - `Disk Snapshot Contributor`
+    - Required to acquire Compute instances.
+    - `Virtual Machine Contributor`
+    - Required for core platform functionality including worker management and upgrades as well acquiring Compute instances.
+    - `Monitoring Contributor`
+    - Required for cross-tenant visibility.
+    - `Azure Kubernetes Service Cluster Admin Role`
+    - Required for Kubernetes acquisition and listing cluster credentials.
 
 :::tip
 Search for your app registration name under the `Select members` prompt.

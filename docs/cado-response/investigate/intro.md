@@ -4,11 +4,11 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# Investigating a Project
+# Investigating
 
-Evidence is processed into Projects and investigation starts by analyzing the project evidence.  The project view provides an overview of the key information for all evidence items in a given project.
+Evidence is processed into Investigations and investigation starts by analyzing the investigation evidence.  The investigation view provides an overview of the key information for all evidence items in a given investigation.
 
-The tabs available on the Project Overview page are:
+The tabs available on the Investigations Overview page are:
 
 | Tab Name | Description |
 | -------- | ----------- |
@@ -18,7 +18,7 @@ The tabs available on the Project Overview page are:
 | [Network](network.md) | Network connections. |
 
 ### System View
-By clicking on an individual Evidence item, you bring up the System View.  The System View provides the same details as the Project View, but limited to a single evidence item.
+By clicking on an individual Evidence item, you bring up the System View.  The System View provides the same details as the Investigation View, but limited to a single evidence item.
 
 ### Browsing Files
 You can browse the filesystem of certain evidence items. When browsing a **Disk** folders with a red dot  indicate the presence of a known malicious file.  You can browse the folder structure of a disk by clicking on individual folders.
@@ -33,6 +33,6 @@ For more information on searching, see [Timeline Search](/cado-response/investig
 
 
 ### Indicators / Detections
-The Indicators or Detections page provides a summary of indicators of compromise detected within a project, and which systems they matched.
+The Indicators or Detections page provides a summary of indicators of compromise detected within a investigation, and which systems they matched.
 
 Click **Investigate** then **Indicators**.
