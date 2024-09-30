@@ -78,15 +78,11 @@ If you have the option to change the instance type of the target system to a lar
 
 # Alternative Collection using the AWS EBS Direct API
 
-AWS have released a tool to snapshot Volumes using the EBS Direct API:
+We have released a new method to acquire EC2/EBS Volumes using the EBS Direct API.
+This can be enabled set Settings > Experiments > EBS Direct Acquisitions
+
+This works in a similiar method to coldsnap:
 * https://github.com/awslabs/coldsnap
-With a command such as:
+Which is executied using a command such as:
 
 ```coldsnap  --region us-east-1 download snap-0001 disk.dd```
-
-This can be used to collect a snapshot of a disk which can be manually uploaded to S3.
-
-This can be used for a faster way to 2. Create a Volume.
-
-
-We are testing supporting the EBS Direct Volume natively in Cado and the speed of operation.
