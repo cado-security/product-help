@@ -12,6 +12,8 @@ This feature is currently in beta. To enable, go to *Settings - Experiments* and
 
 An alternative way to enable [cross-account access](./cross-account-creation.md) for the Cado Platform is to leverage AWS Organizations. This allows you to add and remove access to AWS accounts more easily in environments where accounts are managed by AWS Organizations.
 
+You can view the cross-acount role [here](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml).
+
 ## ListAccounts Permission
 
 The [ListAccounts](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListAccounts.html) operation lists all the accounts in the organisation. This operation can only be called from the organization's management account, therefore select the role that already has the ListAccounts permission on the management account from the 'List Accounts Role' dropdown. This can be accessed from *Settings> Cloud Accounts*.
