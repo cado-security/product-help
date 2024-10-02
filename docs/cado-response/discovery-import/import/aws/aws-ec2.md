@@ -54,7 +54,7 @@ In Step 1, provide the script with a Name and Description.
 
 ![Saved Script - Step 1](/img/aws-ec2-runcommand3.png)
 
-In Step 2, provide the location of the file (valid S3 URL) that is to be downloaded onto the target system. In this example, it is the Volexity Surge binary, which is required to run the script. Cado will transfer this file onto the target system and this file can be referenced in the script using the variable `$INPUT`. *Note, this step is not available for Windows scripts.*
+In Step 2, provide the location of the file (valid S3 URI) that is to be downloaded onto the target system. In this example, it is the Volexity Surge binary, which is required to run the script. Cado will transfer this file onto the target system and this file can be referenced in the script using the variable `$INPUT`. *Note, this step is not available for Windows scripts.*
 
 ![Saved Script - Step 2](/img/aws-ec2-runcommand4.png)
 
@@ -63,6 +63,19 @@ In Step 3, provide the location of a file which exists on the target system that
 ![Saved Script - Step 3](/img/aws-ec2-runcommand5.png)
 
 In Step 4, paste the script that is to be executed on the target system. The input and output files from Steps 2 and 3 can be referenced using `${INPUT}` and `${OUTPUT}` respectively. Given input and output file support is only available for Linux scripts, reference of these variables is not required for Windows scripts.
+
+The script included in the below screenshot is as follows:
+
+```
+mkdir -p /tmp/cado-volexity
+cp ${INPUT} /tmp/cado-volexity/surge-collect
+chmod 755 /tmp/cado-volexity/surge-collect
+mkdir -p /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect seamlesstransaction /tmp/cado-volexity/out
+tar -cvzf /tmp/cado-volexity/out.tar.gz /tmp/cado-volexity/out
+cp "/tmp/cado-volexity/out.tar.gz" ${OUTPUT}
+rm -rf /tmp/cado-volexity
+```
 
 ![Saved Script - Step 4](/img/aws-ec2-runcommand6.png)
 
