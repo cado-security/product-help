@@ -49,3 +49,22 @@ If you have opted for the High Availability deployment in AWS, back-ups need to 
 * https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html
 * https://docs.aws.amazon.com/efs/latest/ug/awsbackup.html
 * https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups.html
+
+You can also enable automated back-ups in the CloudFormation or Terraform deployment template, for example with:
+- ElastiCache:
+```yaml
+SnapshotRetentionLimit: 7
+SnapshotWindow: "03:00-04:00"
+```
+- RDS:
+```yaml
+BackupRetentionPeriod: 7
+PreferredBackupWindow: "03:00-04:00"
+```
+- OpenSearch:
+```yaml
+SnapshotOptions:
+    AutomatedSnapshotStartHour: 3
+```
+
+Snapshots are not enabled by default for cost reasons.
