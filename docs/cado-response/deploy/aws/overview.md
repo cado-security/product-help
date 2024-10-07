@@ -136,7 +136,7 @@ After deployment, you can import Test Data from the `Help` menu to confirm that 
 
 If you have not already, please contact the Cado Sales team at sales@cadosecurity.com for a copy of the AWS Terraform code and the AMI for the region which you will deploy into.
 
-1. Clone the repo from https://github.com/cado-security/Deployment-Templates/tree/main/aws_v2.
+1. Clone the repo from [https://github.com/cado-security/Deployment-Templates/tree/main](GituHub).
 2. Navigate to the root **aws_v2** folder.
 3. Adjust the provided `awsVars.tfvars` file, with your deployment configuration.
 4. Run `terraform init`
