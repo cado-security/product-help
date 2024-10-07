@@ -22,7 +22,7 @@ Cloud Build API needs to be enabled in every GCP project from which you want to 
 In the secondary project, navigate to the **IAM and Admin > IAM** section and select **Grant Access**. Add both the created service account and Compute Engine `gserviceaccount.com` emails in the **Add Principal** section and assign them both the **Custom -> Cado Role** role. More info on the **Cado Role** can be found [here](./gcp-settings.md###The-Cado-Role)
 
 
-<img src="/img/gcp-crossproject-granting.png" height="800" width="600"/>
+<img src="/img/gcp-crossproject-granting.png" height="800" width="600" alt="GCP Cross Project" />
 
 Once added they should both appear as principals in the **IAM** section of that project.
 

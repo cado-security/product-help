@@ -1,5 +1,5 @@
 ---
-title: Platform Encryption
+title: Platform Encryption in Azure
 hide_title: true
 sidebar_position: 3
 ---

@@ -1,5 +1,5 @@
 ---
-title: Summary
+title: Cado Host Summary
 hide_title: true
 sidebar_position: 1
 ---

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: community-intro
-title: Summary
+title: Community Edition Summary
 ---
 
 # Cado Community Edition
