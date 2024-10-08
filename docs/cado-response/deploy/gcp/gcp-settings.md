@@ -1,10 +1,10 @@
 ---
-title: GCP Settings
+title: Set-up GCP for collection of data
 hide_title: true
 sidebar_position: 2
 ---
 
-# Setting up Import from GCP
+# How to set up GCP for collection of data by Cado
 
 You can acquire compute and storage resources from GCP with the Cado platform by 
 
