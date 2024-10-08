@@ -1,10 +1,10 @@
 ---
-title: Automated Setup
+title: Automated Setup of GCP for data collection
 hide_title: true
 sidebar_position: 3
 ---
 
-# GCP Automated Setup
+# How to automatically set up GCP for data collection
 
 To streamline the process of configuring your GCP environment ready for Cado, this page details how to use our GCP Setup Scripts.
 :::note

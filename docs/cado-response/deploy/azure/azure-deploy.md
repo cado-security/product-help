@@ -62,7 +62,7 @@ Once you receive them, continue on to the steps below.
     :::
 
 
-5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales:
+5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales or from the [public release URL](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json):
     ```console
     az storage blob copy start --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI"
     ```

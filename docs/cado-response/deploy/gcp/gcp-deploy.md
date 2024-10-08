@@ -1,17 +1,10 @@
 ---
-title: GCP Deployment
+title: GCP Terraform deployment
 hide_title: true
 sidebar_position: 1
 ---
-## GCP Deployment Overview
-You can deploy the Cado platform within your GCP cloud environment via a Terraform Script. When you deploy the platform, it creates its own isolated network in which you can control who has access. From start to finish, you can be up and running in under 25 minutes.
+## How to deploy Cado in GCP with Terraform
 
-![GCP Architecture](/img/gcp-architecture.png)
-This diagram is a simplified architecture, with options for alternate network access.
-For a diagram of how cross-cloud imports from GCP into AWS work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259790277649-How-do-Cross-Cloud-imports-from-GCP-into-AWS-work).
-
-
-## GCP Terraform Script
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** to download the latest Terraform code.
 
@@ -48,7 +41,7 @@ The service account itself will need to have the following roles:
     | `credentials_file` | Path to your GCP service account credentials json | `../credentials.json` |
     | `project_id` | ID of the project Cado will be deployed into | `cado-12839`  |
     | `region` | The region which Cado will be deployed to | `us-east1` |
-    | `image` | The link of the image provided by Cado | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-xxx` |
+    | `image` | The link of the image provided by Sales or the [public release URL](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-xxx` |
     | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
     | `vm_size` | Size of main instance | `n2d-standard-8` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
@@ -62,3 +55,4 @@ The service account itself will need to have the following roles:
 12. Login with:
     - Username: admin
     - Password: \<instance_id\> (found in the Compute Engine console for your instance e.g. 8784481508256766876)
+

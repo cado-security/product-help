@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# Data Encryption and Security
+# What encryption does the Cado platform use in GCP?
 
 ## Google Cloud Platform
 The Cloud Storage Bucket is configured to encrypt data at rest using [GCP KMS](https://cloud.google.com/security/products/security-key-management) and if using Cado Host to upload triage captures.
