@@ -15,14 +15,6 @@ Windows systems can have particularly large process memory files which can resul
 Cado collects memory from individual processes as .mem files, viewable under the "process_dumps" folder.
 This allows for more reliable analysis than previous versions of Cado which collected a single capture of memory, and (also) utilises the Cado-branded open source tool [varc](https://github.com/cado-security/varc)
 
-## Processing Previously Acquired Memory Images
-The Cado Platform can also perform limited processing of full memory images (or dumps), acquiring using third party tools.
-The memory image is carved to extract logs and other artifacts, using the Cado-branded open source tool [ripraw](https://github.com/cado-security/rip_raw). This approach does not perform a structured analysis of the memory image, but can be useful for extracting logs and other artifacts from a memory image.
-
-To import externally acquired memory, ensure the memory image is named with a `.mem` file extension so it is recognized as a memory file.
-Upload file to a cloud storage location (AWS S3, Azure Storage, or Google Cloud Storage) that Cado has access to.
-Then click `Import > (Cloud) > (Storage)` within Cado, navigate to the location where the .mem file resides, and import it.    
-
 ## Acquiring Memory from AWS EC2
 You can acquire memory of Linux systems in EC2 by using the "Alternate Acquisition" option under Import > EC2:
 
@@ -51,6 +43,3 @@ And running process information is recorded in processes.json:
 ![Process Info](/img/proccess-info.png)
 
 Information on network connections is recorded in network.json, open files in open_files.json, and open files are collected in the collected_files folder.
-
-## File and Log Carving
-Any file that is imported with the extension ".mem" will be processed using our open-source tool [RipRaw](https://github.com/cado-security/rip_raw) for file and log carving.

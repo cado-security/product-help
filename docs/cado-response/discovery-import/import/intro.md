@@ -47,15 +47,3 @@ For more information see the [Cado Host Documentation](/cado-host/intro)
 You can import supported [file types](data-types/filetypes.md) from a URL where you are storing forensic artifacts collected from on-premises systems.
 
 > ![On-Premises URL](/img/on-premises-url.png)
-
-:::info
-During the EC2 Import process, an i3.4xlarge worker instance is deployed to allow for proper disk acquisition. During the Azure Instance Import process, a Standard_D8ds_v4 worker instance is deployed to allow for proper disk acquisition. You can configure the size of the worker instance in the Cado platform under **Settings/Processing**. This worker is spun down once the target disk is acquired.
-:::
-
-:::warning
-By default when processing archive files Cado processes two layers of recursion and twenty folder branches. This provides faster processing but there is a slight risk that some malicious files or activites may be missed.
-
-You can configure this at **Settings/Processing Speed** but increasing these numbers will increase the time taken to process disk images with archives.
-
-![Processing Speed](/img/settings-processing-speed.png)
-:::
