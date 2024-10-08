@@ -40,5 +40,5 @@ We recommend that you keep this information safe. Treat this information just as
 :::
 
 :::tip
-Where possible with containers, we recommend setting up IP whitelisting as an extra layer of security.  Please ensure that read and list access are never granted. This prevents unauthorised access to the data uploaded in the case your access signature has been lost or exposed.
+Where possible with containers, we recommend setting up IP whitelisting as an extra layer of security.  Please ensure that read and list access are never granted. This prevents unauthorized access to the data uploaded in the case your access signature has been lost or exposed.
 :::

@@ -61,7 +61,7 @@ If you are looking to assign non-admin users within Cado, you can use a group na
     - Populate the fields with the following:
         - Enter the `Identity Provider Issuer` value from the SAML setup instructions into the `Okta SAML App IdP entity ID` field
         - Enter the `Identity Provider Single Sign-On URL` value from the SAML setup instructions into the `Okta SAML App IdP SSO URL` field
-        - Enter the `X.509 Certificate` value (text inbetween `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) from the SAML setup instructions into the `Okta SAML App x509 Cert` field
+        - Enter the `X.509 Certificate` value (text between `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) from the SAML setup instructions into the `Okta SAML App x509 Cert` field
         - Enter the exact URL you provided in step 7 into the `Okta SAML App SP entity ID` field
         - Enter the exact URL you provided in step 6 into the `Okta SAML App SP ACS URL` field
         - Enter the exact name of your admin group you configured in step 9 into the `Admin Group Name` field

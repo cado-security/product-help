@@ -75,7 +75,7 @@ under “Microsoft APIs”, select “Office 365 Management APIs”, then select
 ![Request API Permissions - Office 365](/img/Entra-API-Permissions2.png)
 
 7. To add permissions for Office 365 Exchange Online. Click “Add a permission”
-under “APIs my organisation uses” search for “Office 365 Exchange Online”, then select “Application permissions”. Select and add the following permissions: ”full_access_as_app” & “Exchange.ManageAsApp”.
+under “APIs my organization uses” search for “Office 365 Exchange Online”, then select “Application permissions”. Select and add the following permissions: ”full_access_as_app” & “Exchange.ManageAsApp”.
 
 ![Request API Permissions - Office 365 Exchange Online](/img/Entra-API-Permissions3.png)
 

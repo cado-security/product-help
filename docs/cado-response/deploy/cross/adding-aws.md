@@ -1,7 +1,7 @@
 ---
 title: Adding AWS accounts to Azure/AWS/GCP
 hide_title: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # How to add AWS accounts to Azure/AWS/GCP
@@ -19,3 +19,5 @@ sidebar_position: 1
 AWS accounts can be imported into Cado Response from Azure or GCP deployments.
 To do so, add the AWS account under Settings > Cloud Accounts:
 ![Add Role](/img/add-role.png)
+
+Currently AWS EC2's can only be imported cross-cloud through SSM Triage Acquisition or through EBS Direct Acquisition (Settings>Experiments>EBS Direct API), due to how the data is collected.

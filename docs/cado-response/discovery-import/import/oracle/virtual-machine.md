@@ -111,7 +111,7 @@ Switching over to our Cado platform, you can see that the file has been successf
 ![Oracle](/img/oracle/image6.png)
 
 
-Once the processing has been completed, you can move onto analysing the captured image:
+Once the processing has been completed, you can move onto analyzing the captured image:
 
 ![Oracle](/img/oracle/image1.png)
 ![Oracle](/img/oracle/image9.png)

@@ -18,7 +18,7 @@ Please use Cado Host to acquire distroless Containers.
 
 ![Cado Import Screen showing the AKS options](/img/import-cloud-focus.png)
 
-2) Choose the Azure Credenitals configured in [Azure > Cross Subscription and Tenancy](/cado-response/deploy/azure/azure-cross-tenancy-subscriptions)
+2) Choose the Azure Credeniials configured in [Azure > Cross Subscription and Tenancy](/cado-response/deploy/azure/azure-cross-tenancy-subscriptions)
 
 3) Choose the resource group the AKS cluster is attached to.
 
@@ -39,7 +39,7 @@ As of release v2.31.0, the Cado platform now supports capture of AKS Private Clu
 uses the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke) to achieve this functionality.
 
 There are two main caveats to this method:
-1. The process is consideribly slower than capturing a Public Cluster
+1. The process is considerably slower than capturing a Public Cluster
 2. The Azure API will spin up a pod inside the cluster to execute Cado Host, make sure that there are enough nodes and resources in your cluster to schedule this command pod.
 
 The newly created pod will shutdown and remove itself after 1 hour.

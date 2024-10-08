@@ -7,7 +7,7 @@ sidebar_position: 11
 # Importing from Third Party Tools
 
 ### Full Disk Collections using FTK Imager
-Triage collections are reccomended instead of full disk images, as they are smaller and faster to process.
+Triage collections are recommended instead of full disk images, as they are smaller and faster to process.
 
 However, a number of tools can be used to create full disk images of a system, which can then be uploaded to cloud storage for import into Cado. One of the most popular tools is FTK Imager.
 

@@ -1,7 +1,7 @@
 ---
 title: Temporarily access an AWS account with STS
 hide_title: true
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 ## How to temporarily access an AWS account with STS

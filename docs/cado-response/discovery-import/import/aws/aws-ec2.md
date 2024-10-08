@@ -71,7 +71,7 @@ mkdir -p /tmp/cado-volexity
 cp ${INPUT} /tmp/cado-volexity/surge-collect
 chmod 755 /tmp/cado-volexity/surge-collect
 mkdir -p /tmp/cado-volexity/out
-/tmp/cado-volexity/surge-collect seamlesstransaction /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect example /tmp/cado-volexity/out
 tar -cvzf /tmp/cado-volexity/out.tar.gz /tmp/cado-volexity/out
 cp "/tmp/cado-volexity/out.tar.gz" ${OUTPUT}
 rm -rf /tmp/cado-volexity

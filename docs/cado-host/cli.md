@@ -70,5 +70,5 @@ cado-host.exe --additional_files "C:\tools\secretfile.txt" "C:\SuperSecretFolder
 ```
 
 :::tip
-Note that folders should NOT have trailing slashes.  Files and folder paths should be delimted by a space and be enclosed in double quotes.
+Note that folders should NOT have trailing slashes.  Files and folder paths should be delimited by a space and be enclosed in double quotes.
 :::

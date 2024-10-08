@@ -95,7 +95,7 @@ For more, see [SentinelOne](/cado-response/manage/integrations/xdr/sentinelone) 
 
 ## Setting a custom location for Cado Host
 
-You can set a custom location from which Cado Host will be deployed from both the Import>Cado Host option, and the container acquisitions which utilise Cado Host.
+You can set a custom location from which Cado Host will be deployed from both the Import>Cado Host option, and the container acquisitions which utilize Cado Host.
 
 This can be set under Settings > Advanced:
 ![Custom Cado Host Settings](/img/custom-cado-host.png)
@@ -118,6 +118,6 @@ Please ensure that binaries are present for all operating systems to ensure coll
 The Cado Host binaries are typically updated 1-2 times per quarter. 
 
 :::warning
-For distribution compatability the download operates over HTTPS and does not utilise AWS IAM, so a non-public S3 bucket cannot host the binaries. This will need to be accessible via a HTTPS download, for example: curl https://bucket/cado-host
+For distribution compatibility the download operates over HTTPS and does not utilize AWS IAM, so a non-public S3 bucket cannot host the binaries. This will need to be accessible via a HTTPS download, for example: curl https://bucket/cado-host
 :::
 

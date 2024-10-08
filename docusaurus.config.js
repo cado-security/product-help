@@ -87,10 +87,6 @@ const config = {
             from: '/cado-response/guides/cross-account-creation',
           },
           {
-            to: '/cado-response/deploy/aws/overview',
-            from: '/cado-response/getting-started/deploy/aws-deploy',
-          },
-          {
             to: '/cado-response/deploy/azure/azure-deploy',
             from: '/cado-response/getting-started/deploy/azure-deploy',
           },

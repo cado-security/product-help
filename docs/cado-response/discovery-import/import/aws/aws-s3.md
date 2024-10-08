@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 # AWS S3 Support and Uploading On-Premise Files
 
-The Cado platform supports acquistion of data from AWS S3 buckets. The two main use cases for this are:
+The Cado platform supports acquisition of data from AWS S3 buckets. The two main use cases for this are:
 
 * Analyzing disk images or zip files that have been uploaded to an S3 bucket as part of an investigation (e.g. as part of using Cado Community Edition)
 * Analyzing the contents of an S3 bucket for any uploaded content that could be part of an incident
@@ -21,7 +21,7 @@ You can use the [AWS Console](https://aws.amazon.com/) to upload data from your 
 
 Alternatively, you can create an [AWS Access and Secret Key](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/) then use a Desktop GUI tool such as [Cyberduck](https://cyberduck.io/) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
 
-If you create an Access/Secret for uploading data to S3, we reccomend you scope the access by:
+If you create an Access/Secret for uploading data to S3, we recommend you scope the access by:
 - Giving the associated role [write-only](https://stackoverflow.com/questions/15076645/amazon-s3-write-only-access) access to a single s3 bucket
 - Use [temporary credentials](https://docs.cyberduck.io/protocols/s3/) if possible
 

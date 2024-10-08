@@ -13,7 +13,7 @@ In your console and within Cado Host, ensure to enable the options to collect me
 Windows systems can have particularly large process memory files which can result in a slow collection process, so we recommend only enabling the **Enable Extended Memory Collection** option on Windows systems where required.
 
 Cado collects memory from individual processes as .mem files, viewable under the "process_dumps" folder.
-This allows for more reliable analysis than previous versions of Cado which collected a single capture of memory, and (also) utilises the Cado-branded open source tool [varc](https://github.com/cado-security/varc)
+This allows for more reliable analysis than previous versions of Cado which collected a single capture of memory, and (also) utilizes the Cado-branded open source tool [varc](https://github.com/cado-security/varc)
 
 ## Acquiring Memory from AWS EC2
 You can acquire memory of Linux systems in EC2 by using the "Alternate Acquisition" option under Import > EC2:

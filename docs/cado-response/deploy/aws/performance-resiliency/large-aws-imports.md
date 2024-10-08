@@ -1,10 +1,10 @@
 ---
-title: Large EC2 Imports
+title: Import large EC2 imports
 hide_title: true
 sidebar_position: 5
 ---
 
-# Importing Large AWS EC2 Instances
+# How to import large AWS EC2 instances
 
 Importing AWS EC2 instances with disks over 500GB can start to reach limitations in AWS which results in potentially very long acquisition times. You will receive a warning such as this during the Acquisition of a system:
 
@@ -81,8 +81,8 @@ If you have the option to change the instance type of the target system to a lar
 We have released a new method to acquire EC2/EBS Volumes using the EBS Direct API.
 This can be enabled set Settings > Experiments > EBS Direct Acquisitions
 
-This works in a similiar method to coldsnap:
+This works in a similar method to coldsnap:
 * https://github.com/awslabs/coldsnap
-Which is executied using a command such as:
+Which is executed using a command such as:
 
 ```coldsnap  --region us-east-1 download snap-0001 disk.dd```
