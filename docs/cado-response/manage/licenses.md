@@ -1,10 +1,10 @@
 ---
-title: Applying a License
+title: Get and apply a license
 hide_title: true
 sidebar_position: 2
 ---
 
-# Licensing
+# How to get and apply a license
 In order to use the Cado platform, you must upload a valid license.  
 
 If you have received a license file from your Sales representative, you can upload it by:
@@ -15,6 +15,5 @@ If you have received a license file from your Sales representative, you can uplo
 - Click **Upload**
 
 If you do not have a license, please contact sales@cadosecurity.com 
-
 
 We also have a free edition of the Cado platform, [Cado Community Edition](community-edition/community-intro), which provides a community license.
