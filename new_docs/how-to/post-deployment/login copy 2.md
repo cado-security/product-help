@@ -1,7 +1,7 @@
 ---
-title: Applying a License
+title: 
 hide_title: true
 sidebar_position: 2
 ---
 
-# Licensing
+# 

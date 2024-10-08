@@ -5,8 +5,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Cado Security',
-  tagline: 'Cado Security',
+  title: 'Cado Documentation',
+  tagline: 'Cado Documentation',
   url: 'https://docs.cadosecurity.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
