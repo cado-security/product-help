@@ -1,16 +1,11 @@
 ---
-title: Kubernetes Deployments
+title: Kubernetes imports
 hide_title: true
-sidebar_position: 6
+sidebar_position: 9
 ---
-# Kubernetes Deployments Considerations
+# How to import data from Kubernetes
 
-## Fundamental Principles
-There is a balance between access to data during responding to breaches, and restricting data access in order to limit the likelihood of a breach.
-The notes below intend to help make these trade-off decisions when granting access to the Cado platform to your Kubernetes environments to respond to incidents and achieve defense in depth.
-Please view the service specific pages for more detail on how to deploy and import data from specific Kubernetes implementations.
-
-## Overview of Normal Execution and Authentication to Acquire Data
+## How does Cado import data from EKS/ECS/AKS/GKE by default?
 When acquiring data from Kubernetes containers:
 - Cado executes a shell script to download the Cado Host binary; then
 - Runs it to collect forensic artifacts; then
@@ -29,7 +24,7 @@ If using the Docker container runtime, the file system of containers will normal
 If using the Containerd runtime (which the latest versions of EKS now uses), the file system will not be immediately visible on the Volume.
 We are currently working on a method to support containerd Volume acquisitions of containerd based Nodes.
 
-## Alternate Collection by using Cado Host
+## Alternate Collection by using Cado Host with a sidecar container
 The Cado platform now supports collections from private cluster and distroless containers, by using a [debug container](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
 
 To acquire:
@@ -39,6 +34,10 @@ To acquire:
 ![Cado Host K8s UI](/img/cado-host-k8s.png)
 
 Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
+
+### Kubernetes RBAC Requirements
+Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
+In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resource, and ‘get’ and ‘create’ for the ‘pods/exec’ resource.
 
 ### Using A Custom Image
 In environments that don’t support using the default debian:latest container image, you can choose to use a custom image instead. This expects the latest Cado Host Linux binary to exist at /tmp/cado-host-static/cado-host.
@@ -107,15 +106,4 @@ How to connect using Private Link:
 
 How to connect using Cloud9:
 - https://stackoverflow.com/questions/65049271/how-to-connect-to-eks-cluster-from-cloud-9-instance-using-kubectl
-
-## Kubernetes RBAC Requirements
-Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
-In particular, Cado requires ‘get’ and ‘list’ for the ‘pods’ resource, and ‘get’ and ‘create’ for the ‘pods/exec’ resource.
-
-## Distroless / No Shell Containers
-Please use Cado Host to acquire distroless Containers.
-
-## On-Premise Clusters
-If you are using an on-premise or otherwise custom implementation of Kubernetes, you may be able to collect data by executing the Cado Host shell script inside the container. See for example, the documentation for OpenShift. You may also be able to process the Volume of the node, if you have access to it (see “Collecting the Node Volume” below for more).
-
 

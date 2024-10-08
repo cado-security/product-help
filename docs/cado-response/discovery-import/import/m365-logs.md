@@ -1,5 +1,5 @@
 ---
-title: Microsoft SaaS Logs
+title: Microsoft SaaS logs
 hide_title: true
 sidebar_position: 10
 ---

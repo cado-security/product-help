@@ -14,7 +14,7 @@ There are three core options when acquiring EKS:
 
 ## Known Limitations
 
-* The Cado platform can acquire artifacts from a container built with distroless containers, and private clusters, via Cado Host only. The platform will hide containers with the `gcr.io/distroless` image tag. For more information, please see [Kubernetes Deployments](/cado-response/deploy/kubernetes.md).
+* The Cado platform can acquire artifacts from a container built with distroless containers, and private clusters, via Cado Host only. The platform will hide containers with the `gcr.io/distroless` image tag. For more information, please see [Kubernetes Deployments].
 
 * The Cado platform will hide pods running under the following namespaces: `kube-system`, `kube-public`, `kube-node-lease`, `gke-gmp-system`, `aks-command`, `gmp-system`, `calico-system`, and `tigera-operator`. These are system level namespaces, which are often running a distroless environment, which the platform does not support.
 
