@@ -49,3 +49,5 @@ Enter the name of the cross account IAM role e.g. `CadoResponseRole` into 'Cross
 Select 'Discover accounts' which will then trigger a pipeline to fetch all of the assumable roles across your AWS accounts where that role name matches the provided value.
 
 ![AWS Orgs Settings in Cado](/img/aws-orgs-cross-account-iam-role.png)
+
+After accounts have been added to the Cado platform, it is advisable that Account Checks are performed against roles on a periodic basis, to ensure the correct permissions are in place to perform successful acquisitions. For more information see [Account Check](/cado-response/manage/monitoring#account-check).
