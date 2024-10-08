@@ -60,7 +60,7 @@ Searchable fields
 | `executed_process` | keyword | Where we detect a process execution, the path of the executed file |
 | `short` | text | Short text providing additional data from raw event |
 | `extra` | text | Longer text, providing more raw data than `short` |
-| `alarm_severity` | int | Severity of event based on detections. Malicious `1`, Suspcious `3`, Other `10` |
+| `alarm_severity` | int | Severity of event based on detections. Malicious `1`, Suspicious `3`, Other `10` |
 | `isFolder` | boolean | Whether an event is a folder. |
 | `evidence_id` | int | ID of evidence item |
 | `timestamp` | int | Unix timestamp of event |

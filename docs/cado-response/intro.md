@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
 id: intro
-title: Cado Summary
+title: What is Cado
 ---
 
-# Cado Platform
+# What is the Cado platform?
 Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when security teams need to investigate a threat in a modern environment, it’s incredibly complex and time consuming. The Cado platform leverages the scale, speed and automation of the cloud to expedite investigation and response.
 
 ### Core Features

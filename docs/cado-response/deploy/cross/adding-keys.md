@@ -1,7 +1,7 @@
 ---
 title: Access an AWS account with keys
 hide_title: true
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 ## How to access an AWS account with keys

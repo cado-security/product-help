@@ -28,7 +28,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.0.1",
-    "@docusaurus/types": "^3.0.1"
+    "@docusaurus/types": "^3.0.1",
+    "cspell": "^8.14.4"
   },
   "engines": {
     "node": ">=18.0"

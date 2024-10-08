@@ -149,7 +149,7 @@ To import GKE containers, the Cado service account also needs the `iam.serviceAc
 
 When you add credentials to Cado you are creating a mapping from a set of credentials (in GCP json format) to a project name.
 
-Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used. This keeps non-admin users from having to managing credentials themselves, while also alllowing access to as many different GCP projects as you want.
+Any time a user then attempts to access that particular GCP project name, the credentials that you registered in settings will be used. This keeps non-admin users from having to managing credentials themselves, while also allowing access to as many different GCP projects as you want.
 
 There are two ways to achieve this:
 

@@ -136,7 +136,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 }
 ```
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |_placement|_state|id|instance_name|instance_type|launch_time|region|
 |---|---|---|---|---|---|---|
 | us-east-1c | stopped | i-00000000000 | Instance | t3a.2xlarge | Thu, 25 Mar 2021 18:38:13 GMT | name: us-east-1 |
@@ -176,7 +176,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 }
 ```
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |buckets|
 |---|
 | bucket |
@@ -232,7 +232,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 }
 ```
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |caseName|created|deleted|description|id|status|users|
 |---|---|---|---|---|---|---|
 | Project Name_XSOAR | 2022-01-17T12:21:46.613814 | false | This is a project in Cado Response created through Cortex XSOAR! | 1 | Pending | \{'display_name': 'admin', 'id': 1, 'is_admin': True, 'login_type': 0, 'username': 'admin'\} |
@@ -345,7 +345,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 }
 ```
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |id|msg|
 |---|---|
 | 1 | Created |
@@ -383,7 +383,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ```json
 {
     "CadoResponse": {
-        "EC2Acquistion": {
+        "EC2acquisition": {
             "created": "2022-01-17T12:21:59.084282",
             "evidence_id": 0,
             "name": "Acquiring i-00000000000",
@@ -413,7 +413,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 }
 ```
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |created|evidence_id|name|pipeline_id|pipeline_type|project_id|subtasks|user_id|
 |---|---|---|---|---|---|---|---|
 | 2022-01-17T12:21:59.084282 | 0 | Acquiring i-00000000000 | 1 | acquisition | 1 | \{'id': '1587a9c9-c02c-464b-a6f7-d4b7e720bd93'\},<br/>\{'id': '4f798bf8-c7d3-427c-9498-10a85cfe3978'\},<br/>\{'id': 'c5fa26f1-e282-47a6-8335-1160766e089b'\},<br/>\{'id': '82ec9a7e-47ac-4539-9623-166a44a59d0f'\},<br/>\{'id': '88151005-a999-422e-b4cb-9e76699d6e42'\} | 1 |
@@ -503,7 +503,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ```
 
 
-#### XSOAR Artifiact Output
+#### XSOAR Artifact Output
 |created|evidence_id|name|pipeline_id|pipeline_type|project_id|subtasks|user_id|
 |---|---|---|---|---|---|---|---|
 | 2022-01-17T12:22:00.843869 | 1 |  | 2 | processing | 1 | \{'id': '3699827f-63c4-4408-88a4-0ae899187ed3'\},<br/>\{'id': '727e2072-8bf7-4847-89ea-9447f5fd8fd0'\},<br/>\{'id': '857d48b8-abaf-4ea6-b159-d25c9784b837'},<br/>\{'id': '533f7deb-74bc-4ffb-b81f-788ed714bead'},<br/>\{'id': '3f1defde-3986-4292-a423-1bef62d4c52b'\},<br/>\{'id': 'e41a0934-266b-4868-9a7d-5f083b1efcc1'},<br/>\{'id': '75411e10-46e9-41dd-8bf7-9b5fbdc8df71'},<br/>\{'id': '0afbf2f4-fbf3-4305-ad9f-b19d30f4b17c'\},<br/>\{'id': 'ca063c7b-1135-4922-8542-49f40ce71449'},<br/>\{'id': '67fdb0ea-dcee-4f65-a003-4f40fcd567fb'},<br/>\{'id': '1437ec33-6af2-4eb8-9c43-e071dcb7e0ac'\},<br/>\{'id': '06db4dcc-57fd-48bc-bb34-5bd8f2da0a0d'},<br/>\{'id': 'e3cc930e-9a60-46c3-97a1-611824c24437'},<br/>\{'id': 'ad2c8877-39e7-4bff-9756-81278802ee76'\} | 1 |

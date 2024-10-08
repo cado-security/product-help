@@ -49,7 +49,7 @@ If you are looking to assign non-admin users within Cado, you can use a group na
     - Populate the fields with the following:
         - Enter the `Issuer ID` value from the Ping application **Configuration** tab into the `Ping SAML App IdP entity ID` field
         - Enter the `Single Signon Service` value from the Ping application **Configuration** tab into the `Ping SAML App IdP entity ID` field
-        - Download the signing certificate and enter the value (text inbetween `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) into the `Ping SAML App x509 Cert` field
+        - Download the signing certificate and enter the value (text between `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`) into the `Ping SAML App x509 Cert` field
         - Enter the exact URL you provided in step 6 into the `Ping SAML App SP entity ID` field
         - Enter the exact URL you provided in step 5 into the `Ping SAML App SP ACS URL` field
         - Enter the exact name of your admin group you configured in step 8 into the `Admin Group Name` field

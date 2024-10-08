@@ -23,7 +23,7 @@ You can import data into the Cado platform via an eXtended Detection and Respons
 
 Currently Cado supports importing from SentinelOne and Crowdstrike.
 
-For more infomation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md) and the [CrowdStrike Integration Setup page](/cado-response/manage/integrations/xdr/crowdstrike.md)
+For more infofmation about setting up this integration see the [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md) and the [CrowdStrike Integration Setup page](/cado-response/manage/integrations/xdr/crowdstrike.md)
 
 Once the integration is set up, from within an investigation click **Import from XDR**
 

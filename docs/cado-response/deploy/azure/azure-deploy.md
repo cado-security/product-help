@@ -154,7 +154,6 @@ When deploying, the main Cado instance will have the name `CadoResponse`.  If yo
 
 
 ### How to Add Tags to Resources
-Please see the [guide on Deployment Options](../intro.md#tagging-cado-response-resources)
 
 ### If you receive the error "The Cado platform in Azure will not start with the error: The client with object id does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read'"
 

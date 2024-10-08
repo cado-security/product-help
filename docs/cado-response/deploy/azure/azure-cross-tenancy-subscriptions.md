@@ -6,17 +6,17 @@ sidebar_position: 2
 
 # Azure Cross Subscription Creation
 
-### Setting up an app registration for cross tenancy/subcription acquisitions
+### Setting up an app registration for cross tenancy/subscription acquisitions
 To leverage cross Azure acquisitions, you need to create an **[Azure app registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)** in the Azure tenancy you want to acquire resources from.  Follow the contents of this guide, and select the option for `Accounts in any organizational directory (Any Azure AD directory - Multitenant)`. ![Azure App Registration](/img/azure-registering-app.png)  
 :::tip
-If you are only importing from a seperate subscription within the same tenancy as your Cado deployment, you can use `Accounts in this organizational directory only` as your app registration account type.
+If you are only importing from a separate subscription within the same tenancy as your Cado deployment, you can use `Accounts in this organizational directory only` as your app registration account type.
 :::
 You can then generate a client secret associated with this app registration using **[this guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-credentials)**, be sure to keep a note of it as you will need it to register the app with the Cado platform. ![Creating a client secret](/img/azure-creating-client-secret.png)
 By default, when you create an app registration, Azure will also create an enterprise application alongside it with the same name.
-Navigate to this in Microsoft Entra, and under the **properties** sidebar, allow the option for `Enabled for users to sign-in`.  Without enabling this option, cross tenancy/subscrition acquisitions will not work.
+Navigate to this in Microsoft Entra, and under the **properties** sidebar, allow the option for `Enabled for users to sign-in`.  Without enabling this option, cross tenancy/subscription acquisitions will not work.
 ![Azure Enterprise App Registration Permission](/img/azure-enterprise-app-permission.png) 
 
-#### Required role-asignments
+#### Required role-assignments
 Once you have created your app registration, you will need to give it the required Azure role-assignments to allow it to access your Azure resources.
 
 1. Go to the Azure management group you want to acquire from, this could be within the same, or a different Azure tenancy.

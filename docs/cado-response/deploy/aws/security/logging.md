@@ -1,10 +1,10 @@
 ---
-title: Logging
+title: Logging best practices
 hide_title: true
 sidebar_position: 2
 ---
 
-# AWS Logging Best Practices
+# AWS logging best practices
 We recommend customers follow [AWS best practices regarding logging](https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/) which includes the following:
 - Ensure CloudTrail is enabled in all regions
 - Ensure CloudTrail log file validation is enabled
