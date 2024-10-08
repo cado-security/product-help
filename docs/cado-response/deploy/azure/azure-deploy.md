@@ -1,24 +1,10 @@
 ---
-title: Azure Overview
+title: Azure Terraform deployment
 hide_title: true
 sidebar_position: 1
 ---
 
-## Azure Deployment Overview
-
-:::note
-**Intended Audience and Operating Environment Requirements:**
-*This information is written for proficient Azure cloud administrators who are familiar with Azure technology and cloud operations. This manual assumes familiarity with MS Azure, including: Subscriptions,  Resource Groups, Virtual Machines, Storage Accounts, and Storage Containers.*
-:::
-
-Deployment of the Cado platform is performed within your Azure cloud environment via a Terraform Script. When the platform is deployed, it creates its own isolated network in which you can control who has access.  From start to finish, you can be up and running in under 25 minutes.
-
-![Azure Architecture](/img/azure-architecture.png)
-This diagram is a simplified architecture, with options for alternate network access.
-For a diagram of how cross-cloud imports from Azure into AWS work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259971240465-How-do-cross-cloud-imports-from-Azure-into-AWS-work).
-
-
-## Azure Terraform Script
+# How to deploy Cado in Azure with Terraform
 
 To set up Cado in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 
@@ -26,7 +12,8 @@ If you have signed up for a Free Trial or are working with the Cado Sales team a
 - a link to the Cado VHD image
 - the latest Cado Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
 
-If you have not received the above items, reach out to sales@cadosecurity.com for more details.  Once you receive them, continue on to the steps below.
+If you have not received the above items, reach out to sales@cadosecurity.com for more details or retrieve from our [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json).
+Once you receive them, continue on to the steps below.
 
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
 
@@ -144,16 +131,14 @@ The Resource ID can also be found within your Azure Portal by navigating to `Hom
 
 It will take about 20 minutes to deploy, then you can **[Log into Cado](../../manage/logging-in)** 
 
-:::tip
+### Testing the deployment
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
-:::caution
+### Renaming the Cado Instance
 When deploying, the main Cado instance will have the name `CadoResponse`.  If you rename your Cado instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
 :::
 
-
-### How to Add Tags to Resources
 
 ### If you receive the error "The Cado platform in Azure will not start with the error: The client with object id does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read'"
 
