@@ -36,9 +36,17 @@ You will then see a form where you must enter all the following:
     * Audit Event Download
     * Audit Event Reboot
     * Audit Event Upgrade
+    * Detection Created
+    * Detection Updated
+    * Detection Group Created
+    * Detection Group Updated
 
 
 - **Payload**: This is a JSON object that refers to how the webhook URL will receive the data. A webhook must be in the correct format, more information can be found **[here](#custom-payloads)**.
+- **Event Formatting**: This refers to the way in which the $Event is formatted. There are currently 3 options available:
+    * Default - No changes made to the raw_event, it'll send the event as a string with information about what has happened.
+    * Slack - The $Event won't be included, only the $Title will be sent. E.g. "HIGH SEVERITY ALARM DETECTED".
+    * Jira - Currently only supported with Detection event types. The event is formatted with markdown to include metadata about the detection/group.
 
 ![Adding a new webhook](/img/webhooks-new.png)
 

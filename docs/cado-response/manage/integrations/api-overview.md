@@ -1,10 +1,10 @@
 ---
-title: Overview & API
+title: API Overview
 hide_title: true
 sidebar_position: 1
 ---
 
-# Overview & API
+# API Overview
 
 The Cado API enables third party tools and automation scripts to integrate with the Cado platform.
 

@@ -1,10 +1,10 @@
 ---
-title: Encryption
+title: Platform Encryption in AWS
 hide_title: true
 sidebar_position: 3
 ---
 
-# Platform Encryption
+# Platform Encryption in AWS
 
 ## General
 The default VPC and Subnet create an isolated environment to which customers can control access rights. 

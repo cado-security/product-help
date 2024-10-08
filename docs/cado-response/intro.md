@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: intro
-title: Summary
+title: Cado Summary
 ---
 
 # Cado Platform
