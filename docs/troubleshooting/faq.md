@@ -1,7 +1,7 @@
 ---
 title: FAQs
 hide_title: true
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 # Frequently Asked Questions
@@ -15,8 +15,6 @@ Yes.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
 On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete. 
-
-
 
 ### I deployed the Cado platform. How do I log in?
 Navigate to the Cado instance IP `https://<Cado_IP>`. You can initially login with the username `admin` and the password `i-xxx` where `i-xxx` is the ID of your instance.  After first login, you will be asked to change your password.  Note that for Azure, the password is the very long Resource ID.  The Resource ID can be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
@@ -40,19 +38,6 @@ This lists Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeli
 ### Can I estimate the costs for running the Cado platform in AWS?
 Yes, please see [Cost Management](/cado-response/manage/cost-management) for details.
 
-### How can I capture Logs or a Support Bundle from the Cado platform?
-The following methods for getting Logs to Cado are available, in order of ease:
-
-1. Try sending logs to Cado automatically through the UI by navigating to the Help screen. Click on `Send Logs to Cado` and this will automatically package up a bundle of logs and send them directly to Cado over HTTPS 
-2. If that fails, click on `Download Logs` and upload the zip file to the Customer Portal
-3. If 1 and 2 fail, or you cannot log into the platform then open an SSH session to the Cado Platform (you'll need the key you used during deployment) and execute the command `sudo tar -cvzf /var/log/cado_logs.tar.gz /var/log` then upload the zip file to the Customer Portal.
-
-### Are Cado application and operating systems available in CloudWatch?
-Provided the platform has IAM and network permissions to send logs to Cloudwatch, application and operating system logs are sent to:
-```
-                        "log_group_name": "/var/logs/cado",
-                        "log_stream_name": "cado-logs-all"
-```
 ### How do I contact Support?
 You can contact Cado Support via email at support@cadosecurity.com or reach out to your account manager for more details.
 
