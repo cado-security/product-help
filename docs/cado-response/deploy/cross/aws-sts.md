@@ -1,10 +1,10 @@
 ---
-title: Temporary Credentials with STS
+title: Temporarily access an AWS account with STS
 hide_title: true
-sidebar_position: 7
+sidebar_position: 5
 ---
 
-## Temporary Credentials with STS
+## How to temporarily access an AWS account with STS
 In complex cloud environments, creating long term roles with access can be cumbersome and involve multiple teams to approve. To avoid this, you can create a temporary Security Token which allows access to a specific resource in AWS without having to create a permanent role.
 
 
