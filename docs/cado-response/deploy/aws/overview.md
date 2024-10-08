@@ -21,7 +21,6 @@ export const Highlight = ({children, color}) => (
 
 Click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml) to deploy the Cado platform via AWS Cloudformation with default options.
 
-Please reach out to sales@cadosecurity.com for a full license, or get a free limited community license [here](https://www.cadosecurity.com/cado-community-edition)
 
 ## AWS Deployment Overview
 

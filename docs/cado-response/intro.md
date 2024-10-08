@@ -24,10 +24,3 @@ Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when s
 
 - **Cloud Visibility** - Investigate hundreds of data sources across cloud-provider logs, disk, memory, and more, in a single pane of glass.
 
-
----------
-
-## Getting a license
-- If you do not have a license, please contact sales@cadosecurity.com
-- We also have a free edition of the Cado platform, [Cado Community Edition](community-edition/community-intro)
-
