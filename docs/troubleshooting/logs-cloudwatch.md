@@ -1,5 +1,5 @@
 ---
-title: How to forward Cado system and processing logs to Cloudwatch
+title: Forward logs to Cloudwatch
 hide_title: true
 sidebar_position: 3
 ---

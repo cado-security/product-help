@@ -5,13 +5,6 @@ sidebar_position: 4
 ---
 
 # Frequently Asked Questions
-Solutions to some common questions can be found here and in our [Knowledge Base](https://cadosecurity.zendesk.com/).  If you can't find your answer, please reach out to support@cadosecurity.com and let us know.
-
-### Which cloud providers does Cado support?
-Cado supports native deployments in AWS and Azure.  If deployed in AWS, Cado supports AWS as well as cross-cloud acquisitions from GCP and Azure.
-
-### Does Cado support memory capture?
-Yes.  See **[Memory](../cado-response/discovery-import/import/data-types/memory.md)** for more details.
 
 ### Why do I see "Installing Cado Response" instead of the login page?
 On first boot, the platform will take about 10 minutes to install.  During that time, you will see "Installing Cado Response".  After the one-time installation process completes, you will be presented with a login screen.  During an upgrade, you will also see "Installing Cado Response" until the upgrade is complete. 
@@ -38,14 +31,8 @@ This lists Free Disk Space, Available Memory, Total Memory, CPU Usage and pipeli
 ### Can I estimate the costs for running the Cado platform in AWS?
 Yes, please see [Cost Management](/cado-response/manage/cost-management) for details.
 
-### How do I contact Support?
-You can contact Cado Support via email at support@cadosecurity.com or reach out to your account manager for more details.
-
 ### What are the Cado Service Level Agreements?
 The Cado Service Level Agreements (SLAs) are part of customers' end-user license agreement.  Please refer to your EULA for more details.
-
-### Does the Cado platform support processing of EC2s or AMIs with EBS Encryption?
-Yes. As of build 0.9.2.4, the `kms:CreateGrant` and `kms:Decrypt` permissions are enabled within the Cado role by default. If you upgraded from a build earlier than 0.9.2.4, you may need to add these permissions manually.
 
 ### If vulnerabilities are discovered within your software, are customers notified?
 Yes. Updates and notifications are provided to customers if vulnerablities or vulnerable packages are identified within our software.
