@@ -90,6 +90,8 @@ After the target AWS Role is set up in the target AWS account (`222222222222`), 
 
 Upon submission, the Cado platform will attempt to validate the role, ensuring it is assumable. Once validated, you will see the Alias in the list of available AWS accounts.
 
+In addition to this, by default the Cado platform will perform an Account Check to ensure the correct permissions are in place to perform successful acquisitions (this can be skipped by unchecking the 'Run account check after adding account' checkbox). For more information see [Account Check](/cado-response/manage/monitoring#account-check).
+
 ## Automating AWS IAM Role and Policy Deployment
 
 ### Using CloudFormation StackSets
