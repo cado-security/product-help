@@ -1,5 +1,5 @@
 ---
-title: Third Party Tools
+title: Third party tools
 hide_title: true
 sidebar_position: 11
 ---

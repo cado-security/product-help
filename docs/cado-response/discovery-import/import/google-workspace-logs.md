@@ -1,5 +1,5 @@
 ---
-title: Google Workspace Logs
+title: Google Workspace logs
 hide_title: true
 sidebar_position: 10
 ---
