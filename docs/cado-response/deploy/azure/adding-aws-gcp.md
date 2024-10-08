@@ -7,10 +7,10 @@ sidebar_position: 4
 # How to add access to Azure/AWS/GCP from Azure
 
 ## Azure subscriptions
-See [How to add Azure subscriptions to Azure/AWS/GCP](https://docs.cadosecurity.com/cado-response/deploy/cross/adding-azure).
+See [How to add Azure subscriptions to Azure/AWS/GCP](/cado-response/deploy/cross/adding-azure).
 
 ## AWS accounts
-See [How to add AWS accounts to Azure/AWS/GCP](https://docs.cadosecurity.com/cado-response/deploy/cross/adding-aws).
+See [How to add AWS accounts to Azure/AWS/GCP](/cado-response/deploy/cross/adding-aws).
 
 ## Setting up GCP projects
-See [How to add GCP projects to Azure/AWS](https://docs.cadosecurity.com/cado-response/deploy/cross/adding-gcp).
+See [How to add GCP projects to Azure/AWS](/cado-response/deploy/cross/adding-gcp).
