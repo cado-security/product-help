@@ -1,5 +1,5 @@
 ---
-title: Import large EC2 imports
+title: Import large EC2 instances
 hide_title: true
 sidebar_position: 5
 ---
