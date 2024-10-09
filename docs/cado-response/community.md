@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 id: community-intro
-title: Community Edition Summary
+title: Community Edition
 ---
 
-# Cado Community Edition
+# What is Cado community edition
 The [Cado platform](/cado-response/intro) platform leverages the scale, speed and automation of the cloud to expedite investigation and response. Cado Community Edition is a free version of the Cado platform that lets you analyze:
 
 - Disk images captured in DD format
