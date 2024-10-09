@@ -67,5 +67,5 @@ You can execute Cado Host individually on a device or you can deploy it to a num
 
 ## Deployment from XDR Integrations
 You can deploy Cado Host to machines that may be compromised, for example through XDR systems such as Crowdstrike and SentinelOne.
-For more, see [SentinelOne](/cado-response/manage/integrations/xdr/sentinelone) and [Crowdstrike](/cado-response/manage/integrations/xdr/crowdstrike).
+For more, see [SentinelOne](/cado-response/integrations/xdr/sentinelone) and [Crowdstrike](/cado-response/integrations/xdr/crowdstrike).
 
