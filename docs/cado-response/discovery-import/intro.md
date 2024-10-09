@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 2
 ---
 
-## Getting Started with CTF Data
+# Getting Started with CTF Data
 Cado provides a short Capture the Flag data set to help you get familiar with the Cado platform. A walkthrough of the data is available [here](https://www.youtube.com/watch?v=fM1G10W-PQs)
 
 #### How to get started

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 6
 ---
 
-## How to tighten IAM permissions for SSM
+# How to tighten IAM permissions for SSM
 
 The Cado platform uses AWS SSM to perform live captures of AWS EC2 systems - this provides for a faster mechanism than a full disk acquisition and can also collect process memory. The Cado platform also uses AWS SSM for [running commands](../../../discovery-import/import/aws/aws-ec2.md#run-command).
 

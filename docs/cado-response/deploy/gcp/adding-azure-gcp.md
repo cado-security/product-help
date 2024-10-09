@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# How to Add access to Azure/AWS from GCP
+# How to add access to Azure/AWS from GCP
 
 ## Adding Azure subscriptions
 See [How to add Azure subscriptions to Azure/AWS/GCP](/cado-response/deploy/cross/adding-azure).

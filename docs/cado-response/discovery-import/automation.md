@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-## Introduction
+# Introduction
 
 The 'Detections' area of the platform (/detections/integrations) enables customers to dramatically streamline the effectiveness of their SOC using end-to-end workflow investigation automation capabilities.
 

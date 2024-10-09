@@ -3,7 +3,7 @@ title: GCP Terraform deployment
 hide_title: true
 sidebar_position: 1
 ---
-## How to deploy Cado in GCP with Terraform
+# How to deploy Cado in GCP with Terraform
 
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** to download the latest Terraform code.
