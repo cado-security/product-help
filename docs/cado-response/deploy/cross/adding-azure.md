@@ -13,4 +13,6 @@ Cross-subscription Azure access is performed using an application registered int
 * Once the application is set up, add the details to the Cado Response platform by following the [documentation](/cado-response/deploy/azure/azure-cross-tenancy-subscriptions#registering-credentials-within-cado)
 * In Cado Response, confirm that you can see resources for import by going into an investigation and selecting Import -> Cloud -> Choose your new Azure role -> confirm you can see resources available for import
 
-For a diagram on how cross-cloud imports from AWS into Azure work, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23261488255121-What-network-access-is-required-to-operate-cross-cloud-from-Azure).
+For a diagram on how cross-cloud imports from AWS into Azure work, please see below:
+
+![Azure Cross](/img/azure-cross.png)

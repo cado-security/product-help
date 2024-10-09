@@ -27,4 +27,6 @@ Lambda automatically integrates with CloudWatch Logs and pushes all logs from yo
 
 
 ### Data Flow Diagram
-For a diagram of how our Lambda acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259139785745-How-do-Lambda-function-collections-work).
+For a diagram of how our Lambda acquisitions operate, please see below:
+
+![Lambda Data Flow](/img/lambda-collection.png)

@@ -55,5 +55,7 @@ If either:
 AWS provide a useful tool to help debug ECS Exec issues at [on GitHub](https://github.com/aws-containers/amazon-ecs-exec-checker).
 
 ### Data Flow Diagram
-For a diagram of how our ECS acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258918944529-How-do-ECS-acquisitions-work).
+For a diagram of how our ECS acquisitions operate, please see below:
+
+![ECS Data Flow](/img/ecs-collection.png)
 
