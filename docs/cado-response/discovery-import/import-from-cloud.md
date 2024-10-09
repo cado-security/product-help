@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# Importing from the Cloud
+# How to import data from cloud providers such as AWS, Azure and GCP
 
 First select the Cloud Role you will use to import the data.
 You can filter the list by provider, or search for a specific account, subscription or investigation.

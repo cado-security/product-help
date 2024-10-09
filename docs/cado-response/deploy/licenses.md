@@ -1,7 +1,7 @@
 ---
 title: Get and apply a license
 hide_title: true
-sidebar_position: 2
+sidebar_position: 7
 ---
 
 # How to get and apply a license

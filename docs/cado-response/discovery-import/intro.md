@@ -1,20 +1,30 @@
 ---
-title: Import Overview
+title: Import data
 hide_title: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Getting Started with CTF Data
-Cado provides a short Capture the Flag data set to help you get familiar with the Cado platform. A walkthrough of the data is available [here](https://www.youtube.com/watch?v=fM1G10W-PQs)
+# How to import data
+There are a number of options for importing data into the Cado platform. Once you select the data you would like to import, the Cado platform begins processing the data based on the platforms Processing Settings.  Check out our help section on **[Processing Settings](/cado-response/manage/workers.md#processing)** for more details.
 
-#### How to get started
-1. Create a new investigation (formerly project)
-2. Navigate to the Help page and click “Import CTF data”. Import will take a few minutes.
-3. Open the investigation and start investigating
+Cado supports a wide range of **[file types](data-types/filetypes.md)** across a number of  **[cloud services](data-types/import-types.md)** which can be imported.  To begin importing data, you simply select an Investigation and click the **Import** button 
 
-![Import CTF](/img/ctf.png)
+![Import Button](/img/import-button.png)
 
-#### Scenario
-AWS GuardDuty raised a notification that an instance in our AWS account was accessing a known BitCoin mining address. 
+Based on the evidence you would like to import, follow the on-screen instructions and select your source.
 
-We imported the AWS GuardDuty logs, plus a disk image of the instance in question. The original image file was over 8GB in size. For the purposes of this capture the flag though, we reduced it down to around 30MB
+![Import Data](/img/import.png)
+
+### Importing from Cloud Services
+You can import evidence from cloud services across AWS, Azure and GCP, provided you have the correct credentials entered into the system, and your role has been assigned access to those credentials. **[Learn more](import-from-cloud.md)**
+
+### Importing from Cado Host
+The Cado platform can use Cado Host to acquire forensic artifacts from on-premises system for analysis in the cloud.
+It can also generate credentials for Cado Host to upload evidence, such as a previously collected disk image.
+
+For more information see the [Cado Host Documentation](/cado-host/intro)
+
+### Importing from URL
+You can import supported [file types](data-types/filetypes.md) from a URL where you are storing forensic artifacts collected from on-premises systems.
+
+> ![On-Premises URL](/img/on-premises-url.png)

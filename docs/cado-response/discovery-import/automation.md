@@ -1,16 +1,16 @@
 ---
-title: Detection Integrations (Beta)
+title: Automating collection from detections
 hide_title: true
 sidebar_position: 3
 ---
 
-# Introduction
+# How to automate collection from detections
 
 The 'Detections' area of the platform (/detections/integrations) enables customers to dramatically streamline the effectiveness of their SOC using end-to-end workflow investigation automation capabilities.
 
 Customers are able to easily connect different alert sources across cloud and on-prem systems, respond faster by automatically collecting and processing key data, as well as integrate actionable results to SIEMs, task managers, and other productivity tools.
 
-## Ingesting Alerts from an XDR
+## Collecting data after Crowdstrike and Defender alerts
 
 To get started, watch the video below which shows how to ingest alerts from Microsoft Defender. The same process also applies to CrowdStrike. In summary:
 
@@ -19,7 +19,12 @@ To get started, watch the video below which shows how to ingest alerts from Micr
 
 <video src="/img/detections-set-up.mp4" controls width="90%"></video>
 
-## Ingesting Alerts from AWS GuardDuty
+## Collecting data after alerts from other XDR platforms
+You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
+
+* SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
+
+## Collecting data after AWS GuardDuty alerts
 
 To get started, create an Environment. Navigate to 'Environments' (/environments) and select the 'Create environment' button. Give the environment a name, and choose the scopes to add to the environment by selecting 'Add group'. In the example below, we have created a scope which encompasses all EC2s across all accounts. You can optionally filter by regions and tags.
 
@@ -38,17 +43,12 @@ Next, create a detection rule for GuardDuty by selecting the 'GuardDuty' source 
 | Isolate Role | Isolates the IAM role attached to an EC2 instance. Isolated by adding a deny all inline policy to the given IAM role. | iam:GetInstanceProfile iam:PutRolePolicy |
 | Isolate Security Group |  Isolates the security group attached to and EC2 instance. Isolated by creating a security group, blanking it and replacing it on the EC2. | ec2:CreateSecurityGroup ec2:RevokeSecurityGroupEgress ec2:ModifyInstanceAttribute |
 
+## Collecting data after Wiz alerts
+For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
+](/cado-response/manage/integrations/cnapp/wiz).
+
 ## Managing Rules ##
 
 Detection rules can be managed in /detections/rules, where you are able to easy create, enable/disable, edit and delete rules.
 
 ![Manage Rules](/img/detections-rules.png)
-
-## Integration with Wiz
-For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
-](/cado-response/manage/integrations/cnapp/wiz).
-
-## Integration with other XDR platforms
-You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
-
-* SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook

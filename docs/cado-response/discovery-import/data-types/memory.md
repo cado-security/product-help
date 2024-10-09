@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# Memory Analysis
+# How to collect process memory with Cado
 
 You can perform a memory acquisition of a Windows or Linux system using Cado Host simply by clicking `Import > Cado Host` within the platform and running the pre-generated script on the host device. For more details on these steps, click [here](https://docs.cadosecurity.com/cado-host/deploy). Process memory collection is not currently supported on OSX. 
 

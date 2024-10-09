@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# Log & Artifact Types
+# What log and artifact types can Cado process?
 Cado Response supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
 ## What cloud logs can Cado import from cloud Storage?

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# File Types
+# What filetypes can Cado process?
 The Cado platform supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
 
 ### AWS Capture Formats
