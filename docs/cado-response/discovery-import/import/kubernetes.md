@@ -33,7 +33,9 @@ To acquire:
 
 ![Cado Host K8s UI](/img/cado-host-k8s.png)
 
-Please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23696755178769-Private-Cluster-and-Distroless-Collections) for more details on how to acquire from private clusters and distroless containers and how the implementation works.
+Please see the diagram below for a high-level flow of how this works:
+
+![Cado Host K8s Flow](/img/kubernetes-flow.png)
 
 ### Kubernetes RBAC Requirements
 Cado requires both write and execute access to containers, in order to download and execute the Cado Host binary to collect forensic artifacts from side containers. 
@@ -78,8 +80,6 @@ First connect to your EKS cluster with a command such as:
 To execute this command, please follow the instructions from AWS [here](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html).
 
 Then, execute the kubectl script generated at Import > Cado Host > Kubernetes.
-
-Please see our [Knowledge Base](https://cadosecurity.zendesk.com/) for more details.
 
 #### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
 Alternate options include Bastion Hosts, SSM, AWS Private link, AWS Cloud9, AWS VPN, AWS Direct Connect.

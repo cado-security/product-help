@@ -9,4 +9,14 @@ When you deploy Cado in AWS/Azure/GCP you can import data "cross-cloud" from AWS
 
 ![Cross Cloud Collection](/img/cross-cloud.png)
 
-Diagrams of how cross-cloud imports from [Azure](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259971240465-How-do-cross-cloud-imports-from-Azure-into-AWS-work) and [Google Cloud](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259790277649-How-do-Cross-Cloud-imports-from-GCP-into-AWS-work) operate, and [networking](https://cadosecurity.zendesk.com/hc/en-gb/articles/23260946428689-What-network-access-is-required-to-operate-cross-cloud-from-AWS), are available from our Knowledge Base.
+Diagrams of how cross-cloud imports work are available for:
+
+## AWS
+![AWS Cross](/img/aws-network.png)
+
+## Azure
+![Azure Imports](/img/azure-imports.png)
+![Azure Cross](/img/azure-cross.png)
+
+## Google Cloud
+![Google Cloud Imports](/img/gcp-imports.png)

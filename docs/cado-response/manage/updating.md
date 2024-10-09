@@ -23,7 +23,7 @@ For Terraform upgrades, it is strongly recommended to gracefully stop your curre
 
 # Update Details for Terraform and Custom Updates
 
-Please view our [knowledge base article](https://cadosecurity.zendesk.com/hc/en-gb/articles/23253323591569-How-can-I-see-the-latest-Update-AMIs-and-URLs-for-updating-AWS-Azure-and-GCP) for where to retrieve the latest AMI IDs and URLs for updating your Cado platform, and more details on how the Update Mechanism operates.
+Please view our public [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) for where to retrieve the latest AMI IDs and URLs for updating your Cado platform.
 
 This URL contains the information, with the latest release at the bottom of the JSON file:
 ```
