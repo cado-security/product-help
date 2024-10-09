@@ -18,7 +18,7 @@ For volume capture, set the options for what data you want to capture.
 ### Triage Capture
 To perform a faster triage collection on an EC2 instance using Cado Host, select the button 'Triage Acquisition'. Please note that this requires that SSM be enabled on the target instance. This will also collect memory from Linux systems.
 
-For more information about about what Cado Host collects see [Collected Artifacts](/cado-host/artifacts)
+For more information about about what Cado Host collects see [Collected Artifacts](/cado-response/discovery-import/cado-host)
 
 ![AWS EC2 Triage Acquisition ](/img/aws-ec2-triage-acquisition.png)
 

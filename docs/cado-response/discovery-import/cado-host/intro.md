@@ -16,7 +16,7 @@ On a target system Cado Host will collect:
 - Open files
 - Meta-data on running processes and network connections
 - Memory (Optional)
-For more, see [Collected Artifacts](/cado-host/artifacts)
+For more, see [Collected Artifacts](/cado-response/discovery-import/cado-host)
 
 # Use Case and Integrations
 Cado Host is also used by the Cado Platform to collect data from:
