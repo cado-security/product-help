@@ -1,8 +1,10 @@
 ---
-title: Manual Uploads
+title: Upload single file
 hide_title: true
 sidebar_position: 7
 ---
+
+# How to upload a single file to Cado Response
 
 
 You can also use Cado Host with the --single_file_unzipped parameter to upload a single file, such as a disk image or a previously collected Cado Host zip file.

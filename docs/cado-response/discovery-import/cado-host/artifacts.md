@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# Collected Artifacts
+# What artifacts are collected by Cado Host
 Cado Host collects a number of artifacts by default, based on the operating system.  Note that you can configure additional files and folders to be collected by defining the --additional_files parameter when running Cado Host.  See the `--additional_files` **[Command Line Parameters](cli)** for more details.
 
 ### Volatile Data
