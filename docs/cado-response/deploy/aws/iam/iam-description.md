@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 4
 ---
 
-## What IAM permissions does Cado use?
+# What IAM permissions does Cado use?
 
 - Required,RequiredForStartup, RequiredForStartup2: Required for core platform operation and to start and stop workers.
 - RequiredForEC2ImportAndCorePlatform: Required to start and stop workers, and to acquire EC2 volumes

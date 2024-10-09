@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 7
 ---
 
-## How to reduce KMS permissions in AWS
+# How to reduce KMS permissions in AWS
 
 The Cado platform will import EC2 instances with encrypted volumes, provided that the appropriate permissions are given to the CadoResponseRole.  
 This is granted by the default Cado IAM roles.
