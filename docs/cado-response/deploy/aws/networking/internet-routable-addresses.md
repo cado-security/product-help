@@ -17,9 +17,7 @@ You can choose a deployment that does not include the Public Elastic IP address 
 
 Please see the [AWS deployment overview](/cado-response/deploy/aws/cloudformation) for more information on how to deploy Cado in a private subnet.
 
-# Self Managing Network Access with Custom VPCs
+## Self Managing Network Access with Custom VPCs
 You can remove the requirement for publicly routable IP addresses if you have set up [VPC Endpoints](https://tomgregory.com/when-to-use-an-aws-s3-vpc-endpoint/) or another method such as a Proxy to connect Cado to required AWS Services.
 
 We highly recommend using the Cado default Cloudformation templates without changes, as we cannot support the creation and management of networks inside customer environments.
-
-For details on endpoints that the Cado platform requires, please see the [KB article](https://cadosecurity.zendesk.com/hc/en-gb/articles/23260537866385-What-AWS-endpoints-does-the-platform-require-access-to).

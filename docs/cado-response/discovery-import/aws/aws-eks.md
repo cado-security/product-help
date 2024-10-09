@@ -106,5 +106,7 @@ For a typical acquisition, import and processing will take a few minutes to comp
 
 
 ### Data Flow Diagram
-For a diagram of how our ECS acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258925265809-How-do-EKS-acquisitions-work).
+For a diagram of how our EKS acquisitions operate, please see below:
+
+![EKS Data Flow](/img/eks-collection.png)
 

@@ -17,5 +17,6 @@ Any acquisition from ECS and EKS will attempt to collect memory by default.
 For more information, see the [Memory Analysis](/cado-response/discovery-import/import/data-types/memory) page.
 
 ### Data Flow Diagram
-For a diagram of how our EC2 SSM acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23259323166225-How-do-EC2-collections-over-SSM-work).
+For a diagram of how our EC2 SSM acquisitions operate, please see below:
 
+![EC2 SSM Data Flow](/img/ec2-ssm.png)

@@ -90,5 +90,8 @@ Use the Import wizard to select an EC2 that has the SSM agent installed. Select 
 ![AWS EC2 Run Command - Selecting Saved Script](/img/aws-ec2-runcommand8.png)
 
 ### Data Flow Diagram
-For a diagram of how our EC2 disk acquisitions operate, please see our [Knowledge Base](https://cadosecurity.zendesk.com/hc/en-gb/articles/23258594209681-How-do-EC2-acquisitions-work-including-cross-account-and-the-IAM-role).
+For a diagram of how our EC2 disk acquisitions operate, please see below:
 
+![EC2 Disk Acquisition](/img/import-aws-ec2-cross.png)
+
+![EC2 Role Acquisition](/img/import-aws-ec2-role.png)
