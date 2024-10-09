@@ -20,7 +20,7 @@ To get started, watch the video below which shows how to ingest alerts from Micr
 <video src="/img/detections-set-up.mp4" controls width="90%"></video>
 
 ## Collecting data after alerts from other XDR platforms
-You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
+You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
 
 * SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
 
@@ -45,7 +45,7 @@ Next, create a detection rule for GuardDuty by selecting the 'GuardDuty' source 
 
 ## Collecting data after Wiz alerts
 For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
-](/cado-response/manage/integrations/cnapp/wiz).
+](/cado-response/integrations/cnapp/wiz).
 
 ## Managing Rules ##
 

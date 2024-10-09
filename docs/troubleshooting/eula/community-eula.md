@@ -7,7 +7,7 @@ sidebar_position: 2
 # DOCUMENT B
 
 :::info
-FOR ALL COMMERCIAL CUSTOMERS AND USERS OF CADO SOFTWARE, [**DOCUMENT A - END USER LICENSE AGREEMENT**](/eula/commercial-eula#end-user-license-agreement) SHALL APPLY.
+FOR ALL COMMERCIAL CUSTOMERS AND USERS OF CADO SOFTWARE, [**DOCUMENT A - END USER LICENSE AGREEMENT**](/troubleshooting/eula/commercial-eula#end-user-license-agreement) SHALL APPLY.
 
 FOR ALL COMMUNITY EDITION USERS OF CADO SOFTWARE, [**DOCUMENT B - COMMUNITY EDITION LICENSE AGREEMENT**](/eula/community-eula#community-edition-license-agreement) SHALL APPLY.
 :::
