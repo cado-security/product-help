@@ -1,7 +1,7 @@
 ---
 title: Import large EC2 instances
 hide_title: true
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 # How to import large AWS EC2 instances

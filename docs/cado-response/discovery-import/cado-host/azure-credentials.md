@@ -10,7 +10,7 @@ We now recommend using the automatically created temporary credentials generated
 :::
 
 
-# Creating Secure Azure Credentials
+# How to create Secure Azure Credentials
 In order to securely write to Azure, you'll need to create a limited access key called a Shared Access Signature.
 
 <iframe width="100%" height="628" src="https://www.youtube.com/embed/FQoAnYVPRLo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>

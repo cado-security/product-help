@@ -10,7 +10,7 @@ We now recommend using the automatically created temporary credentials generated
 :::
 
 
-# Creating Secure Credentials for AWS
+# How to create secure credentials for AWS
 Below we will create credentials with write-only access to AWS S3.
 
 <iframe width="100%" height="628" src="https://www.youtube.com/embed/OW6fwaUNVXU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>

@@ -1,7 +1,7 @@
 ﻿---
 title: Google Cloud Credentials
 hide_title: true
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 :::warning
@@ -9,7 +9,7 @@ We now recommend using the automatically created temporary credentials generated
 :::
 
 
-# Creating Google Cloud Credentials
+# How to create secure Google Cloud Credentials
 To create secure credentials for Google Cloud Storage, perform the following.  You can also watch the embedded video, which walks through the process.​
 - Create a Bucket
 - Create credentials for write-only access to the bucket

@@ -1,11 +1,11 @@
 ---
-title: Command Line Parameters
+title: Command line parameters
 hide_title: true
 sidebar_position: 7
 ---
 
 
-### Command Line Parameters
+# What are the Command Line parameters
 
 Below are the command line parameters supported by Cado Host.
 
