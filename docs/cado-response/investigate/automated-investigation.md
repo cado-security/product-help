@@ -27,7 +27,7 @@ Clicking the three dots and "View Cloud Resource" on a suspected compromised ass
 
 Response Actions make it possible to perform remediation actions in response to malicious activity being identified on a virtual machine. You can also trigger response actions using [Automation Rules](../discovery-import/automation.md).
 
-Currently, Response Actions only supports [AWS EC2 instances acquired as a triage collection](../discovery-import/import/aws/aws-ec2.md#triage-capture). To invoke an action, select the instance id from the "Suspected Compromised Assets" table
+Currently, Response Actions only supports [AWS EC2 instances acquired as a triage collection](/cado-response/discovery-import/aws/aws-ec2.md#triage-capture). To invoke an action, select the instance id from the "Suspected Compromised Assets" table
 
 Using the panel on the right - select the "Actions" tab, then the desired action and click "Invoke"
 ![Actions](/img/actions-tab.png)

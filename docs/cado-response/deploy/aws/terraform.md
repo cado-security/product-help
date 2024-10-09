@@ -33,7 +33,7 @@ sidebar_position: 2
   | proxy_cert_url | *(URL)* | URL to download proxy certificate from, leave blank to use proxy without a cert. |
 
 5. After the infrastructure is built out, there is a one-time initialization that is performed.  In total, the deploy and initialization process should take about 10-15 minutes with Terraform.
-6. You can then **[Log into Cado](../../manage/logging-in.md)**. Note that the initial username is admin and the password is the instance id for the Cado platform.  You'll be asked to change your password after first login.
+6. You can then **[Log into Cado](/cado-response/deploy/logging-in)**. Note that the initial username is admin and the password is the instance id for the Cado platform.  You'll be asked to change your password after first login.
 7. Lastly, you will need to import a license JSON file.
 
 ## Identifying the AMI ID

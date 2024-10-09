@@ -9,7 +9,7 @@ sidebar_position: 4
 Integrating with Microsoft Defender XDR allows you to select and kick off triage acquisition on hosts with the Defender agent installed using Live Response.
 
 Once you have kicked off the triage acquisition, Live Response will locate the endpoint running Defender agent
-and will run a [Cado Host](/cado-host/intro) command on the endpoint that performs collection of the triage package and uploads it to Cado for processing.
+and will run a [Cado Host](/cado-response/discovery-import/cado-host/intro) command on the endpoint that performs collection of the triage package and uploads it to Cado for processing.
 
 
 ## Prerequisites

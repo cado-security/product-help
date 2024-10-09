@@ -1,7 +1,7 @@
 ---
 title: Tagging Cado resources
 hide_title: true
-sidebar_position: 7
+sidebar_position: 9
 ---
 # How to tag Cado resources
 

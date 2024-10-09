@@ -67,10 +67,6 @@ const config = {
         redirects: [
           // handle redirects to the new URL format (for a short period of time only)
           {
-            to: '/cado-response/community-edition/community-intro',
-            from: '/community-edition',
-          },
-          {
             to: '/cado-response/manage/integrations/webhooks',
             from: '/cado-response/integrations/webhooks',
           },
@@ -91,10 +87,6 @@ const config = {
             from: '/cado-response/getting-started/deploy/azure-deploy',
           },
           {
-            to: '/cado-response/discovery-import/import/data-types/filetypes',
-            from: '/cado-response/importing-data/filetypes',
-          },
-          {
             to: '/cado-response/manage/integrations/soar/tines',
             from: '/cado-response/integrations/tines',
           },
@@ -109,14 +101,6 @@ const config = {
           {
             to: '/cado-response/manage/updating',
             from: '/cado-response/guides/updating',
-          },
-          {
-            to: '/cado-response/manage/logging-in',
-            from: '/cado-response/getting-started/logging-in',
-          },
-          {
-            to: '/cado-host/intro',
-            from: '/docs/cado-host/intro',
           },
         ],
       },

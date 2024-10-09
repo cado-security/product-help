@@ -1,10 +1,10 @@
 ---
 title: Chain of Custody
 hide_title: true
-sidebar_position: 5
+sidebar_position: 12
 ---
 
-# Chain of Custody
+# How is Chain of Custody maintained in Cado Response?
 
 Details of imported evidence, can be viewed at **Import** > **Evidence** and includes meta-data about imported evidence:
 ![Evidence](/img/coc_audit.png)

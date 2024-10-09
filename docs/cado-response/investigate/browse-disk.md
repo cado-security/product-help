@@ -23,6 +23,6 @@ This tab also shows any key events (alarms, suspicions) associated with this fil
 
 ![File Details 2](/img/file-details-2.png)
 
-For [running processes collected by Cado Host](/cado-host/artifacts.md#volatile-data) this tab also shows a diagram of information about running processes.
+For [running processes collected by Cado Host](/cado-response/discovery-import/cado-host/intro.md#volatile-data) this tab also shows a diagram of information about running processes.
 
 ![Process Table](/img/processes-table.png)
