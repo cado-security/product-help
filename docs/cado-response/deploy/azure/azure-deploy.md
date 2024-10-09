@@ -129,7 +129,7 @@ module.cado_scalable.azurerm_linux_virtual_machine.vm: Creation complete after 1
 
 The Resource ID can also be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
 
-It will take about 20 minutes to deploy, then you can **[Log into Cado](../../manage/logging-in)** 
+It will take about 20 minutes to deploy, then you can **[Log into Cado](/cado-response/deploy/logging-in)** 
 
 ### Testing the deployment
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.

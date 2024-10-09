@@ -16,4 +16,4 @@ If you have received a license file from your Sales representative, you can uplo
 
 If you do not have a license, please contact sales@cadosecurity.com 
 
-We also have a free edition of the Cado platform, [Cado Community Edition](/cado-response/community-edition/community-intro), which provides a community license.
+We also have a free edition of the Cado platform, [Cado Community Edition](/cado-response/community-intro), which provides a community license.

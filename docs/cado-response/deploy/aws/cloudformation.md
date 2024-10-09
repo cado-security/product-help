@@ -84,7 +84,7 @@ When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finishe
 
 ![Creation Complete](/img/create-complete.png)
 
-You can then **[Log into Cado](../../manage/logging-in.md)** 
+You can then **[Log into Cado](/cado-response/deploy/logging-in)** 
 
 :::tip
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
