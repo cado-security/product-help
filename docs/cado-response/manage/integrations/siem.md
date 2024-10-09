@@ -103,4 +103,4 @@ An example is provided below:
 ```
 
 # Log Analysis Considerations between SIEM & Cado
-See [here](/cado-response/discovery-import/import/data-types/logs#log-analysis-considerations) for content contrasting SIEM tools relative to Cado's capabilities.
+See [here](docs/cado-response/discovery-import/data-types/logs#log-analysis-considerations) for content contrasting SIEM tools relative to Cado's capabilities.
