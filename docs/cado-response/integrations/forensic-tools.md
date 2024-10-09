@@ -1,14 +1,12 @@
 ---
-title: Exporting Data
+title: Export to on-premise forensic tools
 hide_title: true
 sidebar_position: 1
 ---
 
-## Exporting Data from Cado Response
-Cado Response is designed to be an open platform to import and export data from.
+# How to export to on-premise forensic tools
 
-#### Exporting Collected Disk Images and Raw Data to Forensic Tools
-We collect:
+Cado collects:
 * AWS EC2 systems in DD format
 * Azure Virtual Machines in VHD format
 * GCP Instances in VMDK format
@@ -20,11 +18,8 @@ These formats can be downloaded from the relevant cloud console and imported int
 * https://www.x-ways.net/forensics/
 * https://www.opentext.com/products/encase-forensic
 
-#### Exporting Processed Data to SIEM Platforms
 
-Please see **[SIEM Integrations >](../manage/integrations/siem.md)**
-
-#### Centrally Preserving Data
+## Centrally Preserving Data
 If you are deployed into AWS, you can enable all processed evidence to be copied and preserved in a central S3 bucket.
 This setting can be enabled at **Settings** > **Preservation**.
 
