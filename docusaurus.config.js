@@ -67,14 +67,6 @@ const config = {
         redirects: [
           // handle redirects to the new URL format (for a short period of time only)
           {
-            to: '/cado-response/manage/integrations/webhooks',
-            from: '/cado-response/integrations/webhooks',
-          },
-          {
-            to: '/cado-response/manage/integrations/siem',
-            from: '/cado-response/integrations/siem',
-          },
-          {
             to: '/cado-response/investigate/timeline-search',
             from: '/cado-response/investigating/search',
           },
@@ -85,14 +77,6 @@ const config = {
           {
             to: '/cado-response/deploy/azure/azure-deploy',
             from: '/cado-response/getting-started/deploy/azure-deploy',
-          },
-          {
-            to: '/cado-response/manage/integrations/soar/tines',
-            from: '/cado-response/integrations/tines',
-          },
-          {
-            to: '/cado-response/manage/integrations/soar/cortex-xsoar',
-            from: '/cado-response/integrations/cortex-xsoar',
           },
           {
             to: '/cado-response/deploy/azure/azure-cross-tenancy-subscriptions',

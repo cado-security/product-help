@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# Microsoft Defender XDR Integration (Beta)
+# How to integrate with Microsoft Defender XDR
 
 Integrating with Microsoft Defender XDR allows you to select and kick off triage acquisition on hosts with the Defender agent installed using Live Response.
 

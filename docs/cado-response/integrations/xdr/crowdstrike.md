@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# CrowdStrike Integration
+# How to integrate with CrowdStrike
 
 Integrating with CrowdStrike Falcon allows you to select and kick off triage acquisition on hosts with the Falcon Sensor installed using CrowdStrike Real Time Response.
 

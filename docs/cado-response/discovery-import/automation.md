@@ -14,13 +14,13 @@ Customers are able to easily connect different alert sources across cloud and on
 
 To get started, watch the video below which shows how to ingest alerts from Microsoft Defender. The same process also applies to CrowdStrike. In summary:
 
-1. Create an XDR Connection. To do this, navigate to ‘Settings’ > ‘Integrations’ > ‘XDR’ (/settings/integrations/xdr). For information on the API permissions required, see [CrowdStrike](/cado-response/manage/integrations/xdr/crowdstrike) and [Defender](/cado-response/manage/integrations/xdr/defender) documentation.
+1. Create an XDR Connection. To do this, navigate to ‘Settings’ > ‘Integrations’ > ‘XDR’ (/settings/integrations/xdr). For information on the API permissions required, see [CrowdStrike](/cado-response/integrations/xdr/crowdstrike) and [Defender](/cado-response/integrations/xdr/defender) documentation.
 2. Create a detection rule in 'Detections' by selecting one of the threat detection provider sources in /detections/integrations.
 
 <video src="/img/detections-set-up.mp4" controls width="90%"></video>
 
 ## Collecting data after alerts from other XDR platforms
-You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/manage/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
+You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado-response/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
 
 * SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
 
@@ -45,7 +45,7 @@ Next, create a detection rule for GuardDuty by selecting the 'GuardDuty' source 
 
 ## Collecting data after Wiz alerts
 For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
-](/cado-response/manage/integrations/cnapp/wiz).
+](/cado-response/integrations/cnapp/wiz).
 
 ## Managing Rules ##
 

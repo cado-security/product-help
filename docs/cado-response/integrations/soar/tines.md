@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# Tines Integration
+# How to integrate with Tines
 
 Tines is a no-code automation platform for security analysts. Tines allows analysts to spend less time on routine repetitive tasks and allow them to focus on those areas where they can have the most impact. The tools feature pre-configured integrations with a variety of business and security tools, but for more sophisticated users, it also features the ability to hook into any publicly available API, including the Cado API.
 

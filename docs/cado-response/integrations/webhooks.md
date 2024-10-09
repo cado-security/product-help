@@ -1,9 +1,9 @@
 ---
 title: Webhooks
 hide_title: true
-sidebar_position: 5
+sidebar_position: 3
 ---
-# Webhook Integration
+# How to integrate with platforms using Webhooks
 A webhook integration allows you to automatically send information from the Cado platform to another application using a unique URL.
 
 ## Before You Begin

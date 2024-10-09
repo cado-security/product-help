@@ -11,9 +11,9 @@ You can quickly deploy Cado Host to Windows and Linux machines that may be compr
 Please note that macOS is not currently supported currently for SentinelOne and Defender.
 
 For more infofmation about setting up this integration see:
-- [SentinelOne Integration Setup page](/cado-response/manage/integrations/xdr/sentinelone.md)
-- [CrowdStrike Integration Setup page](/cado-response/manage/integrations/xdr/crowdstrike.md)
-- [Defender Integration Setup page](/cado-response/manage/integrations/xdr/defender.md)
+- [SentinelOne Integration Setup page](/cado-response/integrations/xdr/sentinelone.md)
+- [CrowdStrike Integration Setup page](/cado-response/integrations/xdr/crowdstrike.md)
+- [Defender Integration Setup page](/cado-response/integrations/xdr/defender.md)
 
 Once the integration is set up, from within an investigation click **Import from XDR**
 

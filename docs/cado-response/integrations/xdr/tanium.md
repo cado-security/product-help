@@ -5,7 +5,7 @@ sidebar_position: 4
 ---
 
 
-# Processing Tanium Live Response Collections in Cado
+# How to process Tanium Live Response Collections
 The Cado platform can process Tanium Live Response collections, including the trace database.
 
 ## Collecting a Live Response Package using Tanium
