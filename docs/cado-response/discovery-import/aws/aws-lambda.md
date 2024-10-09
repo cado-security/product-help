@@ -5,7 +5,7 @@ sidebar_position: 6
 ---
 
 
-# AWS Lambda
+# How to import data from AWS Lambda
 
 The Cado platform can acquire AWS Lambda functions which are serverless computing services.
 

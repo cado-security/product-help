@@ -1,12 +1,12 @@
 ---
-title: Kubernetes imports
+title: Kubernetes
 hide_title: true
 sidebar_position: 9
 ---
 # How to import data from Kubernetes
 
-## How does Cado import data from EKS/ECS/AKS/GKE by default?
-When acquiring data from Kubernetes containers:
+## How does Cado import data from EKS/ECS/AKS/GKE?
+By default, when acquiring data from Kubernetes containers:
 - Cado executes a shell script to download the Cado Host binary; then
 - Runs it to collect forensic artifacts; then
 - Uploads the collected files to cloud storage for processing.

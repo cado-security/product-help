@@ -4,12 +4,10 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# AWS ECS Support
+# How to import ECS from AWS
 
 The Cado platform will collect key logs and forensic artifacts from AWS ECS systems.
 
-
-# How to Import
 
 1) Go to **Import > Cloud**
 ![Import ECS 1](/img/import-cloud-focus.png)

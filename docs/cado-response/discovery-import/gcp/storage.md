@@ -3,7 +3,7 @@ title: Google Cloud Storage
 hide_title: true
 sidebar_position: 2
 ---
-# Google Cloud Storage Support
+# How to import from Google Cloud Storage
 
 The Cado platform supports acquisition of data from GCP Storage Buckets. The two main use cases for this are:
 

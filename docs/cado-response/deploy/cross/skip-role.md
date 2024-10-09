@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# How to access an AWS account cross-account within AWS without a Cross-Account Role via AMI Import
+# How to access an AWS account cross-account within AWS without a cross-account role via AMI Import
 
 By default, we recommend creating a role in each account that you want Cado to access. 
 This enables one click acquisition of data.

@@ -1,10 +1,10 @@
 ---
 title: RedHat Openshift
 hide_title: true
-sidebar_position: 1
+sidebar_position: 8
 ---
 
-# RedHat Openshift
+# How to import data from RedHat Openshift
 
 First, generate a collection script using Cado Host under **Import** > **Cado Host**.
 

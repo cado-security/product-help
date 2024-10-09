@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# Azure Kubernetes Service
+# How to import Azure Kubernetes Service (AKS) Containers
 
 The Cado platform will collect key logs and forensic artifacts from Azure Kubernetes Service containers.
 

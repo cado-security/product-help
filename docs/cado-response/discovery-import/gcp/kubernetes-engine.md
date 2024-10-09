@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# Google Cloud Kubernetes Engine
+# How to import from Google Cloud Kubernetes Engine
 
 The Cado platform will collect key logs and forensic artifacts from Google Cloud Kubernetes Engine containers.
 

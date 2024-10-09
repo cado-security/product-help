@@ -4,12 +4,31 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# AWS EKS
+# How to import data from AWS EKS
 
 The Cado platform will collect key logs and forensic artifacts containers running in an AWS EKS cluster.
 There are three core options when acquiring EKS:
 
 ![EKS Options](/img/eks-options.png)
+
+
+## Import Steps
+1) Go to **Import > Cloud**
+
+![Cado Import Screen showing the AWS EKS options](/img/import-cloud-focus.png)
+
+2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
+
+:::tip
+When selecting the role in the UI, select the role configured for the account where your EKS cluster resides
+:::
+
+![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
+
+3) Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
+For a typical acquisition, import and processing will take a few minutes to complete.
+
+![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
 
 
 ## Known Limitations
@@ -85,24 +104,6 @@ You must also make sure the following IAM permissions are attached to your IAM r
 	"eks:ListClusters",
 	"eks:DescribeCluster",
 ```
-
-## Import Steps
-1) Go to **Import > Cloud**
-
-![Cado Import Screen showing the AWS EKS options](/img/import-cloud-focus.png)
-
-2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
-
-:::tip
-When selecting the role in the UI, select the role configured for the account where your EKS cluster resides
-:::
-
-![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
-
-3) Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-For a typical acquisition, import and processing will take a few minutes to complete.
-
-![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
 
 
 ### Data Flow Diagram

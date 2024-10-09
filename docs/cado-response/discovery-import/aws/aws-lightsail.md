@@ -5,7 +5,7 @@ sidebar_position: 8
 ---
 
 
-# AWS Lightsail
+# How to import AWS Lightsail
 
 First create a snapshot of the Lightsail instance you want to import:
 ![Make Lightsail Snapshot](/img/make-lightsail-snapshot.png)

@@ -3,7 +3,7 @@ title: S3
 hide_title: true
 sidebar_position: 2
 ---
-# AWS S3 Support and Uploading On-Premise Files
+# How to import data from S3
 
 The Cado platform supports acquisition of data from AWS S3 buckets. The two main use cases for this are:
 

@@ -1,7 +1,7 @@
 ---
 title: Managing investigations
 hide_title: true
-sidebar_position: 2
+sidebar_position: 13
 ---
 
 # How to manage investigations

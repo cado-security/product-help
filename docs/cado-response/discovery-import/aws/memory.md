@@ -5,7 +5,7 @@ sidebar_position: 7
 ---
 
 
-# AWS Memory Analysis
+# How to import memory from AWS EC2
 You can acquire memory of Linux systems in EC2 by using the "Triage Acquisition" option under Import > EC2:
 
 ![AWS Memory](/img/alternate-ec2.png)

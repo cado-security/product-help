@@ -1,10 +1,10 @@
 ---
 title: Oracle Cloud Virtual Machines
 hide_title: true
-sidebar_position: 1
+sidebar_position: 6
 ---
 
-# Oracle Cloud Virtual Machines
+# How to import Oracle Cloud Virtual Machines
 
 First, you need to take a clone of the instance boot volume. Note that this will affect the instance as it performs a shutdown task and will restart the instance on completion.
 

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# Azure Storage Support
+# How to import Azure Storage
 
 The Cado platform supports acquisition of data from Azure Blob Storage. The two main use cases for this are:
 

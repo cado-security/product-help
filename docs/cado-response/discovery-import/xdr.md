@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# XDR platforms
+# How to import data from XDR platforms
 You can import data into the Cado platform via an eXtended Detection and Response (XDR) system.
 
 You can quickly deploy Cado Host to Windows and Linux machines that may be compromised through XDR vendors such as Crowdstrike, SentinelOne and Microsoft Defender.

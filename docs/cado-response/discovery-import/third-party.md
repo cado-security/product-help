@@ -1,10 +1,10 @@
 ---
-title: Third party tools
+title: Third party disk images & triage
 hide_title: true
 sidebar_position: 11
 ---
 
-# Importing from Third Party Tools
+# How to import on-premise disk images and triage collections from third-party tools
 
 ### Full Disk Collections using FTK Imager
 Triage collections are recommended instead of full disk images, as they are smaller and faster to process.

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 10
 ---
 
-# Google Workspace Logs
+# How to import Google Workspace logs
 
 ### Introduction
 

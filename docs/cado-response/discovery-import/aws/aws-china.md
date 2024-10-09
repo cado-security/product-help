@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 10
 ---
 
-# Importing from AWS China
+# How to import from AWS China
 
 The Cado platform does not currently support native deployment into AWS China regions. The following advice should only be taken  subject to your policies and local regulations on copying data cross-border.
 

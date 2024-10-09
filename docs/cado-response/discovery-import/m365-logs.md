@@ -1,12 +1,12 @@
 ---
-title: Microsoft SaaS logs
+title: Microsoft 365 and Entra ID
 hide_title: true
 sidebar_position: 10
 ---
 
-# Microsoft 365 and Entra ID Logs
+# How to import Microsoft 365 and Entra ID logs
 
-### Introduction
+## Introduction
 
 The Cado platform supports acquisition and processing of the following Microsoft 365 and Entra ID logs:
 
@@ -18,17 +18,17 @@ Note: the feature is currently in Beta, so the ‘SaaS Imports’ feature needs 
 
 Before these logs can be acquired using the Cado platform, a Microsoft Entra application and service principal needs to be set-up and configured in the Azure portal, which is explained in the following section. For more information, please refer to [Microsoft documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
 
-### Service Principal Set-up
+## Service Principal Set-up
 
 To support the acquisition of Microsoft 365 and Entra ID logs, a service principal needs to be set-up/configured. Instructions can be found here: [Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#set-up-authentication).
  
 For each section linked below please follow the Microsoft instructions. We have added additional configuration information for each section to help with the setup. 
 
-#### [Register an application with Microsoft Entra ID and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal)
+### [Register an application with Microsoft Entra ID and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal)
 
 * In our testing, we did not use a redirect URL while setting up the service principal. This is optional.
 
-#### Entra ID Roles and administrators
+### Entra ID Roles and administrators
 
 These steps are required to pull logs from Exchange:
 1. Open Entra ID.
@@ -48,19 +48,19 @@ These steps are required to pull logs from Exchange:
 6.  Save the change.
 7. Allow this to take effect and try the connector again within a few minutes.
 
-#### [Assign a role to the application](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#assign-a-role-to-the-application)
+### [Assign a role to the application](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#assign-a-role-to-the-application)
 
 * In our testing, we assigned the application to one of our subscriptions 
 * We applied the “Security Reader” role assignment to our application. 
 
-#### [Sign in to the application](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#sign-in-to-the-application)
+### [Sign in to the application](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#sign-in-to-the-application)
 
-#### [Set up Authentication](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#option-3-create-a-new-client-secret)
+### [Set up Authentication](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#option-3-create-a-new-client-secret)
 * In our testing, we used option 3 “Create a new client secret”
 * We did not use “key vault”. We stored our secret keys securely elsewhere.
 * Please note: If any changes are made to the service principal a new set of secrets need to be created/used
 
-#### [Grant tenant-wide admin consent to an application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal)
+### [Grant tenant-wide admin consent to an application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal)
 1. Navigate to to the [Microsoft Entra admin centre](https://entra.microsoft.com/#home)
 2. In the left hand panel select “Applications” then “App registrations”
 3. Under “All applications” search for your newly created application (Service principal) and click on it.
@@ -87,7 +87,7 @@ under “APIs my organization uses” search for “Office 365 Exchange Online�
 
 9. Once permissions are added you will need to “Grant Admin Consent”. This is done under Entra Admin Center > Enterprise Applications. For further instructions see: [Grant Tenant-wide Admin Consent](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane)
 
-### Log Acquisition
+## Log Acquisition
 
 Once the Microsoft Entra application and service principal has been set-up and configured in the Azure portal, these credentials need to be added to the Cado platform. To do this, navigate to ‘Settings’ > ‘Integrations’ > ‘Microsoft SaaS’ (/settings/integrations/microsoft) and select ‘Add Credential’. Enter the following details:
 
@@ -118,7 +118,7 @@ Finally, the user is requested to review their selections and proceed with the i
 
 When the acquisition and processing is completed, the logs will be available to view and search in the main timeline page. To help users with their search and analysis, we have mapped the following fields to Cado fields:
 
-#### M365 UAL
+### M365 UAL
 
 | UAL Field | Cado Field | Cado Facet Name |
 | --------- | ---------- | ----- |
@@ -126,14 +126,14 @@ When the acquisition and processing is completed, the logs will be available to 
 | UserID | user | Users |
 | Workload | sourcetype | Datatype |
 
-#### Entra ID Audit Logs
+### Entra ID Audit Logs
 
 | Audit log field | Cado Field | Cado Facet Name |
 | --------------- | ---------- | ----- |
 | InitiatedBy.User.IPAddress | source_hostname | Source Hostname |
 | InitiatedBy.User.UserPrincipalName | user | Users |
 
-#### Entra ID Sign-in Logs
+### Entra ID Sign-in Logs
 
 | Sign-in log field | Cado Field | Cado Facet Name |
 | ----------------- | ---------- | ----- |
