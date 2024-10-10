@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 10
 ---
 
-## Cado AI Investigator
+# What is Cado AI Investigator?
 
 Cado AI Investigator currently performs two key tasks:
 

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# Timeline Search
+# What is the timeline tab?
 The Cado platform includes an advanced search interface which supports complex queries.
 
 ### Faceted Search
