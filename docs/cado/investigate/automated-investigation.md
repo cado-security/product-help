@@ -15,10 +15,4 @@ The Automated Investigation includes:
 
 The timeline displays up to 50 events. Events are more likely to be included if they are malicious, tagged by a user, happened in rapid succession, etc.
 
-![Automated Investigation](/img/automated-investigation.png)
-
-## View Asset
-
-Clicking the three dots and "View Cloud Resource" on a suspected compromised asset opens up a sidebar containing metadata about the asset.
-
-![Metadata Sidebar](/img/metadata-sidebar.png)
+![Automated Investigation](/img/tutorial5.png)

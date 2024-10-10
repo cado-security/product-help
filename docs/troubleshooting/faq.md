@@ -1,5 +1,5 @@
 ---
-title: Service Level Agreements
+title: Service level agreements
 hide_title: true
 sidebar_position: 4
 ---

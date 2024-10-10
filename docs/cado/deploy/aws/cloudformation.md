@@ -6,11 +6,11 @@ sidebar_position: 1
 
 # How to deploy with Cloudformation
 
-# Quick Start
+# Quick start
 
 Click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml) to deploy the Cado platform via AWS Cloudformation with default options.
 
-## AWS CloudFormation Template
+## AWS CloudFormation template
 
 <iframe width="100%" height="628" src="https://www.youtube.com/embed/aMQOitmPLeE" title="Deploying with Cloudformation" frameborder="0" allowfullscreen></iframe>
 

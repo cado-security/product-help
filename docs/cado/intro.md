@@ -7,7 +7,7 @@ title: What is Cado
 # What is the Cado platform?
 Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when security teams need to investigate a threat in a modern environment, it’s incredibly complex and time consuming. The Cado platform leverages the scale, speed and automation of the cloud to expedite investigation and response.
 
-### Core Features
+### Core features
 - **Automated data capture** - Cado enables automated data capture across multi-cloud and ephemeral container environments, while also supporting investigations across on-premises systems.
 
 - **Parallel processing** - Cado is powered by a patent-pending cloud-native architecture that automatically scales up and down to provide rapid parallel data processing. 

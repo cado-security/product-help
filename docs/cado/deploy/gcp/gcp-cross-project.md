@@ -1,5 +1,5 @@
 ---
-title: Cross-Project Setup
+title: Cross-Project setup
 hide_title: true
 sidebar_position: 5
 ---

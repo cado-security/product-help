@@ -1,5 +1,5 @@
 ---
-title: AWS Credentials
+title: AWS credentials
 hide_title: true
 sidebar_position: 3
 ---

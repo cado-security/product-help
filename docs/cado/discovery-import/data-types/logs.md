@@ -1,5 +1,5 @@
 ---
-title: Log & Artifact Types
+title: Log & artifact types
 hide_title: true
 sidebar_position: 1
 ---
