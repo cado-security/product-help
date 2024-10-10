@@ -1,10 +1,10 @@
 ---
-title: Detections
+title: Adding detections
 hide_title: true
 sidebar_position: 9
 ---
 
-## Setting Up Detections
+# How to add additional detections to the Cado platform
 
 The Cado platform can integrate with a number of systems as well as incorporate custom Indicators of Compromise. These can be defined in *Settings - General Settings - Detection* 
 
