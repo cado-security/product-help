@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 id: community-intro
-title: Community Edition
+title: Community edition
 ---
 
 # What is Cado community edition

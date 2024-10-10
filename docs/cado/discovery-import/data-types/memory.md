@@ -1,5 +1,5 @@
 ---
-title: Memory Analysis
+title: Memory analysis
 hide_title: true
 sidebar_position: 3
 ---

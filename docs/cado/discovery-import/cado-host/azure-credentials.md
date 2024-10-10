@@ -1,5 +1,5 @@
 ---
-title: Azure Credentials
+title: Azure credentials
 hide_title: true
 sidebar_position: 4
 ---

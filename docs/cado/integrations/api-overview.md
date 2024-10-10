@@ -1,5 +1,5 @@
 ---
-title: API Overview
+title: API overview
 hide_title: true
 sidebar_position: 1
 ---

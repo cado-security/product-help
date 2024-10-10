@@ -1,5 +1,5 @@
 ---
-title: Collected Artifacts
+title: Collected artifacts
 hide_title: true
 sidebar_position: 3
 ---

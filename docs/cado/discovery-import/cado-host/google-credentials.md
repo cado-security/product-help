@@ -1,5 +1,5 @@
 ﻿---
-title: Google Cloud Credentials
+title: Google Cloud credentials
 hide_title: true
 sidebar_position: 3
 ---

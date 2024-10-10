@@ -1,5 +1,5 @@
 ---
-title: Worker Management
+title: Worker management
 hide_title: true
 sidebar_position: 6
 ---

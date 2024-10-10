@@ -1,10 +1,10 @@
 ---
-title: Automatically add cross-account access with AWS Organizations (Recommended)
+title: Automatically add cross-account access with AWS Organizations (recommended)
 hide_title: true
 sidebar_position: 3
 ---
 
-# How to automatically add cross-account access with AWS Organizations (Recommended)
+# How to automatically add cross-account access with AWS Organizations (recommended)
 
 :::tip
 This feature is now the recommended approach, but is currently in beta. To enable, go to *Settings - Experiments* and enable "AWS Organizations Account Discovery"

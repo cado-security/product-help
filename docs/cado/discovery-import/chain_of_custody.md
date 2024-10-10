@@ -1,5 +1,5 @@
 ---
-title: Chain of Custody
+title: Chain of custody
 hide_title: true
 sidebar_position: 12
 ---
