@@ -3,7 +3,7 @@ title: EC2 and EBS
 hide_title: true
 sidebar_position: 1
 ---
-# How to import AWS EC2 and EBS data into Cado Response
+# How to import AWS EC2 and EBS data into Cado
 
 Cado supports acquisition of EC2 instances. Select the region, and this will populate a list of EC2 instances available. You can filter the list of instances and buckets by instance ID, name, state or public IP address. Select the instance you wish to acquire.
 

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 6
 ---
 
-# Worker Management
+# What are the settings for Workers?
 This section covers the options available for managing workers spun up during processing jobs. These settings can be accessed under **Settings > General Settings**
 
 ## Processing

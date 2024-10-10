@@ -1,9 +1,9 @@
 ---
-title: Managing Users
+title: Manage users
 hide_title: true
 sidebar_position: 3
 ---
-# Managing Cado Users
+# How to manage users and authentication in Cado
 In the Cado platform you can grant access only to the data to which they need access - to both processed data within the platform, and resources or raw data residing in the cloud. 
 
 ### User Types

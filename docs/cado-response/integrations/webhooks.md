@@ -72,9 +72,9 @@ An example of a valid payload:
 
 ## Slack Integration
 
-<iframe width="100%" height="628" src="https://www.youtube.com/embed/izHu3gpSaS0" title="How to Integrate Slack with Cado Response" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="628" src="https://www.youtube.com/embed/izHu3gpSaS0" title="How to Integrate Slack with Cado" frameborder="0" allowfullscreen></iframe>
 
-You can use webhooks to send notifications to a Slack channel from Cado Response.
+You can use webhooks to send notifications to a Slack channel from Cado.
 
 1. See the [Slack documentation](https://api.slack.com/messaging/webhooks#create_a_webhook) on creating incoming webhooks for Slack. Once you have created an app with incoming webhooks copy the Webhook URL to your clipbard.
 2. In the Cado platform under **Settings > Integrations > Webhooks** select **New webhook**.

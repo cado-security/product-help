@@ -15,7 +15,7 @@ To leverage the integration between SentinelOne and Cado, you must have the Sent
 
 ## Leveraging Cado & SentinelOne Integration
 
-<iframe width="100%" height="628" src="https://www.youtube.com/embed/iIJjp28G6sk" title="Integrating SentinelOne with Cado Response" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="628" src="https://www.youtube.com/embed/iIJjp28G6sk" title="Integrating SentinelOne with Cado" frameborder="0" allowfullscreen></iframe>
 
 1. In the SentinelOne console, navigate to **Settings - Users - Service Users - Actions - Create New Service User**
 2. Your service user **must** be in Global Account scope, not a Site scope.

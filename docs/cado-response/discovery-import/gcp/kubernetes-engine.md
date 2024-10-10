@@ -31,7 +31,7 @@ For a typical acquisition, import and processing will take a few minutes to comp
 ![Cado showing the confirmation screen of a successful Kubernetes Engine container capture](/img/eks3.png)
 
 :::info
-To import GKE containers with Cado Response, the `iam.serviceAccounts.implicitDelegation` IAM permission added to the Service Account.
+To import GKE containers with Cado, the `iam.serviceAccounts.implicitDelegation` IAM permission added to the Service Account.
 
 Currently, for GKE import Cado only suports GCP accounts configured using Workload Identity Federation. See more in the [GCP Import Settings](/cado-response/deploy/gcp/gcp-settings#workload-identity-federation) page.
 :::

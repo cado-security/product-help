@@ -25,7 +25,7 @@ For more information, please see [here](https://www.cadosecurity.com/blog/invest
 Tanium can be used to deploy the Cado Host collection script to endpoints, as a [Tanium Package](https://help.tanium.com/bundle/ug_console_cloud/page/platform_user/authoring_packages.html).
 
 ## Getting the Cado Host Collection Script
-The Cado Host collection script can be downloaded from the Cado Response platform.  To do this, navigate to the `Project > Import > Cado Host`.
+The Cado Host collection script can be downloaded from the Cado platform.  To do this, navigate to the `Project > Import > Cado Host`.
 
 By default, scripts are generated with a pre-signed url to upload the collected data to cloud storage. The pre-signed URL is valid for 12 hours, so the script should be run within that time frame.
 

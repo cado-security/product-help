@@ -118,7 +118,7 @@ When importing a Default KMS encrypted EC2 for the first time, it is recommended
 }
 ```
 :::
-To import EC2s across accounts that are encrypted with AWS default keys, you will require the following permissions in the `myCadoResponseRole` in the **account where the Cado Response platform has been deployed**.  You will not need to alter your cross-account role.  These permissions are also located in the supplied terraform and cloudformation configurations.
+To import EC2s across accounts that are encrypted with AWS default keys, you will require the following permissions in the `myCadoResponseRole` in the **account where the Cado platform has been deployed**.  You will not need to alter your cross-account role.  These permissions are also located in the supplied terraform and cloudformation configurations.
 
 ```json
 {
@@ -186,6 +186,6 @@ If you are unable to obtain a full disk capture, you can bypass KMS by acquiring
 You can remove KMS from a volume by following the steps at https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/
 
 #### Debugging IAM Permissions for KMS
-Simple issues can be identified by the automated healthchecks present in Cado Response.  Alternatively (Or when more granular output is required), you can debug any IAM permissions using the AWS Policy Simulator at https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html.  
+Simple issues can be identified by the automated healthchecks present in Cado.  Alternatively (Or when more granular output is required), you can debug any IAM permissions using the AWS Policy Simulator at https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html.  
 
 

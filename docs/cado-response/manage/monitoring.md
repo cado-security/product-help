@@ -1,10 +1,10 @@
 ---
-title: Health Monitoring
+title: Monitor platform health
 hide_title: true
 sidebar_position: 11
 ---
 
-# Monitoring the Health and Proper Function of the Cado platform
+# How to monitor the platform health
 
 Cado has two types of checks to enable users to monitor the health and proper function of the platform - a [Platform Check](/cado-response/manage/monitoring#platform-check) and an [Account Check](/cado-response/manage/monitoring#account-check).
 
