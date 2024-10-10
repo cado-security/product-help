@@ -66,26 +66,166 @@ const config = {
       {
         redirects: [
           // handle redirects to the new URL format (for a short period of time only)
-          {
-            to: '/cado-response/investigate/timeline-search',
-            from: '/cado-response/investigating/search',
-          },
-          {
-            to: '/cado-response/deploy/aws/iam/cross-account-creation',
-            from: '/cado-response/guides/cross-account-creation',
-          },
-          {
-            to: '/cado-response/deploy/azure/azure-deploy',
-            from: '/cado-response/getting-started/deploy/azure-deploy',
-          },
-          {
-            to: '/cado-response/deploy/azure/azure-cross-tenancy-subscriptions',
-            from: '/cado-response/guides/azure-cross-tenancy-subscriptions',
-          },
-          {
-            to: '/cado-response/manage/updating',
-            from: '/cado-response/guides/updating',
-          },
+            {
+              to: '/cado/integrations/api-overview',
+              from: '/cado-response/manage/integrations/api-overview',
+            },
+            {
+              to: '/cado/deploy/gcp/gcp-settings',
+              from: '/cado-response/deploy/gcp/gcp-settings',
+            },
+            {
+              to: '/troubleshooting/eula/commercial-eula',
+              from: '/eula/commercial-eula',
+            },
+            {
+              to: '/cado/discovery-import/cado-host/deploy',
+              from: '/cado-host/deploy',
+            },
+            {
+              to: '/cado/deploy/aws/iam/aws-organizations',
+              from: '/cado-response/deploy/aws/iam/aws-organizations',
+            },
+            {
+              to: '/cado/integrations/xdr/crowdstrike',
+              from: '/cado-response/manage/integrations/xdr/crowdstrike',
+            },
+            {
+              to: '/cado/integrations/xdr/crowdstrike',
+              from: '/cado-response/manage/integrations/xdr/defender',
+            },
+            {
+              to: '/cado/deploy/aws/cloudformation',
+              from: '/cado-response/deploy/intro',
+            },
+            {
+              to: '/cado/deploy/aws/cloudformation',
+              from: '/cado-response/deploy/aws/overview',
+            },
+            {
+              to: '/cado/manage/updating',
+              from: '/cado-response/manage/updating',
+            },
+            {
+              to: '/cado/discovery-import/cado-host/deploy',
+              from: '/cado-host/intro',
+            },
+            {
+              to: '/cado/discovery-import/kubernetes',
+              from: '/cado-response/deploy/kubernetes',
+            },
+            {
+              to: '/cado/discovery-import/automation',
+              from: '/cado-response/discovery-import/automation',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-ami',
+              from: '/cado-response/discovery-import/import/aws/aws-ami',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-ec2',
+              from: '/cado-response/discovery-import/import/aws/aws-ec2',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-ecs',
+              from: '/cado-response/discovery-import/import/aws/aws-ecs',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-eks',
+              from: '/cado-response/discovery-import/import/aws/aws-eks',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-lambda',
+              from: '/cado-response/discovery-import/import/aws/aws-lambda',
+            },
+            {
+              to: '/cado/discovery-import/aws/aws-s3',
+              from: '/cado-response/discovery-import/import/aws/aws-s3',
+            },
+            {
+              to: '/cado/discovery-import/azure/azure-compute',
+              from: '/cado-response/discovery-import/import/azure/azure-compute',
+            },
+            {
+              to: '/cado/discovery-import/azure/azure-storage',
+              from: '/cado-response/discovery-import/import/azure/azure-storage',
+            },
+            {
+              to: '/cado/discovery-import/gcp/kubernetes-engine',
+              from: '/cado-response/discovery-import/import/azure/kubernetes-engine',
+            },
+            {
+              to: '/cado/discovery-import/data-types/filetypes',
+              from: '/cado-response/discovery-import/import/data-types/filetypes',
+            },
+            {
+              to: '/cado/discovery-import/data-types/import-types',
+              from: '/cado-response/discovery-import/import/data-types/import-types',
+            },
+            {
+              to: '/cado/discovery-import/gcp/engine-instance',
+              from: '/cado-response/discovery-import/import/gcp/engine-instance',
+            },
+            {
+              to: '/cado/discovery-import/gcp/kubernetes-engine',
+              from: '/cado-response/discovery-import/import/gcp/kubernetes-engine',
+            },
+            {
+              to: '/cado/discovery-import/gcp/storage',
+              from: '/cado-response/discovery-import/import/gcp/storage',
+            },
+            {
+              to: '/cado/discovery-import/google-workspace-logs',
+              from: '/cado-response/discovery-import/import/google-workspace-logs',
+            },
+            {
+              to: '/cado/discovery-import/intro',
+              from: '/cado-response/discovery-import/import/intro',
+            },
+            {
+              to: '/cado/discovery-import/m365-logs',
+              from: '/cado-response/discovery-import/import/m365-logs',
+            },
+            {
+              to: '/cado/discovery-import/xdr',
+              from: '/cado-response/discovery-import/import/on-prem/xdr-import',
+            },
+            {
+              to: '/cado/manage/updating',
+              from: '/cado-response/guides/updating',
+            },
+            {
+              to: '/cado/manage/updating',
+              from: '/cado-response/guides/updating',
+            },
+            {
+              to: '/cado/intro',
+              from: '/cado-response/intro',
+            },
+            {
+              to: '/cado/investigate/automated-investigation',
+              from: '/cado-response/investigate/automated-investigation',
+            },
+            {
+              to: '/cado/investigate/detections',
+              from: '/cado-response/investigate/detections',
+            },
+            {
+              to: '/cado/investigate/timeline-search',
+              from: '/cado-response/investigate/timeline-search',
+            },
+            {
+              to: '/cado/integrations/siem',
+              from: '/cado-response/manage/integrations/siem',
+            },
+            {
+              to: '/cado/integrations/webhooks',
+              from: '/cado-response/manage/integrations/webhooks',
+            },
+            {
+              to: '/release-notes',
+              from: '/release-notes',
+            },
         ],
       },
     ],
