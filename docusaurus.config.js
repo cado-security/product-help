@@ -66,26 +66,11 @@ const config = {
       {
         redirects: [
           // handle redirects to the new URL format (for a short period of time only)
-          {
+          /*{
             to: '/cado-response/investigate/timeline-search',
             from: '/cado-response/investigating/search',
           },
-          {
-            to: '/cado-response/deploy/aws/iam/cross-account-creation',
-            from: '/cado-response/guides/cross-account-creation',
-          },
-          {
-            to: '/cado-response/deploy/azure/azure-deploy',
-            from: '/cado-response/getting-started/deploy/azure-deploy',
-          },
-          {
-            to: '/cado-response/deploy/azure/azure-cross-tenancy-subscriptions',
-            from: '/cado-response/guides/azure-cross-tenancy-subscriptions',
-          },
-          {
-            to: '/cado-response/manage/updating',
-            from: '/cado-response/guides/updating',
-          },
+          */
         ],
       },
     ],
