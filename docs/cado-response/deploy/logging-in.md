@@ -16,7 +16,7 @@ You will see a browser notification stating that "Your connection is not private
 ![Login Page](/img/login.png)
 
 ### Default Login
-On first boot, the platform will take about 10 minutes to install, during which time, on the login URL page, you will see a message indicating that the system is "Installing Cado Response ...".
+On first boot, the platform will take about 10 minutes to install, during which time, on the login URL page, you will see a message indicating that the system is "Installing Cado ...".
 
 After initial install, you can login with the username `admin`.
 

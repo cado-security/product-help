@@ -17,7 +17,7 @@ Before getting started, please see the **[Integrations Overview >](../api-overvi
 Below are the instructions for setting up the Cado and Splunk SOAR integration:
 
 1. **[Create an API Access Key](#create-an-api-access-key)**
-2. **[Install and configure the Cado Response app in Splunk SOAR](#install-and-configure-the-cado-response-app)**
+2. **[Install and configure the Cado app in Splunk SOAR](#install-and-configure-the-cado-response-app)**
 3. **[Set your configuration variables](#configuration-variables)**
 4. **[Test your connection](#test-your-connection)**
 5. **[Setup your Playbooks](#playbooks)**
@@ -30,18 +30,18 @@ In order to allow third-party services to authenticate and interact with a Cado 
 In addition to the API Access Key, please ensure that the Splunk SOAR platform has access (network, firewall, etc) to make API calls to the Cado platform.
 :::
 
-### Install and Configure the Cado Response App
+### Install and Configure the Cado App
 
-In order to install and configure the Cado Response Splunk SOAR App, you will need the below information:
+In order to install and configure the Cado Splunk SOAR App, you will need the below information:
 
-- The latest version of the Cado Response Splunk SOAR App Add-on from the [**Splunkbase Marketplace**](https://splunkbase.splunk.com/app/6181/)
+- The latest version of the Cado Splunk SOAR App Add-on from the [**Splunkbase Marketplace**](https://splunkbase.splunk.com/app/6181/)
 - The URL to Cado, followed by `/api/v2`
 - The API Access Key
 
-To install the Cado Response App, from within Splunk SOAR, navigate to **Apps** and click the **INSTALL APP** button in the top right of the page, then upload the Cado Response tarball and click **INSTALL**.
+To install the Cado App, from within Splunk SOAR, navigate to **Apps** and click the **INSTALL APP** button in the top right of the page, then upload the Cado tarball and click **INSTALL**.
 
-If you have successfully installed the Cado Response App you will see it appear under your **Unconfigured Apps**. Next, do the following:
-1. Click **CONFIGURE NEW ASSET** on the Cado Response App. 
+If you have successfully installed the Cado App you will see it appear under your **Unconfigured Apps**. Next, do the following:
+1. Click **CONFIGURE NEW ASSET** on the Cado App. 
 2. Fill in the Asset Info fields with a name and description. 
 3. Navigate to Asset Settings 
 4. input your URL for the Cado platform
@@ -68,9 +68,9 @@ When running Actions, if the above inputs are required, they would be entered au
 
 When Cado is configured, you can validate your connection to make sure everything is set up correctly.
 
-Navigate to **Home -> Apps -> Cado Response Asset -> Asset Settings**. If you haven't already, Edit and enter the Cado URL and Secret Key. Save and Test Connectivity to ensure everything is connected as expected.
+Navigate to **Home -> Apps -> Cado Asset -> Asset Settings**. If you haven't already, Edit and enter the Cado URL and Secret Key. Save and Test Connectivity to ensure everything is connected as expected.
 
-If the following was successful, then you have correctly setup Splunk SOAR to interact with the Cado Response API.
+If the following was successful, then you have correctly setup Splunk SOAR to interact with the Cado API.
 
 ## Atomic Actions
 
@@ -81,7 +81,7 @@ Atomic Actions are the basic actions that can be chained together in _Playbooks_
 - Name: `list projects`
 - Identifier: list_projects
 - Type: Investigate
-- Description: List projects that are currently active in the Cado Response platform.
+- Description: List projects that are currently active in the Cado platform.
 
 **Action Parameters**
 
@@ -100,7 +100,7 @@ No Parameters required for this action.
 - Name: `list instances`
 - Identifier: list_instances
 - Type: Investigate
-- Description: List EC2 instances that are currently visible in the Cado Response platform.
+- Description: List EC2 instances that are currently visible in the Cado platform.
 
 **Action Parameters**
 
@@ -124,7 +124,7 @@ No Parameters required for this action.
 - Name: `list buckets`
 - Identifier: list_buckets
 - Type: Investigate
-- Description: List S3 buckets that are currently visible to the Cado Response platform.
+- Description: List S3 buckets that are currently visible to the Cado platform.
 
 **Action Parameters**
 
@@ -145,7 +145,7 @@ No Parameters required for this action.
 - Name: `list pipelines`
 - Identifier: list_pipelines
 - Type: Investigate
-- Description: List pipelines for specified project in Cado Response platform.
+- Description: List pipelines for specified project in Cado platform.
 
 **Action Parameters**
 
@@ -176,7 +176,7 @@ No Parameters required for this action.
 - Name: `get pipeline`
 - Identifier: get_pipeline
 - Type: Investigate
-- Description: Get pipeline details for specified pipeline ID in Cado Response platform.
+- Description: Get pipeline details for specified pipeline ID in Cado platform.
 
 **Action Parameters**
 
@@ -202,7 +202,7 @@ No Parameters required for this action.
 - Name: `loop pipeline`
 - Identifier: loop_pipeline
 - Type: Investigate
-- Description: Get pipeline details every 60 seconds for specified pipeline ID in Cado Response platform until it is terminated.
+- Description: Get pipeline details every 60 seconds for specified pipeline ID in Cado platform until it is terminated.
 
 **Action Parameters**
 
@@ -228,7 +228,7 @@ No Parameters required for this action.
 - Name: `create project`
 - Identifier: create_project
 - Type: n/a
-- Description: Create a project in Cado Response platform.
+- Description: Create a project in Cado platform.
 
 **Action Parameters**
 
@@ -250,7 +250,7 @@ No Parameters required for this action.
 - Name: `capture instance`
 - Identifier: capture_instance
 - Type: n/a
-- Description: Capture a specific EC2 instance for processing and analysis on the Cado Response platform.
+- Description: Capture a specific EC2 instance for processing and analysis on the Cado platform.
 
 **Action Parameters**
 
@@ -278,7 +278,7 @@ No Parameters required for this action.
 - Name: `capture bucket`
 - Identifier: capture_bucket
 - Type: n/a
-- Description: Capture contents of a specific S3 bucket processing and analysis on the Cado Response platform.
+- Description: Capture contents of a specific S3 bucket processing and analysis on the Cado platform.
 
 **Action Parameters**
 
@@ -331,9 +331,9 @@ From the START block you can drag the blue node to add a new block. Select the P
 
 #### Action: Creating the Project
 
-Drag the blue node from the prompt you just added to add an action. Select your configured Cado Response App to view the available actions you can carry out. You will want the **create project** action. Again here you can change the action name under **Advanced Settings**.
+Drag the blue node from the prompt you just added to add an action. Select your configured Cado App to view the available actions you can carry out. You will want the **create project** action. Again here you can change the action name under **Advanced Settings**.
 
-You can configure the action by clicking the Cado Response Asset and entering the output from the previous prompt into the **project_name** field. Do this by clicking on the field where a sidebar will pop up with a list of blocks currently used in the playbook. Select the prompt you just created, e.g. `Set_Project_Name`. This will open another sidebar with the data path outputs generated from the prompt. Select `summary.responses.0`. SAVE and the action will be created.
+You can configure the action by clicking the Cado Asset and entering the output from the previous prompt into the **project_name** field. Do this by clicking on the field where a sidebar will pop up with a list of blocks currently used in the playbook. Select the prompt you just created, e.g. `Set_Project_Name`. This will open another sidebar with the data path outputs generated from the prompt. Select `summary.responses.0`. SAVE and the action will be created.
 
 #### Action: List S3 Buckets
 

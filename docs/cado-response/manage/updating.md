@@ -5,7 +5,7 @@ sidebar_position: 9
 ---
 
 
-# Updating Your Cado Instance
+# How to update the Cado platform
 
 You can view version information and trigger updates by clicking **Updates** from the **Settings** menu.
 
@@ -18,7 +18,7 @@ In all cases, upgrades to the Cado platform are user-initiated and will not be i
 
 If you have deployed with Terraform, update the AMI ID (AWS) or VHD URL (Azure) or VMDK URL (GCP) and run ``terraform apply``.
 :::warning
-For Terraform upgrades, it is strongly recommended to gracefully stop your currently running instance in the console before proceeding with the upgrade.
+For Terraform upgrades, it is recommended to gracefully stop your currently running instance in the console before proceeding with the upgrade.
 :::
 
 # Update Details for Terraform and Custom Updates

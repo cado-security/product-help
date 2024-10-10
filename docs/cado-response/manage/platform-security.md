@@ -1,10 +1,10 @@
 ---
-title: Platform Security
+title: Platform security
 hide_title: true
 sidebar_position: 13
 ---
 
-# Platform Security
+# How does Cado Security keep your data safe?
 We make sure everything we create, from the idea stage to when it's ready for you, is built with the strongest security in mind. We have the best tools and systems in place to keep everything running smoothly and protected.
 
 Want to know more? Please contact sales@cadosecurity.com for more details on:

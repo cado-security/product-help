@@ -25,7 +25,7 @@ If you create an Access/Secret for uploading data to S3, we recommend you scope 
 - Giving the associated role [write-only](https://stackoverflow.com/questions/15076645/amazon-s3-write-only-access) access to a single s3 bucket
 - Use [temporary credentials](https://docs.cyberduck.io/protocols/s3/) if possible
 
-You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado Response will generate the credentials at Import > Cado Host.
+You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado will generate the credentials at Import > Cado Host.
 
 ### Data Flow Diagram
 For a diagram of how our S3 acquisitions operate, please see below:

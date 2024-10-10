@@ -14,7 +14,7 @@ Cross-cloud access of GCP is performed by designating a primary GCP project wher
 
 * Sign in to the GCP project which you are designating your primary project
 * Enable the [Cloud Build API](https://console.cloud.google.com/cloud-build/) if it is not already activated
-* Create a new [GCS bucket](https://cloud.google.com/storage/docs/creating-buckets) for storing evidence collected by Cado. This bucket will be selected during the import process in the Cado Response interface. 
+* Create a new [GCS bucket](https://cloud.google.com/storage/docs/creating-buckets) for storing evidence collected by Cado. This bucket will be selected during the import process in the Cado interface. 
 * Create a new Cado IAM role with the [permissions listed here](/cado-response/deploy/gcp/gcp-settings#creating-a-cado-role.).
 This role can be [created](https://cloud.google.com/iam/docs/creating-custom-roles#creating) at the organization level to give access to multiple projects under one service account.
 * Assign the new Cado IAM role to the Compute Engine principal - note that as of June 2024 the Compute Engine principal needs to be updated instead of the Cloud Build prinicpal due [to changes in GCP](https://cloud.google.com/build/docs/cloud-build-service-account-updates) Go to IAM and Admin -> IAM and locate the principle which looks like xxxxxxxxxxxx-compute@developer.gserviceaccount.com. Edit this principle to give it permission to the new Cado role. Take note of the principal name as it will be used to set up access to other GCP projects.

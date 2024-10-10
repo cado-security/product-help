@@ -100,7 +100,7 @@ The cado-host binary is available from our public s3 bucket so you can  use curl
 
 
 
-One of the switches for cado-host is –single_file_unzipped, which will upload a single file to the Cado response bucket using the presigned_data details from the command that’s generated from the import page:
+One of the switches for cado-host is –single_file_unzipped, which will upload a single file to the Cado bucket using the presigned_data details from the command that’s generated from the import page:
 
 ![Oracle](/img/oracle/image11.png)
 

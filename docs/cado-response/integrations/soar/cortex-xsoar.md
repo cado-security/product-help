@@ -8,7 +8,7 @@ sidebar_position: 6
 
 Cortex XSOAR is a powerful Security Orchestration, Automation, and Response (SOAR) system. XSOAR allows SoC teams to organize cases, incidents and automate investigation rapidly using a central War Room for collaboration. By integrating Cado with XSOAR, you're going to increase efficiency and productive by automating Cado's powerful data acquisition and processing.
 
-For more information, see the [Cortex XSOAR documentation for the Cado Response Pack.](https://xsoar.pan.dev/docs/reference/integrations/cado-response).
+For more information, see the [Cortex XSOAR documentation for the Cado Pack.](https://xsoar.pan.dev/docs/reference/integrations/cado-response).
 
 :::tip
 If you're confused by the terminology mentioned here, or have never used XSOAR before, please consider checking out the [XSOAR documentation](https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-tutorials.html).
@@ -28,7 +28,7 @@ Before properly getting started please see the following for general instruction
 
 ### Downloading from Marketplace
 
-In your Cortex XSOAR instance, click on the **Marketplace** section in the left-hand sidebar and search for `Cado Response` in the search bar.
+In your Cortex XSOAR instance, click on the **Marketplace** section in the left-hand sidebar and search for `Cado` in the search bar.
 
 ![Cado in the XSOAR marketplace](/img/xsoar-market.png)
 
@@ -185,7 +185,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 ### List Projects
 
 - Command: `cado-list-project`
-- Description: This command will allow you to list all the projects, or a single project, in Cado Response.
+- Description: This command will allow you to list all the projects, or a single project, in Cado.
 
 #### Arguments
 
@@ -215,7 +215,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
             "caseName": "Project Name_XSOAR",
             "created": "2022-01-17T12:21:46.613814",
             "deleted": false,
-            "description": "This is a project in Cado Response created through Cortex XSOAR!",
+            "description": "This is a project in Cado created through Cortex XSOAR!",
             "id": 1,
             "status": "Pending",
             "users": [
@@ -235,7 +235,7 @@ To test your settings, click the `Test` button in the setup screen. Ensure the r
 #### XSOAR Artifact Output
 |caseName|created|deleted|description|id|status|users|
 |---|---|---|---|---|---|---|
-| Project Name_XSOAR | 2022-01-17T12:21:46.613814 | false | This is a project in Cado Response created through Cortex XSOAR! | 1 | Pending | \{'display_name': 'admin', 'id': 1, 'is_admin': True, 'login_type': 0, 'username': 'admin'\} |
+| Project Name_XSOAR | 2022-01-17T12:21:46.613814 | false | This is a project in Cado created through Cortex XSOAR! | 1 | Pending | \{'display_name': 'admin', 'id': 1, 'is_admin': True, 'login_type': 0, 'username': 'admin'\} |
 
 ### List Project Pipelines
 

@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# Okta OAuth Integration
+# How to set-up the Okta OAuth Integration
 
 :::warning
 If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.

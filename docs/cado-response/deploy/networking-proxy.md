@@ -1,14 +1,10 @@
 ---
-title: Networking and Proxies
+title: Set up proxy access
 hide_title: true
 sidebar_position: 9
 ---
 
-# Networking and Proxies
-
-:::tip
-This feature is in beta. To enable go to *Settings - Experiments* and enable 'Proxy Settings'
-:::
+# How to set up proxy access
 
 Cado supports the use of proxies for communication between the Cado platform and services external to the environment in which you have deployed the Cado platform. This can include:
 
@@ -20,7 +16,10 @@ Cado supports the use of proxies for communication between the Cado platform and
 
 Cado supports proxy authentication using basic HTTP and server certificate TLS authentication.
 
-## Configure Proxy Access
+## Configure Proxy Access during installation
+Please see the relevant deployment page, on how to configure proxy settings during installation by setting the proxy and proxy cert URL parameters.
+
+## Configure Proxy Access after installation
 To configure proxy access go to *Settings - Advanced*
 
 Specify the URL of the proxy. If the proxy requires a user ID and password, include these as part of the URL in the format `http://user:password@hostname:port`

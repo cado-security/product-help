@@ -69,15 +69,15 @@ The extension part of the message is a placeholder for additional fields that ar
 | process_arguments | /sbin/dhclient -q -lf /var/lib/dhclient/dhclient--eth0.lease -pf /var/run/dhclient-eth0.pid eth0 | str | For memory evidence items, command line arguments from event. |
 | source_port | 443 | str | For memory evidence items, port of the source address. |
 | destination_port | 443 | str | For memory evidence items, port of the destination address. |
-| eventId | nEqI5nwBOI5t76pr_Z6g | Any | ID relating to the event generated in Cado Response. |
-| evidence_name | import_test.dd | str | Name of the evidence item imported into Cado Response. |
+| eventId | nEqI5nwBOI5t76pr_Z6g | Any | ID relating to the event generated in Cado. |
+| evidence_name | import_test.dd | str | Name of the evidence item imported into Cado. |
 | query_suggestions | [\{'str_detected': 'install_reader10_en_air_gtbd_aih.exe', 'url': '?query\=install_reader10_en_air_gtbd_aih.exe'\}] | List[Dict[str, Any]] | List of suggestions as to what to query next. |
 | alarm_help_text | Review the malware analysis playbook for advice on how to identify and respond to the malware. | str | Information to help the user undertstand what the alarm is about and how to respond. |
 | sha256 | 9473976b2769337ca9a7243bf1ceddb3335f9551e113240ebb0c53ae789878d5 | str | The hash of the file originating the event. |
 
 
 # CadoJson Format
-The CadoJson format represents the same fields that Cado Response uses internally.
+The CadoJson format represents the same fields that Cado uses internally.
 The fields are the same as described above for CEF.
 
 An example is provided below:
