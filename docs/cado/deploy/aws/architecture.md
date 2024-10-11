@@ -14,4 +14,4 @@ Cado consists of a few key components that interact with each other in order to 
 ![AWS architecture](/img/aws-architecture.png)
 
 This diagram is a simplified architecture.
-We support private deployments with no internet and proxy inspection to support environments with strict security requirements such as those under PCI and HIPAA (below).
+We support private deployments with no internet and proxy inspection to support environments with strict security requirements.
