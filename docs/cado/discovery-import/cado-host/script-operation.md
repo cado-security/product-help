@@ -15,7 +15,6 @@ Below is a breakdown of how the script works for Linux - the script is similiar 
 3. **Download verification**: After downloading, the script verifies that the binary exists.
 4. **Execution of Cado Host**: The binary is given executable permissions and run with specific options.
 5. **Clean-up**: After running, the script removes the temporary directory to clean up.
-6. **Error handling**: Throughout the process, appropriate error messages are shown if any step fails, ensuring transparency.
 
 
 ### Script Breakdown
