@@ -5,9 +5,10 @@ sidebar_position: 5
 ---
 
 # How does Cado support KMS in AWS?
-The Cado platform will import EC2 instances with encrypted volumes, provided that the appropriate permissions are given to the CadoResponseRole. 
 
-AWS provides default keys in your account. These provide default access with the statement below, and this default is supported by the platform out of the box.  For more information on KMS, you can visit the **[AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)** page.
+The Cado platform supports importing EC2 instances with encrypted volumes, provided the appropriate permissions are granted to the `CadoResponseRole`.
+
+By default, AWS provides keys in your account, which allow access based on the default policy below. This setup is supported by the Cado platform out of the box. For more information on KMS, refer to the [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/) documentation.
 
 ```json
 {
@@ -33,11 +34,12 @@ AWS provides default keys in your account. These provide default access with the
     }
 }
 ```
+This policy allows all `Principals` (users, roles, etc.) in the account and region specified in the `Condition` to perform the listed actions.
 
-As the Sid suggests: all `Principals` (users/roles etc) in the account and region specified in `Condition` have permission to perform the given actions.
+## Using Custom Keys
 
-### Custom Keys
-When using custom keys the required actions to CadoResponseRole are:
+When using custom KMS keys, the following actions must be granted to `CadoResponseRole`:
+
 ```json
 "kms:Encrypt",
 "kms:Decrypt",
@@ -46,12 +48,15 @@ When using custom keys the required actions to CadoResponseRole are:
 "kms:CreateGrant"
 ```
 
-There are a number of options available - but the recommended approach is adding required permissions to `myCadoResponseRole` directly and withholding `"CreateGrant"` for resources only:
-- You may not wish to give kms:CreateGrant permission to CadoResponseRole itself.
-- Your policy must feature a statement which provides access to CadoResponseRole with the above permissions (except CreateGrant).
-- You may then tighten the policy to only allow CreateGrant permission to AWS resources.
+### Recommended Permissions Configuration
 
-An sample policy is shown below (be sure to adjust `Principal` and add `Condition` according to your needs):
+The recommended approach is to grant permissions to `myCadoResponseRole` directly while withholding `"CreateGrant"` for specific resources:
+- You may choose not to grant `kms:CreateGrant` to `CadoResponseRole`.
+- Your policy should provide access to `CadoResponseRole` for the necessary permissions (excluding `CreateGrant`).
+- Limit the policy to allow `CreateGrant` permission only for AWS resources.
+
+A sample policy is shown below (adjust the `Principal` and add `Condition` as needed):
+
 ```json
 [
   {
@@ -61,11 +66,11 @@ An sample policy is shown below (be sure to adjust `Principal` and add `Conditio
         "AWS": "arn:aws:iam::012345678910:role/myCadoResponseRole"
     },
     "Action": [
-          "kms:Encrypt",
-          "kms:Decrypt",
-          "kms:ReEncrypt*",
-          "kms:GenerateDataKey*"
-      ],
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:ReEncrypt*",
+        "kms:GenerateDataKey*"
+    ],
     "Resource": "*"
   },
   {
@@ -87,20 +92,21 @@ An sample policy is shown below (be sure to adjust `Principal` and add `Conditio
 ]
 ```
 
-### Cross Region
-It is important to ensure that if you are acquiring cross region that your relevant policy statements still apply to the region of your Cado platform (e.g. that policy `Conditions` don't preclude the platform's access).
+## Cross-Region Support
 
-### Cross Account using Customer Managed Keys
-:::info
-During both of the following, be sure to reference the specific KMS key your EC2 is encrypted with to ensure minimal scoping.
-:::
-The simplest approach is to give `kms:CreateGrant` permissions to the role being assumed **in the target account EC2s are being acquired from**. See the **[Cross Account Acquisition](../iam/cross-account-creation.md)** instructions for more details on cross account permissions.
+When performing cross-region acquisitions, ensure that the relevant policy statements apply to the region where your Cado platform is located. Check that the policy `Conditions` do not block the platform's access.
 
-Alternatively the permissions in Custom Keys section are still valid, however both the primary and secondary account roles need to be accessible principals to `"kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*", kms:GenerateDataKey*"`.
+## Cross-Account Using Customer Managed Keys
 
-### Cross Account using AWS default keys
-:::warning
-When importing a Default KMS encrypted EC2 for the first time, it is recommended that you include the following permission for `"iam:CreateServiceLinkedRole"` in the myCadoResponseRole in the **account where the Cado platform has been deployed**.  Failure to do so may result in IAM errors until the permission has been added.  Once added, and a default encrypted EC2 import has succeeded, the permission can be removed.  While this permission is present in the supplied Terraform and CloudFormation templates, it is reproduced here for your convenience.  **[More information can be found in the AWS KMS documentation.](https://docs.aws.amazon.com/kms/latest/developerguide/using-service-linked-roles.html#slr-permissions-multi-region)**
+When acquiring cross-account resources, follow these guidelines:
+
+1. Grant `kms:CreateGrant` permissions to the role being assumed in the **target account** from which EC2 instances are being acquired. For more details, refer to the [Cross-Account Acquisition](../iam/cross-account-creation.md) documentation.
+
+2. Alternatively, you can use the permissions in the "Custom Keys" section. Ensure that both the primary and secondary account roles are allowed principals for the required actions: `kms:Encrypt`, `kms:Decrypt`, `kms:ReEncrypt*`, and `kms:GenerateDataKey*`.
+
+## Cross-Account Using AWS Default Keys
+
+When importing EC2 instances with default KMS-encrypted volumes for the first time, it is recommended to include the following permission in the `myCadoResponseRole` in the **account where the Cado platform is deployed**. Failure to do so may result in IAM errors until this permission is added. Once the import is successful, the permission can be removed.
 
 ```json
 {
@@ -117,8 +123,9 @@ When importing a Default KMS encrypted EC2 for the first time, it is recommended
 	}
 }
 ```
-:::
-To import EC2s across accounts that are encrypted with AWS default keys, you will require the following permissions in the `myCadoResponseRole` in the **account where the Cado platform has been deployed**.  You will not need to alter your cross-account role.  These permissions are also located in the supplied terraform and cloudformation configurations.
+More information can be found in the [AWS KMS documentation](https://docs.aws.amazon.com/kms/latest/developerguide/using-service-linked-roles.html#slr-permissions-multi-region).
+
+To import KMS-encrypted EC2 instances across accounts, the following permissions are required in `myCadoResponseRole` in the **account where the Cado platform is deployed**. There is no need to modify the cross-account role.
 
 ```json
 {
@@ -168,24 +175,25 @@ To import EC2s across accounts that are encrypted with AWS default keys, you wil
 }
 ```
 
-### Resolving Issues with KMS Support
-Getting the right KMS policies can prove difficult, particularly for cross-account Default KMS acquisitions and custom configurations.
+## Resolving KMS Support Issues
 
-#### How KMS Encrypted EBS Volumes are Processed
-If a volume is encrypted with a KMS key, the platform will attempt to access a snapshot of the volume if it's role has IAM permissions to do so.
-If not, it will attempt to generate a temporary key to re-encrypt a snapshot of the volume, and then create a new volume from that snapshot for processing.
-The exact details will depend upon your KMS key policy and IAM role permissions, with error handling to advise during processing if the role does not have the necessary permissions.
-For more details, please refer to the [AWS documentation](https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html).
+Configuring KMS policies can be challenging, especially for cross-account acquisitions or custom setups.
 
-#### Using Cado Host to bypass KMS
-If you are unable to obtain a full disk capture, you can bypass KMS by acquiring a system using Cado Host:
-- If the system has SSM enabled, select "Use Alternate Triage Acquisition" when acquiring the system
-- Connect to the system via SSH or RDP, and perform a collection of Forensic Artifacts by going to Import > Cado Host
+### How KMS-Encypted EBS Volumes Are Processed
 
-#### Bypassing KMS by creating an Unencrypted Volume
-You can remove KMS from a volume by following the steps at https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/
+When acquiring KMS-encrypted volumes, the platform attempts to access a snapshot of the volume using its IAM permissions. If access fails, the platform generates a temporary key to re-encrypt the snapshot and create a new volume for processing. The exact steps depend on your KMS key policy and IAM role permissions. Errors will be displayed if the necessary permissions are missing. For more information, refer to the [AWS documentation on ReEncryption](https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html).
 
-#### Debugging IAM Permissions for KMS
-Simple issues can be identified by the automated healthchecks present in Cado.  Alternatively (Or when more granular output is required), you can debug any IAM permissions using the AWS Policy Simulator at https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html.  
+### Using Cado Host to Bypass KMS
 
+If you cannot obtain a full disk capture, you can bypass KMS encryption by using Cado Host:
 
+- If SSM is enabled on the system, choose "Use Alternate Triage Acquisition" when acquiring the system.
+- Alternatively, connect via SSH or RDP and collect forensic artifacts by selecting "Import > Cado Host."
+
+### Creating an Unencrypted Volume to Bypass KMS
+
+You can remove KMS encryption from a volume by following the steps in this [AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/create-unencrypted-volume-kms-key/).
+
+### Debugging KMS IAM Permissions
+
+You can identify simple permission issues using Cado’s automated health checks. For more detailed debugging, use the [AWS Policy Simulator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html) to test policies and identify permission issues.
