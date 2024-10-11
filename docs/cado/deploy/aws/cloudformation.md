@@ -6,87 +6,85 @@ sidebar_position: 1
 
 # How to deploy with Cloudformation
 
-# Quick start
+## Quick Start
 
-Click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml) to deploy the Cado platform via AWS Cloudformation with default options.
+To quickly deploy the Cado platform via AWS CloudFormation with default options, click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml).
 
-## AWS CloudFormation template
+## AWS CloudFormation Template Overview
 
 <iframe width="100%" height="628" src="https://www.youtube.com/embed/aMQOitmPLeE" title="Deploying with Cloudformation" frameborder="0" allowfullscreen></iframe>
 
-To set up Cado in AWS you simply deploy our CloudFormation Template (CFT).  The CFT steps you through the process of configuring the platform stack.
+Deploying Cado in AWS is simple using our CloudFormation Template (CFT), which walks you through configuring the platform stack. 
 
-1. If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive a link to the Cado CloudFormation Template in order to get started. If you have not, reach out to sales@cadosecurity.com for more details.
+If you're working with the Cado Sales team or using a free trial, you will receive a link to the CloudFormation Template to begin deployment. If you haven't received it yet, contact sales@cadosecurity.com.
 
-A number of CloudFormation templates are available to deploy Cado into your AWS environment. These include:
-- [DeployCloudFormationPublic.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml) - This template creates an Amazon EC2 Instance with an associated IAM Role with required access. This deployment includes a public IP address and can be accessed directly.
-- [DeployCloudFormationPrivate.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPrivate.yaml) - This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
-- [DeployCloudFormationCustomVPC.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPC.yaml) - This template deploys into an existing VPC. The associated template [DeployCloudFormationCustomVPCNetworking.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPCNetworking.yaml) can be used to create the required networking within this VPC.
-- [DeployCloudFormationGovCloud.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationGovCloud.yaml) - For deployment into AWS GovCloud. This template includes an Amazon Load Balancer. The instance won't have a public IP and will be accessed via the ALB.
+### Available CloudFormation Templates
 
-Additionally, a High Availability (HA) CloudFormation template is available for deployment (below).
+Several CloudFormation templates are available, depending on your deployment requirements:
 
-2. Once you receive the link to the Cado CloudFormation Template, click the link to open the AWS CloudFormation Management Console.
+- **[DeployCloudFormationPublic.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml):** Creates an EC2 instance with an IAM role. This template deploys with a public IP address for direct access.
+- **[DeployCloudFormationPrivate.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPrivate.yaml):** Deploys an EC2 instance behind a load balancer without a public IP. Access is via the ALB.
+- **[DeployCloudFormationCustomVPC.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPC.yaml):** Deploys into an existing VPC. Use [DeployCloudFormationCustomVPCNetworking.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPCNetworking.yaml) for creating the necessary networking within this VPC.
+- **[DeployCloudFormationGovCloud.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationGovCloud.yaml):** For deploying into AWS GovCloud. Like the private template, it includes a load balancer and no public IP.
 
-3. On Step 1 (Specify template), do not change the default **Template is ready** and **Amazon S3 URL** settings.   Click **Next**
+For a High Availability (HA) deployment, contact Cado for the appropriate template.
 
-4. On Step 2 (Specify stack details), give your stack an appropriate Stack Name, for example: `CadoResponse` and enter the parameters as outlined below:
+### Steps for Deployment
 
-    ### Parameters
+1. After receiving the CloudFormation template link, click it to open the AWS CloudFormation Management Console.
+
+2. In **Step 1 (Specify template)**, leave the default settings (**Template is ready** and **Amazon S3 URL**) unchanged. Click **Next**.
+
+3. In **Step 2 (Specify stack details)**, name your stack (e.g., `CadoResponse`) and enter the following parameters:
+
+    #### Parameters Overview:
 
     | Parameter Name | Value | Description |
     | -------------- | ----- | ----------- |
-    | Instance type for Cado EC2 Server | `t3a.xlarge` | For enterprise use we recommend at minimum a t3a.xlarge as the instance type. |
-    | Key pair for Cado EC2 Server | *(choose your keypair)* | This key pair is used to enable SSH access to the Cado instance. This is not needed for normal operation, but is helpful should Cado Support ask for additional logs. |
-    | Allowed source IP addresses for connection to SSH | *(enter ip range)* | Enter details of your IP address/ IP address ranges that will be used to connect to SSH services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing SSH access |
-    | Allowed source IP addresses for connection to HTTPS | *(enter ip range)* |Enter details of your IP address/ IP address ranges that will be used to connect to HTTPS services. The IPv4 address range is specified in the CIDR notation e.g. 192.168.0.1/24. It is strongly recommended following the principle of least privilege and restrict this to only those IPs needing HTTPS access |
-    | VPC CIDR | *(enter ip range)* | The Subnet the Cado VPC will use. Specify the IPv4 address range as a Classless Inter-Domain Routing (CIDR) block. |
-    | EFSArchive | `AFTER_30_DAYS` | EFS - move data to infrequent storage after X days. |
-    | InstanceVolumeSize | `1000`| EC2 instance volume required in GBit. |
-    | S3ArchiveTime | `30` | Move S3 data to s3 glacier storage if not used after X days |
-    | S3GlacierDelete | `365` | Delete S3 glacier storage data after X days. |
-    | AvailabilityZoneA | *(choose your AZ)* | The Availability Zone used by the primary subnet. |
-    | AvailabilityZoneB | *(choose your AZ)* | The Availability Zone used by the secondary subnet. |
-    | FeatureFlagPlatformUpgrade | `True` | Enables the platform to perform native upgrades. |
-    | CertificateARN | *(enter certificate arn)* | The ARN of the Certificate that will be assigned to the Application Load Balancer. Not used unless FeatureFlagDeployWithALB is True |
-    | Proxy | *(https://user:pass@1.2.3.4:1234)* | Optional Proxy URL to use for outbound connections in format |
-    | ProxyCertUrl | *(url)* | URL to download optional Proxy Certificate from. |
+    | Instance type for Cado EC2 Server | `t3a.xlarge` | Recommended minimum instance size for enterprise use. |
+    | Key pair for Cado EC2 Server | *(choose your keypair)* | Used for SSH access. Not required for standard use, but useful for support if needed. |
+    | Allowed source IP for SSH | *(enter IP range)* | Specify IP addresses or ranges for SSH access (CIDR format). Follow the least privilege principle. |
+    | Allowed source IP for HTTPS | *(enter IP range)* | Specify IP addresses or ranges for HTTPS access (CIDR format). |
+    | VPC CIDR | *(enter IP range)* | Define the CIDR block for the VPC Subnet. |
+    | EFSArchive | `AFTER_30_DAYS` | Move data to infrequent access storage after 30 days. |
+    | InstanceVolumeSize | `1000` | Specify required EC2 volume size in GB. |
+    | S3ArchiveTime | `30` | Move S3 data to Glacier after 30 days of inactivity. |
+    | S3GlacierDelete | `365` | Delete Glacier storage data after 365 days. |
+    | AvailabilityZoneA | *(choose your AZ)* | The primary subnet's availability zone. |
+    | AvailabilityZoneB | *(choose your AZ)* | The secondary subnet's availability zone. |
+    | FeatureFlagPlatformUpgrade | `True` | Enables automatic platform upgrades. |
+    | CertificateARN | *(enter ARN)* | The ARN of the certificate for the Application Load Balancer (if FeatureFlagDeployWithALB is `True`). |
+    | Proxy | *(URL format)* | Optional proxy URL for outbound connections. |
+    | ProxyCertUrl | *(URL)* | Optional URL to download the proxy certificate. |
 
+    :::tip
+    We recommend setting **InstanceVolumeSize** to at least 500GB. The instance should be sized to about 20% of the data you plan to store. For example, for 5TB of data, allocate 1000GB of disk space. You can delete old investigations to free up space.
+    :::
 
-:::tip
-  We recommend a minimum setting of 500GB for InstanceVolumeSize. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Investigations can always be deleted to recover space.
-:::
+4. Click **Next**.
 
-6. Click **Next**
-
-7. On Step 3 (Configure stack options), click **Next** again (unless you require custom settings). If you require custom settings, please contact Cado Security
+5. In **Step 3 (Configure stack options)**, unless you need custom settings, click **Next**. For custom settings, contact Cado Security.
 
     ![Step 3](/img/cft-step3.png)
 
     :::info
-    For more information on available stack options, see [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html).
+    For more information on stack options, refer to the [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html).
     :::
 
-8. Click **Next**
-
-9. Review the details that have been applied and click **Create Stack**
+6. Review your configuration and click **Create Stack**.
 
     :::info
-    The Cado IAM policy defines which resources are accessible and which actions are allowed by the Cado software. If an IAM role has not been applied in *Step 3 (Configure stack options)* tick the check box for `I acknowledge that AWS CloudFormation might create IAM resources`.  The default IAM policy created by the Cloudformation template follows the principles of least privilege and only allows those actions needed by the Cado platform and, when able, are restricted based on tagging.  The exact IAM permissions used within Cado, can be found within the Cloudformation Template.
+    Ensure to check the box for "I acknowledge that AWS CloudFormation might create IAM resources" if an IAM role was not applied in Step 3. The IAM policy created by the CloudFormation template follows the principle of least privilege, restricting access to only the necessary resources and actions.
     :::
-
 
 ### Deployment Time
 
-Deploying the CloudFormation stack will take approximately fifteen minutes, followed by another ten minutes for the completed stack to run an installation and update process.
+Deployment takes approximately 15 minutes, with an additional 10 minutes for the stack to complete installation and updates.
 
-When the CFT stack has a status of `CREATE_COMPLETE`, CloudFormation has finished creating the infrastructure for Cado.
+Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and you can **[log into Cado](/cado/deploy/logging-in)**.
 
 ![Creation Complete](/img/create-complete.png)
 
-You can then **[Log into Cado](/cado/deploy/logging-in)** 
-
 :::tip
-After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
+After deployment, you can import test data from the "Help" menu to verify that everything is functioning correctly.
 :::
-

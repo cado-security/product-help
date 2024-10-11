@@ -4,38 +4,55 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to automatically create a cross-account IAM role in AWS
+# How to automatically deploy a cross-account IAM Role in AWS
 
-Now we now reccomend using [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) to manage multiple AWS accounts.
+We now recommend using [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) to manage multiple AWS accounts efficiently.
 
-## Using CloudFormation StackSets to deploy IAM Policy and Role in target AWS accounts
+## Automating IAM Policy and Role Deployment with CloudFormation StackSets
 
-To automate the creation of the IAM Policy and Role in each target AWS Account via CloudFormation StackSets across your AWS organization, you can follow the steps below. More details about CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
+To automate the creation of the IAM Policy and Role in multiple AWS accounts within your organization, you can use AWS CloudFormation StackSets. This method allows you to deploy the necessary IAM roles and policies across all target accounts in your organization.
 
-![Stacks1](/img/stacks1.png)
+More information on CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html).
 
-1. Go to "StackSets" from your master StackSet account that is enabled to deploy into other accounts.
+### Steps to Deploy the IAM Policy and Role using CloudFormation StackSets
 
-  ![StackSets Role](/img/stacks2.png)
+1. **Open StackSets**  
+   From your master StackSet account (the account enabled to deploy resources into other AWS accounts), navigate to "StackSets."
 
-2.  Click **Create StackSet**
+   ![StackSets Role](/img/stacks2.png)
 
-3. Enter the S3 URL as https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json then click **Next**:
+2. **Create a New StackSet**  
+   Click **Create StackSet**.
 
-  ![Stacks3](/img/stacks3.png)
+3. **Enter the CloudFormation Template URL**  
+   Enter the S3 URL for the CloudFormation template:  
+   ```
+   https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json
+   ```  
+   Then, click **Next**.
 
-4. Click **Next** through the next two dialogues, and under "Create StackSet" select any region (this works as IAM is global):
+   ![Stacks3](/img/stacks3.png)
 
-  ![Stacks4](/img/stacks4.png)
+4. **Proceed Through the Setup**  
+   Click **Next** through the following configuration steps.
 
-5. Once deployed, this will then create a IAM Policy and IAM Role in each target AWS account, that you can view in IAM:
+5. **Select Region**  
+   Under "Create StackSet," select any region (IAM roles are global, so this can be any region).
 
-  ![Stacks5](/img/stacks5.png)
+   ![Stacks4](/img/stacks4.png)
+
+6. **Deploy the StackSet**  
+   Once deployed, this will create the required IAM Policy and IAM Role in each target AWS account. You can verify the role and policy by navigating to **IAM > Roles** in the target AWS accounts.
+
+   ![Stacks5](/img/stacks5.png)
 
 :::tip
-You will then need to add the newly created cross-account IAM Role ARN to the Cado platform, using the steps outlined [here](#step-2-add-the-target-aws-role-arn-to-the-cado-platform) or if you choose to automate the process, the steps outlined [here](#automating-cado-cross-account-creation)
+After deploying the cross-account IAM roles, you will need to add the newly created Role ARN to the Cado platform. Follow the steps outlined [here](#step-2-add-the-target-aws-role-arn-to-the-cado-platform), or to automate this process, refer to [Automating Cado Cross-Account Creation](#automating-cado-cross-account-creation).
 :::
 
-## Automating Cado Cross-account addition to the Cado UI
+## Automating Cross-Account Addition in Cado
 
-As mentioned previously, the second step to adding cross-account access is to add the newly created cross-account IAM Role ARN to the Cado platform. This enables the new AWS account within the Cado platform. To automate this process via the Cado APIs, please see the example Cado API for adding AWS credentials [here](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
+Once the cross-account IAM role is created, the next step is to add the IAM Role ARN to the Cado platform. This enables access to the target AWS accounts within Cado.
+
+To automate this process via the Cado API, see the example script for adding AWS credentials in the Cado platform:  
+[Example API Script for Adding AWS Credentials](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
