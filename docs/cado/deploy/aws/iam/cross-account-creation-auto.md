@@ -1,10 +1,12 @@
 ---
-title: Automatically create a cross-account role
+title: Automatically deploy a cross-account role with StackSets
 hide_title: true
 sidebar_position: 2
 ---
 
 # How to automatically create a cross-account IAM role in AWS
+
+Now we now reccomend using [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) to manage multiple AWS accounts.
 
 ## Using CloudFormation StackSets to deploy IAM Policy and Role in target AWS accounts
 
