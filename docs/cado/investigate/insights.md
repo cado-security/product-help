@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # What is the Insights tab?
 
-The Overview tab provides a high-level view of data in the investigation.
+The Insights tab provides a high-level view of data in the investigation.
 
 ![Insights tab](/img/Insights.png)
 
