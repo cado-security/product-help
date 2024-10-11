@@ -4,10 +4,6 @@ hide_title: true
 sidebar_position: 8
 ---
 
-Here is the requested knowledge base article in markdown format:
-
----
-
 # How does the Cado Host deployment script operate?
 
 The Cado Host script is used to download, execute, and clean up the Cado Host binary from a system.
