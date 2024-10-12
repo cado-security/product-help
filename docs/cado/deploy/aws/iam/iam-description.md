@@ -8,8 +8,6 @@ sidebar_position: 4
 
 The Cado platform requires specific IAM permissions to operate effectively, depending on the tasks you need it to perform. Below is a clear breakdown of the different permission groups and their purposes:
 
-Here’s the rewritten information in a table format for clarity:
-
 | **Permission Group**                                      | **Purpose**                                                                                                          |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | **Core Platform and Worker Operations**                   |                                                                                                                      |
@@ -19,6 +17,9 @@ Here’s the rewritten information in a table format for clarity:
 | RequiredForEC2ImportAndCorePlatform                       | Required to start/stop workers and acquire EC2 volumes.                                                              |
 | **Health Checks**                                         |                                                                                                                      |
 | RequiredToCheckPolicy                                      | Needed for health checks to ensure safe operation of the core platform.                                              |
+| **Health Check Operations**                               |                                                                                                                      |
+| RequiredForHealthChecks                                    | Needed for performing health checks to ensure core platform safety.                                                  |
+| **Native Updates with ALB**                               |                                                                                                                      |
 | **Cross-Account Operations**                              |                                                                                                                      |
 | RequiredForCrossAccountAccess                              | Required for cross-account operations between AWS accounts.                                                          |
 | **Accessing Cado S3 Bucket**                              |                                                                                                                      |
@@ -47,9 +48,6 @@ Here’s the rewritten information in a table format for clarity:
 | RequiredForResponseActionIsolateEc2                        | Required to isolate EC2 instances (optional if isolation is not needed).                                              |
 | **AMI Imports**                                           |                                                                                                                      |
 | RequiredForAmiImports                                      | Permissions scoped to the Cado copy of the AMI during import.                                                        |
-| **Health Check Operations**                               |                                                                                                                      |
-| RequiredForHealthChecks                                    | Needed for performing health checks to ensure core platform safety.                                                  |
-| **Native Updates with ALB**                               |                                                                                                                      |
 | RequiredForNativeUpdatesWithALB                            | Required for performing native updates using an Application Load Balancer (ALB), optional if ALB is not used.         |
 | **GuardDuty Monitoring**                                  |                                                                                                                      |
 | RequiredForGuardDutyMonitoring                             | Needed for GuardDuty monitoring, optional if not using GuardDuty automation.                                          |

@@ -5,18 +5,20 @@ sidebar_position: 1
 ---
 # How do cross cloud imports work in Cado?
 
-When you deploy Cado in AWS/Azure/GCP you can import data "cross-cloud" from AWS/Azure/GCP. **Cross cloud** means that Cado is deployed in one cloud environment, but imports data from another.
+Cado allows you to import data across different cloud environments, meaning that you can deploy Cado in one cloud (AWS, Azure, or Google Cloud) and import data from another. This is referred to as **cross-cloud** importing.
 
-![Cross Cloud Collection](/img/cross-cloud.png)
+In a cross-cloud setup, Cado can seamlessly acquire data from cloud environments other than where the platform is deployed, enabling flexible and comprehensive data collection across multiple cloud providers.
 
-Diagrams of how cross-cloud imports work are available for:
+![Cross-Cloud Collection](/img/cross-cloud.png)
 
-## AWS
-![AWS Cross](/img/aws-network.png)
+Below are diagrams showing how cross-cloud imports work for each cloud provider:
 
-## Azure
+### AWS
+![AWS Cross-Cloud Imports](/img/aws-network.png)
+
+### Azure
 ![Azure Imports](/img/azure-imports.png)
-![Azure Cross](/img/azure-cross.png)
+![Azure Cross-Cloud Imports](/img/azure-cross.png)
 
-## Google Cloud
+### Google Cloud
 ![Google Cloud Imports](/img/gcp-imports.png)
