@@ -1,16 +1,12 @@
 ---
 title: Automatically deploy a cross-account role with StackSets
 hide_title: true
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # How to automatically deploy a cross-account IAM Role in AWS
 
-We now recommend using [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) to manage multiple AWS accounts efficiently.
-
-## Automating IAM Policy and Role Deployment with CloudFormation StackSets
-
-To automate the creation of the IAM Policy and Role in multiple AWS accounts within your organization, you can use AWS CloudFormation StackSets. This method allows you to deploy the necessary IAM roles and policies across all target accounts in your organization.
+To automate the deployment of the IAM Policy and Role in multiple AWS accounts within your organization, you can use AWS CloudFormation StackSets. This method allows you to deploy the necessary IAM roles and policies across all target accounts in your organization.
 
 More information on CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html).
 

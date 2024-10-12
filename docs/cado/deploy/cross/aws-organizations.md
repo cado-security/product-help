@@ -1,10 +1,10 @@
 ---
-title: Automatically add cross-account access with AWS Organizations (recommended)
+title: Automatically add cross-account roles to Cado with AWS Organizations
 hide_title: true
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Automatically adding cross-account access with AWS Organizations (Recommended)
+# How to automatically add cross-account roles to Cado with AWS Organizations
 
 :::tip
 This feature is currently in beta and is the recommended method. To enable it, go to *Settings > Experiments* and turn on "AWS Organizations Account Discovery."

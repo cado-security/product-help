@@ -1,7 +1,7 @@
 ---
 title: Adding Google Projects to Azure/AWS
 hide_title: true
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # How to add Google Cloud Projects to Azure or AWS

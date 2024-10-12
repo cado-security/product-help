@@ -100,7 +100,7 @@ When performing cross-region acquisitions, ensure that the relevant policy state
 
 When acquiring cross-account resources, follow these guidelines:
 
-1. Grant `kms:CreateGrant` permissions to the role being assumed in the **target account** from which EC2 instances are being acquired. For more details, refer to the [Cross-Account Acquisition](../iam/cross-account-creation.md) documentation.
+1. Grant `kms:CreateGrant` permissions to the role being assumed in the **target account** from which EC2 instances are being acquired. For more details, refer to the [Cross-Account Acquisition](/cado/deploy/cross/cross-account-creation.md) documentation.
 
 2. Alternatively, you can use the permissions in the "Custom Keys" section. Ensure that both the primary and secondary account roles are allowed principals for the required actions: `kms:Encrypt`, `kms:Decrypt`, `kms:ReEncrypt*`, and `kms:GenerateDataKey*`.
 

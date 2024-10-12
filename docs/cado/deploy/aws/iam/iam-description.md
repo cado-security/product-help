@@ -57,3 +57,40 @@ The Cado platform requires specific IAM permissions to operate effectively, depe
 | RequiredForFirstTimeKMSDefaultencryptedImportCanBeDeletedAfter | Used once to create a Cado-specific KMS key for default encrypted EBS volumes, can be deleted afterward.             |
 | **AWS Organizations Account Discovery**                   |                                                                                                                      |
 | RequiredForAWSOrganizationsDiscoverAccounts                | Required to discover accounts in AWS Organizations, optional if AWS Organizations is not being used.                 |
+
+
+
+## Customizing the Cado Cross-Account Policy
+The Cado Cross-Account Policy includes permissions to acquire various AWS resources. You can customize it by removing permissions that are not needed for your use case:
+
+- **EC2 permissions** are required to acquire EC2 systems.
+- **KMS permissions** are needed for acquiring KMS-encrypted volumes.
+- **SSM permissions** are necessary for triage captures.
+- **S3 permissions** allow importing from S3 buckets in other accounts.
+- **CloudTrail permissions** enable importing CloudTrail logs from other accounts.
+- **ECS permissions** are required to import ECS containers.
+- **EC2 de-register permissions** are needed for importing AMI images cross-account.
+
+If you modify the **Maximum session duration**, note that the minimum currently supported by Cado is 1 hour.
+
+
+## Using an Existing IAM Role
+If you prefer using an existing IAM role with proper resource access, update the trust relationship with the following JSON, replacing `111111111111` with the ID of your primary AWS account:
+
+```json
+{
+   "Version": "2012-10-17",
+   "Statement": [
+       {
+           "Effect": "Allow",
+           "Principal": {
+               "AWS": "111111111111"
+           },
+           "Action": "sts:AssumeRole",
+           "Condition": {}
+       }
+   ]
+}
+```
+
+You can further restrict this by specifying a specific Cado role rather than trusting the entire account. For more details, see the AWS documentation on [IAM policy elements](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html).

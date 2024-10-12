@@ -1,7 +1,7 @@
 ---
 title: Adding Azure subscriptions to Azure/AWS/GCP
 hide_title: true
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 # How to add Azure Subscriptions to Azure, AWS, or GCP

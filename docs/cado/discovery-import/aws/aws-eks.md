@@ -84,7 +84,7 @@ roleRef:
 ### Linking AWS IAM to your Cluster RBAC
 
 :::info
-You should use the role ARN added in the [Cross Account Creation](/cado/deploy/aws/iam/cross-account-creation.md#step-2-add-target-aws-role-arn-to-the-cado-platform) that relates to the AWS Account ID where the cluster resides.
+You should use the role ARN added in the [Cross Account Creation](/cado/deploy/cross/cross-account-creation.md#step-2-add-target-aws-role-arn-to-the-cado-platform) that relates to the AWS Account ID where the cluster resides.
 :::
 
 You'll need to add the appropriately configued Cado IAM role to your EKS RBAC configuration. Without 
