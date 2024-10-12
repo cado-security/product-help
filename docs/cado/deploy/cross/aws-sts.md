@@ -5,19 +5,28 @@ sidebar_position: 6
 ---
 
 # How to temporarily access an AWS account with STS
-In complex cloud environments, creating long term roles with access can be cumbersome and involve multiple teams to approve. To avoid this, you can create a temporary Security Token which allows access to a specific resource in AWS without having to create a permanent role.
 
+In complex cloud environments, setting up long-term roles with access often requires approvals from multiple teams, which can be time-consuming. To simplify this process, you can use a temporary Security Token (STS) to gain access to specific AWS resources without needing to create a permanent role.
 
-Under **Import** - select **AWS**, then **Security Token**:
+### Steps to Access AWS with a Temporary Security Token
 
-![Security Token](/img/security-token.png)
+1. **Select AWS Security Token**  
+   In the Cado platform, go to **Import** > **AWS** > **Security Token**.
 
-Then enter the full [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) of the resource you wish to import:
+   ![Security Token](/img/security-token.png)
 
-![ARN](/img/arn.png)
+2. **Enter the Resource ARN**  
+   Provide the full [Amazon Resource Name (ARN)](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) of the AWS resource you want to import.
 
-Then execute the AWS CLI command to grant temporary access to the resource, using the permissions that your local AWS CLI environment has. Alternatively, you can assume a pre-defined role temporarily:
+   ![ARN](/img/arn.png)
 
-![Assume Role](/img/assume-role.png)
+3. **Grant Temporary Access via AWS CLI**  
+   Use the AWS CLI to generate the STS token for temporary access. This action uses the permissions available in your local AWS CLI environment. Alternatively, you can temporarily assume a predefined role:
 
-The maximum session duration setting can [have a value](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/assume-role.html) from 1 hour to 12 hours. If you specify a value higher than this setting or the administrator setting (whichever is lower), the operation fails. For example, if you specify a session duration of 12 hours, but your administrator has set the maximum session duration to 6 hours, generating the STS token will fail.
+   ![Assume Role](/img/assume-role.png)
+
+### Setting the Session Duration
+
+The maximum session duration for an STS token can be set between 1 hour and 12 hours. However, if you request a session longer than the maximum allowed by your administrator, the operation will fail. For example, if you request a 12-hour session but the administrator's limit is 6 hours, the token generation will not succeed.
+
+More details on session duration limits can be found in the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/assume-role.html).
