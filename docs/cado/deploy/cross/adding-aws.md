@@ -1,10 +1,10 @@
 ---
-title: Adding AWS accounts to Azure/AWS/GCP
+title: Adding AWS accounts to Azure/AWS/GCP via Keys
 hide_title: true
-sidebar_position: 2
+sidebar_position: 6
 ---
 
-# Adding AWS accounts to Azure, AWS, or GCP
+# Adding AWS accounts to Azure, AWS, or GCP via Keys
 
 To enable cross-cloud access for AWS accounts, you need to set up an IAM role in each AWS account from which you want Cado to collect data. Follow the steps below to add AWS accounts. Ensure you have the required permissions to create IAM roles.
 

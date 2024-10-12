@@ -83,7 +83,7 @@ const config = {
               from: '/cado-host/deploy',
             },
             {
-              to: '/cado/deploy/aws/iam/aws-organizations',
+              to: '/cado/deploy/cross/aws-organizations',
               from: '/cado-response/deploy/aws/iam/aws-organizations',
             },
             {
