@@ -1,5 +1,5 @@
 ---
-title: Manually deploy a cross-account role
+title: Manually deploy a cross-account role in AWS
 hide_title: true
 sidebar_position: 2
 ---

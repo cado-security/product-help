@@ -1,5 +1,5 @@
 ---
-title: Automatically deploy a cross-account role with StackSets
+title: Automatically deploy a cross-account role with StackSets in AWS
 hide_title: true
 sidebar_position: 3
 ---
