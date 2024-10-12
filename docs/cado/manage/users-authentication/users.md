@@ -23,7 +23,7 @@ In order to get access to investigations and data a Normal User needs to be adde
 Cado also supports authentication via [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)) and [PingID](sso/ping_saml.md). When you configure SSO access, the Cado platform will automatically create the user at first login. By integrating Cado with your SSO platform you can enforce any authentication mechanism supported by the SSO platform, including two factor authentication.
 
 ### Managing Roles
-Roles in Cado correspond to CSP roles in AWS, Azure or GCP that have appropriate levels of access to cloud resources. Only Administrators can manage roles. This list is autopopulated when administrators add CSP credentials to the platform following the instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/azure/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en
+Roles in Cado correspond to CSP roles in AWS, Azure or GCP that have appropriate levels of access to cloud resources. Only Administrators can manage roles. This list is autopopulated when administrators add CSP credentials to the platform following the instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/cross/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en
 
 It is advisable that Account Checks are performed against roles on a periodic basis, to ensure the correct permissions are in place to perform successful acquisitions. For more information see [Account Check](/cado/manage/monitoring#account-check).
 

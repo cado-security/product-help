@@ -1,10 +1,10 @@
 ---
-title: Import from subscriptions and tenants
+title: Import from subscriptions and tenants in Azure
 hide_title: true
-sidebar_position: 2
+sidebar_position: 7
 ---
 
-# How to import from other Azure subscriptions and tenants
+# How to import from other Azure subscriptions and tenants in Azure
 
 ### Setting up an app registration for cross tenancy/subscription acquisitions
 To leverage cross Azure acquisitions, you need to create an **[Azure app registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)** in the Azure tenancy you want to acquire resources from.  Follow the contents of this guide, and select the option for `Accounts in any organizational directory (Any Azure AD directory - Multitenant)`. ![Azure App Registration](/img/azure-registering-app.png)  
