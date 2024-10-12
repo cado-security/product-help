@@ -6,7 +6,7 @@ sidebar_position: 5
 
 # How to automatically add cross-account roles to Cado with AWS Organizations
 
-This guide will walk you through how to integrate AWS roles into the Cado platform using AWS Organizations. It covers how to configure account discovery, permissions, and common troubleshooting scenarios.
+This guide will walk you through how to integrate AWS roles into the Cado platform using AWS Organizations.
 
 This is the recommended way to add cross-account roles you have deployed to the Cado Platform, to enable the platform to import data from multiple AWS accounts.
 
