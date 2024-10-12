@@ -23,7 +23,7 @@ More information on CloudFormation StackSets can be found here: [Working with AW
 3. **Enter the CloudFormation Template URL**  
    Enter the S3 URL for the CloudFormation template:  
    ```
-   https://cado-public.s3.amazonaws.com/cloudformation/template-organization-stackset-iam-only.json
+   https://cado-public.s3.amazonaws.com/cloudformation_v2/StacksetCrossIAM.yaml
    ```  
    Then, click **Next**.
 
