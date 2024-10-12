@@ -1,7 +1,7 @@
 ---
 title: Import from subscriptions and tenants in Azure
 hide_title: true
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # How to import from other Azure subscriptions and tenants in Azure

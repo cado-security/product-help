@@ -18,7 +18,7 @@ Please use Cado Host to acquire distroless Containers.
 
 ![Cado Import Screen showing the AKS options](/img/import-cloud-focus.png)
 
-2) Choose the Azure Credeniials configured in [Azure > Cross Subscription and Tenancy](/cado/deploy/azure/azure-cross-tenancy-subscriptions)
+2) Choose the Azure Credeniials configured in [Azure > Cross Subscription and Tenancy](/cado/deploy/cross/azure-cross-tenancy-subscriptions)
 
 3) Choose the resource group the AKS cluster is attached to.
 

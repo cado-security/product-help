@@ -1,7 +1,7 @@
 ---
 title: Access an AWS account with via AMI Import
 hide_title: true
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # How to access an AWS account cross-account within AWS without a cross-account role via AMI Import
