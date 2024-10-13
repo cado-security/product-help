@@ -4,25 +4,28 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# How to import data from XDR platforms
-You can import data into the Cado platform via an eXtended Detection and Response (XDR) system.
+# How to Import Data from XDR Platforms
 
-You can quickly deploy Cado Host to Windows and Linux machines that may be compromised through XDR vendors such as Crowdstrike, SentinelOne and Microsoft Defender.
-Please note that macOS is not currently supported currently for SentinelOne and Defender.
+You can import data into the Cado platform using an eXtended Detection and Response (XDR) system. Cado Host can be quickly deployed to compromised Windows and Linux machines via XDR vendors such as CrowdStrike, SentinelOne, and Microsoft Defender. However, macOS is not currently supported for SentinelOne and Defender integrations.
 
-For more infofmation about setting up this integration see:
-- [SentinelOne Integration Setup page](/cado/integrations/xdr/sentinelone.md)
-- [CrowdStrike Integration Setup page](/cado/integrations/xdr/crowdstrike.md)
-- [Defender Integration Setup page](/cado/integrations/xdr/defender.md)
+For detailed setup instructions, refer to the following pages:
+- [SentinelOne Integration Setup](/cado/integrations/xdr/sentinelone.md)
+- [CrowdStrike Integration Setup](/cado/integrations/xdr/crowdstrike.md)
+- [Defender Integration Setup](/cado/integrations/xdr/defender.md)
 
-Once the integration is set up, from within an investigation click **Import from XDR**
+## Importing Data via XDR
 
-Then choose the XDR Platform you have set up, and click *Continue*
+Once the integration is set up, follow these steps to import data:
 
-![Choose XDR Platform](/img/xdr-import-2.png)
+1. From within an investigation, click **Import from XDR**.
+2. Select the XDR platform you have set up and click **Continue**.
 
-Then search for or select the endpoint from which you want to collect, and click *Continue*
+   ![Choose XDR Platform](/img/xdr-import-2.png)
 
-![Import XDR Endpoints](/img/xdr-import-3.png)
+3. Search for or select the endpoint you want to collect data from, and click **Continue**.
 
-Finally, confirm your selections and click *Start Import*
+   ![Import XDR Endpoints](/img/xdr-import-3.png)
+
+4. Confirm your selections and click **Start Import**.
+
+Once initiated, Cado will begin importing data from the selected endpoint via the XDR platform.

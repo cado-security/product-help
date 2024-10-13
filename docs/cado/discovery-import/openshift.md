@@ -4,13 +4,17 @@ hide_title: true
 sidebar_position: 8
 ---
 
-# How to import data from RedHat Openshift
+# How to Import Data from RedHat OpenShift
 
-First, generate a collection script using Cado Host under **Import** > **Cado Host**.
+To import data from RedHat OpenShift, follow these steps:
 
-Then, you will need to execute the script on the target container, as such:
-    
-```
+1. **Generate a Collection Script**:  
+   First, generate a Cado Host collection script by navigating to **Import > Cado Host** in the Cado platform.
+
+2. **Execute the Script on the Target Container**:  
+   Use the commands below to execute the script on the desired container within OpenShift:
+
+```bash
 oc login --token=sha256~... --server=https://api.system.openshiftapps.com:443
 oc exec pod-name -c container-name -- mkdir -p /tmp/cado-host
 oc exec pod-name -c container-name -- curl -s https://cado-public.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host --output /tmp/cado-host/cado-host
@@ -18,4 +22,6 @@ oc exec pod-name -c container-name -- chmod +x /tmp/cado-host/cado-host
 oc exec pod-name -c container-name -- /tmp/cado-host/cado-host --presigned_data ...
 ```
 
-![Openshift](/img/openshift.png)
+Replace `pod-name`, `container-name`, and `--presigned_data` with the relevant values from your setup.
+
+![OpenShift](/img/openshift.png)

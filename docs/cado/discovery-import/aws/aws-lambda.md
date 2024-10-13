@@ -4,29 +4,34 @@ hide_title: true
 sidebar_position: 6
 ---
 
+# How to Import Data from AWS Lambda
 
-# How to import data from AWS Lambda
+The Cado platform allows you to acquire AWS Lambda functions, which are serverless computing services.
 
-The Cado platform can acquire AWS Lambda functions which are serverless computing services.
+### Steps to Import
 
-Select the region the desired function is located in, and you should see a table of functions. Select the function you wisk to acquire, confirm the details and hit "Start Import"
+1. **Select the Region** where the Lambda function is located.
+2. You will see a table of available functions. Select the function you wish to acquire.
+3. Confirm the details and click **Start Import**.
 
 ![Import Lambda Function](/img/import-lambda.png)
 
 ## Output
 
-Once processing has finished the events will be added to the timeline and the Lambda function code will be available to view in the **Browse Disk** tab.
+Once processing is complete, the Lambda function’s events will be added to the timeline. You can view the Lambda function’s code in the **Browse Disk** tab.
 
 ![Lambda Function Code](/img/aws-lambda-code.png)
 
-Lambda automatically integrates with CloudWatch Logs and pushes all logs from your code to a CloudWatch Logs group associated with a Lambda function. Cado  captures these logs and adds them to your timeline, so you can view any logging statements made by the function.
+### CloudWatch Logs Integration
+
+Lambda automatically sends logs from your code to a CloudWatch Logs group associated with the function. Cado captures these logs and adds them to your timeline, enabling you to view any logging statements made by the function.
 
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)
 
-*Note:* Cado imports the image of container-based Lambda functions from the Amazon Elastic Container Registry
-
+*Note:* Cado imports the image of container-based Lambda functions from the Amazon Elastic Container Registry.
 
 ### Data Flow Diagram
-For a diagram of how our Lambda acquisitions operate, please see below:
+
+The following diagram illustrates how Lambda acquisitions operate:
 
 ![Lambda Data Flow](/img/lambda-collection.png)

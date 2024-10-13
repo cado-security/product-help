@@ -4,51 +4,63 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# How to automate collection from detections
+# How to automate data collection from detections
 
-The 'Detections' area of the platform (/detections/integrations) enables customers to dramatically streamline the effectiveness of their SOC using end-to-end workflow investigation automation capabilities.
+The **Detections** area of the platform (/detections/integrations) helps streamline your Security Operations Center (SOC) by enabling end-to-end workflow automation for investigations. You can easily connect various alert sources, automatically collect and process critical data, and integrate results into tools like SIEMs, task managers, and other productivity systems.
 
-Customers are able to easily connect different alert sources across cloud and on-prem systems, respond faster by automatically collecting and processing key data, as well as integrate actionable results to SIEMs, task managers, and other productivity tools.
+## Collecting Data After CrowdStrike and Defender Alerts
 
-## Collecting data after Crowdstrike and Defender alerts
+To get started, watch the video below that demonstrates how to ingest alerts from Microsoft Defender. The same process applies to CrowdStrike. Here's a summary of the steps:
 
-To get started, watch the video below which shows how to ingest alerts from Microsoft Defender. The same process also applies to CrowdStrike. In summary:
+1. **Create an XDR Connection**  
+   Go to ‘Settings’ > ‘Integrations’ > ‘XDR’ (/settings/integrations/xdr). For details on required API permissions, see the [CrowdStrike Integration Guide](/cado/integrations/xdr/crowdstrike) and the [Defender Integration Guide](/cado/integrations/xdr/defender).
 
-1. Create an XDR Connection. To do this, navigate to ‘Settings’ > ‘Integrations’ > ‘XDR’ (/settings/integrations/xdr). For information on the API permissions required, see [CrowdStrike](/cado/integrations/xdr/crowdstrike) and [Defender](/cado/integrations/xdr/defender) documentation.
-2. Create a detection rule in 'Detections' by selecting one of the threat detection provider sources in /detections/integrations.
+2. **Set Up a Detection Rule**  
+   In the **Detections** area, select one of the supported threat detection sources (/detections/integrations) to create a detection rule.
 
 <video src="/img/detections-set-up.mp4" controls width="90%"></video>
 
-## Collecting data after alerts from other XDR platforms
-You can trigger an import from the Cado platform by creating a webhook from the XDR platform then calling the [Cado API](/cado/integrations/api-overview) to trigger the import via a SOAR platform or your own API integration.
+## Collecting Data After Alerts from Other XDR Platforms
 
-* SentinelOne: Go the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/) and search for Webhook to create a webhook
+You can trigger an import from the Cado platform by creating a webhook from your XDR platform, then using the [Cado API](/cado/integrations/api-overview) to initiate the import via a SOAR platform or your own API integration.
 
-## Collecting data after AWS GuardDuty alerts
+### SentinelOne
+To create a webhook:
+1. Visit the SentinelOne [Singularity Marketplace](https://www.sentinelone.com/partners/singularity-marketplace/).
+2. Search for "Webhook" to create and configure the webhook.
 
-To get started, create an Environment. Navigate to 'Environments' (/environments) and select the 'Create environment' button. Give the environment a name, and choose the scopes to add to the environment by selecting 'Add group'. In the example below, we have created a scope which encompasses all EC2s across all accounts. You can optionally filter by regions and tags.
+## Collecting Data After AWS GuardDuty Alerts
 
-Hit 'Save' to create the environment.
+1. **Create an Environment**  
+   Navigate to **Environments** (/environments) and click the **Create Environment** button. Name the environment and define the scopes by selecting **Add Group**. For example, you can create a scope that covers all EC2 instances across all accounts, with optional filtering by region or tag.
 
-![Create Environments](/img/environments-create.png)
+   ![Create Environments](/img/environments-create.png)
 
-Next, create a detection rule for GuardDuty by selecting the 'GuardDuty' source in /detections/integrations. The configuration is very similar to that of creating a rule for one of the XDR platforms (see video above), with the following differences:
+   Click **Save** to create the environment.
 
-* On page 2 of the wizard, instead of being prompted to select an XDR Connection, you are prompted to select an Environment (see previous step).
-* On page 3 of the wizard, you are able to select response actions if Cado detects a malicious or suspicious alarm. Cado currently supports shutting down EC2 instances, isolating the IAM roles of that the EC2 instance assumes and isolate security group attached to the EC2. Each action requires different permissions and is controlled using IAM roles. The table below details a description of each action and the permissions required. Add these permissions to your Cado role, and ensure it has scope to cover the resource you wish to invoke an action on.
+2. **Set Up a Detection Rule for GuardDuty**  
+   In the **Detections** area (/detections/integrations), select **GuardDuty** as the source to create a detection rule. The configuration process is similar to XDR platforms, with a few differences:
 
-| Action | Description | Required Permissions
-| -------- | ----------- | ----------|
-| Stop Instance | Stops an EC2 instance using the AWS API | ec2:StopInstances |
-| Isolate Role | Isolates the IAM role attached to an EC2 instance. Isolated by adding a deny all inline policy to the given IAM role. | iam:GetInstanceProfile iam:PutRolePolicy |
-| Isolate Security Group |  Isolates the security group attached to and EC2 instance. Isolated by creating a security group, blanking it and replacing it on the EC2. | ec2:CreateSecurityGroup ec2:RevokeSecurityGroupEgress ec2:ModifyInstanceAttribute |
+   - On **Page 2** of the wizard, select the **Environment** instead of an XDR connection.
+   - On **Page 3**, specify response actions if a malicious or suspicious activity is detected by Cado. 
 
-## Collecting data after Wiz alerts
-For details on how to automatically process systems detected by Wiz, see [Wiz Forensics Integration
-](/cado/integrations/cnapp/wiz).
+   Currently, Cado supports the following response actions for EC2 instances:
 
-## Managing Rules ##
+   | Action | Description | Required Permissions |
+   | -------- | ----------- | ---------- |
+   | Stop Instance | Stops an EC2 instance using the AWS API | `ec2:StopInstances` |
+   | Isolate Role | Adds a "deny all" inline policy to isolate the IAM role attached to the EC2 instance | `iam:GetInstanceProfile`, `iam:PutRolePolicy` |
+   | Isolate Security Group | Replaces the security group of an EC2 instance with a blank one | `ec2:CreateSecurityGroup`, `ec2:RevokeSecurityGroupEgress`, `ec2:ModifyInstanceAttribute` |
 
-Detection rules can be managed in /detections/rules, where you are able to easy create, enable/disable, edit and delete rules.
+   Ensure the appropriate IAM permissions are added to your Cado role and that the role has access to the resources on which you want to invoke actions.
+
+## Collecting Data After Wiz Alerts
+
+For instructions on automatically processing systems detected by Wiz, refer to the [Wiz Forensics Integration Guide](/cado/integrations/cnapp/wiz).
+
+## Managing Detection Rules
+
+You can manage detection rules in the **Rules** area (/detections/rules). This interface allows you to easily create, enable/disable, edit, and delete rules as needed.
 
 ![Manage Rules](/img/detections-rules.png)
+

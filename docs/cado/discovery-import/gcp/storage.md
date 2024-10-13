@@ -3,23 +3,27 @@ title: Google Cloud Storage
 hide_title: true
 sidebar_position: 2
 ---
-# How to import from Google Cloud Storage
 
-The Cado platform supports acquisition of data from GCP Storage Buckets. The two main use cases for this are:
+# How to Import from Google Cloud Storage
 
-* Analyzing disk images or zip files that have been uploaded to an Azure Blob Storage container as part of an investigation
-* Analyzing the contents of a GCP Storage Bucket for any uploaded content that could be part of an incident
+The Cado platform supports the acquisition of data from Google Cloud Platform (GCP) Storage Buckets. The two main use cases for this are:
 
-Select the investigation you require, select the bucket and then select the objects to import. 
+- **Analyzing disk images or zip files** uploaded to a GCP Storage Bucket as part of an investigation.
+- **Analyzing the contents of a GCP Storage Bucket** for any uploaded content that could be related to an incident.
 
-![Import GCP Storage](/img/google-cloud-storage.png)
+### Steps to Import Data
 
-## Uploading On-Premise evidence to GCP Storage for Import
+1. **Select the Investigation**: Choose the investigation you are working on.
+2. **Select the Bucket**: Choose the GCP Storage Bucket you wish to analyze.
+3. **Select Objects to Import**: Select the specific files or objects from the bucket to import into Cado.
 
-You can use the [GCP Console](https://console.cloud.google.com/) to upload data from your web browser if you have access to it.
+   ![Import GCP Storage](/img/google-cloud-storage.png)
 
-Alternatively, you can use [oAuth 2.0 Access](https://docs.duck.sh/protocols/googlecloudstorage/) with a Desktop GUI tool such as [Cyberduck](https://cyberduck.io/) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
+## Uploading On-Premise Evidence to GCP Storage for Import
 
-We recommend scoping access by giving the associated role [write-only](https://stackoverflow.com/questions/57147765/gcp-write-only-access-to-bucket-gcs) access.
+You can upload data to GCP Storage using the following methods:
 
+- **GCP Console**: If you have access to the [GCP Console](https://console.cloud.google.com/), you can upload data directly from your web browser.
+- **Desktop GUI Tools**: Alternatively, you can use a tool like [Cyberduck](https://cyberduck.io/) with [oAuth 2.0 Access](https://docs.duck.sh/protocols/googlecloudstorage/) to upload files from your desktop. Cyberduck supports features such as resuming failed uploads.
 
+We recommend scoping access by assigning the associated role **[write-only](https://stackoverflow.com/questions/57147765/gcp-write-only-access-to-bucket-gcs)** permissions for enhanced security.

@@ -4,53 +4,52 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# How to import Azure Kubernetes Service (AKS) Containers
+# How to Import Azure Kubernetes Service (AKS) Containers
 
-The Cado platform will collect key logs and forensic artifacts from Azure Kubernetes Service containers.
+The Cado platform allows you to collect key logs and forensic artifacts from containers running in Azure Kubernetes Service (AKS).
 
 :::info
-Please use Cado Host to acquire distroless Containers.
+To acquire distroless containers, please use **Cado Host**.
 :::
 
 ## Import Steps
 
-1) Go to **Import > Cloud**
+1. Navigate to **Import > Cloud**.
 
-![Cado Import Screen showing the AKS options](/img/import-cloud-focus.png)
+   ![Cado Import Screen showing the AKS options](/img/import-cloud-focus.png)
 
-2) Choose the Azure Credeniials configured in [Azure > Cross Subscription and Tenancy](/cado/deploy/cross/azure-cross-tenancy-subscriptions)
+2. Select the Azure credentials configured under **[Azure > Cross Subscription and Tenancy](/cado/deploy/cross/azure-cross-tenancy-subscriptions)**.
 
-3) Choose the resource group the AKS cluster is attached to.
+3. Choose the resource group associated with the AKS cluster.
 
-4) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
+4. Follow the steps to select your **Cluster**, **Pod**, and **Container**.
 
-![Cado Import Screen showing the available AKS Clusters](/img/aks.png)
+   ![Cado Import Screen showing the available AKS Clusters](/img/aks.png)
 
-5) Confirm the details and click **Start Import**
+5. Confirm the details and click **Start Import**.
 
-Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-For a typical acquisition, import and processing will take a few minutes to complete.
+Cado will automatically collect all key logs and forensic artifacts from the container for investigation. For most acquisitions, the import and processing will take just a few minutes to complete.
 
-![Cado showing the confirmation screen of a successful AKS container capture](/img/eks3.png)
+   ![Cado showing the confirmation screen of a successful AKS container capture](/img/eks3.png)
 
 :::info
 ### Private Cluster Support
-As of release v2.31.0, the Cado platform now supports capture of AKS Private Clusters. It should be noted that the Cado platform
-uses the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke) to achieve this functionality.
+As of release v2.31.0, the Cado platform supports capturing data from **AKS Private Clusters**. This functionality is achieved using the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke).
 
-There are two main caveats to this method:
-1. The process is considerably slower than capturing a Public Cluster
-2. The Azure API will spin up a pod inside the cluster to execute Cado Host, make sure that there are enough nodes and resources in your cluster to schedule this command pod.
+There are two key considerations with this method:
+1. Capturing from a private cluster is significantly slower than from a public cluster.
+2. The Azure API spins up a pod within the cluster to execute Cado Host. Ensure that your cluster has enough resources and nodes to schedule this command pod.
 
-The newly created pod will shutdown and remove itself after 1 hour.
+The newly created pod will automatically shut down and remove itself after 1 hour.
 :::
 
-### Scoping Down The Role for Access to AKS
-The Cado platform requires permissions to access and execute code against containers. The following role definition can be used to scope down the permissions required for the Cado platform to access and acquire data from AKS:
+### Scoping Down the Role for Access to AKS
+
+The Cado platform requires specific permissions to access and execute code in containers. You can use the following role definition to limit the permissions required for Cado to access and acquire data from AKS:
 
 ![Scoped down AKS role](/img/aks_role.png)
 
-```
+```json
 {
     "id": "",
     "properties": {

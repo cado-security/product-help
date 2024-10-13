@@ -4,11 +4,18 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to import a Google Compute Engine instance
-The Cado platform supports acquisition of GCP Compute instances. Select the GCP project and bucket where you can upload the image prior to importing it into the Cado platform.
+# How to Import a Google Compute Engine Instance
 
-Select the GCP project and Compute Instance you need. Review the details and click on 'Start Import'.
+The Cado platform supports the acquisition of Google Cloud Platform (GCP) Compute Engine instances. Follow these steps to import a GCP Compute instance into Cado:
 
-:::info In order for this feature to work we require the 'default' VPC in the GCP project you are acquiring from. GCP Cloud Build uses workers to help export the acquired disk which uses the 'default' VPC. :::
+1. **Select the GCP Project and Bucket**: Choose the GCP project and the storage bucket where the disk image will be uploaded before importing it into Cado.
+
+2. **Select the Compute Instance**: Choose the specific GCP Compute instance that you need to import.
+
+3. **Review the Details**: Verify the details of the instance and click **Start Import** to begin the acquisition process.
+
+:::info
+For this feature to work, the GCP project must have the **default VPC** enabled. GCP Cloud Build requires workers that use the default VPC to help export the acquired disk.
+:::
 
 ![GCP Compute Import](/img/gcp-compute.png)

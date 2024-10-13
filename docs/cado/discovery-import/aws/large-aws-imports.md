@@ -4,85 +4,94 @@ hide_title: true
 sidebar_position: 10
 ---
 
-# How to import large AWS EC2 instances
+# How to Import Large AWS EC2 Instances
 
-Importing AWS EC2 instances with disks over 500GB can start to reach limitations in AWS which results in potentially very long acquisition times. You will receive a warning such as this during the Acquisition of a system:
+When importing AWS EC2 instances with disks over 500GB, you may encounter limitations in AWS that result in extended acquisition times. During the acquisition process, you might receive a warning, as shown below:
 
 ![Large EC2 Import Warning](/img/large-disk-warning.png)
 
-# Alternate Acquisition via Triage of a Live System
-If possible, acquire these systems using the "Triage" option if SSM is enabled.
+## Alternate Acquisition via Triage of a Live System
 
-Alternatively, you can use another option such as [SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html) or [AWS EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html) where available (select the instance in the AWS console, then select "Actions" > "Connect") to acquire with Cado Host (via the Cado UI at “Import” > “Cado Host”). Additional files to be collected can be set using the [command line](https://docs.cadosecurity.com/cado-host/cli).
+If possible, use the **Triage** option if AWS Systems Manager (SSM) is enabled. This can speed up the acquisition process.
 
-If a system is turned off, it may be possible to isolate at the network and IAM level then turn it on in order to capture data. 
+Alternatively, you can acquire the system using [SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html) or [AWS EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html). In the AWS console, select the instance, then choose **Actions > Connect**. From there, you can use **Cado Host** via the Cado UI at **Import > Cado Host**. You can also collect additional files by using the [command line](https://docs.cadosecurity.com/cado-host/cli).
 
-# Alternate Manual Acquisition of a Live System
-It is also possible to copy off individual files, or perform a live image by connecting to a system and running a command such as:
+If the system is powered off, consider isolating it at the network and IAM level, then turn it on to capture the necessary data.
 
-```dd if=/dev/source of=/path/to/image.dd bs=block_size count=total_blocks```
+## Alternate Manual Acquisition of a Live System
 
-To create a disk image on a mounted Volume to hold the image.
-Or if you have restricted access to S3:
+You can also manually copy individual files or perform a live image by connecting to the system and running a command such as:
 
-```aws s3 cp /dev/[disk] s3://bucket/image.dd.gz --expected-size [size in bytes]```
+```bash
+dd if=/dev/source of=/path/to/image.dd bs=block_size count=total_blocks
+```
 
+Alternatively, to upload the disk image directly to S3:
 
-# How Cado acquires EC2 Instances
-When acquiring an EC2 instance, the Cado platform will:
-1. Create a snapshot of a volume attached to an instance; then
-2. Create a Volume from this snapshot; then
-3. Then Create an Image of the volume for processing.
+```bash
+aws s3 cp /dev/[disk] s3://bucket/image.dd.gz --expected-size [size in bytes]
+```
 
-Below we outline possible optimizations to this process:
+## How Cado Acquires EC2 Instances
+
+When acquiring an EC2 instance, the Cado platform follows these steps:
+
+1. **Create a snapshot** of the volume attached to the instance.
+2. **Create a volume** from the snapshot.
+3. **Create an image** of the volume for processing.
+
+Below is a diagram showing possible optimizations in this process:
 
 ![Cado EC2 Acquisition Process](/img/snapshot-steps.png)
 
-# Speeding up the 1. Create Snapshot Step
-The first step of Creating a Snapshot will be faster if there is an earlier snapshot of the same volume, as AWS uses [incremental snapshots](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html#how_snapshots_work). If not, creating the snapshot can take a number of hours for a large Volume. AWS [recommend](https://repost.aws/knowledge-center/ebs-incremental-snapshot-creation-slow) creating regular snapshots to speed up the process, however this is often not possible when responding to an incident.
+### Speeding Up Step 1: Create Snapshot
 
-AWS does not provide estimates of how long Creating a Snapshot will take as it can vary on a number of factors. A Snapshot of a Volume larger than 500GB will typically take a number of hours, if earlier Snapshots do not exist.
+The **snapshot creation** process will be faster if there’s an earlier snapshot of the volume, as AWS uses [incremental snapshots](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html#how_snapshots_work). However, creating a snapshot for large volumes can take several hours if no earlier snapshots exist. AWS recommends creating regular snapshots to speed up this process, though this may not be feasible during incident response.
 
-# Speeding up the 2. Create Volume Step with Fast Restore
-You can speed up the second step of Creating a Volume by using [Fast Snapshot Restore](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html). Note this will not speed up the first step of creating a snapshot, and the second stage of creating a volume will still take some time.
+AWS does not provide exact estimates for how long creating a snapshot will take, but volumes larger than 500GB typically require several hours if there are no prior snapshots.
 
-To create a Snapshot and enable Fast Snapshot Restore:
+### Speeding Up Step 2: Create Volume with Fast Snapshot Restore
 
-* 1. [Creating a Snapshot](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-creating-snapshot.html) of the disk in the AWS Console:
-![Create Snapshot](/img/createsnap.png)
+You can speed up the **Create Volume** step by using [Fast Snapshot Restore](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html). Note that this does not affect the time it takes to create a snapshot, and creating a volume still takes time.
 
-Or using the AWS CLI with:
+To create a snapshot and enable Fast Snapshot Restore:
 
-```aws ec2 create-snapshot --volume-id vol-12345678  --description "My EBS volume snapshot"```
+1. **Create a Snapshot**:
+   ![Create Snapshot](/img/createsnap.png)
 
+   Using the AWS CLI:
 
-* 2. Enabling Fast Snapshot Restore on the snapshot:
-![Enable Fast Snapshot Restore](/img/fast-restore.png)
+   ```bash
+   aws ec2 create-snapshot --volume-id vol-12345678 --description "My EBS volume snapshot"
+   ```
 
-Or with the AWS CLI:
+2. **Enable Fast Snapshot Restore**:
+   ![Enable Fast Snapshot Restore](/img/fast-restore.png)
 
-```aws ec2 enable-fast-snapshot-restores --availability-zones us-east-2a us-east-2b  --source-snapshot-ids snap-1234567890abcdef0```
+   Using the AWS CLI:
 
-You will need to wait for the Fast Snapshot Restore to be enabled, then you can import the Snapshot (snap-xxx). AWS estimates this will take [60 minutes](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html#:~:text=View%20the%20fast%20snapshot%20restore%20state%20for%20a%20snapshot,-Fast%20snapshot%20restore&text=optimizing%20%E2%80%94%20Fast%20snapshot%20restore%20is,performance%20benefit%20when%20restoring%20volumes.) per Terabyte of data.
+   ```bash
+   aws ec2 enable-fast-snapshot-restores --availability-zones us-east-2a us-east-2b --source-snapshot-ids snap-1234567890abcdef0
+   ```
 
-This will show in the AWS console as follows:
+AWS estimates that enabling Fast Snapshot Restore will take around [60 minutes per terabyte](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html#:~:text=View%20the%20fast%20snapshot%20restore%20state%20for%20a%20snapshot,-Fast%20snapshot%20restore&text=optimizing%20%E2%80%94%20Fast%20snapshot%20restore%20is,performance%20benefit%20when%20restoring%20volumes.).
 
-![Fast Snapshot Restore](/img/fast-restore-enabled.png)
+You’ll see the status of Fast Snapshot Restore in the AWS Console as follows:
 
+![Fast Snapshot Restore Enabled](/img/fast-restore-enabled.png)
 
-# Increasing the Size of the Target Instance with EC2 Acquisition
+### Increasing the Size of the Target Instance for EC2 Acquisition
 
-When acquiring an instance, Cado matches the instance type of the target system for compatibility. This can be a requirement for AWS Marketplace images, but larger instances can have higher disk, network and CPU limits.
+Cado matches the instance type of the target system for compatibility when acquiring an instance. However, larger instances offer higher disk, network, and CPU limits, which can speed up the **Create Image** step.
 
-If you have the option to change the instance type of the target system to a larger system, it can speed up the 3. Create an Image step. It will not increase the speed of Creating a Snapshot, or Creating a Volume.
+If possible, changing the target instance to a larger type can speed up acquisition, though this does not affect the time taken for creating a snapshot or volume.
 
-# Alternative Collection using the AWS EBS Direct API
+## Alternative Collection Using the AWS EBS Direct API
 
-We have released a new method to acquire EC2/EBS Volumes using the EBS Direct API.
-This can be enabled set Settings > Experiments > EBS Direct Acquisitions
+Cado now offers a faster acquisition method using the **EBS Direct API**. You can enable this feature under **Settings > Experiments > EBS Direct Acquisitions**.
 
-This works in a similar method to coldsnap:
-* https://github.com/awslabs/coldsnap
-Which is executed using a command such as:
+This method is similar to using **Coldsnap**, which can be executed with a command like:
 
-```coldsnap  --region us-east-1 download snap-0001 disk.dd```
+```bash
+coldsnap --region us-east-1 download snap-0001 disk.dd
+```

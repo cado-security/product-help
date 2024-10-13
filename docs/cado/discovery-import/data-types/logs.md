@@ -4,15 +4,17 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# What log and artifact types can Cado process?
-Cado supports the processing of a wide range of evidence types.  These may differ slightly based on your cloud platform.
+# What Log and Artifact Types Can Cado Process?
 
-## What cloud logs can Cado import from cloud Storage?
-Cado can import most cloud log types from cloud storage, including:
+Cado supports the processing of a wide range of evidence types, which may vary slightly depending on your cloud platform.
+
+## What Cloud Logs Can Cado Import from Cloud Storage?
+
+Cado can import various cloud log types from cloud storage, including:
 
 ### AWS Log Formats
-- Cloud Trail logs
-- Guard Duty logs
+- CloudTrail logs
+- GuardDuty logs
 - Kubernetes logs
 - VPC Flow logs
 - SSM logs
@@ -21,91 +23,83 @@ Cado can import most cloud log types from cloud storage, including:
 ### Azure Log Formats
 - Activity logs
 
-We can process additional log types through our generic extractors, so this list is not exhaustive.
+Cado also processes additional log types using generic extractors, so this list is not exhaustive.
 
-## What logs does Cado capture via APIs?
+## What Logs Does Cado Capture via APIs?
 
 Cado can capture logs from the following cloud services via their APIs:
 
-When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve [VPC flow logs](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log) and [CloudTrail logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html) associated with the instance id, if enabled.
+- **AWS EC2**: When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve [VPC flow logs](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log) and [CloudTrail logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html) associated with the instance ID, if enabled.
+- **AWS Lambda**: Cado accesses the CloudWatch API to retrieve [logs associated with the Lambda function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
+- **Azure Compute**: Cado retrieves [activity logs associated with the virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
 
-When acquiring a Lambda function, Cado accesses the CloudWatch API to retrieve [logs associated with the function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
-
-When acquiring Azure compute, Cado retrieves [activity logs associated with the VM](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
-
-If logs are stored in a central account, at this point Cado does not have the capability to traverse accounts and pull logs from a different account. Instead, you would need to collect them in cloud storage and import from there.
+If logs are stored in a central account, Cado currently cannot traverse accounts to pull logs from different accounts. In such cases, logs must be collected in cloud storage and imported from there.
 
 ## Operating System Log and Artifact Formats
-A non-exhaustive list of the forenic artifacts that Cado can process is provided below:
-- Common AWS, Azure and GCP Logs
-- AppleSystemLog (ASL)
-- Androidusage-history (appusage)
-- BasicSecurityModule (BSM)
-- Bencodefiles
-- Chrome Disk Cache Format
-- Chrome preferences
-- CUPS IPP
-- ExtensibleStorageEngine (ESE) DatabaseFile (EDB)
+
+Here is a non-exhaustive list of the forensic artifacts Cado can process:
+- Common AWS, Azure, and GCP logs
+- Apple System Log (ASL)
+- Android usage history (app usage)
+- Basic Security Module (BSM)
+- Bencode files
+- Chrome Disk Cache and Preferences
+- CUPS IPP logs
+- Extensible Storage Engine (ESE) Database (EDB)
 - Firefox Cache
-- JavaWeb Start IDX
-- JumpLists.customDestinations-msfiles
-- MacOS Application firewall
-- MacOS Keychain
-- MacOS Securityd
-- MacOS Wifi
-- mactimelogs
-- McAfee Anti-Virus Logs
-- Microsoft InternetExplorer History File Format (also known as MSIE4-9 Cache Files or index.dat)
-- Microsoft IIS log files
-- NTFS $MFT and $UsnJrnl:$J
-- OLE Compound File
-- Opera Browser history
+- Java Web Start IDX
+- JumpLists (`customDestinations-ms` files)
+- MacOS Application Firewall, Keychain, Securityd, and Wifi logs
+- McAfee Anti-Virus logs
+- Microsoft Internet Explorer History (MSIE4-9 Cache Files or `index.dat`)
+- Microsoft IIS logs
+- NTFS `$MFT` and `$UsnJrnl:$J`
+- OLE Compound Files
+- Opera Browser History
 - OpenXML
-- Portable Executable (PE) 
-- PLSQL cache file (PL-SQL developer recall files)
-- Popularity Contest log
-- Propertylist (plist)
-- RestorePointlogs (rp.log)
+- Portable Executable (PE) files
+- PLSQL cache files (PL-SQL developer recall files)
+- Popularity Contest logs
+- Property List (plist)
+- Restore Point logs (`rp.log`)
 - Safari Binary Cookies
-- SCCM client logs
+- SCCM Client logs
 - SELinux audit logs
-- SkyDrive log and error log files
-- SQLite database format using SQLite
-- Symantec AV Corporate Edition and Endpoint Protection log
+- SkyDrive log and error logs
+- SQLite databases
+- Symantec AV Corporate Edition and Endpoint Protection logs
 - Syslog
-- utmp,utmpx
-- Windows EventLog (EVT)
-- Windows Firewall
-- Windows Job files (also known as "atjobs")
+- Utmp, Utmpx
+- Windows Event Logs (EVT, EVTX)
+- Windows Firewall logs
+- Windows Job files (atjobs)
 - Windows Prefetch files
-- Windows Recyclebin (INFO2and$I/$R)
-- Windows NTRegistry File
-- Windows ShortcutFile (LNK)
-- WindowsXML EventLog (EVTX)
-- Xchat and Xchat scroll back files
+- Windows Recycle Bin (`INFO2` and `$I/$R`)
+- Windows NT Registry Files
+- Windows Shortcut Files (LNK)
+- Xchat and Xchat scrollback files
 - Zsh history files
 
-Cado can also import a number of other log formats that are not listed here; however, these evidence types and file formats are not officially supported.
-If you have a log format that you would like to see supported, please reach out to support@cadosecurity.com and let us know.
+Cado can also process many other log formats not listed here. If you have a log format you'd like to see supported, please contact us at support@cadosecurity.com.
 
-# Adding Your Own Events
+## Adding Your Own Events
 
-During an investigation, you may want to add our own non-computer generated events to the timeline.
-For example, it is common to keep a Spreadsheet of key events in a large incident.
-The simplest way to add these events into an Investigation timeline is to import an ISO Format Log event of the format:
-* YYYY-MM-DD HH:MM:SS Log Event Message
+During an investigation, you may want to add custom events to the timeline, such as key events tracked in a spreadsheet. The simplest way to add custom events is to import an ISO format log event with the following format:
+```
+YYYY-MM-DD HH:MM:SS Log Event Message
+```
 
-For example you can save the following text into a file named "custom_events.log" then import into the platform:
+For example, saving this text in a file named `custom_events.log` and importing it into the platform:
 
 ```
 2021-01-01 01:01:01 User phoned help desk and reported ransomware
 2021-01-01 01:01:02 Three more phone calls to help desk
 ```
 
-Which will result in events such as the following:
+Will result in events such as the following:
 
 ![Custom logs imported into Cado](/img/custom_log.png)
 
-## Log Analysis Considerations 
-For exposing or uncovering suspicious behavior within large sets of logs (typically anything over ~1 million events), we encourage leveraging traditional SIEM solutions and/or open-source tools, like Cado's cloudgrep: https://github.com/cado-security/cloudgrep.
-Cado's emphasis is to capture more than just logs from Cloud Service Providers or other log sources. See [here](/cado/intro) for more details on Cado's capabilities.
+## Log Analysis Considerations
+
+For analyzing large sets of logs (typically over 1 million events) and uncovering suspicious behavior, we recommend using traditional SIEM solutions or open-source tools like Cado's [cloudgrep](https://github.com/cado-security/cloudgrep). Cado's primary focus is on capturing more than just logs from cloud service providers and other log sources. See [here](/cado/intro) for more details on Cado's capabilities.

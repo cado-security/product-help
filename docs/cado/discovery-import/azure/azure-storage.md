@@ -4,26 +4,32 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to import Azure Storage
+# How to Import Azure Storage
 
-The Cado platform supports acquisition of data from Azure Blob Storage. The two main use cases for this are:
+The Cado platform supports acquiring data from Azure Blob Storage. The two main use cases for Azure Storage acquisition are:
 
-* Analyzing disk images or zip files that have been uploaded to an Azure Blob Storage container as part of an investigation
-* Analyzing the contents of an Azure Blob Storage container for any uploaded content that could be part of an incident
+- **Analyzing disk images or zip files** uploaded to an Azure Blob Storage container as part of an investigation.
+- **Analyzing the contents of an Azure Blob Storage container** for any uploaded content that could be part of an incident.
 
-Select an Azure subscription, and select the storage account, select the container and the click the download icon for the appropriate blob. 
+### Steps to Import Data from Azure Blob Storage
+
+1. **Select an Azure Subscription**  
+   Choose the Azure subscription linked to your investigation.
+   
+2. **Select the Storage Account**  
+   Pick the appropriate storage account and then select the container containing the data you wish to analyze.
+   
+3. **Download the Blob**  
+   Click the download icon next to the relevant blob to start the acquisition process.
 
 ![Import Azure Storage](/img/azure-storage.png)
 
+## Uploading On-Premise Evidence to Azure Storage for Import
 
-## Uploading On-Premise evidence to Azure Storage for Import
+If you have access to the [Azure Console](https://portal.azure.com/), you can upload data directly from your web browser.
 
-You can use the [Azure Console](https://portal.azure.com/) to upload data from your web browser if you have access to it.
+Alternatively, you can use a **SAS Token** or **Access Key** with a desktop tool like [Cyberduck](https://cyberduck.io/azure/) to upload files easily. Tools like Cyberduck support useful features such as resuming failed uploads.
 
-Alternatively, you can use a [Sas Token or Access Key](https://cyberduck.io/azure/) with a Desktop GUI tool such as [Cyberduck](https://cyberduck.io/) to easily upload files from your desktop, with support for functionality such as resuming failed uploads.
+We recommend scoping the access permissions by giving **write-only** access to Azure Storage. More information on setting write-only permissions can be found [here](https://stackoverflow.com/questions/50864068/write-only-access-no-read-no-list-no-delete-to-azure-storage).
 
-We recommend scoping access by giving [write-only](https://stackoverflow.com/questions/50864068/write-only-access-no-read-no-list-no-delete-to-azure-storage) access to Azure storage.
-
-You can also use Cado Host with the --single_file_unzipped parameter - this may be a good option if you do not have direct access to Azure as Cado will generate the credentials at Import > Cado Host.
-
-
+You can also use **Cado Host** with the `--single_file_unzipped` parameter to upload evidence. This is particularly useful if you do not have direct access to Azure, as Cado will generate the necessary credentials under **Import > Cado Host**.

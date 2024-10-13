@@ -4,18 +4,24 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# How to upload a single file to Cado
+# How to Upload a Single File to Cado
 
+You can upload a single file, such as a disk image or a previously collected Cado Host zip file, using Cado Host with the `--single_file_unzipped` parameter. This method is useful when you do not have direct access to AWS, Azure, or GCP, as Cado will generate the required credentials during the import process.
 
-You can also use Cado Host with the --single_file_unzipped parameter to upload a single file, such as a disk image or a previously collected Cado Host zip file.
-This is useful if you do not have direct access to AWS/Azure/GCP as Cado will generate the credentials at Import > Cado Host.
+### Steps to Upload a Single File:
 
-To do so:
-1. Generate the credentials for upload using Import > Forensic Artifacts 
+1. **Generate Upload Credentials**  
+   In the Cado Platform, go to **Import > Forensic Artifacts** to generate the credentials for the upload.
 
-2. Copy from --presigned_data to end of script to clipboard.
-On the investigator system, execute:
-```
-cado-host.exe --single_file_unzipped $file <paste clipboard presigned_data>
-```
-3. Cado Host will upload $file and Cado will automatically start the import and processing of $file
+2. **Copy Presigned Data**  
+   In the investigator system, copy the `--presigned_data` portion of the script to your clipboard.
+
+3. **Execute the Command**  
+   Run the following command on the investigator system:
+   ```bash
+   cado-host.exe --single_file_unzipped $file <paste clipboard presigned_data>
+   ```
+   Replace `$file` with the path to the file you wish to upload.
+
+4. **Automatic Processing**  
+   Cado Host will upload the specified file, and Cado will automatically begin the import and processing of the file.
