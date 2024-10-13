@@ -85,6 +85,4 @@ Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and y
 
 ![Creation Complete](/img/create-complete.png)
 
-:::tip
 After deployment, you can import test data from the "Help" menu to verify that everything is functioning correctly.
-:::

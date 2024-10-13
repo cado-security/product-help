@@ -4,11 +4,13 @@ hide_title: true
 sidebar_position: 13
 ---
 
-# How does Cado Security keep your data safe?
-We make sure everything we create, from the idea stage to when it's ready for you, is built with the strongest security in mind. We have the best tools and systems in place to keep everything running smoothly and protected.
+# How Does Cado Security Keep Your Data Safe?
 
-Want to know more? Please contact sales@cadosecurity.com for more details on:
-- Product Security: Including Audit Logging, RBAC, Authentication and Encryption. 
-- Corporate Security: Including our hiring checks and security training.
-- Our Policies: Including SOC2, Company Policies, and Vendor Management.
-- Application Security: Including our Secure SDLC and Penetration Testing.
+At Cado Security, we prioritize security throughout the entire development process, from the initial idea to the final product. Every aspect is built with robust security measures to ensure smooth operations and strong protection for your data.
+
+For more information, contact sales@cadosecurity.com to learn more about:
+
+- **Product Security**: Features such as audit logging, role-based access control (RBAC), authentication, and encryption.
+- **Corporate Security**: Our approach to hiring checks and employee security training.
+- **Our Policies**: Compliance with SOC2, company policies, and vendor management.
+- **Application Security**: Practices like secure software development lifecycle (SDLC) and regular penetration testing.

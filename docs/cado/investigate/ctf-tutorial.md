@@ -4,65 +4,70 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# Getting started with the CTF investigation
-Cado provides a short Capture the Flag data set to help you get familiar with the Cado platform.
 
-## Create an investigation
-1. Create a new [investigation](/cado/discovery-import/investigations) in the Cado platform.
+# Getting Started with the CTF Investigation
 
-![Create investigation](/img/tutorial1.png)
+Cado provides a Capture the Flag (CTF) data set to help you get familiar with the Cado platform.
 
-2. Normally we would now import data from a variety of sources, by clicking the "Import" button within the project:
+## Create an Investigation
 
-![Import data](/img/tutorial2.png)
+1. Begin by creating a new [investigation](/cado/discovery-import/investigations) in the Cado platform.
 
-For this CTF, we have already imported the data for you.
-Navigate to the Help page and click “Import CTF data”. Import will take a few minutes.
+   ![Create investigation](/img/tutorial1.png)
 
-![Import CTF](/img/ctf.png)
+2. Normally, you would import data from various sources by clicking the **"Import"** button within the project:
 
-3. Click the Platform button on the left menu to view the processing status. Once the processing is complete, you will see the data in the investigation.
+   ![Import data](/img/tutorial2.png)
 
-![Platform button](/img/platformbutton.png)
-![Processing](/img/ctf-processing.png)
+   For this CTF, the data has already been imported for you. Navigate to the **Help** page and click **“Import CTF data”**. The import process will take a few minutes.
 
-4. Open the investigation (by returning to the main dashboard and selecting the investigation) and we can start to explore the data.
+   ![Import CTF](/img/ctf.png)
 
-![Investigation](/img/tutorial3.png)
+3. Click the **Platform** button on the left menu to monitor the processing status. Once processing is complete, you will see the data in your investigation.
+
+   ![Platform button](/img/platformbutton.png)
+   ![Processing](/img/ctf-processing.png)
+
+4. Open the investigation by returning to the main dashboard and selecting the investigation. You can now start exploring the data.
+
+   ![Investigation](/img/tutorial3.png)
 
 ## Scenario
-AWS GuardDuty raised a notification that an instance in our AWS account was accessing a known BitCoin mining address. 
 
-We imported the AWS GuardDuty logs, plus a disk image of the instance in question. The original image file was over 8GB in size. For the purposes of this capture the flag though, we reduced it down to around 30MB
+AWS GuardDuty raised an alert about an instance in our AWS account accessing a known Bitcoin mining address. We imported AWS GuardDuty logs and a disk image of the instance in question. The original image file was over 8GB, but for this CTF, we reduced it to around 30MB.
 
 ## Investigate
-The insights page will show you the key findings from the data:
 
-![Insights](/img/tutorial4.png)
+The **Insights** page will display key findings from the data:
 
-We can get a quick idea of what an attacker might have done by looking at the timeline, either by selecting the "Automated Investigation" tab to view events ranked by a machine learning algorithm:
+   ![Insights](/img/tutorial4.png)
 
-![Timeline](/img/tutorial5.png)
+You can quickly assess what an attacker might have done by reviewing the timeline. There are two main ways to do this:
 
-Or selecting the "Search" then selecting Malicious and Suspicious events:
+- Select the **Automated Investigation** tab to view events ranked by a machine learning algorithm:
 
-![Search](/img/tutorial6.png)
+   ![Timeline](/img/tutorial5.png)
 
-In either view, click the filename "a.sh" to view the contents of the file. This is the script that was used to install a crypto miner on the instance:
+- Select **Search** and filter for **Malicious** and **Suspicious** events:
 
-![File](/img/tutorial7.png)
+   ![Search](/img/tutorial6.png)
 
-Click the "uploads" folder in the file tree to view the contents of the folder. This is where the script was uploaded to:
+In either view, click on the filename **"a.sh"** to examine the file contents. This is the script that installed a crypto miner on the instance:
 
-![Folder](/img/tutorial8.png)
+   ![File](/img/tutorial7.png)
 
-Returning to the a.sh file, we can see the script that was executed:
+Next, click the **uploads** folder in the file tree to explore its contents. This is where the script was uploaded:
 
-![Script](/img/tutorial9.png)
+   ![Folder](/img/tutorial8.png)
 
-Clicking the highlighted filepath "/etc/crontab" will take you to the search:
+Returning to the **a.sh** file, you can see the script that was executed:
 
-![Crontab](/img/tutorial10.png)
+   ![Script](/img/tutorial9.png)
+
+Click the highlighted filepath **"/etc/crontab"** to investigate further using the search function:
+
+   ![Crontab](/img/tutorial10.png)
 
 ## Conclusion
-This is a simple example of how you can use the Cado platform to investigate an incident. The Cado platform can help you quickly identify key events and artifacts in an investigation, and provide you with the tools to dig deeper into the data.
+
+This is a simple example of how you can use the Cado platform to investigate an incident. The platform enables you to quickly identify key events and artifacts, while providing powerful tools to dive deeper into the data.

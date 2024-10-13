@@ -4,10 +4,16 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to send logs to Cado
+# How to Send Logs to Cado
 
-The following methods for getting Logs to Cado are available, in order of ease:
+There are several methods for sending logs to Cado, listed in order of ease:
 
-1. Try sending logs to Cado automatically through the UI by navigating to the Help screen. Click on `Send Logs to Cado` and this will automatically package up a bundle of logs and send them directly to Cado over HTTPS 
-2. If that fails, click on `Download Logs` and upload the zip file to the Customer Portal
-3. If 1 and 2 fail, or you cannot log into the platform then open an SSH session to the Cado Platform (you'll need the key you used during deployment) and execute the command `sudo tar -cvzf /var/log/cado_logs.tar.gz /var/log` then upload the zip file to the Customer Portal.
+1. **Automatically through the UI**: Navigate to the Help screen in the Cado platform and click on `Send Logs to Cado`. This will automatically package the logs and send them securely to Cado over HTTPS.
+  
+2. **Download and upload manually**: If automatic sending fails, click on `Download Logs` in the UI. Then, upload the downloaded zip file to the Customer Portal.
+
+3. **Via SSH**: If you cannot access the platform via the UI, open an SSH session to the Cado platform using the key from deployment. Run the following command:
+   ```
+   sudo tar -cvzf /var/log/cado_logs.tar.gz /var/log
+   ```
+   Then, upload the generated zip file to the Customer Portal.
