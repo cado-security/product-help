@@ -4,11 +4,19 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to import data from cloud providers such as AWS, Azure and GCP
+# How to import data from cloud providers (AWS, Azure, GCP)
 
-First select the Cloud Role you will use to import the data.
-You can filter the list by provider, or search for a specific account, subscription or investigation.
+To import data from cloud providers, follow these steps:
 
-![Importing from cloud](/img/import-cloud.png).
+1. **Select a Cloud Role**  
+   Begin by choosing the **Cloud Role** that you will use for the data import. This role must have the necessary permissions for accessing the data.
 
-You can then select the cloud service you want to import from.
+2. **Filter or Search**  
+   You can filter the list of roles by provider (AWS, Azure, GCP) or search for a specific account, subscription, or investigation to narrow down the options.
+
+   ![Importing from cloud](/img/import-cloud.png)
+
+3. **Choose Cloud Service**  
+   After selecting the appropriate role, choose the cloud service (AWS, Azure, or GCP) that contains the data you want to import.
+
+Follow the on-screen prompts to complete the process.

@@ -4,53 +4,50 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# How to import data from AWS EKS
+# How to Import Data from AWS EKS
 
-The Cado platform will collect key logs and forensic artifacts containers running in an AWS EKS cluster.
-There are three core options when acquiring EKS:
+The Cado platform enables the collection of key logs and forensic artifacts from containers running in an AWS EKS cluster. There are three main options when acquiring data from EKS:
 
 ![EKS Options](/img/eks-options.png)
 
-
 ## Import Steps
-1) Go to **Import > Cloud**
 
-![Cado Import Screen showing the AWS EKS options](/img/import-cloud-focus.png)
+1. Go to **Import > Cloud**.
 
-2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
+   ![Cado Import Screen showing the AWS EKS options](/img/import-cloud-focus.png)
 
-:::tip
-When selecting the role in the UI, select the role configured for the account where your EKS cluster resides
-:::
+2. Follow the prompts to select your **Cluster**, **Pod**, and **Container**.
 
-![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
+   :::tip
+   When choosing the role in the UI, make sure to select the role configured for the account where your EKS cluster resides.
+   :::
 
-3) Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-For a typical acquisition, import and processing will take a few minutes to complete.
+   ![Cado Import Screen showing the available AWS EKS Clusters](/img/eks2.png)
 
-![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
+3. Cado will automatically collect key logs and forensic artifacts from the selected container to facilitate your investigation. The import and processing typically take a few minutes to complete.
 
+   ![Cado showing the confirmation screen of a successful AWS EKS container capture](/img/eks3.png)
 
 ## Known Limitations
 
-* The Cado platform can acquire artifacts from a container built with distroless containers, and private clusters, via Cado Host only. The platform will hide containers with the `gcr.io/distroless` image tag. For more information, please see [Kubernetes Deployments].
+- Cado can acquire artifacts from containers built with **distroless containers** and **private clusters** using Cado Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments].
+- Cado will hide pods running under the following namespaces, which are generally system-level namespaces running a distroless environment:
+  - `kube-system`, `kube-public`, `kube-node-lease`
+  - `gke-gmp-system`, `aks-command`
+  - `gmp-system`, `calico-system`, `tigera-operator`
 
-* The Cado platform will hide pods running under the following namespaces: `kube-system`, `kube-public`, `kube-node-lease`, `gke-gmp-system`, `aks-command`, `gmp-system`, `calico-system`, and `tigera-operator`. These are system level namespaces, which are often running a distroless environment, which the platform does not support.
+## Configuring the Cluster RBAC for Use with Cado
 
-## Configuring the Cluster RBAC for use with Cado
+To acquire artifacts from a container, the following Kubernetes permissions must be enabled for each cluster:
 
-In order for the Cado platform to acquire artifacts from a container, the following Kubernetes permissions are required:
-
-- `pods` - `get, list`
-- `pods/exec` - `create, get`
-
-These permissions are required for every cluster you intend to acquire through the platform.
+- `pods` - `get`, `list`
+- `pods/exec` - `create`, `get`
 
 ### RBAC ClusterRole and ClusterRoleBinding
 
-We recommend adding the following ClusterRole and ClusterRoleBinding to your Cluster RBAC with the permissions mentioned above.
+We recommend adding the following ClusterRole and ClusterRoleBinding to your cluster’s RBAC configuration with the permissions listed above.
 
-See [the following AWS guide](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) for instructions of manipulating the role maps.
+For instructions on managing role maps, refer to [this AWS guide](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html).
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -81,33 +78,34 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-### Linking AWS IAM to your Cluster RBAC
+## Linking AWS IAM to Your Cluster RBAC
 
 :::info
-You should use the role ARN added in the [Cross Account Creation](/cado/deploy/cross/cross-account-creation.md#step-2-add-target-aws-role-arn-to-the-cado-platform) that relates to the AWS Account ID where the cluster resides.
+Use the role ARN added in the [Cross Account Creation](/cado/deploy/cross/cross-account-creation.md#step-2-add-target-aws-role-arn-to-the-cado-platform) that corresponds to the AWS Account ID where the cluster resides.
 :::
 
-You'll need to add the appropriately configued Cado IAM role to your EKS RBAC configuration. Without 
-this you will see an error message saying that `This role is not configured to authorize with this EKS cluster`.
+You need to add the appropriate Cado IAM role to your EKS RBAC configuration. Without this, you will encounter an error stating: `This role is not configured to authorize with this EKS cluster`.
 
-See [the following AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/)
-on how to add your role to the EKS RBAC, or if you have eksctl configured, you can use the following command:
+Refer to [this AWS guide](https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/) for instructions on adding your role to the EKS RBAC. If you have `eksctl` configured, you can run the following command:
 
-`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn=<iam_role> --group=<group>`
+```bash
+eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn=<iam_role> --group=<group>
+```
 
-If you added the ClusterRole and ClusterRoleBindings above, the group would be `cado`:
+If you added the ClusterRole and ClusterRoleBindings as shown above, the group will be `cado`:
 
-`eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn=<iam_role> --group=cado`
+```bash
+eksctl create iamidentitymapping --cluster=<cluster_name> --region=<region> --arn=<iam_role> --group=cado
+```
 
-You must also make sure the following IAM permissions are attached to your IAM role:
+Ensure the following IAM permissions are attached to your IAM role:
 ```
 	"eks:ListClusters",
 	"eks:DescribeCluster",
 ```
 
-
 ### Data Flow Diagram
-For a diagram of how our EKS acquisitions operate, please see below:
+
+Below is a diagram illustrating how EKS acquisitions operate:
 
 ![EKS Data Flow](/img/eks-collection.png)
-

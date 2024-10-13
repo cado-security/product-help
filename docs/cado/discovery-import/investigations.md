@@ -4,41 +4,52 @@ hide_title: true
 sidebar_position: 13
 ---
 
-# How to manage investigations
-Cado groups evidence items into investigations, these were formerly called projects.
+# How to Manage Investigations
 
-## Creating a Investigation
-To create a new Investigation:
-- Click **Investigations**
-- Click **Create Investigation**
-- Give the Investigation a unique name 
-- Optionally, grant users access to the investigation and give it a description
-- Click **Create**
+Cado organizes evidence items into groups called **Investigations**, which were previously referred to as projects.
 
-## Deleting a Investigation
-You may want to delete old investigations to free up disk space.  To delete a Investigation:
-- Click **Investigations** and select ⋮ on the investigation you would like to delete
-- Click **Investigation Settings** 
-- Browse to the bottom of the page to **Delete** and enter **permanently delete** in the text box
-- Click **Delete Investigation**
+## Creating an Investigation
+
+To create a new investigation:
+
+1. Click **Investigations** in the main menu.
+2. Click **Create Investigation**.
+3. Enter a unique name for the investigation.
+4. Optionally, grant access to other users and provide a description.
+5. Click **Create** to finalize.
+
+## Deleting an Investigation
+
+If you want to delete old investigations to free up disk space, follow these steps:
+
+1. Click **Investigations** and select the ⋮ menu next to the investigation you want to delete.
+2. Click **Investigation Settings**.
+3. Scroll to the bottom of the page to the **Delete** section.
+4. Enter **permanently delete** in the text box.
+5. Click **Delete Investigation**.
 
 :::info
-You can view free disk space by clicking on the **Platform** menu button.
+You can check available disk space by clicking the **Platform** menu button.
 :::
 
-## Updating a Investigation
-You can update a Investigation name and the description. To update a Investigation:
-- Click **Investigations** and select the investigation you would like to update
-- Select ⋮ on the investigation, then click **Investigation Settings**
-- Make your updates and click **Save Changes**
+## Updating an Investigation
+
+You can modify an investigation's name and description:
+
+1. Click **Investigations** and select the investigation you want to update.
+2. Click the ⋮ menu next to the investigation and select **Investigation Settings**.
+3. Make your changes and click **Save Changes**.
 
 ## Investigation Processing
-The **Processing** page gives you a high level summary of the processing status of evidence items. Evidence items go through a number of different stages of analysis before they are complete. Some data, such as file listings, will be available before the processing is complete.
-To view the Investigation Processing:
-- Click **Investigations** and select the investigation you would like to view
-- Navigate to the **Automated Investigation** or **Evidence** tab and select ⋮ on the investigation
-- Click **View Processing Pipeline**
+
+The **Processing** page provides a high-level overview of the processing status of evidence items. Evidence goes through several stages of analysis, and some data, such as file listings, may be available before the full processing is complete.
+
+To view the processing status of an investigation:
+
+1. Click **Investigations** and select the investigation you want to review.
+2. Navigate to the **Automated Investigation** or **Evidence** tab and click the ⋮ menu.
+3. Select **View Processing Pipeline**.
 
 ![Processing](/img/processing.png)
 
-Individual evidence items can be expanded to view their processing status.
+You can expand individual evidence items to see their detailed processing status.

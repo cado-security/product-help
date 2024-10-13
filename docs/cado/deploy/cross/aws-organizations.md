@@ -86,7 +86,7 @@ An example is below:
 
 
 
-### 3. **Pipeline execution**
+### 4. **Pipeline execution**
 The pipeline to add accounts will then execute, and can be monitored in the pipeline view.
 
 ![Pipeline View](/img/aws-orgs-pipeline.png)

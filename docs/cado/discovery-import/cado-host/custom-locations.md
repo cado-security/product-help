@@ -4,32 +4,47 @@ hide_title: true
 sidebar_position: 5
 ---
 
+# How to Set a Custom Location to Deploy Cado Host From
 
-# How to set a custom location to deploy Cado Host from
+You can configure a custom location for deploying Cado Host, whether using the **Import > Cado Host** option or during container acquisitions that utilize Cado Host.
 
-You can set a custom location from which Cado Host will be deployed from both the Import>Cado Host option, and the container acquisitions which utilize Cado Host.
+This configuration can be set under **Settings > Advanced**:
 
-This can be set under Settings > Advanced:
 ![Custom Cado Host Settings](/img/custom-cado-host.png)
 
-This may be useful if you wish to deploy Cado Host from your own environment, allow a certain IP that hosts the binaries on your firewall, or perform your own static analysis of any binaries before they are deployed.
+This feature is helpful if you want to:
+- Deploy Cado Host from your own environment.
+- Allow a specific IP that hosts the binaries through your firewall.
+- Perform static analysis of the binaries before they are deployed.
 
-It is important that the Cado Host binary is the latest version for compatibility. 
+### Important Notes:
+- Ensure that the Cado Host binary is the latest version to maintain compatibility with the platform.
 
-For example, if the latest official URL for the Cado Host Linux binary is https://official-cado-bucket.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host
-and you are hosting the binaries under http://example.com/my-folder/ 
-* Enter http://example.com/my-folder/ as the URL
-* Ensure that http://example.com/my-folder/cado-host/v1.5.4/linux/cado-host exists
+For example:
+If the latest official URL for the Cado Host Linux binary is:
+```
+https://official-cado-bucket.s3-accelerate.amazonaws.com/cado-host/v1.5.4/linux/cado-host
+```
+And you are hosting the binaries at:
+```
+http://example.com/my-folder/
+```
+Then:
+- Enter `http://example.com/my-folder/` as the custom URL.
+- Ensure the following structure exists: `http://example.com/my-folder/cado-host/v1.5.4/linux/cado-host`.
 
-Please ensure that binaries are present for all operating systems to ensure collections can succeed in all environments:
-* /linux/cado-host
-* /windows/cado-host.exe
-* /osx/cado-host
-* /osx/cado-host-x86
+### Ensure Binary Availability:
+To ensure collections succeed across all environments, binaries for all operating systems must be available:
+- `/linux/cado-host`
+- `/windows/cado-host.exe`
+- `/osx/cado-host`
+- `/osx/cado-host-x86`
 
-The Cado Host binaries are typically updated 1-2 times per quarter. 
+Cado Host binaries are typically updated 1-2 times per quarter.
 
 :::warning
-For distribution compatibility the download operates over HTTPS and does not utilize AWS IAM, so a non-public S3 bucket cannot host the binaries. This will need to be accessible via a HTTPS download, for example: curl https://bucket/cado-host
+For compatibility, the download uses **HTTPS** and does not leverage AWS IAM. Therefore, non-public S3 buckets cannot be used to host the binaries. The binaries must be accessible via an HTTPS download link, such as: 
+```
+curl https://bucket/cado-host
+```
 :::
-

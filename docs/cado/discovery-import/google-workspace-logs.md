@@ -4,54 +4,57 @@ hide_title: true
 sidebar_position: 10
 ---
 
-# How to import Google Workspace logs
+# How to Import Google Workspace Logs
 
 ### Introduction
 
-The Cado platform supports acquisition and processing of Google Workspace logs. Activity logs can be captured from the various Google Workspace applications listed [here](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities).
+The Cado platform supports the acquisition and processing of Google Workspace logs. Activity logs from various Google Workspace applications can be captured, as listed [here](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities).
 
-Note: the feature is currently in Beta, so the ‘SaaS Imports’ feature needs to be enabled in the /settings/experiments page.
+Note: This feature is currently in Beta. To use it, enable the "SaaS Imports" feature on the **/settings/experiments** page.
 
-Before these logs can be acquired using the Cado platform, the following steps need to be taken:
+Before importing Google Workspace logs into Cado, follow these steps:
 
-1. Ensure Workspace API access for the Google Cloud project is enabled (admin SDK API access)
-2. Enable internal OAuth consent screen (which will enable us to auth with a service account)
-3. Create service account (in Google Cloud). Download the JSON file of the access key that is created against the service account
-4. Take note of the email of a Google Workspace admin account for the Impersonation Email, which is entered into the Cado platform
-5. Provide permission for the service account to access the Workspace API (domain wide delegation is required, however access can be limited to the audit logs and only the ability to read, https://www.googleapis.com/auth/admin.reports.audit.readonly)
+1. Ensure that **Workspace API access** for your Google Cloud project is enabled (Admin SDK API access).
+2. Enable the **Internal OAuth Consent Screen** to allow authentication with a service account.
+3. **Create a service account** in Google Cloud, and download the JSON file of the access key created for the service account.
+4. Note the email address of a **Google Workspace admin account** for the Impersonation Email field, which will be entered into the Cado platform.
+5. Grant the service account permission to access the Workspace API via **domain-wide delegation**, with read-only access to audit logs:  
+   `https://www.googleapis.com/auth/admin.reports.audit.readonly`.
 
 ### Log Acquisition
 
-Once the above steps have been completed, the service account credentials need to be added to the Cado platform. To do this, navigate to ‘Settings’ > ‘Integrations’ > ‘Google Workspace’ (/settings/integrations/google-workspace) and select ‘Add Credentials’. Enter the following details:
+After completing the setup, you can add the service account credentials to the Cado platform by navigating to **Settings > Integrations > Google Workspace** (/settings/integrations/google-workspace) and selecting **Add Credentials**. Provide the following details:
 
-* Name (give this any friendly name, for example ‘Google Workspace’)
-* Impersonation Email 
-* Service Account Credentials
+- **Name**: A friendly name for your credentials, such as “Google Workspace.”
+- **Impersonation Email**: The Google Workspace admin email.
+- **Service Account Credentials**: Upload the JSON file for the service account.
 
 ![Google Workspace - Add Creds](/img/gws-add-creds.png)
 
-We are now ready to acquire Google Workspace logs. Use the import wizard from within an investigation and select ‘SaaS’, then ‘Google Workspace’.
+Once the credentials are set, you can acquire Google Workspace logs. In an investigation, use the import wizard and select **SaaS**, then choose **Google Workspace**.
 
 ![Google Workspace - Import](/img/gws-import.png)
 
-Next, select the credentials entered in the integrations page.
+Next, select the credentials you entered in the integrations page.
 
 ![Google Workspace - Select credentials](/img/gws-import-select-creds.png)
 
-The user will be presented with various options to refine the acquisition. For example, the user is able to refine by timeframe, application and user.
+You will then have the option to refine the acquisition by timeframe, application, or user.
 
 ![Google Workspace - Import Configuration](/img/gws-import-config.png)
 
-Finally, the user is requested to review their selections and proceed with the import.
+Review your selections and proceed with the import. Once the acquisition and processing are complete, the logs will be available for viewing and searching on the main timeline page.
 
-When the acquisition and processing is completed, the logs will be available to view and search in the main timeline page. To help users with their search and analysis, we have mapped the following fields to Cado fields:
+### Log Field Mapping
 
-| Google Workspace field | Cado Field | Cado Facet Name |
-| ---------------------- | ---------- | ----- |
-| ipAddress | source_hostname | Source Hostname |
-| actor.email | user | Users |
-| id.applicationName | sourcetype | Datatype |
+To help with analysis, certain Google Workspace fields are mapped to Cado fields:
 
-For example, the user is able to filter the dataset by the ‘Mobile' application by selecting this value in the ‘Datatype’ facet.
+| Google Workspace Field | Cado Field       | Cado Facet Name   |
+| ---------------------- | ---------------- | ----------------- |
+| `ipAddress`            | `source_hostname` | Source Hostname   |
+| `actor.email`          | `user`            | Users             |
+| `id.applicationName`   | `sourcetype`      | Datatype          |
+
+For example, you can filter the dataset by the 'Mobile' application by selecting it under the "Datatype" facet.
 
 ![Google Workspace - Timeline Filtering](/img/gws-timeline.png)

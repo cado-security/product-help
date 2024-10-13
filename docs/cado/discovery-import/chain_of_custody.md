@@ -4,11 +4,12 @@ hide_title: true
 sidebar_position: 12
 ---
 
-# How is Chain of Custody maintained in Cado?
+# How is Chain of Custody Maintained in Cado?
 
-Details of imported evidence, can be viewed at **Import** > **Evidence** and includes meta-data about imported evidence:
+Cado maintains the chain of custody by tracking details of imported evidence. You can view this information by navigating to **Import > Evidence**, where you will find metadata related to the imported evidence.
+
 ![Evidence](/img/coc_audit.png)
 
-Details on which user imported the evidence and when it was imported can be viewed under **Help** > **Audit Logs**:
+Information about which user imported the evidence and when it was imported is available under **Help > Audit Logs**.
 
 ![Audit Logs](/img/coc_evidence.png)

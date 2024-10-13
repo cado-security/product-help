@@ -4,36 +4,34 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# How to import from Google Cloud Kubernetes Engine
+# How to Import from Google Cloud Kubernetes Engine
 
-The Cado platform will collect key logs and forensic artifacts from Google Cloud Kubernetes Engine containers.
+The Cado platform allows you to collect key logs and forensic artifacts from Google Cloud Kubernetes Engine (GKE) containers.
 
 :::info
-Please use Cado Host to acquire from distroless containers.
+For distroless containers, please use Cado Host to perform the acquisition.
 :::
-
 
 ## Import Steps
 
-1) Go to **Import > Cloud**
+1. **Go to Import > Cloud**  
+   Navigate to the cloud import screen.
 
-![Cado Import Screen showing the Kubernetes Engine options](/img/import-cloud-focus.png)
+   ![Cado Import Screen showing the Kubernetes Engine options](/img/import-cloud-focus.png)
 
-2) Go through the steps to choose your **Cluster**, **Pod** and **Container**:
+2. **Select Cluster, Pod, and Container**  
+   Follow the prompts to choose your **Cluster**, **Pod**, and **Container**.
 
-![Cado Import Screen showing the available Kubernetes Engine Clusters](/img/gke.png)
+   ![Cado Import Screen showing the available Kubernetes Engine Clusters](/img/gke.png)
 
-3) Confirm the details and click **Start Import**
+3. **Confirm and Start Import**  
+   Review the details, then click **Start Import**.
 
-Cado will now automatically collect all the key logs and forensic artifacts from the container to enable an investigation.
-For a typical acquisition, import and processing will take a few minutes to complete.
+Cado will automatically collect all relevant logs and forensic artifacts from the container to support your investigation. For most acquisitions, the import and processing will complete within a few minutes.
 
-![Cado showing the confirmation screen of a successful Kubernetes Engine container capture](/img/eks3.png)
+   ![Cado showing the confirmation screen of a successful Kubernetes Engine container capture](/img/eks3.png)
 
 :::info
-To import GKE containers with Cado, the `iam.serviceAccounts.implicitDelegation` IAM permission added to the Service Account.
-
-Currently, for GKE import Cado only suports GCP accounts configured using Workload Identity Federation. See more in the [GCP Import Settings](/cado/deploy/gcp/gcp-settings#workload-identity-federation) page.
+To import GKE containers, ensure the **`iam.serviceAccounts.implicitDelegation`** IAM permission is added to the Service Account.  
+Currently, GKE imports are supported only for GCP accounts configured with **Workload Identity Federation**. See more details on the [GCP Import Settings](/cado/deploy/gcp/gcp-settings#workload-identity-federation) page.
 :::
-
-

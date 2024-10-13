@@ -4,19 +4,22 @@ hide_title: true
 sidebar_position: 7
 ---
 
+# How to Import Memory from AWS EC2
 
-# How to import memory from AWS EC2
-You can acquire memory of Linux systems in EC2 by using the "Triage Acquisition" option under Import > EC2:
+To acquire memory from Linux systems running in EC2, use the **Triage Acquisition** option under **Import > EC2**:
 
 ![AWS Memory](/img/alternate-ec2.png)
 
-This requires the AWS SSM agent to be running on the EC2 and registered within the AWS Systems Manager. If it is not, you can acquire memory by connecting to the machine over SSH or RDP and executing Cado Host from Import > Forensic Artifacts. You can also use this method to acquire from Windows systems.
+This method requires the AWS Systems Manager (SSM) agent to be installed and running on the EC2 instance. The instance must also be registered with AWS Systems Manager. If the SSM agent is not available, you can still acquire memory by connecting to the machine via SSH (for Linux) or RDP (for Windows) and running **Cado Host** from **Import > Forensic Artifacts**.
 
-Any acquisition from ECS and EKS will attempt to collect memory by default.
+This method can also be used to acquire memory from Windows systems.
 
-For more information, see the [Memory Analysis](/cado/discovery-import/data-types/memory.md) page.
+For ECS and EKS acquisitions, memory will be collected automatically by default.
+
+For additional details, see the [Memory Analysis](/cado/discovery-import/data-types/memory.md) page.
 
 ### Data Flow Diagram
-For a diagram of how our EC2 SSM acquisitions operate, please see below:
+
+The following diagram illustrates how EC2 SSM memory acquisitions work:
 
 ![EC2 SSM Data Flow](/img/ec2-ssm.png)

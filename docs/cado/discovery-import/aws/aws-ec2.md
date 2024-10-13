@@ -3,70 +3,71 @@ title: EC2 and EBS
 hide_title: true
 sidebar_position: 1
 ---
-# How to import AWS EC2 and EBS data into Cado
 
-Cado supports acquisition of EC2 instances. Select the region, and this will populate a list of EC2 instances available. You can filter the list of instances and buckets by instance ID, name, state or public IP address. Select the instance you wish to acquire.
+# How to Import AWS EC2 and EBS Data into Cado
+
+Cado supports acquiring data from EC2 instances. Start by selecting the region, which will populate a list of available EC2 instances. You can filter this list by instance ID, name, state, or public IP address. Once you’ve found the instance you want to acquire, select it.
 
 ![AWS EC2 Import](/img/aws-ec2.png)
 
-Click on "Continue" .
+Click **Continue** to proceed.
 
 ## Capture Options
 
-For volume capture, set the options for what data you want to capture.
+### Volume Capture
+
+Set your options for what data to capture from the selected instance.
 
 ### Triage Capture
-To perform a faster triage collection on an EC2 instance using Cado Host, select the button 'Triage Acquisition'. Please note that this requires that SSM be enabled on the target instance. This will also collect memory from Linux systems.
 
-For more information about about what Cado Host collects see [Collected Artifacts](/cado/discovery-import/cado-host/intro)
+For a faster triage collection on an EC2 instance, use **Triage Acquisition** via Cado Host. This requires that AWS Systems Manager (SSM) be enabled on the target instance and also supports memory collection on Linux systems.
 
-![AWS EC2 Triage Acquisition ](/img/aws-ec2-triage-acquisition.png)
+For more details about what Cado Host collects, refer to the [Collected Artifacts Documentation](/cado/discovery-import/cado-host/intro).
 
-Click 'Continue', review your selections and click 'Start Import'.
+![AWS EC2 Triage Acquisition](/img/aws-ec2-triage-acquisition.png)
 
-#### Triage Capture using Use SSM Port Forwarding feature (Linux only)
+Click **Continue**, review your selections, and click **Start Import**.
 
-When selecting the ‘Triage Acquisition’ acquisition type for an EC2 instance, there is now an option to select ‘Use SSM Port Forwarding’. This is useful for EC2 instances (Linux only) that have restricted network access, meaning it’s problematic for them to download the Cado Host binary and transfer the resulting triage capture to the Cado S3 bucket. Using the SSM Port Forwarding feature means Cado will facilitate the transfer of the Cado Host binary onto the target resource and the resulting triage capture off the resource. 
+#### Triage Capture with SSM Port Forwarding (Linux Only)
+
+When using **Triage Acquisition** for a Linux EC2 instance, you can enable the **SSM Port Forwarding** option. This is useful for instances with restricted network access, where downloading the Cado Host binary directly is not possible. The SSM Port Forwarding feature transfers the binary to the instance and retrieves the triage capture.
 
 ![AWS EC2 Triage Acquisition Port Forwarding](/img/aws-ec2-triage-acquisition-ssm-port-forwarding.png)
 
 ### Run Command
 
-The Cado platform allows you to execute a script on a target system using the ‘Run command’ action type in the import wizard. This functionality uses the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) and requires admin privileges. A script must be created in /settings/scripts to use this feature. 
+Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard. This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges.
 
-*Note: This feature is in Beta - to enable the feature go to Settings > Experiments > Run Action*
+To use this feature, you must create a script in **/settings/scripts**. 
+
+*Note: This feature is in Beta. To enable it, go to Settings > Experiments > Run Action.*
 
 ![AWS EC2 Run Command](/img/aws-ec2-runcommand1.png)
 
-#### Creating a saved script
+#### Creating a Saved Script
 
-To create a saved script, navigate to /settings/scripts and select the ‘Create script’ button. You will be prompted to choose whether the script is to be executed against a Linux or Windows system. For the purpose of the following example, we will choose Linux. *Note, there is reduced functionality for Windows scripts - more details can be found below.*
+1. Go to **/settings/scripts** and click **Create Script**.
+2. Choose whether the script will run on Linux or Windows (reduced functionality for Windows). For this example, we’ll choose Linux.
 
 ![Saved Script](/img/aws-ec2-runcommand2.png)
 
-In this example, we will:
-
-* Instruct Cado to download Volexity Surge from a predefined S3 location by specifying an “Input” file (Step 2)
-* Instruct Cado to upload the output of Volexity Surge to the Cado S3 bucket, by telling Cado where the “Output” file resides on the target system (Step 3)
-* Run Volexity Surge with the appropriate command line arguments by specifying a “Script” (Step 4)
-
-In Step 1, provide the script with a Name and Description.
+3. In Step 1, provide a **Name** and **Description** for the script.
 
 ![Saved Script - Step 1](/img/aws-ec2-runcommand3.png)
 
-In Step 2, provide the location of the file (valid S3 URI) that is to be downloaded onto the target system. In this example, it is the Volexity Surge binary, which is required to run the script. Cado will transfer this file onto the target system and this file can be referenced in the script using the variable `$INPUT`. *Note, this step is not available for Windows scripts.*
+4. In Step 2, provide the location of the input file (valid S3 URI), which will be downloaded onto the target system. This step is not available for Windows scripts.
 
 ![Saved Script - Step 2](/img/aws-ec2-runcommand4.png)
 
-In Step 3, provide the location of a file which exists on the target system that is to be transferred to your Cado S3 bucket. In this example, it is the memory dump created by Volexity Surge. The file can be referenced in the script using the variable `$OUTPUT`. Note, this step is not available for Windows scripts.
+5. In Step 3, specify the location of the output file on the target system that will be uploaded to your Cado S3 bucket. This step is not available for Windows scripts.
 
 ![Saved Script - Step 3](/img/aws-ec2-runcommand5.png)
 
-In Step 4, paste the script that is to be executed on the target system. The input and output files from Steps 2 and 3 can be referenced using `${INPUT}` and `${OUTPUT}` respectively. Given input and output file support is only available for Linux scripts, reference of these variables is not required for Windows scripts.
+6. In Step 4, paste the script that will run on the target system. The input and output files can be referenced as `${INPUT}` and `${OUTPUT}` respectively. Windows scripts do not require these variables.
 
-The script included in the below screenshot is as follows:
+Example script:
 
-```
+```bash
 mkdir -p /tmp/cado-volexity
 cp ${INPUT} /tmp/cado-volexity/surge-collect
 chmod 755 /tmp/cado-volexity/surge-collect
@@ -79,18 +80,19 @@ rm -rf /tmp/cado-volexity
 
 ![Saved Script - Step 4](/img/aws-ec2-runcommand6.png)
 
-Finally, select ‘Continue’ and you should see the newly created script in the scripts table.
+7. Click **Continue** and you’ll see your script listed in the scripts table.
 
 ![Saved Script - Table](/img/aws-ec2-runcommand7.png)
 
-#### Executing the script using Run command
+#### Running the Script
 
-Use the Import wizard to select an EC2 that has the SSM agent installed. Select the ‘Run command’ action type and you should now see the script that was created in the previous step. Continue with the import as normal.
+Use the Import Wizard to select an EC2 instance with the SSM agent installed. Choose **Run Command** as the action type, and you’ll see the script created earlier. Complete the import as usual.
 
 ![AWS EC2 Run Command - Selecting Saved Script](/img/aws-ec2-runcommand8.png)
 
 ### Data Flow Diagram
-For a diagram of how our EC2 disk acquisitions operate, please see below:
+
+Below are diagrams illustrating how EC2 disk acquisitions work:
 
 ![EC2 Disk Acquisition](/img/import-aws-ec2-cross.png)
 
