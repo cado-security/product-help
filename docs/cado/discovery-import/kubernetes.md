@@ -34,6 +34,12 @@ To acquire data:
 
 ![Cado Host K8s UI](/img/cado-host-k8s.png)
 
+This will use a command such as the following to start a debug container and execute Cado Host:
+  
+```bash
+kubectl debug -it pod-name --image=debian:latest --target=target-container -n pod-namespace -- sh -c
+```
+
 The diagram below provides a high-level overview of how this works:
 
 ![Cado Host K8s Flow](/img/kubernetes-flow.png)

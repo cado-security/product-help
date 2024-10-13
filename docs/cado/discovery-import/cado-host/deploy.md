@@ -91,3 +91,7 @@ Cado Host can be deployed to multiple devices at once, such as through **[Group 
 ## Deployment from XDR Integrations
 
 Cado Host can also be deployed to compromised machines via XDR systems such as CrowdStrike and SentinelOne. For more information, refer to the integrations with [SentinelOne](/cado/integrations/xdr/sentinelone) and [CrowdStrike](/cado/integrations/xdr/crowdstrike).
+
+## Proxy and Network Access
+Cado Host will use the operating system defaults to connect to cloud storage.
+This means you may need to configure a proxy or network access for Cado Host to connect to the internet and upload data.

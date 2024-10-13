@@ -47,3 +47,11 @@ The latest release information is listed at the bottom of the JSON file:
   "gcp_image": "https://xxx"
 }
 ```
+
+## How does the Update Mechanism work?
+
+The update mechanism works by deploying a new instance (via AMI in AWS, or via URL in Azure and GCP) and moving the attatched data-disk. In AWS HA environments, the ASG is updated to use the new AMI.
+
+If updating via the User Interface, before the update is performed, a number of checks are performed to ensure any IAM or Infrastructure requirements are met. A warning is issued in the UI if the AMI is not from an official Cado account.
+
+If updating manually by Terraform or CloudFormation, these checks cannot be run.
