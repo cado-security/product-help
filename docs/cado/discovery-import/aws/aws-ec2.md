@@ -97,3 +97,9 @@ Below are diagrams illustrating how EC2 disk acquisitions work:
 ![EC2 Disk Acquisition](/img/import-aws-ec2-cross.png)
 
 ![EC2 Role Acquisition](/img/import-aws-ec2-role.png)
+
+![EBS Direct Acquisition](/img/ebs-direct.png)
+
+![EC2 SSM Acquisition](/img/ec2-ssm.png)
+
+![EC2 Tunnel Acquisition](/img/ec2-tunnel.png)
