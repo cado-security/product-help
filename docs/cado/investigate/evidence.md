@@ -3,12 +3,16 @@ title: Evidence
 hide_title: true
 sidebar_position: 2
 ---
-# What is the Evidence tab?
 
-The Evidence tab is a focused view of the data that has been collected as part of this investigation, and the current processing status of that data. Clicking on the menu icon to the right of a piece of evidence allows you to delete that piece of evidence.  
+
+# What is the Evidence Tab?
+
+The **Evidence** tab provides a focused view of the data collected during an investigation and displays the current processing status of that data. 
+
+You can manage evidence by clicking the menu icon to the right of each piece of evidence, where you’ll have the option to delete it if needed.
 
 ![Evidence List](/img/evidence.png)
 
-Expanding a piece of evidence provides a detailed processing history for that piece of evidence.
+Expanding a piece of evidence will show you its detailed processing history, allowing you to track the steps and progress of the analysis.
 
 ![Evidence Details](/img/evidence-details.png)

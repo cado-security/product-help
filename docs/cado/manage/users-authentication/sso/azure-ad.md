@@ -4,63 +4,69 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to set-up the Azure AD OAuth Integration
+# How to Set Up the Azure AD OAuth Integration
 
-:::warning
-If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
-:::
+If you encounter any issues during the setup process, please contact support at support@cadosecurity.com and provide detailed information about your configuration.
 
-You can now enable the beta of Azure AD OAuth Integration in the Cado platform by going to "Settings > SSO > Microsoft OAuth".
+You can enable the beta version of Azure AD OAuth Integration in Cado by navigating to **Settings > SSO > Microsoft OAuth**.
 
-### Setting up Azure AD SSO
-1. Open Azure portal and navigate to **Enterprise Applications**
-2. Click **New Application**
-3. Click **Create your own application**
-	- Enter a name (e.g. Cado)
-	- Select `Integrate any other application you don't find in the gallery (Non-gallery)`
-4. Make a note of the Application ID
+### Setting Up Azure AD SSO
+
+1. Open the **Azure portal** and go to **Enterprise Applications**.
+2. Click **New Application**.
+3. Select **Create your own application**:
+   - Enter a name (e.g., Cado).
+   - Choose **Integrate any other application you don't find in the gallery (Non-gallery)**.
+4. Make a note of the **Application ID**.
 
 :::tip
-*Optional:* Create a role to allow Azure AD users to be assigned admin privileges
-1. From the home page, open **Azure Active Directory** and select the **App Registrations** blade
-2. Select your application (you may need to switch to the **All Applications** tab if you are not an owner)
-3. Select **App roles** then **Create app role**.
-4. Set the role value, in this example it will be called, `admin`, but you can name this as you like. Just make note of what you call this; you'll need it later
-![Azure AD Role](/img/azure-create-role.png)
+*Optional:* Create a role to allow Azure AD users to be assigned admin privileges:
+
+1. From the home page, go to **Azure Active Directory** and select the **App Registrations** blade.
+2. Select your application (you may need to switch to the **All Applications** tab if you're not the owner).
+3. Go to **App roles** and click **Create app role**.
+4. Define a role value (e.g., `admin`), but you can name this role as you prefer. Make a note of the role name for later use.
+
+   ![Azure AD Role](/img/azure-create-role.png)
 :::
 
-5. Configure Access Control
-	- Navigate to **Enterprise Applications** and select the **Properties** blade and make sure **User assignment required?** is set to `Yes`. This means only assigned users will be allowed to log into Cado
-	![Azure Properties](/img/azure-properties.png)
-	- Navigate to **Users and Groups**
-	- Click **Add User/Group** and add any users you want to give access to the app. If you created an admin role, you can assign the new users the admin role to give them admin access within Cado.
-6. Create a secret to allow authentication with Cado
-	- From the home page, open **Azure Active Directory** and select the **App Registrations** blade
-	- Select your application (you may need to switch to the **All Applications** tab if you are not an owner)
-	- Select the **Clients & Secrets** blade and click **New Client Secret**
-	- Make a note of the **Value**, you will need this in Cado.
-7. Collect other required information
-	- Select the **Overview** blade and make a note of the following values:
-		- `Application Client ID`
-		- `Directory (Tenant) ID`
-		- `Client Secret` (which you should already have from previous step)
-8. Whitelist the redirect URL
-	- Select the **Authentication** blade
-	![Azure Authentication](/img/azure-authentication.png)
-	- Click **Add a Platform**
-	- Select **Web** and input your redirect url. This should be the url you use to access Cado in the web browser, including the `/login` path. Example: `https://my.cado.instance/login`
-9. Add the API Permissions
-    - Select the **API Permissions Blade**
-	![Azure API Permissions page](/img/azure-api-permissions-1.png)
-	- Click **Add a permission**
-	- Select **Microsoft Graph**
-	- Select **Delegated Permissions**
-	- Tick **email** and **openid** under **OpenId permissions**
-	![Azure API Permissions](/img/azure-api-permissions-2.png)
-	- Click **Add permissions**
-10. Configure SSO in the Cado platform
-	- Open your Cado instance and log in as an admin user
-	- Go to **Settings > SSO > Microsoft OAuth**
-	- Enter the Microsoft OAuth details you noted earlier
-	- In the `Admin Group Name` enter in the value you configured in step 4
-	- Click **Update**
+5. **Configure Access Control**:
+   - Go to **Enterprise Applications** and open the **Properties** blade. Ensure that **User assignment required?** is set to `Yes`, meaning only assigned users can log in to Cado.
+     ![Azure Properties](/img/azure-properties.png)
+   - Navigate to **Users and Groups**.
+   - Click **Add User/Group** to assign users who will have access to the application. If you created an admin role, you can assign users to this role to give them admin access within Cado.
+
+6. **Create a Client Secret**:
+   - From the home page, go to **Azure Active Directory** and select the **App Registrations** blade.
+   - Select your application (you may need to switch to the **All Applications** tab if you're not the owner).
+   - Go to the **Certificates & Secrets** blade and click **New Client Secret**.
+   - Make a note of the **Value**; you will need this in Cado.
+
+7. **Collect Required Information**:
+   - In the **Overview** blade, note down the following values:
+     - `Application (Client) ID`
+     - `Directory (Tenant) ID`
+     - `Client Secret` (from the previous step).
+
+8. **Whitelist the Redirect URL**:
+   - Go to the **Authentication** blade.
+     ![Azure Authentication](/img/azure-authentication.png)
+   - Click **Add a Platform**.
+   - Select **Web** and input your redirect URL. This should be the URL you use to access Cado in your browser, including the `/login` path. Example: `https://my.cado.instance/login`.
+
+9. **Add API Permissions**:
+   - Go to the **API Permissions** blade.
+     ![Azure API Permissions page](/img/azure-api-permissions-1.png)
+   - Click **Add a permission**.
+   - Select **Microsoft Graph**.
+   - Choose **Delegated Permissions**.
+   - Under **OpenId permissions**, select **email** and **openid**.
+     ![Azure API Permissions](/img/azure-api-permissions-2.png)
+   - Click **Add permissions**.
+
+10. **Configure SSO in the Cado Platform**:
+    - Log in to your Cado instance as an admin user.
+    - Go to **Settings > SSO > Microsoft OAuth**.
+    - Enter the Microsoft OAuth details you noted earlier.
+    - In the `Admin Group Name` field, enter the value you configured in Step 4.
+    - Click **Update**.

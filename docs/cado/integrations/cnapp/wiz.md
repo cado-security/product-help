@@ -4,16 +4,17 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to integrate Wiz with Cado
+# How to Integrate Wiz with Cado
 
-The Cado Platform automates the processing and analysis of AWS EC2 EBS volumes acquired using the Wiz Platform. Using Wiz and Cado Platform together you can automate the collection, processing, and analysis of AWS EC2 virtual machines without explicitly having to grant Cado access to the environment where the EC2 resides.
-
+The Cado platform automates the processing and analysis of AWS EC2 EBS volumes acquired through the Wiz platform. By integrating Wiz with Cado, you can seamlessly automate the collection, processing, and analysis of AWS EC2 virtual machines without granting Cado direct access to the environment where the EC2 instances are located.
 
 ![Wiz](/img/wiz-integration.png)
 
-
 ### Setup
 
-Add the Tag Key and Value pair for volumes copied by Wiz in the *Settings - Advanced* page:
+To integrate Wiz with Cado, follow these steps:
+
+1. Navigate to the **Settings > Advanced** page in the Cado platform.
+2. Add the **Tag Key** and **Value** pair for volumes copied by Wiz.
 
 ![Setup](/img/wiz-settings.png)

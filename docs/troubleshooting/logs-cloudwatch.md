@@ -4,10 +4,11 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# How to forward Cado system and processing logs to Cloudwatch
+# How to Forward Cado System and Processing Logs to CloudWatch
 
-Provided the platform has IAM and network permissions to send logs to Cloudwatch, application and operating system logs are sent to:
+If the platform has the necessary IAM and network permissions to send logs to CloudWatch, both application and operating system logs are forwarded to the following locations:
+
 ```
-                        "log_group_name": "/var/logs/cado",
-                        "log_stream_name": "cado-logs-all"
+"log_group_name": "/var/logs/cado",
+"log_stream_name": "cado-logs-all"
 ```

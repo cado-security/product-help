@@ -4,82 +4,101 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# What is the timeline tab?
-The Cado platform includes an advanced search interface which supports complex queries.
+
+# What is the Timeline Tab?
+
+The **Timeline** tab in the Cado platform provides an advanced search interface that supports complex queries to help you filter and analyze investigation data efficiently.
 
 ### Faceted Search
-Cado allows you to filter your search based upon 'facets', like event severity, or associated user name, file, source/destination IP address
+
+Cado enables you to filter search results using **facets**, such as event severity, associated usernames, files, or source/destination IP addresses.
 
 ![Faceted Search](/img/faceted-search.png)
 
-For long lists of facets, you can search and sort the list of facets
+For long lists of facets, you can easily search and sort through them.
 
 ![Faceted List](/img/facet-list.png)
 
 ### Basic Searches
 
-You can also use the search bar to craft specific searches using search strings
+You can also use the search bar to perform specific queries using search strings.
 
-#### Plain search terms
-Providing plain search terms will search across all fields, for example: `foo`
+#### Plain Search Terms
+A plain search term will search across all fields. For example: `foo`
 
-You can quote terms containing spaces: `"foo bar"`
+If the term contains spaces, enclose it in quotes: `"foo bar"`
 
-#### Fields
-You can search a specific field by prepending it to the search term: `user: Chris` OR  `extra: "foo bar"`
+#### Field-Specific Searches
+To search within a specific field, prepend the field name to the search term. For example:
+- `user: Chris`
+- `extra: "foo bar"`
 
 #### Ranges
-You can restrict a field to a range of values: `file_size: [1024 TO 8196]`
+You can search for a range of values within a field. For example:
+- `file_size: [1024 TO 8196]`
 
-### Building complex queries
-You can build complex queries using `AND`, `OR` and `NOT` to combine terms, and brackets to group `()`:
+### Building Complex Queries
 
-For example: `alarm_severity: [0 TO 5] AND (user: "Chris" OR user: "James") AND NOT filename: "/foo/bar.txt"`
+You can combine search terms using `AND`, `OR`, and `NOT`, and use parentheses to group them:
+
+Example: 
+```
+alarm_severity: [0 TO 5] AND (user: "Chris" OR user: "James") AND NOT filename: "/foo/bar.txt"
+```
 
 :::info
-Note that without brackets, ANDs will bind before ORs. This means that `user: "Chris" AND user: "James" OR filename: "/foo/bar.txt"` is searched as `(user: "Chris" AND user: "James") OR filename: "/foo/bar.txt"`.
+Without parentheses, `AND` operations are evaluated before `OR`. For example:
+```
+user: "Chris" AND user: "James" OR filename: "/foo/bar.txt"
+```
+is treated as:
+```
+(user: "Chris" AND user: "James") OR filename: "/foo/bar.txt"
+```
 :::
 
-## Fields
-Searchable fields
+## Searchable Fields
 
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| `macb` | keyword | 4 character string which encoding MACB information for this event. An `M` in position 0 indicates this is a Modified event and a `.` represents a non-modified event. e.g. `M..B` indicates modified and birth. |
-| `source` | keyword | The type of the file or data that produced this event e.g. `EVT`,  `CLOUDTRAIL`, `FILE`, `JAVA_IDX`, `LOG`. |
-| `sourcetype` | keyword | More specific subtype of `source` |
-| `type` | keyword | `;` separated list of event types, e.g. `Last Executed Time`, `Updated Time`, `Content Modification Time`, `Creation Time`. |
-| `user` | keyword | User associated with the event |
-| `host` | keyword | Host name associated with the event |
-| `filename` | special | The path of the file associated with this event |
-| `full_filename` | keyword | The full path of the file associated with this event, supports regex and must match entire path |
-| `inode` | keyword | The inode number of the file associated with this event |
-| `source_hostname` | keyword | For network connections, the hostname that it originated from |
-| `destination_hostname` | keyword | For network connections, the destination hostname |
-| `tag` | keyword | Tag representing type of event e.g. `Network Logon`, `File Access`, `Execution` |
-| `executed_process` | keyword | Where we detect a process execution, the path of the executed file |
-| `short` | text | Short text providing additional data from raw event |
-| `extra` | text | Longer text, providing more raw data than `short` |
-| `alarm_severity` | int | Severity of event based on detections. Malicious `1`, Suspicious `3`, Other `10` |
-| `isFolder` | boolean | Whether an event is a folder. |
-| `evidence_id` | int | ID of evidence item |
-| `timestamp` | int | Unix timestamp of event |
-| `evidence_id` | int | the id of a specific evidence to search within |
-| `file_size` | int | size of file associated with this event |
-| `sha256` | text | sha256 of the file associated with this event |
-| `strings` | text | Strings extracted from file associated with this event |
-| `is_starred` | bool | Whether an event is starred |
-| `for_report` | bool | Whether an event is included in the report |
-| `alarm_description` | keyword | Short description explaining the reason for an alarm |
-| `alarm_attack` | keyword | Mitre attack code |
-| `attribute_name` | keyword | $STANDARD_INFORMATION / $FILENAME / null
+The following fields are searchable:
 
+| Field               | Type     | Description                                                                                                           |
+|---------------------|----------|-----------------------------------------------------------------------------------------------------------------------|
+| `macb`              | keyword  | A 4-character string encoding MACB information (e.g., `M..B` for Modified and Birth events).                           |
+| `source`            | keyword  | The type of file or data producing this event (e.g., `EVT`, `CLOUDTRAIL`, `FILE`).                                     |
+| `sourcetype`        | keyword  | More specific subtype of `source`.                                                                                     |
+| `type`              | keyword  | A `;` separated list of event types (e.g., `Last Executed Time`, `Updated Time`, `Creation Time`).                      |
+| `user`              | keyword  | The user associated with the event.                                                                                    |
+| `host`              | keyword  | The hostname linked to the event.                                                                                      |
+| `filename`          | special  | The path of the file related to the event.                                                                             |
+| `full_filename`     | keyword  | The full path of the file, supports regex and must match the entire path.                                               |
+| `inode`             | keyword  | The inode number of the file.                                                                                          |
+| `source_hostname`   | keyword  | The source hostname for network connections.                                                                            |
+| `destination_hostname`| keyword| The destination hostname for network connections.                                                                      |
+| `tag`               | keyword  | Tag representing the event type (e.g., `Network Logon`, `File Access`, `Execution`).                                   |
+| `executed_process`  | keyword  | The path of an executed file, if detected.                                                                             |
+| `short`             | text     | Short text providing additional event details.                                                                         |
+| `extra`             | text     | Additional data from the raw event, longer than `short`.                                                               |
+| `alarm_severity`    | int      | Severity of the event (Malicious: `1`, Suspicious: `3`, Other: `10`).                                                  |
+| `isFolder`          | boolean  | Whether the event is related to a folder.                                                                              |
+| `evidence_id`       | int      | ID of the evidence item.                                                                                               |
+| `timestamp`         | int      | Unix timestamp of the event.                                                                                           |
+| `file_size`         | int      | The size of the file related to the event.                                                                             |
+| `sha256`            | text     | SHA-256 hash of the file related to the event.                                                                         |
+| `strings`           | text     | Extracted strings from the file related to the event.                                                                  |
+| `is_starred`        | bool     | Whether the event is starred.                                                                                          |
+| `for_report`        | bool     | Whether the event is included in a report.                                                                             |
+| `alarm_description` | keyword  | A short description explaining the reason for an alarm.                                                                |
+| `alarm_attack`      | keyword  | MITRE ATT&CK tactic or technique code.                                                                                 |
+| `attribute_name`    | keyword  | File attribute information (e.g., `$STANDARD_INFORMATION`, `$FILENAME`).                                               |
 
-Fields of type `int` or `keyword` require the search term to match exactly in order to return a result. For example, for an event with `user` equal to `chris`, the search term:
- - `user: chris` matches
- - `user: ch*` matches
- - `user: ch` does not match
+### Notes on Search Behavior:
+- Fields of type `int` or `keyword` require exact matches.
+- Wildcard characters (`*` for multiple, `?` for single) can be used in `keyword` fields.
+- Fields of type `text` support partial matches.
 
-Fields of type `keyword` support wildcard characters. Use `?` as a single-character wildcard and `*` for any number of characters.
+Example:
+- `user: chris` matches `user` field with value `chris`.
+- `user: ch*` matches `chris` or any string starting with `ch`.
+- `user: ch` does not match as it requires a full or wildcard match.
 
-Fields of type `text` do not require a full match. E.g. searching for `strings: content` will return the event with the following strings data: `This is some example content`.
+Searching `strings: content` will return events with matching data, such as `"This is some example content."`.

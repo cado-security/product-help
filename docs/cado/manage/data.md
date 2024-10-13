@@ -4,15 +4,26 @@ hide_title: true
 sidebar_position: 8
 ---
 
-# How to manage data in the Cado platform
-There are several considerations for managing data from the Cado platform
+# How to Manage Data in the Cado Platform
 
-## Controlling the lifecycle of data stored by the Cado platform
-AWS supports this through **[Object Locks](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)** and **[Lifecycle Rules](https://docs.aws.amazon.com/console/s3/lifecyclerules)** associated with your S3 bucket.  Please see the AWS documentation for more details.
+There are several important considerations when managing data in the Cado platform.
 
-Azure supports this through **[Life Cycle Management Policies](https://docs.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview)** for your blob storage.  Please see the Azure documentation for more details.
+## Controlling the Lifecycle of Data Stored by the Cado Platform
 
-Google Cloud supports this through **[Object Lifecycle Management](https://cloud.google.com/storage/docs/lifecycle)** for your Cloud Storage bucket.  Please see the Google Cloud documentation for more details.
+Each cloud provider offers tools to help manage the lifecycle of data stored in their environments. The Cado platform supports these tools based on the cloud provider you use:
 
-## Storing sensitive customer data
-Whether sensitive customer data is stored within the Cado platform is completely dependent on what data sources and evidence is imported into the software.  In all cases, data is either stored within the database on the main Cado instance, within EFS, within a customers' S3 bucket or  Azure storage.  Since the Cado platform is deployed within the customers' cloud environment, the customer has control over the life cycle management of the data (example: using Life Cycle management policies) as well as who has access to potential sensitive data via VPC and Subnet rules.
+- **AWS**: You can use **[Object Locks](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)** and **[Lifecycle Rules](https://docs.aws.amazon.com/console/s3/lifecyclerules)** in your S3 bucket to control data retention and deletion. For more details, refer to the AWS documentation.
+  
+- **Azure**: Manage data lifecycle through **[Life Cycle Management Policies](https://docs.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview)** for Azure Blob Storage. For more information, refer to the Azure documentation.
+  
+- **Google Cloud**: Use **[Object Lifecycle Management](https://cloud.google.com/storage/docs/lifecycle)** for Google Cloud Storage buckets to control data lifecycle. See the Google Cloud documentation for further details.
+
+## Storing Sensitive Customer Data
+
+The storage of sensitive customer data in the Cado platform depends on the types of data sources and evidence imported into the software. Data can be stored in several locations, including:
+
+- The database on the main Cado instance.
+- EFS (Elastic File System).
+- The customer's S3 bucket (AWS) or Azure storage.
+
+Because the Cado platform is deployed within the customer's cloud environment, the customer has full control over data lifecycle management (e.g., using Lifecycle Management policies) and access controls, such as VPC and subnet rules, to secure sensitive data.

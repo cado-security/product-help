@@ -4,23 +4,25 @@ id: intro
 title: What is Cado
 ---
 
-# What is the Cado platform?
-Data is moving to the cloud. Cyber attackers are moving to the cloud. Yet when security teams need to investigate a threat in a modern environment, it’s incredibly complex and time consuming. The Cado platform leverages the scale, speed and automation of the cloud to expedite investigation and response.
 
-### Core features
-- **Automated data capture** - Cado enables automated data capture across multi-cloud and ephemeral container environments, while also supporting investigations across on-premises systems.
+# What is the Cado Platform?
 
-- **Parallel processing** - Cado is powered by a patent-pending cloud-native architecture that automatically scales up and down to provide rapid parallel data processing. 
+As data and cyber attackers move to the cloud, investigating security threats in modern environments becomes increasingly complex and time-consuming. The Cado platform leverages the scalability, speed, and automation of the cloud to streamline investigation and response.
 
-- **Powerful analytics** - The Cado analytics engine is powered by threat intelligence, machine learning, and built-in YARA rules to automatically flag malicious activity and potential risks.
+### Core Features
 
-- **Single pane of glass** - Cado presents hundreds of data sources across cloud-provider logs, disk, memory, and more in a single timeline so security teams can quickly determine scope and impact.
+- **Automated Data Capture**: Cado enables automated data collection across multi-cloud environments and ephemeral containers, while also supporting investigations on on-premises systems.
+  
+- **Parallel Processing**: Powered by a patent-pending cloud-native architecture, Cado automatically scales to provide fast, parallel data processing.
+  
+- **Powerful Analytics**: Cado's analytics engine, enhanced by threat intelligence, machine learning, and built-in YARA rules, automatically flags malicious activity and potential risks.
+  
+- **Single Pane of Glass**: Cado presents data from multiple sources, including cloud-provider logs, disk, memory, and more, in a unified timeline, helping security teams quickly assess the scope and impact of incidents.
 
+### Benefits
 
-### Benefits 
-- **Cloud Scale** - Automate data capture across complex and multi-cloud environments. No agents required.  
-
-- **Cloud Speed** - Take advantage of rapid, parallel processing to normalize massive amounts of disparate data in minutes, not days.
-
-- **Cloud Visibility** - Investigate hundreds of data sources across cloud-provider logs, disk, memory, and more, in a single pane of glass.
-
+- **Cloud Scale**: Automate data capture across complex, multi-cloud environments without the need for agents.
+  
+- **Cloud Speed**: Utilize rapid, parallel processing to normalize vast amounts of disparate data in minutes instead of days.
+  
+- **Cloud Visibility**: Investigate a wide range of data sources, including cloud-provider logs, disk, memory, and more, all within a single, unified interface.

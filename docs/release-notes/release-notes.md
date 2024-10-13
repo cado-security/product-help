@@ -6,8 +6,7 @@ sidebar_position: 1
 
 # Cado Release Notes
 
-Release notes are now available to current customers only on our customer knowledge base. 
+Release notes are now accessible exclusively to current customers through our customer knowledge base.
 
-If you are a current customer and need access, please contact support@cadosecurity.com.
-
-If you are currently in a trial or evaluation, please contact your Cado representative or sales@cadosecurity.com for details on a particular release.
+- **Current customers**: If you need access, please reach out to support@cadosecurity.com.
+- **Trial or evaluation users**: For details on a specific release, please contact your Cado representative or email sales@cadosecurity.com.

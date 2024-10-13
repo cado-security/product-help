@@ -4,50 +4,50 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to set-up the Okta OAuth Integration
+# How to Set Up the Okta OAuth Integration
 
 :::warning
-If you encounter issues, please contact support@cadosecurity.com describing your issue and providing as much detail about your configuration as possible.
+If you encounter issues, please contact support@cadosecurity.com and provide detailed information about your configuration.
 :::
 
-You can now enable the beta of Okta OAuth Integration in the Cado platform by going to `Settings > SSO > Okta OAuth`.
+You can enable the Okta OAuth Integration beta in the Cado platform by navigating to `Settings > SSO > Okta OAuth`.
 
 ### Setting up Okta SSO
-1. Open the Okta admin dashboard and navigate to `Applications > Applications`
-2. Click **Create App Integration**
-3. Select
-	- OIDC - OpenID Connect
-	- Web Application
-4. Click **Next**
-5. Give the Cado OAuth app a name
-6. Add a Sign-in redirect URI. This should be the url you use to access cado in the web browser, with the `/login` path. E.g. https://my.cado.instance/login
-7. Choose who is granted access to the application
-	- In Assignments select **Limit access to selected groups**
-	- Add a user group
-	- This can also be done at a later stage
-	- In this example the admin group will be called `CadoAdmin`, but you can name this as you like. Just make note of what you call this; you'll need it later
 
-	![Okta Assignments](/img/okta-assignments.png)
+1. Open the Okta admin dashboard and go to `Applications > Applications`.
+2. Click **Create App Integration**.
+3. Select:
+   - **OIDC - OpenID Connect**
+   - **Web Application**
+4. Click **Next**.
+5. Name the Cado OAuth app.
+6. Add a **Sign-in Redirect URI**. This should be the URL you use to access Cado, followed by `/login` (e.g., https://my.cado.instance/login).
+7. Select who will have access to the application:
+   - In **Assignments**, choose **Limit access to selected groups**.
+   - Add a user group. You can assign users later if needed.
+   - In this example, the admin group is named `CadoAdmin`, but you can use any name. Keep note of it for later steps.
+
+   ![Okta Assignments](/img/okta-assignments.png)
 
 :::tip
-If you are looking to assign non-admin users within Cado, you can use a group name other than `CadoAdmin`.  For example: adding a group `CadoNonAdmin` and assigning users to it will result in those users being Normal Users within Cado.
+To assign non-admin users within Cado, create a group with a different name (e.g., `CadoNonAdmin`), and users in that group will be Normal Users in the Cado platform.
 :::
 
-8. If you wish to edit access control at a later time then you can do so in the **Assignments** tab of the OAuth application where you can add individual people or groups. Only users in a group named `CadoAdmin` will be granted admin user status inside the Cado platform.
-9. Add a groups claim for the application:
-	- Go to the **Sign On** tab of the OAuth application
-	- Click **Edit** in the OpenID Connect ID Token section
-	- For the Issuer field specify “Okta URL”
-	- In the `Groups claim type` field select **Filter**
-	- In the `Groups claim filter` leave its name **groups** and enter **Matches regex** `.*`
-	- Then click **Save**
+8. To adjust access control later, go to the **Assignments** tab of the OAuth application, where you can add individuals or groups. Only users in the `CadoAdmin` group will have admin status in Cado.
+9. Add a **Groups Claim** for the application:
+   - Go to the **Sign On** tab of the OAuth application.
+   - Click **Edit** in the **OpenID Connect ID Token** section.
+   - In the **Issuer** field, specify the **Okta URL**.
+   - For **Groups claim type**, select **Filter**.
+   - Set **Groups claim filter** to **groups** and enter **Matches regex** `.*`.
+   - Click **Save**.
 
-	![Okta Groups Claim](/img/okta-groups-claim.png)
+   ![Okta Groups Claim](/img/okta-groups-claim.png)
 
-10. Go to the **General settings** tab of the OAuth application and note down the `Client ID`, `Client Secret` and `Okta Domain` settings.
-11. Configure SSO in cado:
-	- Open your cado instance and log in as an admin user
-	- Go to `Settings > SSO > Okta OAuth`
-	- Enter the details from step before and click update. For the domain field please add `https://` to the beginning and `/oauth2` to the end of the Okta domain setting. The complete Domain should be of this format: `https://<Your Okta Domain>/oauth2`
-	- In the `Admin Group Name` enter in the value you configured in step 7
-12. Log out with your existing user, and login with Okta OAuth
+10. In the **General Settings** tab of the OAuth application, note down the `Client ID`, `Client Secret`, and `Okta Domain`.
+11. Configure SSO in Cado:
+    - Log in to your Cado instance as an admin.
+    - Go to `Settings > SSO > Okta OAuth`.
+    - Enter the details from the previous step and click **Update**. For the domain, add `https://` at the beginning and `/oauth2` at the end. The complete domain should look like this: `https://<Your Okta Domain>/oauth2`.
+    - Enter the `Admin Group Name` value from step 7.
+12. Log out and log in using Okta OAuth.
