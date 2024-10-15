@@ -33,3 +33,45 @@ To verify account-based settings, navigate to **/settings/cloud**, select an acc
 ![Account Check](/img/manage-account-check.png)
 
 Like the Platform Check, the Account Check will create a pipeline where tasks can be inspected to diagnose any issues that arise during the process.
+
+### Account Check Permissions
+
+These require:
+```json
+{
+			"Effect": "Allow",
+			"Resource": "*",
+			"Action": [
+			"iam:ListRolePolicies",
+			"iam:GetPolicy",
+			"iam:GetRolePolicy",
+			"iam:GetPolicyVersion",
+			"iam:SimulatePrincipalPolicy"
+			],
+			"Sid": "RequiredToCheckPolicy"
+}
+```
+
+Or in Yaml format:
+```yaml
+- Effect: Allow
+  Resource: "*"
+  Action:
+    - iam:ListRolePolicies
+    - iam:GetPolicy
+    - iam:GetRolePolicy
+    - iam:GetPolicyVersion
+    - iam:SimulatePrincipalPolicy
+  Sid: RequiredToCheckPolicy
+```
+
+
+iam:ListRolePolicies is used to get all the policies associated with your cross-account role.
+iam:GetRolePolicy is used to get the permissions associated with the policies retrieved above.  These permissions are used for a permission check that determines if the policies required by Cado Response match those specified in our template.  We check against the permissions that are specified in our cross-account template.
+iam:SimulatePrincipalPolicy is used to run an AWS policy simulation against your role, for the permissions required by Cado Response.  These are run against the permissions specified in our cross account template.
+
+If the above permissions aren’t added to your Cross-Account role, the Cross-Account checks, if run - will fail. 
+
+Adding these permissions, however, it is optional - if you do not intend to run Cross-Account checks, this will not impact your Cado instance.   
+
+If you decide to run the checks without updating the permissions, then they will fail, but this should not affect the platform functionality.
