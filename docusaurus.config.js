@@ -226,6 +226,18 @@ const config = {
               to: '/release-notes',
               from: '/release-notes',
             },
+            {
+              to: '/cado/integrations/siem',
+              from: '/cado-response/integrations/siem',
+            },
+            {
+              to: '/cado/deploy/logging-in',
+              from: '/cado-response/manage/logging-in',
+            },
+            {
+              to: '/cado/integrations/webhooks',
+              from: '/cado-response/integrations/webhooks',
+            },
         ],
       },
     ],
