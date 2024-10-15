@@ -65,10 +65,10 @@ Or in Yaml format:
   Sid: RequiredToCheckPolicy
 ```
 
-
-iam:ListRolePolicies is used to get all the policies associated with your cross-account role.
-iam:GetRolePolicy is used to get the permissions associated with the policies retrieved above.  These permissions are used for a permission check that determines if the policies required by Cado Response match those specified in our template.  We check against the permissions that are specified in our cross-account template.
-iam:SimulatePrincipalPolicy is used to run an AWS policy simulation against your role, for the permissions required by Cado Response.  These are run against the permissions specified in our cross account template.
+The permissions are required to run the Account Check. The permissions are used as follows:
+* iam:ListRolePolicies is used to get all the policies associated with your cross-account role.
+* iam:GetRolePolicy is used to get the permissions associated with the policies retrieved above.  These permissions are used for a permission check that determines if the policies required by Cado Response match those specified in our template.  We check against the permissions that are specified in our cross-account template.
+* iam:SimulatePrincipalPolicy is used to run an AWS policy simulation against your role, for the permissions required by Cado Response.  These are run against the permissions specified in our cross account template.
 
 If the above permissions aren’t added to your Cross-Account role, the Cross-Account checks, if run - will fail. 
 
