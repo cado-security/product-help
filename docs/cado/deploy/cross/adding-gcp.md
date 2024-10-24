@@ -108,7 +108,7 @@ container.clusters.list
 container.pods.exec
 container.pods.get
 container.pods.list
-iam.serviceAccounts.implicitDelegation - GKE
+iam.serviceAccounts.implicitDelegation
 
 ### Required for access to GCP projects, necessary for all acquisitions
 iam.serviceAccounts.getAccessToken
