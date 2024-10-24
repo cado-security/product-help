@@ -19,7 +19,7 @@ Ensure the following **APIs** are enabled in your primary GCP project. You can e
 - **[Compute Engine API](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
 Needed for Compute Engine acquisition
 - **[Cloud Storage API](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
-Needed for exporting disks when acquiring Compute Engines
+Needed for exporting disks when acquiring Compute Engines, and for GCS acquisition
 - **[Kubernetes Engine API](https://console.cloud.google.com/marketplace/product/google/container.googleapis.com)**
 Needed for Kubernetes Engine acquisition
 - **[Cloud Build API](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
