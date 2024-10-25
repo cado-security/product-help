@@ -30,13 +30,13 @@ Click **Continue**, review your selections, and click **Start Import**.
 
 #### Triage Capture with SSM Port Forwarding (Linux Only)
 
-When using **Triage Acquisition** for a Linux EC2 instance, you can enable the **SSM Port Forwarding** option. This is useful for instances with restricted network access, where downloading the Cado Host binary directly is not possible. The SSM Port Forwarding feature transfers the binary to the instance and retrieves the triage capture.
+When using **Triage Acquisition** for a Linux EC2 instance, you can enable the **SSM Port Forwarding** option. This is useful for instances with restricted network access, where downloading the Cado Host binary directly is not possible. The SSM Port Forwarding feature transfers the binary to the instance and retrieves the triage capture. To support transfering of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
 
 ![AWS EC2 Triage Acquisition Port Forwarding](/img/aws-ec2-triage-acquisition-ssm-port-forwarding.png)
 
 ### Run Command
 
-Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard. This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges.
+Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard. This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges. To support transfering of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
 
 To use this feature, you must create a script in **/settings/scripts**. 
 
