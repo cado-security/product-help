@@ -67,7 +67,7 @@ The dropdown will only list roles that have been added to the platform. Since Ca
 
 An example is below:
 
-![Select List Accounts Role 1](/img/aws-orgs-list-accounts-role-1.png)
+![Select List Accounts Role 1](/img/aws-orgs-list-accounts-role.png)
 
 
 ### 3. **Set Cross-Account IAM Role**
