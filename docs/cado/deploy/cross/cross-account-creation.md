@@ -8,7 +8,7 @@ sidebar_position: 2
 
 The Cado platform can be configured to access resources across multiple AWS accounts. For example, if you manage multiple AWS accounts, you can deploy Cado in a single AWS account and grant access to the other accounts, enabling the platform to acquire, process, and analyze evidence seamlessly.
 
-Alternatively, you can automatically deploy the IAM role via [Stackets](/cado/deploy/cross/cross-account-creation-auto), then add the roles to the Cado platform using [AWS Organizations](./aws-organizations.md).
+Alternatively, you can automatically deploy the IAM role via [Stacksets](/cado/deploy/cross/cross-account-creation-auto), then add the roles to the Cado platform using [AWS Organizations](./aws-organizations.md).
 
 ## Overview
 
