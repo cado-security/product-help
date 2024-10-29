@@ -12,7 +12,7 @@ The Cado platform supports the acquisition and processing of Google Workspace lo
 
 Note: This feature is currently in Beta. To use it, enable the "SaaS Imports" feature on the **/settings/experiments** page.
 
-Before importing Google Workspace logs into Cado, follow these steps (please refer to ["Create a service account"](https://support.google.com/a/answer/7378726?hl=en&fl=1&sjid=15496957632127903574-NA) for more detailed instructions)
+Before importing Google Workspace logs into Cado, follow these steps (please refer to ["Create a service account"](https://developers.google.com/identity/protocols/oauth2/service-account) for more detailed instructions)
 
 1. Ensure that **Workspace API access** for your Google Cloud project is enabled (Admin SDK API access).
 2. Enable the **Internal OAuth Consent Screen** to allow authentication with a service account.
