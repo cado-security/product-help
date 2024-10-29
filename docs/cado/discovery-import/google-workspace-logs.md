@@ -12,11 +12,24 @@ The Cado platform supports the acquisition and processing of Google Workspace lo
 
 Note: This feature is currently in Beta. To use it, enable the "SaaS Imports" feature on the **/settings/experiments** page.
 
-Before importing Google Workspace logs into Cado, follow these steps (please refer to ["Create a service account"](https://developers.google.com/identity/protocols/oauth2/service-account) for more detailed instructions)
+Before importing Google Workspace logs into Cado, follow these steps:
 
 1. Ensure that **Workspace API access** for your Google Cloud project is enabled (Admin SDK API access).
-2. Enable the **Internal OAuth Consent Screen** to allow authentication with a service account.
-3. **Create a service account** in Google Cloud, and download the JSON file of the access key created for the service account.
+* Open the [product library in Google Cloud](https://console.cloud.google.com/workspace-api/products)
+
+![SDK 1](/img/workspace_sdk1.png)
+![SDK 1](/img/workspace_sdk2.png)
+
+
+2. Enable the [Internal OAuth Consent Screen](https://developers.google.com/workspace/guides/configure-oauth-consent) to allow authentication with a service account.
+
+![OAuth Consent Screen](/img/oauth_consent.png)
+
+
+3. [Create a service account](https://developers.google.com/identity/protocols/oauth2/service-account) in Google Cloud, and download the JSON file of the access key created for the service account.
+
+
+
 4. Note the email address of a **Google Workspace admin account** for the Impersonation Email field, which will be entered into the Cado platform.
 5. Grant the service account permission to access the Workspace API via **domain-wide delegation**, with read-only access to audit logs:  
    `https://www.googleapis.com/auth/admin.reports.audit.readonly`.
