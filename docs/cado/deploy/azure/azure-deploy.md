@@ -89,7 +89,7 @@ Once you receive them, continue on to the steps below.
     :::
 
     ```console
-    ssh-keygen -b 4096 -f ../keys/azure_demo_key -q -N ""
+    ssh-keygen -t rsa -b 4096 -f ../keys/azure_demo_key -q -N ""
     ```
 
 9. Customize the file `azure/cado/main.tf` by filling in the default values for the following variables:
