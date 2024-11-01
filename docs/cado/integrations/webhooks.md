@@ -120,6 +120,44 @@ You can create Jira tickets using Cado webhooks.
 
 ![Jira Webhook](/img/jira_webhook.png)
 
+More complex webhooks are available to the Detection webhooks, for example this can be set as the "Custom Payload" in Cado for the "Detection Updated" webhook:
+
+```json
+{
+  "detection_id": "$detection_id",
+  "event_type": "$event_type",
+  "group_id": "$group_id",
+  "message": "$Event",
+  "title": "$Title"
+}
+```
+
+And correspondingly in Jira:
+
+
+Summary:
+```
+[{{webhookData.event_type}}] - {{webhookData.title}}
+```
+
+Description:
+```
+{{webhookData.message}}
+```
+
+Additional fields:
+```json
+{
+    "update": {
+        "labels": [
+            {
+                "set": ["Cado_Group_{{webhookData.group_id}}"]
+            }
+        ]
+    }
+}
+```
+
 ## ServiceNow Integration
 
 To integrate with ServiceNow:
