@@ -23,6 +23,8 @@ In AWS or Azure, you can manually specify an AMI ID or VHD URL, respectively, us
 
 Note that all updates are user-initiated; Cado will not trigger updates automatically.
 
+![Update](/img/alt-update.png)
+
 ### Updating with Terraform
 For users deploying with Terraform, update the AMI ID (AWS), VHD URL (Azure), or VMDK URL (GCP) and then run `terraform apply`.
 
