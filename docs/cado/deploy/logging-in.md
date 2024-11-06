@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # How to log in to the Cado platform
 
-Depending on the cloud provider in which you deployed the Cado platform, navigate to either your **[AWS Console]( https://console.aws.amazon.com)** or your **[Azure Portal](https://portal.azure.com)** and find the Public IPv4 address of your running Cado instance.  Open a browser and navigate to `https://<Cado_IP>` where `<Cado_IP>` is the IPv4 of the Cado instance.  You will now be able to log into the platform. 
+Depending on the cloud provider in which you deployed the Cado platform, navigate to your **[AWS Console]( https://console.aws.amazon.com)** or your **[Azure Portal](https://portal.azure.com)** and find the Public IPv4 address of your running Cado instance.  Open a browser and navigate to `https://<Cado_IP>` where `<Cado_IP>` is the IPv4 of the Cado instance.  You will now be able to log into the platform. 
 
 :::tip 
 You will see a browser notification stating that "Your connection is not private". Cado is unable to automatically generate SSL certificates. In AWS, if you require a valid SSL certificate, the easiest way to create one for the encrypted HTTPS connection is to **[create your own Elastic Load Balancer](../deploy/aws/networking/aws-load-balancer.md)**
