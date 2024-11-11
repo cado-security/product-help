@@ -23,5 +23,8 @@ These files are stored in cloud storage (e.g., S3 in AWS or Storage in Azure) an
 
 If your deployment is in AWS, you can configure the system to automatically copy and preserve all processed evidence in a central S3 bucket. To enable this feature, go to **Settings** > **Preservation**.
 
+
 ![Preservation](/img/preserve.png)
+
+When data is collected in AWS (to the "default" bucket)/Azure/GCP - a second copy of the data will be copied to the S3 bucket set for evidence preservation.
 
