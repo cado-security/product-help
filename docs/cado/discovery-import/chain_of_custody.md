@@ -10,6 +10,10 @@ Cado maintains the chain of custody by tracking details of imported evidence. Yo
 
 ![Evidence](/img/coc_audit.png)
 
-Information about which user imported the evidence and when it was imported is available under **Help > Audit Logs**.
 
 ![Audit Logs](/img/coc_evidence.png)
+
+
+Information about which user imported the evidence and when it was imported is available under **Help > Audit Logs**.
+
+![Audit Logs](/img/audit-logs.png)
