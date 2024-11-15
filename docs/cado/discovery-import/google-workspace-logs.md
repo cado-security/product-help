@@ -36,13 +36,13 @@ Before importing Google Workspace logs into Cado, follow these steps:
 
 ### Log Acquisition
 
-After completing the setup, you can add the service account credentials to the Cado platform by navigating to **Settings > Integrations > Google Workspace** (/settings/integrations/google-workspace) and selecting **Add Credentials**. Provide the following details:
+After completing the setup, you can add the service account credentials to the Cado platform by navigating to **Settings > Accounts** and selecting **Create an account**. Select **Google Workspace** from the set of providers. Provide the following details:
 
 - **Name**: A friendly name for your credentials, such as “Google Workspace.”
 - **Impersonation Email**: The Google Workspace admin email.
 - **Service Account Credentials**: Upload the JSON file for the service account.
 
-![Google Workspace - Add Creds](/img/gws-add-creds.png)
+Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'. Navigate to the 'Accounts' table and the newly created Google Workspace account should present. If configured correctly, you will see a green coloured health status.
 
 Once the credentials are set, you can acquire Google Workspace logs. In an investigation, use the import wizard and select **SaaS**, then choose **Google Workspace**.
 
