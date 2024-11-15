@@ -36,6 +36,9 @@ To use the integration between SentinelOne and Cado, you need the SentinelOne Re
 5. Copy or download the API Token.
 6. In the Cado platform, Navigate to **Settings > Accounts** and click **Create an account**.
 7. Select **SentinelOne** from the set of providers.
+
+![SentinelOne Integration](/img/Accounts-SentinelOne.png)
+
 8. Give the account a **Name** and enter the **Endpoint** and **Token**. Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'.
 9. Navigate to the 'Accounts' table and the newly created SentinelOne account should present. If configured correctly, you will see a green coloured health status.
 10. An alternative way to check the account has been set up correctly is to browse to any investigation, and click **Import > XDR > SentinelOne**. If configured correctly, a paginated list of hosts with the SentinelOne agent installed will appear.
