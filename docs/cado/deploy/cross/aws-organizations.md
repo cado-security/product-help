@@ -58,10 +58,12 @@ The ListAccounts permission should be set in the root account, and the Cado role
 
 To enable cross-account discovery on the Cado platform, follow these steps:
 
-- Go to `Settings > Cloud Accounts`.
-- Under the "List Accounts Role" dropdown, select the role with permissions to list accounts in your AWS Organization.
+- Go to **Settings > Accounts** and click **Create an account**.
+- Select **AWS** from the set of providers.
+- Select the **AWS Organizations** option.
+- Under the "Role with ListAccounts Permission" dropdown, select the role with permissions to list accounts in your AWS Organization.
 
-You will need to select the role containing the organizations:ListAccounts permission to the platform via Settings > Cloud Accounts. This role should have a [trust policy](/cado/deploy/aws/iam/iam-description#using-an-existing-iam-role) allowing the CadoResponseRole to assume it, and added to the platform manually via Settings > Cloud Accounts.
+You will need to select the role containing the organizations:ListAccounts permission to the platform via Settings > Accounts. This role should have a [trust policy](/cado/deploy/aws/iam/iam-description#using-an-existing-iam-role) allowing the CadoResponseRole to assume it, and added to the platform manually via Settings > Accounts.
 
 The dropdown will only list roles that have been added to the platform. Since Cado validates the roles before adding them, all roles shown should be assumable by the CadoResponseRole.
 
