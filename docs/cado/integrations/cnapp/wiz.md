@@ -14,9 +14,9 @@ The Cado platform automates the processing and analysis of AWS EC2 EBS volumes a
 
 To integrate Wiz with Cado, follow these steps:
 
-1. Navigate to the **Settings > Advanced** page in the Cado platform.
-2. Add the **Tag Key** and **Value** pair for volumes copied by Wiz.
-
-![Setup](/img/wiz-settings.png)
+1. Navigate to the **Detections > Integrations** and select **Wiz** from the set of source providers.
+2. Give the rule a **Name** and **Description** and select **Continue**.
+3. Add the **EBS Tag Key** and **EBS Tag Value** pair for volumes copied by Wiz.
+4. Navigate to the 'Rules' table and the newly created Wiz integration should be present.
 
 Wiz will copy each Volume individually, so each Volume will have a unique Investigation. The Cado platform will automatically create an Investigation for each Volume copied by Wiz.
