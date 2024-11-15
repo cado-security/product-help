@@ -38,11 +38,8 @@ CrowdStrike Falcon defines policies by platform, so you will need separate Windo
 
 ## Enabling the Integration in Cado Platform
 
-1. Go to **Settings > Integrations > XDR** and click **Add Connection**.
-2. Select **CrowdStrike** from the dropdown menu. Enter the **URL**, **Client ID**, and **Client Secret** from the prerequisites section. The integration will then appear on the settings page.
-
-   ![crowdstrike dropdown](/img/crowdstrike-xdr-dropdown.png)
-
-3. In any investigation, click **Import > XDR > CrowdStrike**.
-4. If configured correctly, a paginated list of hosts with the CrowdStrike Falcon Sensor installed will appear, showing those within the appropriate Host Group.
-
+1. Navigate to **Settings > Accounts** and click **Create an account**.
+2. Select **CrowdStrike** from the set of providers.
+3. Give the account a **Name** and enter the **Endpoint**, **Client ID**, and **Client Secret**. Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'.
+4. Navigate to the 'Accounts' table and the newly created CrowdStrike account should present. If configured correctly, you will see a green coloured health status.
+5. An alternative way to check the account has been set up correctly is to browse to any investigation, and click **Import > XDR > CrowdStrike**. If configured correctly, a paginated list of hosts with the CrowdStrike Falcon Sensor installed will appear, showing those within the appropriate Host Group.
