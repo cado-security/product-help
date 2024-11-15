@@ -84,15 +84,17 @@ To pull logs from Exchange, follow these steps:
 
 Once the Microsoft Entra application and service principal are set up in the Azure portal, you can add the credentials to the Cado platform:
 
-1. Navigate to **Settings > Integrations > Microsoft SaaS** (/settings/integrations/microsoft).
-2. Select **Add Credential** and enter the following details:
+1. Navigate to **Settings > Accounts**
+2. Select **Create an account**, then **Microsoft SaaS** from the set of providers and enter the following details:
    - **Name**: A friendly name, such as "MS SaaS."
    - **Tenant ID**: Found in the **Directory (tenant) ID** field in Azure app registration.
    - **Client ID**: Found in the **Application (client) ID** field in Azure app registration.
    - **Client Secret**: Found in the **Client credentials** field in Azure app registration.
    - **Organization**: Organization value ending in **.onmicrosoft.com**.
 
-![MS SaaS - Add Creds](/img/Microsoft-SaaS-Add-Creds.png)
+Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'. Navigate to the 'Accounts' table and the newly created Microsoft SaaS account should present. If configured correctly, you will see a green coloured health status.
+
+Once the credentials are set, you can acquire Microsoft SaaS logs.
 
 To import logs, use the import wizard within an investigation and select **SaaS**. You will see options for:
 - Microsoft 365 Logs
