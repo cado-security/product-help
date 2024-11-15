@@ -32,12 +32,11 @@ The following API permissions are required for Cado integration:
 
 ## Enabling the Integration in the Cado Platform
 
-1. Enable the beta feature by going to **Settings > Experiments** and toggling the "Microsoft Defender XDR" option.
-2. Navigate to **Settings > Integrations > XDR** and click **Add Connection**.
-3. Select **Defender** from the dropdown menu.
-4. Enter the **Tenant**, **Client ID**, and **Client Secret** from the App Registration you created. The integration will appear on the settings page.
-5. In any investigation, click **Import > XDR > Defender**.
-6. If configured correctly, a paginated list of hosts with the Defender agent installed will be displayed.
+1. Navigate to **Settings > Accounts** and click **Create an account**.
+2. Select **Defender** from the set of providers.
+3. Give the account a **Name** and enter the **Endpoint**, **Client ID**, **Client Secret**, and **Tenant** from the App Registration you created. Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'.
+4. Navigate to the 'Accounts' table and the newly created Defender account should present. If configured correctly, you will see a green coloured health status.
+5. An alternative way to check the account has been set up correctly is to browse to any investigation, and click **Import > XDR > Defender**. If configured correctly, a paginated list of hosts with the Defender agent installed will be displayed.
 
 ## Limitations
 
