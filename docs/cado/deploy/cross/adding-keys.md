@@ -15,4 +15,6 @@ You can add key-based credentials to the Cado platform for either temporary, jus
 3. Select the **AWS Keys** option, then provide an **Account Name**.
 4. Enter the access key and secret key.
 
+![AWS Account Keys](/img/Accounts-AWSKeys.png)
+
 This method allows Cado to access your AWS account securely using the provided credentials.
