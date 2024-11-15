@@ -34,6 +34,9 @@ The following API permissions are required for Cado integration:
 
 1. Navigate to **Settings > Accounts** and click **Create an account**.
 2. Select **Defender** from the set of providers.
+
+![Defender Integration](/img/Accounts-Defender.png)
+
 3. Give the account a **Name** and enter the **Endpoint**, **Client ID**, **Client Secret**, and **Tenant** from the App Registration you created. Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'.
 4. Navigate to the 'Accounts' table and the newly created Defender account should present. If configured correctly, you will see a green coloured health status.
 5. An alternative way to check the account has been set up correctly is to browse to any investigation, and click **Import > XDR > Defender**. If configured correctly, a paginated list of hosts with the Defender agent installed will be displayed.
