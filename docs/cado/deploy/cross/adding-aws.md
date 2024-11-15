@@ -28,8 +28,9 @@ To enable cross-cloud access for AWS accounts, you need to set up an IAM role in
    Generate access keys for the IAM user. These keys are needed to access the AWS account. Follow the [AWS instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) to create and securely store the access keys.
 
 6. **Add the IAM Role to Cado**  
-   - In the Cado platform, go to **Settings** > **Cloud** > **Create Role**.  
-   - Select the **AWS** tab, then provide a name for the role.  
+   - In the Cado platform, go to **Settings** > **Accounts** and click **Create an account**.
+   - Select **AWS** from the set of providers.
+   - Select the **AWS Keys** option, then provide a name for the role.  
    - Enter the access key and secret key you generated earlier.
 
 7. **Verify Access in Cado**  
@@ -41,9 +42,14 @@ To enable cross-cloud access for AWS accounts, you need to set up an IAM role in
 
 ## Adding AWS Accounts to Cado from Azure or GCP Deployments
 
-You can import AWS accounts into Cado from deployments on Azure or GCP. To do this, go to **Settings** > **Cloud Accounts**, and add the AWS account.
+You can import AWS accounts into Cado from deployments on Azure or GCP. To do this:
 
-![Add Role](/img/add-role.png)
+- In the Cado platform, go to **Settings** > **Accounts** and click **Create an account**.
+- Select **AWS** from the set of providers.
+- The **AWS Role** option should already be selected.
+- Provide an **Account Name** and enter the **Role ARN**.
+- Leave the 'Run account check after adding account' checkbox selected, which will validate the account has the correct permissions after selecting 'Continue'.
+- Navigate to the 'Accounts' table and the newly created AWS account should present. If configured correctly, you will see a green coloured health status.
 
 ### Importing AWS EC2 Data
 
