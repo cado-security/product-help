@@ -27,3 +27,6 @@ You can upload data to GCP Storage using the following methods:
 - **Desktop GUI Tools**: Alternatively, you can use a tool like [Cyberduck](https://cyberduck.io/) with [oAuth 2.0 Access](https://docs.duck.sh/protocols/googlecloudstorage/) to upload files from your desktop. Cyberduck supports features such as resuming failed uploads.
 
 We recommend scoping access by assigning the associated role **[write-only](https://stackoverflow.com/questions/57147765/gcp-write-only-access-to-bucket-gcs)** permissions for enhanced security.
+
+# Data Flow Diagram
+![GCS Import](/img/gcs_import.png)

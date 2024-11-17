@@ -19,3 +19,7 @@ For this feature to work, the GCP project must have the **default VPC** enabled.
 :::
 
 ![GCP Compute Import](/img/gcp-compute.png)
+
+# Data Flow Diagram
+
+![Compute engine](/img/compute_engine_gcp.png)
