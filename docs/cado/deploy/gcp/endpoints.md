@@ -29,3 +29,6 @@ The Cado platform requires access to the following GCP endpoints:
 
 ### GCP Resource Manager
 - `cloudresourcemanager.googleapis.com/v3/projects:search`
+
+### Google Kubernetes Engine
+- Please see the [GKE documentation](/cado/discovery-import/gcp/kubernetes-engine.md).
