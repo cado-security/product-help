@@ -24,5 +24,5 @@ For AWS, the password is `i-xxx`, where `i-xxx` is the Instance ID of your Cado 
 
 For Azure, the password is the very long instance id `/subscription/.../cado-main-vm` where `/subscription/.../cado-main-vm` is the full instance id.  After initial login, you will be asked to accept the EULA and change your password.
 
-For GCP, the password is the instance-id found in the Compute Engine console for your instance e.g. `87844815082567668776`
+For GCP, the password is the instance-id found in the Compute Engine console for your instance e.g. `878448150825676687766`
 
