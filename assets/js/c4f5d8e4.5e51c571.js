@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkproduct_help=self.webpackChunkproduct_help||[]).push([[4195],{2295:(e,t,u)=>{u.r(t),u.d(t,{default:()=>l});u(7294);var r=u(9524),c=u(6550),p=u(5893);function l(){return(0,p.jsx)(c.l_,{to:(0,r.Z)("cado/intro")})}}}]);
