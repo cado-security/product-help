@@ -42,6 +42,7 @@ Throughout this guide:
 
    - Attach the policy created in the previous step and proceed to name the role.
    - The role name **must include** the text `CadoResponse` (e.g., `CadoResponseCrossAccountRole`). This is required for cross-account acquisition to function properly.
+   - The role needs a [trust relationship](/cado/deploy/aws/iam/iam-description#using-an-existing-iam-role) with the Cado role in 111111111111
 
 
 Deploying the Cross-Account IAM Policy and Role can be automated using AWS StackSets or other methods. See [Automating AWS IAM Role and Policy Deployment](#automating-aws-iam-role-and-policy-deployment).
