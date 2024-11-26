@@ -14,3 +14,7 @@ For more information, contact sales@cadosecurity.com to learn more about:
 - **Corporate Security**: Our approach to hiring checks and employee security training.
 - **Our Policies**: Compliance with SOC2, company policies, and vendor management.
 - **Application Security**: Practices like secure software development lifecycle (SDLC) and regular penetration testing.
+
+## Audit Logs
+Audit logs are viewable via the user interface at Help > View Audit Logs and can be exported.
+They are also available via the API, or by forwarding to [Cloudwatch](/troubleshooting/logs-cloudwatch) or another SIEM. They are persisted on disk under /var/log.
