@@ -10,3 +10,5 @@ Release notes are now accessible exclusively to current customers through our cu
 
 - **Current customers**: If you need access, please reach out to support@cadosecurity.com.
 - **Trial or evaluation users**: For details on a specific release, please contact your Cado representative or email sales@cadosecurity.com.
+
+Test NOT GOING TO COMMIT 
