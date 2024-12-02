@@ -31,11 +31,4 @@ If you deployed via CloudFormation Template you can apply multiple tags to worke
 :::info
 The `CUSTOM_TAG_` prefix is required. If you would like to apply a tag with key "FOO" and value "BAR" then your line should appear as it does in the above example.
 :::
-
-:::info
-The last line of the "UserData" field must contain
-```
-"sudo /home/admin/processor/release/finalize.sh --main"
-```
-:::
  
