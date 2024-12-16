@@ -15,7 +15,7 @@ To enable EBS Direct Acquisition (Admin required):
 1. Go to **Settings** > **Experiments**.
 2. Enable **EBS Direct Acquisitions**.
 
-![EBS Direct Acquisition](/static/img/ebs-directac.png)
+![EBS Direct Acquisition](/static/img/ebs-direct-acquisition.png)
 
 ### Enable Deployed Workers
 
