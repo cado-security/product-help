@@ -15,4 +15,4 @@ To enable processing data from all sources or to process many items of evidence 
 1. Navigate to **Settings** > **Advanced** (Admin required)
 2. Enable **Deployed Workers** (This is needed for full acquisition)
 
-![EBS Workers](/static/img/ebs-workers.png)
+![EBS Workers](/img/ebs-workers.png)
