@@ -12,7 +12,9 @@ To enable processing data from all sources or to process many items of evidence 
 
 ### Prerequisites
 
-A “User Assigned Managed Identity” named “cado-identity”, with the Role assignment “Contributor” scoped to your resource group attached to your Cado instance
+- A “User Assigned Managed Identity” named “cado-identity” attached to the VM
+- The “Contributor” Role Assignment scoped to your resource group attached to the identity
+
 
 ### Enable Deployed Workers
 
