@@ -17,16 +17,15 @@ The initial deployment deployment deploys without a Network File Share (NFS). En
 
 ### Steps
 
-#### Create NFS
+1. **Create an NFS**
+   
+   a. Navigate to your storage account in the UI.  
+   b. Open **Datastorage > File Shares** in the sidebar.  
+   c. Press **Create**.  
+   d. Configure the File Share, choosing a memorable name and sensible size.
 
-1. Navigate to your storage account in the UI.
-2. Open Datastorage > File Shares in the sidebar
-3. Press “Create”
-4. Configure the File Share, choosing a memorable name and sensible size.
+2. Mount in the UI (**Settings** > **Advanced** > **NFS** >) using the Storage account name and the File Share name.
 
-#### Turn NFS on
-
-Once the file share has been created, Mount in the UI (**Settings** > **Advanced** > **NFS** > **Setup NFS**) using the Storage account name and the File Share name.
 
 ![Azure NFS](/img/nfs-azure.png)
 
