@@ -34,4 +34,4 @@ The initial deployment stores the key used to encrypt secrets in Cado locally on
  }
 }
 ```
-2. Enable in the UI: **Settings > Advanced > Secret Management > Turn on Secrets Manager
+2. Enable in the UI: **Settings** > **Advanced** > **Secret Management** > Turn on Secrets Manager
