@@ -16,7 +16,11 @@ Click **Continue** to proceed.
 
 ### Volume Capture
 
-Set your options for what data to capture from the selected instance.
+To acquire the full EBS volume, select **Full Acquisition** under **Acquisition Type**. 
+
+The Cado platform supports the option to skip processing of the EBS volume. Select **Skip Processing** under **Processing Options** to activate this option. If you decide you want to process the volume at a later date, this can be achieved by selecting **Process Evidence** on the relevant evidence item in the Evidence tab.
+
+![Skip Processing](/img/ec2-import-skip-processing.png)
 
 ### Triage Capture
 
