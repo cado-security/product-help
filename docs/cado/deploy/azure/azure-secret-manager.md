@@ -8,12 +8,12 @@ sidebar_position: 9
 
 The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in Azure Key Vault.
 
-## Prerequisites
+### Prerequisites
 
   - Ability to create a Key Vault
   - Ability to update Role Assignments
 
-## Steps
+### Steps
 
 1. In the resource group click Create and search for “**Key Vault**” and select “**Key Vault**”
 2. Add a Key vault name
@@ -23,4 +23,5 @@ The initial deployment stores the key used to encrypt secrets in Cado locally on
 ![Secret Manager](/img/secret-manager.png)
 
 5. Go to the created resource. Copy the “**Vault URI**”
-6. Enable in the UI: **Settings** > **Advanced** > **Secret Management** > **Turn on Secrets Manager**
+6. Enable in the UI: **Settings** > **Advanced** > **Secret Management** 
+7. Enter the “**Vault URI**” from step 5 and click **Turn On Secrets Manager**

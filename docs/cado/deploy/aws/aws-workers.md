@@ -13,12 +13,12 @@ To enable processing data from all sources or to process many items of evidence 
 ### Prerequisites
 
   - vCPU capacity in your region: we recommend requesting 128 "Running On-Demand All Standard" instances.
-  - Ability to update IAM role
-  - Ability to update Security group
+  - The IAM instance role used in the initial deployment, and permission to edit it
+  - The security group you used in the initial deployment, and permission to edit it
 
 ### Steps
 
-1. Add the necessary permissions by adding the following Sid to your instance Role:
+1. Add the necessary permissions by adding the following Sid to your IAM instance role:
 
 ```json
 [
@@ -53,15 +53,16 @@ To enable processing data from all sources or to process many items of evidence 
 ]
 ```
 
-2. Add the following  inbound Security Group rules
+2. Add the following inbound rules to your security group
 
-| Type          | Port  | Source                  | Description       |
+| Type          | Port  | Source                  | Reason       |
 |---------------|-------|-------------------------|-------------------|
-| Custom TCP    | 5432  | Custom                  | Your Cado security group - Data Storage |
-| Custom TCP    | 9200  | Custom                  | Your Cado security group - Data Storage |
-| Custom TCP    | 6379  | Custom                  | Your Cado security group - Data Storage |
-| Custom TCP    | 24224 | Custom                  | Your Cado security group - Log Handling |
+| Custom TCP    | 5432  | Custom -  Your Cado security group | Data Storage |
+| Custom TCP    | 9200  | Custom -  Your Cado security group | Data Storage |
+| Custom TCP    | 6379  | Custom -  Your Cado security group | Data Storage |
+| Custom TCP    | 24224 | Custom -  Your Cado security group | Log Handling |
 
 ![AWS Inbound Rules](/img/aws-inbound-rules.png)
 
-3. Enable in the UI: **Settings** > **Advanced** > **Processing** > Turn on Workers
+3. Enable in the UI: **Settings** > **Advanced** > **Deployed Workers** > Enable Deployed Workers
+4. Got to **Platform** > **Run a Platform Check**

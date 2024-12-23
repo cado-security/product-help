@@ -13,44 +13,44 @@ To enable processing data from all sources or to process many items of evidence 
 ### Prerequisites
 
    - vCPU capacity in your region: we recommend requesting 128
-   - Ability to update IAM role
-   - Ability to update Firewall
+   - The IAM instance role used in the initial deployment, and permission to edit it
+   - The firewall you used in the initial deployment, and permission to edit it
 
 ### Steps
 
-1. Add the necessary permissions:
+1. Add the necessary permissions by adding the following to your IAM role:
 
 ```json
- // Worker Permissions
-   "compute.disks.create",
-   "compute.instances.create",
-   "compute.instances.setMetadata",
-   "compute.instances.setServiceAccount",
-   "compute.addresses.use",
-   "compute.instances.addAccessConfig",
-   "compute.instances.delete",
-   "compute.instances.setLabels",
-   "compute.subnetworks.use",
-   "compute.networks.get",
-   "compute.networks.list",
-   "compute.instances.setTags",
-   "compute.instances.get",
+// Worker Permissions
+"compute.disks.create"
+"compute.instances.create"
+"compute.instances.setMetadata"
+"compute.instances.setServiceAccount"
+"compute.addresses.use"
+"compute.instances.addAccessConfig"
+"compute.instances.delete"
+"compute.instances.setLabels"
+"compute.subnetworks.use"
+"compute.networks.get"
+"compute.networks.list"
+"compute.instances.setTags"
+"compute.instances.get"
 
-
-// Adjusting Settings
-   "compute.machineTypes.get",
-   "compute.machineTypes.list",
-   "compute.regions.get",
+// Adjusting Worker Settings
+"compute.machineTypes.get"
+"compute.machineTypes.list"
+"compute.regions.get"
 ```
-2. Add the following inbound firewall rules
+2. Add the following inbound rules to your firewall
 
-| Type         | Port  | Source           | Description     |
-|--------------|-------|------------------|-----------------|
-| Custom TCP   | 5432  | Your Cado firewall | Data Storage    |
-| Custom TCP   | 9200  | Your Cado firewall | Data Storage    |
-| Custom TCP   | 6379  | Your Cado firewall | Data Storage    |
-| Custom TCP   | 24224 | Your Cado firewall | Log Handling    |
+| Port  | Protocol           | Description     |
+|-------|------------------|-----------------|
+| 5432  | TCP | Data Storage    |
+| 9200  | TCP | Data Storage    |
+| 6379  | TCP | Data Storage    |
+| 24224 | TCP | Log Handling    |
 
 
-3. Enable in the UI: **Settings** > **Advanced** > **Processing** > Turn on Workers
+3. Enable in the UI: **Settings** > **Advanced** > **Deployed Workers** > Enable Deployed Workers
+4. Got to **Platform** > **Run a Platform Check**
 
