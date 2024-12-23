@@ -11,15 +11,15 @@ The initial deployment deployment deploys without a Network File Share (NFS). En
 ### Prerequisites
 
   - The VPC and subnet you used in the initial deployment
-  - The security group you used in the initial deployment, and permission to edit it.
+  - The security group you used in the initial deployment, and permission to edit it
 
 ### Steps
 
 1. Configure inbound Security Group rules. Use security group id as Custom Source
 
-| Port  | Protocol | Reason                    |
-|-------|----------|---------------------------|
-| 2049  | TCP      | Communicating with NFS    |
+| Type | Port  | Source | Reason                    |
+|----|-------|----------|---------------------------|
+| Custom TCP | 2049  | Custom -  Your Cado security group      | Communicating with NFS    |
 
 2. Navigate to the EFS page in AWS Console
 3. Click “**Create file system**”

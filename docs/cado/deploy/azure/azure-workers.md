@@ -16,9 +16,9 @@ To enable processing data from all sources or to process many items of evidence 
 - The “Contributor” Role Assignment scoped to your resource group attached to the identity
 
 
-### Enable Deployed Workers
+### Steps
 
-1. Navigate to **Settings** > **Advanced** (Admin required)
-2. Enable **Deployed Workers** (This is needed for full acquisition)
+1. Enable in the UI: **Settings** > **Advanced** > **Deployed Workers** > Enable Deployed Workers
+2. Got to **Platform** > **Run a Platform Check**
 
 ![EBS Workers](/img/ebs-workers.png)
