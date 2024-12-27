@@ -34,7 +34,7 @@ Once you receive them, continue on to the steps below.
     - Storage Queue Data Reader
     :::
 
-4. Identify the latest Azure image `azure_image` from the [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) e.g. `/CommunityGalleries/cadoplatform-33ddc611-5625-46ff-8c7c-31ba3aa20d34/Images/CadoResponseV2.0/Versions/2.207.0`
+4. Identify the latest Azure image `azure_image` from the [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) e.g. `/communityGalleries/cadoplatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1/images/CadoResponseV2.0/versions/2.209.0`
 
 5. Extract `azure.zip`  This is the ZIP that was provided by Cado Sales
 
@@ -54,7 +54,7 @@ Once you receive them, continue on to the steps below.
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
-    | `image_id` | Cado Image Gallery URL | `/CommunityGalleries/cadoplatform-33ddc611-5625-46ff-8c7c-31ba3aa20d34/Images/CadoResponseV2.0/Versions/2.207.0` |
+    | `image_id` | Cado Image Gallery URL | `/communityGalleries/cadoplatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1/images/CadoResponseV2.0/versions/2.209.0` |
     | `ip_pattern_https` | List of incoming IPs permitted to access HTTPS. CIDR or source IP range or * to match any IP.  At least one value is required. | `["1.2.3.4/32","1.2.3.5/32"]`|
     | `ip_pattern_all` | List of incoming IPs permitted to access HTTPS and SSH. CIDR or source IP range or * to match any IP. At least one value is required. This should be the CIDR of the machine that is running the Terraform deployment script. | `["1.2.3.6/32"]`  |
     | `instance_type` | Instance type to use for main | Recommended to use `Standard_D16ds_v4`  If you have questions on instance sizing, please contact support for guidance. |
