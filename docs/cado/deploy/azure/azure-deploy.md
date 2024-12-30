@@ -34,13 +34,11 @@ Once you receive them, continue on to the steps below.
     - Storage Queue Data Reader
     :::
 
-4. Identify the latest Azure image `azure_image` from the [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) e.g. `/communityGalleries/cadoplatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1/images/CadoResponseV2.0/versions/2.209.0`
+6. Extract `azure.zip`  This is the ZIP that was provided by Cado Sales
 
-5. Extract `azure.zip`  This is the ZIP that was provided by Cado Sales
+7. Change directories into `azure/cado` which was extracted in the previous step.
 
-6. Change directories into `azure/cado` which was extracted in the previous step.
-
-7. Create a public and private ssh key. Make sure the directory exists before running the command and do not use a passphrase:
+8. Create a public and private ssh key. Make sure the directory exists before running the command and do not use a passphrase:
     
     :::tip
     You will likely need to create the `keys` directory by running `mkdir ../keys` prior to running the next step
@@ -50,7 +48,7 @@ Once you receive them, continue on to the steps below.
     ssh-keygen -t rsa -b 4096 -f ../keys/azure_demo_key -q -N ""
     ```
 
-8. Customize the file `azure/cado/main.tf` by filling in the default values for the following variables:
+9. Customize the file `azure/cado/main.tf` by filling in the default values for the following variables:
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
