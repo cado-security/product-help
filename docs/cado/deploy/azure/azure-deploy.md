@@ -9,7 +9,7 @@ sidebar_position: 1
 To set up Cado in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 
 If you have signed up for a Free Trial or are working with the Cado Sales team already, you should receive the following pieces of information:
-- a link to the Cado VHD image
+- a link to the Cado image
 - the latest Cado Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details or retrieve from our [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json).
@@ -34,50 +34,6 @@ Once you receive them, continue on to the steps below.
     - Storage Queue Data Reader
     :::
 
-4. Create a storage account and container to stage the Cado VHD locally within your Azure tenancy.  This will be from where the platform will be deployed.  You must copy the image to the same region in which you want to deploy Cado.  You can complete these steps using the Azure portal or the Azure CLI
-
-    a. **Create a resource group**, if you do not have one already, for the local download of the VHD using the Azure portal or the Azure CLI as shown below.  Note this needs to be less than 6 characters in length:
-    ```console
-    az group create --resource-group "<AzureResourceGroup>" --location "<AzureRegion>"  --subscription "<SubscriptionName>"
-    ```
-
-    b. **Create a storage account**, if you do not have one already, using the Azure portal or the Azure CLI as shown below:
-    ```console
-    az storage account create --name "<StorageAccountName>" --resource-group "<ResourceGroup>" --location "<AzureRegion>" --sku "Standard_LRS"  --subscription "<SubscriptionName>"
-    ```
-
-    c. **Create a container**, if you do not have one already, using the Azure portal or the Azure CLI as shown below:
-    ```console 
-    az storage container create -n "<ContainerName>" -g "<ResourceGroup>" --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>"  --subscription "<SubscriptionName>"
-    ```
-
-    :::tip
-    You can find your storage account's account key by either running the command below or by locating it within the Azure Portal:
-    1. Running the following command:
-    ```console
-    az storage account keys list --account-name <StorageAccountName>
-    ```
-    
-    2. In the **[Azure portal](https://portal.azure.com/)**, navigate to the resource group that you created, then the storage account, then click **Settings > Access keys** in your storage account's menu blade to see both primary and secondary access keys.  You can then click the **Show keys** button and copy the **Key** value.  Key values should be enclosed in double quotes if working from within bash. You can also use a connection string or SAS token to authenticate the command. More details on this here: **[Creating a container in a storage account](https://docs.microsoft.com/en-US/cli/azure/storage/container?view=azure-cli-latest#az_storage_container_create)**
-    :::
-
-
-5. Copy the VHD to your Azure subscription using the command below.  Substitute `$RELEASE_URI` with the VHD URL which was provided by Cado Sales or from the [public release URL](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json):
-    ```console
-    az storage blob copy start --subscription "<SubscriptionName>" --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>" --destination-blob "cado_response.vhd" --destination-container "<ContainerName>" --source-uri "$RELEASE_URI"
-    ```
-
-    :::caution
-    Wait for the copy operation to complete before moving to the next step.  You can check the status of the blob copy by running the `az storage blob show` command as outlined below.  This example is for Windows.  You can pipe the same command to *grep* in Linux.  You will know the process is complete when the output `status` field changes from **pending** to **success**
-    ```console
-    az storage blob show --account-name "<StorageAccountName>" --account-key "<AccountKeyValue>" --name "cado_response.vhd" --container-name "<ContainerName>" --subscription "<SubscriptionName>"  -o yamlc | findstr status
-    ```
-    :::
-
-    :::tip
-    Also note that if you need to capture very large disks (>=1tb) you will need to deploy in a region where storage optimized (L) instances are available, e.g. US East.
-    :::
-
 6. Extract `azure.zip`  This is the ZIP that was provided by Cado Sales
 
 7. Change directories into `azure/cado` which was extracted in the previous step.
@@ -96,7 +52,7 @@ Once you receive them, continue on to the steps below.
 
     | Parameter Name | Description | Example |
     | -------------- | ----------- | ------- |
-    | `image_id` | Cado VHD blobstore URL.  This is the URL to the *cado_response.vhd* blob within your container storage (created in Step 4c above) . It is in the format: `https:// <StorageAccountName>.blob.core.windows.net/ <ContainerName>/ cado_response.vhd` and can be found within your Azure Portal by navigating to "Home > Storage accounts", selecting the *StorageAccountName*, clicking "Storage browser (preview)", clicking the *ContainerName*, clicking the "cado_response.vhd" blob and viewing the "URL" value. | `https:// mycadostorage.blob.core.windows.net/ cadocontainer/cado_response.vhd` |
+    | `image_id` | Cado Image Gallery URL | `/communityGalleries/cadoplatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1/images/CadoResponseV2.0/versions/2.209.0` |
     | `ip_pattern_https` | List of incoming IPs permitted to access HTTPS. CIDR or source IP range or * to match any IP.  At least one value is required. | `["1.2.3.4/32","1.2.3.5/32"]`|
     | `ip_pattern_all` | List of incoming IPs permitted to access HTTPS and SSH. CIDR or source IP range or * to match any IP. At least one value is required. This should be the CIDR of the machine that is running the Terraform deployment script. | `["1.2.3.6/32"]`  |
     | `instance_type` | Instance type to use for main | Recommended to use `Standard_D16ds_v4`  If you have questions on instance sizing, please contact support for guidance. |
@@ -115,11 +71,11 @@ Once you receive them, continue on to the steps below.
      We recommend a minimum setting of 500GB for `main_data_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Investigations can always be deleted to recover space.
     :::
 
-10. Deploy by running the following commands in the directory `azure/cado/`
+9. Deploy by running the following commands in the directory `azure/cado/`
 
     `terraform init` followed by `terraform plan`.  Once you confirm the plan looks correct, you can then run `terraform apply`
 
-11. Make a note of the IP Address and the full Resource Id (/subscription/.../cado-main-vm) in the logs e.g.:
+10. Make a note of the IP Address and the full Resource Id (/subscription/.../cado-main-vm) in the logs e.g.:
 
 ```console
 module.cado_scalable.azurerm_linux_virtual_machine.vm (remote-exec): public_ip = 1.2.3.4
