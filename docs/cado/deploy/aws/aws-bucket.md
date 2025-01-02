@@ -33,7 +33,7 @@ The Cado deployment requires a storage bucket for various functionality includin
                 "s3:PutObjectTagging",
                 "s3:GetObjectTagging"
             ],
-            "Resource": "arn:aws:s3:::MY_CADO_BUCKET/*"
+            "Resource": "arn:aws:s3:::MY_CADO_BUCKET/*" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
         },
         {
             "Sid": "RequiredForCadoHostAndPreservation2",
@@ -43,7 +43,7 @@ The Cado deployment requires a storage bucket for various functionality includin
                 "s3:ListBucket",
                 "s3:GetBucketLocation"
             ],
-            "Resource": "arn:aws:s3:::MY_CADO_BUCKET"
+            "Resource": "arn:aws:s3:::MY_CADO_BUCKET" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
         }
     ]
 }
