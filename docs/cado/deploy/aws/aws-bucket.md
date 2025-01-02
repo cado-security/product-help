@@ -50,5 +50,6 @@ The Cado deployment requires a storage bucket for various functionality includin
   
 3. Enter the bucket name in the Setup Wizard - if the configured permissions are insufficient you will be notified and asked to correct before logging into the platform.
 
-![AWS Bucket](img/aws-bucket.png)   
+![AWS Bucket](/img/aws-bucket.png)
+
 
