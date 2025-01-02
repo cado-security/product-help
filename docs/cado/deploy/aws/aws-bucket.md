@@ -21,32 +21,33 @@ The Cado deployment requires a storage bucket for various functionality includin
 
 ```json
 {
- "Version": "2012-10-17",
- "Statement": [
-   {
-     "Sid": "RequiredForCadoHostAndPreservation",
-     "Effect": "Allow",
-     "Action": [
-           "s3:PutObject",
-               "s3:GetObject",
-               "s3:RestoreObject",
-               "s3:PutObjectTagging",
-               "s3:GetObjectTagging"
-     ],
-     "Resource": "arn:aws:s3:::MY_CADO_BUCKET/*" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
-   },
-   {
-       "Sid": "RequiredForCadoHostAndPreservation2",
-     "Effect": "Allow",
-     "Action": [
-           "s3:ListAllMyBuckets",
-               "s3:ListBucket",
-               "s3:GetBucketLocation"
-     ],
-     "Resource": "arn:aws:s3:::MY_CADO_BUCKET" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
-   }
- ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "RequiredForCadoHostAndPreservation",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:RestoreObject",
+                "s3:PutObjectTagging",
+                "s3:GetObjectTagging"
+            ],
+            "Resource": "arn:aws:s3:::MY_CADO_BUCKET/*"
+        },
+        {
+            "Sid": "RequiredForCadoHostAndPreservation2",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "arn:aws:s3:::MY_CADO_BUCKET"
+        }
+    ]
 }
+
 ```
   
 3. Enter the bucket name in the Setup Wizard - if the configured permissions are insufficient you will be notified and asked to correct before logging into the platform.
