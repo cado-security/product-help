@@ -19,9 +19,16 @@ Cado can import various cloud log types from cloud storage, including:
 - VPC Flow logs
 - SSM logs
 - S3 Access Logs
+- Route 53 (DNS) logs
 
 ### Azure Log Formats
 - Activity logs
+- Storage logs
+
+### GCP Log Formats
+- VPC Flow logs
+- IAM logs
+- Admin Activity logs
 
 Cado also processes additional log types using generic extractors, so this list is not exhaustive.
 
