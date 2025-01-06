@@ -52,7 +52,7 @@ AWS does not provide exact estimates for how long creating a snapshot will take,
 
 ### Speeding Up Step 2: Create Volume with Fast Snapshot Restore
 
-You can speed up the **Create Volume** step by using [Fast Snapshot Restore](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html). Note that this does not affect the time it takes to create a snapshot, and creating a volume still takes time.
+If you are not using the EBS Direct API for acquisitions (below) you can speed up the **Create Volume** step by using [Fast Snapshot Restore](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html). Note that this does not affect the time it takes to create a snapshot, and creating a volume still takes time. If you are using the faster EBS Direct API option, this entirely skips the Create Volume operation and is faster.
 
 To create a snapshot and enable Fast Snapshot Restore:
 
