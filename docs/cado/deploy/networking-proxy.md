@@ -33,3 +33,9 @@ To test these settings, click the *Test proxy settings* button.
 :::warning
 Settings will only be applied after the next system upgrade
 :::
+
+## Skipping SSL Verification in Cado Host Uploads
+Some MITM Proxies will present an invalid certificate, and prevent Cado Host (and other import methods which utilise Cado Host such as XDR integrations and Kubernetes acquisitions) from uploading data to cloud storage.
+
+To skip SSL verification in Cado Host uploads, check the box under Settings > Advanced > Cado Host (Skip SSL Verification):
+![Proxy Setting](/img/skip_ssl.png)
