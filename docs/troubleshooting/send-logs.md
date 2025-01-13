@@ -17,3 +17,14 @@ There are several methods for sending logs to Cado, listed in order of ease:
    sudo tar -cvzf /var/log/cado_logs.tar.gz /var/log
    ```
    Then, upload the generated zip file to the Customer Portal.
+
+## Downloading Logs for a single processing pipeline
+Logs for an individual pipeline can be downloaded by selecting "Platform" on the left menu, then clicking "Download pipeline" on the pipeline you are interested in. This will download a zip file containing the logs just for that pipeline.
+
+## Data Privacy
+Secure settings in logs are redacted before sending to Cado.
+
+For example, the following log line:
+```
+Got setting CLOUD_CRED_AWS_Default Acquisition: *****
+```
