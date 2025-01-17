@@ -66,11 +66,13 @@ You can manage detection rules in the **Rules** area (/detections/rules). This i
 
 ![Manage Rules](/img/detections-rules.png)
 
-## How to manually perform an acquisition for GuardDuty alerts
+## How to perform a manual Acquisition
 
-If an acquisition fails or you wish to retry importing a capture, you can easily initiate one manually. 
+If an acquisition fails or you wish to retry importing a capture, you can easily initiate one manually.
 
-Go to **Detections** > **Alert tab**, select the **GuardDuty alert**, and click **Actions** > **Triage** or **Full Acquisition** to begin the process.
+For GuardDuty, you have the option to perform either a triage acquisition or a full acquisition. With other providers, you can execute a manual triage acquisition.
+
+Go to **Detections** > **Alert tab**, select the **Alert**, and click **Actions** > **Triage** or **Full Acquisition** to begin the process.
 
 ![Retry Logic](/img/retry-logic.png)
 
