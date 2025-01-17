@@ -59,4 +59,6 @@ To enable EBS Direct Acquisition (Admin required):
 
 8. Review your options then click continue to finish
 
+### Data Flow Diagram
 
+![EBS Direct Acquisition](/img/ebs-direct.png)
