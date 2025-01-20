@@ -26,3 +26,5 @@ For Azure, the password is the very long instance id `/subscription/.../cado-mai
 
 For GCP, the password is the instance-id found in the Compute Engine console for your instance e.g. `87844815082567668776`
 
+For High Availability in AWS, the password is the name of the load balancer, for example if the full ARN of the load balancer is `arn:aws:elasticloadbalancing:us-east-1:111:loadbalancer/app/my-load-balancer/abc` then the password will be `my-load-balancer`
+
