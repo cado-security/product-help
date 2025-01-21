@@ -36,9 +36,9 @@ By default, AWS provides keys in your account, which allow access based on the d
 ```
 This policy allows all `Principals` (users, roles, etc.) in the account and region specified in the `Condition` to perform the listed actions.
 
-## Using Custom Keys
+## Using Customer Managed Keys (CMK)
 
-When using custom KMS keys, the following actions must be granted to `CadoResponseRole`:
+When using CMK KMS keys, the following actions must be granted to `CadoResponseRole`:
 
 ```json
 "kms:Encrypt",
