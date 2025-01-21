@@ -22,7 +22,7 @@ After initial install, you can login with the username `admin`.
 
 For AWS, the password is `i-xxx`, where `i-xxx` is the Instance ID of your Cado instance.
 
-For Azure, the password is the very long instance id `/subscription/.../cado-main-vm` where `/subscription/.../cado-main-vm` is the full instance id.  After initial login, you will be asked to accept the EULA and change your password.
+For Azure, the password is the very long resource ID that can be found by opening the VM in the Azure portal > Settings > Properties > Resource ID starting with  `/subscription/...` ending with `/subscription/.../VM NAME`  After initial login, you will be asked to accept the EULA and change your password.
 
 For GCP, the password is the instance-id found in the Compute Engine console for your instance e.g. `87844815082567668776`
 
