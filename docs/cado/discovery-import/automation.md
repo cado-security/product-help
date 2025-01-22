@@ -31,30 +31,22 @@ To create a webhook:
 
 ## Collecting Data After AWS GuardDuty Alerts
 
-1. **Create an Environment**  
-   Navigate to **Environments** (/environments) and click the **Create Environment** button. Name the environment and define the scopes by selecting **Add Group**. For example, you can create a scope that covers all EC2 instances across all accounts, with optional filtering by region or tag.
+In the **Detections** area (/detections/integrations), select **GuardDuty** as the source to create a detection rule. The configuration process is similar to XDR platforms, with a few differences:
 
-   ![Create Environments](/img/environments-create.png)
-
-   Click **Save** to create the environment.
-
-2. **Set Up a Detection Rule for GuardDuty**  
-   In the **Detections** area (/detections/integrations), select **GuardDuty** as the source to create a detection rule. The configuration process is similar to XDR platforms, with a few differences:
-
-   - On **Page 2** of the wizard, select the **Environment** instead of an XDR connection.
+   - On **Page 2** of the wizard, select the appropriate AWS Accounts instead of an XDR connection.
    - On **Page 3**, specify response actions if a malicious or suspicious activity is detected by Cado. Under 'Acquisition Type' you can also configure Cado to perform a full acquisition which will acquire the full EBS volume. This is in addition to performing a triage collecion. Note that the full EBS volume will not be processed - processing can be triggered manually in the 'Evidence' tab within the appropriate investigation.
 
-   Currently, Cado supports the following response actions for EC2 instances:
+Currently, Cado supports the following response actions for EC2 instances:
 
-   | Action | Description | Required Permissions |
-   | -------- | ----------- | ---------- |
-   | Stop Instance | Stops an EC2 instance using the AWS API | `ec2:StopInstances` |
-   | Isolate Role | Adds a "deny all" inline policy to isolate the IAM role attached to the EC2 instance | `iam:GetInstanceProfile`, `iam:PutRolePolicy` |
-   | Isolate Security Group | Replaces the security group of an EC2 instance with a blank one | `ec2:CreateSecurityGroup`, `ec2:RevokeSecurityGroupEgress`, `ec2:ModifyInstanceAttribute` |
+| Action | Description | Required Permissions |
+| -------- | ----------- | ---------- |
+| Stop Instance | Stops an EC2 instance using the AWS API | `ec2:StopInstances` |
+| Isolate Role | Adds a "deny all" inline policy to isolate the IAM role attached to the EC2 instance | `iam:GetInstanceProfile`, `iam:PutRolePolicy` |
+| Isolate Security Group | Replaces the security group of an EC2 instance with a blank one | `ec2:CreateSecurityGroup`, `ec2:RevokeSecurityGroupEgress`, `ec2:ModifyInstanceAttribute` |
 
-   Ensure the appropriate IAM permissions are added to your Cado role and that the role has access to the resources on which you want to invoke actions.
+Ensure the appropriate IAM permissions are added to your Cado role and that the role has access to the resources on which you want to invoke actions.
 
-   ![Full Acquisition](/img/guardduty-full-acquisition.png)
+![Full Acquisition](/img/guardduty-full-acquisition.png)
 
 ## Collecting Data After Wiz Alerts
 
