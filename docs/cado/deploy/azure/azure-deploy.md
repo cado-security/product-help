@@ -86,6 +86,11 @@ The Resource ID can also be found within your Azure Portal by navigating to `Hom
 
 It will take about 20 minutes to deploy, then you can **[Log into Cado](/cado/deploy/logging-in)** 
 
+11. Login to the Cado Platform with:
+
+    **Username:** admin
+    **Password:** The long resource ID that can be found by opening the VM in the Azure portal > Settings > Properties > Resource ID starting with /subscription/... ending with /subscription/.../VM NAME
+
 ### Testing the deployment
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
