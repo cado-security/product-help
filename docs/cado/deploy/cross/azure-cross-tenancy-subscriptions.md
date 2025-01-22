@@ -42,9 +42,10 @@ With these credentials in place, you are able to register the app with Cado.
 ### Registering credentials within Cado
 Once you have created the app registration, you will be able to register the credentials within Cado using the following steps:
 
-1. Navigate to the to the settings page and choose the `Cloud` option.
-2. Select the **Azure** tab and click `Add Azure Credentials`. ![Azure Credentials Page](/img/azure-creds-page.png)
-3. Using the information generated during the the app registration setup, fill-in the required fields with the appropriate information and click `Submit`.  **Use the subscription ID you assigned app-registration permissions for**. ![Azure Credentials Insertion Page](/img/azure-insert-custom-creds.png)
+1. Navigate to the to the settings page and choose the `Account` option.
+2. Click `Create an Account` button. ![Add Account](/img/settings-account.png)
+3. Select **Azure**  ![Add Azure Account](/img/add-account.png)
+4. Using the information generated during the the app registration setup, fill-in the required fields with the appropriate information and click `Submit`.  **Use the subscription ID you assigned app-registration permissions for**. ![Azure Credentials Insertion Page](/img/azure-insert-custom-creds.png)
 :::tip
 `Cloud ID` is only used to assign a name to the added credentials, it can be any memorable name of your choosing.
 :::
