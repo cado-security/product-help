@@ -17,13 +17,15 @@ Switch your platform to run using the instance role.
 
 > **Note:** If you originally deployed with a version >=2.161.0 you will already be using the new instance role and can skip this step. If this is the case you won’t have the ‘Scoped Up Instance Role’ settings section in step 2. If you aren’t sure, please share a log bundle with the Cado team and we can confirm if you need this step or not.
 
-1. Update your `myCadoResponseInstanceRolePolicy` to match https://github.com/cado-security/Deployment-Templates/blob/main/new-roles/AWSInstanceRole.json 
+1. Update your `myCadoResponseInstanceRolePolicy` to match https://github.com/cado-security/Deployment-Templates/blob/main/new-roles/AWSInstanceRole.json
+
+> **NOTE:** Replace MY_CADO_BUCKET with the name of your Cado S3 bucket.
 
    i. This adds the permissions required to run the Cado platform to the `myCadoResponseInstanceRolePolicy`, which leads to some duplications with `myCadoResponseRolePolicy`. The duplicate permissions will be removed in a later step.
 
    ii. If you are using Terraform, then our latest version (https://github.com/cado-security/Deployment-Templates/tree/main/aws_v2) already includes the required role.
 
-2. In **Settings > Advanced > Scoped Up Instance Role**: clicking `Check Instance Role` will verify that your new role is set up correctly and if the check passes, swap your Cado instance to use it. This tells Cado to use `myCadoResponseInstanceRole` for running the platform and `myCadoResponseRole` for acquisition.
+3. In **Settings > Advanced > Scoped Up Instance Role**: clicking `Check Instance Role` will verify that your new role is set up correctly and if the check passes, swap your Cado instance to use it. This tells Cado to use `myCadoResponseInstanceRole` for running the platform and `myCadoResponseRole` for acquisition.
 
 ![Scoped up Instance Role](/img/scoped-up-instance.png)   
 
