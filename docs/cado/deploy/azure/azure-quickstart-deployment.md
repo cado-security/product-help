@@ -89,7 +89,7 @@ Once an image has been selected, select a version to deploy (the latest version 
 
 The options should look as below:
 
-![Cado Response v2](/img/LUN.png)
+![Azure Data Disk](/img/azure-data-disk.png)
 
 #### Networking
 
