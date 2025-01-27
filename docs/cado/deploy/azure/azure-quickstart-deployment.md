@@ -98,13 +98,13 @@ The options should look as below:
 #### Advanced
 
 - Enable user data -> True
-- User data -> The following script, replacing <STORAGE_ACCOUNT_NAME> and <BLOB_STORE_NAME> with your Storage account / blob container name respectively.
+- User data -> The following script, replacing `<STORAGE_ACCOUNT_NAME>` and `<BLOB_STORE_NAME>` with your Storage account / blob container name respectively.
 
 ```bash
 #!/bin/bash -x
 echo "[FIRST_RUN]" > /home/admin/processor/first_run.cfg
 echo azure_storage_account = <STORAGE_ACCOUNT_NAME> | sudo tee -a /home/admin/processor/first_run.cfg
-echo "bucket = <BLOB_STORE_NAME> >> /home/admin/processor/first_run.cfg
+echo "bucket = <BLOB_STORE_NAME>" >> /home/admin/processor/first_run.cfg
 ```
 4. After all these settings are configured, review and create the virtual machine.
 
