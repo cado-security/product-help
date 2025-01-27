@@ -16,9 +16,9 @@ There are two user roles in the Cado platform:
 | Name           | Description                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------- |
 | Administrator  | Can manage users and has access to all investigations and cloud resources.                     |
-| Normal User    | Has restricted access to specific investigations and cloud resources.                          |
+| Analyst    | Has restricted access to specific investigations and cloud resources.                          |
 
-A **Normal User** must be added to an investigation or a group with access to that investigation to gain access. To acquire cloud data, the user needs access to a CSP Role that has permissions to the cloud resource or be part of a group with access to that CSP Role.
+An **Analyst** must be added to an investigation or a group with access to that investigation to gain access. To acquire cloud data, the user needs access to a CSP Role that has permissions to the cloud resource or be part of a group with access to that CSP Role.
 
 ![Users-Groups-Roles](/img/users-groups-roles.png)
 
@@ -26,9 +26,9 @@ A **Normal User** must be added to an investigation or a group with access to th
 
 Cado supports SSO integration with [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)), and [PingID](sso/ping_saml.md). When SSO is configured, the Cado platform automatically creates the user at first login. By integrating SSO, you can enforce authentication mechanisms such as two-factor authentication supported by your SSO provider.
 
-### Managing Roles
+### Managing Accounts
 
-Roles in Cado correspond to cloud roles in AWS, Azure, or GCP that have the necessary permissions to access cloud resources. Only Administrators can manage roles. These roles are automatically populated when CSP credentials are added, following instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/cross/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en).
+Accounts in Cado correspond to cloud accounts in AWS, Azure, or GCP that have the necessary permissions to access cloud resources. Only Administrators can manage accounts. These accounts are automatically populated when CSP credentials are added, following instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/cross/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en).
 
 It’s recommended to perform **Account Checks** periodically to ensure correct permissions are in place for successful data acquisitions. See [Account Check](/cado/manage/monitoring#account-check) for more details.
 
@@ -41,7 +41,7 @@ To create a new group:
 - Click **Add Group**.
 - Enter the group name.
 - Enter the corresponding SSO group name to auto-assign users who log in via SSO.
-- Assign users and select the CSP Roles the group should have access to.
+- Assign users and select the CSP Accounts the group should have access to.
 
 ![Groups](/img/groups.png)
 
@@ -50,18 +50,18 @@ To create a new group:
 Only Administrators can create new users. When a new user is created, a temporary password must be set, which the user will be required to change upon first login.
 
 To add a new user:
-- Go to **Users**.
-- Click **Add Users**.
-- Assign the user to any relevant groups.
-- Assign any required CSP Roles to the user.
+- Go to **Teams**.
+- Click **Create User**.
+- Assign the user a role from the dropdown
+- Click **Add new user**
 
 ### Granting Administrator Access
 
 To grant Administrator access to a user:
-- Go to **Users**.
+- Go to **Teams**.
 - Next to the user, click the Edit icon ![Edit](/img/edit.png).
-- Check the **This user has administrator access** option.
-- Click **Update**.
+- Assign the user a role from the dropdown
+- Click **Confirm**.
 
 :::caution
 Follow the principle of least privilege when creating users and assigning Administrator access.
@@ -71,9 +71,10 @@ Follow the principle of least privilege when creating users and assigning Admini
 
 To grant a user or group access to an existing investigation:
 - Go to **Investigations** and select the investigation.
-- Click the **Access** button.
-- Click **Add Users**.
-- Select the users or groups to add and click **Add**.
+- Click the **Investigation Settings** button
+- Assign **Users** from the dropdown
+- Assign **Groups** from the dropdown
+- Click **Save Changes**
 
 ### Password Policy
 
