@@ -20,7 +20,7 @@ In complex cloud environments, setting up long-term roles with access often requ
 
    ![ARN](/img/arn.png)
 
-3. **Grant Temporary Access via AWS CLI or a third party tool **  
+3. **Grant Temporary Access via AWS CLI or a third party tool**  
 
 You can generate a session token using the AWS CLI for a user or a role, or a third-party tool such as HashiCorp Vault:
 
