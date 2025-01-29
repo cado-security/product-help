@@ -20,10 +20,21 @@ In complex cloud environments, setting up long-term roles with access often requ
 
    ![ARN](/img/arn.png)
 
-3. **Grant Temporary Access via AWS CLI**  
-   Use the AWS CLI to generate the STS token for temporary access. This action uses the permissions available in your local AWS CLI environment. Alternatively, you can temporarily assume a predefined role:
+3. **Grant Temporary Access via AWS CLI or a third party tool **  
 
-   ![Assume Role](/img/assume-role.png)
+You can generate a session token using the AWS CLI for a user or a role, or a third-party tool such as HashiCorp Vault:
+
+   ![Configure Token](/img/configure_token.png)
+
+A session token can be generated from a user. This action uses the permissions available in your local AWS CLI environment:
+   ![Session](/img/sts_session_token.png.png)
+
+A session token can also be generated from a role:
+   ![Role](/img/sts_role_token.png)
+
+Or a third party tool such as HashiCorp Vault:
+   ![Third party tool](/img/sts_third_part_token.png)
+
 
 ### Setting the Session Duration
 
