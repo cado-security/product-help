@@ -27,7 +27,7 @@ You can generate a session token using the AWS CLI for a user or a role, or a th
    ![Configure Token](/img/configure_token.png)
 
 A session token can be generated from a user. This action uses the permissions available in your local AWS CLI environment:
-   ![Session](/img/sts_session_token.png.png)
+   ![Session](/img/sts_session_token.png)
 
 A session token can also be generated from a role:
    ![Role](/img/sts_role_token.png)
