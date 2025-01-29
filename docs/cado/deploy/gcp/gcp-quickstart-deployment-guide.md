@@ -6,13 +6,19 @@ sidebar_position: 1
 
 # Cado Quickstart Deployment Guide
 
-This guide provides step-by-step instructions for deploying a Cado instance from the GCP console, aimed at helping you get up and running with the platform as quickly as possible
+This guide provides step-by-step instructions for deploying a Cado instance with a minimial terraform deployment, aimed at helping you get up and running with the platform as quickly as possible
 
 The initial deployment offers a basic working environment; however, certain functionalities are not included. Refer to the ‘Extensions’ section for details on missing features and instructions on how to add them.
 
+### Prerequisites
+
+- Clone the repo https://github.com/cado-security/Deployment-Templates
+- Install terraform locally
+- Install and Auth with Gcloud CLI
+
 ## Initial Deployment
 
-**Enter the directory:** 
+**Clone and Enter the directory:**
 https://github.com/cado-security/Deployment-Templates/blob/main/minimum_deployments/gcp
 
 **If not using Service account JSON:** 
