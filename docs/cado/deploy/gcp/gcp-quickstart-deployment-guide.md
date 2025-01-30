@@ -36,7 +36,7 @@ There are 3 required variables:
 
 **Optional variables:**  
 - **credentials_file** - A Service account JSON. For if not using authentication via GCP Cli  
-- **gcp_image** - The Terraform will automatically select the latest image, however if you want to provide a specific version of CADO pass the global image link  
+- **gcp_image** - The Terraform will automatically select the latest image, however if you want to provide a specific version of CADO pass the global image link from the CADO updates [JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json)
 - **source_ip** - The IP address you want to whitelist port 443 with CADO. This will automatically select your own IP if left empty  
 - **public_ip** - By default True. Set to False if you do not want a Public IP on the instance  
 
