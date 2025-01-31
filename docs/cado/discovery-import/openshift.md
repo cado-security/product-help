@@ -32,4 +32,4 @@ Red Hat OpenShift Service on AWS (ROSA) runs on Amazon Elastic Compute Cloud (EC
 This means that you can import data from ROSA by importing EC2 instances as usual. For more information, see [How to Import Data from AWS EC2](/cado/discovery-import/aws/aws-ec2.md).
 Most clusters run on containerd, which can limit the data from inside containers that can be collected vs Docker.
 
-The Cado Host method above for OpenShift can work with ROSA as well, and oc commands can be used to execute the script on the desired container within ROSA after [logging in](https://docs.openshift.com/rosa/rosa_install_access_delete_clusters/rosa-sts-accessing-cluster.html).
+The Cado Host method above for OpenShift can work with ROSA as well, as "oc exec" commands can be used to execute the script on the desired container within ROSA after [logging in](https://docs.openshift.com/rosa/rosa_install_access_delete_clusters/rosa-sts-accessing-cluster.html).
