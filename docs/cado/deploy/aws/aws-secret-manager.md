@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Secret Manager
 
-The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in AWS Secrets Manager.
+The initial minimal deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in AWS Secrets Manager.
 
 ### Prerequisites
 

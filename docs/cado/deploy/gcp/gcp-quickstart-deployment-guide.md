@@ -1,10 +1,10 @@
 ---
-title: Cado Quickstart Deployment Guide
+title: Minimal Terraform Deployment Guide
 hide_title: true
 sidebar_position: 1
 ---
 
-# Cado Quickstart Deployment Guide
+# Minimal Terraform Deployment Guide
 
 This guide provides step-by-step instructions for deploying a Cado instance with a minimial terraform deployment, aimed at helping you get up and running with the platform as quickly as possible
 

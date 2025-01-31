@@ -1,10 +1,10 @@
 ---
-title: Cado Quickstart Deployment Guide
+title: Minimal Deployment Guide
 hide_title: true
 sidebar_position: 2
 ---
 
-# Cado Quickstart Deployment Guide
+# Minimal Deployment Guide
 
 This guide provides step-by-step instructions for deploying a Cado instance from the Azure console, aimed at helping you get up and running with the platform as quickly as possible
 
