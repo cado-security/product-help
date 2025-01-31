@@ -15,8 +15,8 @@ There are two user roles in the Cado platform:
 
 | Name           | Description                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------- |
-| Administrator  | Can manage users and has access to all investigations and cloud resources.                     |
-| Normal User    | Has restricted access to specific investigations and cloud resources.                          |
+| Administrator  | Can manage users and has access to all investigations and cloud resources.                    |
+| Analyst        | Focus is conducting investigations.                                                           |
 
 A **Normal User** must be added to an investigation or a group with access to that investigation to gain access. To acquire cloud data, the user needs access to a CSP Role that has permissions to the cloud resource or be part of a group with access to that CSP Role.
 
