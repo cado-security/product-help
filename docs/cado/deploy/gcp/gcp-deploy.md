@@ -1,5 +1,5 @@
 ---
-title: GCP Terraform deployment
+title: GCP Full Terraform deployment
 hide_title: true
 sidebar_position: 1
 ---

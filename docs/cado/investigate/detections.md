@@ -6,7 +6,7 @@ sidebar_position: 9
 
 # How to Add Additional Detections to the Cado Platform
 
-The Cado platform allows you to integrate with various systems and incorporate custom Indicators of Compromise (IOCs). You can configure these settings by navigating to **Settings > General Settings > Detection**.
+The Cado platform allows you to integrate with various systems and incorporate custom Indicators of Compromise (IOCs). You can configure these settings by navigating to **Settings > General Settings > Intelligence**.
 
 ### VirusTotal API Key
 
