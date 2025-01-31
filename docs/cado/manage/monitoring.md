@@ -28,7 +28,7 @@ You can expand the pipeline to view the status of each task, allowing you to dia
 
 ## Account Check
 
-To verify account-based settings, navigate to **/settings/cloud**, select an account, and click the **Run Account Check** button. This will perform a permissions and policy simulation check, ensuring that the correct permissions are in place for successful data acquisition. Account Checks can be run on both the account where Cado is deployed and any cross-accounts.
+To verify account-based settings, navigate to **/settings/cloud**, select an account, and click the **Run Account Check** button. This will perform a permissions and policy simulation check, ensuring that the correct permissions are in place for successful data acquisition. Account Checks can be run on both the account where Cado is deployed and any cross-accounts. For cloud accounts, the account check feature is supported for AWS, Azure, and GCP.
 
 ![Account Check](/img/manage-account-check.png)
 
