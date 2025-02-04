@@ -32,7 +32,7 @@ Make sure that devices running the scripts have HTTPS access to the AWS S3 endpo
    - **Direct Download** is suitable for manually downloading the Cado Host binary to endpoints via Group Policy or an MDM tool.
    - **Script Builder** generates a script that can be run directly on a device via terminal, command prompt, or a remote execution tool.
 
-   ![Select OS, storage, etc](/img/import-step2.png)
+   ![Select OS, storage, etc](/img/configure-runtime.png)
 
 3. In the **Script Builder** tab, select:
    - Your **Operating System**.
