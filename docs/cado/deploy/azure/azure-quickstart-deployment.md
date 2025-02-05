@@ -126,14 +126,6 @@ echo -n "<CLIENT_SECRET>" | sudo tee -a /home/admin/processor/envars/AZURE_CLIEN
 
 > The default password for the VM is the [Resource ID](https://docs.cadosecurity.com/cado/deploy/logging-in) of the virtual machine.
 
-## Upgrades
-
-The initial deployment requires manually upgrading the VM when a new version is released via the Azure console. Cado has an inbuilt upgrade mechanism that will orchestrate this for you.
-
-1. You can now update your instance by going to **Settings** > **Updates** then click **Update System**
-
-![Platform Update](/img/cado-update.png)
-
 ## Optional Extentions
 
 #### Workers
