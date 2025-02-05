@@ -125,3 +125,25 @@ echo -n "<CLIENT_SECRET>" | sudo tee -a /home/admin/processor/envars/AZURE_CLIEN
 6. The network security group created earlier needs to be associated with the subnet the virtual machine resides in. This can be done once the VM is running from the Overview section, and selecting Network Settings > Create Port Rule > Inbound Port Rule.
 
 > The default password for the VM is the [Resource ID](https://docs.cadosecurity.com/cado/deploy/logging-in) of the virtual machine.
+
+## Optional Extentions
+
+#### Workers
+
+The initial deployment uses a single Compute instance, limiting imports to Cado Host captures and restricting simultaneous evidence processing to ensure stability. Additional Compute instances are required to process more data or multiple evidence items concurrently.
+
+To enable **Workers** follow the workers document - [Enable Workers](https://docs.cadosecurity.com/cado/deploy/azure/azure-workers)
+
+#### Secret Manager
+
+The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in Azure Key Vault.
+
+To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/azure/azure-secret-manager)
+
+#### NFS
+
+The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+
+To enable **NFS** follow the NFS document - [Enable NFS](https://docs.cadosecurity.com/cado/deploy/azure/azure-nfs)
+
+
