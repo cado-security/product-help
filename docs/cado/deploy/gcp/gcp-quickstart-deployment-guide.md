@@ -104,6 +104,24 @@ This [link](https://docs.cadosecurity.com/cado/deploy/cross/adding-gcp) will giv
 
 4. Verify that the account health check passes
 
+## Optional Extentions
 
+#### Workers
+
+The initial deployment uses a single Compute instance, limiting imports to Cado Host captures and restricting simultaneous evidence processing to ensure stability. Additional Compute instances are required to process more data or multiple evidence items concurrently.
+
+To enable **Workers** follow the workers document - [Enable Workers](https://docs.cadosecurity.com/cado/deploy/gcp/gcp-workers)
+
+#### Secret Manager
+
+The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in Azure Key Vault.
+
+To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/gcp/gcp-secret-manager)
+
+#### NFS
+
+The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+
+To enable **NFS** follow the NFS document - [Enable NFS](https://docs.cadosecurity.com/cado/deploy/gcp/gcp-nfs)
 
 
