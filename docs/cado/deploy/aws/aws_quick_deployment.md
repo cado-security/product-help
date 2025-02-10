@@ -30,23 +30,23 @@ Before starting, make sure you have all the following:
      "Sid": "RequiredForCadoHostAndPreservation",
      "Effect": "Allow",
      "Action": [
-           "s3:PutObject",
-               "s3:GetObject",
-               "s3:RestoreObject",
-               "s3:PutObjectTagging",
-               "s3:GetObjectTagging"
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:RestoreObject",
+        "s3:PutObjectTagging",
+        "s3:GetObjectTagging"
      ],
      "Resource": "arn:aws:s3:::MY_CADO_BUCKET/*" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
    },
    {
-       "Sid": "RequiredForCadoHostAndPreservation2",
-     "Effect": "Allow",
-     "Action": [
-           "s3:ListAllMyBuckets",
-               "s3:ListBucket",
-               "s3:GetBucketLocation"
-     ],
-     "Resource": "arn:aws:s3:::MY_CADO_BUCKET" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
+      "Sid": "RequiredForCadoHostAndPreservation2",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::MY_CADO_BUCKET" // Replace MY_CADO_BUCKET with your bucket name and delete this comment
    }
  ]
 }
@@ -64,7 +64,7 @@ Before starting, make sure you have all the following:
 
 - An SSH key pair in the region you are deploying in
 
-## Instructions
+### Instructions
 
 1. Visit the **Launch an instance** page in the AWS console
 
@@ -153,3 +153,23 @@ echo "bucket = MY_CADO_BUCKET" >> /home/admin/processor/first_run.cfg
 10. After launching it will take a few minutes for Cado to start.
 
 ![Success](/img/aws-success.png)
+
+## Optional Extensions
+
+#### Workers
+
+The initial deployment uses a single Compute instance, limiting imports to Cado Host captures and restricting simultaneous evidence processing to ensure stability. Additional EC2 instances are required to process more data or multiple evidence items concurrently.
+
+To enable **Workers** follow the workers document - [Enable Workers](https://docs.cadosecurity.com/cado/deploy/aws/aws-workers)
+
+#### Secret Manager
+
+The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in AWS Secrets Manager.
+
+To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/aws/aws-secret-manager)
+
+#### NFS
+
+The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+
+To enable **NFS** follow the NFS document - [Enable NFS](https://docs.cadosecurity.com/cado/deploy/aws/aws-nfs)
