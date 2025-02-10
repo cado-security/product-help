@@ -14,12 +14,9 @@ The initial deployment offers a basic working environment; however, certain func
 
 ### Prerequisites
 
-- Clone the repo https://github.com/cado-security/Deployment-Templates
+- Clone the repo https://github.com/cado-security/Deployment-Templates and change directory into `minimum_deployments/gcp`
 - Install terraform locally
 - Install and Auth with Gcloud CLI (`gcloud init`)
-
-**Clone and Enter the directory:**
-https://github.com/cado-security/Deployment-Templates/blob/main/minimum_deployments/gcp
 
 ### Instructions
 1. Run `terraform init` inside `minimum_deployments/gcp`
