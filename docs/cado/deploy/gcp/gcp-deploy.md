@@ -43,7 +43,7 @@ The service account itself will need to have the following roles:
     | `region` | The region which Cado will be deployed to | `us-east1` |
     | `image` | The link of the image provided by Sales or the [public release URL](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-xxx` |
     | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
-    | `vm_size` | Size of main instance | `n2d-standard-8` |
+    | `vm_size` | Size of main instance | `n2-standard-16` |
     | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
     | `allowed_ips` | List of incoming IPs  | `[“1.2.3.6/32”]` |
     :::tip
