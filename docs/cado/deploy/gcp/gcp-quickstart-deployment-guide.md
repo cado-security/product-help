@@ -10,51 +10,42 @@ This guide provides step-by-step instructions for deploying a Cado instance with
 
 The initial deployment offers a basic working environment; however, certain functionalities are not included. Refer to the ‘Extensions’ section for details on missing features and instructions on how to add them.
 
-### Prerequisites
-
-- Clone the repo https://github.com/cado-security/Deployment-Templates
-- Install terraform locally
-- Install and Auth with Gcloud CLI
-
 ## Initial Deployment
 
-**Clone and Enter the directory:**
-https://github.com/cado-security/Deployment-Templates/blob/main/minimum_deployments/gcp
+### Prerequisites
 
-**If not using Service account JSON:** 
-1. Install and Auth via GCP Cli: https://cloud.google.com/sdk/docs/install
-   
-2. Auth with: `gcloud init`
+- Clone the repo https://github.com/cado-security/Deployment-Templates and change directory into `minimum_deployments/gcp`
+- Install terraform locally
+- Install and Auth with Gcloud CLI (`gcloud init`)
 
-Run `terraform init` inside the directory
+### Instructions
+1. Run `terraform init` inside `minimum_deployments/gcp`
+2. Run Terraform plan to confirm the resources that will be created:
 
-### Variables:
+**Required variables:**
 There are 3 required variables:  
 - **project_id** - This is the GCP project you want to deploy into  
 - **region** - (us-central1 / us-east1)  
 - **bucket** - The bucket CADO will use for evidence preservation. Needs to be in the same project  
 
-**Optional variables:**  
+**Optional variables:**
 - **credentials_file** - A Service account JSON. For if not using authentication via GCP Cli  
 - **gcp_image** - The Terraform will automatically select the latest image, however if you want to provide a specific version of CADO pass the global image link from the CADO updates [JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json)
 - **source_ip** - The IP address you want to whitelist port 443 with CADO. This will automatically select your own IP if left empty  
 - **public_ip** - By default True. Set to False if you do not want a Public IP on the instance  
 
-**Network Variables:**  
+**Network variables:**  
 - **network_name** - VPC network name. Leave blank to use default  
 - **subnetwork_name** - Automatically determined unless specified  
 - **service_account_email** - To specify an already created service account email. Terraform will create one if left empty  
-
-### To confirm what will be deployed:
 
 > **Note:** Terraform is Case Sensitive. Confirm the project and other variables are in the correct case.
 
 `terraform plan -var bucket=YOUR_BUCKET -var project_id=YOUR_PROJECT_ID -var region=DEPLOY_REGION`  
 
-You should see “Plan: 7 to add, 0 to change, 0 to destroy.”
+You should see `Plan: 7 to add, 0 to change, 0 to destroy.`
 
-### To deploy
-
+3. Run Terraform apply to create the resources:
 `terraform apply -var bucket=YOUR_BUCKET -var project_id=YOUR_PROJECT_ID -var region=DEPLOY_REGION`
 
 ## Configure import sources
@@ -104,7 +95,7 @@ This [link](https://docs.cadosecurity.com/cado/deploy/cross/adding-gcp) will giv
 
 4. Verify that the account health check passes
 
-## Optional Extentions
+## Optional Extensions
 
 #### Workers
 

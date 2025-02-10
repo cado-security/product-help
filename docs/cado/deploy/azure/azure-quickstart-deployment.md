@@ -12,7 +12,7 @@ The initial deployment offers a basic working environment; however, certain func
 
 ## Initial Deployment
 
-## Prerequisites
+### Prerequisites
 
 Before starting, make sure you have all the following:
 
@@ -38,9 +38,7 @@ You can add a role assignment to a managed identity by following these steps:
 
 ![Azure Role Assignment](/img/add-role-assignment.png)
 
-## Instructions
-
-### Deploying from the Cado Image
+### Instructions
 
 1. Open the “Community Images” service in Azure.Then, filter the images by the Cado public gallery name (CadoPlatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1) to list all the Cado images available for deployment.
 
@@ -126,7 +124,7 @@ echo -n "<CLIENT_SECRET>" | sudo tee -a /home/admin/processor/envars/AZURE_CLIEN
 
 > The default password for the VM is the [Resource ID](https://docs.cadosecurity.com/cado/deploy/logging-in) of the virtual machine.
 
-## Optional Extentions
+## Optional Extensions
 
 #### Workers
 
@@ -145,5 +143,3 @@ To enable **Secret Manager** follow the secret manager document - [Enable Secret
 The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
 
 To enable **NFS** follow the NFS document - [Enable NFS](https://docs.cadosecurity.com/cado/deploy/azure/azure-nfs)
-
-
