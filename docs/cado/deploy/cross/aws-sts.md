@@ -33,6 +33,8 @@ A session token can also be generated from a role:
    ![Role](/img/sts_role_token.png)
 
 Or a third party tool such as HashiCorp Vault:
+   ![Hashicorp](/img/hashicorp.png)
+   
    ![Third party tool](/img/sts_third_part_token.png)
 
 
