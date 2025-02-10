@@ -33,8 +33,7 @@ For more details about what Cado Host collects, refer to the [Collected Artifact
 
 ![AWS EC2 Triage Acquisition](/img/aws-ec2-triage-acquisition.png)
 
-#### **Data Flow Diagram: EC2 SSM Acquisition**
-This diagram shows the acquisition process via AWS Systems Manager (SSM).
+Flow Diagram for EC2 SSM Acquisition:
 
 ![EC2 SSM Acquisition](/img/ec2-ssm.png)
 
@@ -46,11 +45,11 @@ When using **Triage Acquisition** for a Linux EC2 instance, you can enable the *
 
 ![AWS EC2 Triage Acquisition Port Forwarding](/img/aws-ec2-triage-acquisition-ssm-port-forwarding.png)
 
-#### **Data Flow Diagram: EC2 Tunnel Acquisition**
-This diagram illustrates the use of an SSM tunnel for acquisitions.
+Flow Diagram for EC2 Tunnel Acquisition:
 
 ![EC2 Tunnel Acquisition](/img/ec2-tunnel.png)
 
+The Triage Acquisition with SSM Port Forwarding option utilizes the Cado [Run Command](/cado/discovery-import/aws/run-command) feature to execute the Cado Host binary on the target system - for more details on how this works, refer to the [Run Command](/cado/discovery-import/aws/run-command) documentation.
 
 ### Skip Processing
 The Cado platform supports the option to skip processing of the EBS volume. Select **Skip Processing** under **Processing Options** to activate this option. If you decide you want to process the volume at a later date, this can be achieved by selecting **Process Evidence** on the relevant evidence item in the Evidence tab.
