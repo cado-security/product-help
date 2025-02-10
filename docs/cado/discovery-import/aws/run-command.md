@@ -61,3 +61,27 @@ rm -rf /tmp/cado-volexity
 Use the Import Wizard to select an EC2 instance with the SSM agent installed. Choose **Run Command** as the action type, and you’ll see the script created earlier. Complete the import as usual.
 
 ![AWS EC2 Run Command - Selecting Saved Script](/img/aws-ec2-runcommand8.png)
+
+## How does the Run Command feature work?
+
+When you execute a saved script via Run Command, Cado leverages AWS Systems Manager (SSM) to remotely execute your script on the target EC2. 
+
+1. **Preparation and Validation**  
+   - **Platform Verification:** The process begins by verifying that the target instance is a Linux system.
+   - **Script Selection:** The command will either use a pre-saved script you have created from your Cado settings, or the script used to import through Cado Host.
+   - **Port Selection:** A specific port (by default, the SSM port 9999) is used to establish the port forwarding session between your local worker and the target instance.
+
+2. **Input File Handling**  
+   - **Downloading the Input File:** If your script requires an input file (specified as an S3 URI or a designated Cado host URL), the file is first downloaded to a temporary location on the main Cado instance.  
+   - **Transferring to the Instance:** Once the input file is available locally, it is transferred securely to the target EC2 instance over the SSM port forwarding session.
+
+3. **Command Execution on the EC2 Instance**  
+   - **File Path Substitution:** The command is automatically updated so that the placeholders for the input and output files (`${INPUT}` and `${OUTPUT}`) point to the temporary file locations on the target instance - as per the examples above.
+   - **Remote Execution:** The command is then executed on the target instance via SSM. During execution, the script reads the transferred input file and writes its results to an output file on the instance.
+
+4. **Retrieving the Output File**  
+   - **Downloading the Output File:** After the command has executed successfully, the system retrieves the output file from the instance using the same SSM port forwarding mechanism.
+   - **Uploading to S3:** Once the output file is securely transferred back to the controlling system, it is automatically uploaded to your designated Cado S3 bucket.
+
+5. **Cleanup**  
+   - **Instance Cleanup:** To maintain a clean environment, temporary files on the target instance (such as the transferred output file) are removed after the successful upload to S3. Any process running on the port forwarding session is also terminated, determined by the port number used.
