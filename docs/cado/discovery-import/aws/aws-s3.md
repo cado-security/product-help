@@ -1,7 +1,7 @@
 ---
 title: S3
 hide_title: true
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # How to Import Data from S3

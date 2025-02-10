@@ -3,9 +3,13 @@ title: EBS Direct Acquisition
 hide_title: true
 sidebar_position: 11
 ---
-### Why EBS Direct Acquisition
 
-The EBS direct acquisition feature significantly improves the capture speed of disks. This feature also requires less permissions for acquisition.
+## What is EBS Direct Acquisition
+EBS Direct acquisition is a method for acquiring EC2 instances and associated volumes.
+
+### Why use EBS Direct Acquisition
+
+The EBS direct acquisition feature significantly improves the capture speed of disks, and less permissions, than the alternate method of creating a volume and attaching it to an instance.
 
 ### Prerequisites
 
