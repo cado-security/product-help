@@ -19,7 +19,7 @@ Switch your platform to run using the instance role.
 
 1. Update your `myCadoResponseInstanceRolePolicy` to match https://github.com/cado-security/Deployment-Templates/blob/main/new-roles/AWSInstanceRole.json
 
-> **NOTE:** Replace MY_CADO_BUCKET with the name of your Cado S3 bucket. Replace MY_CADO_CLODWATCH_LOG_GROUP with the ARN of your CloudWatch Log Group if using.
+> **NOTE:** Replace MY_CADO_BUCKET with the name of your Cado S3 bucket. Replace CADO_REGION with the region you deployed Cado in. Replace CADO_ACCOUNT_NUMBER with the account number where Cado is deployed.
 
    i. This adds the permissions required to run the Cado platform to the `myCadoResponseInstanceRolePolicy`, which leads to some duplications with `myCadoResponseRolePolicy`. The duplicate permissions will be removed in a later step.
 
