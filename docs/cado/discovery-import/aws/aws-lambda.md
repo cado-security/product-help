@@ -18,7 +18,7 @@ The Cado platform allows you to acquire AWS Lambda functions, which are serverle
 
 ## Output
 
-Once processing is complete, the Lambda function’s events will be added to the timeline. You can view the Lambda function’s code in the **Browse Disk** tab.
+Once processing is complete, the Lambda function’s events will be added to the timeline. You can view the Lambda function’s code in the **Files** tab.
 
 ![Lambda Function Code](/img/aws-lambda-code.png)
 
