@@ -17,3 +17,6 @@ If the platform has the necessary IAM and network permissions to send logs to Cl
 "log_group_name": "/var/logs/cado",
 "log_stream_name": "cado-logs-all"
 ```
+
+## Forwarding full Cado analysis output to Cloudwatch
+If SIEM forwarding is enabled (Settings > SIEM), all output is also forwarded to CloudWatch so long as the agent [has access](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html) to CloudWatch.
