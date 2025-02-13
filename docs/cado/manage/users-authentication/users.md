@@ -127,7 +127,7 @@ Only Administrators can create new users. When a new user is created, a temporar
 To add a new user:
 - Go to **Teams**.
 - Click **Create User**.
-- Assign the user a role from the dropdown
+- Assign the user a role from the dropdown ![RBAC Roles](/img/rbac-role.png)
 - Click **Add new user**
 
 ### Granting Administrator Access
