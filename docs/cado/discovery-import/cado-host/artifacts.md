@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # What Artifacts Are Collected by Cado Host
 
-Cado Host collects a variety of artifacts by default, depending on the operating system. You can configure additional files and folders to be collected by using the `--additional_files` parameter when running Cado Host. For more details, see the **[Command Line Parameters](cli)** documentation.
+Cado Host collects a variety of artifacts by default, depending on the operating system. You can also use custom collections to gather specific files. Additionally, you can configure extra files and folders to be collected by using the `--additional_files` parameter when running Cado Host. For more details, see the **[Command Line Parameters](cli)** documentation.
 
 ### Volatile Data
 
@@ -16,9 +16,13 @@ Cado Host collects the following volatile data available at the time of executio
 - Netstat data of active network connections.
 - Contents of open files, such as running binaries.
 
-### Linux and macOS
+### Default Collection
+
+<details>
+  <summary>Linux and MacOS</summary>
 
 Cado Host collects the following artifacts on Linux and macOS, when available:
+
 - `.bash_history`
 - `.ssh/known_hosts`
 - `/var/adm/wtmp`
@@ -32,9 +36,14 @@ Cado Host collects the following artifacts on Linux and macOS, when available:
 - `/etc/utmp`
 - `/var/run/utmp`, `/var/run/wtmp`
 
-### Windows
+</details>
+
+
+<details>
+  <summary>Windows</summary>
 
 Cado Host collects the following artifacts on Windows, when available:
+
 - Information about running processes and active network connections.
 - File system artifacts including `$MFT`, `NTUSER.DAT`, and their associated log files.
 - McAfee and security logs.
@@ -47,6 +56,70 @@ Cado Host collects the following artifacts on Windows, when available:
 - Windows startup programs and file history.
 - System activity logs and setup logs.
 
+</details>
+
+### Custom Collection
+
+To use custom collection you can do this by following selecting the **Enable Custom Collection** once you have selected the operating system.
+
+<details>
+  <summary>Linux and MacOS</summary>
+  
+Select the artifacts on Linux and macOS, when available:
+
+- Shell History
+- Program Execution
+- Logs
+- Webservers
+- Hosts file
+- SSH
+- Users and Groups
+- Misc
+- Browsers
+- Network connections
+- Processes
+- Open files
+
+</details>
+
+<details>
+  <summary>Windows</summary>
+
+Select the artifacts on Windows when available:
+
+- Antivirus  
+- Cloud Storage  
+- Logs  
+- Group Policy  
+- Program Execution  
+- Filesystem  
+- LNK files and Jump lists  
+- Messaging  
+- Recycle Bin  
+- Registry Hives  
+- Remote Access  
+- Scheduled Tasks  
+- SRUM  
+- SUM  
+- WER  
+- ThumbCache  
+- WBEM  
+- BITS  
+- Browsers  
+- Windows Search Index  
+- Windows Timeline  
+- Webservers  
+- Hosts File  
+- Java Cache  
+- Network Connections  
+- Processes  
+- Open Files  
+
+</details>
+
+
 These artifacts provide valuable forensic data for incident response and investigations.
 
 For more details on the configuration and collection options, refer to the **[Command Line Parameters](cli)** documentation.
+
+
