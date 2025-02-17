@@ -17,48 +17,65 @@ You will see a browser notification stating that "Your connection is not private
 :::
 
 
-### Default Login
+### Steps
 
-On first boot, the platform will take approximately **10 minutes** to install. During this time, the login URL page will display a message indicating that the system is **"Installing Cado..."**.
+**1.** On first boot, the platform will take approximately **10 minutes** to install. During this time, the login URL page will display a message indicating that the system is **"Installing Cado..."**.
 
 ![Login Page](/img/login.png)
 
-#### Username
+   i. For all cloud providers the default username will be **"admin"**
+   
+   ii. Your cloud provider will determine what your default password will be.
 
-For all cloud providers the default username will be **"admin"**
 
-#### Default Passwords by Cloud Provider
+<details>
+  <summary><strong>AWS</strong></summary>
 
-#### **AWS**
 - **Password:** `i-xxx`  
   - Where `i-xxx` is the **Instance ID** of your Cado instance.
 
-#### **Azure**
+</details>
+
+<details>
+  <summary><strong>Azure</strong></summary>
+
 - **Password:** The **resource ID** of the VM.  
   - To locate it:
     1. Open the VM in the **Azure portal**.
     2. Navigate to **Settings > Properties**.
     3. Find the **Resource ID** (starting with `/subscription/...` and ending with `/VM NAME`).
 
-#### **GCP**
+</details>
+
+<details>
+  <summary><strong>GCP</strong></summary>
+
 - **Password:** The **instance ID** found in the Compute Engine console.  
   - Example: `87844815082567668776`
 
-#### **AWS High Availability (HA)**
-- For High Availability in AWS, the password is the name of the load balancer, for example if the full ARN of the load balancer is arn:aws:elasticloadbalancing:us-east-1:111:loadbalancer/app/my-load-balancer/abc then the password will be:  
+</details>
+
+<details>
+  <summary><strong>AWS High Availability (HA)</strong></summary>
+
+- For High Availability in AWS, the password is the name of the load balancer.  
+  - Example: If the full ARN of the load balancer is:  
+    ```
+    arn:aws:elasticloadbalancing:us-east-1:111:loadbalancer/app/my-load-balancer/abc
+    ```
+    then the password will be:  
     ```
     my-load-balancer
     ```
 
-## EULA
+</details>
 
-Agree to Cado’s terms and conditions of use.
+
+**2.** Agree to Cado’s terms and conditions of use.
 
 ![EULA](/img/EULA.png)
 
-## Change Password
-
-### Password Change Guidelines  
+**3.** You will now be prompted to change your password.
 
 When changing your password, ensure it meets the required complexity standards.  
 
@@ -71,15 +88,11 @@ When changing your password, ensure it meets the required complexity standards.
 
 ![Change Password](/img/Change-Password.png)
 
-## License
-
-Upload your license provided by the Cado sales team. Contact support@cadosecurity.com if you haven’t received this.
+**4.** Upload your license provided by the Cado sales team. Contact support@cadosecurity.com if you haven’t received this.
 
 ![Upload License](/img/Upload-License.png)
 
-## Bucket
-
-The Cado deployment requires a storage bucket for various functionality including evidence preservation, health checks and Cado host based acquisitions.
+**5.** The Cado deployment requires a storage bucket for various functionality including evidence preservation, health checks and Cado host based acquisitions.
 
 Select your cloud provider below for the relevant document:
 
