@@ -29,10 +29,10 @@ You can create an **[EventBridge](https://us-west-2.console.aws.amazon.com/event
 For more, see **[this tutorial](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-snapshot.html)** from AWS.
 
 ### Restoring the Data Volume 
-To perform a migration or restoration to a new instance, deploy a fresh Cado installation (from Cloudformation, Terraform etc.) and Stop the Cado EC2 Installation.
+To perform a migration or restoration to a new instance, deploy a fresh Cado installation (from Cloudformation, Terraform etc.) and stop the Cado Main VM/EC2 instance that will start as part of the new deployment.
 
 :::warning
-This will need to be a new deployment, rather than just starting a new EC2 from e.g. an AMI. Creating an AMI snapshot from the Cado main VM and starting a new EC2 from that AMI will not work, and the platform will enter an unreliably state.
+This will need to be a new deployment, rather than just starting a new EC2 from e.g. an AMI. Creating an AMI snapshot from the Cado main VM and starting a new EC2 from that AMI will not work, and the platform will enter an unreliable state.
 :::
 
 The operating system volume will be smaller (typically 10 GB). Detach the larger Data Volume (`/dev/sdh` seen below):
