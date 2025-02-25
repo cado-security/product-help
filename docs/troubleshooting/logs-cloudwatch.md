@@ -24,7 +24,7 @@ If the platform has the necessary IAM and network permissions to send logs to Cl
 
 ## Forwarding full Cado analysis
 If SIEM forwarding is enabled (Settings > SIEM), all output is also recorded to /var/log/ and will be picked up by log forwarders along with other logs.
-Forwarding to S3 is the reccomended solution for forwarding full Cado analysis.
+Forwarding to S3 is the reccomended solution for forwarding full Cado analysis as forwarding agents are not designed to forward log logs in this manner.
 
 ## Third party log forwarder resources
 * [Splunk Universal Log Forwarder Configuration](https://docs.splunk.com/Documentation/Forwarder/9.4.0/Forwarder/Configuretheuniversalforwarder)
