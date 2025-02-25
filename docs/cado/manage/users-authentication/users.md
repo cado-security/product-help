@@ -21,76 +21,78 @@ RBAC (Role Based Access) ensures only authorised individuals have access to spec
 | Platform Administrator  | A more restricted set of permissions than Administrator, with a focus on operational aspects of the platform including upgrades, account management, and troubleshooting.                  |
 | Lead Analyst        | A restricted set of permissions with a focus on managing investigations including user access and taking response actions                        |
 | Analyst        | A more restricted permission set than the Lead Analyst role, with a focus on conducting investigations including acquiring and analysing evidence                         |
+| Read only Analyst | Most restricted role with read only access |
 
 #### Role Permissions Matrix
 
 The below table is a breakdown of permissions across each of the different roles and their levels of access.
 
-| **Permission Group** | **Permission**                                                       | **Administrator** | **Platform Administrator** | **Lead Analyst** | **Analyst** |
-|----------------------|-----------------------------------------------------------------------|-------------------|----------------------------|------------------|-------------|
-| **Response Actions**  | View response actions                                               | ✅                | ❌                         | ✅               | ❌          |
-|                      | Create/Delete/Update response actions                               | ✅                | ❌                         | ✅               | ❌          |
-|                      | Invoke response action                                              | ✅                | ❌                         | ✅               | ❌          |
-| **Alarms**           | View alarms                                                          | ✅                | ❌                         | ✅               | ✅          |
-|                      | Create/Delete alarms                                                | ✅                | ❌                         | ✅               | ✅          |
-| **Audit Log**        | View and download audit log                                         | ✅                | ✅                         | ❌               | ❌          |
-|                      | View audit log history                                              | ✅                | ✅                         | ✅               | ✅          |
-| **Authentication**   | Authenticate to the platform                                        | ✅                | ✅                         | ✅               | ✅          |
-| **API Keys**         | View API keys                                                       | ✅                | ✅                         | ❌               | ❌          |
-|                      | Create API keys                                                     | ✅                | ✅                         | ❌               | ❌          |
-|                      | Delete API keys                                                     | ✅                | ✅                         | ❌               | ❌          |
-| **Cloud Accounts**   | View cloud accounts                                                 | ✅                | ✅                         | ✅               | ✅          |
-|                      | Create/Delete cloud accounts                                       | ✅                | ✅                         | ❌               | ❌          |
-| **Detections**       | View detections                                                     | ✅                | ❌                         | ✅               | ✅          |
-|                      | Export detections                                                   | ✅                | ❌                         | ✅               | ✅          |
-|                      | View detection rules                                                | ✅                | ✅                         | ✅               | ❌          |
-|                      | Create/Delete/Update detection rules                                | ✅                | ✅                         | ✅               | ❌          |
-|                      | Create investigation from detection                                 | ✅                | ❌                         | ✅               | ❌          |
-| **Investigations**   | View investigation and associated data                              | ✅                | ❌                         | ✅               | ✅          |
-|                      | Create/Delete/Update associated investigation data                  | ✅                | ❌                         | ✅               | ✅          |
-|                      | Delete all investigations                                           | ✅                | ❌                         | ❌               | ❌          |
-|                      | Create investigation                                                | ✅                | ❌                         | ✅               | ❌          |
-|                      | Delete investigation                                                | ✅                | ❌                         | ✅               | ❌          |
-| **Evidence**         | Import evidence and data                                            | ✅                | ❌                         | ✅               | ✅          |
-|                      | Download evidence                                                   | ✅                | ❌                         | ✅               | ✅          |
-| **License**          | View platform license                                               | ✅                | ✅                         | ✅               | ✅          |
-|                      | Delete/Update platform license                                      | ✅                | ✅                         | ❌               | ❌          |
-| **Metrics**          | View platform metrics                                               | ✅                | ❌                         | ❌               | ❌          |
-| **Notifications**    | Delete all notifications                                            | ✅                | ✅                         | ❌               | ❌          |
-|                      | View platform notifications                                         | ✅                | ✅                         | ✅               | ✅          |
-|                      | Delete specified notification                                       | ✅                | ✅                         | ✅               | ✅          |
-| **Saved Scripts**    | Invoke saved script and commands                                    | ✅                | ❌                         | ✅               | ❌          |
-| **Settings**         | View intelligence                                                   | ✅                | ❌                         | ✅               | ❌          |
-|                      | Delete/Update intelligence                                          | ✅                | ❌                         | ✅               | ❌          |
-|                      | View settings                                                       | ✅                | ✅                         | ✅               | ✅          |
-|                      | Create/Delete/Update settings                                       | ✅                | ✅                         | ❌               | ❌          |
-|                      | View authentication settings                                        | ✅                | ✅                         | ❌               | ❌          |
-|                      | Update authentication settings                                      | ✅                | ✅                         | ❌               | ❌          |
-|                      | Create/Delete/Update scripts                                        | ✅                | ✅                         | ✅               | ❌          |
-|                      | View scripts                                                        | ✅                | ✅                         | ✅               | ❌          |
-| **Saved Queries**    | View saved queries                                                  | ✅                | ✅                         | ✅               | ✅          |
-|                      | Create/Delete/Update saved queries                                  | ✅                | ✅                         | ✅               | ✅          |
-| **Webhooks**         | View webhooks                                                       | ✅                | ✅                         | ❌               | ❌          |
-|                      | Create/Delete/Update webhooks                                       | ✅                | ✅                         | ❌               | ❌          |
-| **System**           | Upgrade and reboot the platform                                     | ✅                | ✅                         | ❌               | ❌          |
-|                      | View and download system logs                                       | ✅                | ✅                         | ❌               | ❌          |
-|                      | View platform details and health status                             | ✅                | ✅                         | ✅               | ✅          |
-| **Platform Status**  | View platform status                                                | ✅                | ✅                         | ✅               | ✅          |
-| **Pipelines**        | View pipeline details                                               | ✅                | ❌                         | ✅               | ✅          |
-|                      | Cancel pipeline                                                     | ✅                | ❌                         | ✅               | ✅          |
-|                      | View and download pipeline logs                                     | ✅                | ❌                         | ✅               | ✅          |
-|                      | Rerun pipeline                                                      | ✅                | ❌                         | ✅               | ✅          |
-|                      | Cancel all pipelines                                                | ✅                | ✅                         | ❌               | ❌          |
-| **Users**            | View all users                                                      | ✅                | ✅                         | ✅               | ❌          |
-|                      | Create/Delete/Update users                                          | ✅                | ✅                         | ❌               | ❌          |
-|                      | View user details                                                   | ✅                | ✅                         | ✅               | ✅          |
-|                      | Update user details                                                 | ✅                | ✅                         | ✅               | ✅          |
-| **EULA**             | Sign EULA                                                           | ✅                | ✅                         | ✅               | ✅          |
-| **Groups**           | View user groups                                                    | ✅                | ✅                         | ✅               | ✅          |
-|                      | Create/Delete/Update user groups                                    | ✅                | ✅                         | ❌               | ❌          |
-| **Workers**          | View worker details                                                 | ✅                | ❌                         | ✅               | ✅          |
-|                      | Terminate worker                                                    | ✅                | ❌                         | ✅               | ✅          |
-| **Roles**            | View roles                                                          | ✅                | ✅                         | ❌               | ❌          |
+| Permission Group                             | Permission                                                      | Administrator | Platform Administrator | Lead Analyst | Analyst | Read Only Analyst |
+|----------------------------------------------|------------------------------------------------------------------|---------------|------------------------|--------------|---------|-------------------|
+| **Response Actions**                         | View response actions                                            | ✅            | ❌                     | ✅           | ❌      | ❌                |
+|                                              | Create/Delete/Update response actions                             | ✅            | ❌                     | ✅           | ❌      | ❌                |
+|                                              | Invoke response action                                           | ✅            | ❌                     | ✅           | ❌      | ❌                |
+| **Alarms**                                   | View alarms                                                      | ✅            | ❌                     | ✅           | ✅      | ✅                |
+|                                              | Create/Delete alarms                                             | ✅            | ❌                     | ✅           | ✅      | ❌                |
+| **Audit Log**                                | View and download audit log                                      | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View audit log history                                           | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **Authentication**                           | Authenticate to the platform                                     | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **API Keys**                                 | View API keys                                                    | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | Create API keys                                                  | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | Delete API keys                                                  | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **Cloud Accounts**                           | View cloud accounts                                              | ✅            | ✅                     | ✅           | ✅      | ❌                |
+|                                              | Create/Delete cloud accounts                                      | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **Detections**                               | View detections                                                  | ✅            | ❌                     | ✅           | ✅      | ✅                |
+|                                              | Export detections                                                | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | View detection rules                                             | ✅            | ✅                     | ✅           | ❌      | ❌                |
+|                                              | Create/Delete/Update detection rules                              | ✅            | ✅                     | ✅           | ❌      | ❌                |
+|                                              | Create investigation from detection                               | ✅            | ❌                     | ✅           | ❌      | ❌                |
+| **Investigations**                           | View investigation and data associated with investigation         | ✅            | ❌                     | ✅           | ✅      | ✅                |
+|                                              | Create/Delete/Update data associated with investigation           | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | Delete all investigations                                        | ✅            | ❌                     | ❌           | ❌      | ❌                |
+|                                              | Create investigation                                             | ✅            | ❌                     | ✅           | ❌      | ❌                |
+|                                              | Delete investigation                                             | ✅            | ❌                     | ✅           | ❌      | ❌                |
+| **Evidence**                                 | Import evidence and data                                         | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | Download evidence                                                | ✅            | ❌                     | ✅           | ✅      | ❌                |
+| **License**                                  | View platform license                                            | ✅            | ✅                     | ✅           | ✅      | ✅                |
+|                                              | Delete/Update platform license                                   | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **Metrics**                                  | View platform metrics                                            | ✅            | ❌                     | ❌           | ❌      | ❌                |
+| **Notifications**                            | Delete all notifications                                         | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View platform notifications                                      | ✅            | ✅                     | ✅           | ✅      | ✅                |
+|                                              | Delete specified notification                                    | ✅            | ✅                     | ✅           | ✅      | ❌                |
+| **Saved Scripts**                            | Invoke saved script and commands                                  | ✅            | ❌                     | ✅           | ❌      | ❌                |
+| **Settings**                                 | View intelligence                                                | ✅            | ❌                     | ✅           | ❌      | ❌                |
+|                                              | Delete/Update intelligence                                       | ✅            | ❌                     | ✅           | ❌      | ❌                |
+|                                              | View settings                                                    | ✅            | ✅                     | ✅           | ✅      | ✅                |
+|                                              | Create/Delete/Update settings                                    | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View authentication settings                                     | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | Update authentication settings                                   | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | Create/Delete/Update scripts                                     | ✅            | ✅                     | ✅           | ❌      | ❌                |
+|                                              | View scripts                                                     | ✅            | ✅                     | ✅           | ❌      | ❌                |
+| **Saved Queries**                            | View saved queries                                               | ✅            | ✅                     | ✅           | ✅      | ✅                |
+|                                              | Create/Delete/Update saved queries                                | ✅            | ✅                     | ✅           | ✅      | ❌                |
+| **Webhooks**                                 | View webhooks                                                    | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | Create/Delete/Update webhooks                                    | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **System**                                   | Upgrade and reboot the platform                                  | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View and download system logs                                    | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View platform details and health status                          | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **Platform Status**                          | View platform status                                             | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **Pipelines**                                | View pipeline details                                            | ✅            | ❌                     | ✅           | ✅      | ✅                |
+|                                              | Cancel pipeline                                                  | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | View and download pipeline logs                                  | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | Rerun pipeline                                                   | ✅            | ❌                     | ✅           | ✅      | ❌                |
+|                                              | Cancel all pipelines                                             | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **Users**                                    | View all users                                                   | ✅            | ✅                     | ✅           | ❌      | ❌                |
+|                                              | Create/Delete/Update users                                        | ✅            | ✅                     | ❌           | ❌      | ❌                |
+|                                              | View user details                                                | ✅            | ✅                     | ✅           | ✅      | ✅                |
+|                                              | Update user details                                              | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **EULA**                                     | Sign EULA                                                        | ✅            | ✅                     | ✅           | ✅      | ✅                |
+| **Groups**                                   | View user groups                                                 | ✅            | ✅                     | ✅           | ✅      | ❌                |
+|                                              | Create/Delete/Update user groups                                  | ✅            | ✅                     | ❌           | ❌      | ❌                |
+| **Workers**                                  | View worker details                                              | ✅            | ❌                     | ✅           | ✅      | ✅                |
+|                                              | Terminate worker                                                 | ✅            | ❌                     | ✅           | ✅      | ❌                |
+| **Roles**                                    | View roles                                                       | ✅            | ✅                     | ❌           | ❌      | ❌                |
+
 
 
 
