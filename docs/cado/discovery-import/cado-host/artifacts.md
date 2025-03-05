@@ -35,6 +35,7 @@ Cado Host collects the following artifacts on Linux and macOS, when available:
 - `/etc/rc.d`
 - `/etc/utmp`
 - `/var/run/utmp`, `/var/run/wtmp`
+-  Web browser history from Google Chrome and Mozilla Firefox.
 
 </details>
 
