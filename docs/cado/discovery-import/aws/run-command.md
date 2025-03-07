@@ -8,9 +8,12 @@ sidebar_position: 11
 
 Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard.
 
-This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges. To support transferring of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
+This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges within Cado.
+To support transferring of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
 
-To use this feature, you must create a script in **/settings/scripts**. 
+To use this feature, you must create a script at Settings > Scripts.
+
+For more information on the AWS IAM permissions for SSM required, please see [here](/cado/deploy/aws/iam/ssm).
 
 *Note: This feature is in Beta. To enable it, go to Settings > Experiments > Run Action.*
 
