@@ -8,9 +8,12 @@ sidebar_position: 11
 
 Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard.
 
-This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges. To support transferring of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
+This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges within Cado.
+To support transferring of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
 
-To use this feature, you must create a script in **/settings/scripts**. 
+To use this feature, you must create a script at Settings > Scripts.
+
+For more information on the AWS IAM permissions for SSM required, please see [here](/cado/deploy/aws/iam/ssm).
 
 *Note: This feature is in Beta. To enable it, go to Settings > Experiments > Run Action.*
 
@@ -37,14 +40,23 @@ To use this feature, you must create a script in **/settings/scripts**.
 
 6. In Step 4, paste the script that will run on the target system. The input and output files can be referenced as `${INPUT}` and `${OUTPUT}` respectively. Windows scripts do not require these variables.
 
-Example script:
+Example script for Volexity Surge Collect:
 
 ```bash
+# Example 1 - Using reccomended Zip format
 mkdir -p /tmp/cado-volexity
 cp ${INPUT} /tmp/cado-volexity/surge-collect
 chmod 755 /tmp/cado-volexity/surge-collect
 mkdir -p /tmp/cado-volexity/out
-/tmp/cado-volexity/surge-collect example /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect $password --format=zip --pagefiles ${OUTPUT}
+rm -rf /tmp/cado-volexity
+
+# Example 2 - More explicit example using tar
+mkdir -p /tmp/cado-volexity
+cp ${INPUT} /tmp/cado-volexity/surge-collect
+chmod 755 /tmp/cado-volexity/surge-collect
+mkdir -p /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect $password /tmp/cado-volexity/out
 tar -cvzf /tmp/cado-volexity/out.tar.gz /tmp/cado-volexity/out
 cp "/tmp/cado-volexity/out.tar.gz" ${OUTPUT}
 rm -rf /tmp/cado-volexity
