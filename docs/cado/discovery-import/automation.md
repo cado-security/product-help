@@ -68,5 +68,19 @@ Go to **Detections** > **Alert tab**, select the **Alert**, and click **Actions*
 
 ![Retry Logic](/img/retry-logic.png)
 
+## Creating Custom Detection Rules
+
+To enable custom detection rules you want to naviagte to Setting > Detections
+
+From this screen you will now be able to enable user groups for detections and filter resources for your detections.
+
+![Detections](/img/detections.png)
+
+**Enable User Groups** - This feature enables you to filter detection visibility based on user groups and their RBAC roles. The primary use case is to enforce least privilege access, ensuring that users can only view the information they need according to their specific role.
+
+**Resource Filtering** - Resource filtering lets you include or exclude specific resources from your detections. For example, if you don't want an instance to be included, you can now exclude it and focus only on the resources you wish to view.
+
+If you want more information on managing your RBAC role and Groups you can find that [Here](https://docs.cadosecurity.com/cado/manage/users-authentication/users#cado-platform-roles)
+
 
 
