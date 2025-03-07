@@ -40,14 +40,23 @@ For more information on the AWS IAM permissions for SSM required, please see [he
 
 6. In Step 4, paste the script that will run on the target system. The input and output files can be referenced as `${INPUT}` and `${OUTPUT}` respectively. Windows scripts do not require these variables.
 
-Example script:
+Example script for Volexity Surge Collect:
 
 ```bash
+# Example 1 - Using reccomended Zip format
 mkdir -p /tmp/cado-volexity
 cp ${INPUT} /tmp/cado-volexity/surge-collect
 chmod 755 /tmp/cado-volexity/surge-collect
 mkdir -p /tmp/cado-volexity/out
-/tmp/cado-volexity/surge-collect example /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect $password --format=zip --pagefiles ${OUTPUT}
+rm -rf /tmp/cado-volexity
+
+# Example 2 - More explicit example using tar
+mkdir -p /tmp/cado-volexity
+cp ${INPUT} /tmp/cado-volexity/surge-collect
+chmod 755 /tmp/cado-volexity/surge-collect
+mkdir -p /tmp/cado-volexity/out
+/tmp/cado-volexity/surge-collect $password /tmp/cado-volexity/out
 tar -cvzf /tmp/cado-volexity/out.tar.gz /tmp/cado-volexity/out
 cp "/tmp/cado-volexity/out.tar.gz" ${OUTPUT}
 rm -rf /tmp/cado-volexity
