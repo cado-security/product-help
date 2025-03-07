@@ -43,23 +43,13 @@ For more information on the AWS IAM permissions for SSM required, please see [he
 Example script for Volexity Surge Collect:
 
 ```bash
-# Example 1 - Using reccomended Zip format
 mkdir -p /tmp/cado-volexity
 cp ${INPUT} /tmp/cado-volexity/surge-collect
 chmod 755 /tmp/cado-volexity/surge-collect
 mkdir -p /tmp/cado-volexity/out
-/tmp/cado-volexity/surge-collect $password --format=zip --pagefiles ${OUTPUT}
-rm -rf /tmp/cado-volexity
-
-# Example 2 - More explicit example using tar
-mkdir -p /tmp/cado-volexity
-cp ${INPUT} /tmp/cado-volexity/surge-collect
-chmod 755 /tmp/cado-volexity/surge-collect
-mkdir -p /tmp/cado-volexity/out
-/tmp/cado-volexity/surge-collect $password /tmp/cado-volexity/out
-tar -cvzf /tmp/cado-volexity/out.tar.gz /tmp/cado-volexity/out
-cp "/tmp/cado-volexity/out.tar.gz" ${OUTPUT}
-rm -rf /tmp/cado-volexity
+/tmp/cado-volexity/surge-collect $password --format=zip --pagefiles temp_out
+find temp_out -type f -name '*.zip' -exec mv {} ${OUTPUT} \;
+(sleep 30; rm -rf /tmp/cado-volexity) &
 ```
 
 ![Saved Script - Step 4](/img/aws-ec2-runcommand6.png)
