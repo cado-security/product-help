@@ -72,3 +72,6 @@ SnapshotOptions:
 ```
 
 Snapshots are not enabled by default for cost reasons.
+
+### Deploying with a non-Cado owned AMI
+In order to prevent incorrect operation, the platform checks to confirm if the AMI is owned by Cado and will not start if this check fails, with the error "Cannot run Cado Response in a non-Cado Response image" in the logs. If you require running a non-Cado supplied AMI, please contact support for details on how to override this safety setting.
