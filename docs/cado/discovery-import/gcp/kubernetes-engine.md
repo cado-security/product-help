@@ -33,7 +33,6 @@ Cado will automatically collect all relevant logs and forensic artifacts from th
 
 :::info
 To import GKE containers, ensure the **`iam.serviceAccounts.implicitDelegation`** IAM permission is added to the Service Account.  
-Currently, GKE imports are supported only for GCP accounts configured with **Workload Identity Federation**. See more details on the [GCP Import Settings](/cado/deploy/gcp/gcp-settings#workload-identity-federation) page.
 :::
 
 # Data Flow Diagram
