@@ -83,6 +83,7 @@ Once you receive them, continue on to the steps below.
         client_secret = "YOUR-CLIENT-SECRET"
         object_id     = "YOUR-OBJECT-ID"
     }
+    **Warning:** We pass the service principal credentials via `user_data` to the instance. These credentials are stored in base64 in the Terraform state file.
 
 9. Deploy by running the following commands in the directory `azure/cado/`
 
