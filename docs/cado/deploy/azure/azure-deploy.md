@@ -81,7 +81,7 @@ Once you receive them, continue on to the steps below.
         client_id     = "YOUR-CLIENT-ID"
         tenant_id     = "YOUR-TENANT-ID"
         client_secret = "YOUR-CLIENT-SECRET"
-        object_id     = "YOUR-OBJECT-ID"
+        object_id     = "YOUR-SERVICE-PRINCIPLE-OBJECT-ID"
     }
     **Warning:** We pass the service principal credentials via `user_data` to the instance. These credentials are stored in base64 in the Terraform state file.
 
