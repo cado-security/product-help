@@ -177,7 +177,7 @@ For example, a service account key would come in a structure such as the below. 
       "client_x509_cert_url": "..."
     \}
 
-#### Workload Identity Federation
+#### Workload Identity Federation (Optional)
 
 The GCP recommended best practice, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note: Cado running in Azure does not support Workload Identity Federation credentials to import from GCP*
 
