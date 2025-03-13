@@ -70,6 +70,20 @@ Once you receive them, continue on to the steps below.
     :::tip
      We recommend a minimum setting of 500GB for `main_data_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Investigations can always be deleted to recover space.
     :::
+    ---
+
+    ### Example Usage of `service_principal`
+
+    If you decide to use a service principal, set it in your `terraform.tfvars` or adjust `variable "service_principal"` in `azure/cado/main.tf` (or pass it via command line as a `-var` parameter). For example:
+
+    ```hcl
+    service_principal = {
+        client_id     = "YOUR-CLIENT-ID"
+        tenant_id     = "YOUR-TENANT-ID"
+        client_secret = "YOUR-CLIENT-SECRET"
+        object_id     = "YOUR-SERVICE-PRINCIPLE-OBJECT-ID"
+    }
+    **Warning:** We pass the service principal credentials via `user_data` to the instance. These credentials are stored in base64 in the Terraform state file.
 
 9. Deploy by running the following commands in the directory `azure/cado/`
 
