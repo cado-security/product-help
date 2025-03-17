@@ -30,53 +30,11 @@ The Cado platform enables the collection of key logs and forensic artifacts from
 
 ## Known Limitations
 
-- Cado can acquire artifacts from containers built with **distroless containers** and **private clusters** using Cado Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments].
+- Cado can acquire artifacts from containers built with **distroless containers** and **private clusters** using Cado Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments](/cado/discovery-import/kubernetes#alternate-collection-by-using-cado-host-with-a-sidecar-container).
 - Cado will hide pods running under the following namespaces, which are generally system-level namespaces running a distroless environment:
   - `kube-system`, `kube-public`, `kube-node-lease`
   - `gke-gmp-system`, `aks-command`
   - `gmp-system`, `calico-system`, `tigera-operator`
-
-## Configuring the Cluster RBAC for Use with Cado
-
-To acquire artifacts from a container, the following Kubernetes permissions must be enabled for each cluster:
-
-- `pods` - `get`, `list`
-- `pods/exec` - `create`, `get`
-
-### RBAC ClusterRole and ClusterRoleBinding
-
-We recommend adding the following ClusterRole and ClusterRoleBinding to your cluster’s RBAC configuration with the permissions listed above.
-
-For instructions on managing role maps, refer to [this AWS guide](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html).
-
-```yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: cado-eks-cluster-role
-rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list"]
-- apiGroups: [""]
-  resources: ["pods/exec"]
-  verbs: ["create", "get"]
-```
-
-```yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: cado-eks-cluster-role-binding
-subjects:
-- kind: Group
-  name: cado
-  apiGroup: rbac.authorization.k8s.io
-roleRef:
-  kind: ClusterRole
-  name: cado-eks-cluster-role
-  apiGroup: rbac.authorization.k8s.io
-```
 
 ## Linking AWS IAM to Your Cluster RBAC
 
@@ -104,7 +62,7 @@ Ensure the following IAM permissions are attached to your IAM role:
 	"eks:DescribeCluster",
 ```
 
-### Data Flow Diagram
+## Data Flow Diagram
 
 Below is a diagram illustrating how EKS acquisitions operate:
 

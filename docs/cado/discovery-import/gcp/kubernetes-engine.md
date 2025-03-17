@@ -8,9 +8,13 @@ sidebar_position: 5
 
 The Cado platform allows you to collect key logs and forensic artifacts from Google Cloud Kubernetes Engine (GKE) containers.
 
-:::info
-For distroless containers, please use Cado Host to perform the acquisition.
-:::
+## Known Limitations
+
+- Cado can acquire artifacts from containers built with **distroless containers** and **private clusters** using Cado Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments](/cado/discovery-import/kubernetes#alternate-collection-by-using-cado-host-with-a-sidecar-container).
+- Cado will hide pods running under the following namespaces, which are generally system-level namespaces running a distroless environment:
+  - `kube-system`, `kube-public`, `kube-node-lease`
+  - `gke-gmp-system`, `aks-command`
+  - `gmp-system`, `calico-system`, `tigera-operator`
 
 ## Import Steps
 
@@ -35,6 +39,6 @@ Cado will automatically collect all relevant logs and forensic artifacts from th
 To import GKE containers, ensure the **`iam.serviceAccounts.implicitDelegation`** IAM permission is added to the Service Account.  
 :::
 
-# Data Flow Diagram
+## Data Flow Diagram
 
 ![Data Flow Diagram for GKE Acquisition](/img/gke_acquisition.png)
