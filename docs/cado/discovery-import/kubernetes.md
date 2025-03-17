@@ -15,7 +15,47 @@ When acquiring data from Kubernetes containers, Cado follows these steps by defa
 
 The method used to execute the script depends on the environment. For example, ECS uses ECS execute, while EKS, AKS, and GKE use the Kubernetes control plane API, as explained [here](https://www.cadosecurity.com/how-we-sped-up-acquiring-forensic-data-from-aws-kubernetes-and-azure-kubernetes-services-by-10-times/).
 
-Authentication to the Kubernetes API may require both IAM and Kubernetes RBAC permissions, which are described in service-specific documentation.
+Authentication to the Kubernetes API may require IAM permissions, which are described in service-specific documentation.
+
+## Configuring the Cluster RBAC for Use with Cado
+
+To acquire artifacts from a container, the following Kubernetes permissions must be enabled for each cluster:
+
+- `pods` - `get`, `list`
+- `pods/exec` - `create`, `get`
+
+### RBAC ClusterRole and ClusterRoleBinding
+
+We recommend adding the following ClusterRole and ClusterRoleBinding to your cluster’s RBAC configuration with the permissions listed above.
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cado-eks-cluster-role
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list"]
+- apiGroups: [""]
+  resources: ["pods/exec"]
+  verbs: ["create", "get"]
+```
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cado-eks-cluster-role-binding
+subjects:
+- kind: Group
+  name: cado
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cado-eks-cluster-role
+  apiGroup: rbac.authorization.k8s.io
+```
 
 ## Alternate Collection by Acquiring the Volume of the Node
 
@@ -43,10 +83,6 @@ kubectl debug -it pod-name --image=debian:latest --target=target-container -n po
 The diagram below provides a high-level overview of how this works:
 
 ![Cado Host K8s Flow](/img/kubernetes-flow.png)
-
-### Kubernetes RBAC Requirements
-
-Cado requires write and execute access to containers to download and run the Cado Host binary. Specifically, Cado requires `get` and `list` permissions for the `pods` resource, and `get` and `create` permissions for the `pods/exec` resource.
 
 ### Using a Custom Image
 
