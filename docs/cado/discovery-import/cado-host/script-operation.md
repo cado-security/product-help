@@ -83,7 +83,7 @@ sudo chmod +x ./cado-host
 The script changes the permissions of the `cado-host` binary to make it executable using the `chmod +x` command.
 
 ```bash
-sudo ./cado-host --presigned_data $pre-signed-data --skip_linux_memory || echo "Cado Host has failed. For troubleshooting steps, pass the --verbose and --no_cleanup flags, or visit https://docs.cadosecurity.com/cado-host/deploy#considerations, or contact support@cadosecurity.com."
+sudo ./cado-host capture --skip_linux_memory || echo "Cado Host has failed. For troubleshooting steps, pass the --verbose and --no_cleanup flags, or visit https://docs.cadosecurity.com/cado-host/deploy#considerations, or contact support@cadosecurity.com.; sudo ./cado-host upload --presigned_data $pre-signed-data"
 ```
 - **Runs the Cado Host binary and removes the collected archive**:  
 The script executes the `cado-host` binary with two options: `--presigned_data` and `--skip_linux_memory`, which skips memory data collection on Linux.  
