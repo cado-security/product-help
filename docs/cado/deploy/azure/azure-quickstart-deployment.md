@@ -80,9 +80,7 @@ Once an image has been selected, select a version to deploy (the latest version 
 
 #### Disk
 
-- A data disk with Name “cado-main-vm-disk” is required.
-- 100GB size recommended, with read write host cache.
-- The LUN value should be set to 10 and Host Caching is Read/Write.
+- 1024GB size recommended, with Read / Write host caching.
 - Make sure delete with VM is unticked.
 
 The options should look as below:
