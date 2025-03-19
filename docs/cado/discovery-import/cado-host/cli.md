@@ -8,7 +8,7 @@ sidebar_position: 7
 
 ## Usage
 ```bash
-cado-host [-h] [--verbose] [--verbose_network] [--dev] {version,capture,upload} ...
+cado-host [-h] [--verbose] [--verbose_network] {version,capture,upload} ...
 ```
 
 ### Options
@@ -18,8 +18,6 @@ cado-host [-h] [--verbose] [--verbose_network] [--dev] {version,capture,upload} 
   Enable verbose output.
 - `--verbose_network`  
   Enable verbose network logging.
-- `--dev`  
-  Runs Cado Host in development mode.
 
 ## Commands
 
@@ -71,10 +69,10 @@ Capture and triage files based on chosen configuration.
   Selects a target container in a Kubernetes cluster.
 
 - `--skip_root_check`  
-  Skips the root permissions check when collecting a Kubernetes container. **This is insecure.**
+  Skips the root permissions check when collecting a Kubernetes container.
 
   :::warning
-  This should only be used when you are sure that the `sysadmin` profile is available. See the [Kubernetes docs](/cado/discovery-import/kubernetes#root-access) for more information.
+  **Note:** This should only be used when you are sure that the `sysadmin` profile is available. See the [Kubernetes docs](/cado/discovery-import/kubernetes#root-access) for more information.
   :::
 
 
@@ -112,5 +110,5 @@ Upload an existing Cado Host triage. This will clean up the uploaded resource lo
   Explicitly allow Cado Host to skip SSL verification when uploading to cloud storage. **This is insecure.**
 
   :::warning
-  This should only be used as a last resort, useful when proxies in enterprise deployments require the use of a custom self-signed certificate.
+  **Note:** This should only be used as a last resort, useful when proxies in enterprise deployments require the use of a custom self-signed certificate.
   :::
