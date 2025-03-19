@@ -65,7 +65,7 @@ For custom networking configurations:
 - For **Public deployments**, supply `vpc_id` and `public_subnet_id`.
 - For **Private deployments**, supply `vpc_id`, `public_subnet_id`, `public_subnet_b_id`, and `private_subnet_id`.
 
-With private deployments, please note that the 'public' subnet variables are referring overall to the subnet that will be the gateway of sorts for the private subnet id's - and not a literal public subnet. 
+With private deployments, please note that the 'public' subnet variables are referring overall to the subnet that will be the gateway of sorts for the private subnet id's - and not a literal public-facing subnet. 
 
 ## Final Steps
 
