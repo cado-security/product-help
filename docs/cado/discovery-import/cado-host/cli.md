@@ -13,7 +13,7 @@ cado-host [-h] [--verbose] [--verbose_network] {version,capture,upload} ...
 
 ### Options
 - `-h, --help`  
-  Show this help message and exit.
+  Show the help message and exits.
 - `--verbose`  
   Enable verbose output.
 - `--verbose_network`  
