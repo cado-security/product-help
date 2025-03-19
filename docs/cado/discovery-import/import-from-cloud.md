@@ -17,6 +17,8 @@ To import data from cloud providers, follow these steps:
    ![Account Select](/img/account-select.png)
 
 3. **Choose Cloud Service**  
-   After selecting the appropriate role, choose the cloud service (AWS, Azure, or GCP) that contains the data you want to import.
+   After selecting the appropriate role, choose the cloud service (AWS, Azure, or GCP) that contains the data you want to import. You are able to select multiple cloud resourses at once.
+
+   ![Multi Select](/img/multi-select.png)
 
 Follow the on-screen prompts to complete the process.
