@@ -82,7 +82,7 @@ chmod +x ./cado-host
 
 ## Using Local Storage
 
-If no cloud storage option is set, files will be saved to the same folder where Cado Host is run. Currently, changing the storage location is not supported.
+If `--presigned_data` is not set, files will be saved to the same folder where Cado Host is run.
 
 ## Deploying Cado Host to Multiple Devices
 
