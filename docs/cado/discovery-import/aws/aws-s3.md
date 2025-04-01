@@ -13,12 +13,29 @@ The Cado platform supports acquiring data from AWS S3 buckets. The two primary u
 
 ### Steps to Import from S3
 
-1. **Select or Search for the S3 Bucket**  
-   Choose the bucket you need, navigate through the objects, and select the files you want to import.
-   
-2. Click the **'Import objects'** button.
+1. On your investigation select **import** > **Cloud** > **AWS** > 
 
-3. **Confirm the Details** and click **Start Import** to begin the acquisition process.
+2. Select your account then select **S3**
+
+3. Select to **Import** or **Search**
+   Choose the bucket you need, navigate through the objects, and select the files you want to import.
+
+   
+    - Import will allow you to import the full S3 bucket that you select.
+    - Search will allow you to use parameters to grep into specific folders inside your S3 bucket
+   
+
+![Import or Search](/img/importorsearch.png)
+
+4. Select the bucket you would like to import or search.
+
+   - If you selected search you will have to fill our search fields as seen in the screenshot below.
+
+![Grep Paramaters](/img/grepfields.png)
+   
+4. Click the **'Import objects'** button.
+
+5. **Confirm the Details** and click **Start Import** to begin the acquisition process.
 
 ![Import S3 Bucket](/img/aws-s3.png)
 
