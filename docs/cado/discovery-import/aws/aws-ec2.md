@@ -17,7 +17,7 @@ Click **Continue** to proceed.
 
 ## Capture Options
 
-![Skip Processing](/img/ec2-import-skip-processing.png)
+![Skip Processing](/img/scanonly.png)
 
 ### Acquisition vs Run Command
 You can acquire data (below), or use the [Run Command](/cado/discovery-import/aws/run-command) feature to execute scripts on the target system.
@@ -28,6 +28,9 @@ This will be performed using either the [EBS Direct Acquisition](/cado/discovery
 
 ### Triage Capture
 For a faster triage collection on an EC2 instance, use **Triage Acquisition** via Cado Host. This requires that AWS Systems Manager (SSM) be enabled on the target instance and also supports memory collection on Linux systems.
+
+### Scan Only
+For a view of any threats and vulnerabilities that exists on the resource. it skip some processing tasks.
 
 For more details about what Cado Host collects, refer to the [Collected Artifacts Documentation](/cado/discovery-import/cado-host/intro).
 
