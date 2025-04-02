@@ -26,8 +26,11 @@ To access the Cado API, you’ll need to authenticate with a valid API Key. Foll
 2. Under the **API Keys** section, click the **Create API key** button.
 3. Enter an optional key name
 4. Select a role from the dropdown and click **Create**
-4. Copy the **Public Key**. This key serves as the identifier for the API Key, which can be used later to revoke access if needed.
-5. Copy the **Secret Key** and store it in a secure location (e.g., a password manager). You will not be able to view the Secret Key again after closing the dialog. This key is required when integrating with third-party providers.
+
+![API Key Role](/img/apikeyroles.png)
+   
+5. Copy the **Public Key**. This key serves as the identifier for the API Key, which can be used later to revoke access if needed.
+6. Copy the **Secret Key** and store it in a secure location (e.g., a password manager). You will not be able to view the Secret Key again after closing the dialog. This key is required when integrating with third-party providers.
 
 ![Get API Key](/img/api-key.png)
 
