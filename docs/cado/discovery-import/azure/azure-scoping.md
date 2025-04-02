@@ -68,7 +68,36 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 | `Microsoft.Compute/virtualMachines/runCommand/action` | Execute a predefined script on a virtual machine.|
 | `Microsoft.Insights/eventtypes/values/read` |Retrieve activity log events. |
 ### Example
-
+```json
+{
+    "properties": {
+        "roleName": "Cado Response Compute and Activity Log Role",
+        "description": "Required by Cado Response for virtual machine based acquisitions",
+        "assignableScopes": [
+            "<<YOUR SCOPE HERE>>"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Compute/snapshots/read",
+                    "Microsoft.Compute/snapshots/write",
+                    "Microsoft.Compute/snapshots/delete",
+                    "Microsoft.Compute/snapshots/beginGetAccess/action",
+                    "Microsoft.Compute/snapshots/endGetAccess/action",
+                    "Microsoft.Compute/disks/beginGetAccess/action",
+                    "Microsoft.Compute/disks/read",
+                    "Microsoft.Compute/virtualMachines/read",
+                    "Microsoft.Compute/virtualMachines/runCommand/action",
+                    "Microsoft.Insights/eventtypes/values/read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
+```
 ## Azure Kubernetes Service
 
 ### Permissions
@@ -84,3 +113,31 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 | `Microsoft.ContainerService/managedClusters/listClusterAdminCredential/action` | List the cluster admin credential of a managed cluster.|
 
 ### Example
+```json
+{
+    "properties": {
+        "roleName": "Cado Response Kubernetes role",
+        "description": "Required by Cado Response for AKS based acquisitions",
+        "assignableScopes": [
+            "<<YOUR SCOPE HERE>>"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Resources/subscriptions/operationresults/read",
+                    "Microsoft.Resources/subscriptions/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.ContainerService/managedClusters/read",
+                    "Microsoft.ContainerService/managedClusters/runCommand/action",
+                    "Microsoft.ContainerService/managedClusters/commandResults/read",
+                    "Microsoft.ContainerService/managedClusters/privateEndpointConnections/read",
+                    "Microsoft.ContainerService/managedClusters/listClusterAdminCredential/action"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
+```
