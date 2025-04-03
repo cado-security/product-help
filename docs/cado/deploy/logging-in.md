@@ -28,3 +28,5 @@ For GCP, the password is the instance-id found in the Compute Engine console for
 
 For High Availability in AWS, the password is the name of the load balancer, for example if the full ARN of the load balancer is `arn:aws:elasticloadbalancing:us-east-1:111:loadbalancer/app/my-load-balancer/abc` then the password will be `my-load-balancer`
 
+### Password Requirements
+Current password requirements (for local Cado users) are as follows: at least 1 uppercase, 1 lowercase, 1 number and is at least 8 characters long. Also, passwords that match a common password list will not be allowed. 
