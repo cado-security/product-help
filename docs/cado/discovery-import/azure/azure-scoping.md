@@ -67,6 +67,7 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 | `Microsoft.Compute/virtualMachines/read` | Retrieve the properties of a virtual machine |
 | `Microsoft.Compute/virtualMachines/runCommand/action` | Execute a predefined script on a virtual machine.|
 | `Microsoft.Insights/eventtypes/values/read` |Retrieve activity log events. |
+
 ### Example
 ```json
 {
