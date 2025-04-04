@@ -8,7 +8,7 @@ sidebar_position: 3
 By default, the Cado platform uses Azure contributor roles for cross-account permissions, it is possible to use custom roles to granularly scope the permissions required.
 
 ## Valid Scopes
-There are three ways to assign scrope to the following permissions, these and their effects are explained below:
+There are three ways to assign scope to the following permissions, these and their effects are explained below:
 
 | Assignable Scope    | Effect |
 | ------------ | ------- |
@@ -19,7 +19,6 @@ There are three ways to assign scrope to the following permissions, these and th
 ## Storage Account
 This is a scoped down replacement for the Storage Account Contributor role, the following are a list of permissions required for Azure blob storage acquisitions:
 
-### Permissions
 | Permission | Purpose |
 | -----------|----------|
 | `Microsoft.Resources/subscriptions/resourceGroups/read` | Retrieves or lists resource groups.|
@@ -30,8 +29,8 @@ This is a scoped down replacement for the Storage Account Contributor role, the 
 ```json
 {
     "properties": {
-        "roleName": "Cado Response Storage Role",
-        "description": "Required by Cado Response for blob based acquisitions",
+        "roleName": "Cado Storage Role",
+        "description": "Required by Cado for blob based acquisitions",
         "assignableScopes": [
             "<<YOUR SCOPE HERE>>"
         ],
@@ -54,8 +53,7 @@ This is a scoped down replacement for the Storage Account Contributor role, the 
 ## Compute and Activity Logs
 This is a scoped down replacement for the Virtual Machine Contributor, Disk Snapshot Contributor, and Monitoring Contributor roles.  The following are the permissions needed for virtual machine and activity log acquisitions:
 
-### Permissions
-| Assignable Scope    | Effect |
+| Permission    | Effect |
 | ------------ | ------- |
 | `Microsoft.Compute/snapshots/write` |Create a new snapshot, or update an existing one. |
 | `Microsoft.Compute/snapshots/read` |Retrieve the properties of a snapshot. |
@@ -72,8 +70,8 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 ```json
 {
     "properties": {
-        "roleName": "Cado Response Compute and Activity Log Role",
-        "description": "Required by Cado Response for virtual machine based acquisitions",
+        "roleName": "Cado Compute and Activity Log Role",
+        "description": "Required by Cado for virtual machine based acquisitions",
         "assignableScopes": [
             "<<YOUR SCOPE HERE>>"
         ],
@@ -101,8 +99,7 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 ```
 ## Azure Kubernetes Service
 
-### Permissions
-| Assignable Scope    | Effect |
+| Permission    | Effect |
 | ------------ | ------- |
 | `Microsoft.Resources/subscriptions/operationresults/read` | Retrieve subscription operation results.|
 | `Microsoft.Resources/subscriptions/read` | Retrieve a list of subscriptions.|
@@ -117,8 +114,8 @@ This is a scoped down replacement for the Virtual Machine Contributor, Disk Snap
 ```json
 {
     "properties": {
-        "roleName": "Cado Response Kubernetes role",
-        "description": "Required by Cado Response for AKS based acquisitions",
+        "roleName": "Cado Kubernetes role",
+        "description": "Required by Cado for AKS based acquisitions",
         "assignableScopes": [
             "<<YOUR SCOPE HERE>>"
         ],
