@@ -1,5 +1,5 @@
 ---
-title: Scoping Permissions for Azure Acquisitions
+title: Cross account permissions
 hide_title: true
 sidebar_position: 3
 ---
