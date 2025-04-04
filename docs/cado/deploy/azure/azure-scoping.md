@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# Minimal Permissions for Azure based imports
+# Minimal Permissions for cross account imports
 By default, the Cado platform uses Azure contributor roles for cross-account permissions, it is possible to use custom roles to granularly scope the permissions required.
 
 ## Valid Scopes
