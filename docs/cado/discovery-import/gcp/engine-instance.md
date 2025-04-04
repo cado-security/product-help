@@ -20,6 +20,19 @@ For this feature to work, the GCP project must have the **default VPC** enabled.
 
 ![GCP Compute Import](/img/gcp-compute.png)
 
+4. Select your acquisition type
+
+![Action](/img/scanonly.png)
+
+## Capture Options
+
+### Acquisition
+Acquisition will aquire the full instance
+
+### Scan Only
+Scan only is for a view of any threats and vulnerabilities that exists on the resource. This skips some processing tasks speeding up the acquisition.
+
+
 # Data Flow Diagram
 
 ![Compute engine](/img/compute_engine_gcp.png)
