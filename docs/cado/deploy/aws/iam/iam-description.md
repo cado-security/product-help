@@ -57,7 +57,10 @@ The Cado platform requires specific IAM permissions to operate effectively, depe
 | RequiredForFirstTimeKMSDefaultencryptedImportCanBeDeletedAfter | Used once to create a Cado-specific KMS key for default encrypted EBS volumes, can be deleted afterward.             |
 | **AWS Organizations Account Discovery**                   |                                                                                                                      |
 | RequiredForAWSOrganizationsDiscoverAccounts                | Required to discover accounts in AWS Organizations, optional if AWS Organizations is not being used.                 |
-
+| **EBS Direct Acquisition**                                |                                                                                                                      |
+| ListSnapshotBlocks                                         | Allows listing the blocks that make up a specific Amazon EBS snapshot.                                               |
+| ListChangedBlocks                                          | Allows listing the blocks that have changed between two Amazon EBS snapshots.                                        |
+| GetSnapshotBlock                                           | Allows retrieving the data of a specific block from an Amazon EBS snapshot.                                          |
 
 
 ## Customizing the Cado Cross-Account Policy
