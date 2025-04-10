@@ -45,7 +45,12 @@ Once you have created the app registration, you will be able to register the cre
 1. Navigate to the to the settings page and choose the `Accounts` option.
 2. Click `Create an Account` button. ![Add Account](/img/settings-account.png)
 3. Select **Azure**  ![Add Azure Account](/img/add-account.png)
-4. Using the information generated during the the app registration setup, fill-in the required fields with the appropriate information and click `Submit`.  **Use the subscription ID you assigned app-registration permissions for**. ![Azure Credentials Insertion Page](/img/azure-insert-custom-creds.png)
+4. Using the information generated during the the app registration setup, fill-in the required fields with the appropriate information and choose between using Secret or Cerificate authentication methods then click `Submit`.  **Use the subscription ID you assigned app-registration permissions for**.
+  
+   ![Azure Credentials Insertion Page](/img/azuresecret.png)
+
+   ![Azure Cert](/img/azurecert.png)
+   
 :::tip
 `Cloud ID` is only used to assign a name to the added credentials, it can be any memorable name of your choosing.
 :::
