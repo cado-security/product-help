@@ -17,13 +17,6 @@ The Cado platform allows you to acquire Azure Compute instances for investigatio
 3. **Select the Action Type**  
   Choose between Full Acqusition, Triaged Acquisition and Scan Only.
 
-4. **Start the Import**  
-   Click on **Start Import** to begin the acquisition process.
-
-![Azure Compute Import](/img/azure-compute.png)
-
-Once the import is initiated, the platform will automatically collect and process the necessary data for further analysis.
-
 ## Capture Options
 
 #### Full Aquisition
@@ -36,3 +29,12 @@ Once the import is initiated, the platform will automatically collect and proces
 - Scan only is for a view of any threats and vulnerabilities that exists on the resource. This skips some processing tasks speeding up the acquisition.
 
 ![Action Type](/img/captureoptions.png)
+
+4. **Start the Import**  
+   Click on **Start Import** to begin the acquisition process.
+
+![Azure Compute Import](/img/azure-compute.png)
+
+Once the import is initiated, the platform will automatically collect and process the necessary data for further analysis.
+
+
