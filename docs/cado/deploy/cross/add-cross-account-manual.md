@@ -28,7 +28,7 @@ Once the cross-account role is created in the target AWS account (`222222222222`
 2. Select **AWS** from the set of providers.
 3. The **AWS Role** option should already be selected.
 
-![Add AWS Account](/img/Accounts-AWSRole.png)
+![Add AWS Account](/img/aws-add-account.png)
 
 4. Enter the IAM Role ARN created in Step 1, and provide an **Account Name**. The Account Name should include the AWS account number for clarity.
 5. The Cado platform will validate the role to ensure it is assumable. Once validated, the account name will appear in the list of available AWS accounts.
