@@ -56,7 +56,7 @@ To import a compressed dd image, use Gzip and add the `.gz` extension (e.g., `di
 - ext2, ext3, ext4
 - FAT
 - NTFS (version 3)
-- XFS (version 4, 5)
+- XFS (up to version 4, version 5 is currently not supported)
 - Apple File System (APFS)
 
 Cado can also handle a variety of other disk images and file formats not listed here, though they may not be officially supported. If you have a specific file type you'd like to see supported, feel free to contact us at support@cadosecurity.com.
