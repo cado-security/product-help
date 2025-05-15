@@ -6,7 +6,10 @@ sidebar_position: 4
 
 # What IAM permissions does Cado use?
 
-The Cado platform requires specific IAM permissions to operate effectively, depending on the tasks you need it to perform. Below is a clear breakdown of the different permission groups and their purposes:
+The Cado platform requires specific IAM permissions to operate effectively.
+Permissions are required to operate the main Cado virtual machine in the account where Cado is installed, and different permissions are required in target accounts to copy data back for processing.
+
+Below is a clear breakdown of the different permission groups and their purposes.
 
 | **Permission Group**                                      | **Purpose**                                                                                                          |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
