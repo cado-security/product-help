@@ -7,7 +7,7 @@ sidebar_position: 5
 # Deployment Overview
 
 ## What does a Cado deployment consist of?
-At it’s core, a Cado deployment consists of:
+At its core, a Cado deployment consists of:
 - Infrastructure - A core virtual machine that permanently runs
 - Cado account/subscription/project role - Permissions to manage the main virtual machine, and start worker virtual machines if used.
 - Cross-account role - Permissions to copy data into the main account.
