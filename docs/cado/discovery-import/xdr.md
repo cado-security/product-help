@@ -26,6 +26,27 @@ Once the integration is set up, follow these steps to import data:
 
    ![Import XDR Endpoints](/img/xdr-import-3.png)
 
-4. Confirm your selections and click **Start Import**.
+4. Configure the type of acquisition you would like to whether that's a balanced collection or a custom collection.
+
+**Balanced Collection** - Collects most common artifacts. 
+
+**Custom Collections** -  Able to customise your collection based on groups or filespaths or a mixture of both.
+
+**Groups** - Filters collection to collect specific groups of files. Use the Groups Browser to see details about each group
+
+**Files**  - Choose to filter your collection based on specific filepaths
+
+You can also set some parameters for your acquisition:
+
+**File Size Limit**: Set the maximum file size to 10MB to prevent collection of larger files.
+
+**Skip SSL Verification**: Disable SSL verification in collection parameters when necessary, understanding the security implications.
+
+**Collect Files Only**: Select the "Only Collect Files" option to restrict collection to specified files and disable group filtering.
+
+![XDR Settings](/img/xdrsettings.png)
+
+5. Confirm your selections and click **Start Import**.
 
 Once initiated, Cado will begin importing data from the selected endpoint via the XDR platform.
+
