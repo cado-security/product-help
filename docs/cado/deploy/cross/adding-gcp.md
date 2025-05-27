@@ -91,7 +91,7 @@ Please see [here](/cado/deploy/gcp/iam-description) for permissions for Cado to 
 | compute.instances.list| List all VM instances. |
 | compute.images.delete| Delete VM image |
 | compute.images.get| View details of a specific image. |
-| compute.instances.getSerialPortOutput` – Read the serial port output from a VM instance. |
+| compute.instances.getSerialPortOutput | Read the serial port output from a VM instance. |
 | compute.projects.get| View project-level metadata and settings. |
 | **Required for Store and other acquisitions**                  | |
 | storage.buckets.create | Create new GCS buckets. |
