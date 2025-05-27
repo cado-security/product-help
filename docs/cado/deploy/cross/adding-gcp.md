@@ -72,52 +72,52 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
 
 ---
 
-### Permission list
-```
-### Required for Compute and GCS acquisition
-cloudbuild.builds.create
-cloudbuild.builds.get
-compute.disks.create
-compute.disks.delete
-compute.disks.get
-compute.disks.list
-compute.disks.setLabels
-compute.disks.use
-compute.disks.useReadOnly
-compute.globalOperations.get
-compute.images.create
-compute.images.get
-compute.images.useReadOnly
-compute.instances.create
-compute.instances.get
-compute.instances.list
-compute.instances.setLabels
-compute.instances.setMetadata
-compute.instances.setServiceAccount
-compute.machineTypes.list
-compute.networks.get
-compute.networks.list
-compute.projects.get
-compute.subnetworks.use
-compute.subnetworks.useExternalIp
-compute.zoneOperations.get
-compute.zones.list
-storage.buckets.create
-storage.buckets.get
-storage.buckets.list
-storage.objects.create
-storage.objects.get
-storage.objects.list
+### Permission list for imoporting from GCP into a Cado deployment in AWS or Azure
 
-### Required for GKE acquisition
-container.clusters.get
-container.clusters.list
-container.pods.exec
-container.pods.get
-container.pods.list
-iam.serviceAccounts.implicitDelegation
+| **Permission**                             | **Purpose**                                                                                      |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Required for Compute and GCS acquisition**                  |                                                                                                  |
+| cloudbuild.builds.create | Start a new build using Cloud Build.    |
+| cloudbuild.builds.get | View details of a specific build.    |
+| compute.disks.create | Create new persistent disks.    |
+| compute.disks.delete | Delete existing disks.    |
+| compute.disks.get | View details of a specific disk.    |
+| compute.disks.list | List all disks in a project or zone.    |
+| compute.disks.setLabels | Add or update labels on disks.    |
+| compute.disks.use | Attach and use disks with read/write access.    |
+| compute.disks.useReadOnly | Attach and use disks with read-only access.    |
+| compute.globalOperations.get | View global operation status.    |
+| compute.images.create | Create custom images from disks or snapshots. |
+| compute.images.get | View details of a specific image.  |
+| compute.images.useReadOnly | Use images to create instances (read-only). |
+| compute.instances.create | Launch new VM instances. |
+| compute.instances.get | View details of a specific instance. |
+| compute.instances.list | List all VM instances. |
+| compute.instances.setLabels | Add or update labels on instances. |
+| compute.instances.setMetadata | Set custom metadata on instances. |
+| compute.instances.setServiceAccount | Assign a service account to an instance. |
+| compute.machineTypes.list | List available machine types (e.g., n1-standard-1). |
+| compute.networks.get | View details of a specific VPC network. |
+| compute.networks.list | List all VPC networks. |
+| compute.projects.get | View project-level metadata and settings. |
+| compute.subnetworks.use | Use a subnetwork when creating resources. |
+| compute.subnetworks.useExternalIp | Assign external IPs from a subnetwork. |
+| compute.zoneOperations.get | View zone-specific operation status. |
+| compute.zones.list | List available zones in a region. |
+| storage.buckets.create | Create new GCS buckets. |
+| storage.buckets.get | View details of a specific bucket. |
+| storage.buckets.list | List all buckets in a project. |
+| storage.objects.create | Upload new objects (files) to a bucket. |
+| storage.objects.get | Download or view objects. |
+| storage.objects.list | List objects in a bucket. |
+| **Required for GKE acquisition** |  |
+| container.clusters.get | View details of a specific GKE cluster. |
+| container.clusters.list | List all GKE clusters in a project. |
+| container.pods.exec | Execute commands inside a running pod (e.g., kubectl exec). |
+| container.pods.get | View details of a specific pod. |
+| container.pods.list | List all pods in a namespace or cluster. |
+| iam.serviceAccounts.implicitDelegation |  |
+| **Required for access to GCP projects, necessary for all acquisitions** |  |
+| iam.serviceAccounts.getAccessToken | Generate access tokens for service accounts (used for authentication). |
+| resourcemanager.projects.get | View metadata and configuration of a GCP project. |
 
-### Required for access to GCP projects, necessary for all acquisitions
-iam.serviceAccounts.getAccessToken
-resourcemanager.projects.get
-```
