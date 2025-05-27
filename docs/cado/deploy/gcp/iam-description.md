@@ -15,7 +15,7 @@ Please see [here](/cado/deploy/cross/adding-gcp) for permissions for import from
 
 ## Permissions Overview
 
-"Minimal Permissions to Run" and "Core Platform Operations Permissions" are required in the project where Cado is deployed.
+"Core Platform Operations Permissions" are required in the project where Cado is deployed.
 "Acquisition Permissions" are required in any project where you wish to import data from.
 
 ### Core Platform Operations Permissions, in Cado Project
