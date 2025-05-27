@@ -18,10 +18,10 @@ If these permissions are too broad for your environment, or if you have concerns
 
 These are the essential permissions required for the Cado platform to start and operate when deployed in Google Cloud:
 
-- `iam.serviceAccounts.actAs`
-- `iam.serviceAccounts.get`
+- `iam.serviceAccounts.actAs` - Allows a user or service to impersonate a service account. This is required to attach a service account to a resource like a VM
+- `iam.serviceAccounts.get` - Grants permission to view metadata about a service account, such as its display name, description, and unique ID.
 - `iam.serviceAccounts.getAccessToken` - Generate access tokens for service accounts (used for authentication).
-- `iam.serviceAccounts.getIamPolicy`
+- `iam.serviceAccounts.getIamPolicy` - Lets the caller view the IAM policy (i.e., who has what permissions) on a service account 1.
 
 ### Cado Host Permissions
 
@@ -60,21 +60,21 @@ Permissions required for worker instances to perform tasks:
 
 Permissions for modifying compute resource settings:
 
-- `compute.machineTypes.get` – View details of a specific machine type.
-- `compute.machineTypes.list` – List all available machine types.
-- `compute.regions.get` – View metadata about a specific region.
+- `compute.machineTypes.get`
+- `compute.machineTypes.list`
+- `compute.regions.get`
 
 ### Upgrade Permissions
 
 Required for upgrading Cado Security components:
 
 - `compute.disks.create` - Create new persistent disks.
-- `compute.instances.attachDisk` – Attach an existing disk to a VM.
+- `compute.instances.attachDisk`
 - `compute.images.useReadOnly` - Use images to create instances (read-only).
-- `compute.instances.create` - Launch new VM instances.
+- `compute.instances.create`
 - `compute.addresses.use` - Use static or ephemeral IP addresses in a project.
-- `compute.instances.detachDisk` – Detach a disk from a VM.
-- `compute.instances.deleteAccessConfig` – Remove an access configuration (e.g., external IP) from a network interface.
+- `compute.instances.detachDisk`
+- `compute.instances.deleteAccessConfig`
 - `compute.zoneOperations.get` - View zone-specific operation status.
 - `compute.subnetworks.useExternalIp` - Assign external IPs from a subnetwork.
 
@@ -82,9 +82,9 @@ Required for upgrading Cado Security components:
 
 Needed for managing secrets in Secret Manager:
 
-- `secretmanager.secrets.create` – Create a new secret in Secret Manager.
-- `secretmanager.versions.access` – Access a specific version of a secret.
-- `secretmanager.versions.add` – Add a new version to an existing secret.
+- `secretmanager.secrets.create`
+- `secretmanager.versions.access`
+- `secretmanager.versions.add`
 
 ### Acquisition Permissions
 
@@ -108,7 +108,7 @@ Required for interacting with compute instances:
 - `compute.instances.list` - List all VM instances.
 - `compute.images.delete` - Delete VM image
 - `compute.images.get` - View details of a specific image.
-- `compute.instances.getSerialPortOutput` – Read the serial port output from a VM instance.
+- `compute.instances.getSerialPortOutput`
 - `compute.projects.get` - View project-level metadata and settings.
 
 #### GKE Acquisition
@@ -121,3 +121,25 @@ Permissions related to Google Kubernetes Engine (GKE) clusters:
 - `container.pods.get` - View details of a specific pod.
 - `container.pods.list` - List all pods in a namespace or cluster.
 
+
+
+___
+
+
+
+Adjusting Settings
+compute.machineTypes.get – View details of a specific machine type.
+compute.machineTypes.list – List all available machine types.
+compute.regions.get – View metadata about a specific region.
+Upgrade Permissions
+compute.instances.attachDisk – Attach an existing disk to a VM.
+compute.instances.detachDisk – Detach a disk from a VM.
+compute.instances.deleteAccessConfig – Remove an access configuration (e.g., external IP) from a network interface.
+compute.zoneOperations.get – View the status of operations in a specific zone.
+compute.subnetworks.useExternalIp – Use external IPs from a subnetwork.
+Secret Management Permissions
+secretmanager.secrets.create – Create a new secret in Secret Manager.
+secretmanager.versions.access – Access a specific version of a secret.
+secretmanager.versions.add – Add a new version to an existing secret.
+Instance Acquisition
+compute.instances.getSerialPortOutput – Read the serial port output from a VM instance.
