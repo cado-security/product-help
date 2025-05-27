@@ -18,10 +18,10 @@ If these permissions are too broad for your environment, or if you have concerns
 
 These are the essential permissions required for the Cado platform to start and operate when deployed in Google Cloud:
 
-- `iam.serviceAccounts.actAs`
-- `iam.serviceAccounts.get`
+- `iam.serviceAccounts.actAs` - Allows a user or service to impersonate a service account. This is required to attach a service account to a resource like a VM.
+- `iam.serviceAccounts.get` - Grants permission to view metadata about a service account, such as its display name, description, and unique ID.
 - `iam.serviceAccounts.getAccessToken` - Generate access tokens for service accounts (used for authentication).
-- `iam.serviceAccounts.getIamPolicy`
+- `iam.serviceAccounts.getIamPolicy` - Lets the caller view the IAM policy (i.e., who has what permissions) on a service account.
 
 ### Cado Host Permissions
 
