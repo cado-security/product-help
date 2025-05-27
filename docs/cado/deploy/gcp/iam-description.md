@@ -18,7 +18,9 @@ Please see [here](/cado/deploy/cross/adding-gcp) for permissions for import from
 "Minimal Permissions to Run" and "Core Platform Operations Permissions" are required in the project where Cado is deployed.
 "Acquisition Permissions" are required in any project where you wish to import data from.
 
-### Minimal Permissions to Run
+### Core Platform Operations Permissions, in Cado Project
+
+#### Minimal Permissions to Run
 
 These are the essential permissions required for the Cado platform to start and operate when deployed in Google Cloud:
 
@@ -26,9 +28,6 @@ These are the essential permissions required for the Cado platform to start and 
 - `iam.serviceAccounts.get` - Grants permission to view metadata about a service account, such as its display name, description, and unique ID.
 - `iam.serviceAccounts.getAccessToken` - Generate access tokens for service accounts (used for authentication).
 - `iam.serviceAccounts.getIamPolicy` - Lets the caller view the IAM policy (i.e., who has what permissions) on a service account.
-
-
-### Core Platform Operations Permissions
 
 #### Worker Permissions
 
@@ -76,7 +75,7 @@ Needed for managing secrets in Secret Manager:
 - `secretmanager.versions.access` – Access a specific version of a secret.
 - `secretmanager.versions.add` – Add a new version to an existing secret.
 
-### Acquisition Permissions
+### Acquisition Permissions, in Projects you wish to acquire from
 
 Permissions for acquiring resources and data within GCP:
 
@@ -121,6 +120,8 @@ Permissions related to Google Kubernetes Engine (GKE) clusters:
 - `container.pods.exec` - Execute commands inside a running pod (e.g., kubectl exec).
 - `container.pods.get` - View details of a specific pod.
 - `container.pods.list` - List all pods in a namespace or cluster.
+- `iam.serviceAccounts.implicitDelegation` - Allows service accounts to delegate to Kubernetes API |
+
 
 #### Cado Host Permissions
 
