@@ -120,7 +120,7 @@ Permissions related to Google Kubernetes Engine (GKE) clusters:
 - `container.pods.exec` - Execute commands inside a running pod (e.g., kubectl exec).
 - `container.pods.get` - View details of a specific pod.
 - `container.pods.list` - List all pods in a namespace or cluster.
-- `iam.serviceAccounts.implicitDelegation` - Allows service accounts to delegate to Kubernetes API |
+- `iam.serviceAccounts.implicitDelegation` - Allows service accounts to delegate to Kubernetes API
 
 
 #### Cado Host Permissions
