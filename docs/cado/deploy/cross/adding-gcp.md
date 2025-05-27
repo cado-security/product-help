@@ -72,7 +72,9 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
 
 ---
 
-### Permission list for imoporting from GCP into a Cado deployment in AWS or Azure
+### Permission list for importing from GCP into a Cado deployment in AWS or Azure
+
+Please see [here](/cado/deploy/gcp/iam-description) for permissions for Cado to be deployed in GCP, as opposed to just importing from GCP.
 
 | **Permission**                             | **Purpose**                                                                                      |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------|
