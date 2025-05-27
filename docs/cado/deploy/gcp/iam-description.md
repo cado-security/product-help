@@ -10,9 +10,13 @@ sidebar_position: 6
 
 Cado Security requires specific permissions in Google Cloud Platform (GCP) to function correctly. This document outlines the permissions needed, categorized by their functionality. For the most up-to-date permissions, please refer to the [Cado Security GCP Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/gcp/modules/iam/main.tf).
 
-If these permissions are too broad for your environment, or if you have concerns regarding the scope of any permissions, please contact our support team at [support@cadosecurity.com](mailto:support@cadosecurity.com) for assistance in reducing the permission set while maintaining necessary functionality.
+Please contact our support team at [support@cadosecurity.com](mailto:support@cadosecurity.com) if you have any queries on permissions.
+Please see [here](/cado/deploy/cross/adding-gcp) for permissions for import from GCP into a Cado deployment in Azure or AWS, as opposed to deploying and importing in GCP.
 
 ## Permissions Overview
+
+"Minimal Permissions to Run" and "Core Platform Operations Permissions" are required in the project where Cado is deployed.
+"Acquisition Permissions" are required in any project where you wish to import data from.
 
 ### Minimal Permissions to Run
 
@@ -23,24 +27,10 @@ These are the essential permissions required for the Cado platform to start and 
 - `iam.serviceAccounts.getAccessToken` - Generate access tokens for service accounts (used for authentication).
 - `iam.serviceAccounts.getIamPolicy` - Lets the caller view the IAM policy (i.e., who has what permissions) on a service account.
 
-### Cado Host Permissions
 
-Permissions related to the Cado Host operations:
+### Core Platform Operations Permissions
 
-- `iam.serviceAccounts.signBlob` - Sign a blob of data digitally.
-
-### Bucket Acquisition Permissions
-
-Needed for acquiring data from Cloud Storage buckets:
-
-- `storage.buckets.get` - View details of a specific bucket.
-- `storage.buckets.list` - List all buckets in a project.
-- `storage.objects.create` - Upload new objects (files) to a bucket.
-- `storage.objects.delete` - Delete objects in a bucket.
-- `storage.objects.get` - Download or view objects.
-- `storage.objects.list` - List objects in a bucket.
-
-### Worker Permissions
+#### Worker Permissions
 
 Permissions required for worker instances to perform tasks:
 
@@ -64,7 +54,7 @@ Permissions for modifying compute resource settings:
 - `compute.machineTypes.list` – List all available machine types.
 - `compute.regions.get` – View metadata about a specific region.
 
-### Upgrade Permissions
+#### Upgrade Permissions
 
 Required for upgrading Cado Security components:
 
@@ -78,7 +68,7 @@ Required for upgrading Cado Security components:
 - `compute.zoneOperations.get` - View zone-specific operation status.
 - `compute.subnetworks.useExternalIp` - Assign external IPs from a subnetwork.
 
-### Secret Management Permissions
+#### Secret Management Permissions
 
 Needed for managing secrets in Secret Manager:
 
@@ -91,6 +81,17 @@ Needed for managing secrets in Secret Manager:
 Permissions for acquiring resources and data within GCP:
 
 - `resourcemanager.projects.get` - View metadata and configuration of a GCP project.
+
+#### Bucket Acquisition Permissions
+
+Needed for acquiring data from Cloud Storage buckets:
+
+- `storage.buckets.get` - View details of a specific bucket.
+- `storage.buckets.list` - List all buckets in a project.
+- `storage.objects.create` - Upload new objects (files) to a bucket.
+- `storage.objects.delete` - Delete objects in a bucket.
+- `storage.objects.get` - Download or view objects.
+- `storage.objects.list` - List objects in a bucket.
 
 #### Instance Acquisition
 
@@ -120,4 +121,10 @@ Permissions related to Google Kubernetes Engine (GKE) clusters:
 - `container.pods.exec` - Execute commands inside a running pod (e.g., kubectl exec).
 - `container.pods.get` - View details of a specific pod.
 - `container.pods.list` - List all pods in a namespace or cluster.
+
+#### Cado Host Permissions
+
+Permissions related to the Cado Host operations:
+
+- `iam.serviceAccounts.signBlob` - Sign a blob of data digitally.
 
