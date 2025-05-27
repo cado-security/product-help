@@ -78,34 +78,22 @@ Please see [here](/cado/deploy/gcp/iam-description) for permissions for Cado to 
 
 | **Permission**                             | **Purpose**                                                                                      |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **Required for Compute and GCS acquisition**                  |                                                                                                  |
-| cloudbuild.builds.create | Start a new build using Cloud Build.    |
-| cloudbuild.builds.get | View details of a specific build.    |
-| compute.disks.create | Create new persistent disks.    |
-| compute.disks.delete | Delete existing disks.    |
-| compute.disks.get | View details of a specific disk.    |
-| compute.disks.list | List all disks in a project or zone.    |
-| compute.disks.setLabels | Add or update labels on disks.    |
-| compute.disks.use | Attach and use disks with read/write access.    |
-| compute.disks.useReadOnly | Attach and use disks with read-only access.    |
-| compute.globalOperations.get | View global operation status.    |
-| compute.images.create | Create custom images from disks or snapshots. |
-| compute.images.get | View details of a specific image.  |
-| compute.images.useReadOnly | Use images to create instances (read-only). |
-| compute.instances.create | Launch new VM instances. |
-| compute.instances.get | View details of a specific instance. |
-| compute.instances.list | List all VM instances. |
-| compute.instances.setLabels | Add or update labels on instances. |
-| compute.instances.setMetadata | Set custom metadata on instances. |
-| compute.instances.setServiceAccount | Assign a service account to an instance. |
-| compute.machineTypes.list | List available machine types (e.g., n1-standard-1). |
-| compute.networks.get | View details of a specific VPC network. |
-| compute.networks.list | List all VPC networks. |
-| compute.projects.get | View project-level metadata and settings. |
-| compute.subnetworks.use | Use a subnetwork when creating resources. |
-| compute.subnetworks.useExternalIp | Assign external IPs from a subnetwork. |
-| compute.zoneOperations.get | View zone-specific operation status. |
-| compute.zones.list | List available zones in a region. |
+| **Required for Compute  acquisition**                  | |
+| cloudbuild.builds.get| View details of a specific build. |
+| cloudbuild.builds.create| Start a new build using Cloud Build. |
+| compute.disks.get| View details of a specific disk. |
+| compute.disks.use| Attach and use disks with read/write access. |
+| compute.disks.list| List all disks in a project or zone. |
+| compute.disks.useReadOnly| Attach and use disks with read-only access. |
+| compute.globalOperations.get| View global operation status. |
+| compute.images.create| Create custom images from disks or snapshots. |
+| compute.instances.get| View details of a specific instance. |
+| compute.instances.list| List all VM instances. |
+| compute.images.delete| Delete VM image |
+| compute.images.get| View details of a specific image. |
+| compute.instances.getSerialPortOutput` – Read the serial port output from a VM instance. |
+| compute.projects.get| View project-level metadata and settings. |
+| **Required for Store and other acquisitions**                  | |
 | storage.buckets.create | Create new GCS buckets. |
 | storage.buckets.get | View details of a specific bucket. |
 | storage.buckets.list | List all buckets in a project. |
@@ -118,7 +106,7 @@ Please see [here](/cado/deploy/gcp/iam-description) for permissions for Cado to 
 | container.pods.exec | Execute commands inside a running pod (e.g., kubectl exec). |
 | container.pods.get | View details of a specific pod. |
 | container.pods.list | List all pods in a namespace or cluster. |
-| iam.serviceAccounts.implicitDelegation |  |
+| iam.serviceAccounts.implicitDelegation | Allows service accounts to delegate to Kubernetes API |
 | **Required for access to GCP projects, necessary for all acquisitions** |  |
 | iam.serviceAccounts.getAccessToken | Generate access tokens for service accounts (used for authentication). |
 | resourcemanager.projects.get | View metadata and configuration of a GCP project. |
