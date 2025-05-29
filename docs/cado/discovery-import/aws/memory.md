@@ -10,7 +10,7 @@ To acquire live process data from Linux systems running in EC2, use the **Triage
 
 ![AWS Memory](/img/alternate-ec2.png)
 
-This method requires the AWS Systems Manager (SSM) agent to be installed and running on the EC2 instance. The instance must also be registered with AWS Systems Manager. If the SSM agent is not available, you can still acquire memory by connecting to the machine via SSH (for Linux) or RDP (for Windows) and running **Cado Host** from **Import > Forensic Artifacts**.
+This method requires the AWS Systems Manager (SSM) agent to be installed and running on the EC2 instance. The instance must also be registered with AWS Systems Manager. If the SSM agent is not available, you can still acquire a trigate capture by connecting to the machine via SSH (for Linux) or RDP (for Windows) and running **Cado Host** from **Import > Forensic Artifacts**.
 
 
 ### Data Flow Diagram
