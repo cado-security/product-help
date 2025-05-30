@@ -34,15 +34,15 @@ For this feature to work, the GCP project must have the **default VPC** enabled.
 ![GCP Compute Import](/img/gcp-compute.png)
 
 
-### Data Flow Diagram
+# Data Flow Diagram
 
 ![Compute engine](/img/compute_engine_gcp.png)
 
-### Maintaining Operation
+# Maintaining Operation
 
 Under the hood, this feature uses GCP's built-in functionality for [exporting custom images](https://cloud.google.com/compute/docs/images/export-image) via Cloud Build.
 
 This will create compute images in storage which are not automatically deleted, please see GCP's notes on [general limitations](https://cloud.google.com/compute/docs/images/export-image):
 
-*"A Cloud Storage bucket called {PROJECT}-daisy-bkt-{REGION} is created for ephemeral resources created during the export process in the same region or multi-region as the target bucket. To manage the lifecycle of these resources, see [Object lifecycle management](https://cloud.google.com/storage/docs/lifecycle)."*
+*"A Cloud Storage bucket called {PROJECT}-daisy-bkt-{REGION} is created for ephemeral resources created during the export process in the same region or multi-region as the target bucket. To manage the lifecycle of these resources, see [Object lifecycle management](https://cloud.google.com/storage/docs/lifecycle) ."*
 
