@@ -88,7 +88,6 @@ Needed for acquiring data from Cloud Storage buckets:
 - `storage.buckets.get` - View details of a specific bucket.
 - `storage.buckets.list` - List all buckets in a project.
 - `storage.objects.create` - Upload new objects (files) to a bucket.
-- `storage.objects.delete` - Delete objects in a bucket.
 - `storage.objects.get` - Download or view objects.
 - `storage.objects.list` - List objects in a bucket.
 
