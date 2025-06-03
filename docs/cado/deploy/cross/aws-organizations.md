@@ -10,11 +10,6 @@ This guide will walk you through how to integrate AWS roles into the Cado platfo
 
 This is the recommended way to add cross-account roles you have deployed to the Cado Platform, to enable the platform to import data from multiple AWS accounts.
 
-:::tip
-This feature is currently in beta. To enable it, go to *Settings > Experiments* and turn on "AWS Organizations Account Discovery."
-:::
-
-
 Alternatively, you can use the [Cado API](/cado/deploy/cross/cross-account-creation-api) to add cross-account roles to the platform.
 
 ## Prerequisites
