@@ -50,4 +50,7 @@ To assign non-admin users within Cado, create a group with a different name (e.g
     - Go to `Settings > SSO > Okta OAuth`.
     - Enter the details from the previous step and click **Update**. For the domain, add `https://` at the beginning and `/oauth2` at the end. The complete domain should look like this: `https://<Your Okta Domain>/oauth2`.
     - Enter the `Admin Group Name` value from step 7.
+:::caution
+Use `Admin Group Name` to configure the role (Administrator or Analyst) for first login only. Any changes to a users roles from then onwards should be managed in the platform.
+:::
 12. Log out and log in using Okta OAuth.
