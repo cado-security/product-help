@@ -52,6 +52,9 @@ For non-admin users, create a group with a different name (e.g., `CadoNonAdmin`)
       - Enter the exact URL you provided in step 6 into the `Ping SAML App SP entity ID` field.
       - Enter the exact URL from step 5 into the `Ping SAML App SP ACS URL` field.
       - Enter the admin group name from step 8 into the `Admin Group Name` field.
+:::caution
+Use `Admin Group Name` to configure the role (Administrator or Analyst) for first login only. Any changes to a users roles from then onwards should be managed in the platform.
+:::
 14. (Optional) Test the configuration by clicking **Test new settings**.
 15. Click **Update**.
 16. Log out and log back in using Ping SAML.

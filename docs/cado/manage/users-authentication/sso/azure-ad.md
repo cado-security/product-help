@@ -69,4 +69,8 @@ You can enable the beta version of Azure AD OAuth Integration in Cado by navigat
     - Go to **Settings > SSO > Microsoft OAuth**.
     - Enter the Microsoft OAuth details you noted earlier.
     - In the `Admin Group Name` field, enter the value you configured in Step 4.
+:::caution
+Use `Admin Group Name` to configure the role (Administrator or Analyst) for first login only. Any changes to a users roles from then onwards should be managed in the platform.
+:::
+    
     - Click **Update**.
