@@ -8,7 +8,7 @@ sidebar_position: 7
 
 ## Usage
 ```bash
-cado-host [-h] [--verbose] [--verbose_network] {version,capture,upload} ...
+cado-host [-h] [--verbose] [--version] {version,capture,upload} ...
 ```
 
 ### Options
@@ -16,13 +16,10 @@ cado-host [-h] [--verbose] [--verbose_network] {version,capture,upload} ...
   Show the help message and exits.
 - `--verbose`  
   Enable verbose output.
-- `--verbose_network`  
-  Enable verbose network logging.
+- `--version`
+  Returns the current version of Cado Host.
 
 ## Commands
-
-### `version`
-Returns the current version of Cado Host.
 
 ### `capture`
 Capture and triage files based on chosen configuration.
