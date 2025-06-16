@@ -36,8 +36,9 @@ The diagram below illustrates the high-level data flow for Cado Host with AWS. T
 Cado Host binaries are available for:
 - **Microsoft Windows**: Versions 7, 8.1, 10, 11, and Windows Server 2012 R2 and above. Windows releases are signed with an EV certificate.
 - **Linux**: Debian (9+), Ubuntu (16.04+), Fedora (29+), RHEL (7+), openSUSE (15+), SUSE Enterprise (SLES 12 SP2+), and Alpine (3.10+).
-- **macOS** (Intel and ARM): Version 10.13+.
+- **macOS** (ARM): Version 14.0.0+.
 
 For older operating systems, we recommend alternative tools:
 - **Linux**: Use [UAC](https://github.com/tclahr/uac).
 - **Windows**: Use [Cado Batch](https://github.com/cado-security/Cado-Batch) (for Windows 2003+).
+- **macOS** (Intel): Use [UAC](https://github.com/tclahr/uac) or an [older version](https://cado-public.s3-accelerate.amazonaws.com/cado-host/v2.0.0/osx/cado-host-x86) of Cado Host
