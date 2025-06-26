@@ -6,14 +6,7 @@ sidebar_position: 10
 
 # What is Cado AI Investigator?
 
-Cado AI Investigator currently performs two main tasks:
-
-### 1. Investigation Summarization
-It generates a concise, informative summary of your investigation, displayed on the investigation overview tab. This summary highlights key findings to help you quickly understand critical details:
-
-![File Details 1](/img/ai_image1.png)
-
-### 2. Malicious File Analysis
+### Malicious File Analysis
 It analyzes malicious files—such as scripts, executables, or documents—and explains their behavior. For example, it can identify if a script downloads and executes a payload, modifies registry keys, or establishes persistence mechanisms:
 
 ![File Details 2](/img/ai_image2.png)
