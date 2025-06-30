@@ -46,6 +46,8 @@ If you're deploying into GCP, the Terraform script provided by Cado should have 
     "compute.images.delete",
     "compute.images.get",
     "compute.instances.getSerialPortOutput",
+    "compute.subnetworks.list",
+    "compute.subnetworks.get",
 
     // Compute Management
     "compute.disks.create",
