@@ -4,7 +4,11 @@ hide_title: true
 sidebar_position: 5
 ---
 
-# How does Cado support KMS in AWS?
+# Cado Deployment KMS
+
+The Cado deployment uses default KMS keys, not Customer Managed Keys (CMK).
+
+# Importing data that uses Customer Managed Keys (CMK)
 
 The Cado platform supports importing EC2 instances with encrypted volumes, provided the appropriate permissions are granted to the `CadoResponseRole` used to import data.
 
@@ -35,12 +39,6 @@ By default, AWS provides keys in your account, which allow access based on the d
 }
 ```
 This policy allows all `Principals` (users, roles, etc.) in the account and region specified in the `Condition` to perform the listed actions.
-
-## Cado Deployment KMS
-
-The Cado deployment uses default KMS keys, not Customer Managed Keys (CMK).
-
-## Importing data that uses Customer Managed Keys (CMK)
 
 When using CMK KMS keys, the following actions must be granted to `CadoResponseRole`:
 
