@@ -41,7 +41,7 @@ For a High Availability (HA) deployment, contact Cado for the appropriate templa
 
     | Parameter Name | Value | Description |
     | -------------- | ----- | ----------- |
-    | Instance type for Cado EC2 Server | `t3a.xlarge` | Recommended minimum instance size for enterprise use. |
+    | Instance type for Cado EC2 Server | `m5.4xlarge` | Recommended minimum instance size for enterprise use. |
     | Key pair for Cado EC2 Server | *(choose your keypair)* | Used for SSH access. Not required for standard use, but useful for support if needed. |
     | Allowed source IP for SSH | *(enter IP range)* | Specify IP addresses or ranges for SSH access (CIDR format). Follow the least privilege principle. |
     | Allowed source IP for HTTPS | *(enter IP range)* | Specify IP addresses or ranges for HTTPS access (CIDR format). |
