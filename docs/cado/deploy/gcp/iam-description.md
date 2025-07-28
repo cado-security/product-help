@@ -109,6 +109,8 @@ Required for interacting with compute instances:
 - `compute.images.get` - View details of a specific image.
 - `compute.instances.getSerialPortOutput` – Read the serial port output from a VM instance.
 - `compute.projects.get` - View project-level metadata and settings.
+- `compute.subnetworks.get` - View details of a VM instances subnet to use for the acquisition.
+- `compute.subnetworks.list` - List a VM instances subnets for use in the acquisition.
 
 #### GKE Acquisition
 
