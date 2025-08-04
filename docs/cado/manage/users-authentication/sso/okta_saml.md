@@ -60,6 +60,9 @@ You can assign non-admin users by creating a group with a different name (e.g., 
         - **Okta SAML App SP entity ID**: Enter the URL from step 6.
         - **Okta SAML App SP ACS URL**: Enter the URL from step 5.
         - **Admin Group Name**: Enter the admin group name from step 8.
+:::caution
+Use `Admin Group Name` to configure the role (Administrator or Analyst) for first login only. Any changes to a users roles from then onwards should be managed in the platform.
+:::
 
 14. (Optional) Click **Test new settings** to verify the configuration.
 15. Click **Update**.
