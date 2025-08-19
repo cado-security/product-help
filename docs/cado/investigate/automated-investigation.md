@@ -17,7 +17,7 @@ The timeline highlights up to 50 events, prioritizing those that are most signif
 
 ![Automated Investigation](/img/tutorial5.png)
 
-### Automated Investigation Scoring Feature
+# Automated Investigation Scoring Feature
 
 This displays a **scored and prioritized view** of timeline events. Each event is assigned a score between `0.0` (likely uninteresting) and `1.0` (likely interesting), based on:
 
@@ -38,7 +38,7 @@ For deeper investigations, analysts can use:
   ```
 - **Faceted Search**: Build queries interactively via the UI, with visual insights into score distributions.
 
-## How to Enable
+### How to Enable
 
 1. Go to **Settings** in your Cado platform instance.
 2. Navigate to **Experiments**.
