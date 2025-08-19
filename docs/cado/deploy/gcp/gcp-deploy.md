@@ -6,7 +6,7 @@ sidebar_position: 1
 # How to deploy Cado in GCP with Terraform
 
 To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
-Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** to download the latest Terraform code.
+Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** or **[Github](https://github.com/cado-security/Deployment-Templates/tree/main/gcp)** to download the latest Terraform code.
 
 Once you have downloaded the Terraform code from the Marketplace listing above, continue on to the steps below.
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
