@@ -11,7 +11,7 @@ Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/mark
 Once you have downloaded the Terraform code from the Marketplace listing above, continue on to the steps below.
 1. **[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)**, if you have not already.
 2. **[Install GCloud CLI](https://cloud.google.com/sdk/docs/install)**, if you have not already.
-3. Create a project and generate some service account credentials for the project, exporting the credentials.json. To create and use a service account, the user account will need **Service Account User** and **Service Account Admin** roles.
+3. Create a project and [generate](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) some service account credentials for the project, exporting the credentials.json. To create and use a service account, the user account will need **Service Account User** and **Service Account Admin** roles.
 The service account itself will need to have the following roles:
     - Compute Admin
     - Service Account User
