@@ -12,7 +12,7 @@ It analyzes malicious files—such as scripts, executables, or documents—and e
 ![File Details 2](/img/ai_image2.png)
 
 ### Availability
-Cado AI Investigator is available for customers using version v2.107.0 or later. This feature is currently in beta and can be enabled under **Settings > Experiments**. It will be applied to all new data imports.
+Cado AI Investigator is available for customers using version v2.107.0 or later. This feature is currently in beta and can be enabled under **Settings > Experiments >> AI Investigator**. It will be applied to all new data imports.
 
 ## Privacy
 
