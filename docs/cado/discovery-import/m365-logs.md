@@ -14,8 +14,6 @@ The Cado platform supports acquiring and processing the following logs from Micr
 - Entra ID Audit logs
 - Entra ID Sign-in logs
 
-Note: This feature is currently in Beta, so you need to enable the 'SaaS Imports' feature in the **/settings/experiments** page.
-
 Before acquiring these logs, a Microsoft Entra application and service principal must be set up and configured in the Azure portal. You can refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal) for more details.
 
 ## Service Principal Setup
