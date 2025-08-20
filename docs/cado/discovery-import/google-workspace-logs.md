@@ -10,8 +10,6 @@ sidebar_position: 10
 
 The Cado platform supports the acquisition and processing of Google Workspace logs. Activity logs from various Google Workspace applications can be captured, as listed [here](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities).
 
-Note: This feature is currently in Beta. To use it, enable the "SaaS Imports" feature on the **/settings/experiments** page.
-
 Before importing Google Workspace logs into Cado, follow these steps:
 
 1. Ensure that **Workspace API access** for your Google Cloud project is enabled (Admin SDK API access).
