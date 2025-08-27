@@ -46,7 +46,7 @@ Follow the steps below to deploy the Cado platform using Terraform.
 | -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `region`             | *(AWS region)*               | AWS region for deploying Cado, e.g., `us-east-1`.                                                     |
 | `key_name`           | *(key pair name)*            | SSH key pair for accessing the Cado instance (optional, but useful for troubleshooting).               |
-| `ami_id`             | *(AMI ID)*                   | Contact Cado Sales to get the appropriate AMI ID for your region. Provide your AWS Account Number.     |
+| `ami_id`             | *(AMI ID)*                   | Contact Cado Sales or view the [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json ) to get the appropriate AMI ID for your region.    |
 | `public_deployment`  | `True` or `False`            | Set to `True` for public IP access. Set to `False` to deploy behind an ALB with a DNS URL.             |
 | `certificate_arn`    | *(ARN)*                      | ARN of the certificate to assign to the ALB (required if `public_deployment` is `False`).              |
 | `tags`               | *(key-value map)*            | Tags for organizing and identifying your AWS resources.                                                |
