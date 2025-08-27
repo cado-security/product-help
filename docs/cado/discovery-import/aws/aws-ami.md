@@ -35,11 +35,19 @@ The diagram below outlines the traditional method of acquiring data using EBS Sn
 
 ### Faster Acquisition via EBS Direct API
 
-Cado now supports a faster acquisition method using the **EBS Direct API**, which speeds up the data acquisition process. As a result, snapshots are no longer copied to regions. Unless you have disabled this feature under Settings > Experiments, the EBS Direct API acquisition method is now enabled by default. The process for acquiring an EBS volume now follows this pattern:
+Cado now defaults to a faster acquisition method using the **EBS Direct API**, which speeds up the data acquisition process.
+As a result, snapshots are no longer copied to regions. Unless you have disabled this feature under Settings > Experiments, the EBS Direct API acquisition method is now enabled by default. The process for acquiring an EBS volume now follows this pattern:
 
 1. Import the cross-account EBS volume.
 2. A snapshot of the EC2 volume is created in your target account.
 3. A worker is started within your "Cado Account" that Cado is deployed in.
-4. The worker downloads the snapshot from your other account and processes it. 
+4. The worker downloads the snapshot from your other account and processes it.
+
+For example:
+- If Cado is deployed in "Cado account" in us-east-1.
+- And you are importing a volume from us-west-2 in "other account":
+- The snapshot of the EC2 volume is created in us-west-2 in "other account".
+- A worker is started in "Cado account" in us-east-1.
+- The worker downloads the snapshot from us-west-2 in "other account" and processes it.
 
 ![EBS Direct API](/img/aws-snapshot-ebs.png)
