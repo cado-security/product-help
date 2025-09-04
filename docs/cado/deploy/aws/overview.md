@@ -13,7 +13,6 @@ At its core, a Cado deployment in AWS consists of:
 - **Infrastructure**: A core virtual machine that runs the Cado platform.
 - **Permissions**: IAM roles to manage the main VM and optionally start worker VMs.
 - **Cross-account access**: Roles to import data from other AWS accounts or cloud providers.
-- **Deployment templates**: Available via CloudFormation or Terraform.
 
 Architecture diagrams and permission requirements are available to guide secure and compliant deployments.
 
