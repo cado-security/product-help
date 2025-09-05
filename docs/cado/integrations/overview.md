@@ -17,8 +17,8 @@ Cado integrates with a wide range of tools and platforms to help you streamline 
 
 ## Next Steps
 
-| Integration Type | Description | Link |
-|-------------------|-------------|------|
+| Integration Type | Description | 
+|-------------------|-------------|
 | [API Overview](https://docs.cadosecurity.com/cado/integrations/api-overview) | Learn how to interact with Cado programmatically. |
 | [Forensic Tools](https://docs.cadosecurity.com/cado/integrations/forensic-tools) | Export evidence for use with forensic tools. |
 | [SIEM](https://docs.cadosecurity.com/cado/integrations/siem) | Send alerts and logs to your SIEM platform. |
