@@ -1,10 +1,10 @@
 ---
-title: Overview
+title: Intergration Overview
 hide_title: true
 sidebar_position: 0
 ---
 
-# Overview
+# Intergration Overview
 
 Cado integrates with a wide range of tools and platforms to help you streamline incident response, automate workflows, and enhance your security operations. These integrations enable you to connect Cado with your existing security ecosystem, including SIEM, SOAR, XDR, CNAPP, forensic tools, and more.
 
