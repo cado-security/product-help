@@ -15,7 +15,7 @@ In a cross-cloud setup, Cado can seamlessly acquire data from cloud environments
 
 Cado supports multiple methods for configuring cross-account access in AWS:
 
-- **AWS Organizations Integration (Reccomended)**
+- **AWS Organizations Integration (Recommended)**
   - [Using AWS Organizations](https://docs.cadosecurity.com/cado/deploy/cross/aws-organizations)
 
 - **Manual Setup**
