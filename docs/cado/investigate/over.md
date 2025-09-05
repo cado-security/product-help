@@ -1,10 +1,10 @@
 ---
-title: Overview
+title: Investigation Overview
 hide_title: true
 sidebar_position: 0
 ---
 
-# Overview
+# Investigation Overview
 
 The **Investigate** section of the Cado platform is where you analyze imported evidence, explore events, and build understanding of what happened during an incident. An *Investigation* is the container that groups related evidence items (for example, disk images and logs) and provides tabs for analysis. 
 
