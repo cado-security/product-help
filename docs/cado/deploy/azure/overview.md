@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 0
 ---
 
-# Overview
+# Azure Deployment Overview
 
 Cado provides flexible deployment options for **Microsoft Azure**, enabling you to start quickly or roll out a full-scale deployment with advanced processing capabilities.
 
