@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 0
 ---
 
-# Overview
+# AWS Deployment Overview
 
 Cado provides flexible deployment options for AWS, allowing organizations to tailor their setup based on operational needs and security requirements. Whether you're looking for a quick start or a full-scale deployment with advanced processing capabilities, Cado supports multiple methods to get you up and running.
 
