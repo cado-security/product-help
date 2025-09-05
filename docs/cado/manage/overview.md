@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Manage Overview
 hide_title: true
 sidebar_position: 0
 ---
-# Overview
+# Manage Overview
 
 ### Roles, users & groups
 Cado uses role‑based access control (RBAC) to ensure people only see and do what they’re permitted to. Built‑in roles include **Administrator**, **Platform Administrator**, **Lead Analyst**, **Analyst**, and **Read‑only Analyst**. You can manage **users** and **groups** (including mapping to your SSO groups) to control access to investigations and cloud accounts. 
