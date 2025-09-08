@@ -17,17 +17,17 @@ You will need permission to create IAM roles, service accounts, and generate key
 Ensure the following **APIs** are enabled in your primary GCP project. You can enable them from the [Google Cloud Console](https://console.cloud.google.com/apis/library):
 
 - **[Compute Engine API](https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com)**
-Needed for Compute Engine acquisition
+Needed for Compute Engine acquisition (compute.googleapis.com)
 - **[Cloud Storage API](https://console.cloud.google.com/marketplace/product/google/storage.googleapis.com)**
-Needed for exporting disks when acquiring Compute Engines, and for GCS acquisition
+Needed for exporting disks when acquiring Compute Engines, and for GCS acquisition (storage.googleapis.com)
 - **[Kubernetes Engine API](https://console.cloud.google.com/marketplace/product/google/container.googleapis.com)**
-Needed for Kubernetes Engine acquisition
+Needed for Kubernetes Engine acquisition (container.googleapis.com)
 - **[Cloud Build API](https://console.cloud.google.com/marketplace/product/google/cloudbuild.googleapis.com)**
-Necessary for export operations when acquiring Compute Engines
+Necessary for export operations when acquiring Compute Engines (container.googleapis.com)
 - **[IAM Service Account Credentials API](https://console.cloud.google.com/marketplace/product/google/iamcredentials.googleapis.com)**
-Needed to generate keys and allow access to GCP resources
+Needed to generate keys and allow access to GCP resources (iamcredentials.googleapis.com)
 - **[Cloud Resource Manager API](https://console.cloud.google.com/marketplace/product/google/cloudresourcemanager.googleapis.com)**
-Needed to navigate projects
+Needed to navigate projects (cloudresourcemanager.googleapis.com)
 
 ### Steps to Add a GCP Project
 :::tip 
