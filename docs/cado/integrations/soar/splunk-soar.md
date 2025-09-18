@@ -23,7 +23,7 @@ This is the fastest way to call the Cado API from playbooks—no code packaging 
 **2\) Create an [HTTP asset](https://help.splunk.com/en/splunk-soar/soar-cloud/rest-api-reference/asset-endpoints/rest-asset) for Cado** ([Apps → **HTTP** → *Configure Asset*](https://help.splunk.com/en/splunk-soar/soar-on-premises/administer-soar-on-premises/6.4.1/manage-your-splunk-soar-on-premises-apps-and-assets/add-and-configure-apps-and-assets-to-provide-actions-in-splunk-soar-on-premises)) and set:
 
 * **Base URL:** `https://<your-cado-host>/api/v3/`  
-* **Authentication:**  
+* [**Authentication:**](https://splunk.my.site.com/customer/s/article/How-to-configure-Bearer-Token-for-HTTP-App)  
   * **Type:** `Authorization` (or supply header name via *auth\_token\_name*)  
   * **Value:** `Bearer <Cado Secret Key>` (paste the Secret Key you generated in Cado).
 
