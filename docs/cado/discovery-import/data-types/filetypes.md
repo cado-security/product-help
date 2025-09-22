@@ -41,7 +41,7 @@ In addition to native support for cloud-based machines and data, Cado can proces
 
 To import a compressed dd image, use Gzip and add the `.gz` extension (e.g., `disk.dd.gz`).
 
-### Limitations and Notes
+Limitations and Notes:
 - **Split E01 disks** are currently supported only in AWS. Importing zipped split E01 files is not supported.
 - **VMDK** files are partially supported, as the format has various sub-formats. For better compatibility, it's recommended to convert VMDK files to `.dd` format before importing.
 - If you import a ZIP file, it will be treated as a container of files unless it contains a single file.
