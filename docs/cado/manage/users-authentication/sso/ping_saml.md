@@ -4,11 +4,11 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# How to Set Up the Ping SAML Integration
-
-:::warning
-If you encounter issues, please contact support@cadosecurity.com with detailed information about your configuration.
+:::info
+This section is not relevant to SaaS deployments.
 :::
+
+# How to Set Up the Ping SAML Integration
 
 You can enable the Ping SAML Integration beta in the Cado platform by going to `Settings > SSO > Ping SAML`.
 
