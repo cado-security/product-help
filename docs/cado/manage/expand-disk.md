@@ -4,13 +4,18 @@ hide_title: true
 sidebar_position: 8
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # How to Expand Available Data Storage within the Cado Platform in AWS
 
 Below are the steps for expanding the Cado data storage volume after deployment, following AWS's instructions for **[Extending a Linux file system after resizing a volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)**.
 
-:::warning
-Before proceeding, create a snapshot of the `CadoResponseDataVolume` with the device name `/dev/sdh`. This ensures you have a backup of the data volume in case any issues arise. Follow this guide: [Creating an EBS Snapshot](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html).
-:::
+
+Before proceeding, create a snapshot of the `CadoResponseDataVolume` with the device name `/dev/sdh`.
+This ensures you have a backup of the data volume in case any issues arise. Follow this guide: [Creating an EBS Snapshot](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html).
+
 
 ### Steps to Expand Storage
 
