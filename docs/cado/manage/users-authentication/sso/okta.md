@@ -4,11 +4,11 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to Set Up the Okta OAuth Integration
-
-:::warning
-If you encounter issues, please contact support@cadosecurity.com and provide detailed information about your configuration.
+:::info
+This section is not relevant to SaaS deployments.
 :::
+
+# How to Set Up the Okta OAuth Integration
 
 You can enable the Okta OAuth Integration beta in the Cado platform by navigating to `Settings > SSO > Okta OAuth`.
 
