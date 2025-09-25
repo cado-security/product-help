@@ -13,3 +13,10 @@ This diagram is a simplified architecture, with options for alternate network ac
 For a diagram of how cross-cloud imports from Azure into AWS work, please see below:
 
 ![Azure Imports](/img/azure-imports.png)
+
+
+### Cross-Cloud Import Diagram
+
+For a visual representation of how cross-cloud imports from AWS into Azure work, refer to the diagram below:
+
+![Azure Cross](/img/azure-cross.png)
