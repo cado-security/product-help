@@ -4,6 +4,10 @@ hide_title: true
 sidebar_position: 2
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # How to Send Logs to Cado
 
 There are several methods for sending logs to Cado, listed in order of ease:
