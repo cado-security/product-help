@@ -4,6 +4,11 @@ hide_title: true
 sidebar_position: 9
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
+
 # How to set up proxy access
 
 Cado supports the use of proxies for communication between the Cado platform and services external to the environment in which you have deployed the Cado platform. This can include:
