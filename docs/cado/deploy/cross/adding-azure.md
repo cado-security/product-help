@@ -28,9 +28,3 @@ To allow Cado to access data from an Azure subscription, you must register an ap
    - Select **Import** > **Cloud**.
    - Choose the Azure role you created.
    - Confirm that the resources available for import are visible.
-
-### Cross-Cloud Import Diagram
-
-For a visual representation of how cross-cloud imports from AWS into Azure work, refer to the diagram below:
-
-![Azure Cross](/img/azure-cross.png)
