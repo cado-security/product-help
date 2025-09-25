@@ -4,6 +4,10 @@ hide_title: true
 sidebar_position: 11
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # How to Estimate the Cost of the Cado Platform
 
 To estimate the cost of using the Cado platform, you can base your calculations on the following typical assumptions:
