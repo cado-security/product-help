@@ -4,6 +4,10 @@ hide_title: true
 sidebar_position: 3
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # How to Forward Cado System and Processing Logs to SIEMs
 
 ## Log Location
