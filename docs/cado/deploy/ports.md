@@ -3,6 +3,11 @@ title: Ports and network encryption
 hide_title: true
 sidebar_position: 8
 ---
+
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # What ports and network encryption does the Cado platform use?
 
 The following ports are required to be open within the VPC or VNet in which the Cado platform is deployed.
