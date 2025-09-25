@@ -12,7 +12,7 @@ sidebar_position: 0
 Please login via the ActiveAI Security Platform at [https://activeai.darktrace.com/](https://activeai.darktrace.com/).
 
 Select the Forensic Acquisition & Investigation tile to login:  
-![AAISP Login](/img/aaisp_login.pngg)
+![AAISP Login](/img/aaisp_login.png)
 
 
 ## Adding users via ActiveAI Security Platform
