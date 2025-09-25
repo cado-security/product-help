@@ -4,6 +4,11 @@ hide_title: true
 sidebar_position: 7
 ---
 
+    :::info
+    This section is not relevant to SaaS deployments.
+    :::
+
+
 # How to get and apply a license
 In order to use the Cado platform, you must upload a valid license.  
 
