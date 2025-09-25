@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
 id: intro
-title: What is Cado
+title: What is Cado (FAI)
 ---
 
 
-# What is the Cado Platform?
+# What is the Forensic Acquisition & Investigation (Cado) Platform?
 
 As data and cyber attackers move to the cloud, investigating security threats in modern environments becomes increasingly complex and time-consuming. The Cado platform leverages the scalability, speed, and automation of the cloud to streamline investigation and response.
 
