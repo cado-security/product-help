@@ -124,6 +124,10 @@ To create a new group:
 
 ### Creating a New User
 
+:::info
+This section is not relevant to SaaS deployments. Please use the Active AI Security Platform to manage users.
+:::
+
 Only Administrators can create new users. When a new user is created, a temporary password must be set, which the user will be required to change upon first login.
 
 To add a new user:
