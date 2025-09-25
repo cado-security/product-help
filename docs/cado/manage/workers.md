@@ -4,6 +4,10 @@ hide_title: true
 sidebar_position: 6
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # What Are the Settings for Workers?
 
 This section explains the options available for managing workers that are spun up during processing jobs. You can access these settings under **Settings > Processing**.
