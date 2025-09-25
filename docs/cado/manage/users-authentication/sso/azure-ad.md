@@ -4,9 +4,11 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to Set Up the Azure AD OAuth Integration
+:::info
+This section is not relevant to SaaS deployments.
+:::
 
-If you encounter any issues during the setup process, please contact support at support@cadosecurity.com and provide detailed information about your configuration.
+# How to Set Up the Azure AD OAuth Integration
 
 You can enable the beta version of Azure AD OAuth Integration in Cado by navigating to **Settings > SSO > Microsoft OAuth**.
 
