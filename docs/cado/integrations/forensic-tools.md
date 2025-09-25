@@ -21,6 +21,10 @@ These files are stored in cloud storage (e.g., S3 in AWS or Storage in Azure) an
 
 ## Centrally Preserving Data
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 If your deployment is in AWS, you can configure the system to automatically copy and preserve all processed evidence in a central S3 bucket. To enable this feature, go to **Settings** > **Preservation**.
 
 
