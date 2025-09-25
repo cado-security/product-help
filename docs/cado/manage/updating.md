@@ -4,6 +4,9 @@ hide_title: true
 sidebar_position: 9
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
 
 # How to Update the Cado Platform
 
