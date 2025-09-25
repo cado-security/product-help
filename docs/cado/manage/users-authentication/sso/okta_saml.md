@@ -4,11 +4,11 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# How to Set Up the Okta SAML Integration
-
-:::warning
-If you encounter issues, please contact support@cadosecurity.com with a detailed description of your configuration.
+:::info
+This section is not relevant to SaaS deployments.
 :::
+
+# How to Set Up the Okta SAML Integration
 
 You can enable the Okta SAML Integration beta in the Cado platform by navigating to `Settings > SSO > Okta SAML`.
 
