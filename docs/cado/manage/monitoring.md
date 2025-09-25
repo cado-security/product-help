@@ -4,6 +4,10 @@ hide_title: true
 sidebar_position: 11
 ---
 
+:::info
+This section is not relevant to SaaS deployments.
+:::
+
 # How to Monitor the Platform Health
 
 Cado provides two types of checks to help users monitor the platform's health and proper functioning: [Platform Check](/cado/manage/monitoring#platform-check) and [Account Check](/cado/manage/monitoring#account-check).
