@@ -10,7 +10,7 @@ sidebar_position: 1
 Cado backs up any imports to S3 which can then be re-imported later to a fresh instance. This is the simplest method for backups.
 You will need to restore the data volume if you want to recover user settings such as user logins, and processed data.
 
-## Backup and Recovery for default non-HA deployments
+## Backup and Recovery for self hosted deployments
 This section explains how to recover or migrate the Cado platform to a new instance.
 
 If a Cado instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
@@ -47,31 +47,6 @@ Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backu
 
 Then, simply **[attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)** the restored Data Volume to your new Cado EC2 Instance and start it.
 
-### Backups with High Availability
-If you have opted for the High Availability deployment in AWS, back-ups need to be enabled for the native AWS services used in the deployment:
-* https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-snapshots.html
-* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html
-* https://docs.aws.amazon.com/efs/latest/ug/awsbackup.html
-* https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups.html
-
-You can also enable automated back-ups in the CloudFormation or Terraform deployment template, for example with:
-- ElastiCache:
-```yaml
-SnapshotRetentionLimit: 7
-SnapshotWindow: "03:00-04:00"
-```
-- RDS:
-```yaml
-BackupRetentionPeriod: 7
-PreferredBackupWindow: "03:00-04:00"
-```
-- OpenSearch:
-```yaml
-SnapshotOptions:
-    AutomatedSnapshotStartHour: 3
-```
-
-Snapshots are not enabled by default for cost reasons.
 
 ### Deploying with a non-Cado owned AMI
 In order to prevent incorrect operation, the platform checks to confirm if the AMI is owned by Cado and will not start if this check fails, with the error "Cannot run Cado Response in a non-Cado Response image" in the logs. If you require running a non-Cado supplied AMI, please contact support for details on how to override this safety setting.
