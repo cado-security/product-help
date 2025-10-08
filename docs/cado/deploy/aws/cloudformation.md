@@ -27,8 +27,6 @@ Several CloudFormation templates are available, depending on your deployment req
 - **[DeployCloudFormationCustomVPC.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPC.yaml):** Deploys into an existing VPC. Use [DeployCloudFormationCustomVPCNetworking.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationCustomVPCNetworking.yaml) for creating the necessary networking within this VPC.
 - **[DeployCloudFormationGovCloud.yaml](https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationGovCloud.yaml):** For deploying into AWS GovCloud. Like the private template, it includes a load balancer and no public IP.
 
-For a High Availability (HA) deployment, contact Cado for the appropriate template.
-
 ### Steps for Deployment
 
 1. After receiving the CloudFormation template link, click it to open the AWS CloudFormation Management Console.
