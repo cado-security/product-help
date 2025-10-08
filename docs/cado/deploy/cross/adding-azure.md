@@ -1,10 +1,10 @@
 ---
-title: Adding Azure subscriptions to Azure/AWS/GCP
+title: Adding Azure subscriptions to Azure/AWS/GCP/SaaS
 hide_title: true
 sidebar_position: 7
 ---
 
-# How to add Azure Subscriptions to Azure, AWS, or GCP
+# How to add Azure Subscriptions to Azure, AWS, SaaS or GCP
 
 To allow Cado to access data from an Azure subscription, you must register an application within the target subscription. Follow the steps below to set up cross-subscription access. Ensure you have permission to register applications and create IAM roles.
 
