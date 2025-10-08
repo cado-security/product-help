@@ -1,10 +1,10 @@
 ---
-title: Adding GCP Projects to Azure/AWS
+title: Adding GCP Projects to Azure/AWS/SaaS
 hide_title: true
 sidebar_position: 8
 ---
 
-# How to add GCP projects to Azure or AWS
+# How to add GCP projects to Azure, AWS or SaaS
 
 To enable cross-cloud access from GCP, you need to designate a primary GCP project where evidence will be stored and managed. A service account within this primary project coordinates IAM access to allow Cado to import evidence from other GCP projects. 
 
