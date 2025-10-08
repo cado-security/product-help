@@ -10,6 +10,18 @@ To automate the deployment of the IAM Policy and Role in multiple AWS accounts w
 
 More information on CloudFormation StackSets can be found here: [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html).
 
+### How to add AWS Account
+
+1. In Settings go to the **Accounts** tab and click **Create an Account** then select **AWS**.
+
+   ![AWSDeploy](/img/awsdeploymentnew.png)
+
+2. Sign in with your AWS Account
+3. Create an IAM role and policy using the CloudFormation template in the specified region
+4. Add **Account Name** and **Role ARN**
+5. Select if you want to run an Account Check after adding account
+
+   
 ### Steps to Deploy the IAM Policy and Role using CloudFormation StackSets
 
 1. **Open StackSets**  
