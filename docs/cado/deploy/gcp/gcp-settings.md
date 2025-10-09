@@ -205,6 +205,10 @@ For example:
       \}
     \}
 
+:::tip
+When setting up WIF credentials, we strongly recommend using the [GCP Automated Setup](./gcp-auto-setup.md) scripts for ease of set-up.
+:::
+
 For more information about GCP Workload Identity Federation see:
 * https://console.cloud.google.com/iam-admin/workload-identity-pools
 * https://cloud.google.com/iam/docs/workload-identity-federation
