@@ -40,7 +40,7 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
    Set up a new [Google Cloud Storage (GCS) bucket](https://cloud.google.com/storage/docs/creating-buckets) to store evidence collected by Cado. You will select this bucket during the import process in the Cado interface.
 
 3. **Create a Cado IAM Role**  
-   [Create a new IAM role](https://console.cloud.google.com/iam-admin/roles) for Cado with the [required permissions listed below]((/cado/deploy/cross/adding-gcp#permissions)).
+   [Create a new IAM role](https://console.cloud.google.com/iam-admin/roles) for Cado with the [required permissions listed below](/cado/deploy/cross/adding-gcp#permissions).
    This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#role-creation)
    This role can be created at the organization level to provide access to multiple projects using one service account, or at the project level to provide access to a single project.
 
