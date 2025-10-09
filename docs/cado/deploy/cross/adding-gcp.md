@@ -7,7 +7,9 @@ sidebar_position: 8
 # How to add GCP projects to Azure, AWS or SaaS
 
 To enable cross-cloud access from GCP, you need to designate a primary GCP project where evidence will be stored and managed.
+
 A Service Account within this primary project coordinates IAM access to allow Cado to import evidence from other GCP projects. 
+
 You will need permissions in GCP to enable APIs, create IAM roles, Service Accounts, and generate Service Account Keys before continuing.
 
 ### Required APIs to Enable
@@ -41,29 +43,33 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
 
 3. **Create a Cado IAM Role**  
    [Create a new IAM role](https://console.cloud.google.com/iam-admin/roles) for Cado with the [required permissions listed below](/cado/deploy/cross/adding-gcp#permissions).
-   This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#role-creation)
+
+   This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#role-creation).
+   
    This role can be created at the organization level to provide access to multiple projects using one service account, or at the project level to provide access to a single project.
 
-4. **Assign the IAM Role to the Compute Engine Principal**
+5. **Assign the IAM Role to the Compute Engine Principal**
    - Go to **IAM and Admin** > **IAM** in the [Google Cloud Console](https://console.cloud.google.com/iam-admin/iam).  
    - Locate the Compute Engine Principal with the format `xxxxxxxxxxxx-compute@developer.gserviceaccount.com`
       - You may need to check the box 'Include Google-provided role grants'
    - Edit this principal to [grant it](https://cloud.google.com/iam/docs/grant-role-console) the new Cado IAM role.  
    - Note down the principal name, as it will be used to configure access to other GCP projects.
 
-5. **Create a new Service Account and Grant Role**  
+6. **Create a new Service Account and Grant Role**  
    Follow these [Google instructions](https://cloud.google.com/iam/docs/service-accounts-create) to create a new Service Account in the primary GCP project.
    Assign the newly created Cado IAM Role to the Service Account by following [these Google instructions](https://cloud.google.com/iam/docs/create-service-agents#grant-roles), making sure to grant it the Cado IAM role.
-   This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#service-account-creation)
+   
+   This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#service-account-creation).
 
-6. **Create Service Account Credentials and add to Cado**  
+8. **Create Service Account Credentials and add to Cado**  
    Navigate to the **Keys** tab of the created Service Account and **Add Key**, selecting the **JSON** option.
    These credentials are **sensitive** and should be stored appropriately according to your organization's password/secret management policy
    You can then add this JSON Key to the Cado platform at **Settings** > **Accounts** > **Create Account**.
 
-7. **Grant Access to Other GCP Projects (Optional)**  
-   To allow Cado to collect evidence from additional GCP projects, follow the [Cado documentation](/cado/deploy/gcp/gcp-cross-project) for setting up access to each additional project. <br />
-   [**Script link**](/cado/deploy/gcp/gcp-auto-setup#cross-project-access)
+9. **Grant Access to Other GCP Projects (Optional)**  
+   To allow Cado to collect evidence from additional GCP projects, follow the [Cado documentation](/cado/deploy/gcp/gcp-cross-project) for setting up access to each additional project.
+
+   This can also be automated via a script: [**Script link**](/cado/deploy/gcp/gcp-auto-setup#cross-project-access).
 
 ---
 
