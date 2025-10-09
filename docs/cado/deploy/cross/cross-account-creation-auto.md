@@ -12,6 +12,8 @@ More information on CloudFormation StackSets can be found here: [Working with AW
 
 ### How to add AWS Account
 
+The new AWS deployment method enables you to automatically onboard a cross-account role from the Cado UI, offering a more automated and streamlined experience.
+
 1. In Settings go to the **Accounts** tab and click **Create an Account** then select **AWS**.
 
    ![AWSDeploy](/img/awsdeploymentnew.png)
