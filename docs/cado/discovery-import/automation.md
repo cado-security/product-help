@@ -89,5 +89,28 @@ From this screen you will now be able to enable user groups for detections and f
 
 If you want more information on managing your RBAC role and Groups you can find that [Here](https://docs.cadosecurity.com/cado/manage/users-authentication/users#cado-platform-roles)
 
+## Scheduled Scans
+
+> ⚠️ **Note:** This is currently only available for **SAAS** environment.
+
+1. Navigate to the **Automation** section in the left pane
+2. Click **Create a Scan**
+
+![Create Scan](/img/createscan.png)
+
+3. Create a name for you scan
+
+4. Enter your Key and Value
+
+>  **Note:** The **Key** and **Value** are case sensitive.
+
+![Scan Rules](/img/scanrules.png)
+
+You will now be able to see you scheduled scans in the automations tab.
+
+
+
+   
+
 
 
