@@ -104,13 +104,15 @@ Cado can acquire private AKS clusters using the normal user interface, thanks to
 
 ### Private GKE Clusters
 
-Cado is exploring support for private GKE clusters through public endpoints on private clusters.
+Please use the **Alternate Private EKS Cluster Access** method described above.
+
+Cado is exploring support for private GKE clusters through public endpoints on private clusters via the "normal" method. 
 
 ### Private EKS Clusters
 
 Private EKS clusters can be configured to be accessible only from within the VPC they reside in or connected networks (e.g., peered VPCs). If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API.
 
-If Cado cannot access the cluster endpoint, you can use the **Alternate Private EKS Cluster Access** method described below.
+If Cado cannot access the cluster endpoint, you can use the **Alternate Private EKS Cluster Access** method described above.
 
 #### Alternate Private EKS Cluster Access
 
