@@ -6,12 +6,12 @@ sidebar_position: 2
 
 # How to deploy with Terraform
 
-Follow the steps below to deploy the Cado platform using Terraform.
+Follow the steps below to deploy the platform using Terraform.
 
 ## Step-by-Step Guide
 
 1. **Clone the Repository:**  
-   Clone the Cado Security Deployment Templates from GitHub:  
+   Clone the / Forensic Acquisition and Investigation Deployment Templates from GitHub:  
    [GitHub Repo](https://github.com/cado-security/Deployment-Templates/tree/main)
    
 2. **Navigate to the Deployment Directory:**  
@@ -44,9 +44,9 @@ Follow the steps below to deploy the Cado platform using Terraform.
 
 | Parameter Name       | Value                        | Description                                                                                          |
 | -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `region`             | *(AWS region)*               | AWS region for deploying Cado, e.g., `us-east-1`.                                                     |
-| `key_name`           | *(key pair name)*            | SSH key pair for accessing the Cado instance (optional, but useful for troubleshooting).               |
-| `ami_id`             | *(AMI ID)*                   | Contact Cado Sales or view the [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json ) to get the appropriate AMI ID for your region.    |
+| `region`             | *(AWS region)*               | AWS region for deploying / Forensic Acquisition and Investigation, e.g., `us-east-1`.                                                     |
+| `key_name`           | *(key pair name)*            | SSH key pair for accessing the / Forensic Acquisition and Investigation instance (optional, but useful for troubleshooting).               |
+| `ami_id`             | *(AMI ID)*                   | Contact / Forensic Acquisition and Investigation Sales or view the [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json ) to get the appropriate AMI ID for your region.    |
 | `public_deployment`  | `True` or `False`            | Set to `True` for public IP access. Set to `False` to deploy behind an ALB with a DNS URL.             |
 | `certificate_arn`    | *(ARN)*                      | ARN of the certificate to assign to the ALB (required if `public_deployment` is `False`).              |
 | `tags`               | *(key-value map)*            | Tags for organizing and identifying your AWS resources.                                                |
@@ -72,8 +72,8 @@ With private deployments, please note that the 'public' subnet variables are ref
 7. **Initialize the Platform:**  
    Once the infrastructure is deployed, a one-time initialization process will begin. The entire deployment and initialization process typically takes 10-15 minutes.
 
-8. **Log into Cado:**  
-   After deployment, log into the Cado platform. The initial username is `admin`, and the password is the instance ID of your deployed Cado platform. You’ll be prompted to change your password upon first login.  
+8. **Log into / Forensic Acquisition and Investigation:**  
+   After deployment, log into the the platform. The initial username is `admin`, and the password is the instance ID of your deployed platform. You’ll be prompted to change your password upon first login.  
    **[Log into Cado](/cado/deploy/logging-in)**
 
 9. **Import a License:**  
@@ -81,5 +81,5 @@ With private deployments, please note that the 'public' subnet variables are ref
 
 ## Identifying the AMI ID
 
-To find the latest AMI ID for the Cado platform, visit the following link:  
+To find the latest AMI ID for the / Forensic Acquisition and Investigation platform, visit the following link:  
 [View Latest AMIs](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json)
