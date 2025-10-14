@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Minimal Deployment Guide
 
-This guide provides step-by-step instructions for deploying a Cado instance from the AWS console, aimed at helping you get up and running with the platform as quickly as possible
+This guide provides step-by-step instructions for deploying a / Forensic Acquisition and Investigation instance from the AWS console, aimed at helping you get up and running with the platform as quickly as possible
 
 The initial deployment offers a basic working environment; however, certain functionalities are not included. Refer to the ‘Extensions’ section for details on missing features and instructions on how to add them.
 
@@ -16,9 +16,9 @@ The initial deployment offers a basic working environment; however, certain func
 
 Before starting, make sure you have all the following:
 
-- The Cado version number you want to deploy. We recommend using our [updates page](https://cado-public.s3.amazonaws.com/cado_updates_newest_v2.json) to retrieve the latest version.
-- An S3 bucket for Cado to use. This should be for use exclusively by Cado - do not attempt to reuse/share an existing bucket
-- A Cado Instance IAM policy containing the following (**IAM** > **Policies** > **Create policy** > **JSON**)
+- The / Forensic Acquisition and Investigation version number you want to deploy. We recommend using our [updates page](https://cado-public.s3.amazonaws.com/cado_updates_newest_v2.json) to retrieve the latest version.
+- An S3 bucket for / Forensic Acquisition and Investigation to use. This should be for use exclusively by / Forensic Acquisition and Investigation - do not attempt to reuse/share an existing bucket
+- A / Forensic Acquisition and Investigation Instance IAM policy containing the following (**IAM** > **Policies** > **Create policy** > **JSON**)
 
 ![Create Policy](/img/aws-create-policy.png)
 
@@ -51,7 +51,7 @@ Before starting, make sure you have all the following:
  ]
 }
 ```
-- A Role (“a Cado Instance Profile Role”), with your Cado Instance Policy attached.
+- A Role (“a / Forensic Acquisition and Investigation Instance Profile Role”), with your / Forensic Acquisition and Investigation Instance Policy attached.
   - To create an instance profile go to **IAM** > **Roles** > **Create Role**. Select ‘AWS Service’ for trusted entity type and EC2 for Use case. Click Next then select your policy and create.
  
 ![Trusted Entity](/img/aws-trusted-entity.png)
@@ -82,7 +82,7 @@ Before starting, make sure you have all the following:
 
    b. Select **Community AMIs** tab
    
-   c. Paste the Cado AMI for your region (see prerequisites) into the search bar
+   c. Paste the / Forensic Acquisition and Investigation AMI for your region (see prerequisites) into the search bar
    
    d. Select the returned AMI. If you don’t get results here double check you have the AMI id from the region you are trying to deploy into
 
@@ -112,7 +112,7 @@ Before starting, make sure you have all the following:
 
    g. Add an inbound security rule with Type ‘HTTPS’ and Source Type ‘My IP’
 
-   - **Note:** this allows access to the Cado Instance from your IP only! If you want to allow other IPs you can configure additional IPs here.
+   - **Note:** this allows access to the Instance from your IP only! If you want to allow other IPs you can configure additional IPs here.
   
 ![Network Settings](/img/aws-network-settings.png)
 
@@ -150,7 +150,7 @@ echo "bucket = MY_CADO_BUCKET" >> /home/admin/processor/first_run.cfg
 
 ![Summary](/img/aws-summary.png)
 
-10. After launching it will take a few minutes for Cado to start.
+10. After launching it will take a few minutes for the platform to start.
 
 ![Success](/img/aws-success.png)
 
@@ -158,18 +158,18 @@ echo "bucket = MY_CADO_BUCKET" >> /home/admin/processor/first_run.cfg
 
 #### Workers
 
-The initial deployment uses a single Compute instance, limiting imports to Cado Host captures and restricting simultaneous evidence processing to ensure stability. Additional EC2 instances are required to process more data or multiple evidence items concurrently.
+The initial deployment uses a single Compute instance, limiting imports to Host captures and restricting simultaneous evidence processing to ensure stability. Additional EC2 instances are required to process more data or multiple evidence items concurrently.
 
 To enable **Workers** follow the workers document - [Enable Workers](https://docs.cadosecurity.com/cado/deploy/aws/aws-workers)
 
 #### Secret Manager
 
-The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in AWS Secrets Manager.
+The initial deployment stores the key used to encrypt secrets in / Forensic Acquisition and Investigation locally on the machine. Enabling a Secret Manager allows / Forensic Acquisition and Investigation to instead store the key in AWS Secrets Manager.
 
 To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/aws/aws-secret-manager)
 
 #### NFS
 
-The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+The initial deployment deployment deploys without a Network File Share (NFS). Enabling an NFS allows / Forensic Acquisition and Investigation to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
 
 To enable **NFS** follow the NFS document - [Enable NFS](https://docs.cadosecurity.com/cado/deploy/aws/aws-nfs)
