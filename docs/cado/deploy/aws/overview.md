@@ -6,11 +6,11 @@ sidebar_position: 0
 
 # AWS Deployment Overview
 
-Cado provides flexible deployment options for AWS, allowing organizations to tailor their setup based on operational needs and security requirements. Whether you're looking for a quick start or a full-scale deployment with advanced processing capabilities, Cado supports multiple methods to get you up and running.
+/ Forensic Acquisition and Investigation provides flexible deployment options for AWS, allowing organizations to tailor their setup based on operational needs and security requirements. Whether you're looking for a quick start or a full-scale deployment with advanced processing capabilities, / Forensic Acquisition and Investigation supports multiple methods to get you up and running.
 
-At its core, a Cado deployment in AWS consists of:
+At its core, a / Forensic Acquisition and Investigation deployment in AWS consists of:
 
-- **Infrastructure**: A core virtual machine that runs the Cado platform.
+- **Infrastructure**: A core virtual machine that runs the platform.
 - **Permissions**: IAM roles to manage the main VM and optionally start worker VMs.
 - **Cross-account access**: Roles to import data from other AWS accounts or cloud providers.
 
@@ -22,11 +22,11 @@ Architecture diagrams and permission requirements are available to guide secure 
 
 | Goal | Method | Description |
 |------|--------|-------------|
-| **Deploy Cado with full capabilities** | [CloudFormation Template](https://docs.cadosecurity.com/cado/deploy/aws/cloudformation) | Use Cado’s CloudFormation template to deploy a full-featured platform with support for worker VMs and large-scale imports. |
-| **Quickly deploy Cado with minimal setup** | [Minimal Deployment](https://docs.cadosecurity.com/cado/deploy/aws/aws_quick_deployment) | Launch a basic Cado instance directly from the AWS Console with minimal permissions. Ideal for restricted environments. |
+| **Deploy / Forensic Acquisition and Investigation with full capabilities** | [CloudFormation Template](https://docs.cadosecurity.com/cado/deploy/aws/cloudformation) | Use / Forensic Acquisition and Investigation CloudFormation template to deploy a full-featured platform with support for worker VMs and large-scale imports. |
+| **Quickly deploy / Forensic Acquisition and Investigation with minimal setup** | [Minimal Deployment](https://docs.cadosecurity.com/cado/deploy/aws/aws_quick_deployment) | Launch a basic / Forensic Acquisition and Investigation instance directly from the AWS Console with minimal permissions. Ideal for restricted environments. |
 | **Deploy using infrastructure-as-code** | [Terraform](https://docs.cadosecurity.com/cado/deploy/aws/terraform) | Automate deployment using Terraform scripts. Supported across AWS, Azure, and GCP. |
-| **Understand architecture and security features** | [Architecture Overview](https://docs.cadosecurity.com/cado/deploy/aws/architecture) | Learn how Cado creates an isolated VPC and supports private deployments with proxy inspection. |
-| **Review supported configurations** | [Supported Deployment Configurations](https://docs.cadosecurity.com/cado/deploy/supported) | Ensure your IAM and network setup aligns with Cado’s supported configurations to avoid import failures. |
+| **Understand architecture and security features** | [Architecture Overview](https://docs.cadosecurity.com/cado/deploy/aws/architecture) | Learn how / Forensic Acquisition and Investigation creates an isolated VPC and supports private deployments with proxy inspection. |
+| **Review supported configurations** | [Supported Deployment Configurations](https://docs.cadosecurity.com/cado/deploy/supported) | Ensure your IAM and network setup aligns with / Forensic Acquisition and Investigation supported configurations to avoid import failures. |
 
 ---
 
@@ -46,7 +46,7 @@ Architecture diagrams and permission requirements are available to guide secure 
 
 ## Permissions and Security
 
-Cado deployments require specific IAM roles and permissions to operate securely and effectively. These include:
+/ Forensic Acquisition and Investigation deployments require specific IAM roles and permissions to operate securely and effectively. These include:
 
 - Permissions to manage the core VM.
 - Permissions to start worker VMs (if applicable).
