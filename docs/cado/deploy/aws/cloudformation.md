@@ -8,15 +8,15 @@ sidebar_position: 1
 
 ## Quick Start
 
-To quickly deploy the Cado platform via AWS CloudFormation with default options, click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml).
+To quickly deploy the platform via AWS CloudFormation with default options, click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml).
 
 ## AWS CloudFormation Template Overview
 
 <iframe width="100%" height="628" src="https://www.youtube.com/embed/aMQOitmPLeE" title="Deploying with Cloudformation" frameborder="0" allowfullscreen></iframe>
 
-Deploying Cado in AWS is simple using our CloudFormation Template (CFT), which walks you through configuring the platform stack. 
+Deploying / Forensic Acquisition and Investigation in AWS is simple using our CloudFormation Template (CFT), which walks you through configuring the platform stack. 
 
-If you're working with the Cado Sales team or using a free trial, you will receive a link to the CloudFormation Template to begin deployment. If you haven't received it yet, contact sales@cadosecurity.com.
+If you're working with the Sales team or using a free trial, you will receive a link to the CloudFormation Template to begin deployment. If you haven't received it yet, contact sales@cadosecurity.com.
 
 ### Available CloudFormation Templates
 
@@ -39,8 +39,8 @@ Several CloudFormation templates are available, depending on your deployment req
 
     | Parameter Name | Value | Description |
     | -------------- | ----- | ----------- |
-    | Instance type for Cado EC2 Server | `m5.4xlarge` | Recommended minimum instance size for enterprise use. |
-    | Key pair for Cado EC2 Server | *(choose your keypair)* | Used for SSH access. Not required for standard use, but useful for support if needed. |
+    | Instance type for / Forensic Acquisition and Investigation EC2 Server | `m5.4xlarge` | Recommended minimum instance size for enterprise use. |
+    | Key pair for / Forensic Acquisition and Investigation EC2 Server | *(choose your keypair)* | Used for SSH access. Not required for standard use, but useful for support if needed. |
     | Allowed source IP for SSH | *(enter IP range)* | Specify IP addresses or ranges for SSH access (CIDR format). Follow the least privilege principle. |
     | Allowed source IP for HTTPS | *(enter IP range)* | Specify IP addresses or ranges for HTTPS access (CIDR format). |
     | VPC CIDR | *(enter IP range)* | Define the CIDR block for the VPC Subnet. |
@@ -61,7 +61,7 @@ Several CloudFormation templates are available, depending on your deployment req
 
 4. Click **Next**.
 
-5. In **Step 3 (Configure stack options)**, unless you need custom settings, click **Next**. For custom settings, contact Cado Security.
+5. In **Step 3 (Configure stack options)**, unless you need custom settings, click **Next**. For custom settings, contact / Forensic Acquisition and Investigation.
 
     ![Step 3](/img/cft-step3.png)
 
@@ -79,7 +79,7 @@ Several CloudFormation templates are available, depending on your deployment req
 
 Deployment takes approximately 15 minutes, with an additional 10 minutes for the stack to complete installation and updates.
 
-Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and you can **[log into Cado](/cado/deploy/logging-in)**.
+Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and you can **[log into / Forensic Acquisition and Investigation](/cado/deploy/logging-in)**.
 
 ![Creation Complete](/img/create-complete.png)
 
