@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 id: intro
-title: What is Cado (FAI)
+title: What is Darktrace  Forensic Acquisition and Investigation
 ---
 
 
-# What is the Forensic Acquisition & Investigation (Cado) Platform?
+# What is the Darktrace Forensic Acquisition and Investigation Platform?
 
-As data and cyber attackers move to the cloud, investigating security threats in modern environments becomes increasingly complex and time-consuming. The Cado platform leverages the scalability, speed, and automation of the cloud to streamline investigation and response.
+As data and cyber attackers move to the cloud, investigating security threats in modern environments becomes increasingly complex and time-consuming. The platform leverages the scalability, speed, and automation of the cloud to streamline investigation and response.
 
 <p align="center">
     <img src="/img/cado-overall.png" alt="Cado Platform" />
@@ -15,13 +15,13 @@ As data and cyber attackers move to the cloud, investigating security threats in
 
 ### Core Features
 
-- **Automated Data Capture**: Cado enables automated data collection across multi-cloud environments and ephemeral containers, while also supporting investigations on on-premises systems.
+- **Automated Data Capture**: Forensic Acquisition and Investigation enables automated data collection across multi-cloud environments and ephemeral containers, while also supporting investigations on on-premises systems.
   
-- **Parallel Processing**: Powered by a patent-pending cloud-native architecture, Cado automatically scales to provide fast, parallel data processing.
+- **Parallel Processing**: Powered by a patent-pending cloud-native architecture, Forensic Acquisition and Investigation automatically scales to provide fast, parallel data processing.
   
-- **Powerful Analytics**: Cado's analytics engine, enhanced by threat intelligence, machine learning, and built-in YARA rules, automatically flags malicious activity and potential risks.
+- **Powerful Analytics**: Darktrace Forensic Acquisition and Investigation analytics engine, enhanced by threat intelligence, machine learning, and built-in YARA rules, automatically flags malicious activity and potential risks.
   
-- **Single Pane of Glass**: Cado presents data from multiple sources, including cloud-provider logs, disk, memory, and more, in a unified timeline, helping security teams quickly assess the scope and impact of incidents.
+- **Single Pane of Glass**: The Platform presents data from multiple sources, including cloud-provider logs, disk, memory, and more, in a unified timeline, helping security teams quickly assess the scope and impact of incidents.
 
 ### Benefits
 
