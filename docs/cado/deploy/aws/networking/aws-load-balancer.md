@@ -4,17 +4,17 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to add a Load Balancer and/or HTTPS to Cado
+# How to add a Load Balancer and/or HTTPS to / Forensic Acquisition and Investigation
 
 ## Adding a valid SSL Certificate
-The simplest option for adding a valid SSL certificate to Cado is to use a service such as [Cloudflare](https://www.cloudflare.com/). This will provide a valid SSL certificate for your domain and allow you to access Cado over valid HTTPS.
+The simplest option for adding a valid SSL certificate to / Forensic Acquisition and Investigation is to use a service such as [Cloudflare](https://www.cloudflare.com/). This will provide a valid SSL certificate for your domain and allow you to access / Forensic Acquisition and Investigation over valid HTTPS.
 
 Alternatively, you can use a load balancer in AWS to provide a valid SSL certificate. This is a more complex option but provides more control over the SSL certificate and can be used to add a Web Application Firewall.
 
 ## How to Add a Load Balancer in AWS
 An Application Load Balancer can be placed in front of the Cado web server in order to provide a valid HTTPS connection and add a Web Application Firewall. This can be configured via the pre-built Terraform or Cloudformation deployment scripts that include a Load Balancer.
 
-Please see the [AWS deployment overview](/cado/deploy/aws/cloudformation) for more information on how to deploy Cado with a Load Balancer, in a private subnet. Connections between the Load Balancer and the Cado server will be over TLS.
+Please see the [AWS deployment overview](/cado/deploy/aws/cloudformation) for more information on how to deploy / Forensic Acquisition and Investigation with a Load Balancer, in a private subnet. Connections between the Load Balancer and the Cado server will be over TLS.
 
 ![AWS Load Balancer 1](/img/aws-lb-1.png)
 
@@ -29,7 +29,7 @@ If you are using your own domain name, you will then need to point your custom d
 * Name: `cado-alb`
 * Target: `cado-alb-test.us-east-1.elb.amazonaws.com`
 
-You should then be able to visit the domain in your browser and login to Cado.
+You should then be able to visit the domain in your browser and login to Darktrace / Forensic Acquisition and Investigation.
 
 ### (Optional) Adding a Web Application Firewall to your Load Balancer
 You can also add a WAF by:
@@ -41,5 +41,5 @@ You can also add a WAF by:
 ### Troubleshooting the Load Balancer
 If your ALB shows a status as unhealthy, check that you have selected 443 (not 80) as the port and HTTPS (not HTTP) as the protocol in all instances.
 
-If the Connection Times Out or you get the error “504 Gateway Timeout”, check that Security Group on both the load balancer and the Cado server allow traffic from Cado to the ALB to the User. Also select the Target Group, and check that under **Registered targets** the Instance is listed.
+If the Connection Times Out or you get the error “504 Gateway Timeout”, check that Security Group on both the load balancer and the / Forensic Acquisition and Investigation server allow traffic from / Forensic Acquisition and Investigation to the ALB to the User. Also select the Target Group, and check that under **Registered targets** the Instance is listed.
 
