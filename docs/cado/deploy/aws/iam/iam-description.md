@@ -4,10 +4,10 @@ hide_title: true
 sidebar_position: 4
 ---
 
-# What IAM permissions does Cado use?
+# What IAM permissions does / Forensic Acquisition and Investigation use?
 
-The Cado platform requires specific IAM permissions to operate effectively.
-Permissions are required to operate the main Cado virtual machine in the account where Cado is installed, and different permissions are required in target accounts to copy data back for processing.
+The platform requires specific IAM permissions to operate effectively.
+Permissions are required to operate the main / Forensic Acquisition and Investigation virtual machine in the account where / Forensic Acquisition and Investigation is installed, and different permissions are required in target accounts to copy data back for processing.
 
 Below is a clear breakdown of the different permission groups and their purposes.
 
@@ -77,7 +77,7 @@ Below is a clear breakdown of the different permission groups and their purposes
 
 
 ## Customizing the Cado Cross-Account Policy
-The Cado Cross-Account Policy includes permissions to acquire various AWS resources. You can customize it by removing permissions that are not needed for your use case:
+The Cross-Account Policy includes permissions to acquire various AWS resources. You can customize it by removing permissions that are not needed for your use case:
 
 - **EC2 permissions** are required to acquire EC2 systems.
 - **KMS permissions** are needed for acquiring KMS-encrypted volumes.
@@ -109,4 +109,4 @@ If you prefer using an existing IAM role with proper resource access, update the
 }
 ```
 
-You can further restrict this by specifying a specific Cado role rather than trusting the entire account. For more details, see the AWS documentation on [IAM policy elements](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html).
+You can further restrict this by specifying a specific role rather than trusting the entire account. For more details, see the AWS documentation on [IAM policy elements](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html).
