@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Bucket
 
-The Cado deployment requires a storage bucket for various functionality including evidence preservation, health checks and Cado host based acquisitions.
+The / Forensic Acquisition and Investigation deployment requires a storage bucket for various functionality including evidence preservation, health checks and host based acquisitions.
 
 ### Prerequisites
 
