@@ -7,7 +7,7 @@ sidebar_position: 4
 # What is a dedicated forensics account?
 You may choose to deploy into an AWS account dedicated to storing forensics data securely.
 
-You can then use cross-account roles to bring data into the forensics account. Cado copies data back into the forensics account, and performs processing there.
+You can then use cross-account roles to bring data into the forensics account. / Forensic Acquisition and Investigation copies data back into the forensics account, and performs processing there.
 
 
 For more on this best practice, see:
