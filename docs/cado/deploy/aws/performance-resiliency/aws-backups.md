@@ -5,17 +5,17 @@ sidebar_position: 1
 ---
 
 
-# How to backup and recover Cado in AWS
+# How to backup and recover / Forensic Acquisition and Investigation in AWS
 
-Cado backs up any imports to S3 which can then be re-imported later to a fresh instance. This is the simplest method for backups.
+/ Forensic Acquisition and Investigation backs up any imports to S3 which can then be re-imported later to a fresh instance. This is the simplest method for backups.
 You will need to restore the data volume if you want to recover user settings such as user logins, and processed data.
 
 ## Backup and Recovery for self hosted deployments
-This section explains how to recover or migrate the Cado platform to a new instance.
+This section explains how to recover or migrate the platform to a new instance.
 
-If a Cado instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
+If a / Forensic Acquisition and Investigation instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
 
-You can also use this approach to migrate Cado to a new availability zone or region.
+You can also use this approach to migrate / Forensic Acquisition and Investigation to a new availability zone or region.
 
 ### Scheduling Automated Backups of the Data Volume
 Amazon EBS Snapshots are stored by AWS in Amazon S3, where it is stored redundantly in multiple Availability Zones.
@@ -29,7 +29,7 @@ You can create an **[EventBridge](https://us-west-2.console.aws.amazon.com/event
 For more, see **[this tutorial](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-snapshot.html)** from AWS.
 
 ### Restoring the Data Volume 
-To perform a migration or restoration to a new instance, deploy a fresh Cado installation (from Cloudformation, Terraform etc.) and stop the Cado Main VM/EC2 instance that will start as part of the new deployment.
+To perform a migration or restoration to a new instance, deploy a fresh / Forensic Acquisition and Investigation installation (from Cloudformation, Terraform etc.) and stop the Main VM/EC2 instance that will start as part of the new deployment.
 
 :::warning
 This will need to be a new deployment, rather than just starting a new EC2 from e.g. an AMI. Creating an AMI snapshot from the Cado main VM and starting a new EC2 from that AMI will not work, and the platform will enter an unreliable state.
@@ -41,12 +41,12 @@ The operating system volume will be smaller (typically 10 GB). Detach the larger
 
 ![AWS Backup 4](/img/aws-backup-4.png)
 
-Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)** the Snapshot backup of your old Cado installation to a Volume in the same availability zone as your new Cado EC2 Instance.
+Next, **[restore](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)** the Snapshot backup of your old Cado installation to a Volume in the same availability zone as your new / Forensic Acquisition and Investigation EC2 Instance.
 
 ![AWS Backup 5](/img/aws-backup-5.png)
 
 Then, simply **[attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)** the restored Data Volume to your new Cado EC2 Instance and start it.
 
 
-### Deploying with a non-Cado owned AMI
-In order to prevent incorrect operation, the platform checks to confirm if the AMI is owned by Cado and will not start if this check fails, with the error "Cannot run Cado Response in a non-Cado Response image" in the logs. If you require running a non-Cado supplied AMI, please contact support for details on how to override this safety setting.
+### Deploying with a non / Forensic Acquisition and Investigation owned AMI
+In order to prevent incorrect operation, the platform checks to confirm if the AMI is owned by / Forensic Acquisition and Investigation and will not start if this check fails, with the error "Cannot run Cado Response in a non-Cado Response image" in the logs. If you require running a non / Forensic Acquisition and Investigation supplied AMI, please contact support for details on how to override this safety setting.
