@@ -6,11 +6,11 @@ sidebar_position: 6
 
 # Cado Security - Required Azure Permissions
 
-Cado Security requires specific permissions to be granted in your Azure environment to function correctly. The permissions described here are based on the [Cado Security Azure Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/azure/azure_persistent/main.tf). Please refer to this link for the latest and most detailed information regarding required permissions.
+Cado Security requires specific permissions to be granted in your Azure environment to function correctly.
 
+The permissions described on this page are for the deployment and are based on the [Cado Security Azure Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/azure/azure_persistent/main.tf). Please refer to this link for the latest and most detailed information regarding required permissions.
 
-If these permissions are too broad for your environment, or if you have concerns regarding the scope of any permissions, please contact our support team at [support@cadosecurity.com](mailto:support@cadosecurity.com) for assistance in reducing the permission set while maintaining necessary functionality.
-
+Please view [this page](/cado/deploy/azure/azure-scoping) for details on permissions required for importing from subscriptions.
 
 ## Required Permissions
 
