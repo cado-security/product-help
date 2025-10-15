@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # NFS
 
-The initial minimal deployment deploys without a Network File Share (NFS). Enabling an NFS allows Cado to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+The initial minimal deployment deploys without a Network File Share (NFS). Enabling an NFS allows Darktrace to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ The initial minimal deployment deploys without a Network File Share (NFS). Enabl
 
 | Type | Port  | Source | Reason                    |
 |----|-------|----------|---------------------------|
-| Custom TCP | 2049  | Custom -  Your Cado security group      | Communicating with NFS    |
+| Custom TCP | 2049  | Custom -  Your / Forensic Acquisition and Investigation security group      | Communicating with NFS    |
 
 2. Navigate to the EFS page in AWS Console
 3. Click “**Create file system**”
