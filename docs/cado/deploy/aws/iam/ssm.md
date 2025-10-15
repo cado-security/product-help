@@ -1,6 +1,6 @@
 # How to Tighten IAM Permissions for SSM in AWS
 
-The Cado platform leverages AWS Systems Manager (SSM) to perform live captures of AWS EC2 systems. This provides a faster alternative to full disk acquisitions and allows the collection of process memory. Additionally, Cado uses SSM for executing commands on SSM-enabled systems during investigations. However, the default IAM permissions might be too broad for environments with stricter security requirements, as it grants the platform permission to execute any command on all SSM-enabled systems.
+The / Forensic Acquisition and Investigation platform leverages AWS Systems Manager (SSM) to perform live captures of AWS EC2 systems. This provides a faster alternative to full disk acquisitions and allows the collection of process memory. Additionally, / Forensic Acquisition and Investigation uses SSM for executing commands on SSM-enabled systems during investigations. However, the default IAM permissions might be too broad for environments with stricter security requirements, as it grants the platform permission to execute any command on all SSM-enabled systems.
 
 ## Default Permissions
 
