@@ -44,10 +44,10 @@ The service account itself will need to have the following roles:
     | `image` | The link of the image provided by Sales or the [public release URL](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) | `https://www.googleapis.com/compute/v1/projects/cado-public/global/images/cadoresponse-xxx` |
     | `tags` | Tags to be applied to your Cado instance | `{tag1 = "cado-test"}` |
     | `vm_size` | Size of main instance | `n2-standard-16` |
-    | `vol_size` | Size of main instance local disk in GB | This value is dependent on the amount of data you will be processing into the Cado platform. Please speak with the sales or support team for proper sizing. |
+    | `vol_size` | Size of main instance local disk in GB | 100GB Recommended. Preservation data is stored on the Filestore.  |
     | `allowed_ips` | List of incoming IPs  | `[“1.2.3.6/32”]` |
     :::tip
-     We recommend a minimum setting of 500GB for `vol_size`. The instance will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space.
+     The Filestore minimum size is 1024GB. The platform will roughly need to be sized to be 20% of the amount of data you intend to be on the platform at once. For example, to have 5TB of disk images imported you will need approximately 1000GB of disk space. Projects can always be deleted to recover space. `capacity_gb` is the setting to change this.
     :::
 10. Deploy by running the following commands in the directory `gcp/`
     `terraform init` followed by `terraform plan -var-file=gcpVars.tfvars`.  Once you confirm the plan looks correct, you can then run `terraform apply -var-file=gcpVars.tfvars`
