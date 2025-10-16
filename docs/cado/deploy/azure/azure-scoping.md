@@ -5,6 +5,10 @@ sidebar_position: 3
 ---
 
 # Minimal Permissions for cross account imports
+This page describes the permissions required to import data from a subscription.
+
+Please view [this page](/cado/deploy/azure/iam-description) for details on permissions required for the core deployment.
+
 By default, the Cado platform uses Azure contributor roles for cross-account permissions, it is possible to use custom roles to granularly scope the permissions required.
 
 ## Valid Scopes
