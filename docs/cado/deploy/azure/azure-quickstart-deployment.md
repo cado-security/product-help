@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Minimal Deployment Guide
 
-This guide provides step-by-step instructions for deploying a Cado instance from the Azure console, aimed at helping you get up and running with the platform as quickly as possible
+This guide provides step-by-step instructions for deploying a / Forensic Acquisition and Investigation instance from the Azure console, aimed at helping you get up and running with the platform as quickly as possible
 
 The initial deployment offers a basic working environment; however, certain functionalities are not included. Refer to the ‘Extensions’ section for details on missing features and instructions on how to add them.
 
@@ -40,7 +40,7 @@ You can add a role assignment to a managed identity by following these steps:
 
 ### Instructions
 
-1. Open the “Community Images” service in Azure.Then, filter the images by the Cado public gallery name (CadoPlatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1) to list all the Cado images available for deployment.
+1. Open the “Community Images” service in Azure.Then, filter the images by the / Forensic Acquisition and Investigation public gallery name (CadoPlatform-1a38e0c7-afa4-4e0d-9c56-433a12cd67b1) to list all the / Forensic Acquisition and Investigation images available for deployment.
 
 ![Community Image](/img/community-image.png)
 
@@ -126,13 +126,13 @@ echo -n "<CLIENT_SECRET>" | sudo tee -a /home/admin/processor/envars/AZURE_CLIEN
 
 #### Workers
 
-The initial deployment uses a single Compute instance, limiting imports to Cado Host captures and restricting simultaneous evidence processing to ensure stability. Additional Compute instances are required to process more data or multiple evidence items concurrently.
+The initial deployment uses a single Compute instance, limiting imports to / Forensic Acquisition and Investigation Host captures and restricting simultaneous evidence processing to ensure stability. Additional Compute instances are required to process more data or multiple evidence items concurrently.
 
 To enable **Workers** follow the workers document - [Enable Workers](https://docs.cadosecurity.com/cado/deploy/azure/azure-workers)
 
 #### Secret Manager
 
-The initial deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in Azure Key Vault.
+The initial deployment stores the key used to encrypt secrets in / Forensic Acquisition and Investigation locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in Azure Key Vault.
 
 To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/azure/azure-secret-manager)
 
