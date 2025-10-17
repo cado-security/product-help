@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# What Azure Endpoints Does the Cado Platform Require Access To?
+# What Azure Endpoints Does the Platform Require Access To?
 
-The Cado platform requires access to the following Azure endpoints:
+The platform requires access to the following Azure endpoints:
 
 ### Azure Resource Manager
 - **Provider APIs**: `https://management.azure.com/`
