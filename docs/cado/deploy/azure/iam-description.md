@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 6
 ---
 
-# Cado Security - Required Azure Permissions
+# / Forensic Acquisition and Investigation - Required Azure Permissions
 
-Cado Security requires specific permissions to be granted in your Azure environment to function correctly.
+/ Forensic Acquisition and Investigation requires specific permissions to be granted in your Azure environment to function correctly.
 
 The permissions described on this page are for the deployment and are based on the [Cado Security Azure Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/azure/azure_persistent/main.tf). Please refer to this link for the latest and most detailed information regarding required permissions.
 
@@ -14,10 +14,10 @@ Please view [this page](/cado/deploy/azure/azure-scoping) for details on permiss
 
 ## Required Permissions
 
-The following Azure roles and permissions are required for Cado Security deployment:
+The following Azure roles and permissions are required for / Forensic Acquisition and Investigation deployment:
 
 1. **Resource Group**  
-   - The resource group will host the infrastructure for Cado Security.
+   - The resource group will host the infrastructure for / Forensic Acquisition and Investigation.
    - **Permission**: `Contributor` on the resource group.
 
 2. **Network Permissions**
@@ -41,7 +41,7 @@ The following Azure roles and permissions are required for Cado Security deploym
    - **Permission**: `Azure Kubernetes Service Cluster Admin Role` at the subscription level (optional, depending on configuration).
 
 7. **Identity Permissions**
-   - A managed identity will be created to run Cado Security operations.
+   - A managed identity will be created to run / Forensic Acquisition and Investigation operations.
    - **Permission**: `Contributor` role for the managed identity within the resource group.
 
 ## Optional Permissions
