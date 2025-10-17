@@ -4,13 +4,13 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to deploy Cado in Azure with Terraform
+# How to deploy / Forensic Acquisition and Investigation in Azure with Terraform
 
-To set up Cado in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
+To set up / Forensic Acquisition and Investigation in Azure you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 
-If you are working with the Cado Sales team already, you should receive the following pieces of information:
-- a link to the Cado image
-- the latest Cado Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
+If you are working with the / Forensic Acquisition and Investigation Sales team already, you should receive the following pieces of information:
+- a link to the / Forensic Acquisition and Investigation image
+- the latest / Forensic Acquisition and Investigation Terraform module (**azure.zip**) for deploying into Azure, or clone from https://github.com/cado-security/Deployment-Templates/tree/main/azure
 
 If you have not received the above items, reach out to sales@cadosecurity.com for more details or retrieve from our [public update information](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json).
 Once you receive them, continue on to the steps below.
@@ -19,7 +19,7 @@ Once you receive them, continue on to the steps below.
 
 2. **[Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)**, if you have not already.
 
-3. Run 'az login'. The account you log in with will be used to deploy.  You should store the Cado VHD in your local Azure container for this account as well.
+3. Run 'az login'. The account you log in with will be used to deploy.  You should store the / Forensic Acquisition and Investigation VHD in your local Azure container for this account as well.
 
     :::tip
     If you have multiple Subscriptions, please ensure you set the Subscription properly prior to beginning the deployment, as outlined here:  
@@ -34,7 +34,7 @@ Once you receive them, continue on to the steps below.
     - Storage Queue Data Reader
     :::
 
-6. Extract `azure.zip`  This is the ZIP that was provided by Cado Sales
+6. Extract `azure.zip`  This is the ZIP that was provided by / Forensic Acquisition and Investigation Sales
 
 7. Change directories into `azure/cado` which was extracted in the previous step.
 
@@ -97,11 +97,11 @@ module.cado_scalable.azurerm_linux_virtual_machine.vm (remote-exec): public_ip =
 module.cado_scalable.azurerm_linux_virtual_machine.vm: Creation complete after 1m53s [id=/subscriptions/2f34c608-91b5-4d14-ac36-b8e0377fbcca/resourceGroups/new_res_three/providers/Microsoft.Compute/virtualMachines/cado-main-vm]
 ```
 
-The Resource ID can also be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the Cado VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
+The Resource ID can also be found within your Azure Portal by navigating to `Home > Virtual Machines`, clicking on the / Forensic Acquisition and Investigation VM name, then clicking `Properties` on the left navigation bar.  Scroll down to find the `Resource ID`.
 
 It will take about 20 minutes to deploy, then you can **[Log into Cado](/cado/deploy/logging-in)** 
 
-11. Login to the Cado Platform with:
+11. Login to the / Forensic Acquisition and Investigation Platform with:
 
     **Username:** admin
     **Password:** The long resource ID that can be found by opening the VM in the Azure portal > Settings > Properties > Resource ID starting with /subscription/... ending with /subscription/.../VM NAME
@@ -110,8 +110,8 @@ It will take about 20 minutes to deploy, then you can **[Log into Cado](/cado/de
 After deployment, you can import Test Data from the `Help` menu to confirm that the deployment was successful.
 :::
 
-### Renaming the Cado Instance
-When deploying, the main Cado instance will have the name `CadoResponse`.  If you rename your Cado instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
+### Renaming the / Forensic Acquisition and Investigation Instance
+When deploying, the main / Forensic Acquisition and Investigation instance will have the name `CadoResponse`.  If you rename your instance, please ensure the name **starts with** `CadoResponse`, otherwise the default update mechanism may not work properly due to how permissions are configured.
 :::
 
 
