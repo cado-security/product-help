@@ -3,17 +3,17 @@ title: Cross Account Overview
 hide_title: true
 sidebar_position: 1
 ---
-# How do cross cloud imports work in Cado?
+# How do cross cloud imports work in / Forensic Acquisition and Investigation?
 
-Cado allows you to import data across different cloud environments, meaning that you can deploy Cado in one cloud (AWS, Azure, or Google Cloud) and import data from another. This is referred to as **cross-cloud** importing.
+/ Forensic Acquisition and Investigation allows you to import data across different cloud environments, meaning that you can deploy / Forensic Acquisition and Investigation in one cloud (AWS, Azure, or Google Cloud) and import data from another. This is referred to as **cross-cloud** importing.
 
-In a cross-cloud setup, Cado can seamlessly acquire data from cloud environments other than where the platform is deployed, enabling flexible and comprehensive data collection across multiple cloud providers.
+In a cross-cloud setup, / Forensic Acquisition and Investigation can seamlessly acquire data from cloud environments other than where the platform is deployed, enabling flexible and comprehensive data collection across multiple cloud providers.
 
 ![Cross-Cloud Collection](/img/cross-cloud.png)
 
 ## Next Steps in AWS
 
-Cado supports multiple methods for configuring cross-account access in AWS:
+/ Forensic Acquisition and Investigation supports multiple methods for configuring cross-account access in AWS:
 
 - **AWS Organizations Integration (Recommended)**
   - [Using AWS Organizations](https://docs.cadosecurity.com/cado/deploy/cross/aws-organizations)
@@ -37,14 +37,14 @@ Cado supports multiple methods for configuring cross-account access in AWS:
 
 ## Next Steps in Azure
 
-Cado supports cross-tenancy investigations in Azure:
+/ Forensic Acquisition and Investigation supports cross-tenancy investigations in Azure:
 
 - [Adding Azure tenants](https://docs.cadosecurity.com/cado/deploy/cross/adding-azure)
 - [Cross-tenancy subscription access](https://docs.cadosecurity.com/cado/deploy/cross/azure-cross-tenancy-subscriptions)
 
 ## Next Steps in GCP
 
-Cado enables investigations across multiple GCP projects:
+/ Forensic Acquisition and Investigation enables investigations across multiple GCP projects:
 
 - [Adding GCP projects](https://docs.cadosecurity.com/cado/deploy/cross/adding-gcp)
 
