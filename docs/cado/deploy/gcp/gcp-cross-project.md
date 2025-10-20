@@ -32,7 +32,7 @@ This approach also works for adding permissions to Folders or Organizations. Sim
 
 # Project Selection
 
-Now in Cado, if the credentials of the service account are already in the platform after following the [Overview](/docs/cado/deploy/gcp/gcp-settings.md), when importing from GCP you will now have a selection of projects to choose from.
+Now in / Forensic Acquisition and Investigation, if the credentials of the service account are already in the platform after following the [Overview](/docs/cado/deploy/gcp/gcp-settings.md), when importing from GCP you will now have a selection of projects to choose from.
 
 ![GCP-Cado-Cross-Project](/img/gcp-cado-project-selection.png)
 
