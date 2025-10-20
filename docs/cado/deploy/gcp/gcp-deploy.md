@@ -3,9 +3,9 @@ title: GCP Full Terraform deployment
 hide_title: true
 sidebar_position: 1
 ---
-# How to deploy Cado in GCP with Terraform
+# How to deploy in GCP with Terraform
 
-To set up Cado in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
+To set up / Forensic Acquisition and Investigation in GCP you can deploy via our Terraform script.  The Terraform script automates the process of configuring the platform stack.
 Visit the GCP Marketplace listing **[here](https://console.cloud.google.com/marketplace/product/cado-public/cado-response)** or **[Github](https://github.com/cado-security/Deployment-Templates/tree/main/gcp)** to download the latest Terraform code.
 
 Once you have downloaded the Terraform code from the Marketplace listing above, continue on to the steps below.
@@ -30,7 +30,7 @@ The service account itself will need to have the following roles:
 
 5. Run `gcloud auth activate-service-account --key-file <key_file>` where key_file is the path to your GCP service account credentials.json. 
 6. Run `gcloud config set project <project_id>`
-7. Extract gcp.zip This is the ZIP that was provided by Cado Sales, or downloaded from the GCP Marketplace, or cloned from https://github.com/cado-security/Deployment-Templates/tree/main/gcp
+7. Extract gcp.zip This is the ZIP that was provided by / Forensic Acquisition and Investigation Sales, or downloaded from the GCP Marketplace, or cloned from https://github.com/cado-security/Deployment-Templates/tree/main/gcp
 
 8. Change directories into gcp/ which was extracted in the previous step.
 9. Customize the file `gcpVars.tfvars` by filling in values:
@@ -51,7 +51,7 @@ The service account itself will need to have the following roles:
     :::
 10. Deploy by running the following commands in the directory `gcp/`
     `terraform init` followed by `terraform plan -var-file=gcpVars.tfvars`.  Once you confirm the plan looks correct, you can then run `terraform apply -var-file=gcpVars.tfvars`
-11. Find your Cado instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
+11. Find your / Forensic Acquisition and Investigation instance in the [Compute Engine portal](https://console.cloud.google.com/compute/instances), navigate to its public IP address in the browser
 12. Login with:
     - Username: admin
     - Password: \<instance_id\> (found in the Compute Engine console for your instance e.g. 8784481508256766876)
