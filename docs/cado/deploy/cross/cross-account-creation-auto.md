@@ -12,7 +12,7 @@ More information on CloudFormation StackSets can be found here: [Working with AW
 
 ### How to add AWS Account
 
-The new AWS deployment method enables you to automatically onboard a cross-account role from the Cado UI, offering a more automated and streamlined experience.
+The new AWS deployment method enables you to automatically onboard a cross-account role from the / Forensic Acquisition and Investigation UI, offering a more automated and streamlined experience.
 
 1. In Settings go to the **Accounts** tab and click **Create an Account** then select **AWS**.
 
@@ -57,12 +57,12 @@ The new AWS deployment method enables you to automatically onboard a cross-accou
    ![Stacks5](/img/stacks5.png)
 
 :::tip
-After deploying the cross-account IAM roles, you will need to add the newly created Role ARN to the Cado platform. Follow the steps outlined [here](#step-2-add-the-target-aws-role-arn-to-the-cado-platform), or to automate this process, refer to [Automating Cado Cross-Account Creation](#automating-cado-cross-account-creation).
+After deploying the cross-account IAM roles, you will need to add the newly created Role ARN to the platform. Follow the steps outlined [here](#step-2-add-the-target-aws-role-arn-to-the-cado-platform), or to automate this process, refer to [Automating Cado Cross-Account Creation](#automating-cado-cross-account-creation).
 :::
 
-## Automating Cross-Account Addition in Cado
+## Automating Cross-Account Addition in / Forensic Acquisition and Investigation
 
-Once the cross-account IAM role is created, the next step is to add the IAM Role ARN to the Cado platform. This enables access to the target AWS accounts within Cado.
+Once the cross-account IAM role is created, the next step is to add the IAM Role ARN to the platform. This enables access to the target AWS accounts within Cado.
 
-To automate this process via the Cado API, see the example script for adding AWS credentials in the Cado platform:  
+To automate this process via the / Forensic Acquisition and Investigation API, see the example script for adding AWS credentials in the platform:  
 [Example API Script for Adding AWS Credentials](https://github.com/cado-security/cado-api-examples/blob/main/examples/saving_credentials.py).
