@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# What GCP Endpoints Does the Cado Platform Require Access To?
+# What GCP Endpoints Does the Platform Require Access To?
 
-The Cado platform requires access to the following GCP endpoints:
+The platform requires access to the following GCP endpoints:
 
 ### GCP Provider APIs
 - `https://cloudresourcemanager.googleapis.com`
