@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # How to automatically set up GCP for data collection
 
-To streamline the process of configuring your GCP environment ready for Cado, this page details how to use our GCP Setup Scripts.
+To streamline the process of configuring your GCP environment ready for / Forensic Acquisition and Investigation, this page details how to use our GCP Setup Scripts.
 :::note
 The actions in these scripts can take a few minutes to take effect, as such, it's best not to run them in quick succession.
 :::
@@ -15,7 +15,7 @@ The actions in these scripts can take a few minutes to take effect, as such, it'
 
 To make use of these scripts, it's best to upload them using the gcloud terminal. To do this, navigate to the GCP console and click the 'Activate Cloud Shell' button in the top-right corner.
 
-The scripts can be found in our **Cado GCP Scripts github**:
+The scripts can be found in our **/ Forensic Acquisition and Investigation GCP Scripts github**:
 https://github.com/cado-security/gcp-setup 
 
 <img src="/img/gcp-shell.png" alt="Cloud Shell" width="350"/>
@@ -26,7 +26,7 @@ Once they've been uploaded to your user area in the gcloud terminal, you can run
 
 ## Scripts
 ### Role Creation
-The first script in the series '**gcp_setup_1_role.sh**' will create a 'CadoGCPRole' role within the active project with scoped permissions for Cado to operate. If you want to create the role at the organization level for use across multiple projects, add the organization ID as a parameter.
+The first script in the series '**gcp_setup_1_role.sh**' will create a 'CadoGCPRole' role within the active project with scoped permissions for / Forensic Acquisition and Investigation to operate. If you want to create the role at the organization level for use across multiple projects, add the organization ID as a parameter.
 When the script finishes you should see the role ID printed, we will use this role ID in other scripts so it's best to save it somewhere.
 ```bash
 bash gcp_setup_1_role.sh <optional_organization_id>
