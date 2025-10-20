@@ -4,8 +4,8 @@ hide_title: true
 sidebar_position: 8
 ---
 
-# What is the Cado architecture in GCP?
-You can deploy the Cado platform within your GCP cloud environment via a Terraform Script. When you deploy the platform, it creates its own isolated network in which you can control who has access. From start to finish, you can be up and running in under 25 minutes.
+# What is the / Forensic Acquisition and Investigation architecture in GCP?
+You can deploy the platform within your GCP cloud environment via a Terraform Script. When you deploy the platform, it creates its own isolated network in which you can control who has access. From start to finish, you can be up and running in under 25 minutes.
 
 ![GCP Architecture](/img/gcp-architecture.png)
 This diagram is a simplified architecture, with options for alternate network access.
