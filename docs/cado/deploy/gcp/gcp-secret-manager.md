@@ -6,7 +6,7 @@ sidebar_position: 10
 
 # Secret Manager
 
-The initial minimal deployment stores the key used to encrypt secrets in Cado locally on the machine. Enabling a Secret Manager allows Cado to instead store the key in GCP Secret Manager.
+The initial minimal deployment stores the key used to encrypt secrets in / Forensic Acquisition and Investigation locally on the machine. Enabling a Secret Manager allows / Forensic Acquisition and Investigation to instead store the key in GCP Secret Manager.
 
 ### Prerequisites
 
