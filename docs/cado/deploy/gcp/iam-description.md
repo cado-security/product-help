@@ -4,25 +4,25 @@ hide_title: true
 sidebar_position: 6
 ---
 
-# What IAM permissions does Cado use in GCP?
+# What IAM permissions does / Forensic Acquisition and Investigation use in GCP?
 
 ## Introduction
 
-Cado Security requires specific permissions in Google Cloud Platform (GCP) to function correctly. This document outlines the permissions needed, categorized by their functionality. For the most up-to-date permissions, please refer to the [Cado Security GCP Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/gcp/modules/iam/main.tf).
+/ Forensic Acquisition and Investigation requires specific permissions in Google Cloud Platform (GCP) to function correctly. This document outlines the permissions needed, categorized by their functionality. For the most up-to-date permissions, please refer to the [Cado Security GCP Terraform Module](https://github.com/cado-security/Deployment-Templates/blob/main/gcp/modules/iam/main.tf).
 
 Please contact our support team at [support@cadosecurity.com](mailto:support@cadosecurity.com) if you have any queries on permissions.
 Please see [here](/cado/deploy/cross/adding-gcp) for permissions for import from GCP into a Cado deployment in Azure or AWS, as opposed to deploying and importing in GCP.
 
 ## Permissions Overview
 
-"Core Platform Operations Permissions" are required in the project where Cado is deployed.
+"Core Platform Operations Permissions" are required in the project where / Forensic Acquisition and Investigation is deployed.
 "Acquisition Permissions" are required in any project where you wish to import data from.
 
-### Core Platform Operations Permissions, in Cado Project
+### Core Platform Operations Permissions, in / Forensic Acquisition and Investigation Project
 
 #### Minimal Permissions to Run
 
-These are the essential permissions required for the Cado platform to start and operate when deployed in Google Cloud:
+These are the essential permissions required for the platform to start and operate when deployed in Google Cloud:
 
 - `iam.serviceAccounts.actAs` - Allows a user or service to impersonate a service account. This is required to attach a service account to a resource like a VM.
 - `iam.serviceAccounts.get` - Grants permission to view metadata about a service account, such as its display name, description, and unique ID.
@@ -55,7 +55,7 @@ Permissions for modifying compute resource settings:
 
 #### Upgrade Permissions
 
-Required for upgrading Cado Security components:
+Required for upgrading / Forensic Acquisition and Investigation components:
 
 - `compute.disks.create` - Create new persistent disks.
 - `compute.instances.attachDisk` – Attach an existing disk to a VM.
@@ -126,7 +126,7 @@ Permissions related to Google Kubernetes Engine (GKE) clusters:
 
 #### Cado Host Permissions
 
-Permissions related to the Cado Host operations:
+Permissions related to the / Forensic Acquisition and Investigation Host operations:
 
 - `iam.serviceAccounts.signBlob` - Sign a blob of data digitally.
 
