@@ -4,13 +4,13 @@ hide_title: true
 sidebar_position: 2
 ---
 
-# How to set up GCP for collection of data by Cado
+# How to set up GCP for collection of data by / Forensic Acquisition and Investigation
 
-You can acquire compute and storage resources from GCP with the Cado platform by 
+You can acquire compute and storage resources from GCP with the platform by 
 
-1. Setting up the primary GCP project for Cado collection
+1. Setting up the primary GCP project for / Forensic Acquisition and Investigation collection
 2. Setting up a Service Account in GCP
-3. Entering credentials into Cado
+3. Entering credentials into / Forensic Acquisition and Investigation
 
 The below guide walks through this process.
 
@@ -18,18 +18,18 @@ The below guide walks through this process.
 This setup can be automated using our [GCP Automated Setup](./gcp-auto-setup.md)
 :::
 
-## Setting up the Primary Google Project for Cado collection
-In order to set up the project for Cado collection you need to
+## Setting up the Primary Google Project for / Forensic Acquisition and Investigation collection
+In order to set up the project for / Forensic Acquisition and Investigation collection you need to
 
 * Enable the Cloud Build API for the project 
-* Define a bucket for the Primary GCP Project where images will be stored and imported into Cado.
+* Define a bucket for the Primary GCP Project where images will be stored and imported into / Forensic Acquisition and Investigation.
 
 ***Note - if you are importing from more than one Google project you will need to designate one of those projects as the Primary GCP Project and [create a bucket in that project](./gcp-settings.md#defining-a-bucket-for-the-primary-gcp-project) to enable collection across the multiple Google projects***
 
-### The Cado Role
-To appropriately scope a service account for Cado to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section under the **IAM and Admin** tab. Create a custom role and add the following permissions:
+### The / Forensic Acquisition and Investigation Role
+To appropriately scope a service account for / Forensic Acquisition and Investigation to operate, creating a custom GCP role allows specifying individual permissions. To achieve this, navigate to the **Role** section under the **IAM and Admin** tab. Create a custom role and add the following permissions:
 :::note
-If you're deploying into GCP, the Terraform script provided by Cado should have already created this role for you, prefixed with **myCadoResponseRole**.
+If you're deploying into GCP, the Terraform script provided by / Forensic Acquisition and Investigation should have already created this role for you, prefixed with **myCadoResponseRole**.
 :::
 ```
     // Instance Acquisition
@@ -140,11 +140,11 @@ Next, you need to set up a Service Account in GCP. For information on how to do 
 * https://cloud.google.com/iam/docs/service-accounts
 
 ### Required Access
-Both the Cado service account and the service account for the Cloud API need the custom role's permissions 'Custom -> \<role_name\>' role:
+Both the / Forensic Acquisition and Investigation service account and the service account for the Cloud API need the custom role's permissions 'Custom -> \<role_name\>' role:
 
 ![Custom Role](/img/gcp-custom-role.png)
 
-To import GKE containers, the Cado service account also needs the `iam.serviceAccounts.implicitDelegation` IAM permission.
+To import GKE containers, the / Forensic Acquisition and Investigation service account also needs the `iam.serviceAccounts.implicitDelegation` IAM permission.
 
 
 ### Getting GCP Credentials
@@ -155,12 +155,12 @@ Any time a user then attempts to access that particular GCP project name, the cr
 
 There are two ways to achieve this:
 
-1. **Service Account Credentials** - this is a simpler but less secure approach. *Note - Cado running in Azure only supports the use of Service Account Credentials*
+1. **Service Account Credentials** - this is a simpler but less secure approach. *Note - / Forensic Acquisition and Investigation running in Azure only supports the use of Service Account Credentials*
 2. **Workload Identity Federation** - This requires more expertise but is the recommended, more secure approach.
 
 #### Service Account Credentials
 
-The simplest method to add GCP credentials to Cado is to use a service account, which will give you a permanent key. These are very sensitive credentials but they are easy to manage and simple to set up. Adding GCP credentials for service accounts is supported by Cado when deployed in both AWS and Azure.
+The simplest method to add GCP credentials to / Forensic Acquisition and Investigation is to use a service account, which will give you a permanent key. These are very sensitive credentials but they are easy to manage and simple to set up. Adding GCP credentials for service accounts is supported by / Forensic Acquisition and Investigation when deployed in both AWS and Azure.
 
 GCP credentials come in a json format that wraps around a ‘regular’ credential. It can be treated as functionally no different to how you would handle any type of password or key.
 
@@ -181,9 +181,9 @@ For example, a service account key would come in a structure such as the below. 
 
 #### Workload Identity Federation (Optional)
 
-The GCP recommended best practice, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note: Cado running in Azure does not support Workload Identity Federation credentials to import from GCP*
+The GCP recommended best practice, is to use Workload Identity Federation, which allows credentials from another app to impersonate a GCP account. *Note: / Forensic Acquisition and Investigation running in Azure does not support Workload Identity Federation credentials to import from GCP*
 
-Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for Cado when deployed in AWS.
+Workload Identity Federation is more secure since the credentials are nothing but metadata telling the app where to go, while the validation is handled on the server side. Adding GCP credentials via Workload Identity Federation is currently only supported for / Forensic Acquisition and Investigation when deployed in AWS.
 
 Rather than give out the key to a service account, you instead register the permission with GCP to allow AWS credentials for account `123` to act as if they were the given GCP service account.
 
@@ -214,7 +214,7 @@ For more information about GCP Workload Identity Federation see:
 * https://cloud.google.com/iam/docs/workload-identity-federation
 
 ## Entering Settings
-You can add GCP Credentials to Cado in the **Settings > Cloud > GCP** page.
+You can add GCP Credentials to / Forensic Acquisition and Investigation in the **Settings > Cloud > GCP** page.
 You will be asked for a "GCP Project Name" and the "GCP Credentials". These credentials will be a JSON either directly containing the service account credentials, or the Workload Identity Federation credentials 
 
 ![GCP Credentials](/img/gcp-credentials.png)
