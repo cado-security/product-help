@@ -1,14 +1,14 @@
 ---
-title: Automatically add cross-account roles to Cado with AWS Organizations
+title: Automatically add cross-account roles to / Forensic Acquisition and Investigation with AWS Organizations
 hide_title: true
 sidebar_position: 5
 ---
 
-# How to automatically add cross-account roles to Cado with AWS Organizations
+# How to automatically add cross-account roles to / Forensic Acquisition and Investigation with AWS Organizations
 
-This guide will walk you through how to integrate AWS roles into the Cado platform using AWS Organizations.
+This guide will walk you through how to integrate AWS roles into the platform using AWS Organizations.
 
-This is the recommended way to add cross-account roles you have deployed to the Cado Platform, to enable the platform to import data from multiple AWS accounts.
+This is the recommended way to add cross-account roles you have deployed to the Platform, to enable the platform to import data from multiple AWS accounts.
 
 Alternatively, you can use the [Cado API](/cado/deploy/cross/cross-account-creation-api) to add cross-account roles to the platform.
 
@@ -17,12 +17,12 @@ Alternatively, you can use the [Cado API](/cado/deploy/cross/cross-account-creat
 Before starting, ensure that you have the following in place:
 - **AWS Organizations** configured with multiple AWS accounts under a single management account.
 - **IAM roles** with the necessary cross-account permissions applied to all AWS accounts using [AWS StackSets](/cado/deploy/cross/cross-account-creation-auto) or [manual deployment](/cado/deploy/cross/cross-account-creation).
-- **Cado Platform Access**, specifically with admin rights to manage cloud accounts.
+- **/ Forensic Acquisition and Investigation Access**, specifically with admin rights to manage cloud accounts.
 
 
 ### 1. **Setting Permissions for Account Discovery**
 
-The [ListAccounts](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListAccounts.html) operation is used by Cado to retrieve a list of all accounts within your organization. It can only be executed from the management account of the AWS Organization.
+The [ListAccounts](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListAccounts.html) operation is used by / Forensic Acquisition and Investigation to retrieve a list of all accounts within your organization. It can only be executed from the management account of the AWS Organization.
 
 For the code to function correctly, the IAM role used for discovery must have the necessary permissions to list accounts in AWS Organizations. Here’s a minimal example of an IAM policy:
 
@@ -43,15 +43,15 @@ For the code to function correctly, the IAM role used for discovery must have th
 }
 ```
 
-This policy must be attached to the role that the Cado platform will assume.
+This policy must be attached to the role that the platform will assume.
 
-The ListAccounts permission should be set in the root account, and the Cado role (or a role that has trust with the Cado role) should be allowed to assume it.
+The ListAccounts permission should be set in the root account, and the / Forensic Acquisition and Investigation role (or a role that has trust with the / Forensic Acquisition and Investigation role) should be allowed to assume it.
 
 
 
-### 2. **Select List Accounts Role in Cado**
+### 2. **Select List Accounts Role in / Forensic Acquisition and Investigation**
 
-To enable cross-account discovery on the Cado platform, follow these steps:
+To enable cross-account discovery on the platform, follow these steps:
 
 - Go to **Settings > Accounts** and click **Create an account**.
 - Select **AWS** from the set of providers.
@@ -60,7 +60,7 @@ To enable cross-account discovery on the Cado platform, follow these steps:
 
 You will need to select the role containing the organizations:ListAccounts permission to the platform via Settings > Accounts. This role should have a [trust policy](/cado/deploy/aws/iam/iam-description#using-an-existing-iam-role) allowing the CadoResponseRole to assume it, and added to the platform manually via Settings > Accounts.
 
-The dropdown will only list roles that have been added to the platform. Since Cado validates the roles before adding them, all roles shown should be assumable by the CadoResponseRole.
+The dropdown will only list roles that have been added to the platform. Since / Forensic Acquisition and Investigation validates the roles before adding them, all roles shown should be assumable by the CadoResponseRole.
 
 An example is below:
 
@@ -70,7 +70,7 @@ An example is below:
 ### 3. **Set Cross-Account IAM Role**
 
 
-Next, configure the cross-account IAM role that the Cado platform will use to interact with other accounts:
+Next, configure the cross-account IAM role that the / Forensic Acquisition and Investigation platform will use to interact with other accounts:
 
 - Enter the role name (e.g., `CadoResponseRole`) in the `Cross Account IAM Role Name` field.
 - Click `Discover accounts` to trigger the discovery process using the provided role.
@@ -91,4 +91,4 @@ The pipeline to add accounts will then execute, and can be monitored in the pipe
 
 ## Performing Account Checks
 
-Once the accounts are added to the Cado platform, it's recommended to regularly run Account Checks to ensure the necessary permissions are still in place for acquisitions. For details on running these checks, refer to [Account Check](/cado/manage/monitoring#account-check).
+Once the accounts are added to the / Forensic Acquisition and Investigation platform, it's recommended to regularly run Account Checks to ensure the necessary permissions are still in place for acquisitions. For details on running these checks, refer to [Account Check](/cado/manage/monitoring#account-check).
