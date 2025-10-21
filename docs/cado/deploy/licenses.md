@@ -10,10 +10,10 @@ This section is not relevant to SaaS deployments.
 
 
 # How to get and apply a license
-In order to use the Cado platform, you must upload a valid license.  
+In order to use the / Forensic Acquisition and Investigation platform, you must upload a valid license.  
 
 If you have received a license file from your Sales representative, you can upload it by:
-- Logging into your Cado instance
+- Logging into your / Forensic Acquisition and Investigation instance
 - Navigate to **Settings**
 - Click the **License** tab
 - Click **Select file**, choose the new license file 
