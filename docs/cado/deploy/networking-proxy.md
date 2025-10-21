@@ -11,15 +11,15 @@ This section is not relevant to SaaS deployments.
 
 # How to set up proxy access
 
-Cado supports the use of proxies for communication between the Cado platform and services external to the environment in which you have deployed the Cado platform. This can include:
+/ Forensic Acquisition and Investigation supports the use of proxies for communication between the / Forensic Acquisition and Investigation platform and services external to the environment in which you have deployed the / Forensic Acquisition and Investigation platform. This can include:
 
 * Cross-cloud acquisitions
 * XDR-based acquisitions
 * Importing from a URL
 * System updates
-* Providing diagnostic information to Cado
+* Providing diagnostic information to / Forensic Acquisition and Investigation
 
-Cado supports proxy authentication using basic HTTP and server certificate TLS authentication.
+/ Forensic Acquisition and Investigation supports proxy authentication using basic HTTP and server certificate TLS authentication.
 
 ## Configure Proxy Access during installation
 Please see the relevant deployment page, on how to configure proxy settings during installation by setting the proxy and proxy cert URL parameters.
@@ -39,8 +39,8 @@ To test these settings, click the *Test proxy settings* button.
 Settings will only be applied after the next system upgrade
 :::
 
-## Skipping SSL Verification in Cado Host Uploads
-Some MITM Proxies will present an invalid certificate, and prevent Cado Host (and other import methods which utilise Cado Host such as XDR integrations and Kubernetes acquisitions) from uploading data to cloud storage.
+## Skipping SSL Verification in / Forensic Acquisition and Investigation Host Uploads
+Some MITM Proxies will present an invalid certificate, and prevent / Forensic Acquisition and Investigation Host (and other import methods which utilise / Forensic Acquisition and Investigation Host such as XDR integrations and Kubernetes acquisitions) from uploading data to cloud storage.
 
-To skip SSL verification in Cado Host uploads, check the box under Settings > Advanced > Cado Host (Skip SSL Verification):
+To skip SSL verification in / Forensic Acquisition and Investigation Host uploads, check the box under Settings > Advanced > / Forensic Acquisition and Investigation Host (Skip SSL Verification):
 ![Proxy Setting](/img/skip_ssl.png)
