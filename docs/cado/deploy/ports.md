@@ -8,10 +8,10 @@ sidebar_position: 8
 This section is not relevant to SaaS deployments.
 :::
 
-# What ports and network encryption does the Cado platform use?
+# What ports and network encryption does the / Forensic Acquisition and Investigation platform use?
 
-The following ports are required to be open within the VPC or VNet in which the Cado platform is deployed.
-Note that these ports are allowed by the default Cado Security Group or Network Security Group. 
+The following ports are required to be open within the VPC or VNet in which the platform is deployed.
+Note that these ports are allowed by the default / Forensic Acquisition and Investigation Security Group or Network Security Group. 
 
  
 | Port | Service | Description |
