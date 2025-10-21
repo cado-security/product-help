@@ -6,10 +6,10 @@ sidebar_position: 5
 
 # Deployment Overview
 
-## What does a Cado deployment consist of?
-At its core, a Cado deployment consists of:
+## What does a / Forensic Acquisition and Investigation deployment consist of?
+At its core, a / Forensic Acquisition and Investigation deployment consists of:
 - Infrastructure - A core virtual machine that permanently runs
-- Cado account/subscription/project role - Permissions to manage the main virtual machine, and start worker virtual machines if used.
+- / Forensic Acquisition and Investigation account/subscription/project role - Permissions to manage the main virtual machine, and start worker virtual machines if used.
 - Cross-account role - Permissions to copy data into the main account.
 Architecture diagrams are available for [AWS](/cado/deploy/aws/architecture), [Azure](/cado/deploy/azure/azure-architecture) and [GCP](/cado/deploy/gcp/gcp-architecture).
 
