@@ -11,7 +11,7 @@ In complex cloud environments, setting up long-term roles with access often requ
 ### Steps to Access AWS with a Temporary Security Token
 
 1. **Select AWS Security Token**  
-   In the Cado platform, go to **Import** > **AWS** > **Security Token**.
+   In the / Forensic Acquisition and Investigation platform, go to **Import** > **AWS** > **Security Token**.
 
    ![Security Token](/img/security-token.png)
 
