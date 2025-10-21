@@ -1,5 +1,5 @@
 ---
-title: Tagging Cado resources
+title: Tagging / Forensic Acquisition and Investigation resources
 hide_title: true
 sidebar_position: 9
 ---
@@ -8,7 +8,7 @@ sidebar_position: 9
 This section is not relevant to SaaS deployments.
 :::
 
-# How to tag Cado resources
+# How to tag / Forensic Acquisition and Investigation resources
 
 You also have the option to have workers tagged when they are launched.  This can be done by specifying the **Tag Key** and **Tag Value** which will be assigned when workers are launched. If you wish to apply more than one tag to workers, please see the below options.
 
