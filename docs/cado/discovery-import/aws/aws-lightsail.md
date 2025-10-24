@@ -6,7 +6,7 @@ sidebar_position: 8
 
 # How to Import AWS Lightsail
 
-To import a Lightsail instance into the Cado platform, follow these steps:
+To import a Lightsail instance into the / Forensic Acquisition and Investigation platform, follow these steps:
 
 1. **Create a Snapshot**  
    First, create a snapshot of the Lightsail instance you want to import.  
