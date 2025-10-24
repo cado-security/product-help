@@ -6,7 +6,7 @@ sidebar_position: 0
 
 # Import Overview
 
-The Cado platform provides multiple ways to bring evidence into an **Investigation**—from cloud services and Kubernetes to endpoint triage and third‑party images—and will automatically process it according to your Processing Settings.
+The / Forensic Acquisition and Investigation platform provides multiple ways to bring evidence into an **Investigation**—from cloud services and Kubernetes to endpoint triage and third‑party images—and will automatically process it according to your Processing Settings.
 
 This section helps you choose the right import method for your use case, understand prerequisites, and jump straight to the how‑to guides.
 
@@ -27,8 +27,8 @@ This section helps you choose the right import method for your use case, underst
 | Import from GCP Storage | [GCP: Cloud Storage](https://docs.cadosecurity.com/cado/discovery-import/gcp/storage) | Upload via Console or OAuth 2.0 desktop tools. |
 | Container acquisitions (generic) | [Kubernetes](https://docs.cadosecurity.com/cado/discovery-import/kubernetes) | Control‑plane acquisition, RBAC requirements, and sidecar/debug flows. |
 | Google Kubernetes | [GKE](https://docs.cadosecurity.com/cado/discovery-import/gcp/kubernetes-engine) | Guided container import for GKE. |
-| Triage with Cado Host | [What is Cado Host](https://docs.cadosecurity.com/cado/discovery-import/cado-host/intro) | Overview of endpoint triage collections and upload targets. |
-| Deploy Cado Host | [Deploy Cado Host](https://docs.cadosecurity.com/cado/discovery-import/cado-host/deploy) | Launch from the UI or run standalone. |
+| Triage with / Forensic Acquisition and Investigation Host | [What is Cado Host](https://docs.cadosecurity.com/cado/discovery-import/cado-host/intro) | Overview of endpoint triage collections and upload targets. |
+| Deploy / Forensic Acquisition and Investigation Host | [Deploy Cado Host](https://docs.cadosecurity.com/cado/discovery-import/cado-host/deploy) | Launch from the UI or run standalone. |
 | See collected items | [Collected artifacts](https://docs.cadosecurity.com/cado/discovery-import/cado-host/artifacts) | Default artifacts by OS and customization options. |
 | Import other tool outputs | [Third‑party disk images & triage](https://docs.cadosecurity.com/cado/discovery-import/third-party) | Work with traditional forensic capture tools. |
 | Automate after alerts | [Automating collection from detections](https://docs.cadosecurity.com/cado/discovery-import/automation) | Defender/CrowdStrike/GuardDuty/Wiz flows and response actions. |
