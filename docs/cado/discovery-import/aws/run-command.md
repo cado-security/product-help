@@ -6,9 +6,9 @@ sidebar_position: 11
 
 # AWS EC2 Run Command
 
-Cado allows you to execute scripts on target systems using the **Run Command** feature in the import wizard.
+/ Forensic Acquisition and Investigation allows you to execute scripts on target systems using the **Run Command** feature in the import wizard.
 
-This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges within Cado.
+This requires the [AWS Systems Manager Agent (SSM)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-ec2.html) to be installed on the instance and admin privileges within / Forensic Acquisition and Investigation.
 To support transferring of files over the SSM port forwarding, we require Python 3.8+ to be installed on the instance.
 
 To use this feature, you must create a script at Settings > Scripts.
@@ -34,7 +34,7 @@ For more information on the AWS IAM permissions for SSM required, please see [he
 
 ![Saved Script - Step 2](/img/aws-ec2-runcommand4.png)
 
-5. In Step 3, specify the location of the output file on the target system that will be uploaded to your Cado S3 bucket. This step is not available for Windows scripts.
+5. In Step 3, specify the location of the output file on the target system that will be uploaded to your / Forensic Acquisition and Investigation S3 bucket. This step is not available for Windows scripts.
 
 ![Saved Script - Step 3](/img/aws-ec2-runcommand5.png)
 
@@ -66,15 +66,15 @@ Use the Import Wizard to select an EC2 instance with the SSM agent installed. Ch
 
 ## How does the Run Command feature work?
 
-When you execute a saved script via Run Command, Cado leverages AWS Systems Manager (SSM) to remotely execute your script on the target EC2. 
+When you execute a saved script via Run Command, / Forensic Acquisition and Investigation leverages AWS Systems Manager (SSM) to remotely execute your script on the target EC2. 
 
 1. **Preparation and Validation**  
    - **Platform Verification:** The process begins by verifying that the target instance is a Linux system.
-   - **Script Selection:** The command will either use a pre-saved script you have created from your Cado settings, or the script used to import through Cado Host.
+   - **Script Selection:** The command will either use a pre-saved script you have created from your / Forensic Acquisition and Investigation settings, or the script used to import through / Forensic Acquisition and Investigation Host.
    - **Port Selection:** A specific port (by default, the SSM port 9999) is used to establish the port forwarding session between your local worker and the target instance.
 
 2. **Input File Handling**  
-   - **Downloading the Input File:** If your script requires an input file (specified as an S3 URI or a designated Cado host URL), the file is first downloaded to a temporary location on the main Cado instance.  
+   - **Downloading the Input File:** If your script requires an input file (specified as an S3 URI or a designated / Forensic Acquisition and Investigation host URL), the file is first downloaded to a temporary location on the main / Forensic Acquisition and Investigation instance.  
    - **Transferring to the Instance:** Once the input file is available locally, it is transferred securely to the target EC2 instance over the SSM port forwarding session.
 
 3. **Command Execution on the EC2 Instance**  
