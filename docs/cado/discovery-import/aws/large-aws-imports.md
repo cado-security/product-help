@@ -14,7 +14,7 @@ When importing AWS EC2 instances with disks over 500GB, you may encounter limita
 
 If possible, use the **Triage** option if AWS Systems Manager (SSM) is enabled. This can speed up the acquisition process.
 
-Alternatively, you can acquire the system using [SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html) or [AWS EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html). In the AWS console, select the instance, then choose **Actions > Connect**. From there, you can use **Cado Host** via the Cado UI at **Import > Cado Host**. You can also collect additional files by using the [command line](https://docs.cadosecurity.com/cado-host/cli).
+Alternatively, you can acquire the system using [SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html) or [AWS EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html). In the AWS console, select the instance, then choose **Actions > Connect**. From there, you can use **/ Forensic Acquisition and Investigation Host** via the / Forensic Acquisition and Investigation UI at **Import > / Forensic Acquisition and Investigation Host**. You can also collect additional files by using the [command line](https://docs.cadosecurity.com/cado-host/cli).
 
 If the system is powered off, consider isolating it at the network and IAM level, then turn it on to capture the necessary data.
 
@@ -32,9 +32,9 @@ Alternatively, to upload the disk image directly to S3:
 aws s3 cp /dev/[disk] s3://bucket/image.dd.gz --expected-size [size in bytes]
 ```
 
-## How Cado Acquires EC2 Instances
+## How / Forensic Acquisition and Investigation Acquires EC2 Instances
 
-When acquiring an EC2 instance, the Cado platform follows these steps:
+When acquiring an EC2 instance, the / Forensic Acquisition and Investigation platform follows these steps:
 
 1. **Create a snapshot** of the volume attached to the instance.
 2. **Create a volume** from the snapshot.
@@ -82,13 +82,13 @@ You’ll see the status of Fast Snapshot Restore in the AWS Console as follows:
 
 ### Increasing the Size of the Target Instance for EC2 Acquisition
 
-Cado matches the instance type of the target system for compatibility when acquiring an instance. However, larger instances offer higher disk, network, and CPU limits, which can speed up the **Create Image** step.
+/ Forensic Acquisition and Investigation matches the instance type of the target system for compatibility when acquiring an instance. However, larger instances offer higher disk, network, and CPU limits, which can speed up the **Create Image** step.
 
 If possible, changing the target instance to a larger type can speed up acquisition, though this does not affect the time taken for creating a snapshot or volume.
 
 ## Alternative Collection Using the AWS EBS Direct API
 
-Cado now offers a faster acquisition method using the **EBS Direct API**. You can enable this feature under **Settings > Experiments > EBS Direct Acquisitions**.
+/ Forensic Acquisition and Investigation now offers a faster acquisition method using the **EBS Direct API**. You can enable this feature under **Settings > Experiments > EBS Direct Acquisitions**.
 
 This method is similar to using **Coldsnap**, which can be executed with a command like:
 
