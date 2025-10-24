@@ -6,9 +6,9 @@ sidebar_position: 1
 
 # How to Import a Google Compute Engine Instance
 
-The Cado platform supports the acquisition of Google Cloud Platform (GCP) Compute Engine instances. Follow these steps to import a GCP Compute instance into Cado:
+The / Forensic Acquisition and Investigation platform supports the acquisition of Google Cloud Platform (GCP) Compute Engine instances. Follow these steps to import a GCP Compute instance into / Forensic Acquisition and Investigation:
 
-1. **Select the GCP Project and Bucket**: Choose the GCP project and the storage bucket where the disk image will be uploaded before importing it into Cado.
+1. **Select the GCP Project and Bucket**: Choose the GCP project and the storage bucket where the disk image will be uploaded before importing it into / Forensic Acquisition and Investigation.
 
 2. **Select the Compute Instance**: Choose the specific GCP Compute instance that you need to import.
 
