@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # How to Import from Google Cloud Storage
 
-The Cado platform supports the acquisition of data from Google Cloud Platform (GCP) Storage Buckets. The two main use cases for this are:
+The / Forensic Acquisition and Investigation platform supports the acquisition of data from Google Cloud Platform (GCP) Storage Buckets. The two main use cases for this are:
 
 - **Analyzing disk images or zip files** uploaded to a GCP Storage Bucket as part of an investigation.
 - **Analyzing the contents of a GCP Storage Bucket** for any uploaded content that could be related to an incident.
@@ -15,7 +15,7 @@ The Cado platform supports the acquisition of data from Google Cloud Platform (G
 
 1. **Select the Investigation**: Choose the investigation you are working on.
 2. **Select the Bucket**: Choose the GCP Storage Bucket you wish to analyze.
-3. **Select Objects to Import**: Select the specific files or objects from the bucket to import into Cado.
+3. **Select Objects to Import**: Select the specific files or objects from the bucket to import into / Forensic Acquisition and Investigation.
 
    ![Import GCP Storage](/img/google-cloud-storage.png)
 
