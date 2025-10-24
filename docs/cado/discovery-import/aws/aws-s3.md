@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # How to Import Data from S3
 
-The Cado platform supports acquiring data from AWS S3 buckets. The two primary use cases for S3 data acquisition are:
+The / Forensic Acquisition and Investigation platform supports acquiring data from AWS S3 buckets. The two primary use cases for S3 data acquisition are:
 
 - Analyzing disk images or zip files uploaded to an S3 bucket as part of an investigation.
 - Analyzing the contents of an S3 bucket for any uploaded files that may be part of an incident.
@@ -50,9 +50,9 @@ If you create access keys for uploading data to S3, we recommend the following:
 - Scope the access by giving the associated role **write-only** access to a single S3 bucket. For more details, see [Write-Only Access](https://stackoverflow.com/questions/15076645/amazon-s3-write-only-access).
 - Use **temporary credentials** when possible. Learn more about this in [Cyberduck’s S3 documentation](https://docs.cyberduck.io/protocols/s3/).
 
-### Using Cado Host for Upload
+### Using / Forensic Acquisition and Investigation Host for Upload
 
-If you don’t have direct access to AWS, you can use Cado Host with the `--single_file_unzipped` parameter. Cado will generate the necessary credentials when you go to **Import > Cado Host**.
+If you don’t have direct access to AWS, you can use / Forensic Acquisition and Investigation Host with the `--single_file_unzipped` parameter. / Forensic Acquisition and Investigation will generate the necessary credentials when you go to **Import > Cado Host**.
 
 ### Data Flow Diagram
 
