@@ -6,7 +6,7 @@ sidebar_position: 6
 
 # How to Import Data from AWS Lambda
 
-The Cado platform allows you to acquire AWS Lambda functions, which are serverless computing services.
+The / Forensic Acquisition and Investigation platform allows you to acquire AWS Lambda functions, which are serverless computing services.
 
 ### Steps to Import
 
@@ -24,11 +24,11 @@ Once processing is complete, the Lambda function’s events will be added to the
 
 ### CloudWatch Logs Integration
 
-Lambda automatically sends logs from your code to a CloudWatch Logs group associated with the function. Cado captures these logs and adds them to your timeline, enabling you to view any logging statements made by the function.
+Lambda automatically sends logs from your code to a CloudWatch Logs group associated with the function. / Forensic Acquisition and Investigation captures these logs and adds them to your timeline, enabling you to view any logging statements made by the function.
 
 ![Cloudwatch Logs](/img/aws-lambda-cloudwatch.png)
 
-*Note:* Cado imports the image of container-based Lambda functions from the Amazon Elastic Container Registry.
+*Note:* / Forensic Acquisition and Investigation imports the image of container-based Lambda functions from the Amazon Elastic Container Registry.
 
 ### Data Flow Diagram
 
