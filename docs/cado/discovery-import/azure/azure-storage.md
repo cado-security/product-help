@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # How to Import Azure Storage
 
-The Cado platform supports acquiring data from Azure Blob Storage. The two main use cases for Azure Storage acquisition are:
+The / Forensic Acquisition and Investigation platform supports acquiring data from Azure Blob Storage. The two main use cases for Azure Storage acquisition are:
 
 - **Analyzing disk images or zip files** uploaded to an Azure Blob Storage container as part of an investigation.
 - **Analyzing the contents of an Azure Blob Storage container** for any uploaded content that could be part of an incident.
@@ -32,4 +32,4 @@ Alternatively, you can use a **SAS Token** or **Access Key** with a desktop tool
 
 We recommend scoping the access permissions by giving **write-only** access to Azure Storage. More information on setting write-only permissions can be found [here](https://stackoverflow.com/questions/50864068/write-only-access-no-read-no-list-no-delete-to-azure-storage).
 
-You can also use **Cado Host** with the `--single_file_unzipped` parameter to upload evidence. This is particularly useful if you do not have direct access to Azure, as Cado will generate the necessary credentials under **Import > Cado Host**.
+You can also use **/ Forensic Acquisition and Investigation Host** with the `--single_file_unzipped` parameter to upload evidence. This is particularly useful if you do not have direct access to Azure, as / Forensic Acquisition and Investigation will generate the necessary credentials under **Import > / Forensic Acquisition and Investigation Host**.
