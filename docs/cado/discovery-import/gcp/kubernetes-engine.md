@@ -6,12 +6,12 @@ sidebar_position: 5
 
 # How to Import from Google Cloud Kubernetes Engine
 
-The Cado platform allows you to collect key logs and forensic artifacts from Google Cloud Kubernetes Engine (GKE) containers.
+The / Forensic Acquisition and Investigation platform allows you to collect key logs and forensic artifacts from Google Cloud Kubernetes Engine (GKE) containers.
 
 ## Known Limitations
 
-- Cado can acquire artifacts from containers built with **distroless containers** and **private clusters** using Cado Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments](/cado/discovery-import/kubernetes#alternate-collection-by-using-cado-host-with-a-sidecar-container).
-- Cado will hide pods running under the following namespaces, which are generally system-level namespaces running a distroless environment:
+- / Forensic Acquisition and Investigation can acquire artifacts from containers built with **distroless containers** and **private clusters** using / Forensic Acquisition and Investigation Host only. Containers with the `gcr.io/distroless` image tag will be hidden. For more details, see [Kubernetes Deployments](/cado/discovery-import/kubernetes#alternate-collection-by-using-cado-host-with-a-sidecar-container).
+- / Forensic Acquisition and Investigation will hide pods running under the following namespaces, which are generally system-level namespaces running a distroless environment:
   - `kube-system`, `kube-public`, `kube-node-lease`
   - `gke-gmp-system`, `aks-command`
   - `gmp-system`, `calico-system`, `tigera-operator`
@@ -31,7 +31,7 @@ The Cado platform allows you to collect key logs and forensic artifacts from Goo
 3. **Confirm and Start Import**  
    Review the details, then click **Start Import**.
 
-Cado will automatically collect all relevant logs and forensic artifacts from the container to support your investigation. For most acquisitions, the import and processing will complete within a few minutes.
+/ Forensic Acquisition and Investigation will automatically collect all relevant logs and forensic artifacts from the container to support your investigation. For most acquisitions, the import and processing will complete within a few minutes.
 
    ![Cado showing the confirmation screen of a successful Kubernetes Engine container capture](/img/eks3.png)
 
