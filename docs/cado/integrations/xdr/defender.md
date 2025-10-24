@@ -21,7 +21,7 @@ Once initiated, Live Response will locate the endpoint running the Defender agen
 
 To add the required permissions for Cado to integrate with your newly created app, expand Manage and select API permissions. Click on `Add a permission`, select `APIs my organization uses` and search for `WindowsDefenderATP`. 
 
-![WindowsDefenderATP API Permissions](/img/windowsdefenderatp_permissions.png)
+   ![WindowsDefenderATP API Permissions](/img/windowsdefenderatp_permissions.png)
 
 Select the following API permissions:
 
