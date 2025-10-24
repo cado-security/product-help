@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # How to Import Azure Compute Instances
 
-The Cado platform allows you to acquire Azure Compute instances for investigation. Follow these steps:
+The / Forensic Acquisition and Investigation platform allows you to acquire Azure Compute instances for investigation. Follow these steps:
 
 1. **Select an Azure Subscription**  
    This will populate a list of available compute instances associated with that subscription.
@@ -23,7 +23,7 @@ The Cado platform allows you to acquire Azure Compute instances for investigatio
 - Acquisition will aquire the full instance
 
 #### Triaged Aquisition
-- Triaged acquisition will leverage Cado Host and Azure's Run Command action for a faster, but less complete, collection
+- Triaged acquisition will leverage / Forensic Acquisition and Investigation Host and Azure's Run Command action for a faster, but less complete, collection
 
 #### Scan Only
 - Scan only is for a view of any threats and vulnerabilities that exists on the resource. This skips some processing tasks speeding up the acquisition.
