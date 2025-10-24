@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# Importing Data into the Cado Platform
+# Importing Data into the / Forensic Acquisition and Investigation Platform
 
-The Cado platform offers several ways to import data. Once you select the data you want to import, the platform will automatically process it according to the configured **Processing Settings**. For more information on how processing works, refer to our [Processing Settings Guide](/cado/manage/workers.md#processing).
+The platform offers several ways to import data. Once you select the data you want to import, the platform will automatically process it according to the configured **Processing Settings**. For more information on how processing works, refer to our [Processing Settings Guide](/cado/manage/workers.md#processing).
 
 ## Steps to Import Data
 
@@ -27,11 +27,11 @@ You can import evidence from cloud platforms such as AWS, Azure, and GCP. Ensure
 
 For a step-by-step guide, visit our [Cloud Import Documentation](import-from-cloud.md).
 
-### Importing from Cado Host
+### Importing from / Forensic Acquisition and Investigation Host
 
-The Cado platform can use **Cado Host** to acquire forensic artifacts from on-premises systems and analyze them in the cloud. Additionally, Cado Host can upload evidence, like previously collected disk images.
+The / Forensic Acquisition and Investigation platform can use **/ Forensic Acquisition and Investigation Host** to acquire forensic artifacts from on-premises systems and analyze them in the cloud. Additionally, Cado Host can upload evidence, like previously collected disk images.
 
-To learn more about using Cado Host, see the [Cado Host Documentation](/cado/discovery-import/cado-host/intro).
+To learn more about using / Forensic Acquisition and Investigation Host, see the [Cado Host Documentation](/cado/discovery-import/cado-host/intro).
 
 ### Importing from a URL
 
