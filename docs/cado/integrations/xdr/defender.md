@@ -19,7 +19,7 @@ Once initiated, Live Response will locate the endpoint running the Defender agen
    
 3. Create an **App Registration** with the required API permissions for Defender XDR. Refer to [Microsoft documentation](https://learn.microsoft.com/en-us/defender-endpoint/api/exposed-apis-create-app-webapp) for guidance on creating the App Registration in your Azure portal.
 
-To add the required permissions for Cado integration with your newly created app, expand Manage and select API permissions. Click on `Add a permission`, select `APIs my organization uses` and search for `WindowsDefenderATP`. 
+To add the required permissions for Cado to integrate with your newly created app, expand Manage and select API permissions. Click on `Add a permission`, select `APIs my organization uses` and search for `WindowsDefenderATP`. 
 
 ![WindowsDefenderATP API Permissions](/img/windowsdefenderatp_permissions.png)
 
