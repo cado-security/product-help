@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # How to Import ECS from AWS
 
-The Cado platform enables the collection of key logs and forensic artifacts from AWS ECS systems.
+The / Forensic Acquisition and Investigation platform enables the collection of key logs and forensic artifacts from AWS ECS systems.
 
 ### Steps to Import ECS Data
 
