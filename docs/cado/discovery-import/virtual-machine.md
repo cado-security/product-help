@@ -80,33 +80,33 @@ To make the process easier, you can use gzip to compress it:
 ![Oracle](/img/oracle/image19.png)
 
 
-As the dd.gz file is less than 5GB in size, you can use our cado-host binary to upload the file directly to an S3 bucket and it will be automatically imported into an investigation for processing and analysis.
+As the dd.gz file is less than 5GB in size, you can use our / Forensic Acquisition and Investigation host binary to upload the file directly to an S3 bucket and it will be automatically imported into an investigation for processing and analysis.
 
 
-The first step is to create an investigation in the Cado platform, from there we will use the Cado Host import capability:
+The first step is to create an investigation in the / Forensic Acquisition and Investigation platform, from there we will use the / Forensic Acquisition and Investigation Host import capability:
 
 ![Oracle](/img/oracle/image10.png)
 
 
 
-When you select Cado Host, you are presented with a series of options and in this case as we are using Kali Linux we will select Linux as the Target Operating System. We are not going to using any additional Runtime Options so we can skip that step and you can see that we automatically generate a command block, to be used to transfer the image:
+When you select / Forensic Acquisition and Investigation Host, you are presented with a series of options and in this case as we are using Kali Linux we will select Linux as the Target Operating System. We are not going to using any additional Runtime Options so we can skip that step and you can see that we automatically generate a command block, to be used to transfer the image:
 
 ![Oracle](/img/oracle/image4.png)
 
 
 
-The cado-host binary is available from our public s3 bucket so you can  use curl to download it onto the Kali instance:
+The / Forensic Acquisition and Investigation host binary is available from our public s3 bucket so you can  use curl to download it onto the Kali instance:
 
 ![Oracle](/img/oracle/image20.png)
 
 
 
-One of the switches for cado-host is –single_file_unzipped, which will upload a single file to the Cado bucket using the presigned_data details from the command that’s generated from the import page:
+One of the switches for / Forensic Acquisition and Investigation host is –single_file_unzipped, which will upload a single file to the / Forensic Acquisition and Investigation bucket using the presigned_data details from the command that’s generated from the import page:
 
 ![Oracle](/img/oracle/image11.png)
 
 
-Switching over to our Cado platform, you can see that the file has been successfully imported and processing tasks have been started:
+Switching over to our / Forensic Acquisition and Investigation platform, you can see that the file has been successfully imported and processing tasks have been started:
 
 
 ![Oracle](/img/oracle/image6.png)
