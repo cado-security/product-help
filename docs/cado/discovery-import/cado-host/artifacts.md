@@ -4,13 +4,13 @@ hide_title: true
 sidebar_position: 3
 ---
 
-# What Artifacts Are Collected by Cado Host
+# What Artifacts Are Collected by / Forensic Acquisition and Investigation Host
 
-Cado Host collects a variety of artifacts by default, depending on the operating system. You can also use custom collections to gather specific files. Additionally, you can configure extra files and folders to be collected by using the `--additional_files` parameter when running Cado Host. For more details, see the **[Command Line Parameters](cli)** documentation.
+/ Forensic Acquisition and Investigation Host collects a variety of artifacts by default, depending on the operating system. You can also use custom collections to gather specific files. Additionally, you can configure extra files and folders to be collected by using the `--additional_files` parameter when running / Forensic Acquisition and Investigation Host. For more details, see the **[Command Line Parameters](cli)** documentation.
 
 ### Volatile Data
 
-Cado Host collects the following volatile data available at the time of execution:
+/ Forensic Acquisition and Investigation Host collects the following volatile data available at the time of execution:
 - Information about running processes.
 - Memory of running processes on a per-process basis *(Note: Memory collection on Windows is disabled by default. [See Command Line Parameters](cli) for more details.)*
 - Netstat data of active network connections.
@@ -21,7 +21,7 @@ Cado Host collects the following volatile data available at the time of executio
 <details>
   <summary>Linux and MacOS</summary>
 
-Cado Host collects the following artifacts on Linux and macOS, when available:
+/ Forensic Acquisition and Investigation Host collects the following artifacts on Linux and macOS, when available:
 
 - `.bash_history`
 - `.ssh/known_hosts`
@@ -43,7 +43,7 @@ Cado Host collects the following artifacts on Linux and macOS, when available:
 <details>
   <summary>Windows</summary>
 
-Cado Host collects the following artifacts on Windows, when available:
+/ Forensic Acquisition and Investigation Host collects the following artifacts on Windows, when available:
 
 - Information about running processes and active network connections.
 - File system artifacts including `$MFT`, `NTUSER.DAT`, and their associated log files.
