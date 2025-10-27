@@ -4,14 +4,14 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# How to Upload a Single File to Cado
+# How to Upload a Single File to / Forensic Acquisition and Investigation
 
-You can upload a single file, such as a disk image or a previously collected Cado Host zip file, using Cado Host with the `upload` command. This method is useful when you do not have direct access to AWS, Azure, or GCP, as Cado will generate the required credentials during the import process.
+You can upload a single file, such as a disk image or a previously collected / Forensic Acquisition and Investigation Host zip file, using / Forensic Acquisition and Investigation Host with the `upload` command. This method is useful when you do not have direct access to AWS, Azure, or GCP, as / Forensic Acquisition and Investigation will generate the required credentials during the import process.
 
 ### Steps to Upload a Single File:
 
 1. **Generate Upload Credentials**  
-   In the Cado Platform, go to **Import > Cado Host** to generate the credentials for the upload.
+   In the Platform, go to **Import > / Forensic Acquisition and Investigation Host** to generate the credentials for the upload.
 
 2. **Copy Presigned Data**  
    In the investigator system, copy the `--presigned_data` portion of the script to your clipboard.
@@ -24,7 +24,7 @@ You can upload a single file, such as a disk image or a previously collected Cad
    Replace `$file` with the path to the file you wish to upload.
 
 4. **Automatic Processing**  
-   Cado Host will upload the specified file, and Cado will automatically begin the import and processing of the file.
+   / Forensic Acquisition and Investigation Host will upload the specified file, and Cado will automatically begin the import and processing of the file.
 
 
 Here’s the full **Markdown section** ready to paste into your documentation:
@@ -32,7 +32,7 @@ Here’s the full **Markdown section** ready to paste into your documentation:
 
 # **Manual Upload: Example Workflow**
 
-This example demonstrates how to extract files from a macOS disk image and upload the resulting collection to Cado for processing.
+This example demonstrates how to extract files from a macOS disk image and upload the resulting collection to / Forensic Acquisition and Investigation for processing.
 
 ## **1. Attach the Disk Image**
 
@@ -69,7 +69,7 @@ Replace `/path/to/output` with the folder where you want the collection saved.
 
 ## **4. Prepare the Collection for Upload**
 
-1. Download the `cado-host` binary from your Cado platform.
+1. Download the `cado-host` binary from your / Forensic Acquisition and Investigation platform.
 2. Generate the upload script using the **Script Builder** page.
 3. Rename the UAC output file to match the expected `cado-host` capture filename:
 
