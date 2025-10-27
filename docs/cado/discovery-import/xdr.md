@@ -6,7 +6,7 @@ sidebar_position: 7
 
 # How to Import Data from XDR Platforms
 
-You can import data into the Cado platform using an eXtended Detection and Response (XDR) system. Cado Host can be quickly deployed to compromised Windows and Linux machines via XDR vendors such as CrowdStrike, SentinelOne, and Microsoft Defender. However, macOS is not currently supported for SentinelOne and Defender integrations.
+You can import data into the / Forensic Acquisition and Investigation platform using an eXtended Detection and Response (XDR) system. / Forensic Acquisition and Investigation Host can be quickly deployed to compromised Windows and Linux machines via XDR vendors such as CrowdStrike, SentinelOne, and Microsoft Defender. However, macOS is not currently supported for SentinelOne and Defender integrations.
 
 For detailed setup instructions, refer to the following pages:
 - [SentinelOne Integration Setup](/cado/integrations/xdr/sentinelone.md)
@@ -48,5 +48,5 @@ You can also set some parameters for your acquisition:
 
 5. Confirm your selections and click **Start Import**.
 
-Once initiated, Cado will begin importing data from the selected endpoint via the XDR platform.
+Once initiated, / Forensic Acquisition and Investigation will begin importing data from the selected endpoint via the XDR platform.
 
