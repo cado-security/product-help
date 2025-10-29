@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# What Filetypes Can Cado Process?
+# What Filetypes Can / Forensic Acquisition and Investigation Process?
 
-The Cado platform supports a wide variety of evidence types for processing, with some differences depending on your cloud platform.
+The / Forensic Acquisition and Investigation platform supports a wide variety of evidence types for processing, with some differences depending on your cloud platform.
 
 ### AWS Capture Formats
 - EC2 (Including AMIs, EBS Snapshots, and Volumes)
@@ -29,7 +29,7 @@ The Cado platform supports a wide variety of evidence types for processing, with
 
 ### Storage Formats
 
-In addition to native support for cloud-based machines and data, Cado can process the following local evidence formats:
+In addition to native support for cloud-based machines and data, / Forensic Acquisition and Investigation can process the following local evidence formats:
 
 #### Storage Media
 - `.E01` and split `.E01`
@@ -59,4 +59,4 @@ Limitations and Notes:
 - XFS (version 4, 5)
 - Apple File System (APFS)
 
-Cado can also handle a variety of other disk images and file formats not listed here, though they may not be officially supported. If you have a specific file type you'd like to see supported, feel free to contact us at support@cadosecurity.com.
+/ Forensic Acquisition and Investigation can also handle a variety of other disk images and file formats not listed here, though they may not be officially supported. If you have a specific file type you'd like to see supported, feel free to contact us at support@cadosecurity.com.
