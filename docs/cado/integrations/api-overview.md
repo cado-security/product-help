@@ -4,20 +4,20 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# How to Use the Cado API
+# How to Use the / Forensic Acquisition and Investigation API
 
-The Cado API allows third-party tools and automation scripts to interact seamlessly with the Cado platform. You can use the API, along with pre-built integrations, to perform tasks like:
+The / Forensic Acquisition and Investigation API allows third-party tools and automation scripts to interact seamlessly with the / Forensic Acquisition and Investigation platform. You can use the API, along with pre-built integrations, to perform tasks like:
 
 - Triggering platform operations (e.g., acquiring instances from your cloud environments)
 - Retrieving captured data (e.g., suspicious events)
 - Managing and controlling investigations
 - And more
 
-This guide will walk you through the essential steps to onboard and integrate with the Cado API.
+This guide will walk you through the essential steps to onboard and integrate with the / Forensic Acquisition and Investigation API.
 
 ### Creating and Storing an API Access Key
 
-To access the Cado API, you’ll need to authenticate with a valid API Key. Follow these steps to generate an API Key within the Cado platform:
+To access the / Forensic Acquisition and Investigation API, you’ll need to authenticate with a valid API Key. Follow these steps to generate an API Key within the platform:
 
 1. Navigate to **Settings** in the bottom-left corner, then click on the **API** tab.
 
@@ -42,7 +42,7 @@ The Secret Key is shown only once. Be sure to save it securely, such as in a pas
 
 ### Platform Base URL
 
-In the following tutorials, the term "Platform Base URL" refers to the IP address or domain name where your Cado platform is deployed. For example:
+In the following tutorials, the term "Platform Base URL" refers to the IP address or domain name where your / Forensic Acquisition and Investigation platform is deployed. For example:
 
 ```
 https://ec2example.compute.amazonaws.com
