@@ -6,10 +6,10 @@ sidebar_position: 9
 
 # How to Import Data from Kubernetes
 
-## How Does Cado Import Data from EKS, ECS, AKS, and GKE?
+## How Does / Forensic Acquisition and Investigation Import Data from EKS, ECS, AKS, and GKE?
 
-When acquiring data from Kubernetes containers, Cado follows these steps by default:
-- Executes a shell script to download the Cado Host binary.
+When acquiring data from Kubernetes containers, / Forensic Acquisition and Investigation follows these steps by default:
+- Executes a shell script to download the Host binary.
 - Runs the binary to collect forensic artifacts.
 - Uploads the collected files to cloud storage for processing.
 
@@ -17,7 +17,7 @@ The method used to execute the script depends on the environment. For example, E
 
 Authentication to the Kubernetes API may require IAM permissions, which are described in service-specific documentation.
 
-## Configuring the Cluster RBAC for Use with Cado
+## Configuring the Cluster RBAC for Use with / Forensic Acquisition and Investigation
 
 To acquire artifacts from a container, the following Kubernetes permissions must be enabled for each cluster:
 
@@ -62,19 +62,19 @@ roleRef:
 If executing code inside the container or connecting over the network is not possible, you can acquire the volume of the node running the container. For example, this approach works for EKS running on EC2 nodes.
 
 - If using the Docker container runtime, container file systems are usually available at `/var/lib/docker/overlay2`.
-- If using the Containerd runtime (which is now the default for EKS), the container file system is not immediately visible. Cado is working on supporting containerd-based volume acquisitions.
+- If using the Containerd runtime (which is now the default for EKS), the container file system is not immediately visible. / Forensic Acquisition and Investigation is working on supporting containerd-based volume acquisitions.
 
-## Alternate Collection by Using Cado Host with a Sidecar Container
+## Alternate Collection by Using Host with a Sidecar Container
 
-Cado supports collecting from private clusters and distroless containers by using a [debug container](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
+/ Forensic Acquisition and Investigation supports collecting from private clusters and distroless containers by using a [debug container](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
 
 To acquire data:
-- Navigate to **Import > Cado Host**.
+- Navigate to **Import > / Forensic Acquisition and Investigation Host**.
 - Select **Kubernetes** and follow the prompts.
 
 ![Cado Host K8s UI](/img/cado-host-k8s.png)
 
-This will use a command such as the following to start a debug container and execute Cado Host:
+This will use a command such as the following to start a debug container and execute / Forensic Acquisition and Investigation Host:
   
 ```bash
 kubectl debug -it pod-name --image=debian:latest --target=target-container -n pod-namespace -- sh -c
@@ -86,37 +86,37 @@ The diagram below provides a high-level overview of how this works:
 
 ### Using a Custom Image
 
-In environments where the default `debian:latest` image is not supported, you can use a custom image. The custom image must have the latest Cado Host Linux binary located at `/tmp/cado-host-static/cado-host`. However, Cado recommends using the default `debian:latest` image for supportability.
+In environments where the default `debian:latest` image is not supported, you can use a custom image. The custom image must have the latest / Forensic Acquisition and Investigation Host Linux binary located at `/tmp/cado-host-static/cado-host`. However, / Forensic Acquisition and Investigation recommends using the default `debian:latest` image for supportability.
 
 ### Root Access
 
-By default, Cado Host requires root access to access the underlying container file system (usually under `/proc/{PID}/root`). The `runuser` command with the root user is also required to give the Cado Host process the appropriate UID and GID.
+By default, / Forensic Acquisition and Investigation Host requires root access to access the underlying container file system (usually under `/proc/{PID}/root`). The `runuser` command with the root user is also required to give the / Forensic Acquisition and Investigation Host process the appropriate UID and GID.
 
 For Kubernetes v1.30 or later, you can optionally use the "Run as non-root user" option, which leverages the [sysadmin](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/) profile to access the container file system.
 
 ## Private Clusters with No Network Access
 
-Cado requires access to the Kubernetes control plane API to acquire containers via the user interface. If network access to the Kubernetes API is not available, alternate options for acquiring data are needed.
+/ Forensic Acquisition and Investigation requires access to the Kubernetes control plane API to acquire containers via the user interface. If network access to the Kubernetes API is not available, alternate options for acquiring data are needed.
 
 ### Private AKS Clusters
 
-Cado can acquire private AKS clusters using the normal user interface, thanks to Azure's "command invoke" feature for private clusters.
+/ Forensic Acquisition and Investigation can acquire private AKS clusters using the normal user interface, thanks to Azure's "command invoke" feature for private clusters.
 
 ### Private GKE Clusters
 
 Please use the **Alternate Private EKS Cluster Access** method described above.
 
-Cado is exploring support for private GKE clusters through public endpoints on private clusters via the "normal" method. 
+/ Forensic Acquisition and Investigation is exploring support for private GKE clusters through public endpoints on private clusters via the "normal" method. 
 
 ### Private EKS Clusters
 
 Private EKS clusters can be configured to be accessible only from within the VPC they reside in or connected networks (e.g., peered VPCs). If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API.
 
-If Cado cannot access the cluster endpoint, you can use the **Alternate Private EKS Cluster Access** method described above.
+If / Forensic Acquisition and Investigation cannot access the cluster endpoint, you can use the **Alternate Private EKS Cluster Access** method described above.
 
 #### Alternate Private EKS Cluster Access
 
-If the Cado platform does not have access to the cluster endpoint, you can acquire data by deploying the Cado Host acquisition script.
+If the / Forensic Acquisition and Investigation platform does not have access to the cluster endpoint, you can acquire data by deploying the Host acquisition script.
 
 To do this, connect to your EKS cluster using a command like:
 
@@ -126,7 +126,7 @@ aws eks update-kubeconfig --region $Region --name $ClusterName
 
 Follow AWS’s instructions [here](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html).
 
-Then execute the `kubectl` script generated at **Import > Cado Host > Kubernetes**.
+Then execute the `kubectl` script generated at **Import > / Forensic Acquisition and Investigation Host > Kubernetes**.
 
 ### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
 
