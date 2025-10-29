@@ -8,7 +8,7 @@ sidebar_position: 10
 
 ## Introduction
 
-The Cado platform supports acquiring and processing the following logs from Microsoft 365 and Entra ID:
+The / Forensic Acquisition and Investigation platform supports acquiring and processing the following logs from Microsoft 365 and Entra ID:
 
 - Microsoft 365 Unified Audit Log (UAL)
 - Entra ID Audit logs
@@ -80,7 +80,7 @@ To pull logs from Exchange, follow these steps:
 
 ## Log Acquisition
 
-Once the Microsoft Entra application and service principal are set up in the Azure portal, you can add the credentials to the Cado platform:
+Once the Microsoft Entra application and service principal are set up in the Azure portal, you can add the credentials to the / Forensic Acquisition and Investigation platform:
 
 1. Navigate to **Settings > Accounts**
 2. Select **Create an account**, then **Microsoft SaaS** from the set of providers and enter the following details:
