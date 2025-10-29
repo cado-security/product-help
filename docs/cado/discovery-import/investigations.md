@@ -6,7 +6,7 @@ sidebar_position: 13
 
 # How to Manage Investigations
 
-Cado organizes evidence items into groups called **Investigations**, which were previously referred to as projects.
+/ Forensic Acquisition and Investigation organizes evidence items into groups called **Investigations**, which were previously referred to as projects.
 
 ## Creating an Investigation
 
