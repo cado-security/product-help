@@ -6,12 +6,12 @@ sidebar_position: 1
 
 # How to Export to On-Premise Forensic Tools
 
-Cado collects forensic data in the following formats based on the cloud provider:
+/ Forensic Acquisition and Investigation collects forensic data in the following formats based on the cloud provider:
 
 - **AWS EC2** systems: DD format
 - **Azure Virtual Machines**: VHD format
 - **GCP Instances**: VMDK format
-- **Cado Host Triage captures** (including captures from Containers): ZIP format
+- **Host Triage captures** (including captures from Containers): ZIP format
 
 These files are stored in cloud storage (e.g., S3 in AWS or Storage in Azure) and can be downloaded from the respective cloud console. Once downloaded, the data can be imported into desktop forensic tools such as:
 
