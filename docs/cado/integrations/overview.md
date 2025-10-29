@@ -6,7 +6,7 @@ sidebar_position: 0
 
 # Intergration Overview
 
-Cado integrates with a wide range of tools and platforms to help you streamline incident response, automate workflows, and enhance your security operations. These integrations enable you to connect Cado with your existing security ecosystem, including SIEM, SOAR, XDR, CNAPP, forensic tools, and more.
+/ Forensic Acquisition and Investigation integrates with a wide range of tools and platforms to help you streamline incident response, automate workflows, and enhance your security operations. These integrations enable you to connect / Forensic Acquisition and Investigation with your existing security ecosystem, including SIEM, SOAR, XDR, CNAPP, forensic tools, and more.
 
 ## Why Integrate?
 
@@ -19,7 +19,7 @@ Cado integrates with a wide range of tools and platforms to help you streamline 
 
 | Integration Type | Description | 
 |-------------------|-------------|
-| [API Overview](https://docs.cadosecurity.com/cado/integrations/api-overview) | Learn how to interact with Cado programmatically. |
+| [API Overview](https://docs.cadosecurity.com/cado/integrations/api-overview) | Learn how to interact with / Forensic Acquisition and Investigation programmatically. |
 | [Forensic Tools](https://docs.cadosecurity.com/cado/integrations/forensic-tools) | Export evidence for use with forensic tools. |
 | [SIEM](https://docs.cadosecurity.com/cado/integrations/siem) | Send alerts and logs to your SIEM platform. |
 | [Webhooks](https://docs.cadosecurity.com/cado/integrations/webhooks) | Configure webhooks for real-time notifications. |
