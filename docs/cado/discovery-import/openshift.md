@@ -9,7 +9,7 @@ sidebar_position: 8
 To import data from RedHat OpenShift, follow these steps:
 
 1. **Generate a Collection Script**:  
-   First, generate a Cado Host collection script by navigating to **Import > Cado Host** in the Cado platform.
+   First, generate a / Forensic Acquisition and Investigation Host collection script by navigating to **Import > / Forensic Acquisition and Investigation Host** in the / Forensic Acquisition and Investigation platform.
 
 2. **Execute the Script on the Target Container**:  
    Use the commands below to execute the script on the desired container within OpenShift:
@@ -58,4 +58,4 @@ Red Hat OpenShift Service on AWS (ROSA) runs on Amazon Elastic Compute Cloud (EC
 This means that you can import data from ROSA by importing EC2 instances as usual. For more information, see [How to Import Data from AWS EC2](/cado/discovery-import/aws/aws-ec2.md).
 Most clusters run on containerd, which can limit the data from inside containers that can be collected vs Docker.
 
-The Cado Host method above for OpenShift can work with ROSA as well, as "oc exec" commands can be used to execute the script on the desired container within ROSA after [logging in](https://docs.openshift.com/rosa/rosa_install_access_delete_clusters/rosa-sts-accessing-cluster.html).
+The / Forensic Acquisition and Investigation Host method above for OpenShift can work with ROSA as well, as "oc exec" commands can be used to execute the script on the desired container within ROSA after [logging in](https://docs.openshift.com/rosa/rosa_install_access_delete_clusters/rosa-sts-accessing-cluster.html).
