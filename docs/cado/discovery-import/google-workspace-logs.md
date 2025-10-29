@@ -8,9 +8,9 @@ sidebar_position: 10
 
 ### Introduction
 
-The Cado platform supports the acquisition and processing of Google Workspace logs. Activity logs from various Google Workspace applications can be captured, as listed [here](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities).
+The / Forensic Acquisition and Investigation platform supports the acquisition and processing of Google Workspace logs. Activity logs from various Google Workspace applications can be captured, as listed [here](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities).
 
-Before importing Google Workspace logs into Cado, follow these steps:
+Before importing Google Workspace logs into / Forensic Acquisition and Investigation, follow these steps:
 
 1. Ensure that **Workspace API access** for your Google Cloud project is enabled (Admin SDK API access).
 * Open the [product library in Google Cloud](https://console.cloud.google.com/workspace-api/products)
@@ -28,13 +28,13 @@ Before importing Google Workspace logs into Cado, follow these steps:
 
 
 
-4. Note the email address of a **Google Workspace admin account** for the Impersonation Email field, which will be entered into the Cado platform.
+4. Note the email address of a **Google Workspace admin account** for the Impersonation Email field, which will be entered into the / Forensic Acquisition and Investigation platform.
 5. Grant the service account permission to access the Workspace API via **domain-wide delegation**, with read-only access to audit logs:  
    `https://www.googleapis.com/auth/admin.reports.audit.readonly`.
 
 ### Log Acquisition
 
-After completing the setup, you can add the service account credentials to the Cado platform by navigating to **Settings > Accounts** and selecting **Create an account**. Select **Google Workspace** from the set of providers. Provide the following details:
+After completing the setup, you can add the service account credentials to the / Forensic Acquisition and Investigation platform by navigating to **Settings > Accounts** and selecting **Create an account**. Select **Google Workspace** from the set of providers. Provide the following details:
 
 - **Name**: A friendly name for your credentials, such as “Google Workspace.”
 - **Impersonation Email**: The Google Workspace admin email.
