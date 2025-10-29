@@ -4,13 +4,13 @@ hide_title: true
 sidebar_position: 1
 ---
 
-# What Log and Artifact Types Can Cado Process?
+# What Log and Artifact Types Can / Forensic Acquisition and Investigation Process?
 
-Cado supports the processing of a wide range of evidence types, which may vary slightly depending on your cloud platform.
+/ Forensic Acquisition and Investigation supports the processing of a wide range of evidence types, which may vary slightly depending on your cloud platform.
 
-## What Cloud Logs Can Cado Import from Cloud Storage?
+## What Cloud Logs Can / Forensic Acquisition and Investigation Import from Cloud Storage?
 
-Cado can import various cloud log types from cloud storage, including:
+/ Forensic Acquisition and Investigation can import various cloud log types from cloud storage, including:
 
 ### AWS Log Formats
 - CloudTrail logs
@@ -30,21 +30,21 @@ Cado can import various cloud log types from cloud storage, including:
 - IAM logs
 - Admin Activity logs
 
-Cado also processes additional log types using generic extractors, so this list is not exhaustive.
+/ Forensic Acquisition and Investigation also processes additional log types using generic extractors, so this list is not exhaustive.
 
-## What Logs Does Cado Capture via APIs?
+## What Logs Does / Forensic Acquisition and Investigation Capture via APIs?
 
-Cado can capture logs from the following cloud services via their APIs:
+/ Forensic Acquisition and Investigation can capture logs from the following cloud services via their APIs:
 
-- **AWS EC2**: When acquiring an EC2 system, Cado accesses the CloudTrail API to retrieve [VPC flow logs](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log) and [CloudTrail logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html) associated with the instance ID, if enabled.
-- **AWS Lambda**: Cado accesses the CloudWatch API to retrieve [logs associated with the Lambda function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
-- **Azure Compute**: Cado retrieves [activity logs associated with the virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
+- **AWS EC2**: When acquiring an EC2 system, / Forensic Acquisition and Investigation accesses the CloudTrail API to retrieve [VPC flow logs](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-flow-logs.html#create-flow-log) and [CloudTrail logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html) associated with the instance ID, if enabled.
+- **AWS Lambda**: / Forensic Acquisition and Investigation accesses the CloudWatch API to retrieve [logs associated with the Lambda function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html).
+- **Azure Compute**: / Forensic Acquisition and Investigation retrieves [activity logs associated with the virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log).
 
-If logs are stored in a central account, Cado currently cannot traverse accounts to pull logs from different accounts. In such cases, logs must be collected in cloud storage and imported from there.
+If logs are stored in a central account, / Forensic Acquisition and Investigation currently cannot traverse accounts to pull logs from different accounts. In such cases, logs must be collected in cloud storage and imported from there.
 
 ## Operating System Log and Artifact Formats
 
-Here is a non-exhaustive list of the forensic artifacts Cado can process:
+Here is a non-exhaustive list of the forensic artifacts / Forensic Acquisition and Investigation can process:
 - Common AWS, Azure, and GCP logs
 - Apple System Log (ASL)
 - Android usage history (app usage)
@@ -87,7 +87,7 @@ Here is a non-exhaustive list of the forensic artifacts Cado can process:
 - Xchat and Xchat scrollback files
 - Zsh history files
 
-Cado can also process many other log formats not listed here. If you have a log format you'd like to see supported, please contact us at support@cadosecurity.com.
+/ Forensic Acquisition and Investigation can also process many other log formats not listed here. If you have a log format you'd like to see supported, please contact us at support@cadosecurity.com.
 
 ## Adding Your Own Events
 
@@ -109,4 +109,4 @@ Will result in events such as the following:
 
 ## Log Analysis Considerations
 
-For analyzing large sets of logs (typically over 1 million events) and uncovering suspicious behavior, we recommend using traditional SIEM solutions or open-source tools like Cado's [cloudgrep](https://github.com/cado-security/cloudgrep). Cado's primary focus is on capturing more than just logs from cloud service providers and other log sources. See [here](/cado/intro) for more details on Cado's capabilities.
+For analyzing large sets of logs (typically over 1 million events) and uncovering suspicious behavior, we recommend using traditional SIEM solutions or open-source tools like / Forensic Acquisition and Investigation [cloudgrep](https://github.com/cado-security/cloudgrep). / Forensic Acquisition and Investigation primary focus is on capturing more than just logs from cloud service providers and other log sources. See [here](/cado/intro) for more details on / Forensic Acquisition and Investigation capabilities.
