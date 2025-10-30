@@ -6,10 +6,10 @@ sidebar_position: 0
 # Manage Overview
 
 ### Roles, users & groups
-Cado uses role‑based access control (RBAC) to ensure people only see and do what they’re permitted to. Built‑in roles include **Administrator**, **Platform Administrator**, **Lead Analyst**, **Analyst**, and **Read‑only Analyst**. You can manage **users** and **groups** (including mapping to your SSO groups) to control access to investigations and cloud accounts. 
+/ Forensic Acquisition and Investigation uses role‑based access control (RBAC) to ensure people only see and do what they’re permitted to. Built‑in roles include **Administrator**, **Platform Administrator**, **Lead Analyst**, **Analyst**, and **Read‑only Analyst**. You can manage **users** and **groups** (including mapping to your SSO groups) to control access to investigations and cloud accounts. 
 
 ### Single Sign‑On (SSO)
-Cado supports SSO with **Azure AD**, **Okta OAuth**, and **Okta SAML**. When SSO is configured, user accounts are created automatically on first login, and you can map groups (e.g., an admin group) to control the initial role. 
+/ Forensic Acquisition and Investigation supports SSO with **Azure AD**, **Okta OAuth**, and **Okta SAML**. When SSO is configured, user accounts are created automatically on first login, and you can map groups (e.g., an admin group) to control the initial role. 
 
 ### Updating the platform
 From **Settings → Updates**, you can view your current version and initiate an update. Default update mechanisms require outbound connectivity. Terraform users can specify new images and apply updates via IaC. 
@@ -21,7 +21,7 @@ Configure **maximum workers**, **worker instance size**, **processing speed**, a
 Track platform health and responsiveness (e.g., API round‑trip times) to maintain performance and uptime targets. 
 
 ### Data lifecycle & storage
-Because Cado is deployed into your cloud, you control data lifecycle and access using your provider’s native controls (e.g., S3 Lifecycle/Locks, Azure Blob lifecycle policies, GCS Object Lifecycle).
+Because / Forensic Acquisition and Investigation is deployed into your cloud, you control data lifecycle and access using your provider’s native controls (e.g., S3 Lifecycle/Locks, Azure Blob lifecycle policies, GCS Object Lifecycle).
 
 ---
 
