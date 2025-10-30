@@ -8,9 +8,9 @@ sidebar_position: 8
 This section is not relevant to SaaS deployments.
 :::
 
-# How to Expand Available Data Storage within the Cado Platform in AWS
+# How to Expand Available Data Storage within the / Forensic Acquisition and Investigation Platform in AWS
 
-Below are the steps for expanding the Cado data storage volume after deployment, following AWS's instructions for **[Extending a Linux file system after resizing a volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)**.
+Below are the steps for expanding the / Forensic Acquisition and Investigation data storage volume after deployment, following AWS's instructions for **[Extending a Linux file system after resizing a volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)**.
 
 
 Before proceeding, create a snapshot of the `CadoResponseDataVolume` with the device name `/dev/sdh`.
@@ -20,14 +20,14 @@ This ensures you have a backup of the data volume in case any issues arise. Foll
 ### Steps to Expand Storage
 
 1. **Modify the `/dev/sdh` Storage Volume in AWS**:
-   - Navigate to your Cado instance in the AWS Console.
+   - Navigate to your / Forensic Acquisition and Investigation instance in the AWS Console.
    - Click the **Storage** tab.
    - Select the volume with the device name `/dev/sdh`.
    - Click the volume instance ID for the `CadoResponseDataVolume`.
    - Click **Actions** and select **Modify Volume**.
    - Enter the new volume size and click **Modify**.
 
-2. **SSH into the Cado Instance**:
+2. **SSH into the / Forensic Acquisition and Investigation Instance**:
    - Example command: `ssh -i "us-east-2.pem" admin@ec2-55-234-10-9.compute-1.amazonaws.com`
 
 3. **Check Current Available Space**:
