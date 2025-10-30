@@ -5,11 +5,11 @@ sidebar_position: 3
 ---
 
 
-# How to Manage Users and Authentication in Cado
+# How to Manage Users and Authentication in / Forensic Acquisition and Investigation
 
-In the Cado platform, you can control user access to both processed data and raw data stored in the cloud, ensuring users only access the data they need.
+In the / Forensic Acquisition and Investigation platform, you can control user access to both processed data and raw data stored in the cloud, ensuring users only access the data they need.
 
-### Cado Platform Roles
+### / Forensic Acquisition and Investigation Platform Roles
 
 RBAC (Role Based Access) ensures only authorised individuals have access to specific features and data. This is based on permissions defined for the role they are assigned.
 
@@ -17,7 +17,7 @@ RBAC (Role Based Access) ensures only authorised individuals have access to spec
 
 | **User Role**         | **Description**                                                                                  |
 | -------------- | --------------------------------------------------------------------------------------------- |
-| Administrator  | Ability to access all functionality in the Cado platform                     |
+| Administrator  | Ability to access all functionality in the / Forensic Acquisition and Investigation platform                     |
 | Platform Administrator  | A more restricted set of permissions than Administrator, with a focus on operational aspects of the platform including upgrades, account management, and troubleshooting.                  |
 | Lead Analyst        | A restricted set of permissions with a focus on managing investigations including user access and taking response actions                        |
 | Analyst        | A more restricted permission set than the Lead Analyst role, with a focus on conducting investigations including acquiring and analysing evidence                         |
@@ -101,11 +101,11 @@ The below table is a breakdown of permissions across each of the different roles
 
 ### Configuring Single Sign-On (SSO)
 
-Cado supports SSO integration with [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)), and [PingID](sso/ping_saml.md). When SSO is configured, the Cado platform automatically creates the user at first login. By integrating SSO, you can enforce authentication mechanisms such as two-factor authentication supported by your SSO provider.
+/ Forensic Acquisition and Investigation supports SSO integration with [Azure AD](sso/azure-ad.md), Okta ([OAuth](sso/okta.md) or [SAML](sso/okta_saml.md)), and [PingID](sso/ping_saml.md). When SSO is configured, the Cado platform automatically creates the user at first login. By integrating SSO, you can enforce authentication mechanisms such as two-factor authentication supported by your SSO provider.
 
 ### Managing Accounts
 
-Accounts in Cado correspond to cloud accounts in AWS, Azure, or GCP that have the necessary permissions to access cloud resources. Only Administrators can manage accounts. These accounts are automatically populated when CSP credentials are added, following instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/cross/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en).
+Accounts in / Forensic Acquisition and Investigation correspond to cloud accounts in AWS, Azure, or GCP that have the necessary permissions to access cloud resources. Only Administrators can manage accounts. These accounts are automatically populated when CSP credentials are added, following instructions for [AWS](/cado/deploy/cross/cross-account-creation#adding-the-role-to-cado), [Azure](/cado/deploy/cross/azure-cross-tenancy-subscriptions#registering-credentials-within-cado), and [GCP](/cado/deploy/gcp/gcp-settings#en).
 
 It’s recommended to perform **Account Checks** periodically to ensure correct permissions are in place for successful data acquisitions. See [Account Check](/cado/manage/monitoring#account-check) for more details.
 
