@@ -8,13 +8,13 @@ sidebar_position: 8
 This section is not relevant to SaaS deployments.
 :::
 
-# How to Manage Data in the Cado Platform
+# How to Manage Data in the / Forensic Acquisition and Investigation Platform
 
-There are several important considerations when managing data in the Cado platform.
+There are several important considerations when managing data in the / Forensic Acquisition and Investigation platform.
 
-## Controlling the Lifecycle of Data Stored by the Cado Platform
+## Controlling the Lifecycle of Data Stored by the / Forensic Acquisition and Investigation Platform
 
-Each cloud provider offers tools to help manage the lifecycle of data stored in their environments. The Cado platform supports these tools based on the cloud provider you use:
+Each cloud provider offers tools to help manage the lifecycle of data stored in their environments. The / Forensic Acquisition and Investigation platform supports these tools based on the cloud provider you use:
 
 - **AWS**: You can use **[Object Locks](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)** and **[Lifecycle Rules](https://docs.aws.amazon.com/console/s3/lifecyclerules)** in your S3 bucket to control data retention and deletion. For more details, refer to the AWS documentation.
   
@@ -24,10 +24,10 @@ Each cloud provider offers tools to help manage the lifecycle of data stored in 
 
 ## Storing Sensitive Customer Data
 
-The storage of sensitive customer data in the Cado platform depends on the types of data sources and evidence imported into the software. Data can be stored in several locations, including:
+The storage of sensitive customer data in the / Forensic Acquisition and Investigation platform depends on the types of data sources and evidence imported into the software. Data can be stored in several locations, including:
 
-- The database on the main Cado instance.
+- The database on the main / Forensic Acquisition and Investigation instance.
 - EFS (Elastic File System).
 - The customer's S3 bucket (AWS) or Azure storage.
 
-Because the Cado platform is deployed within the customer's cloud environment, the customer has full control over data lifecycle management (e.g., using Lifecycle Management policies) and access controls, such as VPC and subnet rules, to secure sensitive data.
+Because the / Forensic Acquisition and Investigation platform is deployed within the customer's cloud environment, the customer has full control over data lifecycle management (e.g., using Lifecycle Management policies) and access controls, such as VPC and subnet rules, to secure sensitive data.
