@@ -10,7 +10,7 @@ This section is not relevant to SaaS deployments.
 
 # How to Set Up the Ping SAML Integration
 
-You can enable the Ping SAML Integration beta in the Cado platform by going to `Settings > SSO > Ping SAML`.
+You can enable the Ping SAML Integration beta in the / Forensic Acquisition and Investigation platform by going to `Settings > SSO > Ping SAML`.
 
 ### Setting up Ping SSO
 
@@ -18,16 +18,16 @@ You can enable the Ping SAML Integration beta in the Cado platform by going to `
 2. Name your application and select **SAML Application** as the application type.
 3. Click **Configure Application**.
 4. Then click **Manually Enter**.
-5. Add an ACS URL, which is the URL you use to access Cado in the browser, followed by `/api/v2/auth/saml/ping`. For example: `https://my.cado.instance/api/v2/auth/saml/ping`.
+5. Add an ACS URL, which is the URL you use to access / Forensic Acquisition and Investigation in the browser, followed by `/api/v2/auth/saml/ping`. For example: `https://my.cado.instance/api/v2/auth/saml/ping`.
 6. Add an Entity ID, typically the instance URL of your application (e.g., `https://my.cado.instance`).
 7. Click **Save**.
 8. (Optional) Choose who has access to the application:
    - Go to `Identities > Groups`.
    - Add a new group (e.g., `CadoAdmin`).
-   - If you name a group `CadoAdmin`, users in that group will be granted admin access in Cado.
+   - If you name a group `CadoAdmin`, users in that group will be granted admin access in / Forensic Acquisition and Investigation.
 
 :::tip
-For non-admin users, create a group with a different name (e.g., `CadoNonAdmin`). Users in this group will have Normal User access in Cado.
+For non-admin users, create a group with a different name (e.g., `CadoNonAdmin`). Users in this group will have Normal User access in / Forensic Acquisition and Investigation.
 :::
 
 9. Go back to the application you created and click **Attribute Mappings**.
@@ -41,8 +41,8 @@ For non-admin users, create a group with a different name (e.g., `CadoNonAdmin`)
     ![Ping Attribute Statement](/img/ping-attribute-statement.png)
 
 12. Click **Save** after configuring the attributes.
-13. Configure SSO in Cado:
-    - Log in to your Cado instance as an admin.
+13. Configure SSO in / Forensic Acquisition and Investigation:
+    - Log in to your / Forensic Acquisition and Investigation instance as an admin.
     - Go to `Settings > SSO > Ping SAML`.
     - Click **Enabled**.
     - Fill in the fields as follows:
