@@ -8,12 +8,12 @@ sidebar_position: 9
 This section is not relevant to SaaS deployments.
 :::
 
-# How to Update the Cado Platform
+# How to Update the / Forensic Acquisition and Investigation Platform
 
 You can check version details and initiate updates by selecting **Updates** from the **Settings** menu.
 
 ### AWS
-- The default update method in AWS requires the Cado instance to have outbound connectivity to `cado-public.s3.amazonaws.com`. It will then deploy a public AMI in the same region as the Cado platform.
+- The default update method in AWS requires the / Forensic Acquisition and Investigation instance to have outbound connectivity to `cado-public.s3.amazonaws.com`. It will then deploy a public AMI in the same region as the / Forensic Acquisition and Investigation platform.
 
 ### Azure
 - For Azure, the default update process requires outbound connectivity to a VHD URL. You can update via the UI, but to minimize Terraform state drift, it is recommended to follow the Terraform instructions for updates.
@@ -37,7 +37,7 @@ When upgrading via Terraform, it is recommended to gracefully stop your currentl
 
 ## Update Details for Terraform and Custom Updates
 
-To retrieve the latest AMI IDs and URLs for updating your Cado platform, refer to our public [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json).
+To retrieve the latest AMI IDs and URLs for updating your / Forensic Acquisition and Investigation platform, refer to our public [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json).
 
 The latest release information is listed at the bottom of the JSON file:
 ```
@@ -57,6 +57,6 @@ The latest release information is listed at the bottom of the JSON file:
 
 The update mechanism works by deploying a new instance (via AMI in AWS, or via URL in Azure and GCP) and moving the attatched data-disk. In AWS HA environments, the ASG is updated to use the new AMI.
 
-If updating via the User Interface, before the update is performed, a number of checks are performed to ensure any IAM or Infrastructure requirements are met. A warning is issued in the UI if the AMI is not from an official Cado account.
+If updating via the User Interface, before the update is performed, a number of checks are performed to ensure any IAM or Infrastructure requirements are met. A warning is issued in the UI if the AMI is not from an official / Forensic Acquisition and Investigation account.
 
 If updating manually by Terraform or CloudFormation, these checks cannot be run.
