@@ -7,11 +7,11 @@ sidebar_position: 1
 
 # Getting Started with the CTF Investigation
 
-Cado provides a Capture the Flag (CTF) data set to help you get familiar with the Cado platform.
+/ Forensic Acquisition and Investigation provides a Capture the Flag (CTF) data set to help you get familiar with the / Forensic Acquisition and Investigation platform.
 
 ## Create an Investigation
 
-1. Begin by creating a new [investigation](/cado/discovery-import/investigations) in the Cado platform.
+1. Begin by creating a new [investigation](/cado/discovery-import/investigations) in the / Forensic Acquisition and Investigation platform.
 
    ![Create investigation](/img/tutorial1.png)
 
@@ -70,4 +70,4 @@ Click the highlighted filepath **"/etc/crontab"** to investigate further using t
 
 ## Conclusion
 
-This is a simple example of how you can use the Cado platform to investigate an incident. The platform enables you to quickly identify key events and artifacts, while providing powerful tools to dive deeper into the data.
+This is a simple example of how you can use the / Forensic Acquisition and Investigation platform to investigate an incident. The platform enables you to quickly identify key events and artifacts, while providing powerful tools to dive deeper into the data.
