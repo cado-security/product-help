@@ -16,7 +16,7 @@ Use the panel on the right to select the **"Actions"** tab, choose the desired a
 
 ### Permissions Required
 
-Each action requires specific AWS IAM permissions. The table below lists each action, its description, and the permissions needed. Ensure these permissions are added to your Cado role and that the role has the required scope to cover the resource you want to perform actions on.
+Each action requires specific AWS IAM permissions. The table below lists each action, its description, and the permissions needed. Ensure these permissions are added to your / Forensic Acquisition and Investigation role and that the role has the required scope to cover the resource you want to perform actions on.
 
 | Action                  | Description                                                                                                                                 | Required Permissions                               |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
