@@ -4,18 +4,18 @@ hide_title: true
 sidebar_position: 9
 ---
 
-# How to Add Additional Detections to the Cado Platform
+# How to Add Additional Detections to the / Forensic Acquisition and Investigation Platform
 
-The Cado platform allows you to integrate with various systems and incorporate custom Indicators of Compromise (IOCs). You can configure these settings by navigating to **Settings > General Settings > Intelligence**.
+The / Forensic Acquisition and Investigation platform allows you to integrate with various systems and incorporate custom Indicators of Compromise (IOCs). You can configure these settings by navigating to **Settings > General Settings > Intelligence**.
 
 ### VirusTotal API Key
 
-The **VirusTotal API Key** is used to enhance the analysis of already detected files by comparing their file-hash with the VirusTotal database. It does not perform file detection on its own but supplements Cado’s existing detections. When a file with a detection is processed, Cado will perform a VirusTotal lookup based on the file’s hash.
+The **VirusTotal API Key** is used to enhance the analysis of already detected files by comparing their file-hash with the VirusTotal database. It does not perform file detection on its own but supplements / Forensic Acquisition and Investigation’s existing detections. When a file with a detection is processed, Cado will perform a VirusTotal lookup based on the file’s hash.
 
 Key points to note:
 - If the VirusTotal lookup fails, it will not be retried.
-- Cado caches API lookups to avoid redundant queries. If the same file is encountered again, only the first lookup will occur.
-- Typically, Cado will only perform a small number of VirusTotal lookups for any system being processed. However, systems with many malicious files may hit the VirusTotal API key's subscription limit.
+- / Forensic Acquisition and Investigation caches API lookups to avoid redundant queries. If the same file is encountered again, only the first lookup will occur.
+- Typically, / Forensic Acquisition and Investigation will only perform a small number of VirusTotal lookups for any system being processed. However, systems with many malicious files may hit the VirusTotal API key's subscription limit.
 
 Possible workarounds if limits are reached:
 - Create specific API keys with limited usage.
@@ -24,7 +24,7 @@ Possible workarounds if limits are reached:
 
 ### Yara Rules
 
-The **Yara Rules** field allows you to apply your own Yara rules in addition to the built-in rules provided by Cado. When a rule matches, it will trigger a detection:
+The **Yara Rules** field allows you to apply your own Yara rules in addition to the built-in rules provided by / Forensic Acquisition and Investigation. When a rule matches, it will trigger a detection:
 - A match will generate a `Malicious` detection by default.
 - If the Yara rule name starts with "suspicious", it will trigger a `Suspicious` detection.
 
