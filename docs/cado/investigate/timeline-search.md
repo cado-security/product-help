@@ -7,11 +7,11 @@ sidebar_position: 3
 
 # What is the Timeline Tab?
 
-The **Timeline** tab in the Cado platform provides an advanced search interface that supports complex queries to help you filter and analyze investigation data efficiently.
+The **Timeline** tab in the / Forensic Acquisition and Investigation platform provides an advanced search interface that supports complex queries to help you filter and analyze investigation data efficiently.
 
 ### Faceted Search
 
-Cado enables you to filter search results using **facets**, such as event severity, associated usernames, files, or source/destination IP addresses.
+/ Forensic Acquisition and Investigation enables you to filter search results using **facets**, such as event severity, associated usernames, files, or source/destination IP addresses.
 
 ![Faceted Search](/img/faceted-search.png)
 
