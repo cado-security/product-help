@@ -4,9 +4,9 @@ hide_title: true
 sidebar_position: 13
 ---
 
-# How Does Cado Security Keep Your Data Safe?
+# How Does / Forensic Acquisition and Investigation Keep Your Data Safe?
 
-At Cado Security, we prioritize security throughout the entire development process, from the initial idea to the final product. Every aspect is built with robust security measures to ensure smooth operations and strong protection for your data.
+At / Forensic Acquisition and Investigation, we prioritize security throughout the entire development process, from the initial idea to the final product. Every aspect is built with robust security measures to ensure smooth operations and strong protection for your data.
 
 For more information, contact sales@cadosecurity.com to learn more about:
 
