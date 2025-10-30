@@ -17,7 +17,7 @@ You can enable the beta version of Azure AD OAuth Integration in Cado by navigat
 1. Open the **Azure portal** and go to **Enterprise Applications**.
 2. Click **New Application**.
 3. Select **Create your own application**:
-   - Enter a name (e.g., Cado).
+   - Enter a name (e.g., / Forensic Acquisition and Investigation).
    - Choose **Integrate any other application you don't find in the gallery (Non-gallery)**.
 4. Make a note of the **Application ID**.
 
@@ -33,16 +33,16 @@ You can enable the beta version of Azure AD OAuth Integration in Cado by navigat
 :::
 
 5. **Configure Access Control**:
-   - Go to **Enterprise Applications** and open the **Properties** blade. Ensure that **User assignment required?** is set to `Yes`, meaning only assigned users can log in to Cado.
+   - Go to **Enterprise Applications** and open the **Properties** blade. Ensure that **User assignment required?** is set to `Yes`, meaning only assigned users can log in to / Forensic Acquisition and Investigation.
      ![Azure Properties](/img/azure-properties.png)
    - Navigate to **Users and Groups**.
-   - Click **Add User/Group** to assign users who will have access to the application. If you created an admin role, you can assign users to this role to give them admin access within Cado.
+   - Click **Add User/Group** to assign users who will have access to the application. If you created an admin role, you can assign users to this role to give them admin access within / Forensic Acquisition and Investigation.
 
 6. **Create a Client Secret**:
    - From the home page, go to **Azure Active Directory** and select the **App Registrations** blade.
    - Select your application (you may need to switch to the **All Applications** tab if you're not the owner).
    - Go to the **Certificates & Secrets** blade and click **New Client Secret**.
-   - Make a note of the **Value**; you will need this in Cado.
+   - Make a note of the **Value**; you will need this in / Forensic Acquisition and Investigation.
 
 7. **Collect Required Information**:
    - In the **Overview** blade, note down the following values:
@@ -54,7 +54,7 @@ You can enable the beta version of Azure AD OAuth Integration in Cado by navigat
    - Go to the **Authentication** blade.
      ![Azure Authentication](/img/azure-authentication.png)
    - Click **Add a Platform**.
-   - Select **Web** and input your redirect URL. This should be the URL you use to access Cado in your browser, including the `/login` path. Example: `https://my.cado.instance/login`.
+   - Select **Web** and input your redirect URL. This should be the URL you use to access / Forensic Acquisition and Investigation in your browser, including the `/login` path. Example: `https://my.cado.instance/login`.
 
 9. **Add API Permissions**:
    - Go to the **API Permissions** blade.
@@ -66,8 +66,8 @@ You can enable the beta version of Azure AD OAuth Integration in Cado by navigat
      ![Azure API Permissions](/img/azure-api-permissions-2.png)
    - Click **Add permissions**.
 
-10. **Configure SSO in the Cado Platform**:
-    - Log in to your Cado instance as an admin user.
+10. **Configure SSO in the / Forensic Acquisition and Investigation Platform**:
+    - Log in to your / Forensic Acquisition and Investigation instance as an admin user.
     - Go to **Settings > SSO > Microsoft OAuth**.
     - Enter the Microsoft OAuth details you noted earlier.
     - In the `Admin Group Name` field, enter the value you configured in Step 4.
