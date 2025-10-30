@@ -8,16 +8,16 @@ sidebar_position: 3
 This section is not relevant to SaaS deployments.
 :::
 
-# How to Forward Cado System and Processing Logs to SIEMs
+# How to Forward / Forensic Acquisition and Investigation System and Processing Logs to SIEMs
 
 ## Log Location
-Cado logs live under /var/logs/cado - A forwarding agent (e.g. Splunk Universal Forwarder) can be installed to forward logs from this location.
+/ Forensic Acquisition and Investigation logs live under /var/logs/cado - A forwarding agent (e.g. Splunk Universal Forwarder) can be installed to forward logs from this location.
 
 ## Support for Log Forwarders
-As log forwarders are third party applications, Cado cannot provide support for e.g. Splunk Universal Forwader, AWS CloudWatch, Google Ops Agent or Azure Montior. Please contact the relevant vendor for supprt if you are having issues with the vendor log forwarding agent.
+As log forwarders are third party applications, / Forensic Acquisition and Investigation cannot provide support for e.g. Splunk Universal Forwader, AWS CloudWatch, Google Ops Agent or Azure Montior. Please contact the relevant vendor for supprt if you are having issues with the vendor log forwarding agent.
 
 ## CloudWatch in AWS
-The CloudWatch agent is pre-installed in Cado releases.
+The CloudWatch agent is pre-installed in / Forensic Acquisition and Investigation releases.
 If the platform has the necessary IAM and network permissions to send logs to CloudWatch, both application and operating system logs are forwarded to the following locations, specified in the cloudwatch agent configuration:
 
 ```
@@ -26,7 +26,7 @@ If the platform has the necessary IAM and network permissions to send logs to Cl
   "log_stream_name": "cado-logs-all"
 ```
 
-## Forwarding full Cado analysis
+## Forwarding full / Forensic Acquisition and Investigation analysis
 If SIEM forwarding is enabled (Settings > SIEM), all output is also recorded to /var/log/ and will be picked up by log forwarders along with other logs.
 Forwarding to S3 is the reccomended solution for forwarding full Cado analysis as forwarding agents are not designed to forward log logs in this manner.
 
