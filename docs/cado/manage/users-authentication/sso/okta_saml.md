@@ -10,15 +10,15 @@ This section is not relevant to SaaS deployments.
 
 # How to Set Up the Okta SAML Integration
 
-You can enable the Okta SAML Integration beta in the Cado platform by navigating to `Settings > SSO > Okta SAML`.
+You can enable the Okta SAML Integration beta in the / Forensic Acquisition and Investigation platform by navigating to `Settings > SSO > Okta SAML`.
 
 ### Setting up Okta SSO
 
 1. Open the Okta admin dashboard and go to `Applications > Applications`.
 2. Click **Create App Integration**.
 3. Select **SAML 2.0** and click **Next**.
-4. Name the Cado SAML app.
-5. Add a Single Sign-On URL. This should be the URL you use to access Cado in the browser, appended with `/api/v2/auth/saml/okta` (e.g., https://my.cado.instance/api/v2/auth/saml/okta).
+4. Name the / Forensic Acquisition and Investigation SAML app.
+5. Add a Single Sign-On URL. This should be the URL you use to access / Forensic Acquisition and Investigation in the browser, appended with `/api/v2/auth/saml/okta` (e.g., https://my.cado.instance/api/v2/auth/saml/okta).
 6. Add an Audience URI (SP Entity ID), typically the instance URL (e.g., https://my.cado.instance).
 7. Add an Attribute Statement:
    - **Name**: `emailAttrStatement`
@@ -50,8 +50,8 @@ You can assign non-admin users by creating a group with a different name (e.g., 
 
     ![Okta IFrame Embedding](/img/okta-iframe-embedding.png)
 
-13. Configure SSO in Cado:
-    - Log in to your Cado instance as an admin.
+13. Configure SSO in / Forensic Acquisition and Investigation:
+    - Log in to your / Forensic Acquisition and Investigation instance as an admin.
     - Navigate to `Settings > SSO > Okta SAML` and click **Enabled**.
     - Populate the fields using the information from the SAML setup instructions:
         - **Okta SAML App IdP entity ID**: Enter the `Identity Provider Issuer`.
