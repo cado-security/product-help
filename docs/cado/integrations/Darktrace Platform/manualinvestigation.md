@@ -6,14 +6,14 @@ sidebar_position: 1
 
 # Integrating FA&I with a customer’s Cloud Environment using Cloud Wizard
 
-You will need to create an API key from within the FA&I platform that has `Administrator` Role:
+You will need to create an API key from within the FA&I platform that has `Darktrace` Role:
 
-1. Log into the FA&I instance using AAISP then In the settings menu, select the `API` tab
+1. Log into the FA&I instance using [AAISP](https://activeai.darktrace.com/) then in the settings menu, select the `API` tab
 2. Click on `+ Create API key`
 
 ![Create API Key](/img/cloudwizard1.png)
    
-3. Give an appropriate Key name, leaving the Key role as `Administrator`
+3. Give an appropriate Key name, leaving the Key role as `Darktrace`
 4. Click `Create`
 
 ![Key](/img/cloudwizard2new.png)
