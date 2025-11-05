@@ -8,8 +8,8 @@ sidebar_position: 2
 
 ## Automated Investigations based on model alerts and AIA incident events
 
-1. To integrate the two platforms, please follow the previous document [Here](https://docs.cadosecurity.com/cado/integrations/Darktrace%20Platform/manualinvestigation) to log into the FA&I instance and create an API key. Note for this integration please select `Darktrace` as the role
-2. In Darktrace Threat Visualizer screen, navigate to /system-config#modules
+1. To integrate the two platforms, please follow the previous document [here](https://docs.cadosecurity.com/cado/integrations/Darktrace%20Platform/manualinvestigation) to log into the FA&I instance and create an API key. Select `Darktrace` as the role.
+2. In Darktrace Threat Visualizer screen, navigate to System Config > Modules (/system-config#modules)
 3. Select `Modules`, `Workflow Integrations` then click on `Darktrace /Forensic Acquisition & Investigation`
 
 ![Modules](/img/IntegratingDarktrace1new.png)
@@ -29,13 +29,13 @@ sidebar_position: 2
 
 ## Manual Investigations
 
-> **_NOTE:_**  In later Darktrace versions, the Forensic module can be automatically be configured by enabling the 'Allow auto-configuration' setting. If this is not available to you, follow these steps:
+> **_NOTE:_**  In later Darktrace versions, the Forensic module can be automatically configured by enabling the 'Allow auto-configuration' setting. If this is not available to you, follow these steps:
 
 1. To manually configure the `Forensics` module, close the `Workflow Integrations` screen and select `Forensics` module, then click on Darktrace /Forensic Acquisition & Investigation
 
 ![Manual](/img/IntegratingDarktrace4.png)
    
-2. Select `Settings`, then use the same `URL` and `API Key` for the workflow integration in the form, then click on `Save`. At this time, don’t apply anything for `Groups`, `Users` or `JWT`
+2. Select `Settings`, then use the same `URL` and `API Key` for the workflow integration in the form, then click on `Save`. Leave Groups, Users, and JWT fields blank.
 
 ![Manual](/img/IntegratingDarktrace5.png)
 
