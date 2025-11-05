@@ -13,15 +13,15 @@ You will need to create an API key from within the FA&I platform that has `Admin
 
 ![Create API Key](/img/cloudwizard1.png)
    
-3. Give an appropriate Key name e.g. euw1-1349504-01 leaving the Key role as `Administrator`
+3. Give an appropriate Key name e.g. euw1-12345-01 leaving the Key role as `Administrator`
 4. Click `Create`
 
-![Key](/img/cloudwizard2.png)
+![Key](/img/cloudwizard2new.png)
 
 5. In the next window be sure to copy the `Secret key` and store the key in a secure location
 6. In Darktrace Cloud console, select configuration menu then `Cloud Account Setup`
 
-![Accountsetup](/img/cloudwizard3.png)
+![Accountsetup](/img/cloudwizard3new.png)
 
 7. Select the Platform type that’s being integrated with FA&I, then select `Confirm Platform`
 8. Select the setup type and click `Begin Setup`, this guide will use `Azure` however the process should be similar for `AWS`
