@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Integrating Darktrace with FA&I
 
-## Manual Investigations
+## Automated Investigations
 
 1. To integrate the two platforms, please follow the previous document [Here](https://docs.cadosecurity.com/cado/integrations/Darktrace%20Platform/manualinvestigation) to log into the FA&I instance and create an API key. Note for this integration please select `Darktrace` as the role
 2. In Darktrace Threat Visualizer screen, navigate to /system-config#modules
