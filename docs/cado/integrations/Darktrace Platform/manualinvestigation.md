@@ -1,5 +1,5 @@
 ---
-title: Connecting Cloud Environments Using Cloud Wizard
+title: Connecting Cloud Environments Using Darktrace / Cloud Wizard
 hide_title: true
 sidebar_position: 1
 ---
