@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
-id: Darktrace with FA&I to perform manual investigations
-title: Darktrace with FA&I to perform manual investigations
+title: Connecting Cloud Environments Using Cloud Wizard
+hide_title: true
+sidebar_position: 1
 ---
 
 # Integrating FA&I with a customer’s Cloud Environment using Cloud Wizard
@@ -13,7 +13,7 @@ You will need to create an API key from within the FA&I platform that has `Admin
 
 ![Create API Key](/img/cloudwizard1.png)
    
-3. Give an appropriate Key name e.g. euw1-12345-01 leaving the Key role as `Administrator`
+3. Give an appropriate Key name, leaving the Key role as `Administrator`
 4. Click `Create`
 
 ![Key](/img/cloudwizard2new.png)
