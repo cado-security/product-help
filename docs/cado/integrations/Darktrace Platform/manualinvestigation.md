@@ -38,7 +38,7 @@ You will need to create an API key from within the FA&I platform that has `Admin
 12. Provide the script to the user to run within their Cloud Shell
 13. Once you have confirmation that the script completed correctly, tick box at stage 4 to confirm it completed then click **Deploy**
 
-![Deploy](/img/deploy.png)
+![Deploy](/img/dtdeploynew.png)
    
 14. Once the deployment is verified, click on `Start Cloud Monitoring`
 
