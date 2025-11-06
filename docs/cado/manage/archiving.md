@@ -19,11 +19,11 @@ Investigations will then be archived once they reach the age threshold, on a sch
 
 Investigations can now manually be archived and restored by going to your investigation and clicking the ⋮ symbol on the investigation you want to manually archive or restore.
 
-If the investigation is not in an achrived status you will see the `Archive Investigation` option avaiable 
+If the investigation is not in an archived status you will see the `Archive Investigation` option avaiable 
 
 ![Archive](/img/archiveinvestigation.png)
 
-If the investigation is achrived you will see the `Restore Investigation` option avaiable.
+If the investigation is archived you will see the `Restore Investigation` option avaiable.
 
 ![Restore](/img/restoreinvestigation.png)
 
