@@ -1,10 +1,10 @@
 ---
-title: Minimal Deployment Guide
+title: Simple Deployment Guide
 hide_title: true
 sidebar_position: 2
 ---
 
-# Minimal Deployment Guide
+# Simple Deployment Guide
 
 This guide provides step-by-step instructions for deploying a / Forensic Acquisition and Investigation instance from the Azure console, aimed at helping you get up and running with the platform as quickly as possible
 
