@@ -105,7 +105,7 @@ To enable **Workers** follow the workers document - [Enable Workers](https://doc
 
 #### Secret Manager
 
-The initial deployment stores the key used to encrypt secrets in / Forensic Acquisition and Investigation locally on the machine. Enabling a Secret Manager allows / Forensic Acquisition and Investigation to instead store the key in Azure Key Vault.
+The initial deployment stores the key used to encrypt secrets in / Forensic Acquisition and Investigation locally on the machine. Enabling a Secret Manager allows / Forensic Acquisition and Investigation to instead store the key in GCP Secret Manager.
 
 To enable **Secret Manager** follow the secret manager document - [Enable Secret Manager](https://docs.cadosecurity.com/cado/deploy/gcp/gcp-secret-manager)
 
