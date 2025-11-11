@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # NFS
 
-The initial minimal deployment deploys without a Network File Share (NFS). Enabling an NFS allows Darktrace to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
+The initial simple deployment deploys without a Network File Share (NFS). Enabling an NFS allows Darktrace to keep a copy of every file processed on disk. This enables the re-running of analysis and the downloading of the original file in the UI for further analysis.
 
 ### Prerequisites
 
