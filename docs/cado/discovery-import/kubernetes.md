@@ -104,19 +104,13 @@ For Kubernetes v1.30 or later, you can optionally use the "Run as non-root user"
 
 ### Private GKE Clusters
 
-Please use the **Alternate Private EKS Cluster Access** method described above.
+Please use the **Alternate Private Cluster Access with a Sidecar** method described above.
 
 / Forensic Acquisition and Investigation is exploring support for private GKE clusters through public endpoints on private clusters via the "normal" method. 
 
 ### Private EKS Clusters
 
-Private EKS clusters can be configured to be accessible only from within the VPC they reside in or connected networks (e.g., peered VPCs). If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API.
-
-If / Forensic Acquisition and Investigation cannot access the cluster endpoint, you can use the **Alternate Private EKS Cluster Access** method described above.
-
-#### Alternate Private EKS Cluster Access
-
-If the / Forensic Acquisition and Investigation platform does not have access to the cluster endpoint, you can acquire data by deploying the Host acquisition script.
+If the / Forensic Acquisition and Investigation platform does not have access to the cluster endpoint, you can acquire data by deploying the Host/Sidecar acquisition script.
 
 To do this, connect to your EKS cluster using a command like:
 
@@ -129,6 +123,8 @@ Follow AWS’s instructions [here](https://docs.aws.amazon.com/eks/latest/usergu
 Then execute the `kubectl` script generated at **Import > / Forensic Acquisition and Investigation Host > Kubernetes**.
 
 ### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
+
+Private EKS clusters can be configured to be accessible only from within the VPC they reside in or connected networks (e.g., peered VPCs). If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API to start the sidecar.
 
 Various methods can be used to access the Kubernetes API in a private VPC, including:
 - **Bastion Hosts**
