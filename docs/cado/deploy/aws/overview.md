@@ -23,7 +23,7 @@ Architecture diagrams and permission requirements are available to guide secure 
 | Goal | Method | Description |
 |------|--------|-------------|
 | **Deploy / Forensic Acquisition and Investigation with full capabilities** | [CloudFormation Template](https://docs.cadosecurity.com/cado/deploy/aws/cloudformation) | Use / Forensic Acquisition and Investigation CloudFormation template to deploy a full-featured platform with support for worker VMs and large-scale imports. |
-| **Quickly deploy / Forensic Acquisition and Investigation with minimal setup** | [Minimal Deployment](https://docs.cadosecurity.com/cado/deploy/aws/aws_quick_deployment) | Launch a basic / Forensic Acquisition and Investigation instance directly from the AWS Console with minimal permissions. Ideal for restricted environments. |
+| **Quickly deploy / Forensic Acquisition and Investigation with simple setup** | [Simple Deployment](https://docs.cadosecurity.com/cado/deploy/aws/aws_quick_deployment) | Launch a basic / Forensic Acquisition and Investigation instance directly from the AWS Console with minimal permissions. Ideal for restricted environments. |
 | **Deploy using infrastructure-as-code** | [Terraform](https://docs.cadosecurity.com/cado/deploy/aws/terraform) | Automate deployment using Terraform scripts. Supported across AWS, Azure, and GCP. |
 | **Understand architecture and security features** | [Architecture Overview](https://docs.cadosecurity.com/cado/deploy/aws/architecture) | Learn how / Forensic Acquisition and Investigation creates an isolated VPC and supports private deployments with proxy inspection. |
 | **Review supported configurations** | [Supported Deployment Configurations](https://docs.cadosecurity.com/cado/deploy/supported) | Ensure your IAM and network setup aligns with / Forensic Acquisition and Investigation supported configurations to avoid import failures. |
@@ -32,7 +32,7 @@ Architecture diagrams and permission requirements are available to guide secure 
 
 ## Deployment Options
 
-### Minimal Deployment
+### Simple Deployment
 - **Purpose**: Fast setup with minimal permissions.
 - **Use Case**: Highly restricted environments.
 - **Availability**: AWS Console.
