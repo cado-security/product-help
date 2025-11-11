@@ -1,10 +1,10 @@
 ---
-title: Minimal Terraform Deployment Guide
+title: Simple Terraform Deployment Guide
 hide_title: true
 sidebar_position: 1
 ---
 
-# Minimal Terraform Deployment Guide
+# Simple Terraform Deployment Guide
 
 This guide provides step-by-step instructions for deploying a / Forensic Acquisition and Investigation instance with a minimial terraform deployment, aimed at helping you get up and running with the platform as quickly as possible
 
