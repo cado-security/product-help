@@ -110,9 +110,9 @@ You will now be able to see you scheduled scans in the automations tab.
 
 ## Darktrace AIA Full Disk Acquisition
 
-> ⚠️ **Note:** This is currently only available for **SAAS** environment.
+> ⚠️ **Note:** This Setting if **Off** by default.
 
-You are now able to aquire a full disk for Darktrace AIA by following the below steps.
+You are now able to perform a full disk acquisition of the cloud assets associated with AIA incidents by following the below steps:
 
 1. Login to your / Forensic Acquisition and Investigation Platform and go to settings.
 2. On the detections tab you you will now be able to enable Darktrace AIA Full Disk Acquisitions (This will be off by default).
