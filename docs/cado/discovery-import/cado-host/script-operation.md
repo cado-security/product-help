@@ -4,16 +4,16 @@ hide_title: true
 sidebar_position: 8
 ---
 
-# How does the / Forensic Acquisition and Investigation Host deployment script operate?
+# How does the Cado Host deployment script operate?
 
-The / Forensic Acquisition and Investigation Host script is used to download, execute, and clean up the / Forensic Acquisition and Investigation Host binary from a system.
+The Cado Host script is used to download, execute, and clean up the Cado Host binary from a system.
 Below is a breakdown of how the script works for Linux - the script is similiar in function for Windows and MacOS.
 
 ### Summary of Key Steps:
-1. **Directory creation**: A temporary directory is created for storing the / Forensic Acquisition and Investigation Host binary.
-2. **Download handling**: The script checks if either `curl` or `wget` is installed and uses one to download the / Forensic Acquisition and Investigation Host binary.
+1. **Directory creation**: A temporary directory is created for storing the Cado Host binary.
+2. **Download handling**: The script checks if either `curl` or `wget` is installed and uses one to download the Cado Host binary.
 3. **Download verification**: After downloading, the script verifies that the binary exists.
-4. **Execution of / Forensic Acquisition and Investigation Host**: The binary is given executable permissions and run with specific options.
+4. **Execution of Cado Host**: The binary is given executable permissions and run with specific options.
 5. **Clean-up**: After running, the script removes the temporary directory to clean up.
 
 
@@ -23,7 +23,7 @@ Below is a breakdown of how the script works for Linux - the script is similiar 
 mkdir -p /tmp/cado-host-67c03a16
 ```
 - **Creates a temporary directory**:  
-The script starts by creating a directory named `/tmp/cado-host-67c03a16`. This directory is used to store the downloaded / Forensic Acquisition and Investigation Host binary. The `-p` option ensures no error is thrown if the directory already exists.
+The script starts by creating a directory named `/tmp/cado-host-67c03a16`. This directory is used to store the downloaded Cado Host binary. The `-p` option ensures no error is thrown if the directory already exists.
 The end of the directory is a random identifier to avoid conflicts.
 
 ```bash
@@ -35,8 +35,8 @@ The script checks whether the `curl` command is available on the system by verif
 ```bash
 then sudo curl -s https://cado-public.s3-accelerate.amazonaws.com/cado-host/$version/linux/cado-host --output /tmp/cado-host-67c03a16/cado-host
 ```
-- **Downloads / Forensic Acquisition and Investigation Host using `curl`**:  
-If `curl` is available, it silently (`-s`) downloads the / Forensic Acquisition and Investigation Host binary from the provided URL and stores it in the newly created directory. The file is saved as `/tmp/cado-host-67c03a16/cado-host`.
+- **Downloads Cado Host using `curl`**:  
+If `curl` is available, it silently (`-s`) downloads the Cado Host binary from the provided URL and stores it in the newly created directory. The file is saved as `/tmp/cado-host-67c03a16/cado-host`.
 
 ```bash
 elif command -v wget > /dev/null
@@ -47,8 +47,8 @@ If `curl` is not found, the script checks if `wget` is installed on the system.
 ```bash
 then sudo wget -q --output-document /tmp/cado-host-67c03a16/cado-host https://cado-public.s3-accelerate.amazonaws.com/cado-host/$version/linux/cado-host
 ```
-- **Downloads / Forensic Acquisition and Investigation Host using `wget`**:  
-If `wget` is available, it silently (`-q`) downloads the / Forensic Acquisition and Investigation Host binary from the same URL, storing it in the `/tmp/cado-host-67c03a16/` directory.
+- **Downloads Cado Host using `wget`**:  
+If `wget` is available, it silently (`-q`) downloads the Cado Host binary from the same URL, storing it in the `/tmp/cado-host-67c03a16/` directory.
 
 ```bash
 else echo "Cado Host requires curl or wget for unattended mode."; exit 1;
@@ -68,7 +68,7 @@ if [ ! -f /tmp/cado-host-67c03a16/cado-host ]; then
 fi
 ```
 - **Validates the download**:  
-This step checks if the / Forensic Acquisition and Investigation Host binary was successfully downloaded. If the binary is not found in the `/tmp/cado-host-67c03a16/` directory, the script prints an error message about network issues and exits.
+This step checks if the Cado Host binary was successfully downloaded. If the binary is not found in the `/tmp/cado-host-67c03a16/` directory, the script prints an error message about network issues and exits.
 
 ```bash
 cd /tmp/cado-host-67c03a16/
@@ -85,12 +85,12 @@ The script changes the permissions of the `cado-host` binary to make it executab
 ```bash
 sudo ./cado-host capture --skip_linux_memory || echo "Cado Host has failed. For troubleshooting steps, pass the --verbose and --no_cleanup flags, or visit https://docs.cadosecurity.com/cado-host/deploy#considerations, or contact support@cadosecurity.com.; sudo ./cado-host upload --presigned_data $pre-signed-data"
 ```
-- **Runs the / Forensic Acquisition and Investigation Host binary and removes the collected archive**:  
+- **Runs the Cado Host binary and removes the collected archive**:  
 The script executes the `cado-host` binary with two options: `--presigned_data` and `--skip_linux_memory`, which skips memory data collection on Linux.  
 If the execution fails, it displays an error message with troubleshooting instructions.
 
 Note the --no_cleanup flag is not passed, so the script will clean up after the binary has run by deleting the collected archive.
-If this flag is passed, or pre-signed data is not given to / Forensic Acquisition and Investigation Host, the script will not delete the collected archive.
+If this flag is passed, or pre-signed data is not given to Cado Host, the script will not delete the collected archive.
 
 The pre-signed data is a JSON object that contains information required to upload data to a cloud storage provider. An example of this JSON object is as follows:
 
