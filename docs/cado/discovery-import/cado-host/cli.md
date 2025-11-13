@@ -4,7 +4,7 @@ hide_title: true
 sidebar_position: 7
 ---
 
-# / Forensic Acquisition and Investigation Host CLI Documentation
+# Cado Host CLI Documentation
 
 ## Usage
 ```bash
@@ -17,7 +17,7 @@ cado-host [-h] [--verbose] [--version] {version,capture,upload} ...
 - `--verbose`  
   Enable verbose output.
 - `--version`
-  Returns the current version of / Forensic Acquisition and Investigation Host.
+  Returns the current version of Cado Host.
 
 ## Commands
 
@@ -26,7 +26,7 @@ Capture and triage files based on chosen configuration.
 
 #### Options
 - `-c {default,light,max}, --collection_mode {default,light,max}`  
-  Selects the collection mode which changes how / Forensic Acquisition and Investigation Host will search for files:  
+  Selects the collection mode which changes how Cado Host will search for files:  
   - `default`  
     Searches and collects the default set files of files as outlined [here](/cado/discovery-import/cado-host/artifacts).  
   - `light`  
@@ -57,7 +57,7 @@ Capture and triage files based on chosen configuration.
   List all available groups of files that can be collected.
 
 - `-o OUTPUT_PATH, --output_path OUTPUT_PATH`  
-  Path where / Forensic Acquisition and Investigation Host will save the collection.
+  Path where Cado Host will save the collection.
 
 
 #### Kubernetes Specific Options
@@ -91,7 +91,7 @@ Capture and triage files based on chosen configuration.
   Includes open files and memory even if it exceeds 1MB in size. This will slow capture down significantly.
 
 ### `upload`
-Upload an existing / Forensic Acquisition and Investigation Host capture file, or other files. **This will clean up the uploaded resource locally by default.**
+Upload an existing Cado Host capture file, or other files. **This will clean up the uploaded resource locally by default.**
 
 :::tip
 When using `cado-host upload` to upload single files to the platform, please use `--no_cleanup` to ensure Cado Host doesn't delete the file after upload.
