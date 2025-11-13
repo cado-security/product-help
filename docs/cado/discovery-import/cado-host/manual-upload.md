@@ -6,12 +6,12 @@ sidebar_position: 7
 
 # How to Upload a Single File to / Forensic Acquisition and Investigation
 
-You can upload a single file, such as a disk image or a previously collected / Forensic Acquisition and Investigation Host zip file, using / Forensic Acquisition and Investigation Host with the `upload` command. This method is useful when you do not have direct access to AWS, Azure, or GCP, as / Forensic Acquisition and Investigation will generate the required credentials during the import process.
+You can upload a single file, such as a disk image or a previously collected Cado Host zip file, using Cado Host with the `upload` command. This method is useful when you do not have direct access to AWS, Azure, or GCP, as / Forensic Acquisition and Investigation will generate the required credentials during the import process.
 
 ### Steps to Upload a Single File:
 
 1. **Generate Upload Credentials**  
-   In the Platform, go to **Import > / Forensic Acquisition and Investigation Host** to generate the credentials for the upload.
+   In the Platform, go to **Import > Cado Host** to generate the credentials for the upload.
 
 2. **Copy Presigned Data**  
    In the investigator system, copy the `--presigned_data` portion of the script to your clipboard.
@@ -24,7 +24,7 @@ You can upload a single file, such as a disk image or a previously collected / F
    Replace `$file` with the path to the file you wish to upload.
 
 4. **Automatic Processing**  
-   / Forensic Acquisition and Investigation Host will upload the specified file, and Cado will automatically begin the import and processing of the file.
+   Cado Host will upload the specified file, and Cado will automatically begin the import and processing of the file.
 
 
 Here’s the full **Markdown section** ready to paste into your documentation:
