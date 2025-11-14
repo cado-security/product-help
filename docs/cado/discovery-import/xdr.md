@@ -50,3 +50,69 @@ You can also set some parameters for your acquisition:
 
 Once initiated, / Forensic Acquisition and Investigation will begin importing data from the selected endpoint via the XDR platform.
 
+## CrowdStrike Quarantined Host Capture
+
+In this section we will go through the steps required to manually pull data from your quarantined host on Crowdstrike to allow you to create an investigation within your cado platform.
+
+#### Pre-requisites
+
+- Access to RTR in the CrowdStrike console.
+- Cado Host binary available for upload. The latest version is available within the platform at Import -> Cado Host.
+
+1. Go to Host Management on your Crowdstrike console (/host-management/hosts) 
+
+![Host Management](/img/csstep1.png)
+
+2. Upload Cado Host Binary (/real-time-response/scripts/put-files)
+
+![Put File](/img/csstep2.png)
+
+Once uploaded you will see the file on your “put file” list:
+
+![Put File List](/img/csstep3.png)
+
+3. Connect to Host
+
+![Host Connect](/img/csstep4.png)
+
+> **NOTE:** The binary default directory is `C:\` on Windows Hosts.
+
+4. On the host using Crowdstrike RTR  run the command `put "cado-host.exe"`
+
+You will now be able to see the `cado-host.exe` in `C:\`
+
+![Host File](/img/csstep5.png)
+
+5. Run the executable with the capture command:
+
+`run "c:\cado-host.exe" -CommandLine="capture --output_path c:\capture.zip" -Wait`
+
+If run successfully you will get the exit code 0
+
+![Code 0](/img/csstep6.png)
+
+6. You will now need to download the `capturetest.zip` using the following command
+
+`get capturetest.zip`
+
+You will now see a progress banner for the zip download
+
+![Progress Bar](/img/csstep7.png)
+
+7. Once the download has finished you will now be able to download the zip folder to your local machine
+
+![Download](/img/csstep8.png)
+
+The zip folder will now be available to view on your default downloads location on your local machine. You will be prompted to enter a password which will be shown on the Crowdstrike UI: 
+
+![Password](/img/csstep9.png)
+
+8. Use the AWS CLI to upload your file directly to your S3 bucket by using the below command:
+
+`aws s3 cp capture.zip s3://your-bucket-name/path/`
+
+9. Please follow [this](https://docs.cadosecurity.com/cado/discovery-import/aws/aws-s3) document to import your data from S3 into your Cado Platform.
+
+
+
+
