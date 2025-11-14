@@ -52,7 +52,7 @@ Once initiated, / Forensic Acquisition and Investigation will begin importing da
 
 ## CrowdStrike Quarantined Host Capture
 
-In this section we will go through the steps required to manually pull data from your quarantined host on Crowdstrike to allow you to create an investigation within your cado platform.
+In this section we will go through the steps required to manually perform a triage capture from your quarantined host on Crowdstrike to allow you to create an investigation within your cado platform.
 
 #### Pre-requisites
 
