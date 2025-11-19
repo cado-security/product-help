@@ -18,9 +18,7 @@ These IOCs are then matched against evidence collected as part of the forensic i
 
 ## Creating Custom IOC
 
-You can now create custom IOC's for AIA incidents.
-
-You can enter one indicator per line to match content inside files.
+You can now create custom IOC's to be applied across your evidence by entering one indicator per line to match content inside files.
 
 Indicators can include:
 
