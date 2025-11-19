@@ -18,7 +18,7 @@ These IOCs are then matched against evidence collected as part of the forensic i
 
 ## Creating Custom IOC
 
-You can now create custom IOC's to be applied across your evidence by entering one indicator per line to match content inside files.
+You can now create custom IOC's to be applied across your evidence at the investigation level by entering one indicator per line to match content inside files and events.
 
 Indicators can include:
 
