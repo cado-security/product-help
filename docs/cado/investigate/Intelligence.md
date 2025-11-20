@@ -25,7 +25,7 @@ Indicators can include:
 - Keywords (e.g., filenames, IP addresses, domain names)
 - SHA256 file hashes (matched against files directly)
 
-> Note
+> **Note**
 > 
 > Matches occur within file content, not the filename itself. Optionally, add a descriptive title for an indicator by prefixing it with a semicolon (;).
 > 
