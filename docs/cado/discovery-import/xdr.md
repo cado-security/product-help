@@ -50,7 +50,7 @@ You can also set some parameters for your acquisition:
 
 Once initiated, / Forensic Acquisition and Investigation will begin importing data from the selected endpoint via the XDR platform.
 
-## CrowdStrike Quarantined Host Capture
+## CrowdStrike Quarantined Host Capture (Windows)
 
 In this section we will go through the steps required to manually perform a triage capture from your quarantined host on Crowdstrike to allow you to create an investigation within your cado platform.
 
@@ -112,6 +112,86 @@ The zip folder will now be available to view on your default downloads location 
 `aws s3 cp capture.zip s3://your-bucket-name/path/`
 
 9. Please follow [this](https://docs.cadosecurity.com/cado/discovery-import/aws/aws-s3) document to import your data from S3 into your Cado Platform.
+    
+## CrowdStrike Quarantined Host Capture (Linux)
+
+In this document we will go through the steps required to manually pull data from your quarantined Linux host on Crowdstrike to allow you to create an investigation within your cado platform.
+
+**Pre-requisites:**
+- Access to RTR in the CrowdStrike console.
+- Access to Crowdstrike Audit Logs
+- Cado Host Linux binary available for upload. The latest version is available within the platform at Import -> Cado Host.
+
+**Steps**
+
+1. Go to Host Management on your Crowdstrike console (/host-management/hosts) 
+
+![Host Management](/img/linuxhost1.png)
+
+2. Upload Cado Host Binary (/real-time-response/scripts/put-files)
+
+![Put File](/img/linuxhost2.png)
+
+Once uploaded you will see the file on your “put file” list.
+
+![File Name](/img/linuxhost3.png)
+
+3. Connect to Linux Host on Crowdstrike
+
+![Host](/img/linuxhost4.png)
+
+4. Change directory to `tmp` as this will not work in `/` directory.
+   
+5. Use the command put `"cado-host"`
+
+You will now be able to see the `cado-host` file in `/tmp`
+
+![Host Binary](/img/linuxhost5.png)
+
+6. On Crowdstrike RTR change to **Edit and Run Scripts**
+
+![Edit and Run](/img/linuxhost6.png)
+
+7. Run the following command which makes the `cado-host` binary executable and then runs it to capture data, storing the results in a ZIP file called `capture.zip`
+
+```
+#!/bin/bash
+chmod +x /tmp/cado-host
+/tmp/cado-host capture --output_path /tmp/capture.zip
+```
+
+If run successfully you will see an output similar to the below screenshot
+
+![Output](/img/linuxhost7.png)
+
+8. You will now need to download the capture.zip using the following command:
+
+`get capture.zip`
+
+You will now see a progress banner for the zip download
+
+![Progress bar](/img/linuxhost8.png)
+
+9.  Once the download has finished you will need to navigate to (/activity/real-time-response/audit-logs/) on Crowdstrike.
+
+10. In the audit logs you can now filter to your **Hostname** and **get command**
+
+![Filter](/img/linuxhost9.png)
+
+11. Click on **Actions** then download the `/tmp/capture.zip` received file
+
+![Capture](/img/linuxhost10.png)
+
+12. Unzip the file on your local machine using the password “**infected**”
+
+13. Use the AWS CLI to upload your file directly to your S3 bucket by using the below command:
+
+`aws s3 cp capture.zip s3://your-bucket-name/path/`
+
+14. Please follow this (document)[https://docs.cadosecurity.com/cado/discovery-import/aws/aws-s3] to import your data from S3 into your Cado Platform.
+   
+   
+
 
 
 
