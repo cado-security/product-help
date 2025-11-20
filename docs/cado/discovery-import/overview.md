@@ -35,3 +35,4 @@ This section helps you choose the right import method for your use case, underst
 | Integrate programmatically | [API overview](https://docs.cadosecurity.com/cado/integrations/api-overview) | Use the Cado API and webhooks/SOAR for imports and more. |
 | Manage Investigations | [Managing investigations](https://docs.cadosecurity.com/cado/discovery-import/investigations) | Create/update, view processing pipeline, and housekeeping. |
 | Verify provenance | [Chain of custody](https://docs.cadosecurity.com/cado/discovery-import/chain_of_custody) | Where to find evidence metadata and audit logs. |
+| Create Scheduled Scans | [Scheduled Scans](https://docs.cadosecurity.com/cado/discovery-import/scheduled-scans) | Automate vulnerability and malware checks  |
