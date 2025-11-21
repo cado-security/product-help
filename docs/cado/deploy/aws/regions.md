@@ -31,4 +31,4 @@ If you need to deploy the platform in a region not listed above, we can extend s
 
 ## AWS GovCloud Support
 
-The platform also supports deployment in AWS GovCloud. We offer full support for both the **us-gov-west-1** and **us-gov-east-1** regions, ensuring compliance with government security requirements.
+Please contact us for details on GovCloud support.
