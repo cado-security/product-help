@@ -22,6 +22,9 @@ You can check version details and initiate updates by selecting **Updates** from
 - Updates in GCP can be performed through the UI or using Terraform. Terraform users should specify the new image in the `gcpVars.tfvars` file.
 
 ### Alternative Update Method
+:::warning
+Required updates must not be skipped. All versions marked as `required: true` in the [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) must be upgraded through before later versions can be upgraded to. If no future versions are marked as required, you can jump striaght to the latest version.
+:::
 In AWS or Azure, you can manually specify an AMI ID or VHD URL, respectively, using the **Alternative Update Method**. 
 
 Note that all updates are user-initiated; Cado will not trigger updates automatically.
@@ -34,6 +37,10 @@ For users deploying with Terraform, update the AMI ID (AWS), VHD URL (Azure), or
 :::warning
 When upgrading via Terraform, it is recommended to gracefully stop your currently running instance through the console before starting the upgrade.
 :::
+:::warning
+Required updates must not be skipped. All versions marked as `required: true` in the [update JSON](https://cado-public.s3.amazonaws.com/cado_updates_json_v2.json) must be upgraded through before later versions can be upgraded to. If no future versions are marked as required, you can jump striaght to the latest version.
+:::
+
 
 ## Update Details for Terraform and Custom Updates
 
