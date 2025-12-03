@@ -33,6 +33,18 @@ For this feature to work, the GCP project must have the **default VPC** enabled.
 
 ![GCP Compute Import](/img/gcp-compute.png)
 
+### Using the Acquisition Service Account for acquisition
+
+With this option selected during import, the Service Account from the Forensic Acquisition and Investigation project will be used for the image export instead of the Compute Engine default service account. This can be helpful for more restricted GCP environments.
+
+Under the hood, the following parameters will be passed to CloudBuild via [GCE Export](https://github.com/GoogleCloudPlatform/compute-image-tools/tree/master/cli_tools/gce_export)):
+- Arguments: "-compute_service_account={acquisition_service_account}"
+- Service Account parameter: "projects/{self.gcp_project_id}/serviceAccounts/{acquisitionservice_account_email}
+
+For more information on the permissions required for this set-up, please see:
+- https://docs.cloud.google.com/iam/docs/service-account-impersonation#enabling-cross-project
+- https://blog.salrashid.dev/articles/2021/cross_project_svc_account/
+- https://docs.cloud.google.com/compute/docs/import/requirements-export-import-images#required-roles-cloud-build-sa
 
 # Data Flow Diagram
 
