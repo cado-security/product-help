@@ -27,7 +27,8 @@ Indicators can include:
 
 > **Note**
 > 
-> Matches occur within file content, not the filename itself. Optionally, add a descriptive title for an indicator by prefixing it with a semicolon (;).
+> Matches occur within file content, not the filename itself. 
+> You must include a descriptive title for an indicator using a semicolon (;) to seperate it from the IOC, for example:
 > 
 > **Example:**
 > 
