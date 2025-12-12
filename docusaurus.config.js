@@ -5,8 +5,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Cado Security',
-  tagline: 'Cado Security',
+  title: 'Darktrace / Forensic Acquisition and Investigation',
+  tagline: 'Darktrace / Forensic Acquisition and Investigation',
   url: 'https://docs.cadosecurity.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -250,9 +250,9 @@ const config = {
         navbar: {
         title: ' ',
         logo: {
-          alt: 'Cado Logo',
-          src: 'img/cado.png',
-          srcDark: 'img/cado-dark.png',
+          alt: 'Darktrace Logo',
+          src: 'img/darktrace.png',
+          srcDark: 'img/darktrace-dark.png',
         },
       },
       footer: {
@@ -262,8 +262,8 @@ const config = {
           title: 'Community',
           items: [
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/cadosecurity',
+              label: 'Darktrace',
+              href: 'https://www.darktrace.com/',
               external: true,
             },
             {
@@ -274,7 +274,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} | Cado Security`,
+      copyright: `Copyright © ${new Date().getFullYear()} Darktrace Holdings Limited. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
