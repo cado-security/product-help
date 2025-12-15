@@ -124,7 +124,7 @@ Then execute the `kubectl` script generated at **Import > / Forensic Acquisition
 
 ### Methods for Executing Kubernetes API Commands Inside a Private Cluster VPC
 
-Private EKS clusters can be configured to be accessible only from within the VPC they reside in or connected networks (e.g., peered VPCs). If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API to start the sidecar.
+If the cluster is configured with "Private endpoint only," you will need to use a method like VPC peering or another connection option to access the API to start the sidecar. How to implement this will be dependant upon your Kubernetes deployment.
 
 Various methods can be used to access the Kubernetes API in a private VPC, including:
 - **Bastion Hosts**
