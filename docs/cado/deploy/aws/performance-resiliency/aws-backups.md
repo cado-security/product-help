@@ -10,12 +10,21 @@ sidebar_position: 1
 / Forensic Acquisition and Investigation backs up any imports to S3 which can then be re-imported later to a fresh instance. This is the simplest method for backups.
 You will need to restore the data volume if you want to recover user settings such as user logins, and processed data.
 
-## Backup and Recovery for self hosted deployments
-This section explains how to recover or migrate the platform to a new instance.
+## Backup and Recovery Options
 
-If a / Forensic Acquisition and Investigation instance fails, you will need to recover and attach the data volume to a new instance. The data volume contains previously imported data as well as user settings.
+There are two ways to back up your deployment:
 
-You can also use this approach to migrate / Forensic Acquisition and Investigation to a new availability zone or region.
+#### Scheduled Backups
+Set up automated snapshots using AWS tools like Data Lifecycle Manager (DLM). This ensures you always have recent backups without manual effort.
+
+- Use AWS DLM to create recurring snapshots of your data volume.
+	
+#### Manual Backups
+Create snapshots or AMIs when needed. This is best for one-time migrations or before major changes.
+
+- Create a snapshot of your instance’s volume and convert it into an AMI. This captures the current system state so you can redeploy without rebuilding.
+
+Note: AMIs only work in the same AWS region and require the same IAM roles and permissions.
 
 ### Scheduling Automated Backups of the Data Volume
 Amazon EBS Snapshots are stored by AWS in Amazon S3, where it is stored redundantly in multiple Availability Zones.
