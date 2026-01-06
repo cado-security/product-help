@@ -22,5 +22,6 @@ Note that these ports are allowed by the default / Forensic Acquisition and Inve
 | 6379 | Redis | TLS |
 | 5432 | PostGres | TLS |
 | 5000 | API | TLSv1.2 TLSv1.3 via Nginx |
+| 24224* | Fluent-bit | Log forwarding from workers (*only required when deployed without a file share) |
 | 22*  | Support | Debian SSH Service (*not required for normal operation) |
 
