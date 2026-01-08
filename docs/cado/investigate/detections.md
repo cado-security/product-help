@@ -24,10 +24,24 @@ Possible workarounds if limits are reached:
 
 ### Yara Rules
 
-The **Yara Rules** field allows you to apply your own Yara rules in addition to the built-in rules provided by / Forensic Acquisition and Investigation. When a rule matches, it will trigger a detection:
-- A match will generate a `Malicious` detection by default.
-- If the Yara rule name starts with "suspicious", it will trigger a `Suspicious` detection.
+The **Yara Rules** field allows you to apply your own Yara rules in addition to the built-in rules provided by / Forensic Acquisition and Investigation. We use the meta section of the yara rule during processing and use the following levels to assign an alarm level to the detection:
+- `1` = `Malicious`
+- `3` = `Suspicious`
+- `10` = `Informational`
 
+The following is an example of a rule using the meta severity field:
+
+```
+rule example_custom_yara_rule {
+   meta:
+      description = "Example Yara Rule"
+      severity = "1"
+   strings:
+      $ = "A very rare string that is malicious" nocase wide ascii
+   condition:
+     any of them
+}
+```
 ### Indicators of Compromise (IOCs)
 
 The **Indicators of Compromise** field enables you to match IOCs against file contents or events, such as network logs. You can enter one indicator per line, using any keyword, such as:
