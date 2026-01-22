@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 :::info
-This section is not relevant to SaaS deployments.
+This section is not relevant to SaaS deployments - Please see AAISP documentation on SSO.
 :::
 
 # How to Set Up the Okta OAuth Integration
