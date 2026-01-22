@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 :::info
-This section is not relevant to SaaS deployments.
+This section is not relevant to SaaS deployments - Please see AAISP documentation on SSO.
 :::
 
 # How to Set Up the Azure AD OAuth Integration
