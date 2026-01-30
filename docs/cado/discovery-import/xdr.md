@@ -50,6 +50,15 @@ You can also set some parameters for your acquisition:
 
 Once initiated, / Forensic Acquisition and Investigation will begin importing data from the selected endpoint via the XDR platform.
 
+## Automatic CrowdStrike Isolated Host Capture
+
+You can capture data from a host that has been isolated within CrowdStrike. Previously this was a manual process as seen in the documentation below.
+How to enable Crowdstrike Isolated Host Imports
+
+Once you have upgraded to version **2.297.0** navigate to **Settings** > **Experiments** then enable to setting for **CrowdStrike Isolated Host Imports**
+
+![Automatic CS Isolated Host](/img/automaticcs.png)
+
 ## CrowdStrike Quarantined Host Capture
 
 In this section we will go through the steps required to manually perform a triage capture from your quarantined host on Crowdstrike to allow you to create an investigation within your cado platform.
