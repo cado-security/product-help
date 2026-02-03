@@ -1,5 +1,5 @@
 ---
-title: Automatic Export
+title: Automatic Log Export
 hide_title: true
 sidebar_position: 15
 ---
