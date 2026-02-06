@@ -36,14 +36,16 @@ The / Forensic Acquisition and Investigation platform allows you to collect key 
 
    ![Cado showing the confirmation screen of a successful AKS container capture](/img/eks3.png)
 
-## Private Cluster Support
-As of release v2.31.0, the / Forensic Acquisition and Investigation platform supports capturing data from **AKS Private Clusters**. This functionality is achieved using the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke).
+## Private Cluster and AAD-backed Cluster Support
+The / Forensic Acquisition and Investigation platform supports capturing data from **AKS Private Clusters** and **AAD-backed Clusters**. This functionality is achieved using the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke).
 
 There are two key considerations with this method:
-1. Capturing from a private cluster is significantly slower than from a public cluster.
+1. Capturing from a private or AAD clusters is significantly slower than from a public cluster.
 2. The Azure API spins up a pod within the cluster to execute / Forensic Acquisition and Investigation Host. Ensure that your cluster has enough resources and nodes to schedule this command pod.
 
 The newly created pod will automatically shut down and remove itself after 1 hour.
+
+For AAD-backed Clusters, the `Azure Kubernetes Service RBAC Cluster Admin` role assignment will need to be added to the / Forensic Acquisition and Investigation role assigment in the Azure RBAC. This role assignment will need to be added at the cluster-resource level (i.e. go to your cluster in the Azure portal -> Access Control (IAM)). For more information, please follow [the Microsoft Azure documentation](https://learn.microsoft.com/en-us/azure/aks/manage-azure-rbac?tabs=azure-portal#create-role-assignments-for-cluster-access).
 
 ## Scoping Down the Role for Access to AKS
 
