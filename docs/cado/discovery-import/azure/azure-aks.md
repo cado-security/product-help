@@ -40,7 +40,7 @@ The / Forensic Acquisition and Investigation platform allows you to collect key 
 The / Forensic Acquisition and Investigation platform supports capturing data from **AKS Private Clusters** and **AAD-backed Clusters**. This functionality is achieved using the [Azure Command Invoke APIs](https://learn.microsoft.com/en-us/azure/aks/command-invoke).
 
 There are two key considerations with this method:
-1. Capturing from a private or AAD clusters is significantly slower than from a public cluster.
+1. Capturing from private or AAD clusters is significantly slower than from a public cluster.
 2. The Azure API spins up a pod within the cluster to execute / Forensic Acquisition and Investigation Host. Ensure that your cluster has enough resources and nodes to schedule this command pod.
 
 The newly created pod will automatically shut down and remove itself after 1 hour.
