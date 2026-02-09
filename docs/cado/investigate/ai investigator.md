@@ -12,17 +12,4 @@ It analyzes malicious files—such as scripts, executables, or documents—and e
 ![File Details 2](/img/ai_image2.png)
 
 ### Availability
-/ Forensic Acquisition and Investigation AI Investigator is available for customers using version v2.107.0 or later. This feature is currently in beta and can be enabled under **Settings > Experiments >> AI Investigator**. It will be applied to all new data imports.
-
-## Privacy
-
-The / Forensic Acquisition and Investigation AI feature is powered by a locally hosted large language model (LLM) that runs exclusively within your / Forensic Acquisition and Investigation platform in your environment. It does not send any data to external APIs or back to / Forensic Acquisition and Investigation for training purposes.
-
-This feature is optional and disabled by default. 
-
-### How It Works:
-The / Forensic Acquisition and Investigation AI feature processes data that has already been imported into the platform, such as malicious events and the contents of malicious files, all managed by your / Forensic Acquisition and Investigation administrator.
-
-Like other features in the product, / Forensic Acquisition and Investigation AI follows strict processes for testing, release, and security. We validate all outputs against predefined schemas and apply technical controls to mitigate risks such as cross-site scripting for any rendered output.
-
-![File Details 3](/img/llm.png)
+/ Forensic Acquisition and Investigation AI Investigator is enabled by default on versions v2.299.0 and later. Whilst earlier versions optionally used a local LLM if users opted-in, this instead now uses a non machine learning approach.
