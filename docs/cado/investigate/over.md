@@ -15,7 +15,7 @@ Across the Investigate pages you’ll find:
 - **Timeline Search** — a powerful, faceted and query‑driven interface for deep‑dive analysis across all events and fields.   
 - **Evidence** — a focused view to track each evidence item and its processing status, with controls to manage items.   
 - **Files** — an explorer for navigating file systems and opening artifacts extracted from evidence.   
-- **AI Investigator** — explains suspicious scripts/binaries/documents by describing behaviors like payload downloads or persistence.   
+- **File Analysis** — explains suspicious scripts/binaries/documents by describing behaviors like payload downloads or persistence.   
 
 ## Next steps
 
