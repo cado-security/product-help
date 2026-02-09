@@ -85,9 +85,9 @@ Once the above role is created in the AWS organization root account, modify its 
 :::warning
 The acquisition roles created in each account must all have the same name
 :::
-From the AWS organization root account, follow the steps [here](https://docs.cadosecurity.com/cado/deploy/cross/cross-account-creation-auto#steps-to-deploy-the-iam-policy-and-role-using-cloudformation-stacksets) to deploy an acquisition role across all of your AWS accounts. The StackSet will take the 'ExternalID' and 'ProxyRoleARN' you got in the previous step as inputs.
+From the AWS organization root account, deploy [the acquisition](https://cado-public.s3.amazonaws.com/cloudformation_v2/DarktraceForensicsRoleStackSet.yaml) role to your AWS accounts. When deploying the Stack you will be prompted for the ExternalID and the ProxyRoleARN.
 
-On Forensics Acquisition & Investigation go to Settings > Accounts > Create Account > AWS > Select 'AWS Organizations' for the credential type > Enter the ARN of the role you created in the AWS root account and the name of the role deployed to all accounts > Continue.
+Once the acquisition role is deployed to your accounts, in Forensics Acquisition & Investigation go to Settings > Accounts > Create Account > AWS > Select 'AWS Organizations' for the credential type > Enter the ARN of the role you created in the AWS root account and the name of the role deployed to all accounts > Continue.
 Now all your AWS accounts will be accessible by Forensic Acquisition & Investigation
 :::note
 A healthcheck for the role in the root account may fail. This is expected and can be ignored.
