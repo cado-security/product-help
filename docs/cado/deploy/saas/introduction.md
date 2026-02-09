@@ -34,12 +34,12 @@ For organizations with many AWS accounts or accounts which regularly change, AWS
 ##### Prerequisites
 Before starting, you will need your Forensic Acquisition & Investigation external customer ID and the associated AWS ARN of the role used by Forensic Acquisition & Investigation to authenticate with your environment. These can be found in Forensic Acquisition & Investigation by going to Settings > Accounts > Create Account > AWS > Leave all options as default and click 'Deploy' which will open a CloudFormation stack setup in AWS.
 
-![Forensic Acquisition and Investigation add AWS account page](/img/aws_deploy_get_saas_tenant_parameters.png)
+![Forensic Acquisition and Investigation add AWS account page](/img/saas_aws_deploy_role_page.png)
 
 
 The parameters section will be pre-populated with 'ExternalID' and 'ProxyRoleARN'. Once you've taken note of these the CloudFormation stack can be closed.
 
-![Customer external ID and ARN pre-populated in an AWS CloudFormation stack wizard](/img/aws_saas_customer_parameters.png)
+![Customer external ID and ARN pre-populated in an AWS CloudFormation stack wizard](/img/saas_aws_orgs_customer_params.png)
 
 ##### IAM roles
 In the root account for the AWS organization, create an IAM role which has permission to list all accounts in the organization and list all tags for resources.
