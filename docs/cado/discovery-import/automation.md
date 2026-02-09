@@ -91,7 +91,7 @@ If you want more information on managing your RBAC role and Groups you can find 
 
 ## Darktrace AIA Full Disk Acquisition
 
-> ⚠️ **Note:** This Setting if **Off** by default.
+> ⚠️ **Note:** This Setting is **Off** by default.
 
 You are now able to perform a full disk acquisition of the cloud assets associated with AIA incidents by following the below steps:
 
