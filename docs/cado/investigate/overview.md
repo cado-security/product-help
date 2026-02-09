@@ -13,8 +13,8 @@ The **Overview** tab provides a high-level summary of the investigation, includi
 ## Investigation Details
 This section includes key information such as when the investigation began. You can edit the summary by clicking the **⋮** symbol next to the investigation name in the top-left corner.
 
-## Investigation AI Summary
-If enabled under **Settings > Experiments**, an AI-generated summary of key attacker events will be displayed here.
+## Investigation Summary
+A summary of key attacker events will be displayed here.
 
 ## Timeline of Key Investigator and Attacker Activities
 Shows important events, including evidence imports and detected malicious activity.
