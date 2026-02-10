@@ -46,3 +46,10 @@ To use the integration between SentinelOne and Cado, you need the SentinelOne Re
 :::note
 Currently, Windows and Linux operating systems are supported with the SentinelOne integration.
 :::
+
+## Add exclusions for Cado Host
+1. Create exclusions with the following patterns to enable Windows integration:
+   - `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
+   - `Windows\Temp\cado-host-*\cado-host.exe`
+2. Create exclusions with the following patterns to enable Linux integration:
+   - `/tmp/cado-host-*/cado-host`
