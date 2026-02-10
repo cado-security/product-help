@@ -45,6 +45,13 @@ Select the following API permissions:
 4. Navigate to the 'Accounts' table and the newly created Defender account should present. If configured correctly, you will see a green coloured health status.
 5. An alternative way to check the account has been set up correctly is to browse to any investigation, and click **Import > XDR > Defender**. If configured correctly, a paginated list of hosts with the Defender agent installed will be displayed.
 
+## Add exclusions for Cado Host
+1. Create exclusions with the following patterns to enable Windows integration:
+   - `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
+   - `Windows\Temp\cado-host-*\cado-host.exe`
+2. Create exclusions with the following patterns to enable Linux integration:
+   - `/tmp/cado-host-*/cado-host`
+
 ## Limitations
 
 - Microsoft Defender limits to 25 concurrent Live Response sessions.
