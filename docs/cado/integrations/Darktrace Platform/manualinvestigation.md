@@ -1,12 +1,14 @@
 ---
-title: Connecting Cloud Environments Using Darktrace / Cloud Wizard
+title: Monitoring and Onboarding Cloud accounts using the Darktrace / CLOUD wizard
 hide_title: true
 sidebar_position: 1
 ---
 
-# Integrating FA&I with a customer’s Cloud Environment using Cloud Wizard
+# Monitoring and Onboarding Cloud accounts using the Darktrace / CLOUD wizard
 
-You will need to create an API key from within the FA&I platform that has `Darktrace` Role:
+The Darktrace / CLOUD setup wizard can be used to monitor AWS accounts and Azure Subscriptions (for example by collecting flow logs, audit logs, and enabling autonomous response), as well as provision the necessary IAM role and policy to allow Darktrace /Forensic Acquisition and Investigation to acquire forensic data from supported workloads.
+
+To being you will need to create an API key from within the FA&I platform that has `Darktrace` Role:
 
 1. Log into the FA&I instance using [AAISP](https://activeai.darktrace.com/) then in the settings menu, select the `API` tab
 2. Click on `+ Create API key`
