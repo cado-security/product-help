@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Integrating Darktrace with FA&I
 
-## Automated Investigations based on model alerts and AIA incident events
+## Integrating Darktrace with FA&I to perform forensic investigations
 
 1. To integrate the two platforms, please follow the previous document [here](https://docs.cadosecurity.com/cado/integrations/Darktrace%20Platform/manualinvestigation) to log into the FA&I instance and create an API key. Select `Darktrace` as the role.
 2. In Darktrace Threat Visualizer screen, navigate to System Config > Modules (/system-config#modules)
