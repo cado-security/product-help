@@ -42,6 +42,9 @@ The parameters section will be pre-populated with 'ExternalID' and 'ProxyRoleARN
 ![Customer external ID and ARN pre-populated in an AWS CloudFormation stack wizard](/img/saas_aws_orgs_customer_params.png)
 
 ##### IAM roles
+:::note
+If you are deploying Forensic Acquisition & Investigation via the Darktrace /CLOUD wizard, this stage will be done automatically. Please continue to [add accounts](#add-accounts)
+:::
 In the root account for the AWS organization, create an IAM role which has permission to list all accounts in the organization and list all tags for resources.
 
 ``` JSON
@@ -82,17 +85,26 @@ Once the above role is created in the AWS organization root account, modify its 
 }
 ```
 <br />
+From the AWS organization root account, deploy [the acquisition](https://cado-public.s3.amazonaws.com/cloudformation_v2/DarktraceForensicsRoleStackSet.yaml) role to your AWS accounts. When deploying the Stack you will be prompted for the ExternalID and the ProxyRoleARN.
 :::warning
 The acquisition roles created in each account must all have the same name
 :::
-From the AWS organization root account, deploy [the acquisition](https://cado-public.s3.amazonaws.com/cloudformation_v2/DarktraceForensicsRoleStackSet.yaml) role to your AWS accounts. When deploying the Stack you will be prompted for the ExternalID and the ProxyRoleARN.
+<br />
+##### Add accounts to Forensic Acquisition & Investigation {#add-accounts}
+Once the acquisition role is deployed to your accounts, in Forensics Acquisition & Investigation go to: 
+ 1. Settings
+ 2. Accounts
+ 3. Create Account
+ 4. AWS
+ 5. Select 'AWS Organizations' for the credential type
+ 6. Enter the ARN of the role you created in the AWS root account and the name of the role deployed to all accounts
+ 7. Continue
 
-Once the acquisition role is deployed to your accounts, in Forensics Acquisition & Investigation go to Settings > Accounts > Create Account > AWS > Select 'AWS Organizations' for the credential type > Enter the ARN of the role you created in the AWS root account and the name of the role deployed to all accounts > Continue.
 Now all your AWS accounts will be accessible by Forensic Acquisition & Investigation
 :::note
 A healthcheck for the role in the root account may fail. This is expected and can be ignored.
 :::
-<br />
+
 <br />
 #### Stacksets & CloudFormation
 AWS accounts can be added by following the process at Settings > Accounts > AWS to deploy a Cloudformation template with the required access:  
