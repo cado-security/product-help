@@ -6,7 +6,11 @@ sidebar_position: 1
 
 # How to Import a Google Compute Engine Instance
 
+
+
 The / Forensic Acquisition and Investigation platform supports the acquisition of Google Cloud Platform (GCP) Compute Engine instances. Follow these steps to import a GCP Compute instance into / Forensic Acquisition and Investigation:
+
+> **_NOTE:_**  When importing instances with disks over 500GB, you may encounter limitations in cloud providers and FAI that result in extended acquisition and processing times. During the acquisition process you might receive a warning. Larger disks may require larger workers for efficient processing.
 
 1. **Select the GCP Project and Bucket**: Choose the GCP project and the storage bucket where the disk image will be uploaded before importing it into / Forensic Acquisition and Investigation.
 
