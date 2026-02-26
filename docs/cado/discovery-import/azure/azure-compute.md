@@ -6,6 +6,9 @@ sidebar_position: 1
 
 # How to Import Azure Compute Instances
 
+>**NOTE:**
+>When importing instances with disks over 500GB, you may encounter limitations in cloud providers and FAI that result in extended acquisition and processing times. During the acquisition process you might receive a warning. Larger disks may require larger workers for efficient processing.
+
 The / Forensic Acquisition and Investigation platform allows you to acquire Azure Compute instances for investigation. Follow these steps:
 
 1. **Select an Azure Subscription**  
