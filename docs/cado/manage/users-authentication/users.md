@@ -115,12 +115,13 @@ Groups allow Administrators to manage user access to investigations and cloud re
 
 To create a new group:
 - Go to **Groups**.
-- Click **Add Group**.
+- Click **Create Group**.
 - Enter the group name.
 - Enter the corresponding SSO group name to auto-assign users who log in via SSO.
-- Assign users and select the CSP Accounts the group should have access to.
-
-![Groups](/img/groups.png)
+- Add required users.
+- You can add accounts manually, add all existing accounts, and choose whether any future accounts should be automatically added to this group.
+  
+![Groups](/img/newgroup.png)
 
 ### Creating a New User
 
