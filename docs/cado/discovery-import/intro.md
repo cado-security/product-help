@@ -38,3 +38,60 @@ To learn more about using / Forensic Acquisition and Investigation Host, see the
 If you’ve stored forensic artifacts at a URL, you can import them directly into the platform. Ensure that the file types are supported by checking the list of compatible [file types](data-types/filetypes.md).
 
 ![On-Premises URL](/img/on-premises-url.png)
+
+### Importing a local file
+
+You can drag and drop or select up to 10 x 5GB files from your local machine to import directly into the platform. This will require an inital change to the permission on the `cado-collector` bucket.
+
+AWS:
+
+Terraform:
+on the resource `resource "aws_s3_bucket_cors_configuration" "bucket_cors" {`
+```
+  cors_rule {
+    allowed_origins = ["*"]
+    allowed_methods = ["PUT"]
+    allowed_headers = ["*"]
+    max_age_seconds = 3600
+  }
+```
+
+Cloudformation:
+Resource `CadoS3BucketAlt:` -> `Properties:`
+```
+      CorsConfiguration:
+        CorsRules:
+          - AllowedOrigins:
+              - '*'
+            AllowedMethods:
+              - PUT
+            AllowedHeaders:
+              - '*'
+            MaxAge: 3600
+```
+
+GCP:
+Resource `resource "google_storage_bucket" "bucket" {`
+```
+  cors {
+    origin          = ["*"]
+    method          = ["PUT"]
+    response_header = ["*"]
+    max_age_seconds = 3600
+  }
+```
+
+Azure:
+Resource `resource "azurerm_storage_account" "storage" {`
+```
+  blob_properties {
+    cors_rule {
+      allowed_origins    = ["*"]
+      allowed_methods    = ["PUT"]
+      allowed_headers    = ["*"]
+      exposed_headers    = ["ETag"]
+      max_age_in_seconds = 3600
+    }
+  }
+```
+
