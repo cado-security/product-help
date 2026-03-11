@@ -39,59 +39,66 @@ If you’ve stored forensic artifacts at a URL, you can import them directly int
 
 ![On-Premises URL](/img/on-premises-url.png)
 
-### Importing a local file
+### Importing a Local File
 
-You can drag and drop or select up to 10 x 5GB files from your local machine to import directly into the platform. This will require an inital change to the permission on the `cado-collector` bucket.
+You can drag and drop or select up to 10 files (max 5 GB each) from your local machine to import directly into the platform.
 
-AWS:
+│ **Note:** This requires an initial change to the CORS permissions on the cado-collector bucket.
 
-Terraform:
-on the resource `resource "aws_s3_bucket_cors_configuration" "bucket_cors" {`
+#### AWS
+
+***Terraform***
+
+On the resource resource "aws_s3_bucket_cors_configuration" "bucket_cors", add:
 ```
+hcl
+cors_rule {
+  allowed_origins = ["*"]
+  allowed_methods = ["PUT"]
+  allowed_headers = ["*"]
+  max_age_seconds = 3600
+}
+```
+
+***CloudFormation***
+
+On the resource CadoS3BucketAlt → Properties, add:
+```
+yaml
+CorsConfiguration:
+  CorsRules:
+    - AllowedOrigins:
+        - '*'
+      AllowedMethods:
+        - PUT
+      AllowedHeaders:
+        - '*'
+      MaxAge: 3600
+```
+#### GCP
+
+On the resource resource "google_storage_bucket" "bucket", add:
+```
+hcl
+cors {
+  origin          = ["*"]
+  method          = ["PUT"]
+  response_header = ["*"]
+  max_age_seconds = 3600
+}
+```
+#### Azure
+
+On the resource resource "azurerm_storage_account" "storage", add:
+```
+hcl
+blob_properties {
   cors_rule {
-    allowed_origins = ["*"]
-    allowed_methods = ["PUT"]
-    allowed_headers = ["*"]
-    max_age_seconds = 3600
+    allowed_origins    = ["*"]
+    allowed_methods    = ["PUT"]
+    allowed_headers    = ["*"]
+    exposed_headers    = ["ETag"]
+    max_age_in_seconds = 3600
   }
+}
 ```
-
-Cloudformation:
-Resource `CadoS3BucketAlt:` -> `Properties:`
-```
-      CorsConfiguration:
-        CorsRules:
-          - AllowedOrigins:
-              - '*'
-            AllowedMethods:
-              - PUT
-            AllowedHeaders:
-              - '*'
-            MaxAge: 3600
-```
-
-GCP:
-Resource `resource "google_storage_bucket" "bucket" {`
-```
-  cors {
-    origin          = ["*"]
-    method          = ["PUT"]
-    response_header = ["*"]
-    max_age_seconds = 3600
-  }
-```
-
-Azure:
-Resource `resource "azurerm_storage_account" "storage" {`
-```
-  blob_properties {
-    cors_rule {
-      allowed_origins    = ["*"]
-      allowed_methods    = ["PUT"]
-      allowed_headers    = ["*"]
-      exposed_headers    = ["ETag"]
-      max_age_in_seconds = 3600
-    }
-  }
-```
-
