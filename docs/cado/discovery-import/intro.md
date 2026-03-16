@@ -43,20 +43,23 @@ If you’ve stored forensic artifacts at a URL, you can import them directly int
 
 You can drag and drop or select up to 10 files (max 5 GB each) from your local machine to import directly into the platform.
 
-│ **Note:** This requires an initial change to the CORS permissions on the cado-collector bucket.
+│ **Note:** This requires an initial change to the CORS permissions on the bucket created by your deployment (cado-collector).
 
 #### AWS
 
 ***Terraform***
 
-On the resource resource "aws_s3_bucket_cors_configuration" "bucket_cors", add:
+Add the resource in `release/terraform/modules/aws_v2/modules/deploy/main.tf`
 ```
-hcl
-cors_rule {
-  allowed_origins = ["*"]
-  allowed_methods = ["PUT"]
-  allowed_headers = ["*"]
-  max_age_seconds = 3600
+resource "aws_s3_bucket_cors_configuration" "bucket_cors" {
+  bucket = aws_s3_bucket.bucket.id
+
+  cors_rule {
+    allowed_origins = ["*"]
+    allowed_methods = ["PUT"]
+    allowed_headers = ["*"]
+    max_age_seconds = 3600
+  }
 }
 ```
 
