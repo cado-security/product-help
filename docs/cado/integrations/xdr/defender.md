@@ -33,6 +33,7 @@ Select the following API permissions:
 | Machine.ReadWrite.All| Allows Cado to retrieve a list of all machines on Defender for display in the UI        | Application | Yes                    |
 | Alert.Read.All       | Allows Cado to monitor alerts from Defender as part of the Detection integration        | Application | Yes                    |
 | Alert.ReadWrite.All  | Allows Cado to manage alerts from Defender as part of the Detection integration         | Application | Yes                    |
+| AdvancedQuery.Read.All  | Allows Cado to query telemetry data from Defender as part of the Detection integration         | Application | Yes                    |
 
 ## Enabling the Integration in the Cado Platform
 
@@ -47,7 +48,6 @@ Select the following API permissions:
 
 ## Add exclusions for Cado Host
 1. Create exclusions with the following patterns to enable Windows integration:
-   - `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
    - `Windows\Temp\cado-host-*\cado-host.exe`
 2. Create exclusions with the following patterns to enable Linux integration:
    - `/tmp/cado-host-*/cado-host`
