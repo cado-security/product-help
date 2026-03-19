@@ -97,7 +97,9 @@ This section outlines the IAM permissions required for users to deploy a Cado pl
 
 <details>
 <summary>IAM Permissions</summary>
-<pre>{
+
+```json
+{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -239,37 +241,7 @@ This section outlines the IAM permissions required for users to deploy a Cado pl
       ],
       "Resource": [
         "arn:aws:logs:*:*:log-group:/var/logs/cado",
-        "arn:aws:logs:*:*:log-group:/var/logs/cado:*"
-      ]
-    },
-    {
-      "Sid": "S3CloudFormation",
-      "Effect": "Allow",
-      "Action": [
-        "s3:CreateBucket",
-        "s3:GetObject",
-        "s3:PutObject"
-      ],
-      "Resource": [
-        "arn:aws:s3:::cf-templates-*",
-        "arn:aws:s3:::cf-templates-*/*"
-      ]
-    },
-    {
-      "Sid": "S3PlatformConfigurationPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "s3:CreateBucket",
-        "s3:PutBucketAcl",
-        "s3:PutBucketPublicAccessBlock",
-        "s3:PutEncryptionConfiguration",
-        "s3:PutLifecycleConfiguration"
-      ],
-      "Resource": "arn:aws:s3:::*"
-    }
-  ]
-}
-</pre>
+```
 </details>
 
 To provide full transparency into how the deployment process works, this document includes a table explaining why each permission is required and how it is used when creating a Cado deployment. This helps administrators understand the scope of access granted and make informed decisions when defining IAM policies.
