@@ -6,6 +6,12 @@ sidebar_position: 1
 
 # How to deploy with Cloudformation
 
+## Prerequisites
+
+Before deploying, make sure you review the required IAM permissions.
+
+[View Required IAM Permissions](#required-iam-permissions)
+
 ## Quick Start
 
 To quickly deploy the platform via AWS CloudFormation with default options, click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://cado-public.s3.amazonaws.com/cloudformation_v2/DeployCloudFormationPublic.yaml).
@@ -84,3 +90,393 @@ Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and y
 ![Creation Complete](/img/create-complete.png)
 
 After deployment, you can import test data from the "Help" menu to verify that everything is functioning correctly.
+
+## Required IAM Permissions
+
+This section outlines the IAM permissions required for users to deploy a Cado platform environment. Each permission listed is essential for enabling Cado to provision the necessary platform components.
+
+<details>
+<summary>IAM Permissions</summary>
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormation",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:CreateUploadBucket",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeStacks",
+        "cloudformation:GetTemplate",
+        "cloudformation:GetTemplateSummary",
+        "cloudformation:ListStackResources"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CreateCadoEC2Resources",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AllocateAddress",
+        "ec2:AssociateAddress",
+        "ec2:AssociateRouteTable",
+        "ec2:AttachInternetGateway",
+        "ec2:AttachVolume",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:CreateInternetGateway",
+        "ec2:CreateLaunchTemplate",
+        "ec2:CreateRoute",
+        "ec2:CreateRouteTable",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateSubnet",
+        "ec2:CreateVolume",
+        "ec2:CreateVpc",
+        "ec2:ModifyVpcAttribute",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RunInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DescribeEC2Resources",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:DescribeImages",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeNetworkAcls"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "TagCadoEC2ResourcesOnCreation",
+      "Effect": "Allow",
+      "Action": "ec2:CreateTags",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ec2:CreateAction": [
+            "AllocateAddress",
+            "CreateInternetGateway",
+            "CreateLaunchTemplate",
+            "CreateRouteTable",
+            "CreateSecurityGroup",
+            "CreateSubnet",
+            "CreateVolume",
+            "CreateVpc",
+            "RunInstances"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ManageCadoEFSResources",
+      "Effect": "Allow",
+      "Action": [
+        "elasticfilesystem:CreateAccessPoint",
+        "elasticfilesystem:CreateFileSystem",
+        "elasticfilesystem:CreateMountTarget",
+        "elasticfilesystem:DescribeAccessPoints",
+        "elasticfilesystem:DescribeFileSystems",
+        "elasticfilesystem:DescribeMountTargets",
+        "elasticfilesystem:PutLifecycleConfiguration",
+        "elasticfilesystem:TagResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ManageCadoResponseIAMResources",
+      "Effect": "Allow",
+      "Action": [
+        "iam:AddRoleToInstanceProfile",
+        "iam:AttachRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:CreatePolicy",
+        "iam:CreateRole",
+        "iam:GetInstanceProfile",
+        "iam:GetRole",
+        "iam:GetRolePolicy",
+        "iam:PutRolePolicy"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*-myCadoInstanceProfile-*",
+        "arn:aws:iam::*:policy/*-myCadoResponse*",
+        "arn:aws:iam::*:role/*-myCadoResponse*"
+      ]
+    },
+    {
+      "Sid": "IAMPassCadoRolesToEc2AndCloudFormation",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::*:role/*-myCadoResponse*",
+      "Condition": {
+        "StringEquals": {
+          "iam:PassedToService": [
+            "ec2.amazonaws.com",
+            "cloudformation.amazonaws.com"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ManageCadoLogGroups",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:DescribeLogGroups"
+      ],
+      "Resource": [
+        "arn:aws:logs:*:*:log-group:/var/logs/cado",
+        "arn:aws:logs:*:*:log-group:/var/logs/cado:*"
+      ]
+    },
+    {
+      "Sid": "S3CloudFormation",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::cf-templates-*",
+        "arn:aws:s3:::cf-templates-*/*"
+      ]
+    },
+    {
+      "Sid": "S3PlatformConfigurationPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:PutBucketAcl",
+        "s3:PutBucketPublicAccessBlock",
+        "s3:PutEncryptionConfiguration",
+        "s3:PutLifecycleConfiguration"
+      ],
+      "Resource": "arn:aws:s3:::*"
+    }
+  ]
+}
+</pre>
+</details>
+
+To provide full transparency into how the deployment process works, this document includes a table explaining why each permission is required and how it is used when creating a Cado deployment. This helps administrators understand the scope of access granted and make informed decisions when defining IAM policies.
+
+<!-- CloudFormation Permissions -->
+<details>
+<summary><strong>CloudFormation Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| cloudformation:CreateStack | Deploy the FAI CloudFormation stack |
+| cloudformation:CreateUploadBucket | Create a CloudFormation bucket for the storage of the large CloudFormation template. |
+| cloudformation:DescribeStackEvents | Get status for stack deployment. |
+| cloudformation:DescribeStacks | Get description for stack deployment. |
+| cloudformation:GetTemplate | Allow retrieval of template body for FAI stack. |
+| cloudformation:GetTemplateSummary | Allow retrieval of information about the FAI template. |
+| cloudformation:ListStackResources | Get descriptions of all resources present in FAI stack deployment. |
+
+### Scope
+| Resource | Description |
+|---------|-------------|
+| * | Stack names are provided by user or generated by AWS. |
+
+</details>
+
+---
+
+<!-- CreateCadoEC2Resources Permissions -->
+<details>
+<summary><strong>CreateCadoEC2Resources Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| ec2:AllocateAddress | Create an elastic IP for FAI. |
+| ec2:AssociateAddress | Attach the elastic IP to FAI. |
+| ec2:AssociateRouteTable | Link created route table to created subnets. |
+| ec2:AttachInternetGateway | Connect FAI’s internet gateway to the VPC. |
+| ec2:AttachVolume | Allows the attachment of an EBS volume for FAI’s EC2 instance. |
+| ec2:AuthorizeSecurityGroupEgress | Allow outbound traffic from FAI. |
+| ec2:AuthorizeSecurityGroupIngress | Allow inbound traffic to FAI. |
+| ec2:CreateInternetGateway | Allow internet access to FAI EC2. |
+| ec2:CreateLaunchTemplate | Allow FAI to define an instance configuration template. |
+| ec2:CreateRoute | Add an internet gateway route. |
+| ec2:CreateRouteTable | Define network traffic routing. |
+| ec2:CreateSecurityGroup | Create a security group that FAI can use. |
+| ec2:CreateSubnet | Allows the creation of a dedicated subnet for FAI. |
+| ec2:CreateVolume | Allows the creation of an EBS volume for FAI. |
+| ec2:CreateVpc | Allows the creation of a VPC for FAI. |
+| ec2:ModifyVpcAttribute | Enable |
+| ec2:RevokeSecurityGroupEgress | Remove default egress rules for FAI. |
+| ec2:RunInstances | Allow the launch of FAI’s EC2 instance. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| * | |
+
+</details>
+
+---
+
+<!-- DescribeEC2Resources Permissions -->
+<details>
+<summary><strong>DescribeEC2Resources Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| ec2:DescribeAddresses | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeAvailabilityZones | Verify the status of an Availability Zone during deployment. |
+| ec2:DescribeImages | Validate FAI’s AMI image before launching. |
+| ec2:DescribeInstances | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeInternetGateways | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeKeyPairs | Validate created SSH key for instance access. |
+| ec2:DescribeLaunchTemplates | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeRouteTables | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeSecurityGroups | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeSubnets | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeVolumes | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeVpcs | Allow CloudFormation to validate resource creation. |
+| ec2:DescribeNetworkAcls | Allow CloudFormation to validate VPC ACL creation. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| * | |
+
+</details>
+
+---
+
+<!-- TagCadoEc2ResourcesOnCreation Permissions -->
+<details>
+<summary><strong>TagCadoEc2ResourcesOnCreation Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| ec2:CreateTags | Allow creation of tags on resources created through the CloudFormation template. |
+
+### Scoping
+| Condition | Description |
+|----------|-------------|
+| "StringEquals": { "ec2:CreateAction": [AllocateAddress, CreateInternetGateway, CreateLaunchTemplate, CreateRouteTable, CreateSecurityGroup, CreateSubnet, CreateVolume, CreateVpc, RunInstances] } | Only allow tag creation during creation of specified EC2 resources. |
+
+</details>
+
+---
+
+<!-- ManageCadoEFSResources Permissions -->
+<details>
+<summary><strong>ManageCadoEFSResources Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| elasticfilesystem:CreateAccessPoint | Allows creation of EFS access points for evidence extraction. |
+| elasticfilesystem:CreateFileSystem | Allows creation of an EFS filesystem. |
+| elasticfilesystem:CreateMountTarget | Allows EC2 to mount the EFS filesystem. |
+| elasticfilesystem:DescribeAccessPoints | Validate successful creation. |
+| elasticfilesystem:DescribeFileSystems | Validate successful creation. |
+| elasticfilesystem:DescribeMountTargets | Validate successful creation. |
+| elasticfilesystem:PutLifeCycleConfiguration | Move evidence to cheaper storage after a time period. |
+| elasticfilesystem:TagResource | Allows tagging of EFS resources. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| * | |
+
+</details>
+
+---
+
+<!-- ManageCadoResponseIAMResources Permissions -->
+<details>
+<summary><strong>ManageCadoResponseIAMResources Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| iam:AddRoleToInstanceProfile | Attach the created instance role to EC2. |
+| iam:AttachRolePolicy | Attach AWS managed policies to FAI roles. |
+| iam:CreateInstanceProfile | Allows the FAI instance role to be attached to EC2. |
+| iam:CreatePolicy | Create custom acquisition and instance policies. |
+| iam:CreateRole | Create acquisition and instance roles for FAI. |
+| iam:GetInstanceProfile | Validate resource creation. |
+| iam:GetRole | Validate resource creation. |
+| iam:GetRolePolicy | Retrieve existing inline policies. |
+| iam:PutRolePolicy | Attach inline policies to FAI roles. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| arn:aws:iam::*:instance-profile/* | Allowed instance profile scope. |
+| arn:aws:iam::*:policy/* | Allowed policy scope. |
+| arn:aws:iam::*:role/* | Allowed role scope. |
+| Cado‑created resources | Only allow permissions on specific Cado‑created IAM roles/policies. |
+
+</details>
+
+---
+
+<!-- IAMPassCadoRolesToEc2AndCloudFormation Permissions -->
+<details>
+<summary><strong>IAMPassCadoRolesToEc2AndCloudFormation Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| iam:PassRole | Allows created IAM roles to be used by EC2 and CloudFormation. |
+
+### Scoping
+| Condition | Description |
+|----------|-------------|
+| "iam:PassedToService": ["ec2.amazonaws.com", "cloudformation.amazonaws.com"] | Only allow pass‑role to EC2 and CloudFormation. |
+
+</details>
+
+---
+
+<!-- ManageCadoLogGroups Permissions -->
+<details>
+<summary><strong>ManageCadoLogGroups Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| logs:CreateLogGroup | Create initial log group for FAI. |
+| logs:CreateLogStream | Create log streams within the group. |
+| logs:DescribeLogGroups | Check if log groups already exist. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| arn:aws:logs:*:*:log-group:/var/logs/cado | Allowed Cado log groups. |
+| arn:aws:logs:*:*:log-group:/var/logs/cado:* | Allowed Cado log streams. |
+
+</details>
+
+---
+
+<!-- S3 CloudFormation Permissions -->
+<details>
+<summary><strong>S3 CloudFormation Permissions</strong></summary>
+
+| Permission | Description |
+|-----------|-------------|
+| s3:CreateBucket | Create a temporary bucket for deployment. |
+| s3:GetObject | Read the CloudFormation template. |
+| s3:PutObject | Upload the template to the temporary bucket. |
+
+### Scoping
+| Resource | Description |
+|---------|-------------|
+| arn:aws:s3:::cf-templates-* | CloudFormation internal bucket scope. |
