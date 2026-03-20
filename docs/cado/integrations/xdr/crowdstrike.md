@@ -22,7 +22,10 @@ For more information, see the [CrowdStrike and Cado Security Joint Solution Brie
    - **Alerts**: Read
    - **Detections**: Read
 2. Note the **Client ID**, **Client Secret**, and **Endpoint URL** for entry into the Cado Platform.
-3. Enable **Real Time Response** in the Default policies for each OS or in custom policies attached to host groups.
+3. Enable the Real Time Response policies for each OS, enabling each option as shown below:
+
+![RTR Settings](/img/rtrsettings.png)
+   
 4. Create **Detections and Preventions Machine Learning exclusions** with the following patterns to enable Windows integration:
    - `Windows\Temp\_MEI*\**\CadoHostRawGrabber.exe`
    - `Windows\Temp\cado-host-*\cado-host.exe`
