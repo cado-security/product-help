@@ -100,6 +100,14 @@ You are now able to perform a full disk acquisition of the cloud assets associat
 
 ![FullDiskSetting](/img/aiaacquisitionsetting.png)
 
+## Collection data from GCP via Darktrace alerts
+
+In order for GCP GCE assets to be acquired from Darktrace AIA or MB alerts, the appropriate configuration must be in place.
+
+In 'Settings' > 'Detections', you will need to provide a tag key and value that will be used to search for a bucket, which is required for the exporting of GCE disk images. A bucket must be present in at least one project for every GCP account you've added to the FA&I platform, and that bucket must contain the exact tags provided.
+
+![GCPBucketTag](/img/gcpbuckettag.png)
+
 
 
    
