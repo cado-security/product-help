@@ -35,8 +35,7 @@ sidebar_position: 8
    b. If the container is privileged, only a cluster-admin can execute commands inside it. See Redhat.
 
 3. **Write Access Inside the Container**  
-   a. The container must allow writing to /tmp/cado-host. See how to do that here.
-``
+   a. The container must allow writing to /tmp/cado-host. [See how to do that here.](https://stackoverflow.com/questions/58473832/how-do-i-change-the-permissions-in-openshift-container-platform)
 
 ### Network Permissions 
 
