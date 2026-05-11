@@ -19,7 +19,10 @@ To integrate Wiz with Cado, follow these steps:
 ![Wiz Integration](/img/integrations-wiz.png)
 
 2. Give the rule a **Name** and **Description** and select **Continue**.
-3. Add the **Tag Key** and **Tag Value** pair for volumes/disks copied by Wiz.
+3. Add the **Tag Key** and **Tag Value** pair for volumes/disks copied by Wiz. Optionally can add grouping using tag keys 
+
+![Wiz Tags](/img/wiztags.png)
+
 4. Navigate to the 'Rules' table and the newly created Wiz integration should be present.
 
 Wiz will copy each Volume individually, so each Volume will have a unique Investigation. The Cado platform will automatically create an Investigation for each Volume copied by Wiz.
