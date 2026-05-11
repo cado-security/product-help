@@ -18,7 +18,7 @@ To enable cross-cloud access for AWS accounts, you need to set up an IAM role in
 
 3. **Create an IAM Role**  
    - Create a new IAM role.  
-   - Attach a policy with the necessary permissions. You can find the policy [here](https://github.com/cado-security/Deployment-Templates/blob/main/cross-account/CrossAccountPolicy.yaml).  
+   - Attach a policy with the necessary permissions. You can find the policy [here](https://github.com/cado-security/Deployment-Templates/blob/main/new-roles/AcquisitionPolicy.yaml).  
    - For step-by-step instructions on creating roles and policies, refer to AWS documentation on [creating policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html) and [creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 4. **Add the IAM User to the Group**  
