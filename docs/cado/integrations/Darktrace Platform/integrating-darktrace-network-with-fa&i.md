@@ -17,3 +17,7 @@ Set-up instructions when using third-party EDR/XDR platforms:
 </video>
 
 ### Microsoft Defender for Endpoint
+
+<video controls width="600">
+  /img/networkxfai_defender.mp4
+</video>
