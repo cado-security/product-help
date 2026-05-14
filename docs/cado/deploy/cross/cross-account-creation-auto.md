@@ -37,21 +37,25 @@ The new AWS deployment method enables you to automatically onboard a cross-accou
 3. **Enter the CloudFormation Template URL**  
    Enter the S3 URL for the CloudFormation template:  
    ```
-   https://cado-public.s3.amazonaws.com/cloudformation_v2/StacksetCrossIAM.yaml
+   https://cado-public.s3.amazonaws.com/cloudformation_v2/DarktraceForensicsRoleStackSet.yaml
    ```  
    Then, click **Next**.
 
    ![Stacks3](/img/stacks3.png)
 
-4. **Proceed Through the Setup**  
+4. **Enter required StackSet parameters**
+   * For the **ExternalID** please enter: `NoExternalIdRequired`
+   * For the **Proxy Role ARN** parameter, use the ARN of the instance role of the main Forensic Acquisition and Investigation VM.
+
+6. **Proceed Through the Setup**  
    Click **Next** through the following configuration steps.
 
-5. **Select Region**  
+7. **Select Region**  
    Under "Create StackSet," select any region (IAM roles are global, so this can be any region).
 
    ![Stacks4](/img/stacks4.png)
 
-6. **Deploy the StackSet**  
+8. **Deploy the StackSet**  
    Once deployed, this will create the required IAM Policy and IAM Role in each target AWS account. You can verify the role and policy by navigating to **IAM > Roles** in the target AWS accounts.
 
    ![Stacks5](/img/stacks5.png)

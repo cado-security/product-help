@@ -31,7 +31,7 @@ Throughout this guide:
 
 1. **Create the IAM Policy:**
    - In the target AWS account (`222222222222`), go to **IAM > Policies** and click **Create Policy**.
-   - Use the Cross-Account Policy [found here](https://raw.githubusercontent.com/cado-security/Deployment-Templates/main/cross-account/CrossAccountPolicy.yaml).
+   - Use the Cross Account Policy [found here](https://github.com/cado-security/Deployment-Templates/blob/main/new-roles/AcquisitionPolicy.yaml).
    - Give the policy a name, such as `CadoResponseCrossAccountPolicy`, and create the policy.
 
 2. **Create the IAM Role:**
