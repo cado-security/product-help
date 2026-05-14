@@ -1,3 +1,5 @@
+
+
 ---
 title: Integrating Darktrace / NETWORK with FA&I
 hide_title: true
@@ -12,8 +14,12 @@ Set-up instructions when using third-party EDR/XDR platforms:
 
 ### CrowdStrike
 
-[![Watch video](./img/crowdstrike-thumbnail.png)](./img/networkxfai_crowdstrike.mp4)
+<video controls width="640">
+  <source src="/img/networkxfai_crowdstrike.mp4" type="video/mp4">
+</video>
 
 ### Microsoft Defender for Endpoint
 
-[![Watch video](./img/defender-thumbnail.png)](./img/networkxfai_defender.mp4)
+<video controls width="640">
+  <source src="/img/networkxfai_defender.mp4" type="video/mp4">
+</video>
