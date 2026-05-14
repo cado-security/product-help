@@ -12,8 +12,8 @@ Set-up instructions when using third-party EDR/XDR platforms:
 
 ### CrowdStrike
 
-https://github.com/user-attachments/assets/feea548f-0f7b-4f9e-b92c-25089bf4e28a
+<video src="/img/networkxfai_crowdstrike.mp4" controls width="90%"></video>
 
 ### Microsoft Defender for Endpoint
 
-https://github.com/user-attachments/assets/4b44c7ad-5431-4b97-85ae-fce5921cbb19
+<video src="/img/networkxfai_defender.mp4" controls width="90%"></video>
