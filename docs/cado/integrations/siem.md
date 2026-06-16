@@ -6,25 +6,49 @@ sidebar_position: 3
 
 # How to Export to SIEM
 
-Security Information and Event Management (SIEM) tools provide real-time analysis of security events from applications and network devices. SIEM systems are essential for SecOps teams to correlate events, analyze logs across different systems, and manage security risks efficiently. By integrating the / Forensic Acquisition and Investigation platform with SIEM, you can leverage the power of both SIEM and / Forensic Acquisition and Investigations unique cloud-based forensic capabilities.
+Security Information and Event Management (SIEM) tools provide real-time analysis of security events from applications and network devices. SIEM systems are essential for SecOps teams to correlate events, analyse logs across different systems, and manage security risks efficiently. By integrating the Cado Forensic Acquisition and Investigation platform with SIEM, you can leverage the power of both SIEM and Cado's unique cloud-based forensic capabilities.
 
-/ Forensic Acquisition and Investigation converts the processed timeline into two formats:
+## Export Formats
+
+FA&I converts the processed timeline into two formats: 
 
 - **CEF (Common Event Format)**: A widely recognized format for SIEM systems
 - **CadoJson**: A custom JSON format optimized for certain SIEM systems like Splunk and Sentinel
 
-Both formats are uploaded to the AWS S3 bucket and folder of your choice, and you can configure your SIEM system to automatically import these files.
+## Supported Cloud Providers
+
+Both formats are uploaded to the cloud storage location of your choice. You can select from the following providers: 
+
+
+| Provider | Storage Type            |
+|----------|-------------------------|
+| AWS      | S3 bucket              |
+| Azure    | Blob Storage container |
+| GCP      | Cloud Storage bucket   |
+
+You configure the provider, account, bucket, and folder name, then set up your SIEM system to automatically import these files from that location. 
 
 ## Getting Started
 
 To begin exporting timelines to your SIEM:
 
 1. Enable the SIEM integration by navigating to **Settings -> Platform Settings -> Integrations -> SIEM**.
-2. Set the desired S3 bucket and folder where the timeline files will be exported.
+2. Select your cloud provider (AWS, Azure, or GCP)
+3. Choose the account and bucket where the timeline files will be exported
+4. Set the desired folder name within the bucket
 
-![SIEM Settings in Cado](/img/siem-settings.png)
+**AWS**
 
-Once enabled, whenever you import evidence into / Forensic Acquisition and Investigation, the timeline will automatically be converted and uploaded to the specified S3 location. You will need to configure your SIEM to monitor this folder for new files and import them automatically.
+![SIEM AWS](/img/siemaws.png)
+
+**Azure**
+
+![SIEM Azure](/img/siemazure.png)
+
+**GCP**
+
+![SIEM GCP](/img/siemgcp.png)
+
 
 ## Cado CEF Standard
 
