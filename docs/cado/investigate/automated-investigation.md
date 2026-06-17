@@ -44,5 +44,5 @@ For deeper investigations, analysts can use:
 2. Navigate to **Experiments**.
 3. Toggle **Next-Gen Automated Investigations**.
 
-If this is not enabled - a simpler (but faster) fall back heuristic is used to rank events within tbe timeline.
+If this is not enabled - a simpler (but faster) fall back heuristic is used to rank events within the timeline.
 
