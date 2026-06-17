@@ -91,9 +91,10 @@ Once the stack status shows `CREATE_COMPLETE`, the deployment is finished, and y
 
 After deployment, you can import test data from the "Help" menu to verify that everything is functioning correctly.
 
-## Required IAM Permissions
+## Required IAM Permissions to deploy the CloudFormation stack
 
-This section outlines the IAM permissions required for users to deploy a Cado platform environment. Each permission listed is essential for enabling Cado to provision the necessary platform components.
+This section outlines the IAM permissions required for users *to deploy* a Cado platform environment.
+Each permission listed is essential for enabling Cado to provision the necessary platform components.
 
 <details>
 <summary>IAM Permissions</summary>
