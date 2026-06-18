@@ -8,7 +8,7 @@ sidebar_position: 3
 
 > ⚠️ **Note:** This is currently only available for **SAAS** environment.
 
-Scheduled Scans allow you to automate vulnerability and malware checks on your AWS EC2 instances.
+Scheduled Scans allow you to automate vulnerability and malware checks on your AWS, Azure and GCP instance.
 
 1. Navigate to the **Automation** section in the left pane
 2. Click **Create a Scan**
