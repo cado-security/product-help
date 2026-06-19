@@ -38,6 +38,10 @@ To verify account-based settings, navigate to **/settings/cloud**, select an acc
 
 Like the Platform Check, the Account Check will create a pipeline where tasks can be inspected to diagnose any issues that arise during the process.
 
+Healthchecks will run automatically once a week by default.
+
+![Auto Account Check](/img/autohealthcheck.png)
+
 ### Account Check Permissions
 
 These require:
