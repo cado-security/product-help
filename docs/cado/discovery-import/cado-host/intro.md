@@ -23,7 +23,7 @@ For more details, see [Collected Artifacts](/cado/discovery-import/cado-host/int
 Cado Host integrates with the platform to collect data from:
 - AWS EC2 instances via SSM.
 - Kubernetes systems like ECS, EKS, GKE, and AKS.
-- XDR systems such as CrowdStrike and SentinelOne.
+- XDR systems such as CrowdStrike, Defender and SentinelOne.
 
 # High-Level Data Flow
 
