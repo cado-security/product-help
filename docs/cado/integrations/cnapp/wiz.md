@@ -6,6 +6,9 @@ sidebar_position: 1
 
 # How to Integrate Wiz with Cado
 
+> [!NOTE]
+> This feature is currently only available for self-hosted deployments.
+
 The Cado platform automates the processing and analysis of AWS EC2 EBS volumes and Azure VM disks acquired through the Wiz platform. By integrating Wiz with Cado, you can seamlessly automate the collection, processing, and analysis of AWS EC2 virtual machines and Azure Virtual Machines without granting Cado direct access to the environment where the EC2 or VM instances are located.
 
 ![Wiz](/img/wiz-integration.png)
