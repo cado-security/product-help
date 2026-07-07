@@ -19,4 +19,3 @@ Release notes for SaaS customers are available on the Darktrace FA&I platform.
 
 To view the latest and previous release notes, log in to the FA&I platform and navigate to **Help** > **Release Notes** then select the version.
 
-/img/sassreleasenote.png
