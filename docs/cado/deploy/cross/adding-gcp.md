@@ -77,6 +77,9 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
 
 Please see [here](/cado/deploy/gcp/iam-description) for permissions for / Forensic Acquisition and Investigation to be deployed in GCP, as opposed to importing from GCP cross-cloud or cross-project.
 
+
+The following IAM roles are split into persistnet and transient. The persistent roles cannot be scoped down any further, whereas the transient roles can be scoped to only target resources which have a certain tag applied to them. Scoping to tagged resources is optional.
+
  #### Persistent (always required, cannot be tag-scoped to resources)
 
  **Authentication**
