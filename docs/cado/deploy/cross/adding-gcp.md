@@ -75,40 +75,69 @@ Parts of this process can be automated by using our [GCP Automated Setup Scripts
 
 ### Permission list for importing from GCP into a / Forensic Acquisition and Investigation deployment in AWS, Azure or SaaS
 
-Please see [here](/cado/deploy/gcp/iam-description) for permissions for / Forensic Acquisition and Investigation to be deployed in GCP, as opposed to just importing from GCP.
+Please see [here](/cado/deploy/gcp/iam-description) for permissions for / Forensic Acquisition and Investigation to be deployed in GCP, as opposed to importing from GCP cross-cloud or cross-project.
 
-| **Permission**                             | **Purpose**                                                                                      |
-|--------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **Required for Compute  acquisition**                  | |
-| cloudbuild.builds.get| View details of a specific build. |
-| cloudbuild.builds.create| Start a new build using Cloud Build. |
-| compute.disks.get| View details of a specific disk. |
-| compute.disks.use| Attach and use disks with read/write access. |
-| compute.disks.list| List all disks in a project or zone. |
-| compute.disks.useReadOnly| Attach and use disks with read-only access. |
-| compute.globalOperations.get| View global operation status. |
-| compute.images.create| Create custom images from disks or snapshots. |
-| compute.instances.get| View details of a specific instance. |
-| compute.instances.list| List all VM instances. |
-| compute.images.delete| Delete VM image |
-| compute.images.get| View details of a specific image. |
-| compute.instances.getSerialPortOutput | Read the serial port output from a VM instance. |
-| compute.projects.get| View project-level metadata and settings. |
-| **Required for Store and other acquisitions**                  | |
-| storage.buckets.create | Create new GCS buckets. |
-| storage.buckets.get | View details of a specific bucket. |
-| storage.buckets.list | List all buckets in a project. |
-| storage.objects.create | Upload new objects (files) to a bucket. |
-| storage.objects.get | Download or view objects. |
-| storage.objects.list | List objects in a bucket. |
-| **Required for GKE acquisition** |  |
-| container.clusters.get | View details of a specific GKE cluster. |
-| container.clusters.list | List all GKE clusters in a project. |
-| container.pods.exec | Execute commands inside a running pod (e.g., kubectl exec). |
-| container.pods.get | View details of a specific pod. |
-| container.pods.list | List all pods in a namespace or cluster. |
-| iam.serviceAccounts.implicitDelegation | Allows service accounts to delegate to Kubernetes API |
-| **Required for access to GCP projects, necessary for all acquisitions** |  |
-| iam.serviceAccounts.getAccessToken | Generate access tokens for service accounts (used for authentication). |
-| resourcemanager.projects.get | View metadata and configuration of a GCP project. |
+ #### Persistent (always required, cannot be tag-scoped to resources)
 
+ **Authentication**
+ - iam.serviceAccounts.getAccessToken 
+ - iam.serviceAccounts.implicitDelegation 
+ - iam.serviceAccounts.actAs 
+ - resourcemanager.projects.get 
+
+**Instance Acquisition**
+ - cloudbuild.builds.create
+ - cloudbuild.builds.get
+ - compute.disks.create
+ - compute.disks.delete
+ - compute.disks.list
+ - compute.disks.setLabels
+ - compute.disks.use
+ - compute.images.get
+ - compute.images.useReadOnly
+ - compute.images.delete
+ - compute.instances.create
+ - compute.instances.list
+ - compute.instances.setLabels
+ - compute.instances.setMetadata
+ - compute.instances.setServiceAccount
+ - compute.instances.getSerialPortOutput
+ - compute.instances.delete
+ - compute.machineTypes.list
+ - compute.networks.get
+ - compute.networks.list
+ - compute.projects.get
+ - compute.subnetworks.use
+ - compute.subnetworks.useExternalIp
+ - compute.zoneOperations.get
+ - compute.zones.list
+
+**Storage Acquisition**
+ - storage.buckets.create
+ - storage.buckets.get
+ - storage.buckets.list
+ - storage.objects.create
+
+**GKE Acquisition**
+ - container.pods.list
+
+#### Transient (can be tag-scoped to target resources) 
+
+**Instance Acquisition**
+ - compute.disks.get
+ - compute.disks.useReadOnly
+ - compute.globalOperations.get
+ - compute.images.create
+ - compute.instances.get
+ - compute.subnetworks.list
+ - compute.subnetworks.get
+
+ **Storage Acquisition**
+ - storage.objects.get
+ - storage.objects.list
+
+ **GKE Acquisition**
+ - container.clusters.get
+ - container.clusters.list
+ - container.pods.exec
+ - container.pods.get
