@@ -6,6 +6,8 @@ sidebar_position: 3
 
 # What regions does the / Forensic Acquisition and Investigation platform support?
 
+> ⚠️ **Note:** The `me-south-1` (Bahrain) and `me-central-1` (UAE) regions are currently excluded due to ongoing service disruption. Support for these regions will be restored once connectivity is stable.
+
 Darktrace / Forensic Acquisition and Investigation provides AWS AMIs (Amazon Machine Images) for deployment in the following regions:
 
 - **US Regions:**
