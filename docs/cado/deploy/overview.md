@@ -14,7 +14,7 @@ At its core, a / Forensic Acquisition and Investigation deployment consists of:
 Architecture diagrams are available for [AWS](/cado/deploy/aws/architecture), [Azure](/cado/deploy/azure/azure-architecture) and [GCP](/cado/deploy/gcp/gcp-architecture).
 
 ## What deployment options are available?
-A “minimal” deployment involves starting a virtual machine with only the minimal permissions required to operate. This may be simpler in highly restricted environments. This is available in [AWS](/cado/deploy/aws/aws_quick_deployment), [Azure](/cado/deploy/azure/azure-quickstart-deployment) and [GCP](/cado/deploy/gcp/gcp-quickstart-deployment-guide).
+A “simple” deployment involves starting a virtual machine with only the minimal permissions required to operate. This may be simpler in highly restricted environments. This is available in [AWS](/cado/deploy/aws/aws_quick_deployment), [Azure](/cado/deploy/azure/azure-quickstart-deployment) and [GCP](/cado/deploy/gcp/gcp-quickstart-deployment-guide).
 
 A full deployment enables the ability to utilize workers for faster processing and importing large systems. This is available in Cloudformation in [AWS](/cado/deploy/aws/cloudformation), and Terraform in [AWS](/cado/deploy/aws/terraform), [Azure](/cado/deploy/azure/azure-deploy) and [GCP](/cado/deploy/gcp/gcp-deploy).
 
