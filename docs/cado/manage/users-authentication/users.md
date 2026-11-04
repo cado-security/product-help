@@ -11,7 +11,7 @@ In the / Forensic Acquisition and Investigation platform, you can control user a
 
 ### / Forensic Acquisition and Investigation Platform Roles
 
-RBAC (Role Based Access) ensures only authorised individuals have access to specific features and data. This is based on permissions defined for the role they are assigned.
+RBAC (Role-Based Access Control) ensures only authorised individuals have access to specific features and data based on their assigned role. FA&I provides predefined roles and the flexibility to create custom roles by tailoring permissions to meet your organisation’s specific access requirements.
 
 #### User Types
 
@@ -98,6 +98,16 @@ The below table is a breakdown of permissions across each of the different roles
 
 
 ![Users-Groups-Roles](/img/users-groups-roles.png)
+
+### Custom Roles and Granular Permissions
+
+FA&I supports flexible and granular RBAC, allowing organizations to create custom roles using a defined set of platform permissions.
+
+This provides greater control over user access, helping organizations enforce the principle of least privilege while maintaining clear audit trails to support security, compliance, and regulatory requirements.
+
+To create a custom role, select from one of the predefined roles or blank as a starting point, then customize the available permissions to meet your organization’s specific access requirements.
+
+![GranularPermissions](/img/granularpermssions.png)
 
 ### Configuring Single Sign-On (SSO)
 
