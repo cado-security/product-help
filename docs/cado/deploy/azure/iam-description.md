@@ -43,6 +43,13 @@ The following Azure roles and permissions are required for / Forensic Acquisitio
 7. **Identity Permissions**
    - A managed identity will be created to run / Forensic Acquisition and Investigation operations.
    - **Permission**: `Contributor` role for the managed identity within the resource group.
+  
+8. **Account Check Permissions**
+
+   These permissions are required to run the account check, which checks all required roles are correctly added. These need to be added as an API Permission against the App Registration, and granted Admin Consent. You can read the [Microsoft documentation](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-configure-permissions?tabs=http&pivots=entra-portal-api-permissions) on how to add these permissions:
+   - **Application.Read.All**
+   - **User.Read**
+   - **Directory.Read.All**
 
 ## Optional Permissions
 
